@@ -1,0 +1,90 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./App.tsx', './src/**/*.{ts,tsx}'],
+  presets: [require('nativewind/preset')],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        kz: {
+          cyan: 'hsl(var(--kz-cyan) / <alpha-value>)',
+          'cyan-light': 'hsl(var(--kz-cyan-light) / <alpha-value>)',
+          orange: 'hsl(var(--kz-orange) / <alpha-value>)',
+          'orange-light': 'hsl(var(--kz-orange-light) / <alpha-value>)',
+          yellow: 'hsl(var(--kz-yellow) / <alpha-value>)',
+          red: 'hsl(var(--kz-red) / <alpha-value>)',
+          green: 'hsl(var(--kz-green) / <alpha-value>)',
+          'green-emerald': 'hsl(var(--kz-green-emerald) / <alpha-value>)',
+          'bg-top': 'hsl(var(--kz-bg-top) / <alpha-value>)',
+          'bg-bottom': 'hsl(var(--kz-bg-bottom) / <alpha-value>)',
+          surface: 'hsl(var(--kz-surface) / <alpha-value>)',
+          'surface-soft': 'hsl(var(--kz-surface-soft) / <alpha-value>)',
+          'surface-strong': 'hsl(var(--kz-surface-strong) / <alpha-value>)',
+          stroke: 'hsl(var(--kz-stroke) / <alpha-value>)',
+          ink: 'hsl(var(--kz-ink) / <alpha-value>)',
+          'ink-soft': 'hsl(var(--kz-ink-soft) / <alpha-value>)',
+          'ink-muted': 'hsl(var(--kz-ink-muted) / <alpha-value>)',
+          white: 'hsl(var(--kz-white) / <alpha-value>)',
+          grey: 'hsl(var(--kz-grey) / <alpha-value>)',
+        },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+        '2xl': '1.25rem',
+        '3xl': '1.5rem',
+      },
+      fontFamily: {
+        sans: ['PlusJakartaSans_400Regular'],
+        medium: ['PlusJakartaSans_500Medium'],
+        semibold: ['PlusJakartaSans_600SemiBold'],
+        bold: ['PlusJakartaSans_700Bold'],
+        heading: ['Outfit_700Bold'],
+        'heading-semi': ['Outfit_600SemiBold'],
+        'heading-regular': ['Outfit_400Regular'],
+        number: ['SpaceGrotesk_700Bold'],
+      },
+      boxshadow: {
+        'cyan-cta': '0 0 30px -6px rgba(61,180,217,0.7), 0 0 5px 0 rgba(61,180,217,1)',
+        'cyan-soft': '0 0 8px 0 rgba(61,180,217,0.22)',
+        'cyan-glow': '0 0 16px 0 rgba(61,180,217,0.36)',
+        glass: '0 25px 50px -12px rgba(0,0,0,0.25)',
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+};

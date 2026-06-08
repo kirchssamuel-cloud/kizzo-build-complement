@@ -1,0 +1,659 @@
+// =============================================================================
+// Kizzo — Schéma Prisma (PostgreSQL)
+// =============================================================================
+// Découpage par modules fonctionnels du CDC Kizzo v3.2 :
+//
+//  • Utilisateurs & auth (parent / enfant / admin) — RG-17 à RG-20
+//  • Profils enfants & appareils — RG-17, RG-18
+//  • Temps d'écran & règles — RG-01 à RG-06
+//  • Défis éducatifs — RG-12 à RG-16
+//  • Filtrage de contenu & web — RG-07 à RG-11
+//  • Usage applicatif & navigation
+//  • Notifications & alertes
+//  • Récompenses (badges)
+//  • Recommandations IA
+//
+// Notes :
+//  - Les codes vérification email / reset mot de passe sont stockés en clair
+//    avec TTL applicatif (cf. config/consts.ts).
+//  - Les données enfant sont anonymisées 30 jours après suppression du compte
+//    parent (job batch — non implémenté ici).
+// =============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// =============================================================================
+// Utilisateurs & authentification
+// =============================================================================
+
+/// Utilisateur générique : parent (mobile), enfant (mobile, jamais
+/// d'auth email directe — toujours appairage QR/code), administrateur (web).
+model Utilisateur {
+  id                       String              @id @default(uuid())
+  email                    String              @unique
+  /// Null pour les comptes créés exclusivement via OAuth (Google/Apple) ou
+  /// pour les sessions enfant (appariement uniquement).
+  motDePasse               String?
+  role                     RoleUtilisateur     @default(parent)
+  statut                   StatutCompte        @default(actif)
+
+  prenom                   String?
+  nom                      String?
+  telephone                String?
+  avatarUrl                String?
+
+  /// Plan d'abonnement (gratuit / famille / famille_plus) — RG-17.
+  plan                     PlanAbonnement      @default(gratuit)
+
+  /// Préférence de langue (FR/EN).
+  langue                   Langue              @default(fr)
+
+  emailVerifie             Boolean             @default(false)
+  codeVerificationEmail    String?
+  dateCreationCodeVerif    DateTime?
+
+  codeReinitialisationMdp  String?
+  dateCreationCodeReinit   DateTime?
+
+  /// Compte verrouillé après 5 tentatives de login échouées (RG-01 P01).
+  tentativesEchouees       Int                 @default(0)
+  dateVerrouillage         DateTime?
+
+  derniereConnexion        DateTime?
+  historiqueConnexions     HistoriqueConnexion[]
+  comptesOAuth             CompteOAuth[]
+
+  // Profils 1-1 selon le rôle
+  profilAdmin              ProfilAdmin?
+
+  // Relations parent → enfants
+  profilsEnfants           ProfilEnfant[]      @relation("ParentEnfants")
+
+  // Notifications
+  preferencesNotifications PreferenceNotification[]
+  notifications            Notification[]
+  appareilsPush            AppareilPush[]
+
+  dateCreation             DateTime            @default(now())
+  dateMiseAJour            DateTime            @updatedAt
+  dateSuppression          DateTime?
+
+  @@index([role])
+  @@index([statut])
+}
+
+/// Lien externe vers un provider OAuth (Google, Apple).
+model CompteOAuth {
+  id              String           @id @default(uuid())
+  utilisateurId   String
+  utilisateur     Utilisateur      @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  provider        ProviderOAuth
+  providerUserId  String
+  emailFournisseur String?
+  dateCreation    DateTime         @default(now())
+
+  @@unique([provider, providerUserId])
+  @@index([utilisateurId])
+}
+
+/// Trace des connexions parent (date + IP) — utile RGPD & sécurité.
+model HistoriqueConnexion {
+  id              String       @id @default(uuid())
+  utilisateurId   String
+  utilisateur     Utilisateur  @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  ip              String?
+  userAgent       String?
+  dateConnexion   DateTime     @default(now())
+
+  @@index([utilisateurId])
+}
+
+/// Profil administrateur — back-office.
+model ProfilAdmin {
+  id              String      @id @default(uuid())
+  utilisateurId   String      @unique
+  utilisateur     Utilisateur @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  twoFactorActif  Boolean     @default(false)
+  twoFactorSecret String?
+  droits          Json?
+  dateCreation    DateTime    @default(now())
+  dateMiseAJour   DateTime    @updatedAt
+}
+
+// =============================================================================
+// Profils enfants & appareils
+// =============================================================================
+
+/// Profil enfant — RG-17 : max 6 par compte parent. RG-19 : âge 2–18 ans.
+model ProfilEnfant {
+  id                 String          @id @default(uuid())
+  parentId           String
+  parent             Utilisateur     @relation("ParentEnfants", fields: [parentId], references: [id], onDelete: Cascade)
+
+  prenom             String
+  dateNaissance     DateTime
+  niveauScolaire     NiveauScolaire
+  /// Avatar prédéfini (0 à 19) ou ID custom uploadé.
+  avatarId           Int             @default(0)
+  /// Couleur thème HEX (10 prédéfinies).
+  couleurTheme       String          @default("#4C6971")
+
+  // PIN enfant pour accès paramètres protégés (E06).
+  pinEnfant          String?
+
+  appareils          Appareil[]
+  reglesTempsEcran   RegleTempsEcran[]
+  filtreContenu      FiltreContenu?
+  tentativesDefis    TentativeDefi[]
+  usagesApps         UsageApp[]
+  visitesWeb         VisiteWeb[]
+  badges             Badge[]
+  demandesTemps      DemandeTemps[]
+  notifications      Notification[]
+  recommandationsIa  RecommandationIa[]
+
+  dateCreation       DateTime        @default(now())
+  dateMiseAJour      DateTime        @updatedAt
+
+  @@index([parentId])
+}
+
+/// Appareil enfant — RG-18 : max 3 appareils par profil enfant.
+model Appareil {
+  id              String        @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant  @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+
+  nomAffichage    String
+  plateforme      Plateforme
+  modele          String?
+  versionOs       String?
+  versionApp      String?
+
+  /// Token FCM (Android) ou APNs (iOS) pour push.
+  tokenPush       String?
+
+  actif           Boolean       @default(true)
+  derniereSync    DateTime?
+  /// Date d'appariement initial.
+  dateAppairage   DateTime      @default(now())
+  /// Code d'appairage 6 chiffres (TTL 15 min — cf. config/consts.ts).
+  codeAppairage   String?
+  dateCodeAppairage DateTime?
+
+  /// Mode supervisé (iOS) activé.
+  modeSupervise   Boolean       @default(false)
+  /// VPN Kizzo actif (iOS pour filtrage DNS).
+  vpnActif        Boolean       @default(false)
+  /// Permission d'installer des apps depuis le store.
+  permissionStore Boolean       @default(false)
+
+  @@unique([codeAppairage])
+  @@index([profilEnfantId])
+}
+
+// =============================================================================
+// Règles temps d'écran (RG-01 à RG-06)
+// =============================================================================
+
+model RegleTempsEcran {
+  id              String        @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant  @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+
+  jourSemaine     JourSemaine
+  /// Minutes autorisées matin (06h–12h).
+  minutesMatin    Int           @default(0)
+  /// Minutes autorisées après-midi (12h–18h).
+  minutesApresMidi Int          @default(0)
+  /// Minutes autorisées soir (18h–22h).
+  minutesSoir     Int           @default(0)
+
+  /// Mode nuit — par défaut 21:00 → 07:00 (RG-06).
+  modeNuitActif   Boolean       @default(true)
+  /// Heure début mode nuit (format "HH:mm").
+  modeNuitDebut   String        @default("21:00")
+  /// Heure fin mode nuit (format "HH:mm").
+  modeNuitFin     String        @default("07:00")
+
+  dateMiseAJour   DateTime      @updatedAt
+
+  @@unique([profilEnfantId, jourSemaine])
+  @@index([profilEnfantId])
+}
+
+/// Ajout ponctuel de temps par le parent — RG-04.
+model AjoutTempsEcran {
+  id              String        @id @default(uuid())
+  profilEnfantId  String
+  parentId        String
+  minutes         Int
+  raison          String?
+  dateAjout       DateTime      @default(now())
+
+  @@index([profilEnfantId, dateAjout])
+}
+
+// =============================================================================
+// Défis éducatifs (RG-12 à RG-16)
+// =============================================================================
+
+model Defi {
+  id              String         @id @default(uuid())
+  titre           String
+  description     String?
+  matiere         Matiere
+  niveauxScolaires NiveauScolaire[]
+  /// Difficulté 1 à 5 étoiles.
+  difficulte      Int            @default(1)
+  /// Nombre de questions (3–10).
+  nombreQuestions Int            @default(5)
+  /// Seuil de réussite en % (50–100, défaut 70).
+  seuilReussite   Int            @default(70)
+  /// Minutes créditées si réussi (10/15/20/30).
+  tempsRecompense Int            @default(15)
+
+  statut          StatutDefi     @default(brouillon)
+  createParId     String?
+
+  questions       QuestionDefi[]
+  tentatives      TentativeDefi[]
+
+  dateCreation    DateTime       @default(now())
+  dateMiseAJour   DateTime       @updatedAt
+
+  @@index([statut])
+  @@index([matiere])
+}
+
+model QuestionDefi {
+  id              String         @id @default(uuid())
+  defiId          String
+  defi            Defi           @relation(fields: [defiId], references: [id], onDelete: Cascade)
+  ordre           Int
+  enonce          String
+  type            TypeQuestion   @default(qcm)
+  /// Options pour QCM (JSON array of strings).
+  options         Json?
+  /// Réponse attendue (texte ou index option pour QCM).
+  reponse         String
+  explication     String?
+  imageUrl        String?
+
+  @@index([defiId])
+}
+
+model TentativeDefi {
+  id              String         @id @default(uuid())
+  defiId          String
+  defi            Defi           @relation(fields: [defiId], references: [id], onDelete: Cascade)
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+
+  /// Score 0–100.
+  score           Int
+  reussi          Boolean
+  tempsCredite    Int            @default(0)
+  reponses        Json?          // Détail des réponses
+  dureeSeconds    Int?
+
+  dateTentative   DateTime       @default(now())
+
+  @@index([profilEnfantId, dateTentative])
+  @@index([defiId])
+}
+
+// =============================================================================
+// Filtrage de contenu (RG-07 à RG-11)
+// =============================================================================
+
+model FiltreContenu {
+  id                  String         @id @default(uuid())
+  profilEnfantId      String         @unique
+  profilEnfant        ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+
+  niveau              NiveauFiltre   @default(modere)
+  /// Catégories bloquées (slugs).
+  categoriesBloquees  String[]       @default([])
+  /// URLs / domaines autorisés.
+  whitelistUrls       String[]       @default([])
+  /// URLs / domaines bloqués.
+  blacklistUrls       String[]       @default([])
+  /// SafeSearch forcé (non désactivable pour -12 ans).
+  safeSearch          Boolean        @default(true)
+
+  dateMiseAJour       DateTime       @updatedAt
+}
+
+/// Règle de blocage / autorisation par application (P09).
+model RegleApp {
+  id              String         @id @default(uuid())
+  profilEnfantId  String
+  bundleId        String
+  nomApp          String
+  categorie       CategorieApp   @default(autres)
+  autorisee       Boolean        @default(true)
+  /// Limite quotidienne en minutes (null = pas de limite).
+  limiteQuotidienne Int?
+  /// Plages horaires autorisées (JSON).
+  plagesHoraires  Json?
+
+  @@unique([profilEnfantId, bundleId])
+  @@index([profilEnfantId])
+}
+
+// =============================================================================
+// Usage applicatif & navigation
+// =============================================================================
+
+model UsageApp {
+  id              String         @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+  bundleId        String
+  nomApp          String
+  categorie       CategorieApp   @default(autres)
+  /// Durée en secondes.
+  dureeSeconds    Int
+  /// Date d'enregistrement (granularité jour).
+  jour            DateTime
+
+  @@unique([profilEnfantId, bundleId, jour])
+  @@index([profilEnfantId, jour])
+}
+
+model VisiteWeb {
+  id              String         @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+  domaine         String
+  nombreVisites   Int            @default(1)
+  dureeSeconds    Int            @default(0)
+  derniereVisite  DateTime       @default(now())
+  bloque          Boolean        @default(false)
+  jour            DateTime
+
+  @@unique([profilEnfantId, domaine, jour])
+  @@index([profilEnfantId, jour])
+}
+
+// =============================================================================
+// Notifications & alertes
+// =============================================================================
+
+model Notification {
+  id              String           @id @default(uuid())
+  utilisateurId   String
+  utilisateur     Utilisateur      @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  profilEnfantId  String?
+  profilEnfant    ProfilEnfant?    @relation(fields: [profilEnfantId], references: [id], onDelete: SetNull)
+
+  type            TypeNotification
+  niveau          NiveauNotification @default(info)
+  titre           String
+  corps           String
+  donnees         Json?
+
+  lue             Boolean          @default(false)
+  dateLecture     DateTime?
+
+  statut          StatutEnvoi      @default(en_attente)
+  datePlanifiee   DateTime?
+  dateEnvoi       DateTime?
+
+  dateCreation    DateTime         @default(now())
+
+  @@index([utilisateurId, dateCreation])
+  @@index([profilEnfantId])
+}
+
+model PreferenceNotification {
+  id              String           @id @default(uuid())
+  utilisateurId   String
+  utilisateur     Utilisateur      @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  type            TypeNotification
+  /// Canal : push / email / les deux.
+  canalPush       Boolean          @default(true)
+  canalEmail      Boolean          @default(false)
+  dateMiseAJour   DateTime         @updatedAt
+
+  @@unique([utilisateurId, type])
+}
+
+model AppareilPush {
+  id              String       @id @default(uuid())
+  utilisateurId   String
+  utilisateur     Utilisateur  @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  token           String       @unique
+  plateforme      Plateforme
+  langue          Langue?
+  derniereUtilisation DateTime  @default(now())
+
+  @@index([utilisateurId])
+}
+
+// =============================================================================
+// Demandes (temps supplémentaire — E08)
+// =============================================================================
+
+model DemandeTemps {
+  id              String         @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+  /// Minutes demandées (15 / 30 / 60).
+  minutes         Int
+  message         String?
+  statut          StatutDemandeTemps @default(en_attente)
+  reponseParent   String?
+  dateReponse     DateTime?
+  dateCreation    DateTime       @default(now())
+
+  @@index([profilEnfantId, statut])
+}
+
+// =============================================================================
+// Récompenses (badges P28)
+// =============================================================================
+
+model Badge {
+  id              String         @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+  typeBadge       TypeBadge
+  dateObtention   DateTime       @default(now())
+  metadata        Json?
+
+  @@index([profilEnfantId])
+}
+
+// =============================================================================
+// Recommandations IA (P20, E10)
+// =============================================================================
+
+model RecommandationIa {
+  id              String         @id @default(uuid())
+  profilEnfantId  String
+  profilEnfant    ProfilEnfant   @relation(fields: [profilEnfantId], references: [id], onDelete: Cascade)
+  typeContenu     TypeContenuIa
+  titre           String
+  description     String?
+  urlContenu      String?
+  imageUrl        String?
+  metadata        Json?
+  statut          StatutRecommandation @default(suggeree)
+  dateCreation    DateTime       @default(now())
+
+  @@index([profilEnfantId, statut])
+}
+
+// =============================================================================
+// Énumérations
+// =============================================================================
+
+enum RoleUtilisateur {
+  parent
+  enfant
+  administrateur
+}
+
+enum StatutCompte {
+  actif
+  suspendu
+  supprime
+}
+
+enum PlanAbonnement {
+  gratuit
+  famille
+  famille_plus
+}
+
+enum Langue {
+  fr
+  en
+}
+
+enum ProviderOAuth {
+  email
+  google
+  apple
+}
+
+enum NiveauScolaire {
+  maternelle
+  cp
+  ce1
+  ce2
+  cm1
+  cm2
+  sixieme
+  cinquieme
+  quatrieme
+  troisieme
+  seconde
+  premiere
+  terminale
+}
+
+enum Plateforme {
+  ios
+  android
+  tablette
+}
+
+enum JourSemaine {
+  lundi
+  mardi
+  mercredi
+  jeudi
+  vendredi
+  samedi
+  dimanche
+}
+
+enum Matiere {
+  maths
+  francais
+  histoire_geo
+  sciences
+  anglais
+  autres
+}
+
+enum StatutDefi {
+  brouillon
+  en_revision
+  publie
+  archive
+}
+
+enum TypeQuestion {
+  qcm
+  vrai_faux
+  texte
+  calcul
+}
+
+enum NiveauFiltre {
+  strict
+  modere
+  personnalise
+}
+
+enum CategorieApp {
+  jeux
+  reseaux_sociaux
+  education
+  communication
+  divertissement
+  productivite
+  systeme
+  autres
+}
+
+enum TypeNotification {
+  acces_bloque
+  fin_quota
+  defi_reussi
+  defi_echoue
+  appareil_hors_ligne
+  appareil_appaire
+  demande_temps
+  reponse_demande
+  badge_debloque
+  resume_quotidien
+  resume_hebdomadaire
+  systeme
+}
+
+enum NiveauNotification {
+  critique
+  attention
+  info
+}
+
+enum StatutEnvoi {
+  en_attente
+  envoye
+  delivre
+  echec
+}
+
+enum StatutDemandeTemps {
+  en_attente
+  acceptee
+  refusee
+}
+
+enum TypeBadge {
+  lecteur
+  defis_champion
+  precis
+  ponctuel
+  curieux
+  matinal
+  marathon
+  artistique
+  scientifique
+}
+
+enum TypeContenuIa {
+  app
+  video
+  livre
+  defi
+}
+
+enum StatutRecommandation {
+  suggeree
+  acceptee
+  refusee
+  signalee
+}

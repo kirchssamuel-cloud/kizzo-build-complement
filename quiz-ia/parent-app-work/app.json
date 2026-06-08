@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Kizzo",
+    "slug": "kizzo-parent",
+    "scheme": "kizzo-parent",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#4C6971"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.appstronaute.kizzo.parent",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "appleTeamId": "MZFFR36843"
+    },
+    "android": {
+      "package": "com.appstronaute.kizzo.parent"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-apple-authentication"
+    ],
+    "extra": {
+      "API_URL": "http://localhost:8000/api"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# Dépendances
+node_modules/
+
+# Secrets / env (on garde les .env.example)
+.env
+.env.*
+!.env.example
+
+# Builds / sorties
+dist/
+build/
+.expo/
+*.tsbuildinfo
+
+# Logs & divers
+*.log
+.DS_Store
+coverage/

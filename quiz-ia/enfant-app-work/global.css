@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --kz-cyan: 192 67% 55%;             /* #3db4d9 */
+    --kz-cyan-light: 192 84% 56%;       /* #2cbfed */
+    --kz-orange: 22 95% 53%;            /* #f97316 */
+    --kz-orange-light: 22 100% 68%;     /* #ff9d5c */
+    --kz-yellow: 39 95% 61%;            /* #fab43b */
+    --kz-red: 0 84% 60%;                /* #ef4444 */
+    --kz-green: 142 71% 49%;            /* #1ed760 */
+    --kz-green-emerald: 145 100% 32%;   /* #00A63E */
+    --kz-ink-deep: 0 0% 100%;
+    --kz-ink-deeper: 220 17% 95%;
+    --kz-navy: 0 0% 100%;
+    --kz-navy-deep: 220 17% 95%;
+    --kz-navy-mid: 192 67% 55%;
+    --kz-bg-top: 200 35% 96%;
+    --kz-bg-bottom: 200 35% 92%;
+    --kz-surface: 0 0% 100%;
+    --kz-surface-soft: 200 30% 96%;
+    --kz-surface-strong: 213 50% 92%;
+    --kz-stroke: 213 40% 88%;
+    --kz-ink: 217 33% 17%;
+    --kz-ink-soft: 217 18% 35%;
+    --kz-ink-muted: 217 15% 55%;
+    --kz-white: 0 0% 98%;
+    --kz-grey: 0 0% 80%;
+    --background: 220 17% 97%;
+    --foreground: 217 33% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 33% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 17%;
+    --primary: 192 67% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 17% 95%;
+    --secondary-foreground: 217 33% 17%;
+    --muted: 220 17% 95%;
+    --muted-foreground: 217 15% 45%;
+    --accent: 22 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 88%;
+    --input: 220 17% 95%;
+    --ring: 192 67% 55%;
+    --radius: 1rem;
+  }
+  .dark {
+    --kz-ink-deep: 219 60% 17%;
+    --kz-ink-deeper: 218 60% 9%;
+    --kz-navy: 213 51% 25%;
+    --kz-navy-deep: 217 33% 17%;
+    --kz-navy-mid: 211 53% 37%;
+
+    --kz-bg-top: 219 60% 19%;
+    --kz-bg-bottom: 218 60% 9%;
+    --kz-surface: 213 51% 25%;
+    --kz-surface-soft: 217 33% 17%;
+    --kz-surface-strong: 211 53% 37%;
+    --kz-stroke: 0 0% 100%;
+    --kz-ink: 0 0% 98%;
+    --kz-ink-soft: 0 0% 80%;
+    --kz-ink-muted: 0 0% 60%;
+
+    --background: 219 60% 13%;
+    --foreground: 0 0% 98%;
+    --card: 213 51% 25%;
+    --card-foreground: 0 0% 98%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 192 67% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 213 51% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 0 0% 75%;
+    --accent: 22 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 211 53% 37%;
+    --input: 213 51% 25%;
+    --ring: 192 67% 55%;
+  }
+}
