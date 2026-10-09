@@ -27,7 +27,7 @@ Même histoire que la v3 (`../film-marque-v3/`), même voix off, même minutage 
 | 0:15,4 – 0:18,2 | Pas de réponse, / pas d'écran. | Le cadenas, l'enfant essaie de passer, « Écran bloqué » |
 | 0:18,3 – 0:20,6 | 3 bonnes réponses. / C'est reparti. | Le quiz se remplit en trois segments, coche orange, « Écran débloqué », +20 min, la vidéo repart |
 | 0:21,4 – 0:22,7 | Vous suivez / ses progrès. | La notification « Ben a débloqué son écran · 3/3 » se détache du téléphone |
-| 0:22,7 – 0:29,5 | Un temps d'écran qui compte. | Les deux lumières deviennent le logo, Découvrir Kizzo, kizzo.fr |
+| 0:22,7 – 0:29,5 | Un temps d'écran qui compte. | Les deux lumières deviennent le logo, Télécharger Kizzo, kizzo.fr |
 
 ## Livrables
 

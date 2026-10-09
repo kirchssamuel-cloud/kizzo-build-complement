@@ -37,7 +37,7 @@ La voix raconte, et chaque étape a son titre à l'écran (« Étape 1 », « É
 | 8 | 0:18,6 → 0:20,9 | Trois bonnes réponses… et c'est reparti ! | Suspendre après « réponses », puis « c'est reparti » sur la vidéo qui repart. | 3 questions sur Le cycle de l'eau, coche orange : « Écran débloqué », +20 min |
 | 9 | 0:21,4 → 0:23,2 | Et vous, vous savez ce qu'il a appris. | Parent à parent, rassurant. | Notification : « Ben a débloqué son écran · 3/3 » |
 | 10 | 0:23,5 → 0:24,9 | Un temps d'écran qui compte. | Signature : ralentir. | Un temps d'écran qui compte. |
-| 11 | 0:25,4 → 0:27,7 | Kizzo. Rendez-vous sur kizzo.fr. | « Kizzo » détaché, puis l'adresse. | Logo, Découvrir Kizzo →, kizzo.fr |
+| 11 | 0:25,4 → 0:26,7 | Téléchargez Kizzo. | Affirmé, posé, « Kizzo » bien détaché. | Logo, Télécharger Kizzo →, kizzo.fr |
 
 Les temps sont des repères : la voix peut glisser de deux ou trois dixièmes. Cinq points sont fixes et doivent tomber pile :
 
@@ -64,12 +64,11 @@ Les temps sont des repères : la voix peut glisser de deux ou trois dixièmes. C
 | 8 | 0:18.6 | Three right answers… and they're back on! | Hold, then "back on" as the video restarts. |
 | 9 | 0:21.4 | And you know what they've learned. | Reassuring. |
 | 10 | 0:23.5 | Make screen time count. | Signature line: slow down. |
-| 11 | 0:25.4 | Kizzo. Discover it at kizzo.fr. | "Kizzo", a beat, then the address. |
+| 11 | 0:25.4 | Download Kizzo. | Assertive, land "Kizzo" cleanly. |
 
 ## Prononciation
 
 - **Kizzo** : « ki-zo », deux syllabes égales, le « i » bref. Pas « kaï-zo ».
-- **kizzo.fr** : « kizzo point f r ».
 
 ## Enregistrement et mixage
 

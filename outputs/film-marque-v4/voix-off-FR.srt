@@ -43,6 +43,6 @@ Et vous, vous savez ce qu’il a appris.
 Un temps d’écran qui compte.
 
 12
-00:00:25,400 --> 00:00:27,700
-Kizzo. Rendez-vous sur kizzo.fr.
+00:00:25,400 --> 00:00:26,700
+Téléchargez Kizzo.
 
