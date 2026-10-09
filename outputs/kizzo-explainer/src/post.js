@@ -151,6 +151,14 @@ export function createPipeline(renderer, scene, camera, { quality = 'high' } = {
 
   const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.6, 0.55, 0.92);
   const quad = new FullScreenQuad(null);
+  // copie simple quand la profondeur de champ est coupée (images 2D plein cadre)
+  const copyMat = new THREE.ShaderMaterial({
+    uniforms: { tColor: { value: null } },
+    vertexShader: QUAD_VS,
+    fragmentShader: /* glsl */ `uniform sampler2D tColor; varying vec2 vUv; void main() { gl_FragColor = vec4(texture2D(tColor, vUv).rgb, 1.0); }`,
+    depthTest: false,
+    depthWrite: false,
+  });
   let W = 4, H = 4;
 
   function setSize(w, h) {
@@ -184,7 +192,11 @@ export function createPipeline(renderer, scene, camera, { quality = 'high' } = {
     d.uFocus.value = p.focus;
     d.uAperture.value = p.aperture;
     d.uMaxBlur.value = Math.max(0.0, (H / 1920) * (p.maxBlur ?? 22));
-    quad.material = dofMat;
+    if (p.aperture > 0) quad.material = dofMat;
+    else {
+      copyMat.uniforms.tColor.value = sceneRT.texture;
+      quad.material = copyMat;
+    }
     renderer.setRenderTarget(dofRT);
     quad.render(renderer);
 
