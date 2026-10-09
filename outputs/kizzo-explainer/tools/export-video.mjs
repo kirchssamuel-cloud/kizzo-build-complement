@@ -1,5 +1,6 @@
 // Export MP4 image par image (rendu déterministe) + bande-son mixée.
-// usage : node tools/export-video.mjs [--film explainer|regles] [--fps 60] [--h 1920] [--seg 240] [--out ...]
+// usage : node tools/export-video.mjs [--film explainer|regles|pub|pub-sv] [--fps 60] [--h 1920] [--seg 240] [--out ...]
+//         [--frames-from pub] : réutilise les images déjà rendues d'un autre film (seule la bande-son change)
 // Reprenable : les segments déjà rendus (dist/parts/*.done) sont conservés.
 import { chromium } from 'playwright';
 import { spawn, execFileSync } from 'node:child_process';
@@ -11,13 +12,14 @@ const arg = (k, d) => {
   return i > 0 ? process.argv[i + 1] : d;
 };
 const FILM = arg('film', 'explainer');
-const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920] }[FILM];
+const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920] }[FILM];
+const FRAMES = arg('frames-from', FILM);
 const FPS = +arg('fps', 60);
 const H = +arg('h', FORMAT[1]);
 const W = Math.round((H * FORMAT[0]) / FORMAT[1]);
 const SEG = +arg('seg', 240);
 const OUT = arg('out', `dist/kizzo-${FILM}-${W}x${H}-${FPS}fps.mp4`);
-const partsDir = path.resolve(FILM === 'explainer' ? 'dist/parts' : `dist/parts-${FILM}`);
+const partsDir = path.resolve(FRAMES === 'explainer' ? 'dist/parts' : `dist/parts-${FRAMES}`);
 fs.mkdirSync(partsDir, { recursive: true });
 
 const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
@@ -29,7 +31,7 @@ const DUR = await page.evaluate(() => window.KIZZO.duration);
 const TOTAL = Math.round(DUR * FPS);
 
 // bande-son (rendu hors-ligne dans la page)
-const wav = path.join(partsDir, 'soundtrack.wav');
+const wav = path.join(partsDir, FRAMES === FILM ? 'soundtrack.wav' : `soundtrack-${FILM}.wav`);
 if (!fs.existsSync(wav)) {
   const b64 = await page.evaluate(() => window.KIZZO.renderAudioWav());
   fs.writeFileSync(wav, Buffer.from(b64, 'base64'));

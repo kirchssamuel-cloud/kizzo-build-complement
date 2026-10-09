@@ -69,6 +69,17 @@ const FILMS = {
     description: "Kizzo — pub 9:16 (1080×1920, 60 fps) au format natif réseaux : la dispute du soir autour du téléphone, puis la solution Kizzo. Voix off et sous-titres.",
     aria: 'Kizzo — publicité vidéo 9:16',
     css: 'src/pub/film.css',
+    define: { __PUB_VO__: 'true' },
+  },
+  // même pub, bruitages et musique sans la voix off
+  'pub-sv': {
+    entry: 'src/pub/main.js',
+    out: 'kizzo-pub-sans-voix-fr.html',
+    title: 'Kizzo Pub 23h47',
+    description: "Kizzo — pub 9:16 (1080×1920, 60 fps) au format natif réseaux, bruitages et sous-titres, sans voix off.",
+    aria: 'Kizzo — publicité vidéo 9:16',
+    css: 'src/pub/film.css',
+    define: { __PUB_VO__: 'false' },
   },
 };
 
@@ -87,6 +98,7 @@ for (const [id, film] of Object.entries(FILMS)) {
     legalComments: 'none',
     alias: { 'three/addons': 'three/examples/jsm' },
     loader: { '.mp3': 'base64' },
+    define: film.define || {},
     logLevel: 'warning',
   });
   const app = result.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');

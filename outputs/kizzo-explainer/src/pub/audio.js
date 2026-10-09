@@ -5,10 +5,13 @@ import { VO, S, T, K, PD, OUT, DURATION } from './config.js';
 import { voiceBuffers, VO_DUR } from './vo.js';
 import { createMixer, renderWav } from '../audio-core.js';
 
+/** Voix off incluse (définie à la compilation : variante « sans voix »). */
+export const WITH_VO = typeof __PUB_VO__ === 'undefined' ? true : __PUB_VO__;
+
 export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   const mx = createMixer(ctx, out, t0, offset);
   const { pad, sub, noiseHit, pluck, kick, tick, whoosh, riser, impact, sparkle, sample } = mx;
-  const duck = (t) => (VO.some((v) => t > v.at - 0.1 && t < v.at + VO_DUR[v.id] + 0.1) ? 0.5 : 1);
+  const duck = (t) => (!WITH_VO ? 1.15 : VO.some((v) => t > v.at - 0.1 && t < v.at + VO_DUR[v.id] + 0.1) ? 0.5 : 1);
   const buzz = (t) => {
     // vibration du téléphone : grondement grave haché
     for (let i = 0; i < 3; i++) sub(t + i * 0.09, 150, 120, 0.07, 0.22);
@@ -92,7 +95,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   pluck(OUT.cta + 0.12, 93, 0.06, 1.4, 0.6, 0.9);
 
   // ---------------- voix off
-  const vb = voiceBuffers();
+  const vb = WITH_VO ? voiceBuffers() : null;
   if (vb) for (const v of VO) sample(v.at, vb[v.id], { gain: 1.25, wet: 0.07 });
 
   return mx.handle;
