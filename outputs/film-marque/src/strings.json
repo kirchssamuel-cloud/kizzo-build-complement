@@ -1,0 +1,22 @@
+{
+  "en": {
+    "every": "EVERY DAY,", "battle": "THE SAME BATTLE.",
+    "screenTime": "SCREEN TIME",
+    "less": "LESS SCROLLING.", "more": "MORE LEARNING.",
+    "lesson": "TODAY’S LESSON", "questions": "3 QUESTIONS",
+    "steps": ["LEARN.", "ANSWER.", "UNLOCK."],
+    "earned": "MINUTES EARNED.",
+    "tagline": "MAKE SCREEN TIME COUNT.",
+    "cta": "DISCOVER KIZZO", "url": "kizzo.fr"
+  },
+  "fr": {
+    "every": "CHAQUE JOUR,", "battle": "LA MÊME BATAILLE.",
+    "screenTime": "TEMPS D’ÉCRAN",
+    "less": "MOINS SCROLLER.", "more": "PLUS APPRENDRE.",
+    "lesson": "LEÇON DU JOUR", "questions": "3 QUESTIONS",
+    "steps": ["APPRENDRE.", "RÉPONDRE.", "DÉBLOQUER."],
+    "earned": "MINUTES GAGNÉES.",
+    "tagline": "UN TEMPS D’ÉCRAN QUI COMPTE.",
+    "cta": "DÉCOUVRIR KIZZO", "url": "kizzo.fr"
+  }
+}
