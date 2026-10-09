@@ -73,10 +73,10 @@ export const S = {
   whip: [4.62, 5.3],
   // 2. Règles des quiz (téléphone parent), éléments extraits en 3D
   parentIn: [4.85, 5.9],
-  toggle: { out: 5.65, flip: 6.35, back: 7.25 },
-  chips: { out: 7.1, sel: 7.85, tap: 8.5, back: 10.0 },
-  coins: { out: 9.95, steps: [10.6, 10.95], back: 12.05 },
-  subjects: { out: 12.0, stagger: 0.13, back: 14.75 },
+  toggle: { out: 5.65, flip: 6.35, back: 7.0 },
+  chips: { out: 7.3, sel: 7.95, tap: 8.5, back: 9.75 },
+  coins: { out: 10.3, steps: [10.85, 11.2], back: 12.05 },
+  subjects: { out: 12.45, stagger: 0.12, back: 14.75 },
   save: 14.45,
   // 3. Carrousel de quiz (une carte par matière)
   carousel: [14.7, 15.95],
@@ -100,8 +100,8 @@ export const S = {
 export const TITLES = {
   hook: { win: [0.55, 4.6], starts: [0.55, 3.62] },
   rules0: { win: [5.45, 7.2] },
-  freq: { win: [7.3, 10.15] },
-  rules: { win: [10.25, 14.7] },
+  freq: { win: [7.25, 10.05] },
+  rules: { win: [10.3, 14.7] },
   kid: { win: [15.9, 20.6] },
   reward: { win: [24.85, 27.75] },
 };

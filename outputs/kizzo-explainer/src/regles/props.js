@@ -406,7 +406,8 @@ export function createHourglass() {
   group.add(inner);
   // profil du verre (demi-hauteur 0.4)
   const pts = [];
-  const prof = (u) => 0.028 + 0.17 * Math.pow(Math.sin(Math.PI * Math.min(1, u * 1.04)), 0.75);
+  // bulbe classique : large sous la flasque, qui se resserre jusqu'au col
+  const prof = (u) => 0.028 + 0.172 * Math.pow(Math.sin(((1 - u) * Math.PI) / 2), 0.6);
   for (let i = 0; i <= 40; i++) {
     const u = i / 40;
     pts.push(new THREE.Vector2(prof(u), -0.4 + u * 0.4));
@@ -416,14 +417,14 @@ export function createHourglass() {
     pts.push(new THREE.Vector2(prof(1 - u), u * 0.4));
   }
   const glassMat = new THREE.MeshPhysicalMaterial({
-    color: '#E6F7FF',
-    roughness: 0.04,
+    color: '#CFEFFF',
+    roughness: 0.03,
     metalness: 0,
     transparent: true,
-    opacity: 0.2,
+    opacity: 0.1,
     clearcoat: 1,
     clearcoatRoughness: 0.02,
-    envMapIntensity: 2.2,
+    envMapIntensity: 1.1,
     side: THREE.DoubleSide,
     depthWrite: false,
   });

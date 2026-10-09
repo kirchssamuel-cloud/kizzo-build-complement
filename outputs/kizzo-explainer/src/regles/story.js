@@ -32,7 +32,7 @@ const sp = (t, t0, stiffness = 140, damping = 13) => springT(t - t0, { stiffness
 
 // emplacements des plans
 const KID = V(0, 0, 0);
-const PB = V(9, 0, 0);
+const PB = V(3.6, 0, 0); // assez proche pour que le panoramique montre le passage d'un plan à l'autre
 const FB = PB.clone().add(V(0.55, 0.1, 0.5)); // zone des objets extraits de l'écran parent
 const CC = PB.clone().add(V(0.05, -0.32, -0.35)); // centre du carrousel
 const HG = KID.clone().add(V(-1.0, -0.02, 0.3)); // sablier
@@ -146,7 +146,7 @@ export function createStory(renderer, scene, camera) {
   logoWorld.add(logoRays, logoFlare, logoStreak, logoWave, logoWave2, logoBurst.object, core);
   logo.group.updateMatrixWorld(true);
   const logoParts = [
-    { m: logo.body, from: V(-0.1, -0.35, 0.6), mid: V(-0.9, -0.5, 1.1), t0: S.converge[0] + 0.15, t1: S.logoLock - 0.12, spin: V(1.2, -2.2, 0.6), col: '#7FD3EC' },
+    { m: logo.body, from: V(-0.1, -0.35, 0.4), mid: V(-0.9, -0.45, 0.7), t0: S.converge[0] + 0.15, t1: S.logoLock - 0.12, spin: V(1.2, -2.2, 0.6), col: '#7FD3EC' },
     { m: logo.head, from: V(-1.0, 0.3, 0.3), mid: V(-1.1, 1.1, 1.4), t0: S.converge[0] + 0.25, t1: S.logoLock - 0.05, spin: V(-1.5, 1.4, 2), col: '#7FD3EC' },
     { m: logo.child, from: V(1.1, 0.6, 0.4), mid: V(1.0, 1.2, 1.5), t0: S.converge[0] + 0.35, t1: S.logoLock, spin: V(0.8, 2.6, -1.2), col: '#FFB27A' },
   ];
@@ -203,7 +203,7 @@ export function createStory(renderer, scene, camera) {
       texKid.draw(key, (c, w, h) => U.kidAppsScreen(c, w, h, { used, out: outK * (1 - inK), lock, t }));
     } else if (t < S.unlock) {
       const pz = decay(t, S.plus + 0.7, 3) * (t > S.plus + 0.7 ? 1 : 0);
-      const stars = clamp((t - S.reward[0]) * 6);
+      const stars = clamp((t - S.reward[0] - 0.3) * 7, 0, 5);
       texKid.draw(`r|${stars.toFixed(2)}|${pz.toFixed(2)}`, (c, w, h) => U.resultScreen(c, w, h, { stars, pulse: pz }));
     } else {
       const un = ease.outCubic(seg(t, S.unlock, S.unlock + 0.4));
@@ -217,7 +217,7 @@ export function createStory(renderer, scene, camera) {
     ring.group.position.set(KID.x, KID.y + 0.0, KID.z - 0.18);
     ring.group.scale.setScalar(lerp(0.85, 1, rk) * (1 + fullK * 0.05));
     ring.fillMat.uniforms.uFill.value = ease.inOutSine(seg(t, S.usage[0], S.usage[1]));
-    ring.fillMat.uniforms.uFlash.value = fullK * 0.6;
+    ring.fillMat.uniforms.uFlash.value = fullK * 0.3;
     ring.fillMat.uniforms.uTime.value = t;
     ring.fillMat.uniforms.uIntensity.value = 3.0 * rk;
     ring.track.material.opacity = rk;
@@ -233,7 +233,7 @@ export function createStory(renderer, scene, camera) {
       w.material.uniforms.uIntensity.value = 1.6;
     }
     kidGlow.position.set(KID.x, KID.y, KID.z - 0.3);
-    kidGlow.material.uniforms.uIntensity.value = fullK * 0.8 + rk * 0.12;
+    kidGlow.material.uniforms.uIntensity.value = fullK * 0.45 + rk * 0.12;
 
     // icônes : sortent de l'écran -> orbite -> rentrent (A) ; ressortent au déblocage (D) ; logo (E)
     tiles.forEach((tl, i) => {
@@ -301,8 +301,8 @@ export function createStory(renderer, scene, camera) {
     parent.group.visible = vis;
     // le téléphone glisse hors cadre quand le carrousel arrive
     const ex = ease.inOutCubic(seg(t, S.carousel[0] - 0.1, S.carousel[1] - 0.2));
-    parent.group.position.set(PB.x - 0.62 - ex * 2.4, PB.y + 0.02 + Math.sin(t * 0.9) * 0.015, PB.z - ex * 0.6);
-    parent.group.rotation.set(0.03, 0.34 + Math.sin(t * 0.6) * 0.03 + ex * 0.5, 0.01);
+    parent.group.position.set(PB.x - 0.62 - ex * 0.5, PB.y + 0.02 + Math.sin(t * 0.9) * 0.015 - ex * 2.6, PB.z - ex * 0.9);
+    parent.group.rotation.set(0.03 - ex * 0.6, 0.34 + Math.sin(t * 0.6) * 0.03 + ex * 0.4, 0.01);
     parent.group.updateMatrixWorld(true);
     const st = rulesState(t);
     const tapK = seg(t, S.chips.tap - 0.02, S.chips.tap + 0.4);
@@ -321,9 +321,9 @@ export function createStory(renderer, scene, camera) {
     // --- interrupteur
     {
       const k = ease.outBack(seg(t, S.toggle.out, S.toggle.out + 0.6), 1.2);
-      const kb = ease.inCubic(seg(t, S.toggle.back, S.toggle.back + 0.45));
+      const kb = ease.inCubic(seg(t, S.toggle.back, S.toggle.back + 0.38));
       const g = toggle.group;
-      g.visible = t > S.toggle.out && t < S.toggle.back + 0.45;
+      g.visible = t > S.toggle.out && t < S.toggle.back + 0.38;
       const home = screenWorld(parent, 331, 163, 0.03, _a);
       const dst = _b.copy(FB).add(_c.set(-0.02, 0.0, 0.15));
       if (kb > 0) bez(g.position, dst, _c.copy(dst).lerp(home, 0.5).add(_d.set(0, 0.3, 0.3)), home, kb);
@@ -477,14 +477,14 @@ export function createStory(renderer, scene, camera) {
       // l'ancien plan B fournit les illustrations : elles se posent au-dessus des cartes
       const p = props[i];
       const fromB = _a.copy(FB).add(PROP_POS[i]).add(_b.set(0, 0, 0.05));
-      const onCard = _c.set(CC.x + Math.sin(th) * (RADIUS + 0.12), CC.y + CARD_H / 2 + 0.36, CC.z + Math.cos(th) * (RADIUS + 0.12));
+      const onCard = _c.set(CC.x + Math.sin(th) * (RADIUS + 0.12), CC.y + CARD_H / 2 + 0.3, CC.z + Math.cos(th) * (RADIUS + 0.12));
       const travel = ease.inOutCubic(seg(t, S.carousel[0] - 0.05 + i * 0.06, S.carousel[1] - 0.1 + i * 0.06));
       if (t >= S.carousel[0]) {
         p.group.visible = outK < 1 && (travel < 1 || Math.cos(th) > -0.2);
         bez(p.group.position, fromB, _d.copy(fromB).lerp(onCard, 0.5).add(_b.set(0, 0.5, 0.4)), onCard, travel);
         p.group.position.y += Math.sin(t * 1.6 + i * 1.3) * 0.025;
         const front = Math.max(0, Math.cos(th));
-        p.group.scale.setScalar(lerp(0.78, 0.52 + front * 0.18, travel) * (1 - outK));
+        p.group.scale.setScalar(lerp(0.78, 0.46 + front * 0.16, travel) * (1 - outK));
         p.group.rotation.set(0, th * 0.4 + Math.sin(t * 0.9 + i) * 0.2, 0);
         // bonne réponse : l'illustration saute
         p.group.position.y += Math.sin(clamp((t - q.tap - 0.2) / 0.45) * Math.PI) * 0.18;
@@ -748,14 +748,14 @@ export function createStory(renderer, scene, camera) {
       aperture: camOut.aperture,
       maxBlur: 22,
       exposure: 1 + whipK * 0.08,
-      bloom: 0.5 + decay(t, S.full, 4) * (t > S.full ? 0.15 : 0) + decay(t, S.logoLock, 3) * (t > S.logoLock ? 0.15 : 0),
+      bloom: 0.5 + decay(t, S.full, 4) * (t > S.full ? 0.08 : 0) + decay(t, S.logoLock, 3) * (t > S.logoLock ? 0.15 : 0),
       bloomRadius: 0.6,
       threshold: 1.3,
       vignette: 0.58,
       grain: 0.035,
-      ca: 0.012 + whipK * 0.18,
-      zoom: whipK * 0.6 + pulse(t, S.full + 0.05, 0.2) * 0.25,
-      flash: whipK * 0.12 + decay(t, S.full, 9) * (t > S.full ? 0.12 : 0) + decay(t, S.logoLock, 8) * (t > S.logoLock ? 0.1 : 0),
+      ca: 0.012 + whipK * 0.12,
+      zoom: whipK * 0.35 + pulse(t, S.full + 0.05, 0.2) * 0.25,
+      flash: whipK * 0.05 + decay(t, S.full, 9) * (t > S.full ? 0.06 : 0) + decay(t, S.logoLock, 8) * (t > S.logoLock ? 0.1 : 0),
       fade: 1 - ease.outCubic(seg(t, 0, 0.8)),
       sat: 1,
       flashCol: '#EAF8FF',

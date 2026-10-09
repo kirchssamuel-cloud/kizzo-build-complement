@@ -337,6 +337,7 @@ export function bootPlayer(film) {
       renderAudioWav: () => renderSoundtrackWav(DURATION),
       info: () => ({ w: bufW, h: bufH, renderer: renderer.info.render, programs: renderer.info.programs?.length }),
     };
+    if (/[?&]debug/.test(location.search)) window.__dbg = { scene, story, CanvasTex };
     document.documentElement.dataset.ready = '1';
 
     if (PARAMS.exportMode) return;
