@@ -1,7 +1,5 @@
 {
  "en": {
-  "every": "EVERY NIGHT,",
-  "battle": "THE SAME BATTLE.",
   "steps": [
    "INSTALL KIZZO ON THEIR TABLET",
    "SCAN THEIR LESSONS",
@@ -86,8 +84,6 @@
     "save": "Save"
    }
   },
-  "hook": "“JUST 5 MORE MINUTES!”",
-  "please": "PLEASE…",
   "later": "20 MINUTES LATER…",
   "noAnswer": "NO ANSWERS, NO SCREEN.",
   "follow": "YOU FOLLOW THEIR PROGRESS.",
@@ -140,11 +136,14 @@
      "ok": 2
     }
    ]
-  }
+  },
+  "hookWords": [
+   "1 VIDEO.",
+   "THEN 10.",
+   "THEN 50…"
+  ]
  },
  "fr": {
-  "every": "CHAQUE SOIR,",
-  "battle": "LA MÊME BATAILLE.",
   "steps": [
    "INSTALLEZ KIZZO SUR SA TABLETTE",
    "SCANNEZ SES LEÇONS",
@@ -229,8 +228,6 @@
     "save": "Enregistrer"
    }
   },
-  "hook": "« ENCORE 5 MINUTES ! »",
-  "please": "S’IL TE PLAÎT…",
   "later": "20 MINUTES PLUS TARD…",
   "noAnswer": "PAS DE RÉPONSE, PAS D’ÉCRAN.",
   "follow": "VOUS SUIVEZ SES PROGRÈS.",
@@ -283,6 +280,11 @@
      "ok": 2
     }
    ]
-  }
+  },
+  "hookWords": [
+   "1 VIDÉO.",
+   "PUIS 10.",
+   "PUIS 50…"
+  ]
  }
 }

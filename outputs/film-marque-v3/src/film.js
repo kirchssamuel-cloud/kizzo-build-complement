@@ -202,9 +202,8 @@ function sphere(c, x, y, r, col, o = {}) {
 
 /* ---------- atmosphere ---------- */
 const AMB = [ // t, colour, alpha, radius — keyed to the cue sheet
-  [0, [10, 40, 85], 0, 900], [.25, [10, 40, 85], 0, 900], [.9, [10, 40, 85], .85, 1100], [2.0, [12, 48, 98], 1, 1200],
-  [2.35, [8, 30, 64], .7, 1000], [Q.a1.slice - .01, [6, 20, 44], .45, 900], [Q.a1.slice, [6, 20, 44], 0, 900], [Q.a1.snap, [6, 20, 44], 0, 900],
-  [Q.b.devices, [10, 34, 72], .85, 1250], [Q.e.lock - .05, [10, 34, 72], .85, 1250], [Q.e.lock + .15, [8, 20, 48], .6, 1100],
+  [0, [14, 40, 90], .9, 1300], [Q.h.slam - .02, [14, 40, 90], .9, 1300], [Q.h.slam + .1, [40, 22, 30], .8, 1100], [Q.h.pull, [12, 20, 46], .6, 1000],
+  [Q.h.pullEnd, [10, 34, 72], .85, 1250], [Q.e.lock - .05, [10, 34, 72], .85, 1250], [Q.e.lock + .15, [8, 20, 48], .6, 1100],
   [Q.f.unlock - .05, [8, 20, 48], .6, 1100], [Q.f.unlock + .25, [24, 46, 86], 1, 1350], [Q.g.pullEnd, [12, 38, 82], .9, 1150], [Q.duration, [12, 38, 82], .9, 1150]];
 function ambient(t) {
   let i = 0; while (i < AMB.length - 2 && t > AMB[i + 1][0]) i++;
@@ -254,348 +253,24 @@ function dust(c, t, alpha, focus = 1000) {
 }
 
 /* ===================================================================== */
-/* ACT 1 — THE HOOK: a point, a world, a countdown, a freeze             */
-/* ===================================================================== */
-const A1 = Q.a1;
-const T1 = (() => {
-  const r = rng(101), out = [];
-  for (let i = 0; i < 500; i++) {
-    const burst = i < 230, u = r(), cu = r();
-    const type = u < .34 ? 0 : u < .55 ? 1 : u < .68 ? 2 : u < .82 ? 3 : u < .92 ? 4 : 5;
-    const col = cu < .45 ? BLUE : cu < .74 ? ICE : cu < .88 ? ORANGE : BLUE_HI;
-    const parts = []; const m = 6 + Math.floor(r() * 7);
-    for (let j = 0; j < m; j++) parts.push([r() - .5, r() - .5, r(), r(), r()]);
-    out.push({ burst, th: r() * TAU, rho: 170 + Math.pow(r(), .75) * 1800, z0: burst ? 1500 + r() * 5500 : 7000,
-      em: burst ? 0 : A1.burst + Math.pow(r(), .85) * (A1.freeze - A1.burst - .05),
-      size: 40 + Math.pow(r(), 1.6) * 150, type, col, rot: (r() - .5) * .7, spin: (r() - .5) * 1.4, fa: .1 + r() * .3, parts });
-  }
-  return out;
-})();
-function tunnelP(t) { const a = A1.burst, L = A1.freeze - a, x = clamp(t, a, A1.freeze) - a; return 900 * x + 10600 * x * x * x / (3 * L * L); }
-function tunnelV(t) { const a = A1.burst, L = A1.freeze - a; if (t < a || t >= A1.freeze) return 0; const x = (t - a) / L; return 900 + 10600 * x * x; }
-const spinA = t => .38 * E.inQ(inv(A1.burst, A1.freeze, Math.min(t, A1.freeze)));
-function tileState(T, t) {
-  const te = Math.min(t, A1.freeze);
-  if (!T.burst && te < T.em) return null;
-  const z = T.burst ? T.z0 - tunnelP(te) : 7000 - (tunnelP(te) - tunnelP(T.em));
-  if (z < -950 || z > 7000) return null;
-  const bx = T.burst ? E.outExpo(inv(A1.burst, A1.burst + .8, te)) : 1, th = T.th + spinA(te);
-  const x = Math.cos(th) * T.rho * bx, y = Math.sin(th) * T.rho * bx;
-  return { x, y, z, rot: T.rot + T.spin * te };
-}
-function drawTunnel(c, t) {
-  if (t < A1.burst || t > A1.shatter + 1.1) return;
-  const v = tunnelV(t), ts = A1.shatter;
-  c.globalCompositeOperation = 'lighter';
-  const list = [];
-  for (const T of T1) {
-    const st = tileState(T, t); if (!st) continue;
-    const p = proj(st.x, st.y, st.z); if (!p) continue;
-    let a = inv(7000, 5300, st.z) * inv(140, 650, p.z) * (T.burst ? inv(A1.burst, A1.burst + .12, t) : 1);
-    list.push({ T, st, p, a });
-  }
-  list.sort((A, B) => B.p.z - A.p.z);
-  const shapeA = t < ts ? 1 : 1 - inv(ts, ts + .13, t), flashA = 1 + 2.2 * decay(t, ts, .14);
-  for (const it of list) {
-    const { T, st, p } = it; const a = it.a;
-    const px = T.size * p.s;
-    if (v > 0) {
-      const q = proj(st.x, st.y, st.z + v * .05);
-      if (q) { c.strokeStyle = rgba(T.col, a * .4); c.lineWidth = Math.max(1, px * .16); c.beginPath(); c.moveTo(q.x, q.y); c.lineTo(p.x, p.y); c.stroke(); }
-    }
-    if (shapeA > 0) shape(c, T.type, p.x, p.y, px, st.rot, T.col, Math.min(1, a * shapeA * flashA), T.fa);
-  }
-  // shatter: every element breaks into light and recedes
-  if (t >= ts) {
-    const tau = t - ts, life = 1.25;
-    if (tau < life) {
-      const d = tau - .3 * tau * tau, fade = Math.pow(1 - tau / life, 1.7);
-      for (const T of T1) {
-        const st = tileState(T, A1.freeze); if (!st) continue;
-        const p0 = proj(st.x, st.y, st.z); if (!p0) continue;
-        const a0 = inv(7000, 5300, st.z) * inv(140, 650, p0.z); if (a0 < .02) continue;
-        const rl = Math.hypot(st.x, st.y) || 1, dx = st.x / rl, dy = st.y / rl;
-        c.fillStyle = rgba(T.col, 1);
-        for (const q of T.parts) {
-          const sp = 220 + q[2] * 780;
-          const x = st.x + q[0] * T.size + (dx * sp + (q[3] - .5) * 300) * d;
-          const y = st.y + q[1] * T.size + (dy * sp + (q[4] - .5) * 300) * d;
-          const p = proj(x, y, st.z + (500 + q[2] * 1700) * d); if (!p) continue;
-          const s = Math.max(1.8, (3 + q[4] * 5) * p.s), al = Math.min(1, a0 * fade * (.6 + .4 * q[3]) * 1.8);
-          c.globalAlpha = al; c.fillRect(p.x - s / 2, p.y - s / 2, s, s);
-          if (q[2] > .72) { glow(c, T.col === ORANGE ? SP.oh : SP.bh, p.x, p.y, s * 4, al * .55); c.fillStyle = rgba(T.col, 1); }
-        }
-      }
-      c.globalAlpha = 1;
-    }
-  }
-}
-function drawNumerals(c, t) {
-  const items = [['3', A1.n3, A1.n2], ['2', A1.n2, A1.n1], ['1', A1.n1, A1.n0], ['0', A1.n0, A1.freeze]];
-  c.globalCompositeOperation = 'lighter'; c.textAlign = 'center'; c.textBaseline = 'alphabetic';
-  for (let k = 0; k < 4; k++) {
-    const [ch, t0, t1] = items[k], last = k === 3;
-    if (t < t0) continue;
-    let z, a = 1, sc = 1;
-    if (!last) { const p = (t - t0) / (t1 - t0); if (p > 1.25) continue; z = 6200 - 6900 * Math.pow(p, 2.1); }
-    else {
-      z = lerp(6200, 0, E.outExpo(inv(t0, t1, t)));
-      if (t > A1.freeze) { const q = inv(A1.freeze, A1.freeze + .32, t); a = 1 - E.outQ(q); sc = 1 + .1 * E.outC(q); if (a <= 0) continue; }
-    }
-    a *= inv(6200, 4700, z);
-    const vz = last ? 0 : 6900 * 2.1 * Math.pow(Math.max(.01, (t - t0) / (t1 - t0)), 1.1) / (t1 - t0);
-    for (let j = 3; j >= 0; j--) {
-      const p = proj(0, 0, z + j * vz * .012); if (!p) continue;
-      const px = 560 * p.s * sc; if (px > 5200) continue;
-      c.font = `200 ${px.toFixed(1)}px Outfit`;
-      c.shadowColor = rgba(BLUE, .9); c.shadowBlur = j === 0 ? Math.min(70, px * .07) : 0;
-      c.globalAlpha = clamp(a * (j === 0 ? .92 : .32 * Math.pow(.6, j)));
-      c.fillStyle = rgb(ICE); c.fillText(ch, p.x, p.y + px * .357);
-    }
-    c.shadowBlur = 0;
-  }
-  c.globalAlpha = 1;
-}
-function strain(t) {
-  let dx = 0, dy = 0, bul = 0, ang = 0;
-  for (const [t0, an, d] of [[A1.strain1, .12, 128], [A1.strain2, -2.55, 118]]) {
-    if (t < t0) continue;
-    let m;
-    if (t < t0 + .17) m = E.outC(inv(t0, t0 + .17, t));
-    else if (t < t0 + .3) m = 1 + .025 * Math.sin((t - t0) * 95);
-    else m = 1 - E.outElastic(inv(t0 + .3, t0 + .85, t));
-    dx += Math.cos(an) * d * m; dy += Math.sin(an) * d * m;
-    const b = Math.max(0, d * m - 112); if (b > bul) { bul = b; ang = an; }
-  }
-  return { dx, dy, bul, ang };
-}
-function drawHook(c, t) {
-  // Act 1 main shot (ends under the slice transition)
-  const fz = A1.freeze;
-  // volumetric beams + birth shockwave
-  const bi = inv(A1.burst, 1.0, t) * (t < fz ? 1 : 1 - inv(fz, fz + .9, t));
-  beams(c, CX, CY, 14, 1500, .045, spinA(t) + .3, BLUE_HI, .07 * bi, 3);
-  if (t > A1.burst && t < A1.burst + .7) {
-    const p = inv(A1.burst, A1.burst + .7, t), r = 30 + 1500 * E.outExpo(p);
-    c.globalCompositeOperation = 'lighter';
-    c.strokeStyle = rgba(ICE, .7 * Math.pow(1 - p, 2)); c.lineWidth = 1 + 5 * (1 - p);
-    c.beginPath(); c.arc(CX, CY, r, 0, TAU); c.stroke();
-    for (let i = 0; i < 64; i++) { // radial streaks
-      const an = i * TAU / 64 + hash(i) * .1, r0 = 20 + 1100 * E.outExpo(p) * (.55 + .45 * hash(i + 9)), l = 280 * (1 - p) * hash(i + 3);
-      c.strokeStyle = rgba(i % 7 === 0 ? ORANGE_HI : BLUE_HI, .6 * (1 - p)); c.lineWidth = 1.5;
-      c.beginPath(); c.moveTo(CX + Math.cos(an) * r0, CY + Math.sin(an) * r0); c.lineTo(CX + Math.cos(an) * (r0 + l), CY + Math.sin(an) * (r0 + l)); c.stroke();
-    }
-  }
-  drawTunnel(c, t);
-  // timer dial around the point
-  const st = strain(t), hx = CX + st.dx, hy = CY + st.dy;
-  c.globalCompositeOperation = 'lighter';
-  const dialA = pr(-.3, .1, t, E.outC) * (1 - inv(fz + .1, fz + .5, t));
-  if (dialA > 0) {
-    c.strokeStyle = rgba(ICE, .22 * dialA); c.lineWidth = 2;
-    const rr = lerp(170, 136, dialA);
-    for (let i = 0; i < 60; i++) {
-      const an = -PI / 2 + i * TAU / 60, l = i % 5 === 0 ? 10 : 5;
-      c.beginPath(); c.moveTo(CX + Math.cos(an) * rr, CY + Math.sin(an) * rr); c.lineTo(CX + Math.cos(an) * (rr + l), CY + Math.sin(an) * (rr + l)); c.stroke();
-    }
-  }
-  if (t < A1.n0 + .02) {
-    // three seconds left, ticking away (piecewise so each second empties a third of the ring)
-    const e = t < A1.n2 ? inv(A1.n3, A1.n2, t) : t < A1.n1 ? 1 + inv(A1.n2, A1.n1, t) : 2 + inv(A1.n1, A1.n0, t);
-    const f = 1 - e / 3, a = 1;
-    const a0 = -PI / 2, a1 = a0 + f * TAU;
-    c.strokeStyle = rgba(ORANGE, .95 * a); c.lineWidth = 3.5; c.lineCap = 'round';
-    c.beginPath(); c.arc(CX, CY, 112, a0, a1); c.stroke();
-    c.strokeStyle = rgba(ORANGE, .2 * a); c.lineWidth = 12; c.beginPath(); c.arc(CX, CY, 112, a0, a1); c.stroke();
-    glow(c, SP.oh, CX + Math.cos(a1) * 112, CY + Math.sin(a1) * 112, 26, .8 * a);
-    c.lineCap = 'butt';
-  }
-  // the luminous boundary: snaps shut at zero
-  if (t >= fz - .03) {
-    const p = E.outExpo(inv(fz - .03, fz + .08, t)), R = 150, n = 140;
-    const flick = 1 + 1.2 * decay(t, fz, .35) + .9 * (bell(st.bul, 18, 10) * (st.bul > 1 ? 1 : 0));
-    c.beginPath();
-    for (let i = 0; i <= n * p; i++) {
-      const an = -PI / 2 + (i / n) * TAU, dA = Math.atan2(Math.sin(an - st.ang), Math.cos(an - st.ang));
-      const r = R + st.bul * .95 * Math.exp(-(dA / .42) * (dA / .42));
-      const x = CX + Math.cos(an) * r, y = CY + Math.sin(an) * r;
-      i ? c.lineTo(x, y) : c.moveTo(x, y);
-    }
-    c.strokeStyle = rgba(ICE, .95); c.lineWidth = 3.5 * Math.min(flick, 1.6); c.stroke();
-    c.strokeStyle = rgba(BLUE, .28 * flick); c.lineWidth = 16; c.stroke();
-    if (p < 1) { const an = -PI / 2 + p * TAU; glow(c, SP.w, CX + Math.cos(an) * R, CY + Math.sin(an) * R, 60, 1); }
-    if (t < fz + .4) { const q = inv(fz, fz + .4, t); c.strokeStyle = rgba(ICE, .5 * (1 - q)); c.lineWidth = 2; c.beginPath(); c.arc(CX, CY, R + 400 * E.outExpo(q), 0, TAU); c.stroke(); }
-  }
-  // the point (the child) — wanting more
-  let r = 12;
-  for (const nt of [A1.n3, A1.n2, A1.n1, A1.n0]) r *= 1 + .22 * decay(t, nt, .22);
-  const dt = 1 / 120, s1 = strain(t - dt), s2 = strain(t + dt);
-  const vx = (s2.dx - s1.dx) / (2 * dt), vy = (s2.dy - s1.dy) / (2 * dt), sp = Math.hypot(vx, vy);
-  const stretch = 1 + Math.min(.55, sp / 2600);
-  const flare = (t < fz ? 1 : lerp(1, .35, inv(fz, fz + .5, t)));
-  sphere(c, hx, hy, r, ORANGE, { energy: 1, flare, ang: Math.atan2(vy, vx), sx: stretch, sy: 1 / Math.sqrt(stretch) });
-  // the time left, as the child's screen shows it
-  const rdA = 1 - pr(A1.slice - .2, A1.slice, t);
-  if (rdA > 0) {
-    const rd = t < A1.n2 ? '0:03' : t < A1.n1 ? '0:02' : t < A1.n0 ? '0:01' : '0:00', k = 1 + .18 * decay(t, A1.n0, .3);
-    POST.push(o => { // post layer: crisp over the particles, untouched by bloom
-      o.save(); o.globalCompositeOperation = 'source-over'; o.globalAlpha = rdA;
-      o.font = `500 ${(46 * k).toFixed(1)}px Outfit`; o.textAlign = 'center'; o.textBaseline = 'alphabetic';
-      o.shadowColor = 'rgba(2,8,20,.9)'; o.shadowBlur = 14;
-      o.fillStyle = t >= A1.n0 ? rgb(ORANGE_HI) : '#fff'; o.fillText(rd, CX, CY + 88); o.restore(); });
-  }
-  drawPlea(c, t);
-  // sparks that hit the boundary and fall back
-  if (t > A1.strain1 && t < A1.slice + .1) {
-    c.globalCompositeOperation = 'lighter';
-    for (let i = 0; i < 46; i++) {
-      const t0 = (i % 2 ? A1.strain1 : A1.strain2) + .1 + hash(i) * .25; if (t < t0) continue;
-      const age = t - t0; if (age > .5) continue;
-      const an = (i % 2 ? .12 : -2.55) + (hash(i + 4) - .5) * 1.4, out = Math.min(146, 20 + age * 520), back = Math.max(0, age * 520 - 126) * .6;
-      const rr = out - back;
-      glow(c, SP.oh, CX + Math.cos(an) * rr, CY + Math.sin(an) * rr, 7, .9 * (1 - age / .5));
-    }
-  }
-  c.globalCompositeOperation = 'source-over';
-}
-
-/* --- the hook: the line every parent hears, on the very first frame --- */
-function drawPlea(c, t) {
-  if (t > A1.slice + .13) return;
-  // the big line sits above bloom and vignette (pure white on frame 1); "please…" stays in the scene for the slice
-  if (t < A1.slice) POST.push(o => pleaLine(o, t));
-  if (t > A1.please) {
-    const Lp = lay(S.please, 500, 36, .22);
-    letters(c, Lp, CX, CY + 238, i => { const s0 = A1.please + i * .045, p = inv(s0, s0 + .22, t); if (p <= 0) return null;
-      return { a: .88 * E.outQ(p), dy: (1 - p) * 8 + Math.sin(t * 30 + i) * 1.2, col: rgb(ICE) }; });
-  }
-}
-function pleaLine(c, t) {
-  const px = fit(S.hook, 800, 150, .01, 1640), L = lay(S.hook, 800, px, .01), by = CY - 250;
-  const kick = decay(t, A1.n2, .25) + 1.3 * decay(t, A1.n1, .25) + 1.7 * decay(t, A1.n0, .3);
-  const sh = t < A1.freeze ? 3 + kick * 8 : 0, brk = t > A1.shatter ? inv(A1.shatter, A1.shatter + .55, t) : 0;
-  const sc0 = lerp(1.06, 1, E.outExpo(clamp(t / .22))) * (1 + .04 * kick);
-  // a dark bed so the line reads over the rushing world
-  c.globalCompositeOperation = 'source-over'; c.globalAlpha = 1 - brk;
-  c.save(); c.translate(CX, by - px * .36); c.scale(1, .26);
-  const g = c.createRadialGradient(0, 0, 0, 0, 0, 1050); g.addColorStop(0, 'rgba(2,7,17,.78)'); g.addColorStop(.6, 'rgba(2,7,17,.45)'); g.addColorStop(1, 'rgba(2,7,17,0)');
-  c.fillStyle = g; c.fillRect(-1100, -1100, 2200, 2200); c.restore(); c.globalAlpha = 1;
-  const hot = ch => '5«»“”!'.includes(ch);
-  // each tick, the plea gets louder: an orange echo bursts out of the line
-  c.globalCompositeOperation = 'lighter';
-  for (const tk of [A1.n2, A1.n1, A1.n0]) {
-    const q = inv(tk, tk + .38, t); if (q <= 0 || q >= 1) continue;
-    const sc = 1 + .32 * E.outC(q);
-    letters(c, L, CX, by, (i, ch, lx) => ({ a: .3 * Math.pow(1 - q, 1.5), sc, dx: (lx - CX) * (sc - 1), blur: 4 + 8 * q, col: rgb(ORANGE) }));
-  }
-  c.globalCompositeOperation = 'source-over';
-  const jx = noise(t * 40) * sh, jy = noise(t * 43 + 5) * sh;
-  letters(c, L, CX + jx, by + jy, (i, ch, lx) => {
-    const col = hot(ch.ch) ? rgb(ORANGE) : '#fff';
-    if (brk > 0) { const r = hash(i * 3.7 + 1); // the plea breaks with the world
-      return { a: 1 - brk, dx: (lx - CX) * brk * (1 + r), dy: (r - .5) * 520 * brk - 140 * brk, rot: (r - .5) * 3 * brk, sc: 1 - .3 * brk, blur: 10 * brk, col }; }
-    return { a: 1, sc: sc0, dx: (lx - CX) * (sc0 - 1), col };
-  });
-  c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
-}
-
-/* --- the tension: same battle, every day --- */
-function ropeY(u, t, A, pull) {
-  return A * (Math.sin(PI * u) * Math.sin(t * 31) + .45 * Math.sin(TAU * u) * Math.sin(t * 47 + 1) + .25 * Math.sin(3 * PI * u) * Math.sin(t * 67 + 2))
-    + pull * 3 * noise(u * 22 + t * 70) * Math.sin(PI * u);
-}
-function drawTension(c, t) {
-  const ts = A1.snap, intro = E.outC(inv(A1.slice, A1.slice + .5, t)), pull = E.inQ(inv(A1.tension, ts, t)), after = t - ts;
-  c.globalCompositeOperation = 'lighter';
-  radial(c, CX - 700, CY + 120, 980, BLUE, .17 * intro * (1 + .6 * pull), .3);
-  radial(c, CX + 700, CY + 120, 980, ORANGE, .15 * intro * (1 + .6 * pull), .3);
-  const jit = pull * 3.5, R = 84, y0 = CY + 150;
-  let xl = CX - 640 - 50 * pull + noise(t * 37) * jit, xr = CX + 640 + 50 * pull + noise(t * 41 + 9) * jit;
-  if (after > 0) { const k = E.outExpo(clamp(after / .3)); xl -= 240 * k; xr += 240 * k; }
-  // the rope
-  const A = 22 * decay(t, A1.every, .8) + 34 * decay(t, A1.battle, 1.1) + 16 * decay(t, A1.battle + .18, .8) + 9 * pull;
-  const g = c.createLinearGradient(xl, 0, xr, 0);
-  g.addColorStop(0, rgba(BLUE_HI, 1)); g.addColorStop(.5, rgba(WHITE, 1)); g.addColorStop(1, rgba(ORANGE_HI, 1));
-  const xa = xl + R, xb = xr - R, n = 96;
-  const drawRope = (u0, u1, off) => {
-    c.beginPath();
-    for (let i = 0; i <= n; i++) {
-      const u = lerp(u0, u1, i / n), x = lerp(xa, xb, u);
-      const y = y0 + ropeY(u, t, A, pull) + (off ? off(u) : 0);
-      i ? c.lineTo(x, y) : c.moveTo(x, y);
-    }
-    c.strokeStyle = g; c.globalAlpha = intro; c.lineWidth = 2.6; c.stroke();
-    c.globalAlpha = .16 * intro * (1 + pull); c.lineWidth = 14; c.stroke(); c.globalAlpha = 1;
-  };
-  if (after <= 0) drawRope(0, 1);
-  else { // snapped: both halves whip back
-    const k = E.outExpo(clamp(after / .25)), wig = u => 60 * (1 - k) * Math.sin(u * 40 + after * 80);
-    drawRope(0, .5 * (1 - k), wig); drawRope(.5 + .5 * k, 1, wig);
-    glow(c, SP.w, CX, y0, 300 * (1 - k * .5), 1.2 * (1 - k));
-  }
-  glow(c, SP.w, CX, y0, 40 + 120 * pull, (.25 + .6 * pull) * intro * (after > 0 ? 0 : 1));
-  // energy flowing along the rope from both sides
-  for (let i = 0; i < 70; i++) {
-    const left = i < 35, u0 = frac(hash(i) + t * (.5 + .3 * hash(i + 2))) * .5, u = left ? u0 : 1 - u0;
-    if (after > 0) break;
-    const x = lerp(xa, xb, u), y = y0 + ropeY(u, t, A, pull);
-    glow(c, left ? SP.bh : SP.oh, x, y, 6 + 4 * hash(i + 5), .7 * intro * Math.sin(PI * u0 * 2) * (.6 + .4 * pull));
-  }
-  // halos
-  if (after <= 0) { // after the snap the two lights are carried on by drawMorph
-    c.lineWidth = 2;
-    c.strokeStyle = rgba(BLUE_HI, .45 * intro); c.beginPath(); c.arc(xl, y0, R, 0, TAU); c.stroke();
-    c.strokeStyle = rgba(ICE, .75 * intro); c.beginPath(); c.arc(xr, y0, R, 0, TAU); c.stroke();
-    sphere(c, xl, y0, 18, BLUE, { energy: .9, flare: .3 });
-    sphere(c, xr, y0, 13, ORANGE, { energy: 1, flare: .5 });
-  }
-  // type
-  const scat = after > 0 ? E.outQ(clamp(after / .2)) : 0;
-  const px1 = fit(S.every, 600, 46, .34, 1100), L1 = lay(S.every, 600, px1, .34);
-  letters(c, L1, CX, CY - 150, (i, ch, lx) => {
-    const s = A1.every + i * .024, p = inv(s, s + .35, t); if (p <= 0) return null;
-    return { a: E.outQ(p) * (1 - scat), dy: (1 - E.outC(p)) * 20 - scat * 80, blur: (1 - p) * 6 + scat * 8, col: rgb(STEEL.map((v, j) => lerp(v, ICE[j], .5))) };
-  });
-  const px2 = fit(S.battle, 800, 142, .01, 1500), L2 = lay(S.battle, 800, px2, .01);
-  const words = []; { let w = 0; for (const ch of L2.chars) { words.push(w); if (ch.ch === ' ') w++; } }
-  const wc = [], x0 = CX - L2.width / 2;
-  for (let w = 0; w <= words[words.length - 1]; w++) {
-    const idx = words.map((v, i) => v === w && L2.chars[i].ch !== ' ' ? i : -1).filter(i => i >= 0);
-    const a = L2.chars[idx[0]], b = L2.chars[idx[idx.length - 1]]; wc.push(x0 + (a.x + b.x + b.w) / 2);
-  }
-  const by = CY + 20;
-  for (const pass of [0, 1]) {
-    if (pass === 0) c.globalCompositeOperation = 'lighter'; else c.globalCompositeOperation = 'source-over';
-    letters(c, L2, CX, by, (i, ch, lx) => {
-      const w = words[i], s = A1.battle + w * .1, p = inv(s, s + .3, t); if (p <= 0) return null;
-      const e = E.outExpo(p), sc = lerp(1.32, 1, e);
-      const nx = (lx - CX) / 720, col = nx < 0 ? mix(WHITE, BLUE_HI, Math.min(1, -nx) * .8) : mix(WHITE, WARM, Math.min(1, nx) * .85);
-      const dx = (lx - wc[w]) * (sc - 1) + (scat ? (lx - CX) * scat * 1.6 * (.6 + hash(i)) : 0);
-      const dy = scat ? (hash(i + 3) - .5) * 300 * scat : 0;
-      if (pass === 0) return { a: (.2 + .25 * decay(t, s, .5)) * E.outQ(inv(s, s + .12, t)) * (1 - scat), dx, dy, sc, blur: 18, col: rgba(nx < 0 ? BLUE : ORANGE, 1) };
-      return { a: E.outQ(inv(s, s + .12, t)) * (1 - scat), dx, dy, sc: sc * (1 + scat * .3), rot: scat * (hash(i + 7) - .5) * 1.5, blur: (1 - e) * 14 + scat * 10, col: rgb(col) };
-    });
-  }
-  c.globalCompositeOperation = 'source-over';
-}
-
-/* ===================================================================== */
 /* THE SOLUTION — the parent's phone, the child's tablet, one link        */
 /*   ① install  ② scan the lesson  ③ a quiz every 20 min                  */
 /*   then, on the child's screen: 20 min later, locked until 3/3          */
 /* ===================================================================== */
-const B = Q.b, A3 = Q.a3, D = Q.d, EC = Q.e, F = Q.f, G = Q.g, A5 = Q.a5;
+const HO = Q.h, B = Q.b, A3 = Q.a3, D = Q.d, EC = Q.e, F = Q.f, G = Q.g, A5 = Q.a5;
 const PHN = { x: -450, y: 30 }, TBL = { x: 300, y: 30 };       // device centres (world)
 const SHEET = { x: -455, y: 70, z: 80, rot: -.04, sc: .88 };     // the lesson page while it is scanned
 const TS = .5;                                                   // tablet: screen units (1200 × 800) -> local
 const PSX = 274 / 736, PSY = 594 / 1600;                         // phone: screen units (736 × 1600) -> local
 const PKT = { gap: .12, dur: .78 };                              // the three questions in flight
 const KD = { orange: '#ff7a1b', pink: '#ff4f9a', cyan: '#2fd3ff', yellow: '#ffd23f', green: '#2bd67b', lilac: '#c9bcff' };
-const devIn = t => pr(B.devices - .1, B.devices + .45, t, E.outC);
+const devIn = t => pr(B.devices - .1, B.devices + .45, t, E.outC); // the phone arrives; the tablet is there from frame 1
 const devOut = t => pr(A5.out, A5.out + .5, t, E.ioC);
 
 /* ---- camera: dolly moves only (looking straight ahead), so the screens stay flat and legible ---- */
+const FULL = t => [TBL.x, TBL.y, lerp(-380, -345, E.outQ(inv(0, HO.slam, t)))]; // the tablet's screen fills the frame
 const CAMK = [
+  [HO.pull, HO.pullEnd, FULL(HO.pull), [0, 0, -1000]],
   [A3.sheet - .1, A3.sheet + .6, [0, 0, -1000], [-70, 25, -1070]],
   [D.push, D.push + .75, [-70, 25, -1070], [-330, 0, -700]],
   [D.save + .05, D.tokenEnd - .05, [-330, 0, -700], [0, 0, -1000]],
@@ -603,17 +278,18 @@ const CAMK = [
   [G.pull, G.pullEnd, [300, 5, -500], [0, 0, -1000]],
 ];
 function camV3(t) {
-  let p = [0, 0, -1000];
+  let p = FULL(t);
   for (const [t0, t1, a, b] of CAMK) if (t >= t0) p = t >= t1 ? b : a.map((v, i) => lerp(v, b[i], E.ioC(inv(t0, t1, t))));
   // a slow breathing drift, held still while we are inside the child's screen
-  const dk = pr(A1.snap, B.devices + 1, t) * (1 - pr(EC.dive, EC.diveEnd, t) * (1 - pr(G.pull, G.pullEnd, t)));
+  const dk = pr(HO.pull, HO.pullEnd + 1, t) * (1 - pr(EC.dive, EC.diveEnd, t) * (1 - pr(G.pull, G.pullEnd, t)));
   const dx = 7 * Math.sin(t * .45) * dk, dy = 4 * Math.sin(t * .37 + 1) * dk;
   return [p[0] + dx, p[1] + dy, p[2], p[0] + dx, p[1] + dy, 0, 1000, 0];
 }
 function phoneState(t) {
   const up = pr(A3.tap - .15, A3.cam + .25, t) * (1 - pr(A3.sheetOut, A3.sheetOut + .5, t)); // lifted above the page to scan it
   const taps = decay(t, A3.tap, .2) + decay(t, D.toggle, .2) + decay(t, D.pick, .2) + decay(t, D.qs, .2) + decay(t, D.save, .2);
-  return { x: PHN.x + 25 * up, y: PHN.y - 15 * up, z: -130 * up, rot: -.035 * up + .007 * Math.sin(t * 1.3),
+  const enter = 1 - E.outC(inv(B.devices - .3, B.devices + .4, t));
+  return { x: PHN.x + 25 * up - 950 * enter, y: PHN.y - 15 * up + 60 * enter, z: -130 * up, rot: -.035 * up + .007 * Math.sin(t * 1.3) - .3 * enter,
     k: 1 + .03 * decay(t, A3.lock, .25) + .02 * decay(t, A3.shot, .2) + .012 * taps + .025 * decay(t, G.notif, .35) };
 }
 function tabletState(t) {
@@ -792,7 +468,7 @@ function tileIcon(c, k, x, y) {
 function childHome(c, t) {
   childBg(c, t);
   miniLogo(c, 96, 96, 118, '#fff');
-  const hi = E.outBack(inv(B.screens + .1, B.screens + .5, t), 1.6);
+  const hi = E.outBack(inv(HO.rewindEnd - .1, HO.rewindEnd + .3, t), 1.6);
   c.save(); c.translate(250, 330); c.scale(hi, hi);
   c.strokeStyle = KD.yellow; c.lineWidth = 9; c.beginPath(); c.arc(0, 0, 112, 0, TAU); c.stroke();
   const ag = c.createLinearGradient(0, -100, 0, 100); ag.addColorStop(0, '#ffab5e'); ag.addColorStop(1, KD.orange);
@@ -912,8 +588,8 @@ function videoAt(t) {
   return { idx: i, vt: tt - t0, prev: i - 1, pvt: tt - tp, p: i ? E.ioC(inv(t0, t0 + .16, tt)) : 1 };
 }
 const vidCv = mk(1200, 800), vidX = vidCv.getContext('2d');
-function drawVideoAt(c, t, blur) {
-  const v = videoAt(t);
+function drawVideoAt(c, t, blur) { drawFeed(c, videoAt(t), blur); }
+function drawFeed(c, v, blur) {
   const draw = cc => {
     if (v.prev >= 0 && v.p < 1) {
       cc.save(); cc.translate(0, -800 * v.p); videoScene(cc, v.prev, v.pvt); cc.restore();
@@ -950,26 +626,27 @@ function timerBadge(c, t, k) {
   [...str].forEach((ch, i) => { c.fillText(ch, x + ws[i] / 2, 14); x += ws[i]; });
   c.restore();
 }
-function lockLayer(c, t) {
-  const ga = c.globalAlpha, k = pr(EC.lock, EC.lock + .25, t);
+function lockLayer(c, t, L) {
+  const ga = c.globalAlpha, k = pr(L.lock, L.lock + .25, t);
   c.fillStyle = `rgba(16,8,44,${.62 * k})`; c.fillRect(0, 0, 1200, 800);
   // the child tries to swipe past it: everything strains, then snaps back
-  const sw = inv(EC.swipe, EC.swipe + .3, t), dy = sw > 0 && sw < 1 ? -40 * Math.sin(PI * sw) : 0;
-  const dp = E.outBack(inv(EC.lock, EC.lock + .34, t), 1.8);
-  const wob = t > EC.deny ? .26 * Math.sin((t - EC.deny) * 38) * Math.max(0, 1 - (t - EC.deny) / .5) : 0;
+  const sw = inv(L.swipe, L.swipe + .3, t), dy = sw > 0 && sw < 1 ? -40 * Math.sin(PI * sw) : 0;
+  const dp = E.outBack(inv(L.lock, L.lock + (L.slam ? .26 : .34), t), L.slam ? 1.2 : 1.8);
+  const wob = t > L.deny ? .26 * Math.sin((t - L.deny) * 38) * Math.max(0, 1 - (t - L.deny) / .5) : 0;
   c.save(); c.translate(0, dy);
   const lg = c.createRadialGradient(600, 200, 0, 600, 200, 260); lg.addColorStop(0, `rgba(255,140,60,${.35 * k})`); lg.addColorStop(1, 'rgba(255,140,60,0)');
   c.fillStyle = lg; c.fillRect(300, 0, 600, 460);
-  padlock(c, 600, 200 - 460 * (1 - dp), 1.05, 0, wob);
-  const ca = E.outC(inv(EC.card, EC.card + .35, t));
+  if (L.slam) padlock(c, 600, 200, lerp(4.2, 1.05, dp), 0, wob); // it slams onto the screen
+  else padlock(c, 600, 200 - 460 * (1 - dp), 1.05, 0, wob);
+  const ca = E.outC(inv(L.card, L.card + .35, t));
   c.globalAlpha = ga * ca;
   txt(c, S.tab.lockTitle, 600, 396 + 24 * (1 - ca), '800 66px Outfit', '#fff', 'center');
   wrapBal(S.tab.lockSub, '500 32px Outfit', 860).forEach((l, i) => txt(c, l, 600, 454 + i * 42 + 24 * (1 - ca), '500 32px Outfit', KD.lilac, 'center'));
-  const bp = 1 - .06 * decay(t, EC.go, .25);
+  const bp = 1 - .06 * decay(t, L.go, .25);
   c.save(); c.translate(600, 612 + 24 * (1 - ca)); c.scale(bp, bp); roundFill(c, -190, -46, 380, 92, 46, KD.orange); txt(c, S.tab.lockBtn, 0, 13, '700 36px Outfit', '#fff', 'center'); c.restore();
   c.globalAlpha = ga; c.restore();
   // "screen locked"
-  const ta = pr(EC.deny, EC.deny + .15, t) * (1 - pr(EC.go - .15, EC.go, t));
+  const ta = pr(L.deny, L.deny + .15, t) * (1 - pr(L.go - .15, L.go, t));
   if (ta > .003) {
     c.font = '700 30px Outfit'; const w = c.measureText(S.tab.denied).width + 100;
     c.globalAlpha = ga * ta; c.save(); c.translate(600, 736); c.scale(lerp(.8, 1, ta), lerp(.8, 1, ta));
@@ -977,15 +654,15 @@ function lockLayer(c, t) {
     c.restore(); c.globalAlpha = ga;
   }
   // the swipe that goes nowhere, then the tap on "let's go"
-  if (t > EC.swipe - .2 && t < EC.swipe + .5) {
-    const a = pr(EC.swipe - .2, EC.swipe - .05, t) * (1 - pr(EC.swipe + .3, EC.swipe + .45, t)), q = E.ioC(inv(EC.swipe, EC.swipe + .3, t)), y = lerp(720, 450, q), L = 270 * q;
+  if (t > L.swipe - .2 && t < L.swipe + .5) {
+    const a = pr(L.swipe - .2, L.swipe - .05, t) * (1 - pr(L.swipe + .3, L.swipe + .45, t)), q = E.ioC(inv(L.swipe, L.swipe + .3, t)), y = lerp(720, 450, q), len = 270 * q;
     c.globalAlpha = ga * a;
-    if (L > 2) { const tg = c.createLinearGradient(0, y, 0, y + L); tg.addColorStop(0, 'rgba(255,255,255,.45)'); tg.addColorStop(1, 'rgba(255,255,255,0)');
-      c.fillStyle = tg; c.beginPath(); c.moveTo(880 - 30, y); c.lineTo(880 + 30, y); c.lineTo(880 + 4, y + L); c.lineTo(880 - 4, y + L); c.closePath(); c.fill(); }
+    if (len > 2) { const tg = c.createLinearGradient(0, y, 0, y + len); tg.addColorStop(0, 'rgba(255,255,255,.45)'); tg.addColorStop(1, 'rgba(255,255,255,0)');
+      c.fillStyle = tg; c.beginPath(); c.moveTo(880 - 30, y); c.lineTo(880 + 30, y); c.lineTo(880 + 4, y + len); c.lineTo(880 - 4, y + len); c.closePath(); c.fill(); }
     c.fillStyle = 'rgba(255,255,255,.42)'; c.beginPath(); c.arc(880, y, 40, 0, TAU); c.fill(); c.strokeStyle = 'rgba(255,255,255,.9)'; c.lineWidth = 3; c.stroke();
     c.globalAlpha = ga;
   }
-  touch(c, t, EC.go, 640, 612, false);
+  if (L.go < 90) touch(c, t, L.go, 640, 612, false);
 }
 function quizLayer(c, t) {
   const ga = c.globalAlpha, inK = E.outC(inv(F.start, F.start + .32, t)), cardA = 1 - pr(F.unlock - .06, F.unlock + .08, t);
@@ -1058,7 +735,36 @@ function unlockLayer(c, t) {
   const pA = E.outBack(inv(F.plus, F.plus + .35, t), 2.4);
   if (pA > 0) { c.save(); c.translate(600, 694); c.scale(pA, pA); roundFill(c, -146, -44, 292, 88, 44, KD.orange); txt(c, S.tab.plus, 0, 16, '800 46px Outfit', '#fff', 'center'); c.restore(); }
 }
+const HV = [1, 4, 2, 3, 0];           // the videos of the opening feed
+const HK = { lock: HO.slam, card: HO.card, swipe: 99, deny: 99, go: 99, slam: true };
+function hookFeed(t) {
+  const tt = Math.min(t, HO.slam);
+  let i = 0; for (let k = 1; k < HO.swipes.length; k++) if (tt >= HO.swipes[k]) i = k;
+  const t0 = HO.swipes[i];
+  return { idx: HV[i], vt: tt - t0 + 1, prev: i ? HV[i - 1] : -1, pvt: tt - HO.swipes[Math.max(0, i - 1)] + 1, p: i ? E.ioC(inv(t0, t0 + .12, tt)) : 1 };
+}
+function hookScreen(c, t) {
+  drawFeed(c, hookFeed(t), 18 * pr(HO.slam, HO.slam + .18, t));
+  if (t >= HO.slam) lockLayer(c, t, HK);
+}
+function rewindGlyph(c, a) {
+  c.fillStyle = `rgba(255,255,255,${.9 * a})`;
+  for (const dx of [-46, 34]) { c.beginPath(); c.moveTo(600 + dx + 40, 340); c.lineTo(600 + dx - 30, 400); c.lineTo(600 + dx + 40, 460); c.closePath(); c.fill(); }
+}
 function tabletScreen(c, t) {
+  if (t < HO.rewindEnd) {
+    // a rewind: from the locked screen back up the feed to Ben's home — now, how does it work?
+    const rp = E.ioC(inv(HO.rewind, HO.rewindEnd, t)), off = 2400 * rp;
+    c.save(); c.translate(0, off); hookScreen(c, Math.min(t, HO.rewind)); c.restore();
+    if (rp > 0) {
+      c.save(); c.translate(0, off - 800); videoScene(c, HV[3], 1.2); c.restore();
+      c.save(); c.translate(0, off - 1600); videoScene(c, HV[1], .6); c.restore();
+      c.save(); c.translate(0, off - 2400); childHome(c, t); c.restore();
+      const ga = c.globalAlpha, g = Math.sin(PI * rp); c.fillStyle = `rgba(20,10,60,${.3 * g})`; c.fillRect(0, 0, 1200, 800);
+      rewindGlyph(c, g); c.globalAlpha = ga;
+    }
+    return;
+  }
   const vStart = E.ioC(inv(D.vid, D.vid + .35, t));
   if (t < D.vid + .35) { c.save(); c.translate(0, -800 * vStart); childHome(c, t); c.restore(); }
   if (t >= D.vid) {
@@ -1067,7 +773,7 @@ function tabletScreen(c, t) {
   }
   if (t >= EC.lock && t < F.resume + .45) {
     c.save(); c.translate(0, 800 * E.ioC(inv(F.resume, F.resume + .4, t)));
-    if (t < F.start + .32) lockLayer(c, t);
+    if (t < F.start + .32) lockLayer(c, t, EC);
     if (t >= F.start) quizLayer(c, t);
     if (t >= F.unlock) unlockLayer(c, t);
     c.restore();
@@ -1077,7 +783,7 @@ function tabletScreen(c, t) {
   timerBadge(c, t, Math.min(1.2, ba));
 }
 function drawTabletV3(c, t) {
-  const din = devIn(t), A = 1 - devOut(t); if (din <= .003 || A <= .003) return;
+  const din = 1, A = 1 - devOut(t); if (A <= .003) return;
   const st = tabletState(t), P = proj(st.x, st.y, 0); if (!P) return;
   const s = P.s * st.k * lerp(.72, 1, din) * lerp(1, .82, devOut(t));
   c.setTransform(s, 0, 0, s, P.x, P.y);
@@ -1090,7 +796,7 @@ function drawTabletV3(c, t) {
   c.lineWidth = 10; c.strokeStyle = rgba(ORANGE, .16); c.stroke(); c.setLineDash([]);
   c.globalAlpha = A * body; c.fillStyle = '#1c1c2a'; c.beginPath(); c.arc(-310, 0, 4, 0, TAU); c.fill();
   c.beginPath(); c.roundRect(-300, -200, 600, 400, 22); c.fillStyle = '#04060b'; c.fill();
-  const sa = A * pr(B.screens, B.screens + .35, t);
+  const sa = A;
   if (sa > .003) {
     c.save(); c.beginPath(); c.roundRect(-300, -200, 600, 400, 22); c.clip();
     c.translate(-300, -200); c.scale(TS, TS); c.globalAlpha = sa;
@@ -1217,25 +923,17 @@ function drawLinkBadge(c, t) {
   c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1;
 }
 function deviceGlows(c, t) {
-  const A = devIn(t) * (1 - devOut(t)); if (A <= .003) return;
+  const A = 1 - devOut(t), Ap = A * devIn(t); if (A <= .003) return;
   c.globalCompositeOperation = 'lighter';
   const ps = phoneState(t), P = proj(ps.x, ps.y, ps.z), T = proj(TBL.x, TBL.y, 0);
-  if (P) glow(c, SP.b, P.x, P.y, 520 * P.s, .13 * A * (1 + 1.2 * decay(t, A3.shot, .5) + .8 * decay(t, D.save, .5) + .9 * decay(t, G.notif, .6)));
+  if (P && Ap > .003) glow(c, SP.b, P.x, P.y, 520 * P.s, .13 * Ap * (1 + 1.2 * decay(t, A3.shot, .5) + .8 * decay(t, D.save, .5) + .9 * decay(t, G.notif, .6)));
   const lockDim = 1 - .45 * pr(EC.lock, EC.lock + .3, t) * (1 - pr(F.unlock, F.unlock + .3, t));
   if (T) {
     glow(c, SP.o, T.x, T.y, 720 * T.s, .12 * A * lockDim * (1 + 1.6 * decay(t, F.unlock, .9) + .8 * decay(t, A3.tray, .5) + .8 * decay(t, D.tokenEnd, .5)));
+    if (t > HO.slam && t < HO.slam + .7) beams(c, T.x, T.y, 22, 1900, .03, .4, ORANGE_HI, .16 * (1 - inv(HO.slam, HO.slam + .7, t)), 5);
     if (t > F.unlock && t < F.unlock + 1.2) beams(c, T.x, T.y - 40 * T.s, 18, 1500, .03, t * .1, ORANGE_HI, .1 * (1 - inv(F.unlock, F.unlock + 1.2, t)) * A, 13);
   }
   c.globalCompositeOperation = 'source-over';
-}
-function drawMorph(c, t) {
-  // the two lights of the battle become the two devices
-  if (t < A1.snap || t > B.devices + .5) return;
-  const k = E.ioC(inv(A1.snap + .02, B.devices + .05, t)), fade = 1 - pr(B.devices + .05, B.devices + .45, t);
-  for (const [x0, x1, col, r] of [[-690, PHN.x, BLUE, 18], [690, TBL.x, ORANGE, 13]]) {
-    const P = proj(lerp(x0, x1, k), lerp(150, 30, k) - Math.sin(PI * k) * 110, 0); if (!P) continue;
-    sphere(c, P.x, P.y, r * (1 + .5 * k), col, { energy: fade, halo: fade, alpha: fade, flare: .4 * fade });
-  }
 }
 function label(c, x, y, s, col, a) {
   if (a <= .003) return; const P = proj(x, y, 0); if (!P) return;
@@ -1270,8 +968,24 @@ function drawCaptions(c, t) {
     [EC.lapse + .05, EC.zero + .1, S.later, 0], [EC.capLock, F.q[1] + .2, S.noAnswer, 0], [G.cap, A5.out + .05, S.follow, 0]];
   for (const [t0, t1, s, n] of C) if (t >= t0 && t <= t1 + .3) caption(c, t, s, n, t0, t1);
 }
+function drawHookWords(c, t) { // the first word is already there on frame 1
+  if (t > HO.slam + .35) return;
+  for (let i = 0; i < 3; i++) {
+    const t0 = HO.w[i], t1 = i < 2 ? HO.w[i + 1] : HO.slam; if (t < t0 || t > t1 + .35) continue;
+    const s = S.hookWords[i], px = fit(s, 800, 200, .01, 1500), L = lay(s, 800, px, .01), by = CY + px * .34;
+    const pin = i === 0 ? E.outBack(inv(-.1, .07, t), 2.2) : E.outBack(inv(t0, t0 + .13, t), 2.2), last = i === 2, out = last ? E.outC(inv(HO.slam, HO.slam + .3, t)) : inv(t1, t1 + .06, t);
+    const sc = lerp(1.6, 1, clamp(pin)) * (1 + .05 * decay(t, HO.swipes[Math.min(4, i + 2)], .2));
+    c.save(); c.globalAlpha = .62 * (1 - out); c.translate(CX, by - px * .36); c.scale(1, .3);
+    const g = c.createRadialGradient(0, 0, 0, 0, 0, 1000); g.addColorStop(0, 'rgba(2,7,17,.8)'); g.addColorStop(.6, 'rgba(2,7,17,.4)'); g.addColorStop(1, 'rgba(2,7,17,0)');
+    c.fillStyle = g; c.fillRect(-1000, -1000, 2000, 2000); c.restore();
+    letters(c, L, CX, by, (k, ch, lx) => {
+      const r = hash(k * 3.1 + i);
+      return { a: (1 - out) * clamp(pin * 3), sc: sc * (last ? 1 - .3 * out : 1), dx: (lx - CX) * (sc - 1) + (last ? (lx - CX) * out * (1 + r) : 0),
+        dy: last ? (r - .3) * 600 * out : -30 * out, rot: last ? (r - .5) * 2.4 * out : 0, blur: 12 * out, col: /[0-9]/.test(ch.ch) ? rgb(ORANGE) : '#fff' };
+    });
+  }
+}
 function drawStage(c, t) {
-  drawMorph(c, t);
   deviceGlows(c, t);
   drawLink(c, t);
   // the paper, the screens and the type sit above the bloom, so the interfaces keep their true colours
@@ -1281,7 +995,7 @@ function drawStage(c, t) {
     drawSheetV3(o, t); drawTabletV3(o, t); drawPhoneV3(o, t);
     drawLinkBadge(o, t); drawPackets(o, t); drawToken(o, t); drawNotifPop(o, t); drawLabels(o, t);
     o.setTransform(1, 0, 0, 1, 0, 0); o.globalAlpha = 1; o.globalCompositeOperation = 'source-over';
-    drawCaptions(o, t);
+    drawCaptions(o, t); drawHookWords(o, t);
   });
 }
 
@@ -1564,7 +1278,7 @@ function drawPairV3(c, t) {
 /* master timeline                                                        */
 /* ===================================================================== */
 function shakeAt(t) {
-  const a = 9 * decay(t, A1.freeze, .3) + 5 * decay(t, A1.battle + .2, .25) + 10 * decay(t, A1.snap, .3)
+  const a = 18 * decay(t, HO.slam, .4) + 3 * (decay(t, HO.w[1], .15) + decay(t, HO.w[2], .15)) + 2 * decay(t, HO.swipes[3], .12)
     + 3 * decay(t, EC.lock, .3) + 2 * decay(t, A3.lock, .2) + 2.5 * decay(t, F.unlock, .35);
   return [noise(t * 43) * a, noise(t * 47 + 11) * a];
 }
@@ -1574,34 +1288,10 @@ function renderScene(t) {
   background(c, t);
   const [sx, sy] = shakeAt(t);
   if (t > A5.converge) beams(c, LOGO_X, LOGO_Y - 60, 12, 1300, .03, t * .025, BLUE_HI, .045 * pr(A5.converge, A5.cta, t), 21);
-  // ---- the hook ----
-  if (t < A1.slice + .13) {
-    camArr(frontal); cam.ox = sx; cam.oy = sy;
-    dust(c, t, inv(.3, 1, t) * (1 - inv(2.4, 3.3, t)) * .9, 1400);
-    drawHook(c, t);
-  }
-  // ---- the battle ----
-  if (t >= A1.slice && t < A1.snap + .4) {
-    camArr(frontal); cam.ox = sx; cam.oy = sy;
-    const cut = t < A1.slice + .13;
-    if (cut) { // a blade of light slices the frame and reveals the tension
-      const p = E.inQ(inv(A1.slice, A1.slice + .13, t)), an = 1.05, nx = Math.cos(an), ny = Math.sin(an), d = lerp(1250, -1250, p);
-      c.save(); c.beginPath();
-      const px = CX + nx * d, py = CY + ny * d, tx = -ny, ty = nx;
-      c.moveTo(px + tx * 3000, py + ty * 3000); c.lineTo(px - tx * 3000, py - ty * 3000); c.lineTo(px - tx * 3000 + nx * 4000, py - ty * 3000 + ny * 4000); c.lineTo(px + tx * 3000 + nx * 4000, py + ty * 3000 + ny * 4000); c.closePath();
-      c.fillStyle = rgb(DEEP); c.fill(); c.clip();
-      drawTension(c, t); c.restore();
-      c.globalCompositeOperation = 'lighter'; c.lineCap = 'round';
-      for (const [lw, a] of [[60, .18], [14, .5], [3, 1]]) { c.strokeStyle = rgba(ICE, a); c.lineWidth = lw; c.beginPath(); c.moveTo(px + tx * 3000, py + ty * 3000); c.lineTo(px - tx * 3000, py - ty * 3000); c.stroke(); }
-      c.lineCap = 'butt'; c.globalCompositeOperation = 'source-over';
-    } else drawTension(c, t);
-  }
-  // ---- the solution: phone, tablet, lesson, rule, lock, quiz ----
-  if (t >= A1.snap) {
-    camArr(camV3(t)); cam.ox = sx; cam.oy = sy;
-    dust(c, t, .5 * pr(A1.snap, A1.snap + 1, t) * (1 - pr(A5.out, A5.converge, t)), 1000);
-    drawStage(c, t);
-  }
+  // ---- one continuous world: the tablet from frame 1, then the phone, the lesson, the rule, the lock, the quiz ----
+  camArr(camV3(t)); cam.ox = sx; cam.oy = sy;
+  dust(c, t, .5 * pr(HO.pull, HO.pullEnd, t) * (1 - pr(A5.out, A5.converge, t)), 1000);
+  drawStage(c, t);
   if (t >= A5.converge - .1) { camArr(frontal); dust(c, t, .35 * pr(A5.converge, A5.converge + 1, t), 1000); }
   c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; c.setTransform(1, 0, 0, 1, 0, 0);
 }
@@ -1615,17 +1305,14 @@ const GRAIN = (() => { const out = [], r = rng(9);
     for (let i = 0; i < d.data.length; i += 4) { const v = 128 + ((r() + r() + r()) - 1.5) * 70; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
     g.putImageData(d, 0, 0); out.push(c); } return out; })();
 function grade(t) {
-  let sat = 1, br = 1;
-  const fr = inv(A1.freeze, A1.freeze + .02, t) * (1 - inv(A1.shatter - .05, A1.shatter + .2, t));
-  sat -= .5 * fr;
-  return { sat, br };
+  return { sat: 1, br: 1 };
 }
 function flashAt(t) {
-  return .24 * decay(t, A1.burst, .22) + .3 * decay(t, A1.freeze, .12) + .14 * decay(t, A1.slice + .12, .15) + .3 * decay(t, A1.snap, .1)
+  return .35 * decay(t, HO.slam, .14) + .06 * (decay(t, HO.w[1], .08) + decay(t, HO.w[2], .08))
     + .05 * decay(t, B.linked, .2) + .05 * decay(t, A3.shot, .2) + .1 * decay(t, EC.lock, .15) + .14 * decay(t, F.unlock, .25);
 }
 function caAt(t) {
-  return 7 * decay(t, A1.freeze, .18) + 9 * decay(t, A1.snap, .25) + 4 * decay(t, EC.lock, .2) + 3 * decay(t, F.unlock, .2);
+  return 12 * decay(t, HO.slam, .25) + 3 * (decay(t, HO.w[1], .1) + decay(t, HO.w[2], .1)) + 4 * decay(t, EC.lock, .2) + 3 * decay(t, F.unlock, .2);
 }
 function composite(t, out) {
   const g = grade(t);
@@ -1638,7 +1325,7 @@ function composite(t, out) {
   // bloom (approximate threshold via contrast)
   b1c.globalCompositeOperation = 'copy'; b1c.filter = 'contrast(1.9) brightness(.95) blur(3px)'; b1c.drawImage(out.canvas, 0, 0, 480, 270); b1c.filter = 'none';
   b2c.globalCompositeOperation = 'copy'; b2c.filter = 'blur(4px)'; b2c.drawImage(b1, 0, 0, 240, 135); b2c.filter = 'none';
-  const bk = 1 - .3 * pr(A1.snap, B.devices, t);
+  const bk = .7;
   out.globalCompositeOperation = 'lighter'; out.globalAlpha = .38 * bk; out.drawImage(b1, 0, 0, W, H); out.globalAlpha = .45 * bk; out.drawImage(b2, 0, 0, W, H);
   // chromatic aberration on impacts
   const ca = caAt(t);

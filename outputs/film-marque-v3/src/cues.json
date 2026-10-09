@@ -1,131 +1,125 @@
 {
- "duration": 31.0,
- "a1": {
-  "burst": -0.6,
-  "n3": 0.0,
-  "n2": 0.55,
-  "n1": 1.1,
-  "n0": 1.65,
-  "freeze": 2.0,
-  "shatter": 2.35,
-  "strain1": 2.5,
-  "strain2": 2.95,
-  "slice": 3.3,
-  "every": 3.42,
-  "battle": 3.72,
-  "tension": 4.75,
-  "snap": 5.6,
-  "please": 2.55
+ "duration": 29.5,
+ "h": {
+  "swipes": [
+   0.0,
+   0.32,
+   0.62,
+   0.86,
+   1.04
+  ],
+  "w": [
+   0.0,
+   0.36,
+   0.7
+  ],
+  "slam": 1.18,
+  "card": 1.36,
+  "pull": 2.35,
+  "pullEnd": 3.4,
+  "rewind": 2.85,
+  "rewindEnd": 3.45
  },
  "b": {
-  "step": 5.85,
-  "devices": 6.0,
-  "screens": 6.15,
-  "labels": 6.35,
-  "link": 6.6,
-  "linked": 7.2
+  "step": 4.35,
+  "devices": 3.7,
+  "screens": 3.85,
+  "labels": 4.2,
+  "link": 5.1,
+  "linked": 5.7
  },
  "a3": {
-  "sheet": 8.15,
-  "tap": 8.5,
-  "cam": 8.62,
-  "lock": 8.95,
-  "scan": 9.0,
-  "shot": 9.45,
-  "detected": 9.55,
-  "send": 10.15,
-  "tray": 10.93,
-  "sheetOut": 10.6
+  "sheet": 6.65,
+  "tap": 7.0,
+  "cam": 7.12,
+  "lock": 7.45,
+  "scan": 7.5,
+  "shot": 7.95,
+  "detected": 8.05,
+  "send": 8.65,
+  "tray": 9.43,
+  "sheetOut": 9.1
  },
  "d": {
-  "push": 11.2,
-  "screen": 11.35,
-  "step": 11.45,
-  "toggle": 11.85,
-  "save": 13.2,
-  "token": 13.4,
-  "tokenEnd": 14.1,
-  "home": 13.75,
-  "tapVid": 14.3,
-  "vid": 14.45,
-  "pick": 12.3,
-  "qs": 12.8
+  "push": 9.7,
+  "screen": 9.85,
+  "step": 9.95,
+  "toggle": 10.35,
+  "save": 11.7,
+  "token": 11.9,
+  "tokenEnd": 12.6,
+  "home": 12.25,
+  "tapVid": 12.8,
+  "vid": 12.95,
+  "pick": 10.8,
+  "qs": 11.3
  },
  "e": {
-  "dive": 14.35,
-  "diveEnd": 15.1,
-  "lapse": 15.15,
-  "zero": 16.7,
-  "lock": 16.75,
-  "card": 16.95,
-  "swipe": 17.35,
-  "deny": 17.55,
-  "capLock": 17.5,
-  "go": 17.95
+  "dive": 12.85,
+  "diveEnd": 13.6,
+  "lapse": 13.65,
+  "zero": 15.2,
+  "lock": 15.25,
+  "card": 15.45,
+  "swipe": 15.85,
+  "deny": 16.05,
+  "capLock": 16.0,
+  "go": 16.45
  },
  "f": {
-  "start": 18.15,
+  "start": 16.65,
   "q": [
-   18.2,
-   19.25,
-   20.05
+   16.7,
+   17.75,
+   18.55
   ],
   "tap": [
-   18.85,
-   19.75,
-   20.5
+   17.35,
+   18.25,
+   19.0
   ],
-  "unlock": 20.85,
-  "bravo": 21.0,
-  "plus": 21.25,
-  "resume": 21.95
+  "unlock": 19.35,
+  "bravo": 19.5,
+  "plus": 19.75,
+  "resume": 20.45
  },
  "g": {
-  "pull": 22.15,
-  "pullEnd": 23.0,
-  "notif": 22.7,
-  "cap": 22.85
+  "pull": 20.65,
+  "pullEnd": 21.5,
+  "notif": 21.2,
+  "cap": 21.35
  },
  "a5": {
-  "out": 24.2,
-  "tagline": 24.85,
-  "converge": 25.3,
-  "body": 25.95,
-  "word": 26.4,
-  "cta": 27.1,
-  "url": 27.35,
-  "glint": 28.9
+  "out": 22.7,
+  "tagline": 23.35,
+  "converge": 23.8,
+  "body": 24.45,
+  "word": 24.9,
+  "cta": 25.6,
+  "url": 25.85,
+  "glint": 27.4
  },
  "vo": [
   {
-   "t": 0.05,
-   "d": 1.1,
+   "t": 1.4,
+   "d": 0.9,
    "who": "child",
-   "fr": "Encore cinq minutes !",
-   "en": "Just five more minutes!",
-   "dir_fr": "Voix d’enfant (8-10 ans) : supplique pleine d’énergie, dès la première image.",
-   "dir_en": "Child’s voice (8-10): an energetic plea, right on the first frame."
+   "fr": "Hein ?! C’est bloqué ?!",
+   "en": "What?! It’s locked?!",
+   "dir_fr": "Voix d’enfant (8-10 ans) : surprise sincère, un peu outrée, pile sur le cadenas.",
+   "dir_en": "Child’s voice (8-10): genuine surprise, a little outraged, right on the padlock."
   },
   {
-   "t": 2.55,
-   "d": 0.8,
-   "who": "child",
-   "fr": "S’il te plaît…",
-   "en": "Please…",
-   "dir_fr": "Même enfant, tout petit, presque chuchoté pendant que le point pousse contre la limite.",
-   "dir_en": "Same child, small, almost whispered while the dot pushes against the limit."
+   "t": 2.45,
+   "d": 1.9,
+   "who": "narrator",
+   "fr": "Et si ses vidéos lui faisaient réviser ses leçons ?",
+   "en": "What if their screen time made them study?",
+   "dir_fr": "La question que tout parent se pose : complice, avec un sourire.",
+   "dir_en": "The question every parent asks: knowing, with a smile."
   },
   {
-   "t": 3.7,
-   "d": 1.7,
-   "fr": "Et chaque soir… la même bataille.",
-   "en": "And every night… the same battle.",
-   "dir_fr": "Complicité de parent à parent, léger soupir sur « chaque soir ».",
-   "dir_en": "Parent-to-parent, a small sigh on “every night”.",
-   "who": "narrator"
-  },
-  {
-   "t": 5.95,
+   "t": 4.45,
    "d": 2.1,
    "who": "narrator",
    "fr": "Avec Kizzo, installez l’appli sur sa tablette.",
@@ -134,7 +128,7 @@
    "dir_en": "The turn: clear, reassuring, a smile appears."
   },
   {
-   "t": 8.35,
+   "t": 6.85,
    "d": 2.4,
    "who": "narrator",
    "fr": "Scannez ses leçons : Kizzo en fait des quiz.",
@@ -143,7 +137,7 @@
    "dir_en": "Concrete, a touch of pride on “turns them into quizzes”."
   },
   {
-   "t": 11.45,
+   "t": 9.95,
    "d": 2.8,
    "who": "narrator",
    "fr": "Un quiz toutes les vingt minutes : c’est vous qui décidez.",
@@ -152,7 +146,7 @@
    "dir_en": "“Twenty minutes” lands as the parent taps “20 min”. Then knowing on “you decide”."
   },
   {
-   "t": 15.05,
+   "t": 13.55,
    "d": 1.4,
    "who": "narrator",
    "fr": "Vingt minutes plus tard…",
@@ -161,7 +155,7 @@
    "dir_en": "Knowing, speeding up with the timer."
   },
   {
-   "t": 16.75,
+   "t": 15.25,
    "d": 1.0,
    "who": "narrator",
    "fr": "…l’écran se bloque.",
@@ -170,7 +164,7 @@
    "dir_en": "Crisp, landing on the padlock."
   },
   {
-   "t": 17.95,
+   "t": 16.45,
    "d": 1.9,
    "who": "narrator",
    "fr": "Pour le débloquer, il doit répondre.",
@@ -179,7 +173,7 @@
    "dir_en": "Firm but kind: it’s the rule, not a punishment."
   },
   {
-   "t": 20.1,
+   "t": 18.6,
    "d": 2.3,
    "who": "narrator",
    "fr": "Trois bonnes réponses… et c’est reparti !",
@@ -188,7 +182,7 @@
    "dir_en": "Hold after “answers”, then “back on” as the video restarts."
   },
   {
-   "t": 22.85,
+   "t": 21.35,
    "d": 1.8,
    "who": "narrator",
    "fr": "Et vous, vous savez ce qu’il a appris.",
@@ -197,7 +191,7 @@
    "dir_en": "Parent to parent, reassuring."
   },
   {
-   "t": 25.0,
+   "t": 23.5,
    "d": 1.4,
    "who": "narrator",
    "fr": "Un temps d’écran qui compte.",
@@ -206,7 +200,7 @@
    "dir_en": "Signature line: slow down."
   },
   {
-   "t": 26.9,
+   "t": 25.4,
    "d": 2.3,
    "who": "narrator",
    "fr": "Kizzo. Rendez-vous sur kizzo.fr.",

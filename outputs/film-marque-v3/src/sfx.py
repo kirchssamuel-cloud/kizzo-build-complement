@@ -71,48 +71,40 @@ def pad(freqs, d, a=.5, rel=.8):
     e = np.minimum(1, x / a) * np.minimum(1, np.maximum(0, d - x) / rel)
     return onepole_lp(out, 2200) * e / len(freqs)
 
-a1, b, a3, d, e, fq, g, a5 = (Q[k] for k in ('a1', 'b', 'a3', 'd', 'e', 'f', 'g', 'a5'))
+h, b, a3, d, e, fq, g, a5 = (Q[k] for k in ('h', 'b', 'a3', 'd', 'e', 'f', 'g', 'a5'))
 NOTE = lambda n: 440 * 2 ** ((n - 69) / 12)
 
-# ---------------- ACT 1 ----------------
-place(mx(thump(95, 36, 1.2, .4) * 1.3, click(.03, 4200) * 1.6, click(.04, 1600)), 0.0, .95, 0, .25)   # the hook lands on frame 1
-place(whoosh(.35, 9000, 1200, 1.2, .5), 0.0, .35, 0, .3)
-place(thump(110, 34, 1.0, .35), a1['burst'], .9)                             # birth of the world
-place(whoosh(.8, 6000, 400, 1.2, .6), a1['burst'], .35, 0, .4)
-rd = a1['freeze'] - a1['burst']                                              # riser, cut dead at zero
-x = tt(rd) / rd
-ris = svf_bp(noise(rd), 300 * (25 ** (x ** 1.6)), 3.0) * (x ** 1.8) * 1.2
-ris += sine(180 * (6 ** (x ** 1.4)), rd) * (x ** 2.2) * .18
-place(ris * np.minimum(1, (rd - tt(rd)) / .004), a1['burst'], .5, 0, .15)
-for k, n in enumerate(['n2', 'n1']):                                         # 0:02 · 0:01 (0:03 sits on the hook hit)
-    place(mx(click(.02, 2400 + k * 500), thump(160, 80, .25, .06) * .6), a1[n], .55, (k - 1) * .3)
-place(click(.02, 3600) * 1.2, a1['n0'], .6)
-f = a1['freeze']                                                             # ZERO: freeze + lock
-place(thump(90, 30, 1.8, .55) * 1.4, f, 1.0, 0, .2)
-place(mx(click(.03, 5200) * 1.5, click(.03, 1500)), f, .9)
-place(bell(820, 2.2, 1.4, ((1, 1), (2.76, .5), (5.4, .25), (8.93, .12))), f, .26, 0, .7)
-for i in range(70):                                                          # shatter into light
-    ti = a1['shatter'] + (rng.random() ** 1.6) * .95
-    place(bell(2500 + rng.random() * 5000, .25, .06) * (1 - (ti - a1['shatter'])), ti, .05, rng.uniform(-.9, .9), .6)
-place(whoosh(1.0, 2000, 600, 1.0), a1['shatter'], .18, 0, .5)
-for k, s in enumerate(['strain1', 'strain2']):                               # wanting more
-    place(mx(thump(75, 50, .5, .12), whoosh(.3, 400, 1200, 2.0) * .3), a1[s] + .14, .5, .35 if k == 0 else -.4)
-    place(bell(330 * (1 + k * .06), 1.0, .35, ((1, 1), (2.0, .3), (2.9, .15))), a1[s] + .16, .12, .3 if k == 0 else -.3, .4)
-place(whoosh(.18, 9000, 900, 1.4), a1['slice'] - .02, .5, .6, .2)            # the slice
-place(thump(90, 55, .4, .1) * .5, a1['every'], .4)
-for w in range(3): place(mx(thump(80, 42, .5, .14), click(.02, 1800) * .5), a1['battle'] + w * .1, .7, (w - 1) * .3)
-td = a1['snap'] - a1['tension']; x = tt(td) / td                             # tension rises
-ten = sum(sine(110 * h * (1 + x * .03), td) / h for h in range(1, 7)) * (x ** 2) * (1 + .5 * sine(6 + x * 14, td))
-place(onepole_lp(ten, 900 + 2500 * x) * .25, a1['tension'], .55, 0, .2)
-place(svf_bp(noise(td), 2500 + 3000 * x, 4) * (x ** 3) * .5, a1['tension'], .3)
-place(mx(click(.04, 6000) * 2, click(.04, 2000), thump(120, 50, .5, .12)), a1['snap'], .8)   # snap
-place(whoosh(.32, 5000, 300, 1.0, .8), a1['snap'], .6, -.4, .2)
+# ---------------- HOOK: the feed races, the padlock slams ----------------
+sl = h['slam']
+for k, ts in enumerate(h['swipes']):                                         # a kick and a swipe on every new video
+    place(mx(thump(150, 48, .45, .11) * 1.1, click(.01, 5200) * .5), ts, .75, 0, .1)
+    place(whoosh(.2, 2800, 700, 1.6), ts, .3, (-1) ** k * .35, .12)
+for k in range(int(sl / .085)):                                               # hats, getting busier
+    tk = k * .085
+    if tk < sl - .02: place(svf_bp(noise(.03), 9000, 2) * env(.03, .001, .012), tk, .1 + .12 * tk / sl, (-1) ** k * .4, .05)
+for k, (tw, n) in enumerate(zip(h['w'], (57, 60, 64))):                       # 1 video · then 10 · then 50…
+    place(mx(thump(120, 55, .4, .1), click(.02, 3000)), tw, .6, 0, .15)
+    st = sum(sine(NOTE(n) * m, .32) * a_ for m, a_ in ((1, 1), (2, .5), (3, .25))) * env(.32, .004, .09)
+    place(onepole_lp(st, 3200), tw, .22, 0, .25)
+x = tt(sl) / sl                                                               # a riser, cut dead by the padlock
+place(svf_bp(noise(sl), 500 * 14 ** (x ** 1.5), 3.0) * x ** 1.6 * 1.1 * np.minimum(1, (sl - tt(sl)) / .004), 0.0, .4, 0, .1)
+place(thump(80, 26, 2.2, .7) * 1.5, sl, 1.0, 0, .3)                            # SLAM
+place(mx(click(.03, 2400) * 1.8, click(.02, 6400), click(.05, 900)), sl, .85, 0, .35)
+place(bell(150, 2.2, 1.2, ((1, 1), (2.76, .5), (5.4, .25), (8.93, .1))), sl + .01, .3, 0, .7)
+place(whoosh(.5, 6000, 200, 1.0, .7), sl - .12, .4, 0, .3)
+place(whoosh(.35, 900, 2600, 1.6), h['card'], .1, 0, .3)
+place(pad([NOTE(n) for n in (38, 45, 50)], h['pull'] - sl + .4, .3, .3), sl + .15, .18, 0, .5)
+place(whoosh(1.0, 1400, 300, 1.1), h['pull'], .22, 0, .4)                      # pull back
+rw = h['rewindEnd'] - h['rewind']; x = tt(rw) / rw                            # rewind
+wob = 1 + .35 * np.sin(2 * np.pi * 38 * tt(rw))
+place(svf_bp(noise(rw), 1800 * wob * (1 + 1.5 * x), 5) * np.sin(np.pi * x) * 1.2 + sine(900 * 2 ** (-1.5 * x), rw) * np.sin(np.pi * x) * .15, h['rewind'], .3, 0, .2)
+place(mx(click(.015, 2000), thump(200, 120, .1, .03) * .4), h['rewindEnd'], .35, 0, .2)
+place(bell(NOTE(76), 1.0, .4, ((1, 1), (2, .3))), h['rewindEnd'] + .05, .12, .4, .5)          # Ben's home
 
-# ---------------- INSTALL: the two lights become a phone and a tablet ----------------
-place(whoosh(.55, 300, 1700, 1.3), a1['snap'] + .05, .22, 0, .4)
-for k, (pan, n) in enumerate(((-.55, 69), (.55, 76))):                       # each screen powers on
-    place(mx(bell(NOTE(n), 1.3, .5, ((1, 1), (2, .3), (3.01, .1))), thump(NOTE(n - 36), NOTE(n - 38), .4, .1) * .5), b['devices'] + .08 * k, .14, pan, .5)
-ld = b['linked'] - b['link']; x = tt(ld) / ld                                 # the link runs from parent to child
+# ---------------- INSTALL: the parent's phone arrives, a link runs to the tablet ----------------
+place(whoosh(.6, 300, 1700, 1.3), b['devices'] - .3, .22, -.5, .35)
+place(mx(bell(NOTE(69), 1.3, .5, ((1, 1), (2, .3), (3.01, .1))), thump(NOTE(33), NOTE(31), .4, .1) * .5), b['devices'] + .1, .14, -.55, .5)
+ld = b['linked'] - b['link']; x = tt(ld) / ld
 place(sine(520 * 2 ** (x * 1.4), ld) * np.sin(np.pi * x) * .25 + svf_bp(noise(ld), 1000 * 4 ** x, 6) * .5, b['link'], .16, 0, .45)
 for i, n in enumerate((76, 81)): place(bell(NOTE(n), 1.0, .4, ((1, 1), (2, .25))), b['linked'] + i * .09, .12, .3, .5)
 place(pad([NOTE(n) for n in (45, 52, 57, 64, 71)], e['lock'] - b['devices'], 1.2, .05), b['devices'], .16, 0, .5)  # a quiet bed, cut by the lock

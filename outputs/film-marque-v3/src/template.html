@@ -135,7 +135,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
   if (RENDER) { window.KZ_READY = KZ.ready; return; }
 
   const CH = [
-    { t: 0, en: ['Hook', '“Just 5 more minutes!”'], fr: ['Accroche', '« Encore 5 minutes ! »'] },
+    { t: 0, en: ['Hook', '“What?! It’s locked?!”'], fr: ['Accroche', '« Hein ?! C’est bloqué ?! »'] },
     { t: Q.b.step, en: ['Install', 'The parent’s phone, the child’s tablet'], fr: ['Installation', 'Le téléphone du parent, la tablette de l’enfant'] },
     { t: Q.a3.sheet - .05, en: ['Scan', 'Their lesson becomes a quiz'], fr: ['Scan', 'Sa leçon devient un quiz'] },
     { t: Q.d.push, en: ['Rule', 'A quiz every 20 min'], fr: ['Règle', 'Un quiz toutes les 20 min'] },
@@ -144,11 +144,11 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
     { t: Q.a5.out, en: ['Brand', 'Discover Kizzo'], fr: ['Marque', 'Découvrir Kizzo'] },
   ];
   const UI = {
-    fr: { kind: 'Film de marque v3', meta: '31 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', vo: 'Voix off', child: 'Enfant', next: 'À venir',
-      title: 'Script voix off', lead: 'Treize répliques courtes : deux pour l’enfant, qui ouvre le film, onze pour le narrateur. La voix raconte ; à l’écran, chaque étape a son titre, pour que le film se comprenne aussi sans le son. Cliquez une ligne pour l’écouter en situation.',
+    fr: { kind: 'Film de marque v3', meta: '29,5 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', vo: 'Voix off', child: 'Enfant', next: 'À venir',
+      title: 'Script voix off', lead: 'Douze répliques courtes : une pour l’enfant, dans l’accroche, onze pour le narrateur. La voix raconte ; à l’écran, chaque étape a son titre, pour que le film se comprenne aussi sans le son. Cliquez une ligne pour l’écouter en situation.',
       note: 'La couche sonore du film ne contient ni voix ni musique. Les sous-titres ci-dessus montrent ce que diront l’enfant et le narrateur, et quand.' },
-    en: { kind: 'Brand film v3', meta: '31 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', vo: 'Voice-over', child: 'Child', next: 'Coming up',
-      title: 'Voice-over script', lead: 'Thirteen short lines: two for the child, who opens the film, eleven for the narrator. The voice tells the story; on screen each step has its title, so the film also works with the sound off. Click a line to hear it in place.',
+    en: { kind: 'Brand film v3', meta: '29.5 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', vo: 'Voice-over', child: 'Child', next: 'Coming up',
+      title: 'Voice-over script', lead: 'Twelve short lines: one for the child, in the hook, eleven for the narrator. The voice tells the story; on screen each step has its title, so the film also works with the sound off. Click a line to hear it in place.',
       note: 'The film’s sound layer has no voice and no music. The captions above show what the child and the narrator say, and when.' },
   };
   const who = v => v.who === 'child' ? UI[lang].child : UI[lang].vo;
