@@ -8,6 +8,7 @@ Animation motion design 3D temps réel (Three.js / WebGL) qui explique Kizzo, au
 | `kizzo-explainer-fr-1080x1920-60fps.mp4` | Export vidéo H.264 + AAC (−14 LUFS), prêt pour LinkedIn / Reels / TikTok. |
 | `kizzo-explainer-fr-poster.png` | Image finale (logo) en 1080 × 1920, pour la miniature. |
 | `v1-en/` | Version 1 (anglais, 30 s, sans scène de scan), archivée. |
+| `kizzo-regles-fr.html` · `kizzo-regles-fr-1080x1080-60fps.mp4` · `kizzo-regles-fr-poster.png` | **Film 2 « Les règles du jeu »**, format carré 1:1 (voir plus bas). |
 
 ## Lecture
 
@@ -38,6 +39,20 @@ Paramètres d'URL (à ajouter après `.html`) :
 | 27,9 – 32,9 s | **E · Le parent** | Tableau de bord « Bonjour Léa » (temps restant, quiz automatiques, créer un quiz avec une photo, statistiques). Trois règles (quiz toutes les 15 min, limite 2 h, coucher 20 h 30) rejoignent le téléphone de Ben par des traînées de lumière. Titre **« Vous fixez les règles »**. |
 | 32,9 – 37,5 s | **F · Signature** | Le logo Kizzo extrudé s'assemble, balayage de brillance, rayons. **« kizzo »** + **« Le temps d'écran se gagne en apprenant »**. |
 
+## Film 2 — « Les règles du jeu » (1080 × 1080, 32 s)
+
+Même univers et même charte, autre format (carré, pensé pour le fil LinkedIn / Instagram) et autres illustrations : l'écran réel **« Règles des quiz »** de l'app parent sert de fil rouge, et chaque réglage sort de l'écran en objet 3D.
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 4,6 s | **Accroche** | Les icônes d'applis de Ben sortent de son téléphone et tournent autour ; un anneau compte « Temps d'applis » jusqu'à 15:00, les icônes rentrent, verrou « C'est l'heure d'un quiz ! ». **« 15 minutes d'applis… / …puis un quiz. »** |
+| 4,6 – 14,7 s | **Règles des quiz** | Panoramique vers le téléphone parent. L'interrupteur « Quiz de déblocage » s'active, les 9 puces de fréquence sortent (10 → **15 min**), « Décompté sur le temps d'applis », les jetons 3 → **5 questions**, puis les 6 matières en illustrations 3D (équerre, livre, globe, atome, bulle « Hello! », étoile). « Enregistrer ». |
+| 14,7 – 23,4 s | **Carrousel** | Les illustrations se posent sur 5 cartes de quiz (Maths, Français, Histoire-Géo, Sciences, Anglais) ; le carrousel tourne d'un cran à chaque bonne réponse. **« Il répond, matière par matière »** |
+| 23,4 – 27,9 s | **Récompense** | Retour au téléphone de Ben : un sablier se retourne, « +15 » s'en échappe et se plante dans l'écran, les applis se libèrent. **« +15 minutes d'écran, bien méritées »** |
+| 27,9 – 32 s | **Signature** | Le logo s'assemble, « kizzo », « Le temps d'écran se gagne en apprenant », **kizzo.fr**. |
+
+Code : `src/regles/` (config et textes, écrans Canvas, objets 3D, mise en scène, titres, bande-son). Le lecteur (`src/player.js`), l'environnement, la post-production et le moteur audio (`src/audio-core.js`) sont partagés entre les deux films.
+
 ## Interfaces reprises des vraies apps
 
 - **App parent (claire)** : d'après les captures « Bonjour Léa », « Photographier une leçon », viseur « Page 1 », « Kizzo lit la leçon de Ben » et « Questions générées » (dégradé ciel → pêche, boutons orange, cartes blanches).
@@ -60,10 +75,12 @@ Orange signature `#F97316`, navy `#0F172A`, cyan du logo `#3DB5DA` · Outfit / P
 ```bash
 cd outputs/kizzo-explainer
 npm install
-npm run build            # -> kizzo-explainer-fr.html
+npm run build            # -> kizzo-explainer-fr.html + kizzo-regles-fr.html
 npm run export           # -> dist/kizzo-explainer-1080x1920-60fps.mp4 (≈ 2 h 30 sans GPU, reprenable)
+npm run export -- --film regles   # -> dist/kizzo-regles-1080x1080-60fps.mp4 (≈ 1 h 30)
 ```
 
 - Textes (FR/EN), couleurs et timing : `src/config.js`.
 - Interfaces : `src/ui-kizzo.js` · scène du scan : `src/scan.js` · mise en scène et caméras : `src/story.js` · son : `src/audio.js`.
-- Aperçus rapides : `node tools/snap.mjs <dossier> 960 6.2 10.9 19.9` (images fixes aux instants donnés).
+- Aperçus rapides : `node tools/snap.mjs <dossier> 960 6.2 10.9 19.9` (images fixes aux instants donnés) ; `FILM=regles node tools/snap.mjs <dossier> 540 …` pour le film carré.
+- Écrans seuls, sans la 3D : `node tools/ui-preview.mjs out.png "rulesScreen(c,390,860,{})"`.
