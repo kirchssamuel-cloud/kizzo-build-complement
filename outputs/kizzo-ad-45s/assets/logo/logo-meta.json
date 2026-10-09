@@ -1,0 +1,38 @@
+{
+  "crop": [
+    122,
+    368,
+    682,
+    862
+  ],
+  "colors": {
+    "blue": "#2BBBED",
+    "orange": "#FF7A1B",
+    "wordmark": "#FFFFFF"
+  },
+  "background": "#071B39",
+  "blue": {
+    "bbox": [
+      144,
+      24,
+      535,
+      592
+    ]
+  },
+  "orange": {
+    "bbox": [
+      287,
+      169,
+      418,
+      293
+    ]
+  },
+  "wordmark": {
+    "bbox": [
+      24,
+      617,
+      658,
+      838
+    ]
+  }
+}

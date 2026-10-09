@@ -1,0 +1,4 @@
+assets/clips/*/
+assets/clips/*.mp4
+assets/clips/clips.local.json
+*-animatique.mp4

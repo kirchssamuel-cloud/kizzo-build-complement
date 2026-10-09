@@ -1,0 +1,102 @@
+<!--HEAD-->
+<title>Kizzo Launch Film</title>
+<style>
+/*FONTS*/
+/* One dark world built from the logo's own navy; brand blue and orange are the only light sources. */
+:root {
+  --void: #010610;
+  --navy: #071b39;
+  --blue: #2bbbed;
+  --orange: #ff7a1b;
+  --white: #ffffff;
+  --mute: #8da2c0;
+  --display: 'Outfit', 'Avenir Next', system-ui, sans-serif;
+  --body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+html, body { height: 100%; margin: 0; background: var(--void); color: var(--white); overflow: hidden; font-family: var(--body); }
+#viewport { position: fixed; inset: 0; padding-inline: 16px; background: #000; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+#stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: 50% 50%; overflow: hidden; background: var(--void); contain: strict; -webkit-user-select: none; user-select: none; }
+#gl { position: absolute; inset: 0; width: 1920px; height: 1080px; display: block; }
+
+/* kinetic type */
+.type-layer { position: absolute; inset: 0; pointer-events: none; }
+.phrase { position: absolute; font-family: var(--display); font-weight: 800; color: var(--white); visibility: hidden; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
+.line { display: block; white-space: nowrap; overflow: hidden; padding: 0.08em 0.06em 0.12em; margin: -0.08em -0.06em -0.12em; line-height: 1; }
+.inner { display: inline-block; }
+.ch { display: inline-block; will-change: transform, opacity; }
+.sp { display: inline-block; width: 0.24em; }
+.dot { display: inline-block; width: 0.19em; height: 0.19em; border-radius: 50%; background: var(--orange); margin-left: 0.05em; transform: scale(0); opacity: 0; box-shadow: 0 0 0.3em rgba(255, 122, 27, 0.45); }
+.eyebrow { display: flex; align-items: center; gap: 14px; font-family: var(--body); font-size: 15px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255, 255, 255, 0.72); margin-bottom: 22px; opacity: 0; }
+.pip { width: 9px; height: 9px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 14px rgba(255, 122, 27, 0.8); }
+
+.ph-screen { left: 0; right: 0; top: 362px; text-align: center; font-size: 172px; letter-spacing: -0.012em; transform-origin: 50% 50%; will-change: transform, opacity, filter; }
+.ph-screen .line + .line { margin-top: 0.02em; }
+.ph-screen .line.blue { overflow: visible; color: var(--blue); }
+.ph-parent { left: 150px; top: 790px; font-size: 46px; font-weight: 700; letter-spacing: -0.01em; }
+.ph-parent .line { line-height: 1.12; }
+.ph-parent .line.soft { color: rgba(255, 255, 255, 0.55); }
+.ph-parent .dot { width: 0.2em; height: 0.2em; }
+.ph-learn { left: 150px; top: 268px; font-size: 120px; letter-spacing: -0.01em; }
+.ph-learn .line { line-height: 1.08; }
+.ph-meet { left: 0; right: 0; top: 452px; text-align: center; font-size: 168px; letter-spacing: 0.015em; }
+.ph-meet .line { overflow: visible; }
+
+/* final logo */
+.logo-wrap { position: absolute; visibility: hidden; pointer-events: none; }
+.logo-stack { position: absolute; inset: 0; transform-origin: 50% 45%; }
+.lg { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; display: block; user-select: none; opacity: 0; }
+.lg-orange { transform-origin: 51.7% 26.8%; }
+.lg-sweep { position: absolute; inset: 0; opacity: 0; mix-blend-mode: screen; background: linear-gradient(104deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46.5%, rgba(255, 255, 255, 0.34) 49.2%, rgba(255, 255, 255, 0.46) 50%, rgba(255, 255, 255, 0.34) 50.8%, rgba(255, 255, 255, 0) 53.5%, rgba(255, 255, 255, 0) 100%) no-repeat; background-size: 250% 100%; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+.logo-aura { position: absolute; left: 50%; top: 40%; width: 1400px; height: 1100px; transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(43, 187, 237, 0.13), rgba(7, 27, 57, 0) 72%); opacity: 0; }
+.logo-reflect { position: absolute; left: 0; top: calc(100% - 28px); width: 100%; height: 100%; transform: scaleY(-1); opacity: 0; filter: blur(1.5px); -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 22%); mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 22%); }
+.logo-reflect img { width: 100%; height: 100%; display: block; max-width: none; }
+.logo-url { position: absolute; left: 50%; top: 908px; font-family: var(--body); font-size: 19px; font-weight: 500; letter-spacing: 0.36em; padding-left: 0.36em; color: rgba(255, 255, 255, 0.62); white-space: nowrap; visibility: hidden; opacity: 0; }
+
+/* lens */
+.grain { position: absolute; inset: -64px; pointer-events: none; opacity: 0.07; mix-blend-mode: overlay; }
+.vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 80% 75% at 50% 50%, rgba(0, 0, 0, 0) 58%, rgba(0, 0, 0, 0.42) 100%); }
+
+/* player chrome */
+#controls { position: absolute; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: min(720px, calc(100% - 32px)); box-sizing: border-box; display: flex; align-items: center; gap: 14px; padding: 8px 16px 8px 8px; border-radius: 20px; background: rgba(7, 27, 57, 0.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.1); opacity: 0; transition: opacity 0.35s ease; cursor: default; }
+#controls.show, body:not(.playing).ready #controls { opacity: 1; }
+#controls button { flex: none; width: 40px; height: 40px; border-radius: 14px; border: 0; display: grid; place-items: center; color: var(--white); background: rgba(255, 255, 255, 0.08); cursor: pointer; }
+#controls button:hover { background: rgba(255, 255, 255, 0.16); }
+#controls button:focus-visible, #scrub:focus-visible + .track { outline: 2px solid var(--orange); outline-offset: 2px; }
+#btn-play[data-state='play'] .i-pause, #btn-play[data-state='pause'] .i-play { display: none; }
+#btn-replay { display: none !important; }
+body.ended #btn-replay { display: grid !important; background: var(--orange); }
+body.ended #btn-play { display: none; }
+.scrub { position: relative; flex: 1; min-width: 0; height: 28px; display: flex; align-items: center; }
+.scrub .track { position: absolute; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.14); overflow: hidden; pointer-events: none; }
+#scrub-fill { position: absolute; inset: 0; background: linear-gradient(90deg, var(--blue), var(--orange)); transform-origin: 0 50%; transform: scaleX(0); }
+#scrub { position: absolute; inset: 0; width: 100%; margin: 0; opacity: 0; cursor: pointer; }
+#time { flex: none; font: 500 12px var(--body); font-variant-numeric: tabular-nums; color: var(--mute); white-space: nowrap; }
+#error { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; font: 500 16px var(--body); color: var(--mute); }
+@media (max-width: 460px) { #time { display: none; } }
+@media (prefers-reduced-motion: reduce) { #controls { transition: none; } }
+</style>
+<!--BODY-->
+<div id="viewport">
+  <div id="stage" aria-label="Kizzo launch film, 15 seconds">
+    <canvas id="gl" width="1920" height="1080"></canvas>
+    <div class="grain" id="grain"></div>
+    <div class="vignette"></div>
+  </div>
+  <div id="error" hidden></div>
+  <div id="controls" class="show">
+    <button id="btn-play" type="button" data-state="play" aria-label="Play">
+      <svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.6v10.8c0 .8.9 1.3 1.6.8l8.3-5.4c.6-.4.6-1.2 0-1.6L5.6 1.8C4.9 1.3 4 1.8 4 2.6z" fill="currentColor"/></svg>
+      <svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.6" height="12" rx="1.4" fill="currentColor"/><rect x="9.4" y="2" width="3.6" height="12" rx="1.4" fill="currentColor"/></svg>
+    </button>
+    <button id="btn-replay" type="button" aria-label="Replay">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3.2V1L5.4 4 9 7V4.8a4.6 4.6 0 1 1-4.6 4.6H2.8A6.2 6.2 0 1 0 9 3.2z" fill="currentColor"/></svg>
+    </button>
+    <label class="scrub" for="scrub">
+      <input id="scrub" type="range" min="0" max="1500" step="1" value="0" aria-label="Seek">
+      <span class="track"><span id="scrub-fill"></span></span>
+    </label>
+    <span id="time">00:00.00 / 00:15.00</span>
+  </div>
+</div>
+<script>/*SCRIPT*/</script>
