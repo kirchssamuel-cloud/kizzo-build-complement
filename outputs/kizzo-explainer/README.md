@@ -9,6 +9,7 @@ Animation motion design 3D temps réel (Three.js / WebGL) qui explique Kizzo, au
 | `kizzo-explainer-fr-poster.png` | Image finale (logo) en 1080 × 1920, pour la miniature. |
 | `v1-en/` | Version 1 (anglais, 30 s, sans scène de scan), archivée. |
 | `kizzo-regles-fr.html` · `kizzo-regles-fr-1080x1080-60fps.mp4` · `kizzo-regles-fr-poster.png` | **Film 2 « Les règles du jeu »**, format carré 1:1 (voir plus bas). |
+| `kizzo-pub-sans-voix-fr-1080x1920-60fps.mp4` · `kizzo-pub-fr-1080x1920-60fps.mp4` · `kizzo-pub-*-fr.html` | **Pub 9:16 « 23:47 »** pour TikTok / Reels / Facebook, sans et avec voix off (voir plus bas). |
 
 ## Lecture
 
@@ -52,6 +53,21 @@ Même univers et même charte, autre format (carré, pensé pour le fil LinkedIn
 | 27,9 – 32 s | **Signature** | Le logo s'assemble, « kizzo », « Le temps d'écran se gagne en apprenant », **kizzo.fr**. |
 
 Code : `src/regles/` (config et textes, écrans Canvas, objets 3D, mise en scène, titres, bande-son). Le lecteur (`src/player.js`), l'environnement, la post-production et le moteur audio (`src/audio-core.js`) sont partagés entre les deux films.
+
+## Pub 9:16 « 23:47 » (1080 × 1920, 30 s)
+
+Format natif réseaux, en 2D plein cadre, vu à travers le téléphone du parent — rien à voir avec les films 3D. Accroche sur la douleur du parent dès la première image.
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 4,9 s | **Accroche** | Écran verrouillé de nuit, **23:47**, notification « Temps d'écran · Ben · 6 h 42 aujourd'hui », puis « Ben a battu son record ! », « jdors bientot promis ». Vibrations. |
+| 4,9 – 10,3 s | **Douleur** | La conversation SMS du soir qui dégénère (« Tu dors ? » / « oui » / « Tu es en ligne depuis 6 h. » …), l'écran rougit et tremble. |
+| 10,3 – 13,1 s | **Bascule** | Écran noir, mots qui claquent : « Et si, pour jouer… il devait d'abord **apprendre ?** » |
+| 13,1 – 22,5 s | **Solution** | Démo plein écran : le jeu se fige, quiz, +15 min ; côté parent : photo de la leçon, questions générées, « Règles des quiz ». |
+| 22,5 – 30,2 s | **Fin** | « Fini les ~~disputes~~. », logo, « Le temps d'écran se gagne en apprenant », bouton **Télécharger Kizzo**. |
+
+- Sous-titres karaoké incrustés (lecture sans le son) ; deux versions : **sans voix off** (bruitages + musique) et **avec voix off** (voix française de synthèse grave, Piper « tom » retraitée, `src/pub/vo/`).
+- Code : `src/pub/` (images 2D `frames.js`, habillage `titles.js`, bande-son `audio.js`). Build `npm run build pub` / `pub-sv` ; export `npm run export -- --film pub-sv --frames-from pub`.
 
 ## Interfaces reprises des vraies apps
 
