@@ -112,7 +112,8 @@ export function makeDirector(S, clips, o, assets) {
   };
 
   // ── HUD pieces built from layout
-  const ans = { cx: 520, cy: 575 };
+  // over Ben's tablet, so his face stays clear (the card stands for what he sees)
+  const ans = { cx: 540, cy: 1200 };
   const pills = drawCard(assets.answerCanvas, 0, 0);
   const pill = pills[QUESTIONS[0].ok];
   const ox = ans.cx - CARD.w / 2, oy = ans.cy - CARD.h / 2;
@@ -378,10 +379,10 @@ export function makeDirector(S, clips, o, assets) {
     // ── HUD: ribbons, answer card, sparks
     const R = S.R;
     // discovery strokes
-    const sk = prog(t, T.strokes, 1.1, EASE.cine);
-    const sOut = 1 - prog(t, T.strokes + 1.2, 0.6);
-    for (const [rb, d] of [[R.cyanIn, 0], [R.orangeIn, 0.14]]) {
-      const k = prog(t, T.strokes + d, 1.0, EASE.cine);
+    // they live on C2 only and are gone once the circle has opened onto C3
+    const sOut = 1 - prog(t, T.reveal3 - 0.05, 0.2);
+    for (const [rb, d] of [[R.cyanIn, 0], [R.orangeIn, 0.12]]) {
+      const k = prog(t, T.strokes + d, 0.8, EASE.cine);
       rb.visible = k > 0 && sOut > 0;
       rb.material.uniforms.uHead.value = k * 1.0;
       rb.material.uniforms.uLen.value = 0.55;
@@ -424,7 +425,7 @@ export function makeDirector(S, clips, o, assets) {
         S.answer.tex.needsUpdate = true;
       }
       const pop = 1 + 0.035 * Math.sin(Math.PI * clamp((t - T.tapC4) / 0.3));
-      S.answer.mesh.position.set(ans.cx, H - ans.cy + (1 - ink) * -40 + out * 260, 0);
+      S.answer.mesh.position.set(ans.cx, H - ans.cy + (1 - ink) * -40 + out * 120, 0);
       S.answer.mesh.scale.setScalar(lerp(0.9, 1, ink) * pop * (1 - out * 0.4));
       S.answer.mesh.material.opacity = ink * (1 - out);
       const rk = prog(t, T.tapC4 + 0.12, 0.6, EASE.cine);

@@ -12,9 +12,9 @@ export const COPY = {
   t2: { lines: [['Et si le temps d’écran'], ['aidait aussi'], [`à apprendre${NNBSP}?`, 'apprendre', 'c']], top: 300, stagger: 0.55 },
   t3: { lines: [['Une photo de la leçon.', 'photo', 'o']], top: 300 },
   t4: { lines: [['La leçon devient'], ['un quiz.', 'quiz', 'c']], top: 300 },
-  t4b: { lines: [['Réviser, régulièrement.']], top: 1290, small: true },
+  t4b: { lines: [['Réviser, régulièrement.']], top: 250, small: true },
   t5: { lines: [['Un rythme adapté', 'rythme', 'c'], ['à votre famille.']], top: 300 },
-  t6: { lines: [['Moins de conflits.'], ['Plus de sens.', 'sens', 'o']], top: 300, stagger: 0.7 },
+  t6: { lines: [['Moins de conflits.'], ['Plus de sens.', 'sens', 'o']], top: 240, stagger: 0.7 },
 };
 
 const el = (tag, cls, parent, text) => {

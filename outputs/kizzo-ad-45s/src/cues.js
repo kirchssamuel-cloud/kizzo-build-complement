@@ -5,7 +5,7 @@ export const T = {
   cut12: 3.1,
   ramp: [5.2, 6.3],
   // 2 · discovery
-  strokes: 5.65,
+  strokes: 5.45,
   reveal3: 5.95,
   t2: [6.85, 8.85],
   blur3: 8.6,
@@ -77,10 +77,11 @@ export const SHOTS = {
   },
   c4: {
     label: 'C4 · Ben révise sur la tablette',
-    job: '8e7c3599-a754-4cce-97ef-17af6e0ca253',
+    job: '946922e5-acc3-49aa-b0d2-5acef723e9dd',
     from: 22.4,
     to: 27.8,
-    map: (t) => Math.min(4.95, Math.max(0, t - 22.55)),
+    // his finger meets the tablet at 3.15 s in the clip: lands on T.tapC4
+    map: (t) => Math.min(4.95, Math.max(0, t - 22.55 + 0.85)),
   },
   c5: {
     label: 'C5 · Ben montre son quiz à Léa',
@@ -94,6 +95,6 @@ export const SHOTS = {
 // Points of interest inside the character shots, in stage pixels (1080×1920).
 // Tune once the clips are in: they anchor graphics to the action.
 export const POI = {
-  tablet: [560, 1180],   // c2: where the cyan stroke is born
-  family: [540, 1060],   // c5: centre of the orbiting ribbons
+  tablet: [905, 585],    // c2: Léa's tablet, where the strokes are born
+  family: [540, 1060],   // c5: centre of the orbiting ribbons (checked on the clip)
 };

@@ -584,8 +584,8 @@ export function createStage(canvas, assets, { preserve = false } = {}) {
   const hudCam = new THREE.OrthographicCamera(0, W, H, 0, -10, 10);
   const R = {};
   const tp = assets.poi.tablet;
-  R.cyanIn = ribbon([[tp[0], tp[1]], [tp[0] - 260, tp[1] - 260], [200, 760], [520, 560], [860, 700], [940, 380], [700, 180]], { width: 16, a: '#7FD8F7', b: BRAND.cyan });
-  R.orangeIn = ribbon([[tp[0] + 40, tp[1] + 60], [tp[0] + 300, tp[1] - 120], [880, 980], [640, 820], [420, 900], [300, 640]], { width: 12, a: '#FFB27A', b: BRAND.orange });
+  R.cyanIn = ribbon([[tp[0], tp[1]], [tp[0] - 105, tp[1] - 115], [640, 440], [500, 540], [470, 720], [600, 810], [730, 700], [680, 520], [540, 400], [380, 330]], { width: 16, a: '#7FD8F7', b: BRAND.cyan });
+  R.orangeIn = ribbon([[tp[0] + 30, tp[1] + 55], [tp[0] - 85, tp[1] + 175], [620, 700], [470, 600], [330, 620], [160, 700]], { width: 12, a: '#FFB27A', b: BRAND.orange });
   const fam = assets.poi.family;
   const orbit = (rx, ry, rot, cx, cy) => {
     const pts = [];
