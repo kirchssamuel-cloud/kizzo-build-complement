@@ -1,0 +1,10 @@
+{
+  "duration": 25.5,
+  "a1": { "burst": 0.25, "n3": 0.45, "n2": 0.95, "n1": 1.38, "n0": 1.72, "freeze": 2.0, "shatter": 2.35,
+          "strain1": 2.5, "strain2": 2.95, "slice": 3.3, "every": 3.42, "battle": 3.72, "tension": 4.3, "snap": 5.0 },
+  "a2": { "start": 5.1, "peak": 7.9, "stop": 8.45, "arc": 8.85, "unravel": 8.95 },
+  "a3": { "less": 9.55, "more": 10.0, "snap": 10.35, "forms": 11.0, "ring": 11.15, "learn": 11.75,
+          "q": [12.35, 13.15, 13.95], "close": 14.5 },
+  "a4": { "combine": 15.0, "lock": 15.55, "expand": 15.6, "tick0": 16.2, "tick1": 17.2, "earned": 17.25, "harmony": 18.5 },
+  "a5": { "tagline": 19.85, "converge": 20.6, "body": 21.25, "word": 21.7, "cta": 22.45, "url": 22.7, "glint": 24.0 }
+}

@@ -1,0 +1,122 @@
+{
+ "en": {
+  "every": "EVERY NIGHT,",
+  "battle": "THE SAME BATTLE.",
+  "screenTime": "SCREEN TIME",
+  "lesson": "THE WATER CYCLE",
+  "questions": "3 QUESTIONS",
+  "quiz": "QUIZ",
+  "steps": [
+   "SCAN",
+   "QUIZ",
+   "+15 MIN"
+  ],
+  "earned": "MINUTES",
+  "tagline": "MAKE SCREEN TIME COUNT.",
+  "cta": "DISCOVER KIZZO",
+  "url": "kizzo.fr",
+  "page": [
+   "#The water cycle",
+   "",
+   "Water moves endlessly between the oceans, the air and the land.",
+   "",
+   "1. Evaporation: the Sun’s heat turns the water of oceans and lakes into water vapour, which rises into the air.",
+   "",
+   "2. Condensation: up high, the air is cold. The vapour cools down and forms tiny droplets: these are clouds.",
+   "",
+   "3. Precipitation: the droplets grow and fall back as rain, snow or hail.",
+   "",
+   "4. Run-off and infiltration: some water flows into rivers, then the sea; the rest soaks into the ground.",
+   "",
+   "Remember: water changes state (liquid, gas, solid), but the amount on Earth stays almost the same."
+  ],
+  "app": {
+   "hello": "Hello Léa",
+   "date": "Wednesday 7 October",
+   "online": "Online",
+   "grade": "Year 6",
+   "timeLeft": "Time left today",
+   "auto": "Automatic quizzes",
+   "autoSub": "A quiz every 30 min, 5 questions",
+   "cta": "Create a quiz from a photo",
+   "ctaSub": "Kizzo writes the questions from their lesson",
+   "last30": "LAST 30 DAYS",
+   "tiles": [
+    "questions",
+    "correct",
+    "day"
+   ],
+   "page1": "Page 1",
+   "hint": "Frame the whole page, flat",
+   "reading": "Kizzo is reading Ben’s lesson",
+   "readingSub": "It only takes a few seconds",
+   "steps": [
+    "Page text read",
+    "Writing the questions…",
+    "Matching Ben’s level"
+   ]
+  },
+  "hook": "“JUST 5 MORE MINUTES!”",
+  "please": "PLEASE…"
+ },
+ "fr": {
+  "every": "CHAQUE SOIR,",
+  "battle": "LA MÊME BATAILLE.",
+  "screenTime": "TEMPS D’ÉCRAN",
+  "lesson": "LE CYCLE DE L’EAU",
+  "questions": "3 QUESTIONS",
+  "quiz": "QUIZ",
+  "steps": [
+   "SCAN",
+   "QUIZ",
+   "+15 MIN"
+  ],
+  "earned": "MINUTES",
+  "tagline": "UN TEMPS D’ÉCRAN QUI COMPTE.",
+  "cta": "DÉCOUVRIR KIZZO",
+  "url": "kizzo.fr",
+  "page": [
+   "#Le cycle de l’eau",
+   "",
+   "L’eau circule sans cesse entre les océans, l’air et les continents.",
+   "",
+   "1. L’évaporation : la chaleur du Soleil transforme l’eau des océans et des lacs en vapeur d’eau, qui monte dans l’atmosphère.",
+   "",
+   "2. La condensation : en altitude, l’air est froid. La vapeur se refroidit et forme des gouttelettes : ce sont les nuages.",
+   "",
+   "3. Les précipitations : les gouttelettes grossissent et retombent en pluie, en neige ou en grêle.",
+   "",
+   "4. Le ruissellement et l’infiltration : une partie de l’eau rejoint les rivières puis la mer ; l’autre s’infiltre dans le sol.",
+   "",
+   "À retenir : l’eau change d’état (liquide, gazeux, solide), mais sa quantité sur Terre reste presque la même."
+  ],
+  "app": {
+   "hello": "Bonjour Léa",
+   "date": "Mercredi 7 octobre",
+   "online": "En ligne",
+   "grade": "CM2",
+   "timeLeft": "Temps restant aujourd’hui",
+   "auto": "Quiz automatiques",
+   "autoSub": "Un quiz toutes les 30 min, 5 questions",
+   "cta": "Créer un quiz avec une photo",
+   "ctaSub": "Kizzo écrit les questions à partir de sa leçon",
+   "last30": "30 DERNIERS JOURS",
+   "tiles": [
+    "questions",
+    "de réussite",
+    "jour"
+   ],
+   "page1": "Page 1",
+   "hint": "Cadrez la page entière, à plat",
+   "reading": "Kizzo lit la leçon de Ben",
+   "readingSub": "C’est l’affaire de quelques secondes",
+   "steps": [
+    "Texte de la page lu",
+    "Rédaction des questions…",
+    "Calage sur le niveau CM2"
+   ]
+  },
+  "hook": "« ENCORE 5 MINUTES ! »",
+  "please": "S’IL TE PLAÎT…"
+ }
+}

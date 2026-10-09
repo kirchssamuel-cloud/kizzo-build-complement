@@ -1,0 +1,394 @@
+{
+ "en": {
+  "steps": [
+   "INSTALL KIZZO ON THEIR TABLET",
+   "SCAN THEIR LESSONS",
+   "A QUIZ EVERY 20 MIN"
+  ],
+  "tagline": "MAKE SCREEN TIME COUNT.",
+  "cta": "DISCOVER KIZZO",
+  "url": "kizzo.fr",
+  "page": [
+   "#The water cycle",
+   "",
+   "Water moves endlessly between the oceans, the air and the land.",
+   "",
+   "1. Evaporation: the Sun’s heat turns the water of oceans and lakes into water vapour, which rises into the air.",
+   "",
+   "2. Condensation: up high, the air is cold. The vapour cools down and forms tiny droplets: these are clouds.",
+   "",
+   "3. Precipitation: the droplets grow and fall back as rain, snow or hail.",
+   "",
+   "4. Run-off and infiltration: some water flows into rivers, then the sea; the rest soaks into the ground.",
+   "",
+   "Remember: water changes state (liquid, gas, solid), but the amount on Earth stays almost the same."
+  ],
+  "app": {
+   "hello": "Hello Léa",
+   "date": "Wednesday 7 October",
+   "online": "Online",
+   "grade": "Year 6",
+   "timeLeft": "Time left today",
+   "auto": "Automatic quizzes",
+   "autoSub": "A quiz every 30 min, 5 questions",
+   "cta": "Create a quiz from a photo",
+   "ctaSub": "Kizzo writes the questions from their lesson",
+   "last30": "LAST 30 DAYS",
+   "tiles": [
+    "questions",
+    "correct",
+    "day"
+   ],
+   "page1": "Page 1",
+   "hint": "Frame the whole page, flat",
+   "reading": "Kizzo is reading Ben’s lesson",
+   "readingSub": "It only takes a few seconds",
+   "steps": [
+    "Page text read",
+    "Writing the questions…",
+    "Matching Ben’s level"
+   ],
+   "connecting": "Connecting…",
+   "autoSub20": "A quiz every 20 min, 3 questions",
+   "notifApp": "KIZZO",
+   "notifNow": "now",
+   "notifTitle": "Ben unlocked his screen",
+   "notifBody": "“The water cycle” quiz: 3/3 ✓",
+   "rule": {
+    "title": "Quiz rules",
+    "sub": "How quizzes are triggered",
+    "unlock": "Unlock quiz",
+    "on": "On",
+    "off": "Off",
+    "every": "A quiz every…",
+    "info": [
+     "A quiz appears every ",
+     "{n} minutes",
+     " of counted",
+     "app use."
+    ],
+    "qs": "Questions per quiz",
+    "passq": [
+     "To pass to finish the quiz: ",
+     "{n} questions."
+    ],
+    "subjects": "Subjects",
+    "subjectList": [
+     "Maths",
+     "French",
+     "History-Geo",
+     "Science",
+     "English",
+     "Other"
+    ],
+    "save": "Save"
+   }
+  },
+  "later": "20 MINUTES LATER…",
+  "noAnswer": "NO ANSWERS, NO SCREEN.",
+  "follow": "YOU FOLLOW THEIR PROGRESS.",
+  "you": "YOU",
+  "kid": "YOUR CHILD",
+  "tab": {
+   "hello": "Hi Ben",
+   "active": "Kizzo is on",
+   "tiles": [
+    "Videos",
+    "Games",
+    "Quiz"
+   ],
+   "ready": "3 questions ready",
+   "lesson": "The water cycle",
+   "lockTitle": "Quiz time.",
+   "lockSub": "Answer 3 questions on your lesson to unlock your screen.",
+   "lockBtn": "Start",
+   "denied": "Screen locked",
+   "qLabel": "Question",
+   "bravo": "Well done, Ben!",
+   "score": "3 out of 3 right",
+   "plus": "+20 min",
+   "questions": [
+    {
+     "q": "What turns water into vapour?",
+     "a": [
+      "The wind",
+      "The Sun’s heat",
+      "The Moon"
+     ],
+     "ok": 1
+    },
+    {
+     "q": "How do clouds form?",
+     "a": [
+      "Vapour cools down",
+      "The sea rises",
+      "The ground warms up"
+     ],
+     "ok": 0
+    },
+    {
+     "q": "Rain, snow and hail are…",
+     "a": [
+      "infiltration",
+      "evaporation",
+      "precipitation"
+     ],
+     "ok": 2
+    }
+   ],
+   "date": "Wednesday 7 October",
+   "watch": "Up next",
+   "qOf": "Question {i} of 3",
+   "unlocked": "Screen unlocked"
+  },
+  "hookWords": [
+   "1 VIDEO.",
+   "THEN 10.",
+   "THEN 50…"
+  ],
+  "hl": {
+   "hook": [
+    "1 video.",
+    "Then 10.",
+    "Then 50."
+   ],
+   "locked": "Screen locked.",
+   "question": [
+    "What if their",
+    "screen time made",
+    "them study?"
+   ],
+   "s1": [
+    "Step 1",
+    "Install Kizzo",
+    "on their tablet."
+   ],
+   "s2": [
+    "Step 2",
+    "Scan their lessons.",
+    "Kizzo makes the quiz."
+   ],
+   "s3": [
+    "Step 3",
+    "A quiz every",
+    "20 minutes."
+   ],
+   "later": [
+    "20 minutes",
+    "later."
+   ],
+   "noAnswer": [
+    "No answers,",
+    "no screen."
+   ],
+   "right": [
+    "3 right answers.",
+    "Back on."
+   ],
+   "follow": [
+    "Follow their",
+    "progress."
+   ],
+   "tagline": "Make screen time count.",
+   "cta": "Download Kizzo",
+   "you": "You",
+   "kid": "Your child"
+  }
+ },
+ "fr": {
+  "steps": [
+   "INSTALLEZ KIZZO SUR SA TABLETTE",
+   "SCANNEZ SES LEÇONS",
+   "UN QUIZ TOUTES LES 20 MIN"
+  ],
+  "tagline": "UN TEMPS D’ÉCRAN QUI COMPTE.",
+  "cta": "DÉCOUVRIR KIZZO",
+  "url": "kizzo.fr",
+  "page": [
+   "#Le cycle de l’eau",
+   "",
+   "L’eau circule sans cesse entre les océans, l’air et les continents.",
+   "",
+   "1. L’évaporation : la chaleur du Soleil transforme l’eau des océans et des lacs en vapeur d’eau, qui monte dans l’atmosphère.",
+   "",
+   "2. La condensation : en altitude, l’air est froid. La vapeur se refroidit et forme des gouttelettes : ce sont les nuages.",
+   "",
+   "3. Les précipitations : les gouttelettes grossissent et retombent en pluie, en neige ou en grêle.",
+   "",
+   "4. Le ruissellement et l’infiltration : une partie de l’eau rejoint les rivières puis la mer ; l’autre s’infiltre dans le sol.",
+   "",
+   "À retenir : l’eau change d’état (liquide, gazeux, solide), mais sa quantité sur Terre reste presque la même."
+  ],
+  "app": {
+   "hello": "Bonjour Léa",
+   "date": "Mercredi 7 octobre",
+   "online": "En ligne",
+   "grade": "CM2",
+   "timeLeft": "Temps restant aujourd’hui",
+   "auto": "Quiz automatiques",
+   "autoSub": "Un quiz toutes les 30 min, 5 questions",
+   "cta": "Créer un quiz avec une photo",
+   "ctaSub": "Kizzo écrit les questions à partir de sa leçon",
+   "last30": "30 DERNIERS JOURS",
+   "tiles": [
+    "questions",
+    "de réussite",
+    "jour"
+   ],
+   "page1": "Page 1",
+   "hint": "Cadrez la page entière, à plat",
+   "reading": "Kizzo lit la leçon de Ben",
+   "readingSub": "C’est l’affaire de quelques secondes",
+   "steps": [
+    "Texte de la page lu",
+    "Rédaction des questions…",
+    "Calage sur le niveau CM2"
+   ],
+   "connecting": "Connexion…",
+   "autoSub20": "Un quiz toutes les 20 min, 3 questions",
+   "notifApp": "KIZZO",
+   "notifNow": "maintenant",
+   "notifTitle": "Ben a débloqué son écran",
+   "notifBody": "Quiz « Le cycle de l’eau » : 3/3 ✓",
+   "rule": {
+    "title": "Règles des quiz",
+    "sub": "Comment les quiz se déclenchent",
+    "unlock": "Quiz de déblocage",
+    "on": "Activé",
+    "off": "Désactivé",
+    "every": "Un quiz toutes les…",
+    "info": [
+     "Un quiz apparaît toutes les ",
+     "{n} minutes",
+     " d’usage des",
+     "applications décomptées."
+    ],
+    "qs": "Questions par quiz",
+    "passq": [
+     "À réussir pour terminer le quiz : ",
+     "{n} questions."
+    ],
+    "subjects": "Matières",
+    "subjectList": [
+     "Maths",
+     "Français",
+     "Histoire-Géo",
+     "Sciences",
+     "Anglais",
+     "Autres"
+    ],
+    "save": "Enregistrer"
+   }
+  },
+  "later": "20 MINUTES PLUS TARD…",
+  "noAnswer": "PAS DE RÉPONSE, PAS D’ÉCRAN.",
+  "follow": "VOUS SUIVEZ SES PROGRÈS.",
+  "you": "VOUS",
+  "kid": "VOTRE ENFANT",
+  "tab": {
+   "hello": "Bonjour Ben",
+   "active": "Kizzo est activé",
+   "tiles": [
+    "Vidéos",
+    "Jeux",
+    "Quiz"
+   ],
+   "ready": "3 questions prêtes",
+   "lesson": "Le cycle de l’eau",
+   "lockTitle": "C’est l’heure du quiz.",
+   "lockSub": "Réponds à 3 questions sur ta leçon pour débloquer ton écran.",
+   "lockBtn": "Commencer",
+   "denied": "Écran bloqué",
+   "qLabel": "Question",
+   "bravo": "Bravo Ben !",
+   "score": "3 bonnes réponses sur 3",
+   "plus": "+20 min",
+   "questions": [
+    {
+     "q": "Qu’est-ce qui transforme l’eau en vapeur ?",
+     "a": [
+      "Le vent",
+      "La chaleur du Soleil",
+      "La Lune"
+     ],
+     "ok": 1
+    },
+    {
+     "q": "Comment se forment les nuages ?",
+     "a": [
+      "La vapeur se refroidit",
+      "La mer monte",
+      "Le sol chauffe"
+     ],
+     "ok": 0
+    },
+    {
+     "q": "La pluie, la neige et la grêle sont des…",
+     "a": [
+      "infiltrations",
+      "évaporations",
+      "précipitations"
+     ],
+     "ok": 2
+    }
+   ],
+   "date": "Mercredi 7 octobre",
+   "watch": "À regarder",
+   "qOf": "Question {i} sur 3",
+   "unlocked": "Écran débloqué"
+  },
+  "hookWords": [
+   "1 VIDÉO.",
+   "PUIS 10.",
+   "PUIS 50…"
+  ],
+  "hl": {
+   "hook": [
+    "1 vidéo.",
+    "Puis 10.",
+    "Puis 50."
+   ],
+   "locked": "Écran bloqué.",
+   "question": [
+    "Et si ses vidéos",
+    "lui faisaient réviser",
+    "ses leçons ?"
+   ],
+   "s1": [
+    "Étape 1",
+    "Installez Kizzo",
+    "sur sa tablette."
+   ],
+   "s2": [
+    "Étape 2",
+    "Scannez ses leçons.",
+    "Kizzo en fait des quiz."
+   ],
+   "s3": [
+    "Étape 3",
+    "Un quiz toutes",
+    "les 20 minutes."
+   ],
+   "later": [
+    "20 minutes",
+    "plus tard."
+   ],
+   "noAnswer": [
+    "Pas de réponse,",
+    "pas d’écran."
+   ],
+   "right": [
+    "3 bonnes réponses.",
+    "C’est reparti."
+   ],
+   "follow": [
+    "Vous suivez",
+    "ses progrès."
+   ],
+   "tagline": "Un temps d’écran qui compte.",
+   "cta": "Télécharger Kizzo",
+   "you": "Vous",
+   "kid": "Votre enfant"
+  }
+ }
+}

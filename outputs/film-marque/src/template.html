@@ -1,0 +1,196 @@
+<title>Kizzo Brand Film</title>
+<style>
+/* Layout: one cinema stage, a transport bar under it, chapters as a quiet strip. Single dark look in Kizzo navy. */
+:root {
+  --bg: #030b1a;
+  --surface: #071b39;
+  --line: #1a3459;
+  --fg: #eaf2fb;
+  --muted: #8da2bf;
+  --accent: #ff7a1b;
+  --blue: #2bbbed;
+  --font-display: "Outfit", ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+  --font-ui: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 20px;
+  color-scheme: dark;
+}
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-ui); font-size: 15px; }
+.wrap { box-sizing: border-box; max-width: 1280px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 28px; display: flex; flex-direction: column; gap: 14px; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.head h1 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: .01em; text-wrap: balance; }
+.head h1 > span:first-child { color: var(--accent); }
+.head p { margin: 0; color: var(--muted); font-size: 13px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.stage { position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #02070f; box-shadow: 0 0 0 1px var(--line), 0 30px 80px -30px rgba(43, 187, 237, .25); }
+.stage canvas { display: block; width: 100%; height: 100%; }
+.overlay { position: absolute; inset: 0; display: grid; place-items: end start; background: linear-gradient(to top, rgba(3, 11, 26, .55), rgba(3, 11, 26, 0) 45%); border: 0; padding: clamp(12px, 3vw, 28px); cursor: pointer; color: var(--fg); font: inherit; }
+.overlay .big { display: inline-flex; align-items: center; gap: 10px; padding: clamp(8px, 1.4vw, 14px) clamp(14px, 2.2vw, 26px) clamp(8px, 1.4vw, 14px) clamp(12px, 1.8vw, 20px); border-radius: var(--radius); background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: clamp(13px, 1.8vw, 19px); letter-spacing: .06em; text-transform: uppercase; box-shadow: 0 12px 40px -12px rgba(255, 122, 27, .7); }
+.overlay svg { width: 22px; height: 22px; fill: currentColor; }
+.overlay:focus-visible .big { outline: 3px solid var(--blue); outline-offset: 4px; }
+.bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.btn { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 12px; height: 40px; min-width: 40px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 13px/1 var(--font-ui); letter-spacing: .06em; cursor: pointer; }
+.btn:hover { border-color: var(--blue); }
+.btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.btn svg { width: 18px; height: 18px; fill: currentColor; }
+.btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.seek { flex: 1 1 260px; min-width: 0; position: relative; height: 40px; display: flex; align-items: center; }
+.seek input { width: 100%; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.time { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; min-width: 92px; text-align: right; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.seg button { appearance: none; border: 0; background: var(--surface); color: var(--muted); height: 38px; padding: 0 12px; font: 700 12px/1 var(--font-ui); letter-spacing: .1em; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+.chapters { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.chapters button { appearance: none; text-align: left; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 14px; padding: 10px 12px; cursor: pointer; font: inherit; min-width: 0; }
+.chapters button b { display: block; color: var(--fg); font-weight: 600; font-size: 13px; }
+.chapters button small { font-variant-numeric: tabular-nums; font-size: 12px; letter-spacing: .04em; }
+.chapters button.on { border-color: var(--accent); }
+.chapters button.on b { color: var(--accent); }
+.chapters button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.note { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; max-width: 72ch; }
+@media (max-width: 640px) {
+  .chapters { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .chapters button { display: flex; align-items: baseline; gap: 10px; padding: 9px 12px; }
+  .chapters button b { display: inline; flex: none; }
+  .time { min-width: 0; }
+}
+/* offline render mode: bare 1920×1080 canvas */
+.render body, html.render { background: #000; }
+.render .wrap { max-width: none; padding: 0; margin: 0; gap: 0; }
+.render .head, .render .bar, .render .chapters, .render .note, .render .overlay { display: none !important; }
+.render .stage { width: 1920px; height: 1080px; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <h1>kizzo<span>.</span> <span id="kind">Brand film</span></h1>
+    <p id="meta">25.5 s · 1920 × 1080 · 16:9 · 30 fps</p>
+  </header>
+
+  <div class="stage">
+    <canvas id="kz-canvas" width="1920" height="1080" aria-label="Kizzo brand film"></canvas>
+    <button class="overlay" id="overlay" type="button" aria-label="Play the film">
+      <span class="big"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><span id="overlayLabel">Play film</span></span>
+    </button>
+  </div>
+
+  <div class="bar">
+    <button class="btn" id="play" type="button" aria-label="Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIcon" d="M7 4.5v15l13-7.5z"/></svg></button>
+    <button class="btn" id="replay" type="button" aria-label="Replay from start"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg></button>
+    <div class="seek"><input id="seek" type="range" min="0" max="25500" step="1" value="0" aria-label="Position in the film"></div>
+    <span class="time" id="time">0:00.0 / 0:25.5</span>
+    <div class="seg" role="group" aria-label="Film language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-fr" aria-pressed="false">FR</button>
+    </div>
+    <button class="btn" id="sound" type="button" aria-pressed="true" aria-label="Sound design on or off"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="soundIcon" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg><span id="soundLabel">SOUND</span></button>
+    <button class="btn" id="fs" type="button" aria-label="Fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5v2H6v3H4zm10-5h6v5h-2V6h-4V4zM4 15h2v3h3v2H4v-5zm14 3v-3h2v5h-6v-2h4z"/></svg></button>
+  </div>
+
+  <nav class="chapters" id="chapters" aria-label="Chapters"></nav>
+  <p class="note" id="note">Silent-safe: every beat reads without sound. The optional sound layer is subtle design, no voice and no music, so a voice-over can be laid on top in post.</p>
+</div>
+
+<script>
+/*@@DATA@@*/
+</script>
+<script>
+/*@@FILM@@*/
+</script>
+<script>
+(function () {
+  'use strict';
+  const params = new URLSearchParams(location.search);
+  const RENDER = params.has('render');
+  if (RENDER) document.documentElement.classList.add('render');
+  const DUR = KZ.duration;
+  const $ = id => document.getElementById(id);
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+  let lang = params.get('lang') || store.get('kz-lang') || 'en';
+  KZ.setLang(lang);
+  if (RENDER) { window.KZ_READY = KZ.ready; return; }
+
+  const CH = [
+    { t: 0, en: ['Hook', 'Every day, the same battle'], fr: ['Accroche', 'Chaque jour, la même bataille'] },
+    { t: 5.1, en: ['Problem', 'The endless loop'], fr: ['Problème', 'La boucle sans fin'] },
+    { t: 9.4, en: ['Reframe', 'Learn. Answer. Unlock.'], fr: ['Recadrage', 'Apprendre. Répondre. Débloquer.'] },
+    { t: 15.0, en: ['Payoff', '+15 minutes earned'], fr: ['Récompense', '+15 minutes gagnées'] },
+    { t: 19.8, en: ['Brand', 'Discover Kizzo'], fr: ['Marque', 'Découvrir Kizzo'] },
+  ];
+  const UI = {
+    en: { kind: 'Brand film', meta: '25.5 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', note: 'Silent-safe: every beat reads without sound. The optional sound layer is subtle design, no voice and no music, so a voice-over can be laid on top in post.' },
+    fr: { kind: 'Film de marque', meta: '25,5 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', note: 'Lisible sans le son : chaque temps fort se comprend à l’image. La couche sonore, optionnelle et discrète, ne contient ni voix ni musique, pour poser une voix off en post-production.' },
+  };
+  const chapters = $('chapters');
+  CH.forEach((c, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.id = 'ch-' + i;
+    b.innerHTML = '<b></b><small></small>';
+    b.addEventListener('click', () => { seek(c.t); if (!playing) play(); });
+    chapters.appendChild(b);
+  });
+  const sfx = window.KZ_AUDIO ? new Audio(window.KZ_AUDIO) : null;
+  let playing = false, t = 0, last = 0, dirty = true, soundOn = !!sfx, started = false;
+  if (!sfx) $('sound').hidden = true;
+  const fmt = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
+  function texts() {
+    const u = UI[lang];
+    CH.forEach((c, i) => { const b = $('ch-' + i); b.querySelector('b').textContent = c[lang][0]; b.querySelector('small').textContent = `${fmt(c.t)} · ${c[lang][1]}`; });
+    $('overlayLabel').textContent = t >= DUR - .01 ? u.replay : u.play;
+    $('soundLabel').textContent = soundOn ? u.sound : u.mute;
+    $('note').textContent = u.note; $('kind').textContent = u.kind; $('meta').textContent = u.meta;
+    $('lang-en').setAttribute('aria-pressed', lang === 'en'); $('lang-fr').setAttribute('aria-pressed', lang === 'fr');
+    document.documentElement.lang = lang;
+  }
+  function ui() {
+    $('seek').value = Math.round(t * 1000);
+    $('time').textContent = `${fmt(t)} / ${fmt(DUR)}`;
+    $('playIcon').setAttribute('d', playing ? 'M6 4h4v16H6zm8 0h4v16h-4z' : 'M7 4.5v15l13-7.5z');
+    $('play').setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    let cur = 0; CH.forEach((c, i) => { if (t >= c.t) cur = i; });
+    CH.forEach((c, i) => $('ch-' + i).classList.toggle('on', i === cur));
+  }
+  function syncAudio(force) {
+    if (!sfx) return;
+    if (!playing || !soundOn) { if (!sfx.paused) sfx.pause(); return; }
+    if (force || Math.abs(sfx.currentTime - t) > .12) { try { sfx.currentTime = t; } catch (e) {} }
+    if (sfx.paused) sfx.play().catch(() => {});
+  }
+  function play() {
+    if (t >= DUR - .01) t = 0;
+    playing = true; started = true; last = performance.now(); $('overlay').hidden = true; syncAudio(true); dirty = true;
+  }
+  function pause() { playing = false; syncAudio(); dirty = true; }
+  function seek(s) { t = Math.max(0, Math.min(DUR, s)); started = true; $('overlay').hidden = true; syncAudio(true); dirty = true; }
+  function loop(now) {
+    if (playing) {
+      t += Math.min(.1, (now - last) / 1000);
+      if (t >= DUR) { t = DUR; playing = false; syncAudio(); $('overlay').hidden = false; texts(); }
+      else syncAudio();
+      dirty = true;
+    }
+    last = now;
+    if (dirty) { KZ.renderFrame(t); ui(); dirty = false; }
+    requestAnimationFrame(loop);
+  }
+  $('overlay').addEventListener('click', play);
+  $('play').addEventListener('click', () => playing ? pause() : play());
+  $('replay').addEventListener('click', () => { t = 0; play(); });
+  $('seek').addEventListener('input', e => { seek(e.target.value / 1000); });
+  $('lang-en').addEventListener('click', () => { lang = 'en'; KZ.setLang(lang); store.set('kz-lang', lang); texts(); dirty = true; });
+  $('lang-fr').addEventListener('click', () => { lang = 'fr'; KZ.setLang(lang); store.set('kz-lang', lang); texts(); dirty = true; });
+  $('sound').addEventListener('click', () => { soundOn = !soundOn; $('sound').setAttribute('aria-pressed', soundOn); texts(); syncAudio(true); });
+  $('fs').addEventListener('click', () => { const s = document.querySelector('.stage'); try { (document.fullscreenElement ? document.exitFullscreen() : s.requestFullscreen()).catch(() => {}); } catch (e) {} });
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' && e.key !== ' ') return;
+    if (e.key === ' ' || e.key === 'k') { e.preventDefault(); playing ? pause() : play(); }
+    else if (e.key === 'ArrowRight') seek(t + 1);
+    else if (e.key === 'ArrowLeft') seek(t - 1);
+    else if (e.key === 'r') { t = 0; play(); }
+  });
+  KZ.ready.then(() => {
+    texts();
+    KZ.renderFrame(23.6); t = 0; ui(); // rest frame: the end card, until the viewer presses play
+    requestAnimationFrame(n => { last = n; dirty = false; requestAnimationFrame(loop); });
+  });
+})();
+</script>
