@@ -1,0 +1,218 @@
+{
+ "duration": 31.0,
+ "a1": {
+  "burst": -0.6,
+  "n3": 0.0,
+  "n2": 0.55,
+  "n1": 1.1,
+  "n0": 1.65,
+  "freeze": 2.0,
+  "shatter": 2.35,
+  "strain1": 2.5,
+  "strain2": 2.95,
+  "slice": 3.3,
+  "every": 3.42,
+  "battle": 3.72,
+  "tension": 4.75,
+  "snap": 5.6,
+  "please": 2.55
+ },
+ "b": {
+  "step": 5.85,
+  "devices": 6.0,
+  "screens": 6.15,
+  "labels": 6.35,
+  "link": 6.6,
+  "linked": 7.2
+ },
+ "a3": {
+  "sheet": 8.15,
+  "tap": 8.5,
+  "cam": 8.62,
+  "lock": 8.95,
+  "scan": 9.0,
+  "shot": 9.45,
+  "detected": 9.55,
+  "send": 10.15,
+  "tray": 10.93,
+  "sheetOut": 10.6
+ },
+ "d": {
+  "push": 11.2,
+  "screen": 11.35,
+  "step": 11.45,
+  "toggle": 11.85,
+  "save": 13.2,
+  "token": 13.4,
+  "tokenEnd": 14.1,
+  "home": 13.75,
+  "tapVid": 14.3,
+  "vid": 14.45,
+  "pick": 12.3,
+  "qs": 12.8
+ },
+ "e": {
+  "dive": 14.35,
+  "diveEnd": 15.1,
+  "lapse": 15.15,
+  "zero": 16.7,
+  "lock": 16.75,
+  "card": 16.95,
+  "swipe": 17.35,
+  "deny": 17.55,
+  "capLock": 17.5,
+  "go": 17.95
+ },
+ "f": {
+  "start": 18.15,
+  "q": [
+   18.2,
+   19.25,
+   20.05
+  ],
+  "tap": [
+   18.85,
+   19.75,
+   20.5
+  ],
+  "unlock": 20.85,
+  "bravo": 21.0,
+  "plus": 21.25,
+  "resume": 21.95
+ },
+ "g": {
+  "pull": 22.15,
+  "pullEnd": 23.0,
+  "notif": 22.7,
+  "cap": 22.85
+ },
+ "a5": {
+  "out": 24.2,
+  "tagline": 24.85,
+  "converge": 25.3,
+  "body": 25.95,
+  "word": 26.4,
+  "cta": 27.1,
+  "url": 27.35,
+  "glint": 28.9
+ },
+ "vo": [
+  {
+   "t": 0.05,
+   "d": 1.1,
+   "who": "child",
+   "fr": "Encore cinq minutes !",
+   "en": "Just five more minutes!",
+   "dir_fr": "Voix d’enfant (8-10 ans) : supplique pleine d’énergie, dès la première image.",
+   "dir_en": "Child’s voice (8-10): an energetic plea, right on the first frame."
+  },
+  {
+   "t": 2.55,
+   "d": 0.8,
+   "who": "child",
+   "fr": "S’il te plaît…",
+   "en": "Please…",
+   "dir_fr": "Même enfant, tout petit, presque chuchoté pendant que le point pousse contre la limite.",
+   "dir_en": "Same child, small, almost whispered while the dot pushes against the limit."
+  },
+  {
+   "t": 3.7,
+   "d": 1.7,
+   "fr": "Et chaque soir… la même bataille.",
+   "en": "And every night… the same battle.",
+   "dir_fr": "Complicité de parent à parent, léger soupir sur « chaque soir ».",
+   "dir_en": "Parent-to-parent, a small sigh on “every night”.",
+   "who": "narrator"
+  },
+  {
+   "t": 5.95,
+   "d": 2.1,
+   "who": "narrator",
+   "fr": "Avec Kizzo, installez l’appli sur sa tablette.",
+   "en": "With Kizzo, install the app on their tablet.",
+   "dir_fr": "La bascule : clair, rassurant, le sourire arrive.",
+   "dir_en": "The turn: clear, reassuring, a smile appears."
+  },
+  {
+   "t": 8.35,
+   "d": 2.4,
+   "who": "narrator",
+   "fr": "Scannez ses leçons : Kizzo en fait des quiz.",
+   "en": "Scan their lessons: Kizzo turns them into quizzes.",
+   "dir_fr": "Concret, un peu de fierté sur « Kizzo en fait des quiz ».",
+   "dir_en": "Concrete, a touch of pride on “turns them into quizzes”."
+  },
+  {
+   "t": 11.45,
+   "d": 2.8,
+   "who": "narrator",
+   "fr": "Un quiz toutes les vingt minutes : c’est vous qui décidez.",
+   "en": "A quiz every twenty minutes: you decide.",
+   "dir_fr": "« Vingt minutes » tombe quand le parent touche « 20 min ». Puis complice sur « c’est vous qui décidez ».",
+   "dir_en": "“Twenty minutes” lands as the parent taps “20 min”. Then knowing on “you decide”."
+  },
+  {
+   "t": 15.05,
+   "d": 1.4,
+   "who": "narrator",
+   "fr": "Vingt minutes plus tard…",
+   "en": "Twenty minutes later…",
+   "dir_fr": "Complice, on accélère avec le minuteur.",
+   "dir_en": "Knowing, speeding up with the timer."
+  },
+  {
+   "t": 16.75,
+   "d": 1.0,
+   "who": "narrator",
+   "fr": "…l’écran se bloque.",
+   "en": "…the screen locks.",
+   "dir_fr": "Net, posé sur le cadenas qui tombe.",
+   "dir_en": "Crisp, landing on the padlock."
+  },
+  {
+   "t": 17.95,
+   "d": 1.9,
+   "who": "narrator",
+   "fr": "Pour le débloquer, il doit répondre.",
+   "en": "To unlock it, they have to answer.",
+   "dir_fr": "Ferme mais bienveillant : c’est la règle, pas une punition.",
+   "dir_en": "Firm but kind: it’s the rule, not a punishment."
+  },
+  {
+   "t": 20.1,
+   "d": 2.3,
+   "who": "narrator",
+   "fr": "Trois bonnes réponses… et c’est reparti !",
+   "en": "Three right answers… and they’re back on!",
+   "dir_fr": "Suspendre après « réponses », puis « c’est reparti » sur la vidéo qui repart.",
+   "dir_en": "Hold after “answers”, then “back on” as the video restarts."
+  },
+  {
+   "t": 22.85,
+   "d": 1.8,
+   "who": "narrator",
+   "fr": "Et vous, vous savez ce qu’il a appris.",
+   "en": "And you know what they’ve learned.",
+   "dir_fr": "Parent à parent, rassurant.",
+   "dir_en": "Parent to parent, reassuring."
+  },
+  {
+   "t": 25.0,
+   "d": 1.4,
+   "who": "narrator",
+   "fr": "Un temps d’écran qui compte.",
+   "en": "Make screen time count.",
+   "dir_fr": "Signature : ralentir.",
+   "dir_en": "Signature line: slow down."
+  },
+  {
+   "t": 26.9,
+   "d": 2.3,
+   "who": "narrator",
+   "fr": "Kizzo. Rendez-vous sur kizzo.fr.",
+   "en": "Kizzo. Discover it at kizzo.fr.",
+   "dir_fr": "« Kizzo » détaché. « kizzo point f r ».",
+   "dir_en": "“Kizzo”, then a beat. “kizzo dot f r”."
+  }
+ ]
+}
