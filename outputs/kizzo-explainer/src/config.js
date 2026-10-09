@@ -1,0 +1,368 @@
+// Configuration centrale : charte, textes (FR par défaut, ?lang=en) et timeline.
+
+const params = new URLSearchParams(location.search);
+
+export const PARAMS = {
+  lang: params.get('lang') === 'en' ? 'en' : 'fr',
+  exportMode: params.get('export') === '1',
+  autoplay: params.get('autoplay') === '1',
+  loop: params.get('loop') === '1',
+  start: parseFloat(params.get('t') || '0') || 0,
+  quality: ['low', 'medium', 'high'].includes(params.get('quality')) ? params.get('quality') : 'auto',
+  debug: params.get('debug') === '1',
+  // hauteur de rendu en mode export (1920 par défaut ; 960 pour les aperçus rapides)
+  exportH: parseInt(params.get('h') || '1920', 10) || 1920,
+};
+
+export const WIDTH = 1080;
+export const HEIGHT = 1920;
+
+// Charte Kizzo (reprise des apps : theme/colors.ts) — orange #F97316, cyan #3DB4D9,
+// navy #152A4A → #0A1526, Outfit (titres) / Plus Jakarta Sans (texte) / Space Grotesk (chiffres).
+export const BRAND = {
+  orange: '#F97316',
+  orangeLight: '#FF9D5C',
+  amber: '#FAB43B',
+  cyan: '#3DB4D9',
+  cyanLight: '#2CBFED',
+  cyanSoft: '#7FD3EC',
+  navy: '#0F172A',
+  navyLogo: '#1E293B',
+  navy2: '#152A4A',
+  inkDeeper: '#0A1526',
+  surface: '#1E3A5F',
+  surfaceSoft: '#1E293B',
+  surfaceStrong: '#2C5E92',
+  ink: '#0F172A',
+  white: '#FAFAFA',
+  mist: '#F4F8FA',
+  slate: '#94A3B8',
+  green: '#1ED760',
+  greenEmerald: '#00A63E',
+  red: '#EF4444',
+  radius: 20,
+};
+
+// Textes repris des écrans réels de l'app (captures fournies par Samuel) : Léa (parent),
+// Ben (CM2), leçon « Le cycle de l'eau », questions générées par Kizzo.
+const COPY = {
+  fr: {
+    t1: ['Le temps d’écran,', 'en plus malin'],
+    scanA: ['Photographiez', 'ses leçons'],
+    scanB: ['Un quiz toutes', 'les 15 minutes'],
+    t2: ['Il apprend', 'pour débloquer'],
+    burst: 'MINUTES DÉBLOQUÉES',
+    t3: ['+15 minutes', 'gagnées'],
+    t4: ['Vous fixez', 'les règles'],
+    tagline: 'Le temps d’écran se gagne en apprenant',
+    start: { cta: 'Lancer avec le son', sub: 'Le temps d’écran se gagne en apprenant.' },
+    kid: {
+      name: 'Ben',
+      hi: 'Salut Ben 👋',
+      sub: 'C’est parti pour une nouvelle journée !',
+      lockTitle: 'C’est l’heure d’un quiz !',
+      lockBody: 'Ton temps est écoulé',
+      lockCta: 'Faire un quiz',
+      lockAsk: 'Demander du temps',
+      or: 'ou',
+      parentCode: 'Saisir le code parental',
+      heroTitle: 'Nouveau quiz !',
+      heroSub: 'Le cycle de l’eau · 3 questions',
+      heroPill: '+15 min à gagner',
+      evo: 'TON ÉVOLUTION',
+      points: '120 points',
+      level: 'Niveau 3',
+      evoHint: 'Plus que 30 pts pour le Niveau 4 !',
+      last: 'Dernier quiz : 8/10 ✅',
+      lastSub: 'Fini il y a 2 heures',
+      start: 'Lancer le quiz',
+      badges: 'Mes badges',
+      history: 'Historique',
+      game: 'Candy Jump',
+      video: 'Space Pals · Ép. 4',
+      nextQuiz: 'Quiz dans',
+      resultTitle: 'Bravo ! 🎉',
+      score: 'Score : 100 % (3/3)',
+      earned: 'Temps gagné',
+      earnedVal: '+15 min',
+      back: 'Retour à l’accueil',
+      synced: 'Règles mises à jour',
+      unlocked: 'Débloqué',
+    },
+    quiz: {
+      title: 'Le cycle de l’eau',
+      questionOf: (i) => `QUESTION ${i} SUR 3`,
+      next: 'Question suivante',
+      yourAnswer: 'Ta réponse',
+      items: [
+        { q: 'Qu’est-ce qui transforme l’eau des océans en vapeur d’eau ?', a: ['La chaleur de l’air', 'La chaleur du sol', 'La chaleur du Soleil', 'La chaleur de l’eau'], ok: 2, prop: 'sun' },
+        { q: 'Que forme la vapeur d’eau en se refroidissant en altitude ?', a: ['Des nuages', 'Des rivières', 'Des nappes souterraines', 'De la grêle'], ok: 0, prop: 'cloud' },
+        { q: 'L’eau qui retombe en pluie ou en neige, ce sont…', a: ['les infiltrations', 'les précipitations', 'les évaporations', 'les condensations'], ok: 1, prop: 'slot' },
+      ],
+    },
+    scan: {
+      photoTitle: 'Photographier une leçon',
+      photoSub: 'Kizzo écrit le quiz de Ben à partir de sa leçon.',
+      openCam: 'Ouvrir l’appareil photo',
+      gallery: 'Choisir dans la galerie',
+      page1: 'Page 1',
+      frameHint: 'Cadrez la page entière, à plat',
+      readTitle: 'Kizzo lit la leçon de Ben',
+      readSub: 'Gardez cet écran ouvert, c’est l’affaire de quelques secondes',
+      steps: ['Texte de la page lu', 'Rédaction des questions…', 'Calage sur le niveau CM2'],
+      review: 'Vous relirez chaque question avant qu’elle entre dans les quiz de Ben.',
+      genTitle: 'Questions générées',
+      genSub: 'Relisez, corrigez ou supprimez avant d’envoyer.',
+      titleLabel: 'TITRE',
+      question: (i) => `QUESTION ${i}`,
+      goodAnswer: 'BONNE RÉPONSE',
+      autoTitle: 'Quiz automatiques',
+      autoSub: 'Un quiz apparaît sur le téléphone de Ben',
+      freqLabel: 'Un quiz toutes les',
+      freqOpts: ['10', '15', '20', '30'],
+      min: 'min',
+      perQuiz: 'Questions par quiz',
+      perOpts: ['3', '5', '10'],
+      send: 'Envoyer à Ben',
+      sent: 'Envoyé à Ben',
+      planTitle: 'Cet après-midi',
+      planSub: 'Écrans de Ben',
+      planStart: 16 * 60 + 30,
+      planQuiz: 'Quiz',
+      planLegend: '+15 min d’écran par quiz réussi',
+      lessonTitle: 'Le cycle de l’eau',
+      notebook: [
+        'Le cycle de l’eau',
+        'L’eau circule sans cesse entre les océans, l’air et les continents.',
+        '1. L’évaporation : la chaleur du Soleil transforme l’eau des océans et des lacs en vapeur d’eau, qui monte dans l’atmosphère.',
+        '2. La condensation : en altitude, l’air est froid. La vapeur se refroidit et forme des gouttelettes : ce sont les nuages.',
+        '3. Les précipitations : les gouttelettes grossissent et retombent en pluie, en neige ou en grêle.',
+        '4. Le ruissellement et l’infiltration : une partie de l’eau rejoint les rivières puis la mer ; l’autre s’infiltre dans le sol et forme les nappes souterraines.',
+        'À retenir : l’eau change d’état (liquide, gazeux, solide), mais sa quantité sur Terre reste presque la même.',
+      ],
+    },
+    parent: {
+      hello: 'Bonjour Léa',
+      date: 'Mercredi 7 octobre',
+      child: 'Ben',
+      online: 'En ligne',
+      grade: 'CM2',
+      remainingLabel: 'Temps restant aujourd’hui',
+      remaining: '15 min',
+      earnedNote: '+15 min gagnées avec le quiz',
+      autoTitle: 'Quiz automatiques',
+      autoSub: (m) => `Un quiz toutes les ${m} min, 3 questions`,
+      photoTitle: 'Créer un quiz avec une photo',
+      photoSub: 'Kizzo écrit les questions à partir de sa leçon',
+      last30: '30 DERNIERS JOURS',
+      stats: [
+        ['24', 'questions', 'répondues'],
+        ['92%', 'de réussite', ''],
+        ['5', 'jours', 'd’affilée'],
+      ],
+      rules: ['Quiz toutes les 15 min', 'Limite · 2 h par jour', 'Coucher · 20 h 30'],
+    },
+  },
+  en: {
+    t1: ['Screen Time,', 'Smarter'],
+    scanA: ['Snap their', 'lessons'],
+    scanB: ['A quiz every', '15 minutes'],
+    t2: ['Learn to', 'Unlock'],
+    burst: 'MINUTES UNLOCKED',
+    t3: ['+15 Minutes', 'Earned'],
+    t4: ['You Set', 'the Rules'],
+    tagline: 'Screen time earned through learning',
+    start: { cta: 'Play with sound', sub: 'Screen time, earned through learning.' },
+    kid: {
+      name: 'Ben',
+      hi: 'Hi Ben 👋',
+      sub: 'Ready for a new day?',
+      lockTitle: 'Quiz time!',
+      lockBody: 'Your screen time is up',
+      lockCta: 'Take a quiz',
+      lockAsk: 'Ask for more time',
+      or: 'or',
+      parentCode: 'Enter parent code',
+      heroTitle: 'New quiz!',
+      heroSub: 'The water cycle · 3 questions',
+      heroPill: '+15 min to earn',
+      evo: 'YOUR PROGRESS',
+      points: '120 points',
+      level: 'Level 3',
+      evoHint: 'Only 30 pts to Level 4!',
+      last: 'Last quiz: 8/10 ✅',
+      lastSub: 'Finished 2 hours ago',
+      start: 'Start the quiz',
+      badges: 'My badges',
+      history: 'History',
+      game: 'Candy Jump',
+      video: 'Space Pals · Ep. 4',
+      nextQuiz: 'Quiz in',
+      resultTitle: 'Well done! 🎉',
+      score: 'Score: 100% (3/3)',
+      earned: 'Time earned',
+      earnedVal: '+15 min',
+      back: 'Back to home',
+      synced: 'Rules updated',
+      unlocked: 'Unlocked',
+    },
+    quiz: {
+      title: 'The water cycle',
+      questionOf: (i) => `QUESTION ${i} OF 3`,
+      next: 'Next question',
+      yourAnswer: 'Your answer',
+      items: [
+        { q: 'What turns ocean water into water vapour?', a: ['Heat from the air', 'Heat from the ground', 'Heat from the Sun', 'Heat from the water'], ok: 2, prop: 'sun' },
+        { q: 'What does water vapour form as it cools high up?', a: ['Clouds', 'Rivers', 'Groundwater', 'Hail'], ok: 0, prop: 'cloud' },
+        { q: 'Water falling as rain or snow is called…', a: ['infiltration', 'precipitation', 'evaporation', 'condensation'], ok: 1, prop: 'slot' },
+      ],
+    },
+    scan: {
+      photoTitle: 'Snap a lesson',
+      photoSub: 'Kizzo writes Ben’s quiz from his lesson.',
+      openCam: 'Open the camera',
+      gallery: 'Choose from gallery',
+      page1: 'Page 1',
+      frameHint: 'Frame the whole page, flat',
+      readTitle: 'Kizzo is reading Ben’s lesson',
+      readSub: 'Keep this screen open, it only takes a few seconds',
+      steps: ['Page text read', 'Writing the questions…', 'Matching Year 6 level'],
+      review: 'You will review every question before it goes into Ben’s quizzes.',
+      genTitle: 'Generated questions',
+      genSub: 'Review, edit or delete before sending.',
+      titleLabel: 'TITLE',
+      question: (i) => `QUESTION ${i}`,
+      goodAnswer: 'CORRECT ANSWER',
+      autoTitle: 'Automatic quizzes',
+      autoSub: 'A quiz pops up on Ben’s phone',
+      freqLabel: 'A quiz every',
+      freqOpts: ['10', '15', '20', '30'],
+      min: 'min',
+      perQuiz: 'Questions per quiz',
+      perOpts: ['3', '5', '10'],
+      send: 'Send to Ben',
+      sent: 'Sent to Ben',
+      planTitle: 'This afternoon',
+      planSub: 'Ben’s screens',
+      planStart: 16 * 60 + 30,
+      planQuiz: 'Quiz',
+      planLegend: '+15 min screen time per quiz passed',
+      lessonTitle: 'The water cycle',
+      notebook: [
+        'The water cycle',
+        'Water moves endlessly between the oceans, the air and the land.',
+        '1. Evaporation: the Sun’s heat turns the water of oceans and lakes into water vapour, which rises into the air.',
+        '2. Condensation: high up, the air is cold. The vapour cools and forms droplets: these are clouds.',
+        '3. Precipitation: the droplets grow and fall back as rain, snow or hail.',
+        '4. Runoff and infiltration: some water flows to rivers then the sea; the rest soaks into the ground.',
+        'Remember: water changes state (liquid, gas, solid), but its amount on Earth stays almost the same.',
+      ],
+    },
+    parent: {
+      hello: 'Hello Léa',
+      date: 'Wednesday, October 7',
+      child: 'Ben',
+      online: 'Online',
+      grade: 'Year 6',
+      remainingLabel: 'Time left today',
+      remaining: '15 min',
+      earnedNote: '+15 min earned with the quiz',
+      autoTitle: 'Automatic quizzes',
+      autoSub: (m) => `A quiz every ${m} min, 3 questions`,
+      photoTitle: 'Create a quiz from a photo',
+      photoSub: 'Kizzo writes the questions from his lesson',
+      last30: 'LAST 30 DAYS',
+      stats: [
+        ['24', 'questions', 'answered'],
+        ['92%', 'success', 'rate'],
+        ['5', 'day', 'streak'],
+      ],
+      rules: ['Quiz every 15 min', 'Limit · 2 h a day', 'Bedtime · 8:30 pm'],
+    },
+  },
+};
+
+export const T = COPY[PARAMS.lang];
+
+/**
+ * Timeline interne des plans hérités (secondes "histoire"). La scène du scan est
+ * insérée au flash du plan A : tout ce qui suit est décalé de SCAN_DUR.
+ */
+export const TL = {
+  // Plan A — l'enfant joue, le compte à rebours tombe à zéro
+  fadeIn: [0, 0.9],
+  ticks: [0.85, 1.65, 2.45],
+  zero: 2.45,
+  freeze: [2.45, 3.3],
+  title1: [2.95, 4.75],
+  push: [2.7, 4.95],
+  flash: 4.92,
+  // Plan B — l'app Kizzo émerge du téléphone
+  emerge: [5.25, 7.1],
+  title2: [6.15, 8.55],
+  cta: 8.25,
+  toQuiz: [8.45, 9.35],
+  // Plan C — quiz (3 questions)
+  q: [
+    { in: 9.05, tap: 10.35, out: 11.05 },
+    { in: 11.2, tap: 12.55, out: 13.25 },
+    { in: 13.4, tap: 14.75, out: 99 },
+  ],
+  lockIn: [14.95, 15.4],
+  ringDone: 15.95,
+  // Plan D — récompense
+  burst: 16.05,
+  burstText: [16.45, 18.35],
+  toPhone: [18.1, 19.0],
+  title3: [18.55, 20.35],
+  // Plan E — parent
+  parentIn: [20.05, 21.25],
+  title4: [21.1, 24.85],
+  trails: [22.0, 22.35, 22.7],
+  trailDur: 1.05,
+  // Plan F — logo
+  converge: [25.05, 26.1],
+  logoAssemble: [25.7, 27.0],
+  logoLock: 27.0,
+  sweep: [27.15, 28.6],
+  wordmark: 27.45,
+  tagline: 28.05,
+};
+
+// Scène du scan (temps absolus du film) — parcours réel : Photographier une leçon ->
+// viseur -> « Kizzo lit la leçon » -> Questions générées -> Quiz automatiques -> envoi.
+export const SCAN_DUR = 7.5;
+export const SCAN0 = TL.flash;
+export const SCAN1 = SCAN0 + SCAN_DUR;
+export const DURATION = 30 + SCAN_DUR;
+/** Temps "histoire" -> temps absolu du film. */
+export const toT = (t) => (t >= SCAN0 - 1e-6 ? t + SCAN_DUR : t);
+
+export const SC = {
+  photo: [SCAN0, 5.75], // écran « Photographier une leçon »
+  openTap: 5.45,
+  scan: [5.95, 7.1], // viseur : bande de scan orange
+  shutter: 7.2,
+  photo2: [7.3, 7.85], // retour avec la page + « Générer le quiz »
+  genTap: 7.62,
+  analyze: [7.85, 9.05], // « Kizzo lit la leçon de Ben » 0 -> 100 %
+  review: [9.1, 10.05], // « Questions générées »
+  freq: [10.1, 11.7], // « Quiz automatiques » : 10 -> 15 min
+  freqTap: 10.75,
+  send: 11.55,
+  title1: [5.3, 8.6],
+  title2: [10.05, 12.05],
+};
+
+/** Fenêtres des titres en temps absolu. */
+export const TITLES = {
+  t1: TL.title1,
+  scanA: SC.title1,
+  scanB: SC.title2,
+  t2: TL.title2.map(toT),
+  burst: TL.burstText.map(toT),
+  t3: TL.title3.map(toT),
+  t4: TL.title4.map(toT),
+  wordmark: toT(TL.wordmark),
+  tagline: toT(TL.tagline),
+};
