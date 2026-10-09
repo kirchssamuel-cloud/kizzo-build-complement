@@ -8,19 +8,6 @@ import { LOGO } from '../src/logo-shape.js';
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const r = (...p) => path.join(root, ...p);
 
-const result = await esbuild.build({
-  entryPoints: [r('src/main.js')],
-  bundle: true,
-  minify: true,
-  format: 'iife',
-  target: ['es2020'],
-  write: false,
-  legalComments: 'none',
-  alias: { 'three/addons': 'three/examples/jsm' },
-  logLevel: 'warning',
-});
-const app = result.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');
-
 const fonts = [
   ['Outfit', 500, 'outfit'],
   ['Outfit', 600, 'outfit'],
@@ -50,24 +37,61 @@ const logoSvg =
   `<circle fill="#3DB5DA" cx="${LOGO.head.c[0]}" cy="${-LOGO.head.c[1]}" r="${LOGO.head.r}"/>` +
   `<circle fill="#F97316" cx="${LOGO.child.c[0]}" cy="${-LOGO.child.c[1]}" r="${LOGO.child.r}"/>`;
 
-const tpl = fs.readFileSync(r('src/index.html'), 'utf8');
-const html = tpl
-  .replace('/*FONTS*/', () => fontCss)
-  .replace('<!--LOGO_SVG-->', () => logoSvg)
-  .replace('/*APP*/', () => app);
-
 const strip = (s) =>
   s
     .replace(/<!--HEAD_START-->[\s\S]*?<!--HEAD_END-->\n?/, '')
     .replace(/<!--HEAD_CLOSE-->[\s\S]*?<!--BODY_OPEN-->\n?/, '')
     .replace(/<!--BODY_CLOSE-->[\s\S]*?<!--DOC_END-->\n?/, '');
 const clean = (s) => s.replace(/<!--(HEAD_START|HEAD_END|HEAD_CLOSE|BODY_OPEN|BODY_CLOSE|DOC_END)-->/g, '');
-
-fs.mkdirSync(r('dist'), { recursive: true });
-// livrable principal (versionné) + copie de travail pour les scripts d'aperçu / d'export
-fs.writeFileSync(r('kizzo-explainer-fr.html'), clean(html));
-fs.writeFileSync(r('dist/kizzo-explainer.html'), clean(html));
-fs.writeFileSync(r('dist/kizzo-explainer.artifact.html'), strip(html));
 const kb = (f) => (fs.statSync(r(f)).size / 1024).toFixed(0) + ' Ko';
-console.log('✓ kizzo-explainer-fr.html', kb('kizzo-explainer-fr.html'));
-console.log('✓ dist/kizzo-explainer.artifact.html', kb('dist/kizzo-explainer.artifact.html'));
+
+// Films : même lecteur, mêmes polices ; mise en scène, titre et CSS propres à chacun.
+const FILMS = {
+  explainer: {
+    entry: 'src/main.js',
+    out: 'kizzo-explainer-fr.html',
+    title: 'Kizzo Film Explicatif',
+    description: "Kizzo — film explicatif 3D (1080×1920, 60 fps) : le parent scanne les leçons, l'enfant gagne son temps d'écran en apprenant.",
+    aria: 'Kizzo — film explicatif 3D',
+  },
+  regles: {
+    entry: 'src/regles/main.js',
+    out: 'kizzo-regles-fr.html',
+    title: 'Kizzo Règles du Jeu',
+    description: "Kizzo — film 3D carré (1080×1080, 60 fps) : les parents règlent les quiz, l'enfant gagne son temps d'écran en apprenant.",
+    aria: 'Kizzo — les règles du jeu, film 3D',
+    css: 'src/regles/film.css',
+  },
+};
+
+const only = process.argv[2];
+const tpl = fs.readFileSync(r('src/index.html'), 'utf8');
+fs.mkdirSync(r('dist'), { recursive: true });
+for (const [id, film] of Object.entries(FILMS)) {
+  if (only && only !== id) continue;
+  const result = await esbuild.build({
+    entryPoints: [r(film.entry)],
+    bundle: true,
+    minify: true,
+    format: 'iife',
+    target: ['es2020'],
+    write: false,
+    legalComments: 'none',
+    alias: { 'three/addons': 'three/examples/jsm' },
+    logLevel: 'warning',
+  });
+  const app = result.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');
+  const html = tpl
+    .replace(/<title>[^<]*<\/title>/, () => `<title>${film.title}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*/, (_, a) => a + film.description)
+    .replace(/aria-label="Kizzo — film explicatif 3D"/, () => `aria-label="${film.aria}"`)
+    .replace('/*FONTS*/', () => fontCss)
+    .replace('/*FILM_CSS*/', () => (film.css ? fs.readFileSync(r(film.css), 'utf8') : ''))
+    .replace('<!--LOGO_SVG-->', () => logoSvg)
+    .replace('/*APP*/', () => app);
+  // livrable principal (versionné) + copies de travail pour les scripts d'aperçu / d'export
+  fs.writeFileSync(r(film.out), clean(html));
+  fs.writeFileSync(r(`dist/kizzo-${id}.html`), clean(html));
+  fs.writeFileSync(r(`dist/kizzo-${id}.artifact.html`), strip(html));
+  console.log(`✓ ${film.out}`, kb(film.out), `· dist/kizzo-${id}.artifact.html`, kb(`dist/kizzo-${id}.artifact.html`));
+}

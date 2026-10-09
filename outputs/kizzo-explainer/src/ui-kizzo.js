@@ -1542,3 +1542,6 @@ export function ruleChip(ctx, W, H, i) {
   icons[i](ctx, H / 2 - 10, H / 2 - 10, 20, cols[i]);
   txt(ctx, T.parent.rules[i], H + 2, H / 2 + 5.5, { size: 14.5, weight: 600, color: P.ink, font: F_DISPLAY });
 }
+
+// briques réutilisées par les autres films
+export { a as rgba, card as darkCard, lightCard, tapRipple };

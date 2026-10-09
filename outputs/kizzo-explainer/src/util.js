@@ -27,6 +27,8 @@ export const ease = {
     k <= 0 ? 0 : k >= 1 ? 1 : k < 0.5 ? Math.pow(2, 20 * k - 10) / 2 : (2 - Math.pow(2, -20 * k + 10)) / 2,
   outBack: (k, s = 1.70158) => 1 + (s + 1) * Math.pow(k - 1, 3) + s * Math.pow(k - 1, 2),
   inBack: (k, s = 1.70158) => (s + 1) * k * k * k - s * k * k,
+  inOutBack: (k, s = 1.70158 * 1.525) =>
+    k < 0.5 ? (Math.pow(2 * k, 2) * ((s + 1) * 2 * k - s)) / 2 : (Math.pow(2 * k - 2, 2) * ((s + 1) * (k * 2 - 2) + s) + 2) / 2,
   inOutSine: (k) => -(Math.cos(Math.PI * k) - 1) / 2,
   outSine: (k) => Math.sin((k * Math.PI) / 2),
   inSine: (k) => 1 - Math.cos((k * Math.PI) / 2),

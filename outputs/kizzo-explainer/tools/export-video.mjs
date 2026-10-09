@@ -1,5 +1,5 @@
-// Export MP4 1080×1920 image par image (rendu déterministe) + bande-son mixée.
-// usage : node tools/export-video.mjs [--fps 60] [--h 1920] [--seg 240] [--out dist/kizzo-explainer-1080x1920.mp4]
+// Export MP4 image par image (rendu déterministe) + bande-son mixée.
+// usage : node tools/export-video.mjs [--film explainer|regles] [--fps 60] [--h 1920] [--seg 240] [--out ...]
 // Reprenable : les segments déjà rendus (dist/parts/*.done) sont conservés.
 import { chromium } from 'playwright';
 import { spawn, execFileSync } from 'node:child_process';
@@ -10,18 +10,20 @@ const arg = (k, d) => {
   const i = process.argv.indexOf('--' + k);
   return i > 0 ? process.argv[i + 1] : d;
 };
+const FILM = arg('film', 'explainer');
+const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080] }[FILM];
 const FPS = +arg('fps', 60);
-const H = +arg('h', 1920);
-const W = Math.round((H * 9) / 16);
+const H = +arg('h', FORMAT[1]);
+const W = Math.round((H * FORMAT[0]) / FORMAT[1]);
 const SEG = +arg('seg', 240);
-const OUT = arg('out', `dist/kizzo-explainer-${W}x${H}-${FPS}fps.mp4`);
-const partsDir = path.resolve('dist/parts');
+const OUT = arg('out', `dist/kizzo-${FILM}-${W}x${H}-${FPS}fps.mp4`);
+const partsDir = path.resolve(FILM === 'explainer' ? 'dist/parts' : `dist/parts-${FILM}`);
 fs.mkdirSync(partsDir, { recursive: true });
 
 const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
 page.on('pageerror', (e) => console.log('[pageerror]', e.message));
-await page.goto(`file://${path.resolve('dist/kizzo-explainer.html')}?export=1&h=${H}`);
+await page.goto(`file://${path.resolve(`dist/kizzo-${FILM}.html`)}?export=1&h=${H}`);
 await page.waitForFunction(() => document.documentElement.dataset.ready === '1', null, { timeout: 900000 });
 const DUR = await page.evaluate(() => window.KIZZO.duration);
 const TOTAL = Math.round(DUR * FPS);

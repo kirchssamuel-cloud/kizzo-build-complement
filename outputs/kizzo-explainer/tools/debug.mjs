@@ -1,9 +1,10 @@
 import { chromium } from 'playwright';
 import path from 'node:path';
 const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
-const page = await browser.newPage({ viewport: { width: 270, height: 480 } });
+const FILM = process.env.FILM || 'explainer';
+const page = await browser.newPage({ viewport: { width: FILM === 'regles' ? 480 : 270, height: 480 } });
 page.on('console', (m) => console.log(`[${m.type()}] ${m.text().slice(0, 400)}`));
 page.on('pageerror', (e) => console.log(`[pageerror] ${e.message}\n${(e.stack || '').slice(0, 600)}`));
-await page.goto('file://' + path.resolve('dist/kizzo-explainer.html') + '?export=1&h=480' + (process.argv[2] || ''));
+await page.goto('file://' + path.resolve(`dist/kizzo-${FILM}.html`) + '?export=1&h=480' + (process.argv[2] || ''));
 await page.waitForFunction(() => document.documentElement.dataset.ready === '1', null, { timeout: +(process.argv[3] || 90000) }).catch(() => console.log('NOT READY'));
 await browser.close();

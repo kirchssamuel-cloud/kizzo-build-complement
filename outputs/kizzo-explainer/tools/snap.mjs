@@ -1,14 +1,15 @@
 // Aperçus : rend des images fixes à des instants donnés (contrôle qualité).
-// usage : node tools/snap.mjs <outDir> <h> t1 t2 ...
+// usage : [FILM=regles] node tools/snap.mjs <outDir> <h> t1 t2 ...
 import { chromium } from 'playwright';
 import path from 'node:path';
 import fs from 'node:fs';
 
 const [outDir, hArg, ...times] = process.argv.slice(2);
 const H = parseInt(hArg, 10) || 960;
-const W = Math.round((H * 9) / 16);
+const FILM = process.env.FILM || 'explainer';
+const W = Math.round(H * (FILM === 'regles' ? 1 : 9 / 16));
 fs.mkdirSync(outDir, { recursive: true });
-const file = path.resolve('dist/kizzo-explainer.html');
+const file = path.resolve(`dist/kizzo-${FILM}.html`);
 const browser = await chromium.launch({
   executablePath: process.env.CHROMIUM || undefined,
   args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-webgl'],
