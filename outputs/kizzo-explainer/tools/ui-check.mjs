@@ -1,0 +1,14 @@
+import { chromium } from 'playwright';
+import path from 'node:path';
+const [out, vw, vh, q = ''] = process.argv.slice(2);
+const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport: { width: +vw, height: +vh }, deviceScaleFactor: 1 });
+const logs = [];
+page.on('console', (m) => logs.push(`[${m.type()}] ${m.text()}`));
+page.on('pageerror', (e) => logs.push(`[pageerror] ${e.message}`));
+await page.goto('file://' + path.resolve('dist/kizzo-explainer.html') + q);
+await page.waitForFunction(() => document.documentElement.dataset.ready === '1', null, { timeout: 600000 });
+await page.waitForTimeout(500);
+await page.screenshot({ path: out });
+console.log(logs.join('\n'));
+await browser.close();
