@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!--HEAD_END-->
 <title>Kizzo Explainer Film</title>
-<meta name="description" content="Kizzo — film explicatif 3D de 30 secondes (1080×1920, 60 fps) : le temps d'écran se gagne en apprenant.">
+<meta name="description" content="Kizzo — film explicatif 3D (1080×1920, 60 fps) : le parent scanne les leçons, l'enfant gagne son temps d'écran en apprenant.">
 <style>
 /* Plan : un seul monde sombre (navy Kizzo), scène 9:16 centrée, lecteur discret.
    Charte : Outfit (titres) / Inter (texte), orange #F97316, navy #0F172A, cyan logo #3DB5DA, radius 20px. */
@@ -20,7 +20,7 @@
   --slate: #94A3B8;
   --radius: 20px;
   --f-display: Outfit, "Plus Jakarta Sans", system-ui, sans-serif;
-  --f-body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Plus Jakarta Sans", Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -107,7 +107,7 @@ body { display: grid; place-items: center; }
 }
 .tagline {
   margin-top: calc(var(--u) * 2.6);
-  font-family: var(--f-body);
+  font-family: "Plus Jakarta Sans", var(--f-body);
   font-weight: 500;
   font-size: calc(var(--u) * 4.3);
   letter-spacing: -0.005em;
@@ -194,12 +194,12 @@ html.export #stage { box-shadow: none; }
   <div id="start">
     <svg class="start-mark" viewBox="-0.36 -0.52 0.72 1.04" aria-hidden="true"><!--LOGO_SVG--></svg>
     <h1 class="start-title">Kizzo</h1>
-    <p class="start-sub">Screen time, earned through learning.</p>
+    <p class="start-sub">Le temps d’écran se gagne en apprenant.</p>
     <button class="btn-start" id="btn-start-play" type="button">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>
-      Play with sound
+      Lancer avec le son
     </button>
-    <p class="start-meta">30 s · 1080 × 1920 · 60 fps</p>
+    <p class="start-meta">36 s · 1080 × 1920 · 60 fps</p>
   </div>
 
   <div id="controls">

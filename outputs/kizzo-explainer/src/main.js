@@ -1,11 +1,12 @@
 // Point d'entrée : rendu, lecteur (play/pause/scrub/son), qualité adaptative, API d'export.
 import * as THREE from 'three';
-import { PARAMS, DURATION, WIDTH, HEIGHT } from './config.js';
+import { PARAMS, DURATION, WIDTH, HEIGHT, T } from './config.js';
 import { createStory } from './story.js';
 import { createPipeline } from './post.js';
 import { createTitles } from './titles.js';
 import { scheduleSoundtrack, renderSoundtrackWav } from './audio.js';
 import { fxShared } from './materials.js';
+import { CanvasTex } from './ui-canvas.js';
 
 const $ = (s) => document.querySelector(s);
 const stage = $('#stage');
@@ -24,6 +25,14 @@ const ui = {
 };
 
 if (PARAMS.exportMode) document.documentElement.classList.add('export');
+document.documentElement.lang = PARAMS.lang;
+// textes de l'écran d'accueil selon la langue
+const startBtn = document.querySelector('#btn-start-play');
+if (startBtn) startBtn.lastChild.textContent = ' ' + T.start.cta;
+const startSub = document.querySelector('.start-sub');
+if (startSub) startSub.textContent = T.start.sub;
+const startMeta = document.querySelector('.start-meta');
+if (startMeta) startMeta.textContent = `${Math.round(DURATION)} s · 1080 × 1920 · 60 fps`;
 
 // ---------------------------------------------------------------------------
 // Rendu
@@ -107,7 +116,7 @@ function renderAt(t) {
   lastT = t;
   ui.fill.style.transform = `scaleX(${t / DURATION})`;
   const s = Math.floor(t);
-  ui.time.textContent = `00:${String(s).padStart(2, '0')} / 00:${DURATION}`;
+  ui.time.textContent = `00:${String(s).padStart(2, '0')} / 00:${String(Math.round(DURATION)).padStart(2, '0')}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -283,13 +292,14 @@ function bindUI() {
 async function boot() {
   layout();
   await Promise.all(
-    ['500 20px Outfit', '600 20px Outfit', '700 20px Outfit', '800 20px Outfit', '400 20px Inter', '500 20px Inter', '600 20px Inter', '700 20px Inter', '800 20px Inter'].map((f) =>
+    ['500 20px Outfit', '600 20px Outfit', '700 20px Outfit', '800 20px Outfit', '500 20px "Plus Jakarta Sans"', '600 20px "Plus Jakarta Sans"', '700 20px "Plus Jakarta Sans"', '800 20px "Plus Jakarta Sans"', '700 20px "Space Grotesk"', '600 20px Caveat', '700 20px Caveat'].map((f) =>
       document.fonts.load(f).catch(() => null)
     )
   );
   await document.fonts.ready;
+  CanvasTex.redrawAll();
   // les textures UI sont dessinées après le chargement des polices
-  const warm = [0.4, 3.3, 5.8, 7.6, 10.5, 12.7, 15.2, 16.6, 18.9, 22.6, 24.2, 26.3, 28.5];
+  const warm = [0.4, 3.3, 5.6, 7.0, 7.6, 8.2, 9.3, 10.6, 12.3, 14.1, 17.0, 19.2, 21.7, 23.1, 25.4, 29.1, 30.7, 32.8, 35.0];
   story.update(0);
   story.showAll(true);
   renderer.compile(scene, camera);

@@ -26,10 +26,15 @@ const fonts = [
   ['Outfit', 600, 'outfit'],
   ['Outfit', 700, 'outfit'],
   ['Outfit', 800, 'outfit'],
-  ['Inter', 400, 'inter'],
-  ['Inter', 500, 'inter'],
-  ['Inter', 600, 'inter'],
-  ['Inter', 700, 'inter'],
+  // polices réelles des apps Kizzo (Plus Jakarta Sans pour le texte, Space Grotesk pour les chiffres)
+  ['Plus Jakarta Sans', 500, 'plus-jakarta-sans'],
+  ['Plus Jakarta Sans', 600, 'plus-jakarta-sans'],
+  ['Plus Jakarta Sans', 700, 'plus-jakarta-sans'],
+  ['Plus Jakarta Sans', 800, 'plus-jakarta-sans'],
+  ['Space Grotesk', 700, 'space-grotesk'],
+  // écriture manuscrite pour la page de cahier scannée
+  ['Caveat', 600, 'caveat'],
+  ['Caveat', 700, 'caveat'],
 ];
 const fontCss = fonts
   .map(([fam, w, pkg]) => {
@@ -60,9 +65,9 @@ const clean = (s) => s.replace(/<!--(HEAD_START|HEAD_END|HEAD_CLOSE|BODY_OPEN|BO
 
 fs.mkdirSync(r('dist'), { recursive: true });
 // livrable principal (versionné) + copie de travail pour les scripts d'aperçu / d'export
-fs.writeFileSync(r('kizzo-explainer.html'), clean(html));
+fs.writeFileSync(r('kizzo-explainer-fr.html'), clean(html));
 fs.writeFileSync(r('dist/kizzo-explainer.html'), clean(html));
 fs.writeFileSync(r('dist/kizzo-explainer.artifact.html'), strip(html));
 const kb = (f) => (fs.statSync(r(f)).size / 1024).toFixed(0) + ' Ko';
-console.log('✓ kizzo-explainer.html', kb('kizzo-explainer.html'));
+console.log('✓ kizzo-explainer-fr.html', kb('kizzo-explainer-fr.html'));
 console.log('✓ dist/kizzo-explainer.artifact.html', kb('dist/kizzo-explainer.artifact.html'));

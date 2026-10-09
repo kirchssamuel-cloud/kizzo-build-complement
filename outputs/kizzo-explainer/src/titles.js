@@ -1,5 +1,5 @@
 // Typographie cinétique (DOM, ultra nette) pilotée image par image par la timeline.
-import { T, TL } from './config.js';
+import { T, TITLES } from './config.js';
 import { clamp, ease, seg } from './util.js';
 
 function splitChars(el, text, cls = '') {
@@ -43,10 +43,12 @@ export function createTitles(root) {
 
   // Titres principaux (haut de cadre)
   const defs = [
-    { lines: T.t1, win: TL.title1, cls: 't-top' },
-    { lines: T.t2, win: TL.title2, cls: 't-top' },
-    { lines: T.t3, win: TL.title3, cls: 't-top' },
-    { lines: T.t4, win: TL.title4, cls: 't-top' },
+    { lines: T.t1, win: TITLES.t1, cls: 't-top' },
+    { lines: T.scanA, win: TITLES.scanA, cls: 't-top' },
+    { lines: T.scanB, win: TITLES.scanB, cls: 't-top' },
+    { lines: T.t2, win: TITLES.t2, cls: 't-top' },
+    { lines: T.t3, win: TITLES.t3, cls: 't-top' },
+    { lines: T.t4, win: TITLES.t4, cls: 't-top' },
   ];
   for (const d of defs) items.push({ kind: 'title', ...d, ...makeTitle(root, d.lines, d.cls) });
 
@@ -58,7 +60,7 @@ export function createTitles(root) {
   bar.className = 'burst-bar';
   burst.appendChild(bar);
   root.appendChild(burst);
-  items.push({ kind: 'burst', el: burst, chars: burstChars, bar, win: TL.burstText });
+  items.push({ kind: 'burst', el: burst, chars: burstChars, bar, win: TITLES.burst });
 
   // Signature finale
   const sig = document.createElement('div');
@@ -131,7 +133,7 @@ export function createTitles(root) {
   }
 
   function animSig(t, anchor) {
-    const a = TL.wordmark;
+    const a = TITLES.wordmark;
     const vis = t > a - 0.05;
     sig.style.visibility = vis ? 'visible' : 'hidden';
     if (!vis) return;
@@ -141,14 +143,14 @@ export function createTitles(root) {
     }
     const k = ease.outExpo(seg(t, a, a + 1.1));
     word.style.opacity = clamp(k * 1.4).toFixed(3);
-    word.style.transform = `translate3d(0,${((1 - k) * 0.45).toFixed(3)}em,0) scale(${(1.12 - 0.12 * k + seg(t, a, 30) * 0.03).toFixed(4)})`;
+    word.style.transform = `translate3d(0,${((1 - k) * 0.45).toFixed(3)}em,0) scale(${(1.12 - 0.12 * k + seg(t, a, a + 3) * 0.03).toFixed(4)})`;
     word.style.letterSpacing = (0.16 - 0.2 * k).toFixed(3) + 'em';
     word.style.filter = k < 0.995 ? `blur(${((1 - k) * 12).toFixed(2)}px)` : 'none';
     // reflet lumineux qui traverse le mot
     const sweep = -40 + ease.inOutCubic(seg(t, a + 0.35, a + 1.6)) * 180;
     word.style.backgroundPosition = `${sweep.toFixed(1)}% 50%`;
     tagWords.forEach((w, i) => {
-      const st = TL.tagline + i * 0.09;
+      const st = TITLES.tagline + i * 0.09;
       const kk = ease.outCubic(seg(t, st, st + 0.7));
       w.style.opacity = kk.toFixed(3);
       w.style.transform = `translate3d(0,${((1 - kk) * 0.6).toFixed(3)}em,0)`;

@@ -15,8 +15,6 @@ const H = +arg('h', 1920);
 const W = Math.round((H * 9) / 16);
 const SEG = +arg('seg', 240);
 const OUT = arg('out', `dist/kizzo-explainer-${W}x${H}-${FPS}fps.mp4`);
-const DUR = 30;
-const TOTAL = Math.round(DUR * FPS);
 const partsDir = path.resolve('dist/parts');
 fs.mkdirSync(partsDir, { recursive: true });
 
@@ -25,6 +23,8 @@ const page = await browser.newPage({ viewport: { width: W, height: H }, deviceSc
 page.on('pageerror', (e) => console.log('[pageerror]', e.message));
 await page.goto(`file://${path.resolve('dist/kizzo-explainer.html')}?export=1&h=${H}`);
 await page.waitForFunction(() => document.documentElement.dataset.ready === '1', null, { timeout: 900000 });
+const DUR = await page.evaluate(() => window.KIZZO.duration);
+const TOTAL = Math.round(DUR * FPS);
 
 // bande-son (rendu hors-ligne dans la page)
 const wav = path.join(partsDir, 'soundtrack.wav');

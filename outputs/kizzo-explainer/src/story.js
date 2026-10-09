@@ -2,12 +2,14 @@
 // accumulé). Plans : A enfant & compte à rebours · B app Kizzo · C quiz · D récompense
 // · E parent & traînées lumineuses · F logo.
 import * as THREE from 'three';
-import { TL, T, BRAND } from './config.js';
+import { TL, T, BRAND, SCAN0, SCAN1, SCAN_DUR } from './config.js';
 import { clamp, lerp, seg, ease, springT, pulse, decay, wobble, rng, TAU } from './util.js';
 import { createEnvironment } from './env.js';
 import { createDevice } from './devices.js';
 import { createKid } from './kid.js';
 import * as UI from './ui-canvas.js';
+import * as KZ from './ui-kizzo.js';
+import { createScan } from './scan.js';
 import { makeGlow, makeShockwave, makeGodRays, makeStreak, roundedSlab, shadowPlane } from './materials.js';
 import { createBurst, createConfetti, createProgressRing, createTrail, createHoloCone } from './fx.js';
 import { createLogo3D, createPlus15 } from './logo3d.js';
@@ -16,7 +18,7 @@ const V = (x = 0, y = 0, z = 0) => new THREE.Vector3(x, y, z);
 const _a = V(), _b = V(), _c = V();
 const _q = new THREE.Quaternion();
 const GREEN = new THREE.Color('#22C55E');
-const GREY = new THREE.Color('#9EADC2');
+const GREY = new THREE.Color('#0b1626');
 
 export function createStory(renderer, scene, camera) {
   const env = createEnvironment(renderer, scene);
@@ -55,7 +57,7 @@ export function createStory(renderer, scene, camera) {
   // ===========================================================================
   // ESPACE KIZZO — téléphone enfant héros (plans B à E)
   const texKidBase = new CanvasTex(SCREEN_W, SCREEN_H, 2.4);
-  texKidBase.draw('base', (c, w, h) => UI.drawKidAppBase(c, w, h));
+  texKidBase.draw('base', (c, w, h) => KZ.kidHomeBase(c, w, h));
   const texQuizPhone = new CanvasTex(SCREEN_W, SCREEN_H, 2);
   const texUnlocked = new CanvasTex(SCREEN_W, SCREEN_H, 2.0);
   const child = createDevice({ screenTexture: texKidBase.texture, frame: '#D3D9E1', back: '#E9EEF4', brightness: 1.0 });
@@ -79,17 +81,17 @@ export function createStory(renderer, scene, camera) {
     return { g, mesh, mat, sh, home, ct, w: pw * k, h: ph * k };
   }
 
+  const KL = KZ.KID_LAYOUT;
   const kidLayers = [
-    makeLayer(child, 0, 64, 390, 96, (c, w, h) => UI.drawKidHeader(c, w, h)),
-    makeLayer(child, 20, 186, 350, 196, (c, w, h) => UI.drawKidLockCard(c, w, h)),
-    makeLayer(child, 20, 398, 350, 150, (c, w, h) => UI.drawKidQuestCard(c, w, h)),
-    makeLayer(child, 18, 566, 114, 52, (c, w, h) => UI.drawKidChip(c, w, h, 0)),
-    makeLayer(child, 138, 566, 114, 52, (c, w, h) => UI.drawKidChip(c, w, h, 1)),
-    makeLayer(child, 258, 566, 114, 52, (c, w, h) => UI.drawKidChip(c, w, h, 2)),
-    makeLayer(child, 45, 690, 300, 80, (c, w, h) => UI.drawKidCTA(c, w, h, 0)),
+    makeLayer(child, ...KL.header, (c, w, h) => KZ.kidHeader(c, w, h)),
+    makeLayer(child, ...KL.hero, (c, w, h) => KZ.kidHero(c, w, h)),
+    makeLayer(child, ...KL.evo, (c, w, h) => KZ.kidEvolution(c, w, h)),
+    makeLayer(child, ...KL.last, (c, w, h) => KZ.kidLastQuiz(c, w, h)),
+    makeLayer(child, ...KL.cta, (c, w, h) => KZ.kidCTA(c, w, h, 0)),
+    makeLayer(child, ...KL.outline, (c, w, h) => KZ.kidOutline(c, w, h)),
   ];
-  const LIFT = [0.06, 0.12, 0.18, 0.24, 0.26, 0.24, 0.3];
-  const ctaLayer = kidLayers[6];
+  const LIFT = [0.05, 0.2, 0.13, 0.09, 0.28, 0.07];
+  const ctaLayer = kidLayers[4];
   const ctaTap = makeShockwave('#FFFFFF');
   ctaTap.material.uniforms.uIntensity.value = 1.2;
   ctaLayer.g.add(ctaTap);
@@ -143,39 +145,40 @@ export function createStory(renderer, scene, camera) {
   cone.mesh.position.z = child.dims.front + 0.01;
 
   const cardMat = () =>
-    new THREE.MeshPhysicalMaterial({ color: '#EEF2F7', roughness: 0.34, clearcoat: 0.6, clearcoatRoughness: 0.18, sheen: 0.3, sheenColor: new THREE.Color('#E0F2FE') });
-  const CARD = [1.52, 0.98];
+    new THREE.MeshPhysicalMaterial({ color: '#1b3558', roughness: 0.3, clearcoat: 1, clearcoatRoughness: 0.12, metalness: 0.1, emissive: new THREE.Color('#3db4d9'), emissiveIntensity: 0.04 });
+  const CARD = [1.52, 0.7];
+  const OPT = [1.52, 0.192];
   const cardGeo = roundedSlab(CARD[0], CARD[1], 0.06, 0.09, 0.02);
-  const tileGeo = roundedSlab(0.72, 0.236, 0.05, 0.118, 0.018);
+  const tileGeo = roundedSlab(OPT[0], OPT[1], 0.045, 0.064, 0.016);
   const TILE_POS = [
-    [-0.385, -0.1],
-    [0.385, -0.1],
-    [-0.385, -0.39],
-    [0.385, -0.39],
+    [0, 0.284],
+    [0, 0.047],
+    [0, -0.19],
+    [0, -0.427],
   ];
-  const CARD_HOME = V(0, 0.64, 0);
-  const cards = T.quiz.map((q, i) => {
+  const CARD_HOME = V(0, 0.78, 0);
+  const cards = T.quiz.items.map((q, i) => {
     const g = new THREE.Group();
     const body = new THREE.Mesh(cardGeo, cardMat());
     body.castShadow = true;
-    const ct = new CanvasTex(UI.CARD_PX[0], UI.CARD_PX[1], 3);
-    ct.draw('q', (c, w, h) => UI.drawQuizCard(c, w, h, i));
+    const ct = new CanvasTex(KZ.CARD_PX[0], KZ.CARD_PX[1], 3);
+    ct.draw('q', (c, w, h) => KZ.quizCardFace(c, w, h, i));
     const face = new THREE.Mesh(new THREE.PlaneGeometry(CARD[0], CARD[1]), new THREE.MeshBasicMaterial({ map: ct.texture, transparent: true, toneMapped: false, depthWrite: false }));
     face.position.z = 0.032;
-    const edgeGlow = makeGlow(['#F97316', '#3DB5DA', '#A78BFA'][i], 0, 2.4, { power: 3 });
+    const edgeGlow = makeGlow('#3DB4D9', 0, 2.4, { power: 3 });
     edgeGlow.position.z = -0.12;
     g.add(body, face, edgeGlow);
     quiz.add(g);
     const tiles = q.a.map((label, j) => {
       const tg = new THREE.Group();
-      const mat = new THREE.MeshPhysicalMaterial({ color: '#FFFFFF', roughness: 0.25, clearcoat: 1, clearcoatRoughness: 0.08, emissive: new THREE.Color('#22C55E'), emissiveIntensity: 0 });
+      const mat = new THREE.MeshPhysicalMaterial({ color: '#16304f', roughness: 0.28, clearcoat: 1, clearcoatRoughness: 0.08, emissive: new THREE.Color('#3db4d9'), emissiveIntensity: 0 });
       const tb = new THREE.Mesh(tileGeo, mat);
       tb.castShadow = true;
       const mk = (state) => {
-        const t2 = new CanvasTex(UI.TILE_PX[0], UI.TILE_PX[1], 3);
-        t2.draw('l', (c, w, h) => UI.drawTile(c, w, h, label, state));
-        const m = new THREE.Mesh(new THREE.PlaneGeometry(0.72, 0.236), new THREE.MeshBasicMaterial({ map: t2.texture, transparent: true, toneMapped: false, depthWrite: false }));
-        m.position.z = 0.027;
+        const t2 = new CanvasTex(KZ.OPT_PX[0], KZ.OPT_PX[1], 2.6);
+        t2.draw('l', (c, w, h) => KZ.optionTile(c, w, h, label, j, state === 1));
+        const m = new THREE.Mesh(new THREE.PlaneGeometry(OPT[0], OPT[1]), new THREE.MeshBasicMaterial({ map: t2.texture, transparent: true, toneMapped: false, depthWrite: false }));
+        m.position.z = 0.025;
         return m;
       };
       const ln = mk(0), lw = mk(1);
@@ -188,20 +191,52 @@ export function createStory(renderer, scene, camera) {
   });
   // badge de validation
   const badgeTex = new CanvasTex(64, 64, 4);
-  badgeTex.draw('b', (c, w, h) => UI.drawCheckBadge(c, w, h));
+  badgeTex.draw('b', (c, w, h) => KZ.checkBadge(c, w, h));
   const badges = [0, 1, 2].map(() => {
     const m = new THREE.Mesh(new THREE.CircleGeometry(0.062, 40), new THREE.MeshBasicMaterial({ map: badgeTex.texture, transparent: true, toneMapped: false }));
     m.material.color.setScalar(1.15);
     quiz.add(m);
     return m;
   });
-  // planète (Q2)
-  const planetTex = new CanvasTex(256, 128, 2);
-  planetTex.draw('p', (c, w, h) => UI.drawPlanet(c, w, h));
-  const planet = new THREE.Mesh(new THREE.SphereGeometry(0.15, 48, 32), new THREE.MeshStandardMaterial({ map: planetTex.texture, roughness: 0.85, metalness: 0 }));
-  planet.castShadow = true;
-  cards[1].g.add(planet);
-  const planetGlow = makeGlow('#FF7A3D', 0.6, 0.6);
+  // accessoires 3D liés à la leçon : soleil (évaporation) et nuage qui pleut (condensation)
+  const sun = new THREE.Group();
+  const sunCore = new THREE.Mesh(new THREE.SphereGeometry(0.1, 40, 24), new THREE.MeshBasicMaterial({ color: new THREE.Color('#FFC14D').multiplyScalar(2.2), toneMapped: false }));
+  sun.add(sunCore);
+  const rayMat = new THREE.MeshBasicMaterial({ color: new THREE.Color('#FFB23E').multiplyScalar(1.6), toneMapped: false });
+  for (let k = 0; k < 10; k++) {
+    const ray = new THREE.Mesh(new THREE.CapsuleGeometry(0.012, 0.05, 4, 8), rayMat);
+    const an = (k / 10) * Math.PI * 2;
+    ray.position.set(Math.cos(an) * 0.16, Math.sin(an) * 0.16, 0);
+    ray.rotation.z = an - Math.PI / 2;
+    sun.add(ray);
+  }
+  const sunGlow = makeGlow('#FFB547', 1.1, 0.9);
+  sun.add(sunGlow);
+  cards[0].g.add(sun);
+  const cloud = new THREE.Group();
+  const cloudMat = new THREE.MeshPhysicalMaterial({ color: '#F4F9FC', roughness: 0.6, sheen: 0.6, sheenColor: new THREE.Color('#ffffff') });
+  [
+    [0, 0, 0.1],
+    [-0.1, -0.02, 0.075],
+    [0.1, -0.02, 0.08],
+    [-0.05, 0.06, 0.07],
+    [0.06, 0.05, 0.075],
+  ].forEach(([x, y, r]) => {
+    const b2 = new THREE.Mesh(new THREE.SphereGeometry(r, 24, 16), cloudMat);
+    b2.position.set(x, y, 0);
+    b2.castShadow = true;
+    cloud.add(b2);
+  });
+  const dropMat = new THREE.MeshPhysicalMaterial({ color: '#5CC8E4', roughness: 0.1, clearcoat: 1, emissive: new THREE.Color('#3DB4D9'), emissiveIntensity: 0.4 });
+  const drops = [-0.08, 0, 0.08].map((x) => {
+    const d = new THREE.Mesh(new THREE.SphereGeometry(0.018, 12, 10), dropMat);
+    d.scale.set(1, 1.5, 1);
+    d.position.set(x, -0.1, 0);
+    cloud.add(d);
+    return d;
+  });
+  cards[1].g.add(cloud);
+  const planetGlow = makeGlow('#7FD3EC', 0.4, 0.6);
   cards[1].g.add(planetGlow);
   // doigt (toucher) + ondulations
   const finger = makeGlow('#FFFFFF', 0, 0.22, { power: 1.4, core: 1.5 });
@@ -242,45 +277,29 @@ export function createStory(renderer, scene, camera) {
   // ===========================================================================
   // PLAN E — parent
   const texParentBase = new CanvasTex(SCREEN_W, SCREEN_H, 2.4);
-  texParentBase.draw('base', (c, w, h) => UI.drawParentBase(c, w, h));
-  const parent = createDevice({ screenTexture: texParentBase.texture, frame: '#3A4458', back: '#1C2539', brightness: 1.0 });
+  texParentBase.draw('base', (c, w, h) => KZ.parentBase(c, w, h));
+  const parent = createDevice({ screenTexture: texParentBase.texture, frame: '#C9CED6', back: '#F28A3C', brightness: 1.0 });
   scene.add(parent.group);
+  const PL = KZ.PARENT_LAYOUT;
   const pLayers = [
-    makeLayer(parent, 20, 140, 350, 150, (c, w, h) => UI.drawParentLimit(c, w, h, 1)),
-    makeLayer(parent, 20, 304, 350, 178, (c, w, h) => UI.drawParentSchedule(c, w, h, 1)),
-    makeLayer(parent, 20, 496, 350, 170, (c, w, h) => UI.drawParentUsage(c, w, h)),
-    makeLayer(parent, 20, 680, 350, 92, (c, w, h) => UI.drawParentLearning(c, w, h)),
+    makeLayer(parent, ...PL.child, (c, w, h) => KZ.parentChildCard(c, w, h)),
+    makeLayer(parent, ...PL.auto, (c, w, h) => KZ.parentAutoCard(c, w, h, '15')),
+    makeLayer(parent, ...PL.photo, (c, w, h) => KZ.parentPhotoCard(c, w, h)),
+    makeLayer(parent, ...PL.stats, (c, w, h) => KZ.parentStats(c, w, h)),
   ];
-  const P_LIFT = [0.16, 0.26, 0.2, 0.12];
-  // barres 3D de la carte "cette semaine"
-  const usage = pLayers[2];
-  const BARS = [0.55, 0.82, 0.64, 0.92, 0.5, 0.72, 0.42];
-  const barMatC = new THREE.MeshPhysicalMaterial({ color: '#3DB5DA', roughness: 0.25, clearcoat: 1, emissive: new THREE.Color('#3DB5DA'), emissiveIntensity: 0.25 });
-  const barMatO = new THREE.MeshPhysicalMaterial({ color: '#F97316', roughness: 0.25, clearcoat: 1, emissive: new THREE.Color('#F97316'), emissiveIntensity: 0.6 });
-  const barGeo = new THREE.BoxGeometry(1, 1, 1);
-  barGeo.translate(0, 0.5, 0);
-  const bars = BARS.map((h, i) => {
-    const m = new THREE.Mesh(barGeo, i === 6 ? barMatO : barMatC);
-    const lx = (20 + 44 + i * 44 - 195) * kpx;
-    const by = (581 - 640) * kpx;
-    m.position.set(lx, by, 0.012);
-    m.userData.h = h * 82 * kpx;
-    m.castShadow = true;
-    usage.g.add(m);
-    return m;
-  });
+  const P_LIFT = [0.2, 0.3, 0.16, 0.1];
   // puces de règles (sources des traînées)
   const CHIP = [214, 44];
   const chips = [0, 1, 2].map((i) => {
     const ct = new CanvasTex(CHIP[0], CHIP[1], 3);
-    ct.draw('c', (c, w, h) => UI.drawRuleChip(c, w, h, i));
+    ct.draw('c', (c, w, h) => KZ.ruleChip(c, w, h, i));
     const k = kpx;
     const g = new THREE.Group();
-    const body = new THREE.Mesh(roundedSlab(CHIP[0] * k, CHIP[1] * k, 0.025, (CHIP[1] * k) / 2, 0.01), new THREE.MeshPhysicalMaterial({ color: '#141E33', roughness: 0.3, clearcoat: 1, metalness: 0.2 }));
+    const body = new THREE.Mesh(roundedSlab(CHIP[0] * k, CHIP[1] * k, 0.025, (CHIP[1] * k) / 2, 0.01), new THREE.MeshPhysicalMaterial({ color: '#F7FAFB', roughness: 0.3, clearcoat: 1 }));
     const face = new THREE.Mesh(new THREE.PlaneGeometry(CHIP[0] * k, CHIP[1] * k), new THREE.MeshBasicMaterial({ map: ct.texture, transparent: true, toneMapped: false, depthWrite: false }));
     face.position.z = 0.014;
     face.material.color.setScalar(1.1);
-    const glow = makeGlow([BRAND.cyan, '#A78BFA', BRAND.orange][i], 0, 0.6);
+    const glow = makeGlow([BRAND.cyan, BRAND.amber, '#A78BFA'][i], 0, 0.6);
     g.add(body, face, glow);
     parent.group.add(g);
     return { g, glow, w: CHIP[0] * k };
@@ -289,9 +308,9 @@ export function createStory(renderer, scene, camera) {
   const trailsGroup = new THREE.Group();
   scene.add(trailsGroup);
   let trails = [];
-  const trailHeads = [0, 1, 2].map((i) => makeGlow(['#7FD3EC', '#C4B5FD', '#FFB27A'][i], 0, 0.32, { core: 1.4 }));
+  const trailHeads = [0, 1, 2].map((i) => makeGlow(['#7FD3EC', '#FFD27A', '#C4B5FD'][i], 0, 0.32, { core: 1.4 }));
   trailHeads.forEach((h) => trailsGroup.add(h));
-  const arriveBursts = [0, 1, 2].map((i) => createBurst({ count: 40, seed: 60 + i, speed: 1.0, size: 6, life: 0.8, colors: ['#FFFFFF', ['#3DB5DA', '#A78BFA', '#F97316'][i]] }));
+  const arriveBursts = [0, 1, 2].map((i) => createBurst({ count: 40, seed: 60 + i, speed: 1.0, size: 6, life: 0.8, colors: ['#FFFFFF', ['#3DB4D9', '#FAB43B', '#A78BFA'][i]] }));
   arriveBursts.forEach((b) => trailsGroup.add(b.object));
   const childGlow = makeGlow('#7FD3EC', 0, 1.6);
   scene.add(childGlow);
@@ -506,7 +525,7 @@ export function createStory(renderer, scene, camera) {
       child.setScreen(texQuizPhone.texture);
       const done = TL.q.filter((q) => t > q.tap + 0.1).length;
       const qi = TL.q.filter((q) => t > q.in).length - 1;
-      texQuizPhone.draw(`${done}-${qi}`, (c, w, h) => UI.drawQuizPhone(c, w, h, { done, q: Math.max(0, qi) }));
+      texQuizPhone.draw(`${done}-${qi}`, (c, w, h) => KZ.quizPhone(c, w, h, { done, q: Math.max(0, qi) }));
     } else {
       child.setScreen(texUnlocked.texture);
       const ring = ease.outCubic(seg(t, TL.toPhone[1] - 0.1, TL.toPhone[1] + 0.7));
@@ -514,7 +533,7 @@ export function createStory(renderer, scene, camera) {
       const synced = TL.trails.reduce((s, tt) => s + ease.outCubic(seg(t, tt + TL.trailDur, tt + TL.trailDur + 0.35)), 0);
       const pz = decay(t, TL.toPhone[1], 3) + TL.trails.reduce((s, tt) => s + decay(t, tt + TL.trailDur, 5) * 0.6, 0);
       const key = `${minutes}|${(Math.round(ring * 40) / 40).toFixed(3)}|${(Math.round(synced * 20) / 20).toFixed(2)}|${(Math.round(Math.min(1, pz) * 16) / 16).toFixed(3)}`;
-      texUnlocked.draw(key, (c, w, h) => UI.drawKidUnlocked(c, w, h, { minutes, ring, synced, pulse: Math.min(1, pz) }));
+      texUnlocked.draw(key, (c, w, h) => KZ.resultScreen(c, w, h, { minutes, synced, pulse: Math.min(1, pz) }));
     }
     const dim = 1 - ease.inCubic(seg(t, TL.converge[0], TL.converge[1])) * 0.85;
     child.displayMat.color.setScalar(dim * (1 + decay(t, TL.flash, 2.5) * 0.4));
@@ -550,7 +569,7 @@ export function createStory(renderer, scene, camera) {
     // bouton pressé
     const press = pulse(t, TL.cta + 0.06, 0.12);
     ctaLayer.g.position.z -= press * 0.08;
-    ctaLayer.ct.draw(press > 0.5 ? 'p' : 'n', (c, w, h) => UI.drawKidCTA(c, w, h, press > 0.5 ? 1 : 0));
+    ctaLayer.ct.draw(press > 0.5 ? 'p' : 'n', (c, w, h) => KZ.kidCTA(c, w, h, press > 0.5 ? 1 : 0));
     const ck = seg(t, TL.cta, TL.cta + 0.6);
     ctaTap.visible = ck > 0 && ck < 1;
     ctaTap.scale.setScalar(0.2 + ck * 1.6);
@@ -657,28 +676,29 @@ export function createStory(renderer, scene, camera) {
       // carte 3 : l'emplacement devient vert une fois la réponse verrouillée
       if (i === 2) {
         const locked = t >= TL.lockIn[1];
-        c.ct.draw(locked ? 'L' : 'q', (cx, w, h) => {
-          UI.drawQuizCard(cx, w, h, 2);
-          if (locked) {
-            cx.save();
-            cx.fillStyle = 'rgba(34,197,94,0.12)';
-            cx.strokeStyle = '#22C55E';
-            cx.lineWidth = 3;
-            UI.rr(cx, 26, 162, 190, 56, 18);
-            cx.fill();
-            cx.stroke();
-            cx.restore();
-          }
-        });
+        c.ct.draw(locked ? 'L' : 'q', (cx, w, h) => KZ.quizCardFace(cx, w, h, 2, locked));
       }
-      // planète
+      // accessoires 3D
+      if (i === 0) {
+        const pk = springT(t - (q.in + 0.35), { stiffness: 130, damping: 10 });
+        sun.position.set(0.56, -0.06, 0.04 + 0.16 * pk);
+        sun.scale.setScalar(Math.max(0.0001, pk));
+        sun.rotation.z = -t * 0.6;
+        sunGlow.material.uniforms.uIntensity.value = 0.9 + Math.sin(t * 4) * 0.15;
+      }
       if (i === 1) {
         const pk = springT(t - (q.in + 0.35), { stiffness: 130, damping: 10 });
-        planet.position.set(0.5, 0.1, 0.03 + 0.2 * pk);
-        planet.scale.setScalar(Math.max(0.0001, pk));
-        planet.rotation.set(0.35, t * 0.9, 0.1);
-        planetGlow.position.copy(planet.position).add(_a.set(0, 0, -0.12));
-        planetGlow.material.uniforms.uIntensity.value = 0.5 * pk;
+        cloud.position.set(0.55, -0.02 + Math.sin(t * 1.6) * 0.012, 0.04 + 0.16 * pk);
+        cloud.scale.setScalar(Math.max(0.0001, pk));
+        cloud.rotation.y = Math.sin(t * 0.8) * 0.3;
+        drops.forEach((d, j) => {
+          const ph = (t * 1.4 + j * 0.37) % 1;
+          d.position.y = -0.09 - ph * 0.14;
+          d.scale.setScalar(Math.max(0.0001, (1 - ph) * 1.0));
+          d.scale.y *= 1.5;
+        });
+        planetGlow.position.copy(cloud.position).add(_a.set(0, 0, -0.12));
+        planetGlow.material.uniforms.uIntensity.value = 0.35 * pk;
       }
       // tuiles
       c.tiles.forEach((tl, j) => {
@@ -686,7 +706,7 @@ export function createStory(renderer, scene, camera) {
         const k = springT(t - st, { stiffness: 160, damping: 14 });
         const home = tileHome(j).add(_a.set(0, 0, 0));
         const p = tl.g.position;
-        p.lerpVectors(_b.set(home.x * 0.4, home.y + 0.25, -0.35), home, Math.min(1, k * 1.05));
+        p.lerpVectors(_b.set(home.x, home.y + 0.35, -0.35), home, Math.min(1, k * 1.05));
         tl.g.scale.setScalar(Math.max(0.0001, lerp(0.4, 1, k)));
         tl.g.rotation.set(lerp(0.8, 0, k), 0, 0);
         const sel = tl.ok ? ease.outBack(seg(t, q.tap, q.tap + 0.32), 2.4) : 0;
@@ -694,8 +714,8 @@ export function createStory(renderer, scene, camera) {
         p.z += sel * 0.1 - dimK * 0.08;
         tl.g.scale.multiplyScalar(1 + sel * 0.07 - dimK * 0.06);
         const green = clamp(sel);
-        tl.mat.color.set('#EEF2F7').lerp(GREEN, green).lerp(GREY, dimK * 0.6);
-        tl.mat.emissiveIntensity = green * (0.35 + decay(t, q.tap, 4) * 1.2);
+        tl.mat.color.set('#16304f').lerp(GREY, dimK * 0.15);
+        tl.mat.emissiveIntensity = green * (0.3 + decay(t, q.tap, 4) * 1.0);
         tl.lw.material.opacity = green;
         tl.ln.material.opacity = 1 - green;
         // anticipation : léger survol avant le tap
@@ -715,10 +735,10 @@ export function createStory(renderer, scene, camera) {
           if (tl.ok) {
             // verrouillage dans l'emplacement de la carte
             const kl = ease.inOutCubic(seg(t, TL.lockIn[0], TL.lockIn[1]));
-            const slot = _b.set(-0.276, -0.27, 0.06).applyMatrix4(c.g.matrix);
+            const slot = _b.set(0, -0.23, 0.05).applyMatrix4(c.g.matrix);
             const snap = 1 + Math.sin(seg(t, TL.lockIn[1], TL.lockIn[1] + 0.35) * Math.PI * 2) * decay(t, TL.lockIn[1], 6) * 0.06;
             p.lerp(slot, kl);
-            tl.g.scale.multiplyScalar(lerp(1, 1.0, kl) * snap);
+            tl.g.scale.multiplyScalar(lerp(1, 0.88, kl) * snap);
             tl.g.rotation.x += Math.sin(kl * Math.PI) * 0.3;
             if (scatter > 0) {
               p.add(_a.set(0.2, 2.8, -1.2).multiplyScalar(scatter));
@@ -741,7 +761,7 @@ export function createStory(renderer, scene, camera) {
       const k = springT(t - (q.tap + 0.12), { stiffness: 220, damping: 12 });
       const out = i < 2 ? ease.inCubic(seg(t, q.out, q.out + 0.3)) : ease.inCubic(seg(t, TL.lockIn[0], TL.lockIn[0] + 0.2));
       b.visible = t > q.tap + 0.1 && out < 1 && tl.g.visible;
-      b.position.copy(tl.g.position).add(_a.set(0.33, 0.1, 0.05));
+      b.position.copy(tl.g.position).add(_a.set(0.66 * tl.g.scale.x, 0, 0.05));
       b.scale.setScalar(Math.max(0.0001, k * (1 - out)));
     });
 
@@ -852,11 +872,11 @@ export function createStory(renderer, scene, camera) {
     const cm = new THREE.Matrix4().compose(cp, new THREE.Quaternion().setFromEuler(cr), V(1, 1, 1));
     trails = chips.map((ch, i) => {
       const start = CHIP_HOME[i].clone().add(V(ch.w / 2 + 0.01, 0, 0).applyEuler(new THREE.Euler(0, -0.32, 0))).applyMatrix4(pm);
-      const end = child.screenToLocal(80, 635 + i * 42, SCREEN_W, SCREEN_H, 0.01).applyMatrix4(cm);
+      const end = child.screenToLocal(80, 543 + i * 46, SCREEN_W, SCREEN_H, 0.01).applyMatrix4(cm);
       const m1 = start.clone().lerp(end, 0.33).add(V(0.35 + i * 0.12, 0.5 - i * 0.12, 0.6));
       const m2 = start.clone().lerp(end, 0.7).add(V(0.25, 0.35 + i * 0.05, 0.35));
       const curve = new THREE.CatmullRomCurve3([start, m1, m2, end], false, 'centripetal');
-      const tr = createTrail(curve, { color: [BRAND.cyan, '#A78BFA', BRAND.orange][i], color2: '#FFFFFF', radius: 0.0105, tail: 0.42 });
+      const tr = createTrail(curve, { color: [BRAND.cyan, BRAND.amber, '#A78BFA'][i], color2: '#FFFFFF', radius: 0.0105, tail: 0.42 });
       trailsGroup.add(tr.mesh);
       return { ...tr, end };
     });
@@ -898,13 +918,9 @@ export function createStory(renderer, scene, camera) {
       L.sh.scale.setScalar(1 + P_LIFT[i] * k * 0.6);
       L.mat.opacity = 1;
     });
-    bars.forEach((b, i) => {
-      const k = ease.outBack(seg(t, 21.35 + i * 0.06, 21.85 + i * 0.06), 1.6);
-      b.scale.set(0.03, Math.max(0.0001, b.userData.h * k), 0.024 + 0.01 * k);
-    });
     chips.forEach((c, i) => {
       const k = springT(t - (21.55 + i * 0.16), { stiffness: 110, damping: 12 });
-      const from = parent.screenToLocal(195, 720, SCREEN_W, SCREEN_H, 0.02);
+      const from = parent.screenToLocal(195, 400, SCREEN_W, SCREEN_H, 0.02);
       c.g.position.lerpVectors(from, CHIP_HOME[i], Math.min(1.08, k));
       c.g.scale.setScalar(Math.max(0.0001, lerp(0.3, 1, Math.min(1, k))));
       c.g.rotation.set(Math.sin(t + i) * 0.03, -0.32 + Math.sin(t * 0.7 + i) * 0.04, 0);
@@ -931,7 +947,7 @@ export function createStory(renderer, scene, camera) {
       arriveBursts[i].set(t - (t0 + TL.trailDur));
     });
     child.group.updateMatrixWorld(true);
-    childGlow.position.copy(child.screenToLocal(195, 640, SCREEN_W, SCREEN_H, 0.05)).applyMatrix4(child.group.matrixWorld);
+    childGlow.position.copy(child.screenToLocal(195, 590, SCREEN_W, SCREEN_H, 0.05)).applyMatrix4(child.group.matrixWorld);
     childGlow.material.uniforms.uIntensity.value = TL.trails.reduce((s, tt) => s + decay(t, tt + TL.trailDur, 4), 0) * 1.4 * fade;
   }
 
@@ -1095,7 +1111,7 @@ export function createStory(renderer, scene, camera) {
   // ---------------------------------------------------------------------------
   // Ambiance : lumières, fond, sol, faisceaux, poussière par plan
 
-  function updateEnv(t, cam) {
+  function updateEnv(t, cam, inScan = false, T0 = t) {
     const inA = t < TL.flash;
     const u = env.bgMat.uniforms;
     u.uTime.value = t;
@@ -1108,19 +1124,19 @@ export function createStory(renderer, scene, camera) {
     u.uExposure.value = inA ? 1 - ease.outCubic(seg(t, TL.zero, TL.zero + 0.8)) * 0.25 : 1;
 
     // sol
-    env.floor.position.y = inA ? -1.0 : t < 25 ? -2.4 : -1.35;
-    env.floorMat.userData.fade.value = inA ? 1 : t < 25 ? 0.6 : 0.85 * ease.inOutCubic(seg(t, 25.3, 26.6));
+    env.floor.position.set(inScan ? 60 : 0, inA ? -1.0 : inScan ? -2.3 : t < 25 ? -2.4 : -1.35, 0);
+    env.floorMat.userData.fade.value = inA ? 1 : inScan ? 0.75 : t < 25 ? 0.6 : 0.85 * ease.inOutCubic(seg(t, 25.3, 26.6));
 
     // faisceaux
     const shaftK = inA ? 1 - ease.outCubic(seg(t, TL.zero, TL.zero + 0.9)) * 0.6 : 0.55 + logoK * 0.5;
     env.shafts.children.forEach((s, i) => {
-      s.material.uniforms.uIntensity.value = shaftK * [0.16, 0.11, 0.13][i] * (1 + Math.sin(t * 0.7 + i * 2) * 0.12);
+      s.material.uniforms.uIntensity.value = shaftK * [0.16, 0.11, 0.13][i] * (1 + Math.sin(T0 * 0.7 + i * 2) * 0.12);
     });
     env.shafts.position.copy(cam.look).add(_a.set(0, 0.2, -0.6));
 
     // poussière : suit la zone d'action, ralentit au gel
     const du = env.dustMat.uniforms;
-    du.uT.value = inA ? warpA(t) : t;
+    du.uT.value = inScan ? T0 : inA ? warpA(t) : t;
     du.uCenter.value.copy(cam.look);
     du.uFocus.value = cam.focus;
     du.uAperture.value = cam.aperture;
@@ -1141,7 +1157,15 @@ export function createStory(renderer, scene, camera) {
   // ---------------------------------------------------------------------------
   const camOut = { pos: V(), look: V(), fov: 35, roll: 0, focus: 5, aperture: 0.5, zoom: 0, ca: 0.02, flash: 0, sat: 1, shake: 0 };
 
-  function update(t) {
+  // Scène du scan insérée au flash du plan A (temps absolus SCAN0 -> SCAN1)
+  const scan = createScan();
+  scene.add(scan.root);
+  const V1_GROUPS = [worldA, child.group, holo, quiz, reward, parent.group, trailsGroup, logoWorld, confetti.object, mergeBurst.object, childGlow];
+
+  function update(T0) {
+    const inScan = T0 >= SCAN0 && T0 < SCAN1;
+    // temps "histoire" des plans hérités : gelé pendant le scan, puis décalé
+    const t = T0 < SCAN0 ? T0 : inScan ? SCAN0 : T0 - SCAN_DUR;
     camOut.roll = 0;
     camOut.zoom = 0;
     camOut.ca = 0.012;
@@ -1149,6 +1173,7 @@ export function createStory(renderer, scene, camera) {
     camOut.sat = 1;
     updateA(t, camOut);
     if (t >= TL.flash) camKizzo(t, camOut);
+    const sp = scan.update(T0, camOut);
 
     // caméra "à l'épaule" très subtile
     const hp = camOut.pos;
@@ -1167,11 +1192,12 @@ export function createStory(renderer, scene, camera) {
     updateReward(t);
     updateParent(t);
     updateLogo(t);
-    updateEnv(t, camOut);
+    if (inScan) for (const g of V1_GROUPS) g.visible = false;
+    updateEnv(t, camOut, inScan, T0);
 
     // étalonnage / événements
     const post = {
-      time: t,
+      time: T0,
       focus: camOut.focus,
       aperture: camOut.aperture,
       maxBlur: 22,
@@ -1203,6 +1229,14 @@ export function createStory(renderer, scene, camera) {
     }
     post.zoom += pulse(t, TL.toQuiz[0] + 0.45, 0.25) * 0.25 + pulse(t, TL.parentIn[0] + 0.4, 0.3) * 0.2;
     post.vignette = t > 25.5 ? lerp(0.6, 0.72, seg(t, 25.5, 27)) : 0.6;
+    if (sp) {
+      post.flash = sp.flashIn + sp.flashOut;
+      post.zoom = sp.zoom;
+      post.ca = 0.012 + sp.flashIn * 0.15 + sp.flashOut * 0.2;
+      post.exposure = 1 + sp.flashIn * 0.25 + sp.shutter * 0.08;
+      post.bloom = 0.5 + sp.shutter * 0.2;
+      post.sat = 1;
+    }
 
     // ancres des titres 3D -> écran
     const anchors = {
@@ -1220,7 +1254,7 @@ export function createStory(renderer, scene, camera) {
 
   /** Rend visibles tous les objets (précompilation des shaders). */
   function showAll(on) {
-    const list = [worldA, child.group, holo, quiz, reward, parent.group, trailsGroup, logoWorld, confetti.object, mergeBurst.object];
+    const list = [worldA, child.group, holo, quiz, reward, parent.group, trailsGroup, logoWorld, confetti.object, mergeBurst.object, scan.root];
     list.forEach((o) => o.traverse((c) => (c.visible = on ? true : c.visible)));
   }
 

@@ -1,6 +1,6 @@
 // Sound design 100 % synthétisé (Web Audio) et calé sur la timeline.
 // La même partition sert à la lecture temps réel et au rendu hors-ligne (export MP4).
-import { TL } from './config.js';
+import { TL, SC, SCAN0, SCAN1, SCAN_DUR, DURATION } from './config.js';
 
 const NOTE = (n) => 440 * Math.pow(2, (n - 69) / 12); // MIDI -> Hz
 
@@ -66,6 +66,9 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
     node.connect(g).connect(verb);
   };
 
+  // les évènements des plans hérités sont écrits en temps "histoire" : décalés après le scan
+  let MAP = true;
+  const M = (t) => (MAP && t >= SCAN0 - 1e-6 ? t + SCAN_DUR : t);
   const T = (t) => t0 + (t - offset); // temps vidéo -> temps contexte
   // les nappes déjà commencées reprennent ; les sons ponctuels passés sont ignorés (scrub)
   const live = (t, dur, sustained = false) => (sustained ? t + dur > offset : t >= offset - 0.02);
@@ -73,6 +76,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   // ---------------- instruments
 
   function pad(t, dur, notes, gain = 0.05, cutoff = 1400, attack = 1.2, release = 1.6, wet = 0.6) {
+    t = M(t);
     if (!live(t, dur + release, true)) return;
     const g = ctx.createGain();
     const f = ctx.createBiquadFilter();
@@ -104,6 +108,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   }
 
   function sub(t, f0, f1, dur, gain = 0.5) {
+    t = M(t);
     if (!live(t, dur)) return;
     const o = ctx.createOscillator();
     o.type = 'sine';
@@ -121,6 +126,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   }
 
   function noiseHit(t, dur, { type = 'bandpass', f0 = 2000, f1 = 2000, q = 1, gain = 0.2, attack = 0.005, wet = 0.4, pan0 = 0, pan1 = 0 } = {}) {
+    t = M(t);
     if (!live(t, dur)) return;
     const src = ctx.createBufferSource();
     src.buffer = noise;
@@ -148,6 +154,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   }
 
   function pluck(t, midi, gain = 0.12, decayT = 0.9, wet = 0.45, bright = 1) {
+    t = M(t);
     if (!live(t, decayT)) return;
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, T(t));
@@ -180,6 +187,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   }
 
   function tick(t, gain = 0.25, freq = 1700) {
+    t = M(t);
     if (!live(t, 0.2)) return;
     const o = ctx.createOscillator();
     o.type = 'triangle';
@@ -201,6 +209,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
     noiseHit(t, dur, { type: 'bandpass', f0: up ? 300 : 3500, f1: up ? 3800 : 260, q: 1.4, gain, attack: dur * 0.6, wet: 0.5, pan0: pan[0], pan1: pan[1] });
   const riser = (t, dur, gain = 0.14) => {
     noiseHit(t, dur, { type: 'bandpass', f0: 250, f1: 6000, q: 2.5, gain, attack: dur * 0.95, wet: 0.6 });
+    t = M(t);
     if (!live(t, dur)) return;
     const o = ctx.createOscillator();
     o.type = 'sine';
@@ -310,6 +319,37 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   pluck(TL.wordmark, 81, 0.07, 1.6, 0.7, 0.6);
   pluck(TL.tagline, 86, 0.05, 1.8, 0.75, 0.5);
 
+  // ---------------- scène du scan (temps absolus)
+  MAP = false;
+  impact(SCAN0, 0.55);
+  sparkle(SCAN0 + 0.02, 86, 7, 0.04, 0.06);
+  pad(SCAN0 + 0.05, SCAN_DUR - 0.2, [47, 54, 59, 62, 66], 0.07, 2000, 0.5, 1.0);
+  for (let t = 5.5; t < SCAN1 - 0.2; t += 0.5) kick(t, 0.2);
+  for (let t = 5.75; t < SCAN1 - 0.2; t += 0.5) noiseHit(t, 0.05, { type: 'highpass', f0: 7500, f1: 7500, gain: 0.022, wet: 0.15 });
+  whoosh(SC.title1[0] - 0.1, 0.6, 0.07);
+  tick(SC.openTap, 0.2, 2200);
+  tick(SC.genTap, 0.2, 2400);
+  pluck(SC.genTap + 0.05, 91, 0.06, 0.6, 0.5, 0.7);
+  whoosh(SC.review[0] - 0.05, 0.5, 0.06, false, [0.3, -0.3]);
+  pluck(SC.scan[0] - 0.12, 88, 0.06, 0.25, 0.3, 0.3);
+  pluck(SC.scan[0] - 0.02, 93, 0.06, 0.3, 0.3, 0.3);
+  noiseHit(SC.scan[0], SC.scan[1] - SC.scan[0], { type: 'bandpass', f0: 900, f1: 3200, q: 9, gain: 0.05, attack: 0.3, wet: 0.5, pan0: -0.4, pan1: 0.4 });
+  sub(SC.scan[0], 220, 330, SC.scan[1] - SC.scan[0], 0.05);
+  noiseHit(SC.shutter, 0.05, { type: 'highpass', f0: 4000, f1: 4000, gain: 0.3, wet: 0.2 });
+  noiseHit(SC.shutter + 0.06, 0.07, { type: 'bandpass', f0: 2200, f1: 1600, q: 3, gain: 0.22, wet: 0.2 });
+  const penta = [74, 76, 79, 81, 83, 86, 88, 91];
+  for (let i = 0; i < 10; i++) pluck(SC.analyze[0] + 0.1 + i * 0.11, penta[i % penta.length], 0.04, 0.5, 0.6, 0.6);
+  [0, 1, 2].forEach((i) => pluck(SC.analyze[0] + 0.75 + i * 0.12, [83, 86, 91][i], 0.09, 0.9, 0.5, 0.9));
+  whoosh(SC.title2[0] - 0.1, 0.6, 0.07);
+  whoosh(SC.freq[0], 0.5, 0.08, true, [0.3, -0.3]);
+  tick(SC.freqTap, 0.24, 2300);
+  pluck(SC.freqTap + 0.03, 86, 0.1, 0.9, 0.5, 1);
+  tick(SC.send, 0.22, 2100);
+  whoosh(SC.send + 0.08, 0.9, 0.14, true, [-0.4, 0.4]);
+  pluck(SC.send + 0.1, 90, 0.08, 1.1, 0.6, 0.8);
+  riser(SC.send + 0.2, SCAN1 - SC.send - 0.2, 0.13);
+  MAP = true;
+
   return {
     master,
     stop() {
@@ -330,7 +370,7 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
 }
 
 /** Rendu hors-ligne de la bande-son complète -> WAV (base64) pour l'export vidéo. */
-export async function renderSoundtrackWav(duration = 30, rate = 48000) {
+export async function renderSoundtrackWav(duration = DURATION, rate = 48000) {
   const ctx = new OfflineAudioContext(2, Math.ceil(duration * rate), rate);
   scheduleSoundtrack(ctx, ctx.destination, 0, 0);
   const buf = await ctx.startRendering();
