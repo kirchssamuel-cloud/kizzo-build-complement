@@ -69,7 +69,7 @@ export function createTitles(root) {
   const fight = el('fight', `${T.outro.fight} <span class="strike">${T.outro.fightWord}<i></i></span>`);
   const strikeBar = fight.querySelector('i');
   root.appendChild(fight);
-  const end = el('end', `<div class="wordmark">kizzo</div><div class="tagline"></div><div class="cta"><span>${T.outro.cta}</span><b>${T.outro.url}</b></div>`);
+  const end = el('end', `<div class="wordmark">kizzo</div><div class="tagline"></div><div class="cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5 12 15.5 17 10.5M5 20h14"/></svg><span>${T.outro.cta}</span></div>`);
   const tag = end.querySelector('.tagline');
   const tagWords = T.outro.tagline.split(' ').map((w, i, arr) => {
     const s = document.createElement('span');

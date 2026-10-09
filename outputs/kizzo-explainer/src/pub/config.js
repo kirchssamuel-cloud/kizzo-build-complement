@@ -52,7 +52,7 @@ export const T = {
   ],
   quiz: { subject: 'MATHS', of: 'Question 1 sur 3', q: 'Combien font 7 × 8 ?', options: ['54', '56', '64', '48'], ok: 1 },
   result: { title: 'Bien joué !', unlocked: 'Temps de jeu débloqué', back: 'Retour au jeu' },
-  outro: { fight: 'Fini les', fightWord: 'disputes.', tagline: 'Le temps d’écran se gagne en apprenant', cta: 'Rejoindre la bêta', url: 'kizzo.fr' },
+  outro: { fight: 'Fini les', fightWord: 'disputes.', tagline: 'Le temps d’écran se gagne en apprenant', cta: 'Télécharger Kizzo' },
 };
 
 /** Démos (s). */

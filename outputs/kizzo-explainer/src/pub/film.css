@@ -45,5 +45,5 @@
   box-shadow: 0 calc(var(--u) * 1) 0 #C2410C, 0 calc(var(--u) * 3) calc(var(--u) * 8) rgba(249, 115, 22, 0.5);
   font-family: var(--f-display); font-size: calc(var(--u) * 4.8); color: #fff;
 }
-.end .cta span { font-weight: 600; }
-.end .cta b { font-weight: 800; }
+.end .cta svg { width: calc(var(--u) * 5.4); height: calc(var(--u) * 5.4); }
+.end .cta span { font-weight: 800; letter-spacing: -0.01em; }

@@ -15,7 +15,7 @@ import v11 from './vo/v11.mp3';
 const B64 = { v01, v02, v03, v04, v05, v06, v07, v08, v09, v10, v11 };
 
 /** Durée parlée de chaque phrase (s), pour caler les sous-titres. */
-export const VO_DUR = { v01: 2.12, v02: 2.26, v03: 2.22, v04: 2.76, v05: 2.53, v06: 3.57, v07: 3.1, v08: 1.52, v09: 1.24, v10: 2.44, v11: 2.81 };
+export const VO_DUR = { v01: 2.12, v02: 2.26, v03: 2.22, v04: 2.76, v05: 2.53, v06: 3.57, v07: 3.1, v08: 1.52, v09: 1.24, v10: 2.44, v11: 1.08 };
 
 let buffers = null;
 
