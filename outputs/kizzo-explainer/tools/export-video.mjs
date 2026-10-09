@@ -45,7 +45,7 @@ for (let s = 0; s < nSeg; s++) {
   });
   for (let i = from; i < to; i++) {
     await page.evaluate((t) => window.KIZZO.renderAt(t), i / FPS);
-    const buf = await page.screenshot({ type: 'jpeg', quality: 95 });
+    const buf = await page.screenshot({ type: 'jpeg', quality: 95, timeout: 0 });
     if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r));
     done++;
     if (i % 20 === 0) {

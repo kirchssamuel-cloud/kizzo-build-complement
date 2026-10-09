@@ -24,7 +24,7 @@ console.log('boot', ((Date.now() - t0) / 1000).toFixed(1) + 's');
 for (const t of times) {
   const s = Date.now();
   await page.evaluate((tt) => window.KIZZO.renderAt(tt), parseFloat(t));
-  await page.screenshot({ path: path.join(outDir, `t${String(t).padStart(5, '0')}.png`) });
+  await page.screenshot({ path: path.join(outDir, `t${String(t).padStart(5, '0')}.png`), timeout: 0 });
   console.log('t=' + t, ((Date.now() - s) / 1000).toFixed(2) + 's');
 }
 console.log(logs.slice(0, 40).join('\n'));
