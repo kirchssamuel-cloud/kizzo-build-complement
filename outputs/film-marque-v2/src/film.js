@@ -387,11 +387,10 @@ function drawHook(c, t) {
     }
   }
   drawTunnel(c, t);
-  drawNumerals(c, t);
   // timer dial around the point
   const st = strain(t), hx = CX + st.dx, hy = CY + st.dy;
   c.globalCompositeOperation = 'lighter';
-  const dialA = pr(.36, .7, t, E.outC) * (1 - inv(fz + .1, fz + .5, t));
+  const dialA = pr(-.3, .1, t, E.outC) * (1 - inv(fz + .1, fz + .5, t));
   if (dialA > 0) {
     c.strokeStyle = rgba(ICE, .22 * dialA); c.lineWidth = 2;
     const rr = lerp(170, 136, dialA);
@@ -400,8 +399,10 @@ function drawHook(c, t) {
       c.beginPath(); c.moveTo(CX + Math.cos(an) * rr, CY + Math.sin(an) * rr); c.lineTo(CX + Math.cos(an) * (rr + l), CY + Math.sin(an) * (rr + l)); c.stroke();
     }
   }
-  if (t > .42 && t < fz) {
-    const f = 1 - inv(.45, fz, t), a = pr(.42, .6, t);
+  if (t < A1.n0 + .02) {
+    // three seconds left, ticking away (piecewise so each second empties a third of the ring)
+    const e = t < A1.n2 ? inv(A1.n3, A1.n2, t) : t < A1.n1 ? 1 + inv(A1.n2, A1.n1, t) : 2 + inv(A1.n1, A1.n0, t);
+    const f = 1 - e / 3, a = 1;
     const a0 = -PI / 2, a1 = a0 + f * TAU;
     c.strokeStyle = rgba(ORANGE, .95 * a); c.lineWidth = 3.5; c.lineCap = 'round';
     c.beginPath(); c.arc(CX, CY, 112, a0, a1); c.stroke();
@@ -426,13 +427,24 @@ function drawHook(c, t) {
     if (t < fz + .4) { const q = inv(fz, fz + .4, t); c.strokeStyle = rgba(ICE, .5 * (1 - q)); c.lineWidth = 2; c.beginPath(); c.arc(CX, CY, R + 400 * E.outExpo(q), 0, TAU); c.stroke(); }
   }
   // the point (the child) — wanting more
-  let r = lerp(2.5, 12, E.outBack(inv(0, .3, t)));
+  let r = 12;
   for (const nt of [A1.n3, A1.n2, A1.n1, A1.n0]) r *= 1 + .22 * decay(t, nt, .22);
   const dt = 1 / 120, s1 = strain(t - dt), s2 = strain(t + dt);
   const vx = (s2.dx - s1.dx) / (2 * dt), vy = (s2.dy - s1.dy) / (2 * dt), sp = Math.hypot(vx, vy);
   const stretch = 1 + Math.min(.55, sp / 2600);
-  const flare = (t < fz ? lerp(.4, 1, inv(0, .3, t)) : lerp(1, .35, inv(fz, fz + .5, t)));
+  const flare = (t < fz ? 1 : lerp(1, .35, inv(fz, fz + .5, t)));
   sphere(c, hx, hy, r, ORANGE, { energy: 1, flare, ang: Math.atan2(vy, vx), sx: stretch, sy: 1 / Math.sqrt(stretch) });
+  // the time left, as the child's screen shows it
+  const rdA = 1 - pr(A1.slice - .2, A1.slice, t);
+  if (rdA > 0) {
+    const rd = t < A1.n2 ? '0:03' : t < A1.n1 ? '0:02' : t < A1.n0 ? '0:01' : '0:00', k = 1 + .18 * decay(t, A1.n0, .3);
+    POST.push(o => { // post layer: crisp over the particles, untouched by bloom
+      o.save(); o.globalCompositeOperation = 'source-over'; o.globalAlpha = rdA;
+      o.font = `500 ${(46 * k).toFixed(1)}px Outfit`; o.textAlign = 'center'; o.textBaseline = 'alphabetic';
+      o.shadowColor = 'rgba(2,8,20,.9)'; o.shadowBlur = 14;
+      o.fillStyle = t >= A1.n0 ? rgb(ORANGE_HI) : '#fff'; o.fillText(rd, CX, CY + 88); o.restore(); });
+  }
+  drawPlea(c, t);
   // sparks that hit the boundary and fall back
   if (t > A1.strain1 && t < A1.slice + .1) {
     c.globalCompositeOperation = 'lighter';
@@ -445,6 +457,46 @@ function drawHook(c, t) {
     }
   }
   c.globalCompositeOperation = 'source-over';
+}
+
+/* --- the hook: the line every parent hears, on the very first frame --- */
+function drawPlea(c, t) {
+  if (t > A1.slice + .13) return;
+  // the big line sits above bloom and vignette (pure white on frame 1); "please…" stays in the scene for the slice
+  if (t < A1.slice) POST.push(o => pleaLine(o, t));
+  if (t > A1.please) {
+    const Lp = lay(S.please, 500, 36, .22);
+    letters(c, Lp, CX, CY + 238, i => { const s0 = A1.please + i * .045, p = inv(s0, s0 + .22, t); if (p <= 0) return null;
+      return { a: .88 * E.outQ(p), dy: (1 - p) * 8 + Math.sin(t * 30 + i) * 1.2, col: rgb(ICE) }; });
+  }
+}
+function pleaLine(c, t) {
+  const px = fit(S.hook, 800, 150, .01, 1640), L = lay(S.hook, 800, px, .01), by = CY - 250;
+  const kick = decay(t, A1.n2, .25) + 1.3 * decay(t, A1.n1, .25) + 1.7 * decay(t, A1.n0, .3);
+  const sh = t < A1.freeze ? 3 + kick * 8 : 0, brk = t > A1.shatter ? inv(A1.shatter, A1.shatter + .55, t) : 0;
+  const sc0 = lerp(1.06, 1, E.outExpo(clamp(t / .22))) * (1 + .04 * kick);
+  // a dark bed so the line reads over the rushing world
+  c.globalCompositeOperation = 'source-over'; c.globalAlpha = 1 - brk;
+  c.save(); c.translate(CX, by - px * .36); c.scale(1, .26);
+  const g = c.createRadialGradient(0, 0, 0, 0, 0, 1050); g.addColorStop(0, 'rgba(2,7,17,.78)'); g.addColorStop(.6, 'rgba(2,7,17,.45)'); g.addColorStop(1, 'rgba(2,7,17,0)');
+  c.fillStyle = g; c.fillRect(-1100, -1100, 2200, 2200); c.restore(); c.globalAlpha = 1;
+  const hot = ch => '5«»“”!'.includes(ch);
+  // each tick, the plea gets louder: an orange echo bursts out of the line
+  c.globalCompositeOperation = 'lighter';
+  for (const tk of [A1.n2, A1.n1, A1.n0]) {
+    const q = inv(tk, tk + .38, t); if (q <= 0 || q >= 1) continue;
+    const sc = 1 + .32 * E.outC(q);
+    letters(c, L, CX, by, (i, ch, lx) => ({ a: .3 * Math.pow(1 - q, 1.5), sc, dx: (lx - CX) * (sc - 1), blur: 4 + 8 * q, col: rgb(ORANGE) }));
+  }
+  c.globalCompositeOperation = 'source-over';
+  const jx = noise(t * 40) * sh, jy = noise(t * 43 + 5) * sh;
+  letters(c, L, CX + jx, by + jy, (i, ch, lx) => {
+    const col = hot(ch.ch) ? rgb(ORANGE) : '#fff';
+    if (brk > 0) { const r = hash(i * 3.7 + 1); // the plea breaks with the world
+      return { a: 1 - brk, dx: (lx - CX) * brk * (1 + r), dy: (r - .5) * 520 * brk - 140 * brk, rot: (r - .5) * 3 * brk, sc: 1 - .3 * brk, blur: 10 * brk, col }; }
+    return { a: 1, sc: sc0, dx: (lx - CX) * (sc0 - 1), col };
+  });
+  c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
 }
 
 /* --- the tension: same battle, every day --- */

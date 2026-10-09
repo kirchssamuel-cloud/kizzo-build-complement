@@ -1,11 +1,11 @@
 {
  "duration": 30.0,
  "a1": {
-  "burst": 0.25,
-  "n3": 0.45,
-  "n2": 0.95,
-  "n1": 1.38,
-  "n0": 1.72,
+  "burst": -0.6,
+  "n3": 0.0,
+  "n2": 0.55,
+  "n1": 1.1,
+  "n0": 1.65,
   "freeze": 2.0,
   "shatter": 2.35,
   "strain1": 2.5,
@@ -14,7 +14,8 @@
   "every": 3.42,
   "battle": 3.72,
   "tension": 4.75,
-  "snap": 5.6
+  "snap": 5.6,
+  "please": 2.55
  },
  "a2": {
   "start": 5.7,
@@ -65,12 +66,22 @@
  },
  "vo": [
   {
-   "t": 2.3,
-   "d": 1.0,
-   "fr": "Fin du temps d’écran.",
-   "en": "Screen time’s up.",
-   "dir_fr": "Constat posé, juste après l’impact. Presque neutre.",
-   "dir_en": "Plain statement, right after the impact."
+   "t": 0.05,
+   "d": 1.1,
+   "who": "child",
+   "fr": "Encore cinq minutes !",
+   "en": "Just five more minutes!",
+   "dir_fr": "Voix d’enfant (8-10 ans) : supplique pleine d’énergie, dès la première image.",
+   "dir_en": "Child’s voice (8-10): an energetic plea, right on the first frame."
+  },
+  {
+   "t": 2.55,
+   "d": 0.8,
+   "who": "child",
+   "fr": "S’il te plaît…",
+   "en": "Please…",
+   "dir_fr": "Même enfant, tout petit, presque chuchoté pendant que le point pousse contre la limite.",
+   "dir_en": "Same child, small, almost whispered while the dot pushes against the limit."
   },
   {
    "t": 3.7,
@@ -78,7 +89,8 @@
    "fr": "Et chaque soir… la même bataille.",
    "en": "And every night… the same battle.",
    "dir_fr": "Complicité de parent à parent, léger soupir sur « chaque soir ».",
-   "dir_en": "Parent-to-parent, a small sigh on “every night”."
+   "dir_en": "Parent-to-parent, a small sigh on “every night”.",
+   "who": "narrator"
   },
   {
    "t": 5.8,
@@ -86,7 +98,8 @@
    "fr": "Une vidéo… puis une autre…",
    "en": "One more video… then another…",
    "dir_fr": "Le tempo s’accélère avec la boucle.",
-   "dir_en": "Pick up the pace with the loop."
+   "dir_en": "Pick up the pace with the loop.",
+   "who": "narrator"
   },
   {
    "t": 7.6,
@@ -94,7 +107,8 @@
    "fr": "…et la leçon du jour attend.",
    "en": "…while today’s lesson waits.",
    "dir_fr": "Finir net sur « attend » : l’image s’arrête. Puis silence.",
-   "dir_en": "Land “waits” on the hard stop. Then silence."
+   "dir_en": "Land “waits” on the hard stop. Then silence.",
+   "who": "narrator"
   },
   {
    "t": 10.4,
@@ -102,7 +116,8 @@
    "fr": "Avec Kizzo, vous scannez sa leçon…",
    "en": "With Kizzo, you scan their lesson…",
    "dir_fr": "Bascule : clair, rassurant, le sourire arrive.",
-   "dir_en": "The turn: clear, reassuring, a smile appears."
+   "dir_en": "The turn: clear, reassuring, a smile appears.",
+   "who": "narrator"
   },
   {
    "t": 12.55,
@@ -110,7 +125,8 @@
    "fr": "…et un quiz apparaît sur son écran.",
    "en": "…and a quiz pops up on their screen.",
    "dir_fr": "Fluide, on suit les questions qui volent vers l’écran.",
-   "dir_en": "Flowing, following the questions to the screen."
+   "dir_en": "Flowing, following the questions to the screen.",
+   "who": "narrator"
   },
   {
    "t": 15.3,
@@ -118,7 +134,8 @@
    "fr": "Trois questions sur sa leçon.",
    "en": "Three questions on what they learned.",
    "dir_fr": "Simple et concret.",
-   "dir_en": "Simple and concrete."
+   "dir_en": "Simple and concrete.",
+   "who": "narrator"
   },
   {
    "t": 17.7,
@@ -126,7 +143,8 @@
    "fr": "Trois bonnes réponses…",
    "en": "Three right answers…",
    "dir_fr": "Suspendre, laisser monter.",
-   "dir_en": "Hold it, let it build."
+   "dir_en": "Hold it, let it build.",
+   "who": "narrator"
   },
   {
    "t": 20.9,
@@ -134,7 +152,8 @@
    "fr": "…quinze minutes de plus.",
    "en": "…fifteen more minutes.",
    "dir_fr": "La récompense : sourire franc, sans crier.",
-   "dir_en": "The reward: a real smile, no shouting."
+   "dir_en": "The reward: a real smile, no shouting.",
+   "who": "narrator"
   },
   {
    "t": 22.9,
@@ -142,7 +161,8 @@
    "fr": "Moins de scroll. Plus d’apprentissage.",
    "en": "Less scrolling. More learning.",
    "dir_fr": "Posé, convaincu.",
-   "dir_en": "Calm, convinced."
+   "dir_en": "Calm, convinced.",
+   "who": "narrator"
   },
   {
    "t": 24.7,
@@ -150,7 +170,8 @@
    "fr": "Un temps d’écran qui compte.",
    "en": "Make screen time count.",
    "dir_fr": "Signature : ralentir.",
-   "dir_en": "Signature line: slow down."
+   "dir_en": "Signature line: slow down.",
+   "who": "narrator"
   },
   {
    "t": 26.5,
@@ -158,7 +179,8 @@
    "fr": "Kizzo. Rendez-vous sur kizzo.fr.",
    "en": "Kizzo. Discover it at kizzo.fr.",
    "dir_fr": "« Kizzo » détaché. « kizzo point f r ».",
-   "dir_en": "“Kizzo”, then a beat. “kizzo dot f r”."
+   "dir_en": "“Kizzo”, then a beat. “kizzo dot f r”.",
+   "who": "narrator"
   }
  ]
 }

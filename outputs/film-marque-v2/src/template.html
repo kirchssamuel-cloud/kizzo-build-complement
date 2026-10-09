@@ -88,7 +88,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
   </div>
 
   <div class="vo" aria-live="polite">
-    <span class="tag"><span id="voTag">Voix off</span><em id="voTc">0:02,3</em></span>
+    <span class="tag"><span id="voTag">Voix off</span><em id="voTc">0:00,1</em></span>
     <span class="line idle" id="voLine"></span>
   </div>
 
@@ -143,13 +143,14 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
     { t: Q.a5.tagline - .6, en: ['Brand', 'Discover Kizzo'], fr: ['Marque', 'Découvrir Kizzo'] },
   ];
   const UI = {
-    fr: { kind: 'Film de marque v2', meta: '30 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', vo: 'Voix off', next: 'À venir',
-      title: 'Script voix off', lead: 'Douze phrases courtes, environ 55 mots en 30 secondes. Le narrateur porte l’histoire ; à l’écran, seuls les mots clés restent. Cliquez une ligne pour l’écouter en situation.',
-      note: 'La couche sonore du film ne contient ni voix ni musique. Les sous-titres ci-dessus montrent ce que dira le narrateur et quand.' },
-    en: { kind: 'Brand film v2', meta: '30 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', vo: 'Voice-over', next: 'Coming up',
-      title: 'Voice-over script', lead: 'Twelve short lines, about 55 words in 30 seconds. The narrator carries the story; on screen only the key words remain. Click a line to hear it in place.',
-      note: 'The film’s sound layer has no voice and no music. The captions above show what the narrator says, and when.' },
+    fr: { kind: 'Film de marque v2', meta: '30 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', vo: 'Voix off', child: 'Enfant', next: 'À venir',
+      title: 'Script voix off', lead: 'Treize répliques courtes : deux pour l’enfant, qui ouvre le film, onze pour le narrateur. Le narrateur porte l’histoire ; à l’écran, seuls les mots clés restent. Cliquez une ligne pour l’écouter en situation.',
+      note: 'La couche sonore du film ne contient ni voix ni musique. Les sous-titres ci-dessus montrent ce que diront l’enfant et le narrateur, et quand.' },
+    en: { kind: 'Brand film v2', meta: '30 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', vo: 'Voice-over', child: 'Child', next: 'Coming up',
+      title: 'Voice-over script', lead: 'Thirteen short lines: two for the child, who opens the film, eleven for the narrator. The narrator carries the story; on screen only the key words remain. Click a line to hear it in place.',
+      note: 'The film’s sound layer has no voice and no music. The captions above show what the child and the narrator say, and when.' },
   };
+  const who = v => v.who === 'child' ? UI[lang].child : UI[lang].vo;
   const fmtTc = s => { const m = Math.floor(s / 60), r = s - m * 60; return `${m}:${r.toFixed(1).padStart(4, '0')}`.replace('.', lang === 'fr' ? ',' : '.'); };
   const fmt = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
   const chapters = $('chapters');
@@ -172,7 +173,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
   function texts() {
     const u = UI[lang];
     CH.forEach((c, i) => { const b = $('ch-' + i); b.querySelector('b').textContent = c[lang][0]; b.querySelector('small').textContent = `${fmtTc(c.t)} · ${c[lang][1]}`; });
-    VO.forEach((v, i) => { const b = $('vo-' + i); b.querySelector('.tc').textContent = `${fmtTc(v.t)} → ${fmtTc(v.t + v.d)}`; b.querySelector('.txt').textContent = v[lang]; b.querySelector('.dir').textContent = v['dir_' + lang]; });
+    VO.forEach((v, i) => { const b = $('vo-' + i); b.querySelector('.tc').textContent = `${fmtTc(v.t)} → ${fmtTc(v.t + v.d)}`; b.querySelector('.txt').textContent = v[lang]; b.querySelector('.dir').textContent = `${who(v)} · ${v['dir_' + lang]}`; });
     $('overlayLabel').textContent = t >= DUR - .01 ? u.replay : u.play;
     $('soundLabel').textContent = soundOn ? u.sound : u.mute;
     $('note').textContent = u.note; $('kind').textContent = u.kind; $('meta').textContent = u.meta;
@@ -186,7 +187,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
     const key = cur >= 0 ? cur : -100 - next;
     if (key === curVo) return; curVo = key;
     const line = $('voLine'), u = UI[lang];
-    if (cur >= 0) { line.className = 'line'; line.textContent = VO[cur][lang]; $('voTag').textContent = u.vo; $('voTc').textContent = fmtTc(VO[cur].t); }
+    if (cur >= 0) { line.className = 'line'; line.textContent = VO[cur][lang]; $('voTag').textContent = who(VO[cur]); $('voTc').textContent = fmtTc(VO[cur].t); }
     else if (next >= 0) { line.className = 'line idle'; line.textContent = VO[next][lang]; $('voTag').textContent = u.next; $('voTc').textContent = fmtTc(VO[next].t); }
     else { line.className = 'line idle'; line.textContent = '—'; $('voTag').textContent = u.vo; $('voTc').textContent = ''; }
     VO.forEach((v, i) => $('vo-' + i).classList.toggle('on', i === cur));

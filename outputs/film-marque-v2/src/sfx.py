@@ -15,8 +15,10 @@ L = np.zeros(N); R = np.zeros(N)
 SEND = np.zeros(N)  # reverb send (mono)
 
 def place(sig, t, gain=1.0, pan=0.0, rev=0.25):
-    i = int(t * SR)
+    i = int(round(t * SR))
     if i >= N: return
+    if i < 0: sig = sig[-i:]; i = 0          # events that start before the first frame
+    if len(sig) == 0: return
     sig = sig[: N - i] * gain
     gl, gr = np.cos((pan + 1) * np.pi / 4), np.sin((pan + 1) * np.pi / 4)
     L[i:i + len(sig)] += sig * gl * 1.414 * .7071
@@ -73,7 +75,8 @@ a1, a2, a3, a4, a5 = Q['a1'], Q['a2'], Q['a3'], Q['a4'], Q['a5']
 NOTE = lambda n: 440 * 2 ** ((n - 69) / 12)
 
 # ---------------- ACT 1 ----------------
-place(bell(NOTE(93), 1.2, .5) * .35, 0.0, .18, 0, .5)                       # the point appears
+place(mx(thump(95, 36, 1.2, .4) * 1.3, click(.03, 4200) * 1.6, click(.04, 1600)), 0.0, .95, 0, .25)   # the hook lands on frame 1
+place(whoosh(.35, 9000, 1200, 1.2, .5), 0.0, .35, 0, .3)
 place(thump(110, 34, 1.0, .35), a1['burst'], .9)                             # birth of the world
 place(whoosh(.8, 6000, 400, 1.2, .6), a1['burst'], .35, 0, .4)
 rd = a1['freeze'] - a1['burst']                                              # riser, cut dead at zero
@@ -81,7 +84,7 @@ x = tt(rd) / rd
 ris = svf_bp(noise(rd), 300 * (25 ** (x ** 1.6)), 3.0) * (x ** 1.8) * 1.2
 ris += sine(180 * (6 ** (x ** 1.4)), rd) * (x ** 2.2) * .18
 place(ris * np.minimum(1, (rd - tt(rd)) / .004), a1['burst'], .5, 0, .15)
-for k, n in enumerate(['n3', 'n2', 'n1']):                                   # 3 · 2 · 1
+for k, n in enumerate(['n2', 'n1']):                                         # 0:02 · 0:01 (0:03 sits on the hook hit)
     place(mx(click(.02, 2400 + k * 500), thump(160, 80, .25, .06) * .6), a1[n], .55, (k - 1) * .3)
 place(click(.02, 3600) * 1.2, a1['n0'], .6)
 f = a1['freeze']                                                             # ZERO: freeze + lock

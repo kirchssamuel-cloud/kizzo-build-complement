@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Voice-over deliverables from cues.json:
 - voix-off-FR.srt / voix-off-EN.srt (captions, also usable for social subtitles)
-- a "guide" video per language: the film with the narrator's lines and a running timecode
+- a "guide" video per language: the film with the lines (child or narrator) and a running timecode
   in a band under the picture, for the voice actor to record to picture."""
 import json, os, subprocess, sys
 
@@ -27,22 +27,26 @@ def guide(lang):
     src = os.path.join(OUT, f'kizzo-film-v2-{lang.upper()}-1080p.mp4')
     if not os.path.exists(src): print('missing', src); return
     tdir = os.path.join(HERE, 'build', 'vo-lines'); os.makedirs(tdir, exist_ok=True)
-    label = {'fr': ('VOIX OFF', 'SUIVANT'), 'en': ('VOICE-OVER', 'NEXT')}[lang]
-    lf = [];
-    for name, txt in (('label', label[0]), ('next', label[1])):
-        p = os.path.join(tdir, f'{lang}-{name}.txt'); open(p, 'w', encoding='utf-8').write(txt); lf.append(p)
+    label = {'fr': {'narrator': 'VOIX OFF', 'child': 'ENFANT', 'next': 'SUIVANT'},
+             'en': {'narrator': 'VOICE-OVER', 'child': 'CHILD', 'next': 'NEXT'}}[lang]
+    lf = {}
+    for name, txt in label.items():
+        p = os.path.join(tdir, f'{lang}-{name}.txt'); open(p, 'w', encoding='utf-8').write(txt); lf[name] = p
     parts = ["[0:v]pad=1920:1260:0:0:color=0x030b1a[v0]",
              f"[v0]drawbox=x=0:y=1080:w=1920:h=4:color=0xff7a1b@0.9:t=fill[v1]",
-             f"[v1]drawtext=fontfile={FONT_B}:textfile={lf[0]}:x=60:y=1122:fontsize=24:fontcolor=0xff7a1b[v2]",
-             f"[v2]drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=60:y=1162:fontsize=30:fontcolor=0x8da2bf[v3]"]
+             f"[v1]drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=60:y=1162:fontsize=30:fontcolor=0x8da2bf[v3]"]
     cur = 'v3'
     for i, v in enumerate(VO):
         p = os.path.join(tdir, f'{lang}-{i:02d}.txt'); open(p, 'w', encoding='utf-8').write(v[lang])
         a, b = v['t'], v['t'] + v['d'] + .25
-        parts.append(f"[{cur}]drawtext=fontfile={FONT}:textfile={p}:x=330:y=1112:fontsize=50:fontcolor=white:enable='between(t,{a:.2f},{b:.2f})'[a{i}]")
+        who = v.get('who', 'narrator')  # the speaker, in the left column while the line runs
+        parts.append(f"[{cur}]drawtext=fontfile={FONT_B}:textfile={lf[who]}:x=60:y=1122:fontsize=24:fontcolor={'0x4cc9f0' if who == 'child' else '0xff7a1b'}:enable='between(t,{a:.2f},{b:.2f})'[l{i}]")
+        parts.append(f"[l{i}]drawtext=fontfile={FONT}:textfile={p}:x=330:y=1112:fontsize=50:fontcolor=white:enable='between(t,{a:.2f},{b:.2f})'[a{i}]")
         cur = f'a{i}'
         pa = max(0, a - 1.6)  # pre-roll: the next line, in grey, under the current one
-        parts.append(f"[{cur}]drawtext=fontfile={FONT_B}:textfile={lf[1]}:x=330:y=1192:fontsize=20:fontcolor=0x8da2bf:enable='between(t,{pa:.2f},{a:.2f})'[n{i}]")
+        if who == 'child':
+            p = os.path.join(tdir, f'{lang}-{i:02d}-next.txt'); open(p, 'w', encoding='utf-8').write(f"({label['child'].lower()}) {v[lang]}")
+        parts.append(f"[{cur}]drawtext=fontfile={FONT_B}:textfile={lf['next']}:x=330:y=1192:fontsize=20:fontcolor=0x8da2bf:enable='between(t,{pa:.2f},{a:.2f})'[n{i}]")
         parts.append(f"[n{i}]drawtext=fontfile={FONT}:textfile={p}:x=450:y=1188:fontsize=28:fontcolor=0x8da2bf:enable='between(t,{pa:.2f},{a:.2f})'[b{i}]")
         cur = f'b{i}'
     script = os.path.join(HERE, 'build', f'guide-{lang}.filter')

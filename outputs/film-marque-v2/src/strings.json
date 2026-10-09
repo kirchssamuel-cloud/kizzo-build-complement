@@ -55,7 +55,9 @@
     "Writing the questions…",
     "Matching Ben’s level"
    ]
-  }
+  },
+  "hook": "“JUST 5 MORE MINUTES!”",
+  "please": "PLEASE…"
  },
  "fr": {
   "every": "CHAQUE SOIR,",
@@ -113,6 +115,8 @@
     "Rédaction des questions…",
     "Calage sur le niveau CM2"
    ]
-  }
+  },
+  "hook": "« ENCORE 5 MINUTES ! »",
+  "please": "S’IL TE PLAÎT…"
  }
 }
