@@ -182,7 +182,7 @@ function setupPlayback(renderAt) {
   let degraded = false;
   const frame = (now) => {
     if (!playing) return;
-    const dt = Math.min(0.1, (now - last) / 1000);
+    const dt = Math.min(0.25, (now - last) / 1000); // keep wall-clock sync, but no jump after a hidden tab
     last = now;
     if (!degraded && t > 0.5 && samples.length < 90) {
       samples.push(dt);
