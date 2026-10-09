@@ -314,6 +314,7 @@ export function bootPlayer(film) {
       )
     );
     await document.fonts.ready;
+    if (film.preload) await film.preload();
     CanvasTex.redrawAll();
     // les textures UI sont dessinées après le chargement des polices
     story.update(0);
@@ -337,7 +338,7 @@ export function bootPlayer(film) {
       renderAudioWav: () => renderSoundtrackWav(DURATION),
       info: () => ({ w: bufW, h: bufH, renderer: renderer.info.render, programs: renderer.info.programs?.length }),
     };
-    if (/[?&]debug/.test(location.search)) window.__dbg = { scene, story, CanvasTex };
+    if (/[?&]debug/.test(location.search)) window.__dbg = { scene, story, CanvasTex, renderer, camera, pipeline };
     document.documentElement.dataset.ready = '1';
 
     if (PARAMS.exportMode) return;

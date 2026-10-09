@@ -1,0 +1,49 @@
+/* Pub 9:16 « 23:47 » : habillage réseaux sociaux (zones sûres : rien d'essentiel dans les
+   ~20 % du bas ni contre le bord droit). */
+.cap {
+  position: absolute; left: 50%; max-width: 88%; visibility: hidden;
+  padding: calc(var(--u) * 1.6) calc(var(--u) * 3.4); border-radius: calc(var(--u) * 3);
+  background: rgba(5, 8, 15, 0.62);
+  font-family: var(--f-display); font-weight: 800; font-size: calc(var(--u) * 7.4); line-height: 1.08; letter-spacing: -0.02em;
+  text-align: center; white-space: nowrap; color: #fff; transform-origin: 50% 50%;
+}
+.cap.bottom { top: 69%; }
+.cap.top { top: 19%; }
+.cw { opacity: 0.38; }
+.cw.on { opacity: 1; }
+.cw.hl.on { color: #FF9D5C; }
+
+.turn { position: absolute; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--u) * 1.2); }
+.tw2 {
+  visibility: hidden; white-space: nowrap; font-family: var(--f-display); font-weight: 800; font-size: calc(var(--u) * 13); line-height: 1; letter-spacing: -0.04em;
+  color: #fff; text-transform: uppercase; text-shadow: 0 calc(var(--u) * 1) calc(var(--u) * 5) rgba(0, 0, 0, 0.6);
+}
+.tw2.hot {
+  font-size: calc(var(--u) * 15);
+  background: linear-gradient(180deg, #FFD2A8 0%, #FF7A2E 50%, #F97316 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 0 calc(var(--u) * 4) rgba(249, 115, 22, 0.6));
+}
+
+.fight {
+  position: absolute; left: 50%; top: 45%; white-space: nowrap; visibility: hidden;
+  font-family: var(--f-display); font-weight: 800; font-size: calc(var(--u) * 11.5); letter-spacing: -0.04em; color: #fff;
+}
+.fight .strike { position: relative; color: #FF9D5C; }
+.fight .strike i {
+  position: absolute; left: -2%; right: -2%; top: 52%; height: calc(var(--u) * 1.4); border-radius: 99px;
+  background: #fff; transform-origin: 0 50%; transform: scaleX(0); box-shadow: 0 0 calc(var(--u) * 2) rgba(255, 255, 255, 0.5);
+}
+
+.end { position: absolute; left: 50%; top: 47%; transform: translate(-50%, 0); width: 92%; text-align: center; visibility: hidden; }
+.end .wordmark { font-size: calc(var(--u) * 17); }
+.end .tagline { margin-top: calc(var(--u) * 2); font-size: calc(var(--u) * 4.4); }
+.end .cta {
+  display: inline-flex; align-items: center; gap: calc(var(--u) * 2); margin-top: calc(var(--u) * 6);
+  padding: calc(var(--u) * 2.6) calc(var(--u) * 5.6); border-radius: 999px; opacity: 0;
+  background: linear-gradient(180deg, var(--orange-2), var(--orange));
+  box-shadow: 0 calc(var(--u) * 1) 0 #C2410C, 0 calc(var(--u) * 3) calc(var(--u) * 8) rgba(249, 115, 22, 0.5);
+  font-family: var(--f-display); font-size: calc(var(--u) * 4.8); color: #fff;
+}
+.end .cta span { font-weight: 600; }
+.end .cta b { font-weight: 800; }

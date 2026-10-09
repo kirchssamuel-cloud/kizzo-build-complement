@@ -11,7 +11,7 @@ const arg = (k, d) => {
   return i > 0 ? process.argv[i + 1] : d;
 };
 const FILM = arg('film', 'explainer');
-const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080] }[FILM];
+const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920] }[FILM];
 const FPS = +arg('fps', 60);
 const H = +arg('h', FORMAT[1]);
 const W = Math.round((H * FORMAT[0]) / FORMAT[1]);

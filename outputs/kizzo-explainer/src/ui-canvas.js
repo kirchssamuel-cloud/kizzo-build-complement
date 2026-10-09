@@ -458,7 +458,7 @@ export class CanvasTex {
 
 const gameScratch = makeCanvas(SCREEN_W, SCREEN_H, 1.6);
 
-function drawGameScene(ctx, W, H, t) {
+export function drawGameScene(ctx, W, H, t) {
   const g = ctx.createLinearGradient(0, 0, 0, H);
   g.addColorStop(0, '#6D5BF5');
   g.addColorStop(0.55, '#C26BEA');
@@ -552,7 +552,7 @@ function drawGameScene(ctx, W, H, t) {
   txt(ctx, T.kid.game, W - 22, 92, disp({ size: 18, weight: 800, align: 'right', alpha: 0.95 }));
 }
 
-function drawCountdownPill(ctx, x, y, remain, urgency, scale = 1) {
+export function drawCountdownPill(ctx, x, y, remain, urgency, scale = 1) {
   // compteur Kizzo superposé au jeu : "Quiz dans 0:03"
   ctx.save();
   ctx.translate(x, y);

@@ -234,9 +234,25 @@ export function createMixer(ctx, out, t0, offset = 0) {
   };
 
 
+  /** Échantillon (voix off) : reprend au bon endroit si la lecture démarre en cours de phrase. */
+  function sample(t, buffer, { gain = 1, wet = 0.08 } = {}) {
+    t = M(t);
+    if (!buffer || !live(t, buffer.duration, true)) return;
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+    const g = ctx.createGain();
+    g.gain.value = gain;
+    src.connect(g);
+    send(g, wet);
+    const skip = Math.max(0, offset - t);
+    src.start(Math.max(T(t), ctx.currentTime), skip);
+    nodes.push(src);
+  }
+
   return {
     pad,
     sub,
+    sample,
     noiseHit,
     pluck,
     kick,

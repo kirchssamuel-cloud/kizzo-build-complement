@@ -62,6 +62,14 @@ const FILMS = {
     aria: 'Kizzo — les règles du jeu, film 3D',
     css: 'src/regles/film.css',
   },
+  pub: {
+    entry: 'src/pub/main.js',
+    out: 'kizzo-pub-fr.html',
+    title: 'Kizzo Pub 23h47',
+    description: "Kizzo — pub 9:16 (1080×1920, 60 fps) au format natif réseaux : la dispute du soir autour du téléphone, puis la solution Kizzo. Voix off et sous-titres.",
+    aria: 'Kizzo — publicité vidéo 9:16',
+    css: 'src/pub/film.css',
+  },
 };
 
 const only = process.argv[2];
@@ -78,6 +86,7 @@ for (const [id, film] of Object.entries(FILMS)) {
     write: false,
     legalComments: 'none',
     alias: { 'three/addons': 'three/examples/jsm' },
+    loader: { '.mp3': 'base64' },
     logLevel: 'warning',
   });
   const app = result.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');
