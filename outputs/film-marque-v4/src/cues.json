@@ -1,0 +1,212 @@
+{
+ "duration": 29.5,
+ "h": {
+  "swipes": [
+   0.0,
+   0.32,
+   0.62,
+   0.86,
+   1.04
+  ],
+  "w": [
+   0.0,
+   0.36,
+   0.7
+  ],
+  "slam": 1.18,
+  "card": 1.36,
+  "pull": 2.35,
+  "pullEnd": 3.4,
+  "rewind": 2.85,
+  "rewindEnd": 3.45
+ },
+ "b": {
+  "step": 4.35,
+  "devices": 3.7,
+  "screens": 3.85,
+  "labels": 4.2,
+  "link": 5.1,
+  "linked": 5.7
+ },
+ "a3": {
+  "sheet": 6.65,
+  "tap": 7.0,
+  "cam": 7.12,
+  "lock": 7.45,
+  "scan": 7.5,
+  "shot": 7.95,
+  "detected": 8.05,
+  "send": 8.65,
+  "tray": 9.43,
+  "sheetOut": 9.1
+ },
+ "d": {
+  "push": 9.7,
+  "screen": 9.85,
+  "step": 9.95,
+  "toggle": 10.35,
+  "save": 11.7,
+  "token": 11.9,
+  "tokenEnd": 12.6,
+  "home": 12.25,
+  "tapVid": 12.8,
+  "vid": 12.95,
+  "pick": 10.8,
+  "qs": 11.3
+ },
+ "e": {
+  "dive": 12.85,
+  "diveEnd": 13.6,
+  "lapse": 13.65,
+  "zero": 15.2,
+  "lock": 15.25,
+  "card": 15.45,
+  "swipe": 15.85,
+  "deny": 16.05,
+  "capLock": 16.0,
+  "go": 16.45
+ },
+ "f": {
+  "start": 16.65,
+  "q": [
+   16.7,
+   17.75,
+   18.55
+  ],
+  "tap": [
+   17.35,
+   18.25,
+   19.0
+  ],
+  "unlock": 19.35,
+  "bravo": 19.5,
+  "plus": 19.75,
+  "resume": 20.45
+ },
+ "g": {
+  "pull": 20.65,
+  "pullEnd": 21.5,
+  "notif": 21.2,
+  "cap": 21.35
+ },
+ "a5": {
+  "out": 22.7,
+  "tagline": 23.35,
+  "converge": 23.8,
+  "body": 24.45,
+  "word": 24.9,
+  "cta": 25.6,
+  "url": 25.85,
+  "glint": 27.4
+ },
+ "vo": [
+  {
+   "t": 1.4,
+   "d": 0.9,
+   "who": "child",
+   "fr": "Hein ?! C’est bloqué ?!",
+   "en": "What?! It’s locked?!",
+   "dir_fr": "Voix d’enfant (8-10 ans) : surprise sincère, un peu outrée, pile sur le cadenas.",
+   "dir_en": "Child’s voice (8-10): genuine surprise, a little outraged, right on the padlock."
+  },
+  {
+   "t": 2.45,
+   "d": 1.9,
+   "who": "narrator",
+   "fr": "Et si ses vidéos lui faisaient réviser ses leçons ?",
+   "en": "What if their screen time made them study?",
+   "dir_fr": "La question que tout parent se pose : complice, avec un sourire.",
+   "dir_en": "The question every parent asks: knowing, with a smile."
+  },
+  {
+   "t": 4.45,
+   "d": 2.1,
+   "who": "narrator",
+   "fr": "Avec Kizzo, installez l’appli sur sa tablette.",
+   "en": "With Kizzo, install the app on their tablet.",
+   "dir_fr": "La bascule : clair, rassurant, le sourire arrive.",
+   "dir_en": "The turn: clear, reassuring, a smile appears."
+  },
+  {
+   "t": 6.85,
+   "d": 2.4,
+   "who": "narrator",
+   "fr": "Scannez ses leçons : Kizzo en fait des quiz.",
+   "en": "Scan their lessons: Kizzo turns them into quizzes.",
+   "dir_fr": "Concret, un peu de fierté sur « Kizzo en fait des quiz ».",
+   "dir_en": "Concrete, a touch of pride on “turns them into quizzes”."
+  },
+  {
+   "t": 9.95,
+   "d": 2.8,
+   "who": "narrator",
+   "fr": "Un quiz toutes les vingt minutes : c’est vous qui décidez.",
+   "en": "A quiz every twenty minutes: you decide.",
+   "dir_fr": "« Vingt minutes » tombe quand le parent touche « 20 min ». Puis complice sur « c’est vous qui décidez ».",
+   "dir_en": "“Twenty minutes” lands as the parent taps “20 min”. Then knowing on “you decide”."
+  },
+  {
+   "t": 13.55,
+   "d": 1.4,
+   "who": "narrator",
+   "fr": "Vingt minutes plus tard…",
+   "en": "Twenty minutes later…",
+   "dir_fr": "Complice, on accélère avec le minuteur.",
+   "dir_en": "Knowing, speeding up with the timer."
+  },
+  {
+   "t": 15.25,
+   "d": 1.0,
+   "who": "narrator",
+   "fr": "…l’écran se bloque.",
+   "en": "…the screen locks.",
+   "dir_fr": "Net, posé sur le cadenas qui tombe.",
+   "dir_en": "Crisp, landing on the padlock."
+  },
+  {
+   "t": 16.45,
+   "d": 1.9,
+   "who": "narrator",
+   "fr": "Pour le débloquer, il doit répondre.",
+   "en": "To unlock it, they have to answer.",
+   "dir_fr": "Ferme mais bienveillant : c’est la règle, pas une punition.",
+   "dir_en": "Firm but kind: it’s the rule, not a punishment."
+  },
+  {
+   "t": 18.6,
+   "d": 2.3,
+   "who": "narrator",
+   "fr": "Trois bonnes réponses… et c’est reparti !",
+   "en": "Three right answers… and they’re back on!",
+   "dir_fr": "Suspendre après « réponses », puis « c’est reparti » sur la vidéo qui repart.",
+   "dir_en": "Hold after “answers”, then “back on” as the video restarts."
+  },
+  {
+   "t": 21.35,
+   "d": 1.8,
+   "who": "narrator",
+   "fr": "Et vous, vous savez ce qu’il a appris.",
+   "en": "And you know what they’ve learned.",
+   "dir_fr": "Parent à parent, rassurant.",
+   "dir_en": "Parent to parent, reassuring."
+  },
+  {
+   "t": 23.5,
+   "d": 1.4,
+   "who": "narrator",
+   "fr": "Un temps d’écran qui compte.",
+   "en": "Make screen time count.",
+   "dir_fr": "Signature : ralentir.",
+   "dir_en": "Signature line: slow down."
+  },
+  {
+   "t": 25.4,
+   "d": 2.3,
+   "who": "narrator",
+   "fr": "Kizzo. Rendez-vous sur kizzo.fr.",
+   "en": "Kizzo. Discover it at kizzo.fr.",
+   "dir_fr": "« Kizzo » détaché. « kizzo point f r ».",
+   "dir_en": "“Kizzo”, then a beat. “kizzo dot f r”."
+  }
+ ]
+}

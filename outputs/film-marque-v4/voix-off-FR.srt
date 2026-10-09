@@ -1,0 +1,48 @@
+1
+00:00:01,400 --> 00:00:02,300
+Hein ?! C’est bloqué ?!
+
+2
+00:00:02,450 --> 00:00:04,350
+Et si ses vidéos lui faisaient réviser ses leçons ?
+
+3
+00:00:04,450 --> 00:00:06,550
+Avec Kizzo, installez l’appli sur sa tablette.
+
+4
+00:00:06,850 --> 00:00:09,250
+Scannez ses leçons : Kizzo en fait des quiz.
+
+5
+00:00:09,950 --> 00:00:12,750
+Un quiz toutes les vingt minutes : c’est vous qui décidez.
+
+6
+00:00:13,550 --> 00:00:14,950
+Vingt minutes plus tard…
+
+7
+00:00:15,250 --> 00:00:16,250
+…l’écran se bloque.
+
+8
+00:00:16,450 --> 00:00:18,350
+Pour le débloquer, il doit répondre.
+
+9
+00:00:18,600 --> 00:00:20,900
+Trois bonnes réponses… et c’est reparti !
+
+10
+00:00:21,350 --> 00:00:23,150
+Et vous, vous savez ce qu’il a appris.
+
+11
+00:00:23,500 --> 00:00:24,900
+Un temps d’écran qui compte.
+
+12
+00:00:25,400 --> 00:00:27,700
+Kizzo. Rendez-vous sur kizzo.fr.
+
