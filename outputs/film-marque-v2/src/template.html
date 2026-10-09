@@ -1,6 +1,6 @@
-<title>Kizzo Brand Film</title>
+<title>Kizzo Brand Film v2</title>
 <style>
-/* Layout: one cinema stage, a transport bar under it, chapters as a quiet strip. Single dark look in Kizzo navy. */
+/* Layout: cinema stage, the narrator's line right under it, transport, chapters, then the full voice-over script. Single dark look in Kizzo navy. */
 :root {
   --bg: #030b1a;
   --surface: #071b39;
@@ -16,7 +16,7 @@
 }
 [hidden] { display: none !important; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-ui); font-size: 15px; }
-.wrap { box-sizing: border-box; max-width: 1280px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 28px; display: flex; flex-direction: column; gap: 14px; }
+.wrap { box-sizing: border-box; max-width: 1280px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 32px; display: flex; flex-direction: column; gap: 14px; }
 .head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
 .head h1 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: .01em; text-wrap: balance; }
 .head h1 > span:first-child { color: var(--accent); }
@@ -27,6 +27,11 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
 .overlay .big { display: inline-flex; align-items: center; gap: 10px; padding: clamp(8px, 1.4vw, 14px) clamp(14px, 2.2vw, 26px) clamp(8px, 1.4vw, 14px) clamp(12px, 1.8vw, 20px); border-radius: var(--radius); background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: clamp(13px, 1.8vw, 19px); letter-spacing: .06em; text-transform: uppercase; box-shadow: 0 12px 40px -12px rgba(255, 122, 27, .7); }
 .overlay svg { width: 22px; height: 22px; fill: currentColor; }
 .overlay:focus-visible .big { outline: 3px solid var(--blue); outline-offset: 4px; }
+.vo { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.vo .tag { flex: none; font: 700 11px/1 var(--font-ui); letter-spacing: .16em; color: var(--accent); text-transform: uppercase; display: flex; flex-direction: column; gap: 6px; }
+.vo .tag em { font-style: normal; color: var(--muted); letter-spacing: .04em; font-variant-numeric: tabular-nums; font-weight: 500; }
+.vo .line { min-width: 0; font-family: var(--font-display); font-size: clamp(17px, 2.2vw, 24px); font-weight: 600; line-height: 1.25; color: var(--fg); transition: color .15s; }
+.vo .line.idle { color: var(--muted); font-weight: 500; font-size: clamp(15px, 1.7vw, 18px); }
 .bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .btn { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 12px; height: 40px; min-width: 40px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 13px/1 var(--font-ui); letter-spacing: .06em; cursor: pointer; }
 .btn:hover { border-color: var(--blue); }
@@ -40,55 +45,74 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
 .seg button { appearance: none; border: 0; background: var(--surface); color: var(--muted); height: 38px; padding: 0 12px; font: 700 12px/1 var(--font-ui); letter-spacing: .1em; cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
 .seg button:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
-.chapters { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.chapters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
 .chapters button { appearance: none; text-align: left; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 14px; padding: 10px 12px; cursor: pointer; font: inherit; min-width: 0; }
 .chapters button b { display: block; color: var(--fg); font-weight: 600; font-size: 13px; }
 .chapters button small { font-variant-numeric: tabular-nums; font-size: 12px; letter-spacing: .04em; }
 .chapters button.on { border-color: var(--accent); }
 .chapters button.on b { color: var(--accent); }
-.chapters button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.chapters button:focus-visible, .script button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.script h2 { margin: 6px 0 4px; font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+.script p.lead { margin: 0 0 10px; color: var(--muted); font-size: 13px; line-height: 1.5; max-width: 72ch; }
+.script ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.script button { appearance: none; width: 100%; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 4px 16px; text-align: left; padding: 10px 14px; border: 1px solid var(--line); border-radius: 14px; background: transparent; color: var(--fg); font: inherit; cursor: pointer; }
+.script button.on { border-color: var(--accent); background: var(--surface); }
+.script .tc { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.script .txt { font-weight: 600; font-size: 16px; line-height: 1.35; }
+.script .dir { grid-column: 2; color: var(--muted); font-size: 13px; line-height: 1.4; }
 .note { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; max-width: 72ch; }
-@media (max-width: 640px) {
-  .chapters { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-  .chapters button { display: flex; align-items: baseline; gap: 10px; padding: 9px 12px; }
-  .chapters button b { display: inline; flex: none; }
+@media (max-width: 760px) {
+  .chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
   .time { min-width: 0; }
+  .script button { grid-template-columns: minmax(0, 1fr); }
+  .script .dir { grid-column: 1; }
 }
 /* offline render mode: bare 1920×1080 canvas */
 .render body, html.render { background: #000; }
 .render .wrap { max-width: none; padding: 0; margin: 0; gap: 0; }
-.render .head, .render .bar, .render .chapters, .render .note, .render .overlay { display: none !important; }
+.render .head, .render .bar, .render .chapters, .render .note, .render .overlay, .render .vo, .render .script { display: none !important; }
 .render .stage { width: 1920px; height: 1080px; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
 </style>
 
 <div class="wrap">
   <header class="head">
-    <h1>kizzo<span>.</span> <span id="kind">Brand film</span></h1>
-    <p id="meta">25.5 s · 1920 × 1080 · 16:9 · 30 fps</p>
+    <h1>kizzo<span>.</span> <span id="kind">Film de marque v2</span></h1>
+    <p id="meta">30 s · 1920 × 1080 · 16:9 · 30 i/s</p>
   </header>
 
   <div class="stage">
     <canvas id="kz-canvas" width="1920" height="1080" aria-label="Kizzo brand film"></canvas>
     <button class="overlay" id="overlay" type="button" aria-label="Play the film">
-      <span class="big"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><span id="overlayLabel">Play film</span></span>
+      <span class="big"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><span id="overlayLabel">Lancer le film</span></span>
     </button>
+  </div>
+
+  <div class="vo" aria-live="polite">
+    <span class="tag"><span id="voTag">Voix off</span><em id="voTc">0:02,3</em></span>
+    <span class="line idle" id="voLine"></span>
   </div>
 
   <div class="bar">
     <button class="btn" id="play" type="button" aria-label="Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIcon" d="M7 4.5v15l13-7.5z"/></svg></button>
     <button class="btn" id="replay" type="button" aria-label="Replay from start"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg></button>
-    <div class="seek"><input id="seek" type="range" min="0" max="25500" step="1" value="0" aria-label="Position in the film"></div>
-    <span class="time" id="time">0:00.0 / 0:25.5</span>
+    <div class="seek"><input id="seek" type="range" min="0" max="30000" step="1" value="0" aria-label="Position in the film"></div>
+    <span class="time" id="time">0:00.0 / 0:30.0</span>
     <div class="seg" role="group" aria-label="Film language">
-      <button type="button" id="lang-en" aria-pressed="true">EN</button>
-      <button type="button" id="lang-fr" aria-pressed="false">FR</button>
+      <button type="button" id="lang-fr" aria-pressed="true">FR</button>
+      <button type="button" id="lang-en" aria-pressed="false">EN</button>
     </div>
-    <button class="btn" id="sound" type="button" aria-pressed="true" aria-label="Sound design on or off"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="soundIcon" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg><span id="soundLabel">SOUND</span></button>
+    <button class="btn" id="sound" type="button" aria-pressed="true" aria-label="Sound design on or off"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg><span id="soundLabel">SON</span></button>
     <button class="btn" id="fs" type="button" aria-label="Fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5v2H6v3H4zm10-5h6v5h-2V6h-4V4zM4 15h2v3h3v2H4v-5zm14 3v-3h2v5h-6v-2h4z"/></svg></button>
   </div>
 
   <nav class="chapters" id="chapters" aria-label="Chapters"></nav>
-  <p class="note" id="note">Silent-safe: every beat reads without sound. The optional sound layer is subtle design, no voice and no music, so a voice-over can be laid on top in post.</p>
+
+  <section class="script" aria-labelledby="scriptTitle">
+    <h2 id="scriptTitle">Script voix off</h2>
+    <p class="lead" id="scriptLead"></p>
+    <ol id="script"></ol>
+  </section>
+  <p class="note" id="note"></p>
 </div>
 
 <script>
@@ -103,43 +127,69 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
   const params = new URLSearchParams(location.search);
   const RENDER = params.has('render');
   if (RENDER) document.documentElement.classList.add('render');
-  const DUR = KZ.duration;
+  const DUR = KZ.duration, Q = KZ.cues, VO = Q.vo;
   const $ = id => document.getElementById(id);
   const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
-  let lang = params.get('lang') || store.get('kz-lang') || 'en';
+  let lang = params.get('lang') || store.get('kz2-lang') || 'fr';
   KZ.setLang(lang);
   if (RENDER) { window.KZ_READY = KZ.ready; return; }
 
   const CH = [
-    { t: 0, en: ['Hook', 'Every day, the same battle'], fr: ['Accroche', 'Chaque jour, la même bataille'] },
-    { t: 5.1, en: ['Problem', 'The endless loop'], fr: ['Problème', 'La boucle sans fin'] },
-    { t: 9.4, en: ['Reframe', 'Learn. Answer. Unlock.'], fr: ['Recadrage', 'Apprendre. Répondre. Débloquer.'] },
-    { t: 15.0, en: ['Payoff', '+15 minutes earned'], fr: ['Récompense', '+15 minutes gagnées'] },
-    { t: 19.8, en: ['Brand', 'Discover Kizzo'], fr: ['Marque', 'Découvrir Kizzo'] },
+    { t: 0, en: ['Hook', 'Every night, the same battle'], fr: ['Accroche', 'Chaque soir, la même bataille'] },
+    { t: Q.a2.start, en: ['Problem', 'The endless loop'], fr: ['Problème', 'La boucle sans fin'] },
+    { t: Q.a3.sheet, en: ['Scan', 'The parent scans the lesson'], fr: ['Scan', 'Le parent scanne la leçon'] },
+    { t: Q.a3.diveEnd, en: ['Quiz', 'Three questions, three answers'], fr: ['Quiz', 'Trois questions, trois réponses'] },
+    { t: Q.a4.combine, en: ['Reward', '+15 minutes'], fr: ['Récompense', '+15 minutes'] },
+    { t: Q.a5.tagline - .6, en: ['Brand', 'Discover Kizzo'], fr: ['Marque', 'Découvrir Kizzo'] },
   ];
   const UI = {
-    en: { kind: 'Brand film', meta: '25.5 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', note: 'Silent-safe: every beat reads without sound. The optional sound layer is subtle design, no voice and no music, so a voice-over can be laid on top in post.' },
-    fr: { kind: 'Film de marque', meta: '25,5 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', note: 'Lisible sans le son : chaque temps fort se comprend à l’image. La couche sonore, optionnelle et discrète, ne contient ni voix ni musique, pour poser une voix off en post-production.' },
+    fr: { kind: 'Film de marque v2', meta: '30 s · 1920 × 1080 · 16:9 · 30 i/s', play: 'Lancer le film', replay: 'Revoir le film', sound: 'SON', mute: 'MUET', vo: 'Voix off', next: 'À venir',
+      title: 'Script voix off', lead: 'Douze phrases courtes, environ 55 mots en 30 secondes. Le narrateur porte l’histoire ; à l’écran, seuls les mots clés restent. Cliquez une ligne pour l’écouter en situation.',
+      note: 'La couche sonore du film ne contient ni voix ni musique. Les sous-titres ci-dessus montrent ce que dira le narrateur et quand.' },
+    en: { kind: 'Brand film v2', meta: '30 s · 1920 × 1080 · 16:9 · 30 fps', play: 'Play film', replay: 'Watch again', sound: 'SOUND', mute: 'MUTED', vo: 'Voice-over', next: 'Coming up',
+      title: 'Voice-over script', lead: 'Twelve short lines, about 55 words in 30 seconds. The narrator carries the story; on screen only the key words remain. Click a line to hear it in place.',
+      note: 'The film’s sound layer has no voice and no music. The captions above show what the narrator says, and when.' },
   };
+  const fmtTc = s => { const m = Math.floor(s / 60), r = s - m * 60; return `${m}:${r.toFixed(1).padStart(4, '0')}`.replace('.', lang === 'fr' ? ',' : '.'); };
+  const fmt = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
   const chapters = $('chapters');
   CH.forEach((c, i) => {
-    const b = document.createElement('button'); b.type = 'button'; b.id = 'ch-' + i;
-    b.innerHTML = '<b></b><small></small>';
+    const b = document.createElement('button'); b.type = 'button'; b.id = 'ch-' + i; b.innerHTML = '<b></b><small></small>';
     b.addEventListener('click', () => { seek(c.t); if (!playing) play(); });
     chapters.appendChild(b);
   });
+  const list = $('script');
+  VO.forEach((v, i) => {
+    const li = document.createElement('li'), b = document.createElement('button');
+    b.type = 'button'; b.id = 'vo-' + i; b.innerHTML = '<span class="tc"></span><span class="txt"></span><span class="dir"></span>';
+    b.addEventListener('click', () => { seek(Math.max(0, v.t - .6)); if (!playing) play(); });
+    li.appendChild(b); list.appendChild(li);
+  });
+  $('seek').max = Math.round(DUR * 1000);
   const sfx = window.KZ_AUDIO ? new Audio(window.KZ_AUDIO) : null;
-  let playing = false, t = 0, last = 0, dirty = true, soundOn = !!sfx, started = false;
+  let playing = false, t = 0, last = 0, dirty = true, soundOn = !!sfx, curVo = -2;
   if (!sfx) $('sound').hidden = true;
-  const fmt = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
   function texts() {
     const u = UI[lang];
-    CH.forEach((c, i) => { const b = $('ch-' + i); b.querySelector('b').textContent = c[lang][0]; b.querySelector('small').textContent = `${fmt(c.t)} · ${c[lang][1]}`; });
+    CH.forEach((c, i) => { const b = $('ch-' + i); b.querySelector('b').textContent = c[lang][0]; b.querySelector('small').textContent = `${fmtTc(c.t)} · ${c[lang][1]}`; });
+    VO.forEach((v, i) => { const b = $('vo-' + i); b.querySelector('.tc').textContent = `${fmtTc(v.t)} → ${fmtTc(v.t + v.d)}`; b.querySelector('.txt').textContent = v[lang]; b.querySelector('.dir').textContent = v['dir_' + lang]; });
     $('overlayLabel').textContent = t >= DUR - .01 ? u.replay : u.play;
     $('soundLabel').textContent = soundOn ? u.sound : u.mute;
     $('note').textContent = u.note; $('kind').textContent = u.kind; $('meta').textContent = u.meta;
+    $('scriptTitle').textContent = u.title; $('scriptLead').textContent = u.lead;
     $('lang-en').setAttribute('aria-pressed', lang === 'en'); $('lang-fr').setAttribute('aria-pressed', lang === 'fr');
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang; curVo = -2;
+  }
+  function voUi() {
+    let cur = -1; VO.forEach((v, i) => { if (t >= v.t - .05 && t <= v.t + v.d + .3) cur = i; });
+    let next = VO.findIndex(v => v.t > t);
+    const key = cur >= 0 ? cur : -100 - next;
+    if (key === curVo) return; curVo = key;
+    const line = $('voLine'), u = UI[lang];
+    if (cur >= 0) { line.className = 'line'; line.textContent = VO[cur][lang]; $('voTag').textContent = u.vo; $('voTc').textContent = fmtTc(VO[cur].t); }
+    else if (next >= 0) { line.className = 'line idle'; line.textContent = VO[next][lang]; $('voTag').textContent = u.next; $('voTc').textContent = fmtTc(VO[next].t); }
+    else { line.className = 'line idle'; line.textContent = '—'; $('voTag').textContent = u.vo; $('voTc').textContent = ''; }
+    VO.forEach((v, i) => $('vo-' + i).classList.toggle('on', i === cur));
   }
   function ui() {
     $('seek').value = Math.round(t * 1000);
@@ -148,6 +198,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
     $('play').setAttribute('aria-label', playing ? 'Pause' : 'Play');
     let cur = 0; CH.forEach((c, i) => { if (t >= c.t) cur = i; });
     CH.forEach((c, i) => $('ch-' + i).classList.toggle('on', i === cur));
+    voUi();
   }
   function syncAudio(force) {
     if (!sfx) return;
@@ -155,12 +206,9 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
     if (force || Math.abs(sfx.currentTime - t) > .12) { try { sfx.currentTime = t; } catch (e) {} }
     if (sfx.paused) sfx.play().catch(() => {});
   }
-  function play() {
-    if (t >= DUR - .01) t = 0;
-    playing = true; started = true; last = performance.now(); $('overlay').hidden = true; syncAudio(true); dirty = true;
-  }
+  function play() { if (t >= DUR - .01) t = 0; playing = true; last = performance.now(); $('overlay').hidden = true; syncAudio(true); dirty = true; }
   function pause() { playing = false; syncAudio(); dirty = true; }
-  function seek(s) { t = Math.max(0, Math.min(DUR, s)); started = true; $('overlay').hidden = true; syncAudio(true); dirty = true; }
+  function seek(s) { t = Math.max(0, Math.min(DUR, s)); $('overlay').hidden = true; syncAudio(true); dirty = true; }
   function loop(now) {
     if (playing) {
       t += Math.min(.1, (now - last) / 1000);
@@ -176,8 +224,9 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
   $('play').addEventListener('click', () => playing ? pause() : play());
   $('replay').addEventListener('click', () => { t = 0; play(); });
   $('seek').addEventListener('input', e => { seek(e.target.value / 1000); });
-  $('lang-en').addEventListener('click', () => { lang = 'en'; KZ.setLang(lang); store.set('kz-lang', lang); texts(); dirty = true; });
-  $('lang-fr').addEventListener('click', () => { lang = 'fr'; KZ.setLang(lang); store.set('kz-lang', lang); texts(); dirty = true; });
+  const setLang = l => { lang = l; KZ.setLang(lang); store.set('kz2-lang', lang); texts(); dirty = true; };
+  $('lang-en').addEventListener('click', () => setLang('en'));
+  $('lang-fr').addEventListener('click', () => setLang('fr'));
   $('sound').addEventListener('click', () => { soundOn = !soundOn; $('sound').setAttribute('aria-pressed', soundOn); texts(); syncAudio(true); });
   $('fs').addEventListener('click', () => { const s = document.querySelector('.stage'); try { (document.fullscreenElement ? document.exitFullscreen() : s.requestFullscreen()).catch(() => {}); } catch (e) {} });
   document.addEventListener('keydown', e => {
@@ -189,7 +238,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--fo
   });
   KZ.ready.then(() => {
     texts();
-    KZ.renderFrame(23.6); t = 0; ui(); // rest frame: the end card, until the viewer presses play
+    KZ.renderFrame(DUR - 1.6); t = 0; ui(); // rest frame: the end card, until the viewer presses play
     requestAnimationFrame(n => { last = n; dirty = false; requestAnimationFrame(loop); });
   });
 })();
