@@ -1,0 +1,22 @@
+{
+  "name": "kizzo-ad-45s",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kizzo — 45-second vertical ad (3D character shots + motion design composited in the browser).",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "fetch": "node tools/fetch_clips.mjs",
+    "snap": "node tools/snap.mjs",
+    "render": "node tools/render.mjs kizzo-pub-45s.mp4"
+  },
+  "dependencies": {
+    "@fontsource-variable/outfit": "5.0.13",
+    "@fontsource/kalam": "5.0.13",
+    "esbuild": "0.21.5",
+    "three": "0.160.0"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

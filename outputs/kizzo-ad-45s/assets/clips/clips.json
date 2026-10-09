@@ -1,0 +1,28 @@
+{
+  "note": "Character shots generated with Higgsfield (Kling 3.0 Turbo, 1080x1920; start frames from GPT Image 2.5 keyframes made from one master character image). Download URLs are kept out of the repo (they carry the account id): put them in assets/clips/clips.local.json, then run tools/fetch_clips.mjs.",
+  "master": {
+    "job": "9de00811-669c-4be4-b231-28f2c20adb1b"
+  },
+  "clips": {
+    "c1": {
+      "job": "5040defb-d789-4e9a-a377-d894e0b316b2",
+      "keyframe": "fcff8447-e704-4c14-b19b-1e49453f445f"
+    },
+    "c2": {
+      "job": "d7d65e85-35c9-47e0-8085-2b63ca5eaf60",
+      "keyframe": "1116c4c0-1a7e-453f-87b2-23739d0f3687"
+    },
+    "c3": {
+      "job": "98428371-1b9c-422d-a441-3cf13f239a19",
+      "keyframe": "49713bfe-49f8-484d-8c13-c6118b0ea216"
+    },
+    "c4": {
+      "job": "8e7c3599-a754-4cce-97ef-17af6e0ca253",
+      "keyframe": "9a522377-a74d-47b4-869c-5a8a5f0afffe"
+    },
+    "c5": {
+      "job": "4d220371-ee95-4063-87f1-7924a29b4837",
+      "keyframe": "0da67813-26a3-47c9-af83-2c22a31cf88d"
+    }
+  }
+}
