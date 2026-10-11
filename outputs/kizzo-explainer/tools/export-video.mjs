@@ -85,7 +85,8 @@ execFileSync('ffmpeg', [
   '-i', wav,
   '-c:v', 'libx264', '-preset', 'slow', '-crf', '19', '-maxrate', '12M', '-bufsize', '24M', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
   '-r', String(FPS),
-  '-af', 'loudnorm=I=-14:TP=-1.0:LRA=11',
+  // -14 LUFS (réseaux sociaux) + limiteur : aucun pic au-dessus de -1,5 dBFS
+  '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,alimiter=limit=0.84:level=false',
   '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
   '-t', String(DUR),
   '-movflags', '+faststart',

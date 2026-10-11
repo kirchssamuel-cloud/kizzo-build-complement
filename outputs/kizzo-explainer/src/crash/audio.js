@@ -14,20 +14,27 @@ export function scheduleSoundtrack(ctx, out, t0, offset = 0) {
   // nappe sombre qui s'épaissit, coupée net à l'arrêt sur image
   pad(0, FREEZE, [33, 40, 45], 0.055, 420, 1.2, 0.08, 0.7);
   pad(5.0, FREEZE - 5.0, [52, 57], 0.022, 900, 3.0, 0.08, 0.8);
+  // couche médium audible sur un haut-parleur de téléphone : la tension monte jusqu'au gel
+  pad(2.0, FREEZE - 2.0, [57, 64, 69], 0.018, 1600, 6.0, 0.06, 0.7);
+  // tic-tac (calé sur la grille du morceau) qui s'arrête net au gel
+  for (let t = 0.5; t < FREEZE - 0.05; t += BEAT) tick(t, t > 8 ? 0.035 : 0.025, 3800);
   noiseHit(0, FREEZE, { type: 'lowpass', f0: 500, f1: 1400, q: 0.5, gain: 0.03, attack: 8, wet: 0.6 });
   // bip d'enregistrement de la caméra rapide
   pluck(0.12, 93, 0.05, 0.12, 0.2, 0.3);
   pluck(0.3, 93, 0.05, 0.12, 0.2, 0.3);
   // cœur : de plus en plus présent
   for (let t = 0.5; t < FREEZE - 0.3; t += 1.0) {
-    const g = 0.22 + 0.16 * (t / 11);
-    sub(t, 64, 40, 0.2, g);
-    sub(t + 0.19, 58, 38, 0.22, g * 0.7);
+    const g = 0.1 + 0.07 * (t / 11);
+    sub(t, 90, 45, 0.2, g);
+    sub(t + 0.19, 80, 42, 0.22, g * 0.7);
+    // attaque médium (le « toc » du cœur s'entend aussi sur un petit haut-parleur)
+    noiseHit(t, 0.12, { type: 'lowpass', f0: 420, f1: 120, q: 0.8, gain: 0.09, attack: 0.004, wet: 0.2 });
+    noiseHit(t + 0.19, 0.12, { type: 'lowpass', f0: 360, f1: 110, q: 0.8, gain: 0.06, attack: 0.004, wet: 0.2 });
   }
   // coupes : souffle grave
   for (const t of [SHOT.side[0], SHOT.macro[0], SHOT.orbit[0], SHOT.extreme[0]]) {
     noiseHit(t - 0.05, 0.5, { type: 'lowpass', f0: 1800, f1: 120, q: 0.6, gain: 0.07, wet: 0.5 });
-    sub(t, 90, 36, 0.4, 0.22);
+    sub(t, 110, 40, 0.4, 0.12);
   }
   // apparitions de texte
   T.lines.forEach((l) => !l.big && tick(l.at, 0.05, 2400));
