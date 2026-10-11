@@ -84,6 +84,23 @@ Accroche-appât façon reel : on attend un crash qui n'arrive jamais, puis un mo
 - Style : gris chaud, composants noir et blanc, un seul accent (orange Kizzo). Ressorts à très léger dépassement, flou de bougé par sous-images (6 par image à l'export), zoom de caméra qui suit chaque état.
 - Code : `src/crash/` (ralenti 3D `story.js`, crayon `pencil.js`, jeu à l'écran `game.js`, motion design `motion.js`, habillage `titles.js`, musique et bruitages `audio.js`). Build `npm run build crash` ; export `npm run export -- --film crash`.
 
+## Promo motion design « à coller derrière une accroche » (1080 × 1920, 16,3 s)
+
+Format Wants and Needs : une accroche filmée réaliste (vidéo générée par IA, ex. une voiture qui écrase un téléphone) capte l'attention, puis la promo démarre **dans l'écran cassé** de ce téléphone.
+
+| Temps | Ce qu'on voit |
+|---|---|
+| 0 – 0,5 s | Écran fissuré éteint, lignes de pixels morts (raccord avec la fin de l'accroche). |
+| 0,5 – 1 s | L'écran se rallume en orange Kizzo derrière les fissures. |
+| 1 s | Sur le temps fort, les éclats explosent : **« PAS BESOIN / D'EN ARRIVER / LÀ. »** claque mot à mot. |
+| 2 s | Logo Kizzo aux couleurs de la charte. |
+| 2,5 – 12,5 s | Démo pilotée au curseur (Jouer, quiz 7 × 8, +15:00, minuteur), la carte **se retourne** côté parent (réglages, onglets, progression 92 %, un quiz toutes les 15 min), notification « Ben a gagné 15 min ». |
+| 13 – 14,5 s | Signature en typo cinétique : **« LE TEMPS D'ÉCRAN / SE GAGNE / EN APPRENANT. »**, la pastille orange devient surligneur. |
+| 14,5 – 16,3 s | Logo, « kizzo », bouton **Télécharger Kizzo**. |
+
+- Fichiers : `kizzo-promo-motion-fr-1080x1920-60fps.mp4`, `kizzo-promo-motion-fr.html` (build `npm run build crash-promo`).
+- Assemblage avec l'accroche : `sh tools/stitch.sh accroche.mp4 kizzo-promo-motion-fr-1080x1920-60fps.mp4 final.mp4` (zoom dans l'écran + fondu de 0,4 s, son -14 LUFS).
+
 ## Interfaces reprises des vraies apps
 
 - **App parent (claire)** : d'après les captures « Bonjour Léa », « Photographier une leçon », viseur « Page 1 », « Kizzo lit la leçon de Ben » et « Questions générées » (dégradé ciel → pêche, boutons orange, cartes blanches).
