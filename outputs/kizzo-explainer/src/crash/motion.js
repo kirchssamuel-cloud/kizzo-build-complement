@@ -5,7 +5,8 @@
 // Gris chaud, composants noir et blanc, un seul accent : l'orange Kizzo.
 import { rr, txt, icon, F_BODY, F_DISPLAY, F_NUM } from '../ui-canvas.js';
 import { LOGO } from '../logo-shape.js';
-import { M, T, C } from './config.js';
+import { M, T, C, START, DROP, BEAT } from './config.js';
+import { drawCrackedScreen } from './cracks.js';
 import { clamp, lerp, seg, ease, springT, TAU } from '../util.js';
 
 export const FW = 390;
@@ -43,9 +44,17 @@ const CHILD = { x: LOGO_C[0] + LOGO.child.c[0] * LOGO_H, y: LOGO_C[1] - LOGO.chi
 // ---------------------------------------------------------------------------
 // États de la forme
 
+/** Signature finale en typo cinétique : trois lignes encre + une ligne blanche sur la pastille orange. */
+const END = { y: [268, 326, 384], size: 60, pillY: 440, pillW: 352, pillSize: 38 };
+
+// version promo (derrière l'accroche filmée) : la forme est l'écran du téléphone écrasé,
+// plein cadre dès la première image ; sinon elle naît d'un point.
+const PROMO = START > 0;
+// l'écran cassé se rallume une demi-seconde avant le temps fort, puis explose dessus
+const CRACK_ON = DROP - 0.5;
 const STATES = [
-  { at: -1, x: CX, y: CY, w: 0, h: 0, r: 0, fill: ORANGE, content: null },
-  { at: M.seed, w: 74, h: 74, r: 22 },
+  PROMO ? { at: -1, x: CX, y: CY, w: 640, h: 1060, r: 22, fill: ORANGE, content: null } : { at: -1, x: CX, y: CY, w: 0, h: 0, r: 0, fill: ORANGE, content: null },
+  ...(PROMO ? [{ at: DROP, content: 'still' }] : [{ at: M.seed, w: 74, h: 74, r: 22 }]),
   { at: M.bleed, w: 640, h: 1060, r: 22, content: 'still' },
   { at: M.brand, fill: WHITE, content: 'brand' }, // fond blanc : le logo garde les couleurs de la charte
   { at: M.play, w: 198, h: 66, r: 33, fill: INK, content: 'play' },
@@ -61,6 +70,9 @@ const STATES = [
   { at: M.slider, h: 180, content: 'slider' },
   { at: M.toast, w: 336, h: 82, r: 41, fill: INK, content: 'toast' },
   { at: M.dot, w: 28, h: 28, r: 14, fill: ORANGE, content: null },
+  // la pastille attend sous la signature, puis devient le surligneur de « EN APPRENANT. »
+  { at: M.k1, y: END.pillY },
+  { at: M.k3, w: END.pillW, h: 62, r: 18 },
   { at: M.logo, x: CHILD.x, y: CHILD.y, w: CHILD.r * 2, h: CHILD.r * 2, r: CHILD.r, content: 'logo' },
 ];
 // les propriétés non précisées reprennent la valeur précédente
@@ -83,6 +95,8 @@ STATES.forEach((s, i) => {
 
 const CAM_KEYS = [
   [-1, 1, CX, CY],
+  // promo : poussée vers l'écran cassé pendant qu'il se rallume, relâchée à l'explosion
+  ...(PROMO ? [[CRACK_ON - 0.2, 1.1, 206, 330], [DROP, 1, CX, CY]] : []),
   [M.play - 0.06, 1.55, CX, CY],
   [M.lock - 0.06, 1.06, CX, CY],
   [M.tapQuiz - 0.02, 0.97, CX, CY],
@@ -93,6 +107,7 @@ const CAM_KEYS = [
   [M.slider - 0.04, 1.1, CX, CY],
   [M.toast - 0.04, 1.02, CX, CY],
   [M.dot - 0.04, 1.7, CX, CY],
+  [M.k1 - 0.04, 1.0, 195, 360],
   [M.logo - 0.02, 1.0, 195, 412],
 ];
 const CAM = [1, 2, 3].map((j) => CAM_KEYS.map((k) => ({ at: k[0], v: k[j] })));
@@ -131,6 +146,7 @@ const CUR_KEYS = [
   [M.slider + 0.1, CX + stopX(1) + 2, CY + SLIDER.y + 4],
   [M.drag + 0.02, CX + stopX(2) + 14, CY + SLIDER.y + 4, [110, 21]],
   [M.toast + 0.1, 330, 476],
+  [M.k1, 372, 650],
   [M.cta + 0.06, CX + 44, CTA.y + 6],
 ];
 const CUR = [1, 2].map((j) => CUR_KEYS.map((k) => ({ at: k[0], v: k[j], k: k[3] })));
@@ -147,9 +163,28 @@ const bot = (box) => box.h / 2;
 const appear = (t, at, s = 300, d = 28) => clamp(sp(t - at, s, d), 0, 1.2);
 
 const CONTENT = {
-  still(ctx) {
-    txt(ctx, T.still[0], 0, -14, { size: 50, weight: 800, color: '#fff', align: 'center', font: F_DISPLAY, ls: -1.5 });
-    txt(ctx, T.still[1], 0, 42, { size: 50, weight: 800, color: '#fff', align: 'center', font: F_DISPLAY, ls: -1.5 });
+  still(ctx, box, t) {
+    if (!PROMO) {
+      txt(ctx, T.still[0], 0, -14, { size: 50, weight: 800, color: '#fff', align: 'center', font: F_DISPLAY, ls: -1.5 });
+      txt(ctx, T.still[1], 0, 42, { size: 50, weight: 800, color: '#fff', align: 'center', font: F_DISPLAY, ls: -1.5 });
+      return;
+    }
+    // promo : « PAS BESOIN / D'EN ARRIVER / LÀ. » claque mot à mot sur les croches
+    const lines = [
+      { s: T.still[0], at: DROP, size: 46, y: -128, ls: -1.5 },
+      { s: T.still[1], at: DROP + BEAT / 2, size: 46, y: -76, ls: -1.5 },
+      { s: T.still[2], at: DROP + BEAT, size: 150, y: 104, ls: -7 },
+    ];
+    for (const l of lines) {
+      const k = clamp(sp(t - l.at, 560, 36), 0, 1.04);
+      if (k <= 0.001) continue;
+      ctx.save();
+      ctx.translate(-162, l.y);
+      const sc = 1.4 - 0.4 * k;
+      ctx.scale(sc, sc);
+      txt(ctx, l.s, 0, 0, { size: l.size, weight: 800, color: '#fff', font: F_DISPLAY, ls: l.ls, alpha: clamp(k * 2.2) });
+      ctx.restore();
+    }
   },
   brand(ctx, box, t) {
     const k = clamp(sp(t - M.brand - 0.02, 340, 30), 0, 1.05);
@@ -505,6 +540,39 @@ export function sliderDetents() {
 // ---------------------------------------------------------------------------
 // Logo, nom, signature, bouton final (hors de la forme)
 
+/** Signature en typo cinétique (dernière mesure) : chaque ligne claque sur un temps. */
+function drawSignature(ctx, t) {
+  const [a, b2, c] = T.end;
+  const words = a.split(' ');
+  const lines = [
+    { s: words.slice(0, 2).join(' '), at: M.k1, y: END.y[0] },
+    { s: words.slice(2).join(' '), at: M.k1 + BEAT / 2, y: END.y[1] },
+    { s: b2, at: M.k2, y: END.y[2] },
+  ];
+  // sortie : tout se replie vers le logo
+  const out = ease.inCubic(seg(t, M.logo - 0.02, M.logo + 0.18));
+  for (const l of lines) {
+    const k = clamp(sp(t - l.at, 560, 36), 0, 1.04);
+    if (k <= 0.001) continue;
+    ctx.save();
+    ctx.translate(195, l.y - 20);
+    const sc = (1.45 - 0.45 * k) * (1 - 0.15 * out);
+    ctx.scale(sc, sc);
+    txt(ctx, l.s, 0, 20, { size: END.size, weight: 800, color: C.ink, align: 'center', font: F_DISPLAY, ls: -2.5, alpha: clamp(k * 2.2) * (1 - out) });
+    ctx.restore();
+  }
+  // « EN APPRENANT. » en blanc sur la pastille devenue surligneur
+  const kp = clamp(sp(t - M.k3 - 0.06, 520, 34), 0, 1.04);
+  if (kp > 0.001) {
+    ctx.save();
+    ctx.translate(195, END.pillY);
+    const sc = (1.3 - 0.3 * kp) * (1 - 0.2 * out);
+    ctx.scale(sc, sc);
+    txt(ctx, c, 0, END.pillSize * 0.36, { size: END.pillSize, weight: 800, color: '#fff', align: 'center', font: F_DISPLAY, ls: -1.5, alpha: clamp(kp * 2) * (1 - out * 1.6) });
+    ctx.restore();
+  }
+}
+
 function drawEnd(ctx, t) {
   const k = clamp(sp(t - M.logo - 0.02, 300, 30), 0, 1.05);
   if (k > 0.001) {
@@ -546,19 +614,6 @@ function drawEnd(ctx, t) {
     }
     x += w;
   }
-  ctx.restore();
-  // signature mot à mot
-  const words = U.tagline.split(' ');
-  ctx.save();
-  ctx.font = `600 16px ${F_BODY}`;
-  const sw = ctx.measureText(' ').width;
-  const widths = words.map((w) => ctx.measureText(w).width);
-  let tx = 195 - (widths.reduce((a, b) => a + b, 0) + sw * (words.length - 1)) / 2;
-  words.forEach((w, i) => {
-    const kk = ease.outCubic(seg(t, M.tagline + i * 0.05, M.tagline + 0.35 + i * 0.05));
-    if (kk > 0.001) txt(ctx, w, tx, 482 + (1 - kk) * 10, { size: 16, weight: 600, color: i === words.length - 1 ? C.orange : C.ink2, alpha: kk });
-    tx += widths[i] + sw;
-  });
   ctx.restore();
   // bouton « Télécharger Kizzo »
   const kc = clamp(sp(t - M.cta, 320, 29), 0, 1.05);
@@ -620,6 +675,17 @@ function shapeAt(t) {
   const pr = press(t, M.tapPlay);
   s.w *= 1 - 0.05 * pr;
   s.h *= 1 - 0.05 * pr;
+  // moment 2D→3D : la carte se retourne (côté enfant → côté parent)
+  s.flip = 1;
+  s.shade = 0;
+  const fk = seg(t, M.settings - 0.17, M.settings + 0.17);
+  if (fk > 0 && fk < 1) {
+    const ang = Math.PI * ease.inOutCubic(fk);
+    s.flip = Math.max(0.02, Math.abs(Math.cos(ang)));
+    s.shade = Math.sin(ang);
+    s.w *= s.flip;
+    s.h *= 1 + 0.1 * s.shade;
+  }
   s.r = Math.min(s.r, s.w / 2, s.h / 2);
   return s;
 }
@@ -708,6 +774,12 @@ export function drawMotion(ctx, W, H, t) {
     rr(ctx, x, y, s.w, s.h, s.r);
     ctx.fill();
     ctx.restore();
+    if (s.shade > 0.01) {
+      // ombrage de la carte qui tourne
+      ctx.fillStyle = `rgba(0,0,0,${(0.28 * s.shade).toFixed(3)})`;
+      rr(ctx, x, y, s.w, s.h, s.r);
+      ctx.fill();
+    }
 
     // contenus : l'ancien s'efface en se floutant, le nouveau se précise
     ctx.save();
@@ -717,9 +789,12 @@ export function drawMotion(ctx, W, H, t) {
       const c = CONTENTS[i];
       if (!c.id || c.id === 'logo' || t < c.at) continue;
       const next = CONTENTS[i + 1];
-      const out = next && t >= next.at ? seg(t, next.at, next.at + 0.1) : 0;
+      // au retournement de carte et sur la phrase cinétique, pas de fondu : bascule nette
+      const instantIn = (PROMO && c.id === 'still') || c.id === 'settings';
+      const instantOut = next && next.id === 'settings';
+      const out = next && t >= next.at ? (instantOut ? 1 : seg(t, next.at, next.at + 0.1)) : 0;
       if (out >= 1) continue;
-      const inn = ease.outCubic(seg(t, c.at + 0.05, c.at + 0.25));
+      const inn = instantIn ? 1 : ease.outCubic(seg(t, c.at + 0.05, c.at + 0.25));
       const alpha = inn * (1 - out);
       const blur = (1 - inn) * 7 + out * 6;
       const sc = 1 + (1 - inn) * 0.04 - out * 0.03;
@@ -727,7 +802,7 @@ export function drawMotion(ctx, W, H, t) {
       const draw = (g) => {
         g.save();
         g.translate(s.x, s.y);
-        g.scale(sc, sc);
+        g.scale(sc * s.flip, sc);
         CONTENT[c.id](g, s, t);
         g.restore();
       };
@@ -757,6 +832,8 @@ export function drawMotion(ctx, W, H, t) {
     }
     ctx.restore();
   }
+  if (PROMO) drawCrackedScreen(ctx, t, CRACK_ON, DROP);
+  if (t >= M.k1 - 0.05 && t < M.logo + 0.3) drawSignature(ctx, t);
   if (t >= M.logo - 0.05) drawEnd(ctx, t);
 
   // ondes de clic (fines, discrètes)

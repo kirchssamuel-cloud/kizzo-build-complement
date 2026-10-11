@@ -7,7 +7,7 @@ import { PARAMS } from '../config.js';
 export { PARAMS };
 export const WIDTH = 1080;
 export const HEIGHT = 1920;
-export const DURATION = 27.6;
+export const DURATION = 27.8;
 
 /** Grille musicale : le motion design démarre sur le premier temps de la mesure 1. */
 export const BPM = 120;
@@ -69,11 +69,14 @@ export const M = {
   release: b(21),
   toast: b(22),
   dot: b(23),
-  logo: b(24),
-  word: b(25),
-  tagline: b(26),
-  cta: b(27),
-  tapCta: b(28),
+  // dernière mesure, la plus forte : la signature claque mot à mot, puis le titre de fin
+  k1: b(24),
+  k2: b(25),
+  k3: b(26),
+  logo: b(27),
+  word: b(27.25),
+  cta: b(28),
+  tapCta: b(29),
 };
 
 export const T = {
@@ -85,8 +88,10 @@ export const T = {
     { at: 6.6, until: FREEZE, a: 'Et tu regardes encore.', small: true },
     { at: FREEZE + 0.1, until: DROP, a: 'Il ne va rien', b: ['se ', '*passer.'], big: true },
   ],
-  // derrière l'accroche filmée (téléphone écrasé), la phrase fait le pont vers Kizzo
-  still: START > 0 ? ['Pas besoin', 'd’en arriver là.'] : ['Mais t’es', 'encore là.'],
+  // derrière l'accroche filmée (téléphone écrasé), la phrase fait le pont vers Kizzo, mot à mot
+  still: START > 0 ? ['PAS BESOIN', 'D’EN ARRIVER', 'LÀ.'] : ['Mais t’es', 'encore là.'],
+  // signature en typo cinétique (dernière mesure)
+  end: ['LE TEMPS D’ÉCRAN', 'SE GAGNE', 'EN APPRENANT.'],
   impactLabel: '1 image avant l’impact',
   // sous-titres du motion design (un mot ou groupe par temps)
   caps: [

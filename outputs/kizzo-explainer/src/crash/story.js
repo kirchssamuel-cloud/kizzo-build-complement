@@ -288,7 +288,7 @@ export function createStory(renderer, scene, camera) {
     }
 
     // ---- calque 2D
-    const show2D = t >= DROP;
+    const show2D = t >= DROP || START > 0;
     plane.visible = show2D;
     if (show2D) {
       const vh = 2 * 0.1 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
@@ -345,7 +345,9 @@ export function createStory(renderer, scene, camera) {
     } else {
       // motion design : image propre, pas de tone mapping (blancs et gris exacts)
       const hit = (a) => (t >= a ? decay(t, a, 14) : 0);
-      const big = hit(M.bleed) + hit(M.brand) * 0.6 + hit(M.play) * 0.6 + hit(M.lock) * 0.4 + hit(M.reward) * 0.5 + hit(M.logo) * 0.5;
+      const big =
+        hit(M.bleed) * (START > 0 ? 0.5 : 1) + hit(M.brand) * 0.6 + hit(M.play) * 0.6 + hit(M.lock) * 0.4 + hit(M.reward) * 0.5 +
+        hit(M.k1) * 0.35 + hit(M.k2) * 0.35 + hit(M.k3) * 0.45 + hit(M.logo) * 0.5 + (START > 0 ? hit(DROP) * 1.3 : 0);
       const dark = t < M.bleed + 0.25;
       post = {
         time: t,

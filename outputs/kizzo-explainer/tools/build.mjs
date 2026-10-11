@@ -97,7 +97,7 @@ const FILMS = {
     description: "Kizzo — motion design 9:16 (1080×1920, 60 fps) calé sur la musique, à coller derrière une accroche.",
     aria: 'Kizzo — motion design 9:16',
     css: 'src/crash/film.css',
-    define: { __CRASH_START__: '12.5' },
+    define: { __CRASH_START__: '11.5' },
   },
 };
 

@@ -1,5 +1,6 @@
 // Variante « promo seule » du Crash test : le motion design Kizzo à partir du temps fort
-// (forme orange, « Pas besoin d'en arriver là. », logo, démo, « Télécharger Kizzo »),
+// (écran écrasé qui se rallume et explose, « Pas besoin d'en arriver là. », logo, démo,
+// signature en typo cinétique, « Télécharger Kizzo »),
 // pour être collé derrière une accroche filmée. Même mise en scène, temps décalé de START.
 import { PARAMS, DURATION, WIDTH, HEIGHT, START } from './config.js';
 import { createStory } from './story.js';
@@ -24,6 +25,6 @@ bootPlayer({
   },
   scheduleSoundtrack: schedule,
   renderSoundtrackWav: (duration) => renderWav(schedule, duration),
-  warm: [0.6, 1.2, 1.8, 3.0, 5.0, 8.0, 12.0],
-  preview: 1.3,
+  warm: [0.3, 0.8, 1.2, 1.7, 2.3, 3.0, 5.0, 8.0, 12.0, 14.0],
+  preview: 1.75,
 });

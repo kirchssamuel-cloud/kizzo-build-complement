@@ -2,7 +2,7 @@
 // phrases qui interpellent le spectateur (compteur en direct), étiquette « 1 image avant
 // l'impact » qui suit la pointe, arrêt sur image (« Il ne va rien se passer. »), puis
 // sous-titres du motion design (un mot ou groupe par temps).
-import { T, DROP, FREEZE } from './config.js';
+import { T, DROP, FREEZE, START } from './config.js';
 import { clamp, ease, seg } from '../util.js';
 
 const el = (cls, html = '') => {
@@ -97,7 +97,8 @@ export function createTitles(root) {
 
   function update(t, anchors = {}) {
     // HUD
-    const hudOn = t < DROP;
+    // variante promo : pas d'habillage d'accroche (l'accroche est la vidéo filmée)
+    const hudOn = t < DROP && START === 0;
     hud.style.display = hudOn ? 'block' : 'none';
     if (hudOn) {
       const f = Math.floor(Math.min(t, FREEZE) * 1000); // images de la caméra rapide (arrêtées au gel)
@@ -116,7 +117,7 @@ export function createTitles(root) {
     }
     // phrases (compteur en direct)
     for (const l of lines) {
-      const on = t >= l.at && t < l.until;
+      const on = t >= l.at && t < l.until && START === 0;
       l.node.style.display = on ? 'block' : 'none';
       if (!on) continue;
       const all = [...l.aw, ...l.bw];
@@ -127,7 +128,7 @@ export function createTitles(root) {
       l.node.style.opacity = (1 - out).toFixed(3);
     }
     // étiquette « 1 image avant l'impact » accrochée à la pointe
-    const labOn = t >= 10.6 && t < DROP && anchors.tip;
+    const labOn = START === 0 && t >= 10.6 && t < DROP && anchors.tip;
     lab.style.display = labOn ? 'block' : 'none';
     if (labOn) {
       const k = ease.outBack(seg(t, 10.6, 10.95), 1.4);
