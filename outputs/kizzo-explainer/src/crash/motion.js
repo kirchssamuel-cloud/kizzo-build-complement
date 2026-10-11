@@ -15,6 +15,8 @@ const AX = 195, AY = 372;
 const CX = 195, CY = 372;
 
 const ORANGE = [249, 115, 22], INK = [18, 20, 23], WHITE = [255, 255, 255];
+// charte : logo cyan + orange, nom en navy
+const LOGO_CYAN = '#3DB5DA', NAVY = '#0F172A';
 const rgb = (c, a = 1) => `rgba(${c[0] | 0},${c[1] | 0},${c[2] | 0},${a})`;
 const sp = (dt, s = 320, d = 30) => springT(dt, { stiffness: s, damping: d });
 const frameT = (t) => Math.round(t * 60) / 60;
@@ -45,7 +47,7 @@ const STATES = [
   { at: -1, x: CX, y: CY, w: 0, h: 0, r: 0, fill: ORANGE, content: null },
   { at: M.seed, w: 74, h: 74, r: 22 },
   { at: M.bleed, w: 640, h: 1060, r: 22, content: 'still' },
-  { at: M.brand, content: 'brand' },
+  { at: M.brand, fill: WHITE, content: 'brand' }, // fond blanc : le logo garde les couleurs de la charte
   { at: M.play, w: 198, h: 66, r: 33, fill: INK, content: 'play' },
   { at: M.loader, w: 66, h: 66, r: 33, content: 'loader' },
   { at: M.lock, w: 300, h: 300, r: 30, fill: WHITE, content: 'lock' },
@@ -155,7 +157,7 @@ const CONTENT = {
     ctx.translate(0, -44);
     ctx.scale(k, k);
     ctx.scale(130, -130);
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = LOGO_CYAN;
     ctx.beginPath();
     LOGO.body.forEach(([px, py], i) => (i ? ctx.lineTo(px, py) : ctx.moveTo(px, py)));
     ctx.closePath();
@@ -163,13 +165,13 @@ const CONTENT = {
     ctx.beginPath();
     ctx.arc(LOGO.head.c[0], LOGO.head.c[1], LOGO.head.r, 0, TAU);
     ctx.fill();
-    ctx.fillStyle = C.ink;
+    ctx.fillStyle = C.orange;
     ctx.beginPath();
     ctx.arc(LOGO.child.c[0], LOGO.child.c[1], LOGO.child.r, 0, TAU);
     ctx.fill();
     ctx.restore();
     const kw = clamp(sp(t - M.brand - 0.1, 340, 30), 0, 1.05);
-    txt(ctx, 'kizzo', 0, 96 + (1 - kw) * 20, { size: 72, weight: 800, color: '#fff', align: 'center', font: F_DISPLAY, ls: -2, alpha: clamp(kw * 1.5) });
+    txt(ctx, 'kizzo', 0, 96 + (1 - kw) * 20, { size: 72, weight: 800, color: NAVY, align: 'center', font: F_DISPLAY, ls: -2, alpha: clamp(kw * 1.5) });
   },
   play(ctx, box, t) {
     icon.play(ctx, -48, -11, 22, '#fff');
@@ -514,7 +516,7 @@ function drawEnd(ctx, t) {
     ctx.globalAlpha *= clamp(k * 1.4);
     ctx.translate(LOGO_C[0], LOGO_C[1]);
     ctx.scale(LOGO_H, -LOGO_H);
-    ctx.fillStyle = C.ink;
+    ctx.fillStyle = LOGO_CYAN;
     ctx.beginPath();
     LOGO.body.forEach(([px, py], i) => (i ? ctx.lineTo(px, py) : ctx.moveTo(px, py)));
     ctx.closePath();
@@ -539,7 +541,7 @@ function drawEnd(ctx, t) {
       ctx.save();
       ctx.globalAlpha *= clamp(kk * 1.5);
       ctx.translate(x + w / 2, 446 + (1 - kk) * 30);
-      txt(ctx, ch, 0, 0, { size: 76, weight: 800, color: C.ink, align: 'center', font: F_DISPLAY, ls: -2 });
+      txt(ctx, ch, 0, 0, { size: 76, weight: 800, color: NAVY, align: 'center', font: F_DISPLAY, ls: -2 });
       ctx.restore();
     }
     x += w;
