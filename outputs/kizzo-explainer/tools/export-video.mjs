@@ -1,6 +1,7 @@
 // Export MP4 image par image (rendu déterministe) + bande-son mixée.
-// usage : node tools/export-video.mjs [--film explainer|regles|pub|pub-sv] [--fps 60] [--h 1920] [--seg 240] [--out ...]
+// usage : node tools/export-video.mjs [--film explainer|regles|pub|pub-sv|crash] [--fps 60] [--h 1920] [--seg 240] [--out ...]
 //         [--frames-from pub] : réutilise les images déjà rendues d'un autre film (seule la bande-son change)
+//         [--segs 0-2] : ne rend que ces segments, sans bande-son ni assemblage (rendus parallèles)
 // Reprenable : les segments déjà rendus (dist/parts/*.done) sont conservés.
 import { chromium } from 'playwright';
 import { spawn, execFileSync } from 'node:child_process';
@@ -12,13 +13,14 @@ const arg = (k, d) => {
   return i > 0 ? process.argv[i + 1] : d;
 };
 const FILM = arg('film', 'explainer');
-const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920] }[FILM];
+const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920], crash: [1080, 1920] }[FILM];
 const FRAMES = arg('frames-from', FILM);
 const FPS = +arg('fps', 60);
 const H = +arg('h', FORMAT[1]);
 const W = Math.round((H * FORMAT[0]) / FORMAT[1]);
 const SEG = +arg('seg', 240);
 const OUT = arg('out', `dist/kizzo-${FILM}-${W}x${H}-${FPS}fps.mp4`);
+const SEGS = arg('segs', null)?.split('-').map(Number);
 const partsDir = path.resolve(FRAMES === 'explainer' ? 'dist/parts' : `dist/parts-${FRAMES}`);
 fs.mkdirSync(partsDir, { recursive: true });
 
@@ -32,7 +34,7 @@ const TOTAL = Math.round(DUR * FPS);
 
 // bande-son (rendu hors-ligne dans la page)
 const wav = path.join(partsDir, FRAMES === FILM ? 'soundtrack.wav' : `soundtrack-${FILM}.wav`);
-if (!fs.existsSync(wav)) {
+if (!SEGS && !fs.existsSync(wav)) {
   const b64 = await page.evaluate(() => window.KIZZO.renderAudioWav());
   fs.writeFileSync(wav, Buffer.from(b64, 'base64'));
 }
@@ -43,6 +45,7 @@ const nSeg = Math.ceil(TOTAL / SEG);
 for (let s = 0; s < nSeg; s++) {
   const name = path.join(partsDir, `seg_${String(s).padStart(2, '0')}_${FPS}`);
   if (fs.existsSync(name + '.done')) continue;
+  if (SEGS && (s < SEGS[0] || s > SEGS[1])) continue;
   const from = s * SEG, to = Math.min(TOTAL, from + SEG);
   const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '12', '-pix_fmt', 'yuv420p', name + '.mp4'], {
     stdio: ['pipe', 'inherit', 'inherit'],
@@ -65,6 +68,10 @@ for (let s = 0; s < nSeg; s++) {
   console.log(`segment ${s + 1}/${nSeg} ok`);
 }
 await browser.close();
+if (SEGS) {
+  console.log(`segments ${SEGS[0]}-${SEGS[1]} ok`);
+  process.exit(0);
+}
 
 // assemblage + mix audio (normalisé -14 LUFS, réseaux sociaux)
 const list = path.join(partsDir, `list_${FPS}.txt`);

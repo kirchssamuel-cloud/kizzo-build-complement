@@ -10,6 +10,7 @@ Animation motion design 3D temps réel (Three.js / WebGL) qui explique Kizzo, au
 | `v1-en/` | Version 1 (anglais, 30 s, sans scène de scan), archivée. |
 | `kizzo-regles-fr.html` · `kizzo-regles-fr-1080x1080-60fps.mp4` · `kizzo-regles-fr-poster.png` | **Film 2 « Les règles du jeu »**, format carré 1:1 (voir plus bas). |
 | `kizzo-pub-sans-voix-fr-1080x1920-60fps.mp4` · `kizzo-pub-fr-1080x1920-60fps.mp4` · `kizzo-pub-*-fr.html` | **Pub 9:16 « 23:47 »** pour TikTok / Reels / Facebook, sans et avec voix off (voir plus bas). |
+| `kizzo-crash-test-fr-1080x1920-60fps.mp4` · `kizzo-crash-test-fr.html` · `kizzo-crash-test-fr-poster.png` | **Vidéo 9:16 « Crash test »** : accroche-appât au ralenti + motion design (voir plus bas). |
 
 ## Lecture
 
@@ -68,6 +69,20 @@ Format natif réseaux, en 2D plein cadre, vu à travers le téléphone du parent
 
 - Sous-titres karaoké incrustés (lecture sans le son) ; deux versions : **sans voix off** (bruitages + musique) et **avec voix off** (voix française de synthèse grave, Piper « tom » retraitée, `src/pub/vo/`).
 - Code : `src/pub/` (images 2D `frames.js`, habillage `titles.js`, bande-son `audio.js`). Build `npm run build pub` / `pub-sv` ; export `npm run export -- --film pub-sv --frames-from pub`.
+
+## Vidéo 9:16 « Crash test » (1080 × 1920, 27,6 s)
+
+Accroche-appât façon reel : on attend un crash qui n'arrive jamais, puis un motion design calé sur la musique.
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 11,6 s | **Appât** | HUD de caméra rapide (« CRASH TEST N°01 », REC, 1 000 IMG/S, timecode). Un crayon Kizzo orange tombe au ralenti vers l'écran d'un téléphone posé sur un bureau, dans le noir (jeu à l'écran). Cinq plans de plus en plus serrés, jusqu'à la pointe et son reflet dans le verre, avec les sous-pixels de l'écran visibles. Compteur en direct **« Tu regardes un crayon tomber depuis 8,3 secondes. »**, puis **« Et tu regardes encore. »**, et l'étiquette **« 1 image avant l'impact »** accrochée à la pointe. |
+| 11,6 – 12,5 s | **Il ne se passe rien** | Arrêt sur image (PAUSE) : **« Il ne va rien se passer. »** |
+| 12,5 – 14 s | **Bascule** | L'image figée est aspirée, une forme orange en sort, remplit l'écran (**« Mais t'es encore là. »**), puis devient le logo Kizzo. |
+| 14 – 27,6 s | **Motion design** | 120 BPM, un évènement par temps. Une seule forme, jamais coupée, se transforme sous un curseur qui clique et glisse : bouton « Jouer », chargement, « C'est l'heure d'un quiz ! », quiz 7 × 8 (56 ✓), « +15:00 », minuteur, « Quiz de déblocage », onglets Maths / Français / Sciences, courbe de progression (92 %), réglage « un quiz toutes les 15 min », notification « Ben a gagné 15 min », pastille, logo, **Télécharger Kizzo**. |
+
+- Style : gris chaud, composants noir et blanc, un seul accent (orange Kizzo). Ressorts à très léger dépassement, flou de bougé par sous-images (6 par image à l'export), zoom de caméra qui suit chaque état.
+- Code : `src/crash/` (ralenti 3D `story.js`, crayon `pencil.js`, jeu à l'écran `game.js`, motion design `motion.js`, habillage `titles.js`, musique et bruitages `audio.js`). Build `npm run build crash` ; export `npm run export -- --film crash`.
 
 ## Interfaces reprises des vraies apps
 

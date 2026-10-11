@@ -81,6 +81,14 @@ const FILMS = {
     css: 'src/pub/film.css',
     define: { __PUB_VO__: 'false' },
   },
+  crash: {
+    entry: 'src/crash/main.js',
+    out: 'kizzo-crash-test-fr.html',
+    title: 'Kizzo Crash Test',
+    description: "Kizzo — vidéo 9:16 (1080×1920, 60 fps) : crash test au ralenti d'un crayon sur un écran, puis motion design calé sur la musique.",
+    aria: 'Kizzo — crash test, vidéo 9:16',
+    css: 'src/crash/film.css',
+  },
 };
 
 const only = process.argv[2];

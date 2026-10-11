@@ -84,12 +84,13 @@ export function createPipeline(renderer, scene, camera, { quality = 'high' } = {
       uZoom: { value: 0 },
       uZoomCenter: { value: new THREE.Vector2(0.5, 0.5) },
       uLift: { value: 0.0 },
+      uTonemap: { value: 1 },
     },
     vertexShader: QUAD_VS,
     fragmentShader: /* glsl */ `
       uniform sampler2D tColor;
       uniform vec2 uRes, uZoomCenter;
-      uniform float uExposure, uSat, uVignette, uGrain, uTime, uFlash, uFade, uCA, uZoom, uLift;
+      uniform float uExposure, uSat, uVignette, uGrain, uTime, uFlash, uFade, uCA, uZoom, uLift, uTonemap;
       uniform vec3 uFlashCol, uFadeCol;
       varying vec2 vUv;
       float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
@@ -132,7 +133,7 @@ export function createPipeline(renderer, scene, camera, { quality = 'high' } = {
         col *= uExposure;
         float l = dot(col, vec3(0.2126, 0.7152, 0.0722));
         col = mix(vec3(l), col, uSat);
-        col = neutral(col);
+        col = mix(col, neutral(col), uTonemap);
         vec2 q = (vUv - 0.5) * vec2(uRes.x / uRes.y, 1.0);
         col *= 1.0 - uVignette * smoothstep(0.3, 1.05, length(q) * 1.35);
         col += uLift * vec3(0.02, 0.03, 0.05);
@@ -229,6 +230,7 @@ export function createPipeline(renderer, scene, camera, { quality = 'high' } = {
     f.uFlash.value = p.flash ?? 0;
     f.uFade.value = p.fade ?? 0;
     f.uCA.value = p.ca ?? 0.02;
+    f.uTonemap.value = p.tonemap ?? 1;
     f.uZoom.value = p.zoom ?? 0;
     if (p.zoomCenter) f.uZoomCenter.value.copy(p.zoomCenter);
     if (p.flashCol) f.uFlashCol.value.set(p.flashCol);
