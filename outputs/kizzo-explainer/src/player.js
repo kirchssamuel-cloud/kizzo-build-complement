@@ -123,12 +123,38 @@ export function bootPlayer(film) {
   // Rendu d'une image à l'instant t (pur, déterministe)
 
   let lastT = -1;
+  // flou de bougé optionnel (export) : sous-images moyennées dans un calque 2D par-dessus le rendu
+  let mbAcc = null;
   function renderAt(t) {
     t = Math.min(DURATION, Math.max(0, t));
-    const { post, anchors } = story.update(t);
-    // en export, grain plus fin : la vidéo compressée reste nette sans artefacts
-    if (PARAMS.exportMode) post.grain *= 0.55;
-    pipeline.render(post);
+    const n = PARAMS.exportMode && story.subframes ? story.subframes(t) : 1;
+    let res;
+    if (n > 1) {
+      if (!mbAcc) {
+        mbAcc = document.createElement('canvas');
+        mbAcc.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;display:none';
+        canvas.after(mbAcc);
+        mbAcc.g = mbAcc.getContext('2d');
+      }
+      if (mbAcc.width !== bufW || mbAcc.height !== bufH) (mbAcc.width = bufW), (mbAcc.height = bufH);
+      const shutter = 0.5 / 60;
+      for (let k = 0; k < n; k++) {
+        const tk = Math.min(DURATION, Math.max(0, t + (k / (n - 1) - 0.5) * shutter));
+        res = story.update(tk);
+        res.post.grain *= 0.55;
+        pipeline.render(res.post);
+        mbAcc.g.globalAlpha = 1 / (k + 1);
+        mbAcc.g.drawImage(canvas, 0, 0);
+      }
+      mbAcc.style.display = 'block';
+    } else {
+      if (mbAcc) mbAcc.style.display = 'none';
+      res = story.update(t);
+      // en export, grain plus fin : la vidéo compressée reste nette sans artefacts
+      if (PARAMS.exportMode) res.post.grain *= 0.55;
+      pipeline.render(res.post);
+    }
+    const { anchors } = res;
     titles.update(t, anchors);
     lastT = t;
     ui.fill.style.transform = `scaleX(${t / DURATION})`;

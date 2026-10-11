@@ -99,6 +99,15 @@ const FILMS = {
     css: 'src/crash/film.css',
     define: { __CRASH_START__: '11.5' },
   },
+  // promo 3D « La reconstruction », à coller derrière l'accroche filmée
+  promo3d: {
+    entry: 'src/promo3d/main.js',
+    out: 'kizzo-promo-3d-fr.html',
+    title: 'Kizzo Promo 3D',
+    description: "Kizzo — promo 3D 9:16 (1080×1920, 60 fps) : le téléphone écrasé se reconstruit, et cette fois il fait apprendre.",
+    aria: 'Kizzo — promo 3D 9:16',
+    css: 'src/promo3d/film.css',
+  },
 };
 
 const only = process.argv[2];

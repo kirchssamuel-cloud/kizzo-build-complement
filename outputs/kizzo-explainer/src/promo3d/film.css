@@ -1,0 +1,12 @@
+/* Promo 3D « La reconstruction » : titre de fin net (DOM) sous le logo en relief. */
+.p3-end { position: absolute; left: 50%; top: 56%; transform: translate(-50%, 0); width: 92%; text-align: center; display: none; }
+.p3-word { font-family: var(--f-display); font-weight: 800; font-size: calc(var(--u) * 19); line-height: 1; letter-spacing: -0.045em; color: #fff; }
+.p3-tag { margin-top: calc(var(--u) * 2.2); font-family: var(--f-display); font-weight: 600; font-size: calc(var(--u) * 4.6); color: rgba(255, 255, 255, 0.86); }
+.p3-cta {
+  display: inline-flex; align-items: center; gap: calc(var(--u) * 2); margin-top: calc(var(--u) * 6);
+  padding: calc(var(--u) * 3) calc(var(--u) * 6.4); border-radius: 999px; opacity: 0;
+  background: var(--orange); color: #fff; font-family: var(--f-display); font-size: calc(var(--u) * 5.2);
+  box-shadow: 0 calc(var(--u) * 1.2) calc(var(--u) * 4) rgba(249, 115, 22, 0.45);
+}
+.p3-cta svg { width: calc(var(--u) * 5.6); height: calc(var(--u) * 5.6); }
+.p3-cta span { font-weight: 800; letter-spacing: -0.01em; }
