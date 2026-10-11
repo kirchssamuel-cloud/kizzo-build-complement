@@ -11,6 +11,7 @@ Animation motion design 3D temps réel (Three.js / WebGL) qui explique Kizzo, au
 | `kizzo-regles-fr.html` · `kizzo-regles-fr-1080x1080-60fps.mp4` · `kizzo-regles-fr-poster.png` | **Film 2 « Les règles du jeu »**, format carré 1:1 (voir plus bas). |
 | `kizzo-pub-sans-voix-fr-1080x1920-60fps.mp4` · `kizzo-pub-fr-1080x1920-60fps.mp4` · `kizzo-pub-*-fr.html` | **Pub 9:16 « 23:47 »** pour TikTok / Reels / Facebook, sans et avec voix off (voir plus bas). |
 | `kizzo-crash-test-fr-1080x1920-60fps.mp4` · `kizzo-crash-test-fr.html` · `kizzo-crash-test-fr-poster.png` | **Vidéo 9:16 « Crash test »** : accroche-appât au ralenti + motion design (voir plus bas). |
+| `kizzo-promo-3d-fr-1080x1920-60fps.mp4` · `kizzo-promo-3d-fr.html` | **Promo 3D « La reconstruction »**, à coller derrière l'accroche filmée (voir plus bas). |
 
 ## Lecture
 
@@ -83,6 +84,22 @@ Accroche-appât façon reel : on attend un crash qui n'arrive jamais, puis un mo
 
 - Style : gris chaud, composants noir et blanc, un seul accent (orange Kizzo). Ressorts à très léger dépassement, flou de bougé par sous-images (6 par image à l'export), zoom de caméra qui suit chaque état.
 - Code : `src/crash/` (ralenti 3D `story.js`, crayon `pencil.js`, jeu à l'écran `game.js`, motion design `motion.js`, habillage `titles.js`, musique et bruitages `audio.js`). Build `npm run build crash` ; export `npm run export -- --film crash`.
+
+## Promo 3D « La reconstruction » (1080 × 1920, 16,3 s) — version recommandée
+
+À coller derrière l'accroche filmée (téléphone écrasé). Concept unique : **le téléphone écrasé se reconstruit, et cette fois il fait apprendre**. Chaque plan naît du précédent, un évènement par temps (120 BPM).
+
+| Temps | Ce qu'on voit |
+|---|---|
+| 0 – 1 s | Dans l'écran écrasé : fissures, puis l'orange revient sous le verre et les éclats lévitent. |
+| 1 – 2,5 s | Sur le temps fort, les éclats se recollent : **« PAS BESOIN / D'EN ARRIVER / LÀ. »** en typo 3D autour d'un vrai téléphone. |
+| 2,5 – 6 s | App enfant : le jeu, **« C'est l'heure d'un quiz ! »** sort de l'écran, la question 7 × 8 et les réponses sortent en 3D (56 ✓, les autres tombent), **+15** en relief. |
+| 6 – 10 s | Le téléphone tourne sur lui-même → app parent : « Règles des quiz », puces **15 min**, interrupteur, courbe 3D **92 %**, notification « Ben a gagné 15 min ». |
+| 10 – 12 s | Dernière mesure : **LE TEMPS / D'ÉCRAN / SE GAGNE / EN APPRENANT.**, un mot et un fond par temps. |
+| 12 – 16,3 s | Logo Kizzo en relief, « kizzo », signature, bouton **Télécharger Kizzo**. |
+
+- Fichiers : `kizzo-promo-3d-fr-1080x1920-60fps.mp4`, `kizzo-promo-3d-fr.html`, `kizzo-promo-3d-fr-poster.png` ; code `src/promo3d/` (build `npm run build promo3d`).
+- Flou de bougé par sous-images sur les mouvements rapides (export).
 
 ## Promo motion design « à coller derrière une accroche » (1080 × 1920, 16,3 s)
 
