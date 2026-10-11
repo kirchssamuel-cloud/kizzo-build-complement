@@ -2,6 +2,7 @@
 // usage : node tools/export-video.mjs [--film explainer|regles|pub|pub-sv|crash] [--fps 60] [--h 1920] [--seg 240] [--out ...]
 //         [--frames-from pub] : réutilise les images déjà rendues d'un autre film (seule la bande-son change)
 //         [--segs 0-2] : ne rend que ces segments, sans bande-son ni assemblage (rendus parallèles)
+//         [--audio-only] : ne rend que la bande-son (WAV) puis s'arrête
 // Reprenable : les segments déjà rendus (dist/parts/*.done) sont conservés.
 import { chromium } from 'playwright';
 import { spawn, execFileSync } from 'node:child_process';
@@ -13,7 +14,7 @@ const arg = (k, d) => {
   return i > 0 ? process.argv[i + 1] : d;
 };
 const FILM = arg('film', 'explainer');
-const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920], crash: [1080, 1920] }[FILM];
+const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920], crash: [1080, 1920], 'crash-promo': [1080, 1920] }[FILM];
 const FRAMES = arg('frames-from', FILM);
 const FPS = +arg('fps', 60);
 const H = +arg('h', FORMAT[1]);
@@ -37,6 +38,11 @@ const wav = path.join(partsDir, FRAMES === FILM ? 'soundtrack.wav' : `soundtrack
 if (!SEGS && !fs.existsSync(wav)) {
   const b64 = await page.evaluate(() => window.KIZZO.renderAudioWav());
   fs.writeFileSync(wav, Buffer.from(b64, 'base64'));
+}
+if (process.argv.includes('--audio-only')) {
+  await browser.close();
+  console.log('✓', wav);
+  process.exit(0);
 }
 
 const t0 = Date.now();

@@ -17,6 +17,11 @@ export const DROP = 12.5;
 export const FREEZE = 11.6;
 /** Instant du temps n (0 = départ du motion design). */
 export const b = (n) => DROP + n * BEAT;
+/**
+ * Variante « promo seule » (définie à la compilation) : la vidéo commence au temps fort,
+ * pour être collée derrière une accroche filmée (vidéo réaliste générée par IA).
+ */
+export const START = typeof __CRASH_START__ === 'undefined' ? 0 : __CRASH_START__;
 
 /** Plans de l'accroche (s). */
 export const SHOT = {
@@ -80,7 +85,8 @@ export const T = {
     { at: 6.6, until: FREEZE, a: 'Et tu regardes encore.', small: true },
     { at: FREEZE + 0.1, until: DROP, a: 'Il ne va rien', b: ['se ', '*passer.'], big: true },
   ],
-  still: ['Mais t’es', 'encore là.'],
+  // derrière l'accroche filmée (téléphone écrasé), la phrase fait le pont vers Kizzo
+  still: START > 0 ? ['Pas besoin', 'd’en arriver là.'] : ['Mais t’es', 'encore là.'],
   impactLabel: '1 image avant l’impact',
   // sous-titres du motion design (un mot ou groupe par temps)
   caps: [

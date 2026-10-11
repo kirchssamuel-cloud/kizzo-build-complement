@@ -89,6 +89,16 @@ const FILMS = {
     aria: 'Kizzo — crash test, vidéo 9:16',
     css: 'src/crash/film.css',
   },
+  // motion design + promo seuls, à coller derrière une accroche filmée
+  'crash-promo': {
+    entry: 'src/crash/promo-main.js',
+    out: 'kizzo-promo-motion-fr.html',
+    title: 'Kizzo Promo Motion',
+    description: "Kizzo — motion design 9:16 (1080×1920, 60 fps) calé sur la musique, à coller derrière une accroche.",
+    aria: 'Kizzo — motion design 9:16',
+    css: 'src/crash/film.css',
+    define: { __CRASH_START__: '12.5' },
+  },
 };
 
 const only = process.argv[2];

@@ -13,7 +13,7 @@ import { drawNightGame } from './game.js';
 import { fxShared, LAYER_FX } from '../materials.js';
 import { createPencil } from './pencil.js';
 import { drawMotion, FW, FH } from './motion.js';
-import { PARAMS, SHOT, FALL, DROP, FREEZE, M } from './config.js';
+import { PARAMS, SHOT, FALL, DROP, FREEZE, M, START } from './config.js';
 import { lerp, seg, ease, decay, wobble } from '../util.js';
 
 const V = (x = 0, y = 0, z = 0) => new THREE.Vector3(x, y, z);
@@ -237,7 +237,8 @@ export function createStory(renderer, scene, camera) {
     // après le gel, tout le monde 3D reste figé sur l'image « 1 image avant l'impact »
     const tf = Math.min(t, FREEZE);
     const h = fallHeight(tf);
-    const in3D = t < M.seed + 0.05;
+    // variante promo seule : pas de crayon, on part du noir
+    const in3D = START === 0 && t < M.seed + 0.05;
     world.visible = in3D;
 
     if (in3D) {
