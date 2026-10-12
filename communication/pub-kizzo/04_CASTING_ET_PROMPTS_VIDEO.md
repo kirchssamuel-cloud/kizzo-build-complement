@@ -201,14 +201,14 @@ SOUND — while frozen, the room tone cuts to total silence; Shmoulik's footstep
 CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire keeps her wooden spoon.
 ```
 
-### G3 v2 — Les deux voyages, en prolongement de G2 ter (15 s)
+### G3 v2 — Les deux voyages, en prolongement de la G2 retenue (15 s)
 
-Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 15 secondes. Vidéo de référence : G2 ter (77113c57-710c-4175-8028-f389da0669bb). Images de référence, dans cet ordre : vaisseau spatial (0306111d-9417-435e-a1e3-195be415d5ce), Rome (610c338e-28b2-4b1a-867a-28eb7a0107c6), Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Coût : 180 crédits en 1080p, 105 en 720p.
+Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 15 secondes. Vidéo de référence : la G2 retenue, brute de génération (16f11e2d-7228-4cdd-a064-0c9a475e0840) ; sa dernière image est un plan large sans Shmoulik qui parle, donc le raccord fonctionne avec la version muette. Images de référence, dans cet ordre : vaisseau spatial (0306111d-9417-435e-a1e3-195be415d5ce), Rome (610c338e-28b2-4b1a-867a-28eb7a0107c6), Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Coût : 180 crédits en 1080p, 105 en 720p.
 
 Leçons de G2 bis et G2 ter appliquées : des plans fixes ou des mouvements très simples, des répliques d'un ou deux mots (Seedance déforme les phrases longues en français), Shmoulik ne parle pas, et une seule réplique longue, celle de Claire, placée à la fin.
 
 ```
-Continue the reference video seamlessly from its very last frame: same dining room, same family, same clothes, same light, same seats; Sam now holds the orange tablet. A 15-second extension of a live-action family comedy commercial, 16:9, photoreal. Sam answers a quiz on the tablet and his tap transports the whole family into the cockpit of a spaceship facing Jupiter; then Julie answers and her tap transports everyone to a terrace facing the Colosseum in Rome. All dialogue is in natural spoken French. No voice ever comes from the tablet.
+Continue the reference video seamlessly from its very last frame: same dining room, same family, same clothes, same light, same seats; Sam has just taken the orange tablet from Claire. A 15-second extension of a live-action family comedy commercial, 16:9, photoreal. Sam answers a quiz on the tablet and his tap transports the whole family into the cockpit of a spaceship facing Jupiter; then Julie answers and her tap transports everyone to a terrace facing the Colosseum in Rome. All dialogue is in natural spoken French. No voice ever comes from the tablet.
 
 REFERENCES — Image 1: the spaceship cockpit. Image 2: the Rome terrace. Image 3: Shmoulik (white T-shirt, navy trousers, white and light-grey sneakers, no logo). Faces and clothes of Claire, Sam and Julie stay exactly as in the reference video.
 
