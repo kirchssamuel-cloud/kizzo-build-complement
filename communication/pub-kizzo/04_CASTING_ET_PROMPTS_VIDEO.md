@@ -201,6 +201,31 @@ SOUND — while frozen, the room tone cuts to total silence; Shmoulik's footstep
 CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire keeps her wooden spoon.
 ```
 
+### G3 v2 — Les deux voyages, en prolongement de G2 ter (15 s)
+
+Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 15 secondes. Vidéo de référence : G2 ter (77113c57-710c-4175-8028-f389da0669bb). Images de référence, dans cet ordre : vaisseau spatial (0306111d-9417-435e-a1e3-195be415d5ce), Rome (610c338e-28b2-4b1a-867a-28eb7a0107c6), Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Coût : 180 crédits en 1080p, 105 en 720p.
+
+Leçons de G2 bis et G2 ter appliquées : des plans fixes ou des mouvements très simples, des répliques d'un ou deux mots (Seedance déforme les phrases longues en français), Shmoulik ne parle pas, et une seule réplique longue, celle de Claire, placée à la fin.
+
+```
+Continue the reference video seamlessly from its very last frame: same dining room, same family, same clothes, same light, same seats; Sam now holds the orange tablet. A 15-second extension of a live-action family comedy commercial, 16:9, photoreal. Sam answers a quiz on the tablet and his tap transports the whole family into the cockpit of a spaceship facing Jupiter; then Julie answers and her tap transports everyone to a terrace facing the Colosseum in Rome. All dialogue is in natural spoken French. No voice ever comes from the tablet.
+
+REFERENCES — Image 1: the spaceship cockpit. Image 2: the Rome terrace. Image 3: Shmoulik (white T-shirt, navy trousers, white and light-grey sneakers, no logo). Faces and clothes of Claire, Sam and Julie stay exactly as in the reference video.
+
+SPACESHIP — as Image 1: the cockpit of a sleek white passenger spaceship, a huge curved windscreen showing Jupiter as a complete round globe in black starry space. Four white seats in two rows facing the windscreen: Sam front-left, Julie front-right, Claire back-left, Shmoulik back-right. Abstract glowing displays, no text. Cool white light plus Jupiter's warm amber glow.
+ROME — as Image 2: a table with a red-and-white checked tablecloth and four plates of spaghetti, dark-green bistro chairs, the Colosseum behind, hard warm sunlight, deep blue sky. Sam far side left, Julie far side right, Claire left end, Shmoulik right end.
+
+SHOTS — simple shots joined by clean cuts.
+0.0–3.0s: Medium close-up, 35mm, locked off, on Sam seated at the dining table holding the orange tablet in both hands, screen toward him. A soft chime at 0.2s. He reads silently, thinks with his eyes up, then says at 2.0–2.6s: "Jupiter !" He taps the screen with his right index finger at 3.0s.
+3.0–7.0s: Hard match cut on the tap: same framing on Sam, now sitting in the front-left seat of the spaceship cockpit, Jupiter's amber glow on his face. At 3.6–4.2s he looks up past the camera and whispers: "Wouah…" At 4.6s cut to a wide shot from behind the back row: the four family members in their seats facing the huge windscreen filled by Jupiter, all leaning forward, amazed. Claire's wooden spoon floats slowly upward between the seats.
+7.0–10.5s: Medium two-shot, 35mm, locked off, from the dashboard on Sam and Julie in the front seats. Julie takes the tablet from Sam and says at 7.2–7.7s: "À moi !" A soft chime at 7.9s. She reads silently, then says at 9.4–9.9s: "Rome !" She taps the screen at 10.5s.
+10.5–15.0s: Hard match cut on the tap: same framing on Julie, now sitting at the Rome terrace table in hard sunlight. At 11.2s cut to a wide shot of the whole table with the Colosseum behind; the wooden spoon drops from above into Claire's open hand. Claire looks around, delighted, and says at 12.6–14.2s: "Mais c'est génial, ce truc !" Shmoulik, at the right end of the table, smiles at the camera. Hold until 15.0s.
+
+SOUND — close natural French dialogue, lip-synced, exactly five spoken lines: "Jupiter !", "Wouah…", "À moi !", "Rome !", "Mais c'est génial, ce truc !". Nobody else speaks; Shmoulik never speaks. Two soft app chimes at 0.2s and 7.9s. Dining room: quiet room tone. Spaceship: low engine hum and an airy whoosh on the cut. Rome: street ambience, distant chatter, a passing scooter. No music, no narrator, no captions, no watermarks.
+
+CONTINUITY — same four people, same clothes in all places. One orange tablet, its screen never visible to the camera. No furniture follows them between places.
+```
+
 ### G3 — Les deux voyages (15 s)
 
 Références, dans cet ordre : Claire, Sam, Julie, Shmoulik, salle à manger corrigée, vaisseau spatial, Rome.
