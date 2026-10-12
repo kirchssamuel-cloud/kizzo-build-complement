@@ -428,3 +428,13 @@ Une génération par ligne, avec la même voix et les mêmes réglages. On écri
 | 7 | Séquence 4, Claire répond 54 | `[amused] Cinquante-six, Claire. Cinquante-six.` |
 | 8 | Retour à la maison, fumée du four | `[sniffs] Ça sent le brûlé…` |
 | 9 | Signature finale sur le logo | `[warmly] Avec Kidzo, pour débloquer ton temps d'écran, il suffit d'apprendre tes leçons… [amused] et pour certains… d'apprendre à cuisiner.` |
+
+### Voix off des séquences 1 et 2, calée sur les blancs du montage v9
+
+| # | Moment (temps du montage) | Durée max. | Texte ElevenLabs |
+|---|---|---|---|
+| A1 | 0,1–1,45 s : Claire touille sa sauce, avant son appel | 1,4 s | `[warmly] Dix-neuf heures. L'heure des devoirs…` |
+| A2 | 2,5–3,5 s : Sam joue dans le noir | 0,9 s | `[amused] …en théorie.` |
+| A3 | 4,5–6,2 s : Claire tend la main vers la box Wi-Fi | 1,6 s | `[mischievous] Alors maman… sort l'arme fatale.` |
+| A4 | 7,95–9,2 s : plan large, les enfants à table | 1,2 s | `[dramatic] Et là… c'est le drame.` |
+| B5 | Séquence 2, après le claquement, entre la notification et « Bon… vas-y » (≈ 22,5–24,2 s) | 1,7 s | `[warmly] Une question… et à la clé, du temps d'écran.` |
