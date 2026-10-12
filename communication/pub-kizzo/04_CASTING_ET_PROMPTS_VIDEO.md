@@ -328,6 +328,9 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
+- **Montage v3 des séquences 1 et 2 (30,4 s).** La fin de la séquence 1 passe au ralenti et se fige à 15,8 s. Le gel est prolongé de 2,6 s sur l'image figée, avec un bouton pause en verre dépoli qui devient un badge « PAUSE » en haut à gauche, puis « LECTURE » au claquement de doigts (26,3 s). Pendant le gel, l'image est légèrement désaturée.
+  - Habillage réaliste : Inter Display, entrées en ressort avec flou de mouvement, surlignage orange sur « JAMAIS », une fiche appli Kizzo en verre dépoli dont le bouton « Télécharger » se change en anneau de progression puis en « Installé », et une flèche dessinée vers le téléphone.
+  - Son : ralenti façon bande magnétique, quasi-silence pendant le gel, sons d'interface discrets. Pas de musique en attendant les morceaux choisis par Shmoulik.
 - **G2 quater (job a3f98ef3, 144 crédits) retenue.** Shmoulik garde la bouche fermée tout du long (vérifié image par image), secoue la tête de 3,6 à 5,0 s, lève le téléphone à droite de 5,7 à 8,1 s, puis claque des doigts. L'écran Kizzo est incrusté sur le téléphone.
 - **Montage des séquences 1 et 2 (27 s).**
   - Voix off : enregistrée par Shmoulik sur ElevenLabs. « Bloquer les écrans ?! » démarre juste après le « Quoi ?! » de Julie (13,5 s). « Ça marche jamais. » arrive avec Shmoulik, « Il suffit de télécharger Kizzo ! » est calé pour que « Kizzo » tombe quand le téléphone apparaît (20,9 s), et « Regardez… » précède le claquement de doigts.
