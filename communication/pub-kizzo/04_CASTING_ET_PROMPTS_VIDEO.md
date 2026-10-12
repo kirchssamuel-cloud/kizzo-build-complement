@@ -214,7 +214,13 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 |---|---|---|---|
 | G1 | Seedance 2.0 1080p | adc89d35-462e-4611-bd8d-4f144798976b | Prise lancée par erreur de modèle. Correcte mais box invisible et décor différent |
 | G1 | **Seedance 2.5 1080p** | **e5886007-2197-4861-958a-ce22dfaeb45b** | **Retenue** : box visible, décor respecté, cohérence des visages |
-| G2 | Seedance 2.5 1080p, prolongement de G1 | 16f11e2d-7228-4cdd-a064-0c9a475e0840 | En rendu |
+| G2 | Seedance 2.5 1080p, prolongement de G1 | 16f11e2d-7228-4cdd-a064-0c9a475e0840 | **Retenue** après post-production : écran Kizzo incrusté par suivi de l'écran bleu, voix générée remplacée par la vraie voix de Shmoulik nettoyée (débruitage, égalisation, compression, légère acoustique de pièce) et calée sur ses lèvres |
+
+## 4 ter. Leçons de la séquence 2
+
+- **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
+- **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
+- **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
 
 ## 5. Ordre de marche
 
