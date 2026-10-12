@@ -336,6 +336,7 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
     - « Kizzo » à 6,10 s, téléphone levé ;
     - « Regardez » à 6,92 s, puis le claquement à 7,9 s.
   - Le son d'origine de la séquence 1 est intact.
+  - Correction du défaut à 19 s : la retouche des images floues du téléphone qui monte (G2 de 5,67 à 5,83 s) repeignait aussi la fenêtre bleue au bord droit. Elle est maintenant limitée à l'écran du téléphone (zone en bas à droite, grande tache qui ne touche pas le bord).
 - Montage v8 (la voix off coupait presque Julie, et elle était découpée en morceaux).
   - Le son d'origine de la séquence 1 est intact : Shmoulik préfère la voix d'origine de Claire, la correction de « Julie » est abandonnée.
   - Arrêt sur image à 13,55 s, soit 0,15 s après le « Quoi ?! ». Julie ne bouge plus après, donc le raccord avec G2 est invisible (écart moyen de 1,2 sur 255).
