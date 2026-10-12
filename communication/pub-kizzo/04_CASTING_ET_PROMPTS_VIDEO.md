@@ -14,7 +14,7 @@ Les identifiants servent de référence dans les générations vidéo (champ « 
 | Sam | `assets/char_sam.jpg` | 22a69b68-acb5-446f-bdb9-ff4427e424e3 | GPT Image 2.5, à partir du garçon déjà généré par Shmoulik (référence b636c324-8381-4371-b608-c9f6bec4377f) | Validé |
 | Julie | `assets/char_julie.jpg` | d3cd97c9-1748-4d39-8f4a-dada32a78bbd | GPT Image 2.5, à partir du portrait de la première version | Validée (refaite : mains et posture corrigées) |
 | Shmoulik | — | — | Avatar à partir de ses photos | **À faire** |
-| Salle à manger | `assets/loc_salle_a_manger.jpg` | 1e27ae7e-e328-4241-9342-4058f1ccf4ce | Soul Cinema | **À corriger** : supprimer les deux chaises du premier plan et éclaircir un peu (2,5 crédits) |
+| Salle à manger | `assets/loc_salle_a_manger.jpg` | 57918861-dbb7-4634-8126-bb04212714ee | GPT Image 2.5 | Validée (refaite : chaises entières, caméra à hauteur d'adulte, four derrière les enfants) |
 | Chambre de Sam | `assets/loc_chambre_sam.jpg` | 4c6e644d-1f83-4ea4-b409-91d1cf707c2b | Soul Cinema | Validée |
 | Chambre de Julie | `assets/loc_chambre_julie.jpg` | beabd155-2eb2-46e5-a179-8bf81407a0d1 | Soul Cinema | Validée |
 | Vaisseau spatial | `assets/loc_vaisseau_spatial.jpg` | 0306111d-9417-435e-a1e3-195be415d5ce | GPT Image 2.5 | Validé (remplace la station spatiale : Jupiter entière et lisible, cockpit à quatre sièges sur deux rangs) |
