@@ -13,7 +13,7 @@ Les identifiants servent de référence dans les générations vidéo (champ « 
 | Claire | `assets/char_claire.jpg` | ce83c9d8-5631-4dfb-b710-56b377dbbe15 | Soul Cinema, retouche Seedream 5.0 Pro | Validée |
 | Sam | `assets/char_sam.jpg` | 22a69b68-acb5-446f-bdb9-ff4427e424e3 | GPT Image 2.5, à partir du garçon déjà généré par Shmoulik (référence b636c324-8381-4371-b608-c9f6bec4377f) | Validé |
 | Julie | `assets/char_julie.jpg` | d3cd97c9-1748-4d39-8f4a-dada32a78bbd | GPT Image 2.5, à partir du portrait de la première version | Validée (refaite : mains et posture corrigées) |
-| Shmoulik | — | — | Avatar à partir de ses photos | **À faire** |
+| Shmoulik | Non versée au repo (données personnelles) | 7eb71f66-50da-433b-8ba9-32cccb5d97ed | GPT Image 2.5, à partir de 5 photos de Shmoulik | Validée (variante A) |
 | Salle à manger | `assets/loc_salle_a_manger.jpg` | 57918861-dbb7-4634-8126-bb04212714ee | GPT Image 2.5 | Validée (refaite : chaises entières, caméra à hauteur d'adulte, four derrière les enfants) |
 | Chambre de Sam | `assets/loc_chambre_sam.jpg` | 4c6e644d-1f83-4ea4-b409-91d1cf707c2b | Soul Cinema | Validée |
 | Chambre de Julie | `assets/loc_chambre_julie.jpg` | beabd155-2eb2-46e5-a179-8bf81407a0d1 | Soul Cinema | Validée |
@@ -74,7 +74,7 @@ Prix relevés sur ton compte le 12 octobre 2026.
 
 Réglages communs : modèle Seedance 2.5, mode `omni_reference`, résolution 1080p, format 16:9, audio activé, 15 secondes maximum par séquence. Les références passent avec le rôle `image_references`. Kizzo n'a pas de voix : ses questions apparaissent en texte à l'écran au montage, avec un son de notification. Les personnages les lisent en silence avant de répondre.
 
-Le bloc Shmoulik reste à compléter quand sa fiche sera validée.
+Le bloc Shmoulik est complété à partir de sa fiche validée.
 
 ### Bloc CAST commun (à coller dans G2, G3 et G4)
 
@@ -83,7 +83,7 @@ CAST — use these same people throughout the clip; match faces, hair and clothe
 Claire: 40, fair skin, light-brown eyes, chestnut hair in a loose messy bun with a few loose strands, small gold studs. Mustard-yellow apron over a navy crew-neck sweater with sleeves pushed up, mid-blue jeans, white sneakers. Always holds one plain wooden spoon in her right hand. Stern and tired at first, then delighted and competitive.
 Sam: 10, fair skin with a light natural flush, warm brown eyes, soft features, light chestnut-brown medium-length tousled wavy hair with lighter sun-kissed strands. Forest-green hoodie, black over-ear gaming headset around his neck, charcoal joggers, black sneakers. Bored, then amazed.
 Julie: 8, fair skin, green-hazel eyes, golden-blonde hair in two braids with a short fringe. Raspberry-pink sweatshirt under mid-blue denim dungarees, white sneakers. Sly, quick, deadpan.
-Shmoulik: [À COMPLÉTER APRÈS VALIDATION DE SA FICHE — âge, peau, yeux, cheveux, barbe, tenue]. Relaxed presenter, deadpan humour, often looks straight into the lens. The family never sees him and never looks at him.
+Shmoulik: mid-twenties man, fair skin with a warm tone, short light-brown hair with strawberry-blond highlights swept to the side, light green-grey eyes, short light-brown stubble beard and moustache, athletic slim build. Vivid orange overshirt worn open over a plain white T-shirt, dark-indigo jeans, white sneakers. Relaxed presenter, deadpan humour, often looks straight into the lens. The family never sees him and never looks at him.
 
 TABLET — one unbranded tablet in a vivid orange matte silicone kids' case with a carry handle on the top edge. Its screen always faces the person holding it; only the orange back faces the camera. Never show its screen. Never duplicate it.
 SEATING — around every table, as seen from the establishing camera on the empty near side: Sam far side LEFT, Julie far side RIGHT, Claire at the LEFT end, Shmoulik at the RIGHT end. In the spaceship: Sam in the front-left pilot seat, Julie in the front-right pilot seat, Claire in the back-left seat, Shmoulik in the back-right seat. Change camera positions, never seats.
@@ -209,6 +209,13 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 ```
 
 ---
+
+## 4 bis. Prises réalisées
+
+| Séquence | Modèle | Identifiant | Statut |
+|---|---|---|---|
+| G1 | Seedance 2.0 1080p | adc89d35-462e-4611-bd8d-4f144798976b | Prise lancée par erreur de modèle. Correcte mais box invisible et décor différent |
+| G1 | **Seedance 2.5 1080p** | **e5886007-2197-4861-958a-ce22dfaeb45b** | **Retenue** : box visible, décor respecté, cohérence des visages |
 
 ## 5. Ordre de marche
 
