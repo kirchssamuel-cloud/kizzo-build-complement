@@ -273,6 +273,7 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
+- **G2 ter (job 77113c57, 144 crédits)** : voix inventée par Seedance, sans référence audio. Voix et lèvres sont générées ensemble, sans effet de doublage. Les quatre plans fixes sont respectés, il n'y a que les trois répliques prévues, et la notification tombe à 8,4 s. L'écran Kizzo est incrusté de 6,9 à 8,1 s ; le seuil de teinte a été resserré pour ne pas confondre l'écran avec la fenêtre bleue derrière.
 - **G2 bis (job d8872569, 144 crédits) rejetée** : même avec le vrai vocal en référence audio, Seedance ne reproduit pas la voix de Shmoulik. La hauteur concorde, mais pas le timbre. Le recul de caméra demandé n'a pas été respecté non plus. Conclusion : une personne réelle qui parle face caméra se filme en vrai. L'IA sert à la famille, aux décors et aux voyages.
 
 ## 5. Ordre de marche
