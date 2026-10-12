@@ -328,7 +328,12 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
-- **Montage v7 des séquences 1 et 2 (28,9 s), version en cours : arrêt sur image sec.**
+- **Montage v8 des séquences 1 et 2 (27,1 s), version en cours.**
+  - Le son d'origine de la séquence 1 est intact : Shmoulik préfère la voix d'origine de Claire, la correction de « Julie » est abandonnée.
+  - Arrêt sur image à 13,55 s, soit 0,15 s après le « Quoi ?! ». Julie ne bouge plus après, donc le raccord avec G2 est invisible (écart moyen de 1,2 sur 255).
+  - « Attends… » à 13,63 s, puis « Bloquer les écrans ?! » à 15,13 s, au moment où démarre l'entrée de Shmoulik.
+  - « Ça marche jamais. » arrive dès son plan face caméra (G2 à 2,75 s), « Kizzo » à 5,80 s, « Regardez… » à 6,70 s, et le claquement à 7,9 s.
+- Montage v7 (pause trop tardive, 1,6 s après le « Quoi ?! »).
   - La séquence 1 joue jusqu'à sa dernière image (15,0 s), qui se fige d'un coup avec une rayure de disque, un clac, un coup de zoom et l'icône pause.
   - « Attends, attends, attends, attends… » à 15,3 s, puis « Bloquer les écrans ?! » à 16,9 s. Shmoulik entre dans la scène figée dès 16,95 s.
   - Un petit symbole pause, sans libellé, reste dans le coin jusqu'au claquement de doigts.
