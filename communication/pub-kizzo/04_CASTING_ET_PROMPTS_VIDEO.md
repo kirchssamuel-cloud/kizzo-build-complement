@@ -345,3 +345,19 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 3. **G1** en Seedance 2.5 1080p. Elle ne dépend pas de Shmoulik.
 4. **G2, G3, G4**, dans l'ordre, une prise chacune.
 5. **Montage** : voix définitives, synchronisation labiale des gros plans, questions de Kizzo en texte à l'écran, incrustation des écrans réels, carton final, version 9:16.
+
+## 8. Voix off narrateur (ElevenLabs, voix « Père Noël » de Shmoulik)
+
+Une génération par ligne, avec la même voix et les mêmes réglages. On écrit « Kidzo » pour la prononciation ; à l'écran, on garde « Kizzo ».
+
+| # | Moment | Texte |
+|---|---|---|
+| 1 | Ouverture, avant que Claire appelle les enfants | `[warmly] Dix-neuf heures. L'heure des devoirs… [amused] en théorie.` |
+| 2 | Gel de l'image, pause | `[amused] Attends, attends, attends, attends… Bloquer les écrans ?!` |
+| 3 | Shmoulik arrive | `[scoffs] Ça marche jamais.` |
+| 4 | Il lève le téléphone | `[excited] Il suffit de télécharger Kidzo ! [warmly] Regardez…` |
+| 5 | Séquence 3, Sam lit la question | `[curious] Une question… une bonne réponse…` |
+| 6 | Arrivée dans le vaisseau | `[excited] et c'est parti pour l'aventure !` |
+| 7 | Séquence 4, Claire répond 54 | `[amused] Cinquante-six, Claire. Cinquante-six.` |
+| 8 | Retour à la maison, fumée du four | `[sniffs] Ça sent le brûlé…` |
+| 9 | Signature finale sur le logo | `[warmly] Avec Kidzo, pour débloquer ton temps d'écran, il suffit d'apprendre tes leçons… [amused] et pour certains… d'apprendre à cuisiner.` |
