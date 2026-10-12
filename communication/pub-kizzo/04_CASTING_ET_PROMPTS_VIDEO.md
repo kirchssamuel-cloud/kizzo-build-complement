@@ -328,7 +328,11 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
-- **Montage v5 des séquences 1 et 2 (26,5 s), version en cours.**
+- **Montage v6 des séquences 1 et 2 (29 s), version en cours.**
+  - Scratch sur les quatre « Attends » (14,3 → 15,76 s) : à chaque « attends », l'image recule de 0,45 s puis revient. L'avance ralentit jusqu'à la dernière image de la séquence 1, et le son suit exactement la position de l'image.
+  - Pause sur la dernière image de G1 (identique à la première de G2), puis « Bloquer les écrans ?! ».
+  - La séquence 2 démarre depuis son début : Shmoulik entre dans la scène figée, puis vient le plan face caméra et la lecture au claquement de doigts.
+- Montage v5 (abandonné : Shmoulik apparaissait d'un coup).
   - La réaction des enfants respire 0,9 s après le « Quoi ?! ».
   - Rembobinage dans le même plan, sur les quatre « Attends » (14,3 → 15,76 s) : l'image ralentit jusqu'à l'arrêt sur Julie, bouche ouverte (image de 12,8 s).
   - Pause, puis « Bloquer les écrans ?! » 0,06 s après.
