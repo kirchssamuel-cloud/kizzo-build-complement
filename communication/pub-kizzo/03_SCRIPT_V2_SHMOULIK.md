@@ -64,17 +64,21 @@ Une voix chaleureuse et enjouée, ni robotique ni enfantine, qui sort de la tabl
 
 ## 4. Le script
 
-### Séquence A — L'appel et le verdict (0 à 13 s)
+Les séquences B à E gardent leur déroulé ci-dessous. Leurs timecodes exacts, resserrés à 15 secondes par génération pour Seedance 2.0, sont dans le fichier 04.
+
+### Séquence A — L'appel, le Wi-Fi et le verdict (0 à 15 s)
 
 | Temps | Image | Son |
 |---|---|---|
-| 0,0–2,5 | Cuisine, soir. Claire remue une sauce, cuillère en bois en main. Derrière elle, le four allumé, des lasagnes dedans. Elle se tourne vers le couloir et crie | CLAIRE : « Sam ! Julie ! Les devoirs ! » |
-| 2,5–3,7 | Chambre de Sam : casque sur les oreilles, manette en main, visage éclairé en bleu par l'écran. Il n'entend rien | Bruits de jeu étouffés |
-| 3,7–4,9 | Chambre de Julie : allongée sur son lit, écouteurs, tablette, elle rigole toute seule | Petite musique de jeu |
-| 4,9–6,5 | Retour sur Claire. Elle pose la casserole, plisse les yeux | CLAIRE, glaciale : « Salle à manger. Tout de suite. » |
-| 6,5–8,5 | Plan large de la salle à manger. Sam et Julie assis côte à côte, la mine coupable. Claire debout au bout de la table, cuillère en bois pointée vers eux. Elle leur prend la tablette | — |
-| 8,5–10,5 | Claire, plan moyen | CLAIRE : « Deux heures d'écran. C'est fini. » |
-| 10,5–13,0 | Gros plan sur les deux têtes : Sam s'écroule le front sur la table, Julie lève les yeux au ciel, dégoûtée | SAM et JULIE : « Quoi ?! » |
+| 0,0–2,3 | Cuisine, soir. Claire remue une sauce, cuillère en bois en main, les lasagnes au four derrière elle. Elle se tourne vers le couloir et crie | CLAIRE : « Sam ! Julie ! Les devoirs ! » |
+| 2,3–3,3 | Chambre de Sam : casque sur les oreilles, manette en main, visage éclairé en bleu. Il n'entend rien | Bruits de jeu étouffés |
+| 3,3–4,3 | Chambre de Julie : allongée sur son lit, écouteurs, tablette. Elle rigole toute seule | Petite musique de jeu |
+| 4,3–6,0 | Retour sur Claire. Elle soupire, va vers la box internet posée près du frigo et débranche la prise. Les voyants s'éteignent. Elle ne dit rien | Petit clic électrique |
+| 6,0–6,8 | Chambre de Sam : le jeu se fige. Il arrache son casque | SAM : « Hé ! » |
+| 6,8–7,6 | Chambre de Julie : elle se redresse d'un coup, les yeux sur sa tablette | JULIE : « Maman ! » |
+| 7,6–9,6 | Plan large de la salle à manger. Sam et Julie assis côte à côte, boudeurs, Sam serre encore sa manette. Claire debout au bout de la table, cuillère pointée vers eux. Elle prend la tablette des mains de Julie | Silence |
+| 9,6–11,8 | Claire, plan moyen, tablette contre la poitrine | CLAIRE : « Deux heures d'écran. C'est fini. » |
+| 11,8–15,0 | Gros plan sur les deux enfants : Sam s'écroule le front sur la table, Julie lève les yeux au ciel | SAM et JULIE : « Quoi ?! » |
 
 ### Séquence B — Shmoulik (13 à 23 s)
 
@@ -121,17 +125,14 @@ Accroche dès la 1re seconde : « Sam ! Julie ! Les devoirs ! » sur les deux pl
 
 ## 6. Découpage pour la génération
 
-Seedance génère des scènes de 15 à 19 s. On découpe en cinq générations, chacune avec ses références.
+Seedance 2.0 génère 15 secondes au maximum. On découpe en quatre générations, une seule prise chacune.
 
 | Génération | Séquences | Durée | Décors | Personnages |
 |---|---|---|---|---|
-| G1 | A | 13 s | Cuisine, chambre de Sam, chambre de Julie | Claire, Sam, Julie |
+| G1 | A | 15 s | Cuisine et salle à manger, chambre de Sam, chambre de Julie | Claire, Sam, Julie |
 | G2 | B | 10 s | Salle à manger | Les quatre |
-| G3 | C | 17 s | Salle à manger, vaisseau spatial, Rome | Les quatre |
-| G4 | D | 12 s | Rome, salle à manger | Les quatre |
-| G5 | E | 3 s | Salle à manger | Les quatre |
-
----
+| G3 | C | 15 s | Salle à manger, vaisseau spatial, Rome | Les quatre |
+| G4 | D et E | 15 s | Rome, salle à manger | Les quatre |
 
 ## 7. Les points techniques à tester en premier
 
