@@ -34,10 +34,10 @@ Généré avec Seed Audio 1.0. Les voix de Claire, Sam et Julie sont déduites d
 
 | Personnage | Proposition A | Proposition B | Choix |
 |---|---|---|---|
-| Claire | 28bcf88a-b72c-447c-a2f5-c9d9a45a73de | 0241efbf-8c31-40fd-a3a3-3d1d83bd9b9a | À choisir |
-| Sam | b449101c-9137-4b87-ada6-5ec0ee523b3b | 2c60d077-246a-4023-b06d-fcf99289356f | À choisir |
-| Julie | ab49b13f-2e07-4bf9-8a63-8d1cd335a301 | 92de5169-0431-4c75-9900-6919cc8a083e | À choisir |
-| Kizzo | 104683d3-73bd-43b5-bfe5-28d68965f066 (voix « Elodie ») | ec6969ff-79f2-4b4e-9b61-8434d0fc8c79 (voix « Celine ») | À choisir |
+| Claire | 28bcf88a-b72c-447c-a2f5-c9d9a45a73de | 0241efbf-8c31-40fd-a3a3-3d1d83bd9b9a | **B** |
+| Sam | b449101c-9137-4b87-ada6-5ec0ee523b3b | 2c60d077-246a-4023-b06d-fcf99289356f | **B** |
+| Julie | ab49b13f-2e07-4bf9-8a63-8d1cd335a301 | 92de5169-0431-4c75-9900-6919cc8a083e | **A** |
+| Kizzo | — | — | **Abandonné** : pas de voix, questions en texte à l'écran |
 | Shmoulik | Sa vraie voix, à enregistrer dans Higgsfield | — | À faire |
 
 ## 2. Ce que coûte la vidéo
@@ -72,7 +72,7 @@ Prix relevés sur ton compte le 12 octobre 2026.
 
 ## 4. Les prompts vidéo
 
-Réglages communs : modèle Seedance 2.0, mode `std`, résolution 1080p, format 16:9, audio activé, genre `comedy`. Les références passent avec le rôle `image_references`. La voix de Kizzo n'est **jamais** générée : elle sera ajoutée au montage, donc les prompts laissent un silence à sa place.
+Réglages communs : modèle Seedance 2.0, mode `std`, résolution 1080p, format 16:9, audio activé, genre `comedy`. Les références passent avec le rôle `image_references`. Kizzo n'a pas de voix : ses questions apparaissent en texte à l'écran au montage, avec un son de notification. Les personnages les lisent en silence avant de répondre.
 
 Le bloc Shmoulik reste à compléter quand sa fiche sera validée.
 
@@ -169,9 +169,9 @@ ROME — as Image 7: a table with a red-and-white checked tablecloth and four pl
 LOOK — clean modern digital cinema, 24–35mm lenses, natural skin texture, rich colour, crisp focus. Physically plausible camera moves. No visible CGI.
 
 SHOTS
-0.0–3.3s: Medium close-up, 35mm, slow push-in, on Sam seated on the far side left of the dining table, holding the orange tablet in both hands, screen toward him. A soft chime at 0.2s. He listens silently from 0.3s to 2.0s, eyes on the screen, thinks with his eyes up from 2.0s, then says confidently at 2.4–3.0s: "Jupiter !" He taps the screen with his right index finger at exactly 3.3s.
+0.0–3.3s: Medium close-up, 35mm, slow push-in, on Sam seated on the far side left of the dining table, holding the orange tablet in both hands, screen toward him. A soft chime at 0.2s. He reads the question silently on the screen from 0.3s to 2.0s, thinks with his eyes up from 2.0s, then says confidently at 2.4–3.0s: "Jupiter !" He taps the screen with his right index finger at exactly 3.3s.
 3.3–7.3s: Hard match cut on the tap into the spaceship cockpit. The camera is now at the dashboard looking back at Sam, who sits in the front-left pilot seat in the same pose; match his face size, frame position, lens and push-in speed across the cut. Only location, light and sound change; Jupiter's warm amber light falls on his face and the white seat. At 3.8–4.5s he looks up past the camera and whispers: "Wouah…" From 4.7s the camera rises and arcs smoothly over the seats to end behind the back row, revealing the whole cockpit with Jupiter filling the windscreen: Julie in the front-right pilot seat, Claire in the back-left seat, Shmoulik in the back-right seat, everyone leaning toward the windscreen, staring at Jupiter. At 5.8s the wooden spoon slips out of Claire's hand and floats slowly upward between the seats, turning in the air.
-7.3–10.3s: Medium two-shot, 35mm, from the dashboard looking back at Sam and Julie in the two front pilot seats, their faces lit by Jupiter's amber glow, Claire and Shmoulik soft in the back row. At 7.4s Julie takes the tablet from Sam and says at 7.4–7.9s: "À moi !" She holds it screen toward herself. A soft chime at 8.0s. She listens silently from 8.1s to 9.4s, then says at 9.5–10.0s: "Rome !" She taps the screen at exactly 10.3s.
+7.3–10.3s: Medium two-shot, 35mm, from the dashboard looking back at Sam and Julie in the two front pilot seats, their faces lit by Jupiter's amber glow, Claire and Shmoulik soft in the back row. At 7.4s Julie takes the tablet from Sam and says at 7.4–7.9s: "À moi !" She holds it screen toward herself. A soft chime at 8.0s. She reads the question silently on the screen from 8.1s to 9.4s, then says at 9.5–10.0s: "Rome !" She taps the screen at exactly 10.3s.
 10.3–15.0s: Hard match cut on the tap to the Rome terrace. Match Julie's pose, face size, frame position and lens across the cut; only location, light and sound change. Same seats around the checked-tablecloth table, the Colosseum behind the far side. At 10.9s the wooden spoon drops from above into Claire's open right hand. From 11.1s the camera pulls back to the wide from the empty near side. Claire looks around, amazed and delighted, and says at 12.8–14.4s: "Mais c'est génial, ce truc !" Hold until 15.0s.
 
 SOUND — close, dry French dialogue, lip-synced, each line once at its stated time. Two soft app chimes at 0.2s and 8.0s, and no voice from the tablet. Dining room: quiet room tone. Spaceship: low engine hum, soft cockpit beeps and an airy whoosh on the cut. Rome: lively street ambience, distant chatter, a passing scooter. No music, no narrator, no captions, no watermarks.
@@ -197,7 +197,7 @@ LOOK — clean modern digital cinema, 24–35mm lenses, natural skin texture, ri
 
 SHOTS
 0.0–2.5s: Wide from the empty near side of the Rome table. Claire, at the left end, reaches over and takes the tablet from Julie with her left hand, thrilled, and says at 0.2–1.2s: "À moi, à moi !" From 1.3s Sam and Julie get up and lean in behind Claire's shoulders to watch.
-2.5–5.3s: Medium close-up, 35mm, on Claire holding the tablet screen toward herself, the kids' curious faces over her shoulders, the Colosseum softly behind. A soft chime at 2.6s. She listens silently from 2.7s to 4.0s, then answers instantly and very sure of herself at 4.1–5.0s: "Cinquante-quatre !" She taps the screen at exactly 5.2s.
+2.5–5.3s: Medium close-up, 35mm, on Claire holding the tablet screen toward herself, the kids' curious faces over her shoulders, the Colosseum softly behind. A soft chime at 2.6s. She reads the question silently on the screen from 2.7s to 4.0s, then answers instantly and very sure of herself at 4.1–5.0s: "Cinquante-quatre !" She taps the screen at exactly 5.2s.
 5.3–6.0s: Same framing. A short error buzzer at 5.3s. Sam and Julie wince at the same time.
 6.0–7.8s: Hard match cut to the dining room, same framing, same poses: Claire holding the tablet, the kids leaning behind her shoulders, warm evening light now. Sam and Julie say together, deadpan, at 6.3–7.1s: "Cinquante-six."
 7.8–10.6s: Wide from the empty near side of the dining table. Thick grey smoke pours from the oven door behind the table. At 8.0s a smoke alarm beeps loudly. Claire spins toward the kitchen and cries at 8.3–9.3s: "Mes lasagnes !" She rushes to the oven, spoon in hand. Shmoulik stands at the right end of the table.
@@ -216,4 +216,4 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 2. **Shmoulik** : photos sur Higgsfield, fiche personnage, bloc CAST complété, enregistrement de sa voix.
 3. **G1** en Seedance 2.0 1080p. Elle ne dépend pas de Shmoulik.
 4. **G2, G3, G4**, dans l'ordre, une prise chacune.
-5. **Montage** : voix définitives, synchronisation labiale des gros plans, voix de Kizzo, incrustation des écrans réels, carton final, version 9:16.
+5. **Montage** : voix définitives, synchronisation labiale des gros plans, questions de Kizzo en texte à l'écran, incrustation des écrans réels, carton final, version 9:16.

@@ -20,7 +20,7 @@ Durée : master de 58 s environ (site, YouTube, LinkedIn). Version courte de 30 
 2. **Une règle unique pour les voyages.** Dans ta version, Sam voyage seul puis tout le monde part à Rome. Le spectateur doit comprendre la règle en une fois : **à chaque bonne réponse, toute la famille voyage.** C'est aussi plus simple à produire, car les places restent les mêmes partout.
 3. **Deux voyages, pas « etc. ».** Chaque univers coûte un décor, des prises et de l'attention. Deux voyages plus le retour raté, c'est le bon rythme : on comprend au premier, on s'amuse au deuxième, on rit au troisième.
 4. **Une chute qui boucle avec le début.** La mère cuisine au début. Quand elle se trompe, la famille revient d'un coup… et les lasagnes ont brûlé. La question qu'elle rate est « 7 × 8 », la multiplication que tous les parents ratent. Ironie : elle voulait que les enfants fassent leurs devoirs.
-7. **C'est Kizzo qui pose les questions.** Les trois questions sortent de la tablette, avec la voix de Kizzo, et s'affichent à l'écran au montage. Les personnages ne font que répondre. Le produit devient un personnage à part entière.
+7. **C'est Kizzo qui pose les questions.** Les trois questions s'affichent à l'écran, en texte incrusté au montage, avec un son de notification. Les personnages ne font que répondre. Le produit devient un personnage à part entière.
 5. **La cuillère en bois.** La mère la garde en main depuis la cuisine. Elle flotte dans l'espace, elle reste dans sa main à Rome. C'est le gag visuel qui relie les mondes, comme le téléphone rouge dans la pub de référence.
 6. **Le début plus court.** L'appel, les deux chambres et la convocation tiennent en 6 secondes. Sur les réseaux, on a 2 secondes pour accrocher.
 
@@ -40,8 +40,8 @@ La mère demande de faire les devoirs, et la solution présentée est Kizzo. Il 
 
 Pourquoi ces silhouettes : quatre couleurs dominantes bien distinctes (moutarde, vert, rose, orange). On reconnaît chaque personnage même de loin ou de dos.
 
-**La voix de Kizzo**
-Une voix chaleureuse et enjouée, ni robotique ni enfantine, qui sort de la tablette. Elle pose les trois questions. Elle est enregistrée à part et posée au montage, pour la contrôler parfaitement et la réutiliser dans tout le contenu Kizzo. Au buzzer de Claire, elle peut ajouter : « Oups… retour à la maison ! »
+**Kizzo n'a pas de voix**
+Les trois questions apparaissent à l'écran en texte incrusté au montage, avec un son de notification. Les personnages les lisent en silence avant de répondre.
 
 **Accessoires fil rouge**
 - La tablette de Sam : coque silicone orange #F97316 avec poignée, sans marque.
@@ -93,9 +93,9 @@ Les séquences B à E gardent leur déroulé ci-dessous. Leurs timecodes exacts,
 
 | Temps | Image | Son |
 |---|---|---|
-| 23,0–27,0 | Sam, la tablette en main, écoute la question, réfléchit, répond et tape | VOIX DE KIZZO, depuis la tablette : « Quelle est la plus grande planète du système solaire ? » SAM : « Jupiter ! » Tap. Question incrustée à l'écran |
+| 23,0–27,0 | Sam, la tablette en main, écoute la question, réfléchit, répond et tape | QUESTION DE KIZZO À L'ÉCRAN : « Quelle est la plus grande planète du système solaire ? » SAM : « Jupiter ! » Tap. Question incrustée à l'écran |
 | 27,0–31,0 | **Raccord sur le tap** : même cadre, même mouvement, Sam est assis au poste de pilotage d'un vaisseau spatial, éclairé par la lueur orangée de Jupiter. La caméra s'élève et passe derrière les sièges : Jupiter remplit la verrière, toute la famille et Shmoulik sont là, penchés vers elle, bouche bée. La cuillère en bois s'échappe de la main de Claire et flotte | SAM : « Wouah… » Bourdonnement des moteurs |
-| 31,0–34,5 | Julie prend la tablette à son frère, écoute la question et tape | JULIE : « À moi ! » VOIX DE KIZZO : « Quelle est la capitale de l'Italie ? » JULIE : « Rome ! » Tap. Question incrustée à l'écran |
+| 31,0–34,5 | Julie prend la tablette à son frère, écoute la question et tape | JULIE : « À moi ! » QUESTION DE KIZZO À L'ÉCRAN : « Quelle est la capitale de l'Italie ? » JULIE : « Rome ! » Tap. Question incrustée à l'écran |
 | 34,5–40,0 | **Raccord sur le tap** : terrasse de trattoria au soleil, le Colisée derrière. La cuillère est retombée dans la main de Claire. Elle regarde autour d'elle, émerveillée | CLAIRE : « Mais c'est génial, ce truc ! » Ambiance de rue italienne |
 
 ### Séquence D — Le tour de Claire (40 à 52 s)
@@ -103,7 +103,7 @@ Les séquences B à E gardent leur déroulé ci-dessous. Leurs timecodes exacts,
 | Temps | Image | Son |
 |---|---|---|
 | 40,0–43,0 | Claire arrache la tablette des mains de Julie, ravie | CLAIRE : « À moi, à moi ! » |
-| 43,0–46,0 | Claire, la tablette en main, les enfants penchés par-dessus ses épaules. Elle répond du tac au tac, très sûre d'elle, et tape | VOIX DE KIZZO : « Combien font sept fois huit ? » CLAIRE : « Cinquante-quatre ! » Question incrustée à l'écran |
+| 43,0–46,0 | Claire, la tablette en main, les enfants penchés par-dessus ses épaules. Elle répond du tac au tac, très sûre d'elle, et tape | QUESTION DE KIZZO À L'ÉCRAN : « Combien font sept fois huit ? » CLAIRE : « Cinquante-quatre ! » Question incrustée à l'écran |
 | 46,0–47,0 | Les deux enfants et Shmoulik grimacent | Buzzer d'erreur |
 | 47,0–49,0 | **Coupe sèche** : retour dans la salle à manger, même cadre, même pose. Sam et Julie, impassibles, en chœur | SAM et JULIE : « Cinquante-six. » |
 | 49,0–52,0 | Fumée qui sort du four au fond. Le détecteur de fumée sonne. Claire se retourne | Bip strident. CLAIRE : « Mes lasagnes ! » |
@@ -139,6 +139,6 @@ Seedance 2.0 génère 15 secondes au maximum. On découpe en quatre génération
 - **Shmoulik.** Il faut 10 à 20 photos de lui sur Higgsfield : visage de face, de profil, en pied, lumière naturelle, sans lunettes de soleil. On en tire un avatar puis une fiche personnage. C'est la première chose à valider.
 - **Le gel d'image.** On demande à Seedance « tout le monde immobile comme une vidéo en pause, sauf Shmoulik ». Si ça ne tient pas, plan B : on fige vraiment l'image au montage et on incruste Shmoulik filmé seul.
 - **Les écrans.** La tablette et le téléphone ne montrent jamais leur interface dans les plans générés. Pour le plan où Shmoulik montre son téléphone, on demande un écran vert uni et on incruste les vrais écrans au montage.
-- **La voix de Kizzo.** Dans les prompts vidéo, on décrit seulement le personnage qui écoute la tablette, sans faire parler la voix. Elle est ajoutée au montage. À vérifier avec Samuel et l'agence : si l'app ne lit pas les questions à voix haute, la pub ne doit pas le promettre. Dans ce cas, on garde la question à l'écran avec un simple son de notification.
+- **Les questions de Kizzo.** Elles s'affichent en texte à l'écran au montage, dans la charte Kizzo, avec un son de notification. Dans les prompts vidéo, le personnage lit en silence, et l'écran de la tablette n'est jamais visible.
 - **Les répliques de Shmoulik.** Ce sont les plus longues. Si la synchronisation labiale sort mal, on enregistre sa vraie voix et on la pose sur un plan où il bouge sans parler face caméra.
 - **Quatre personnages cohérents dans le même plan.** C'est le double de la difficulté d'un duo. On s'appuie sur le plan large d'ouverture et les places fixes autour de la table.
