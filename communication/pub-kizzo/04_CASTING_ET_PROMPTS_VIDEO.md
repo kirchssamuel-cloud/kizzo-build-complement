@@ -127,7 +127,7 @@ CONTINUITY — same faces, hair and clothes in every shot. Claire's spoon always
 
 ### G2 bis — Le gel d'image et Shmoulik, avec sa vraie voix (12 s)
 
-Régénération de G2. Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Référence audio : **le vocal réel de Shmoulik, nettoyé** (`voix_shmoulik_reference.wav`, à déposer sur Higgsfield). Plus de voix clonée.
+Régénération de G2. Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Référence audio : **le vocal réel de Shmoulik, nettoyé** (`voix_shmoulik_reference.wav`, media e53e10b7-ba44-4f5c-9513-2afc94abc409). Plus de voix clonée.
 
 Changements par rapport à G2 : la réplique 1 devient « Moi, bloquer les écrans ? Ça marche jamais. », la voix vient du vrai vocal, le jeu est explicitement naturel, et le téléphone est un modèle noir sans coque, sans geste sur l'écran.
 
