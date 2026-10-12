@@ -13,7 +13,7 @@ bootPlayer2D({
   start: T.start,
   render,
   subframes,
-  shutter: 0.75 / 60,
+  shutter: 0.5 / 60,
   scheduleSoundtrack,
   renderSoundtrackWav,
   preload: loadVoice,

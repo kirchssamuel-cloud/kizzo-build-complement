@@ -28,12 +28,17 @@ const GO = { x: 16, y: 584, w: 160, h: 44 }; // bouton « C'est parti »
 const LATER = { x: 188, y: 584, w: 138, h: 44 };
 const SLOT = { x: 30, y: 386, w: 84, h: 112 }; // logement de la carte dans la réponse
 // bol (monde)
-const BOWL = { x: 540, y: 1120, r: 190 };
+const BOWL = { x: 540, y: 1130, r: 215 };
+/** Instant où la carte choisie se pose dans la bulle de réponse. */
+const CARD_LAND = E.reply1 + 0.14;
 // cartes (monde)
 const CARD = { w: 432, h: 576, r: 36, pitch: 472, y: 1120 };
 // logo de fin (écran)
 const MARK = { x: 285, y: 960, h: 230 };
 const CHILD = { x: MARK.x + LOGO.child.c[0] * MARK.h, y: MARK.y - LOGO.child.c[1] * MARK.h, r: LOGO.child.r * MARK.h };
+
+/** Instants où chaque mot de la phrase de marque s'allume (calés sur la voix off). */
+const TAG_AT = [14.0, 14.2, 14.45, 14.85, 15.05, 15.45, 15.65];
 
 // ---------------------------------------------------------------------------
 // Helpers temps
@@ -44,11 +49,11 @@ const frac = (t, t0, dur, f = ease.outQuint) => (t < t0 ? 0 : f(clamp((t - t0) /
 // ---------------------------------------------------------------------------
 // Caméra : clés [t, zoom, x, y, easing vers la clé suivante]
 const CAM = [
-  [0, 1.95, 540, 1040, ease.inOutSine],
-  [E.send, 2.3, 540, 1040, ease.outCubic],
-  [E.send + 0.75, 1.0, 540, 1000, ease.inOutSine],
-  [E.drop, 1.0, 540, 1040, ease.inOutSine],
-  [E.shrink, 1.06, 540, 1060, ease.inOutSine],
+  [0, 1.95, 540, 1012, ease.inOutSine],
+  [E.send, 2.02, 540, 994, ease.inOutCubic],
+  [E.send + 0.9, 1.0, 540, 1000, ease.inOutSine],
+  [E.drop, 1.2, 540, 1010, ease.inOutSine],
+  [E.shrink, 1.24, 540, 1090, ease.inOutSine],
   [E.page, 1.6, 540, 1090, ease.inOutCubic],
   [E.page + 0.6, 2.0, 470, 1200, null],
 ];
@@ -223,9 +228,9 @@ function drawScreen(ctx, t) {
   ctx.fillRect(0, 120, 390, 1.5);
   // message précédent de Maman
   ctx.fillStyle = C.bubbleGray;
-  rr(ctx, 16, 136, 232, 44, 20);
+  rr(ctx, 16, 150, 232, 44, 20);
   ctx.fill();
-  txt(ctx, T.prev, 32, 164, { size: 17, weight: 500, color: C.ink, font: F_BODY });
+  txt(ctx, T.prev, 32, 178, { size: 17, weight: 500, color: C.ink, font: F_BODY });
 
   // --- réponse de Kizzo (révélée quand l'orange se rétracte)
   if (t >= E.sys) {
@@ -246,10 +251,17 @@ function drawScreen(ctx, t) {
     ctx.fill();
     icon.logo(ctx, 39, 395, 18, { body: '#fff', child: C.navy });
     txt(ctx, 'Kizzo', 58, 401, { size: 12, weight: 800, color: C.orangeDeep, font: F_BODY, ls: 0.6 });
-    // logement de la carte (vide ; la carte y arrive par le calque des cartes)
+    // logement de la carte ; une fois posée, la carte fait partie de la bulle
     ctx.fillStyle = '#DDD9D0';
     rr(ctx, SLOT.x, SLOT.y + 28, SLOT.w, SLOT.h - 28, 12);
     ctx.fill();
+    if (t >= CARD_LAND) {
+      ctx.save();
+      ctx.translate(SLOT.x + SLOT.w / 2, SLOT.y + SLOT.h / 2);
+      ctx.scale(SLOT.w / CARD.w, SLOT.w / CARD.w);
+      drawCardFace(ctx, T.cards[2], CARD.w, CARD.h, 0);
+      ctx.restore();
+    }
     T.reply1.forEach((l, i) => rise(ctx, l, 128, 440 + i * 24, { size: 16, weight: 600, color: C.ink, font: F_BODY }, frac(t, E.reply1 + 0.08 + i * 0.07, 0.4), 24));
     ctx.restore();
   }
@@ -303,13 +315,13 @@ function drawScreen(ctx, t) {
     let lastLine = 0, caretX = 34;
     for (const kc of KEYS) {
       if (t < kc.at) break;
-      const s = lerp(0.55, 1, pop(t, kc.at, 520, 20));
+      const s = lerp(0.82, 1, pop(t, kc.at, 900, 30));
       const wch = ctx.measureText(kc.ch).width;
       const y = cy0 + 38 + kc.li * 26;
       ctx.save();
-      ctx.translate(xs[kc.li] + wch / 2, y - 6);
+      ctx.translate(xs[kc.li] + wch / 2, y);
       ctx.scale(s, s);
-      txt(ctx, kc.ch, -wch / 2, 6, { size: 17, weight: 600, color: C.ink, font: F_BODY });
+      txt(ctx, kc.ch, -wch / 2, 0, { size: 17, weight: 600, color: C.ink, font: F_BODY });
       ctx.restore();
       xs[kc.li] += wch;
       lastLine = kc.li;
@@ -320,8 +332,8 @@ function drawScreen(ctx, t) {
       ctx.fillRect(caretX + 1, cy0 + 22 + lastLine * 26, 2, 22);
     }
   } else txt(ctx, 'Message', 34, cy0 + 38, { size: 17, weight: 500, color: '#A8ADB7', font: F_BODY });
-  if (t < E.bowl) {
-    const press = 1 - 0.18 * Math.max(0, 1 - pop(t, E.send, 260, 12)) * (t >= E.send ? 1 : 0);
+  if (t < E.bowl || t >= E.sys) {
+    const press = t >= E.sys ? pop(t, E.sys, 200, 12) : 1 - 0.18 * Math.max(0, 1 - pop(t, E.send, 260, 12)) * (t >= E.send ? 1 : 0);
     ctx.save();
     ctx.translate(SEND.x, sendY(t));
     ctx.scale(press, press);
@@ -342,7 +354,7 @@ function drawScreen(ctx, t) {
     ctx.stroke();
     ctx.restore();
     // onde cyan à l'envoi
-    if (t >= E.send) {
+    if (t >= E.send && t < E.bowl) {
       const kr = frac(t, E.send, 0.6, ease.outCubic);
       ctx.save();
       ctx.globalAlpha = (1 - kr) * 0.9;
@@ -358,8 +370,8 @@ function drawScreen(ctx, t) {
   if (t >= E.cursor && t < E.page) {
     const ka = k(t, E.cursor, E.click, ease.inOutCubic);
     const kb = frac(t, E.click + 0.35, 0.5, ease.inCubic);
-    const cx = lerp(lerp(300, GO.x + GO.w / 2 + 10, ka), 420, kb);
-    const cy = lerp(lerp(770, GO.y + GO.h / 2 + 8, ka), 400, kb);
+    const cx = lerp(lerp(300, GO.x + GO.w / 2 + 10, ka), 150, kb);
+    const cy = lerp(lerp(770, GO.y + GO.h / 2 + 8, ka), 900, kb);
     const press = t >= E.click ? lerp(0.78, 1, pop(t, E.click, 300, 14)) : 1;
     ctx.save();
     ctx.translate(cx, cy);
@@ -502,7 +514,7 @@ function drawBowl(ctx, t) {
   // matières : paraboles depuis le bord du bol, coupées sous le bord (elles retombent dedans)
   ctx.save();
   ctx.beginPath();
-  ctx.rect(-2000, -2000, 5000, 2000 + cy + dip - 4);
+  ctx.rect(-2000, -2000, 5000, 2000 + cy + dip);
   ctx.clip();
   const r2 = rng(3);
   E.toss.forEach((tt, i) => {
@@ -513,13 +525,26 @@ function drawBowl(ctx, t) {
     const g = (8 * hgt) / (dur * dur), v = (4 * hgt) / dur;
     const y = cy + dip - 6 - v * tau + 0.5 * g * tau * tau;
     const x = cx + ox * (tau / dur) * 1.4 - ox * 0.2;
-    drawChip(ctx, sub, x, y, spin * tau, 1);
+    drawChip(ctx, sub, x, y, spin * tau, 1.35);
   });
   ctx.restore();
   // le bol
   ctx.save();
   ctx.translate(cx, cy + dip);
   ctx.rotate(tilt);
+  const kh = clamp((kg - 0.4) / 0.6);
+  // anse (derrière le bol)
+  if (kh > 0) {
+    ctx.save();
+    ctx.translate(r - 12, 0);
+    ctx.rotate(-0.1);
+    ctx.fillStyle = C.cyanDeep;
+    rr(ctx, 0, -9, 12 + kh * 200, 18, 9);
+    ctx.fill();
+    ctx.restore();
+  }
+  // corps : cercle dont le haut se coupe (cercle → demi-disque)
+  ctx.save();
   ctx.beginPath();
   ctx.rect(-r * 2, -r + kg * r, r * 4, r * 2);
   ctx.clip();
@@ -527,30 +552,29 @@ function drawBowl(ctx, t) {
   ctx.beginPath();
   ctx.arc(0, 0, r, 0, TAU);
   ctx.fill();
-  // ombrage intérieur et bord
-  const gi = ctx.createLinearGradient(0, 0, 0, r);
-  gi.addColorStop(0, 'rgba(0,0,0,0)');
-  gi.addColorStop(1, 'rgba(0,0,0,0.18)');
+  const gi = ctx.createLinearGradient(-r * 0.6, 0, r * 0.4, r);
+  gi.addColorStop(0, 'rgba(255,255,255,0.12)');
+  gi.addColorStop(0.5, 'rgba(0,0,0,0)');
+  gi.addColorStop(1, 'rgba(0,0,0,0.22)');
   ctx.fillStyle = gi;
   ctx.beginPath();
   ctx.arc(0, 0, r, 0, TAU);
   ctx.fill();
   ctx.restore();
-  if (kg > 0.4) {
-    const kh = clamp((kg - 0.4) / 0.6);
-    ctx.save();
-    ctx.translate(cx, cy + dip);
-    ctx.rotate(tilt);
-    ctx.fillStyle = C.cyanDeep;
-    rr(ctx, r - 6, -8, 8 + kh * 190, 16, 8);
+  // ouverture du bol : ellipse sombre, bord clair
+  if (kh > 0) {
+    const ry = r * 0.14 * kh;
+    ctx.fillStyle = '#157FA3';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, r, ry, 0, 0, TAU);
     ctx.fill();
-    ctx.fillStyle = C.cyanDeep;
-    ctx.fillRect(-r, -3, r * 2, 6);
-    ctx.fillStyle = 'rgba(255,255,255,0.55)';
-    rr(ctx, -r * 0.7, 14, r * 0.5, 7, 4);
-    ctx.fill();
-    ctx.restore();
+    ctx.strokeStyle = 'rgba(255,255,255,0.7)';
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, r - 2, ry, 0, Math.PI, TAU);
+    ctx.stroke();
   }
+  ctx.restore();
 }
 
 // ---------------------------------------------------------------------------
@@ -590,11 +614,20 @@ function drawFlood(ctx, t) {
   ctx.clip();
   const lh0 = 26 * S, lh1 = 34 * S;
   const kw = t >= E.drop ? 1 : km;
+  // pendant l'inondation, les mots grossissent et se centrent, puis reviennent dans la bulle
+  const big = t >= E.drop ? frac(t, E.drop + 0.05, 0.45, ease.outCubic) * (1 - k(t, E.shrink, E.shrink + 0.4, ease.inOutCubic)) : 0;
+  const bx = B.x + B.w / 2, by = B.y + B.h / 2;
+  ctx.save();
+  ctx.translate(lerp(0, 540 - bx, big), lerp(0, -165, big));
+  ctx.translate(bx, by);
+  ctx.scale(lerp(1, 1.45, big), lerp(1, 1.45, big));
+  ctx.translate(-bx, -by);
   T.lines.forEach((l, i) => {
     const x = lerp(pw(COMP.x + 18), B.x + 24 * S, kw);
     const y = lerp(ph(COMP.yUp + 38) + i * lh0, B.y + 46 * S + i * (lh1 - 14 * S) + 10, kw);
     txt(ctx, l, x, y, { size: 17 * S, weight: 600, color: textCol, font: F_BODY });
   });
+  ctx.restore();
   ctx.restore();
 }
 
@@ -650,7 +683,9 @@ function shade(hex, a) {
 function drawCards(ctx, t) {
   if (t < E.cards) return;
   const slide = k(t, E.slide, E.slide + 0.55) * CARD.pitch;
-  const slot = { x: pw(SLOT.x + SLOT.w / 2), y: ph(SLOT.y + SLOT.h / 2), s: (SLOT.w * S) / CARD.w };
+  // logement dans la bulle de réponse, qui apparaît par un ressort autour de (16, 512)
+  const s1 = t >= E.reply1 ? pop(t, E.reply1, 160, 15) : 0.6;
+  const slot = { x: pw(16 + (SLOT.x + SLOT.w / 2 - 16) * s1), y: ph(512 + (SLOT.y + SLOT.h / 2 - 512) * s1), s: ((SLOT.w * S) / CARD.w) * s1 };
   T.cards.forEach((card, i) => {
     const s = pop(t, E.cards + i * 0.05, 120, 13);
     if (s <= 0) return;
@@ -665,8 +700,9 @@ function drawCards(ctx, t) {
       lift = pop(t, E.pill, 190, 13);
     }
     if (t >= E.shrink) {
-      const ks = k(t, E.shrink, E.shrink + 0.5, ease.inOutCubic);
+      const ks = k(t, E.shrink, CARD_LAND, ease.inOutCubic);
       if (i === 2) {
+        if (t >= CARD_LAND) return;
         // la carte choisie file dans son logement, en arc
         x = lerp(x, slot.x, ks) - Math.sin(ks * Math.PI) * 120;
         y = lerp(y, slot.y, ks);
@@ -861,7 +897,29 @@ function drawOutro(ctx, t, cam) {
     txt(ctx, 'kizzo', x0 + 26 - (1 - kw) * 240, MARK.y + 74, { size: 212, weight: 800, color: '#fff', font: F_DISPLAY, ls: -9 });
     ctx.restore();
   }
-  if (t >= E.tag) rise(ctx, T.tag, 540, 1170, { size: 42, weight: 600, color: 'rgba(255,255,255,0.85)', align: 'center', font: F_BODY, ls: -0.4 }, frac(t, E.tag, 0.5), 52);
+  if (t >= E.tag) {
+    const kt = frac(t, E.tag, 0.5);
+    const o = { size: 42, weight: 600, font: F_BODY, ls: -0.4 };
+    ctx.save();
+    ctx.font = `${o.weight} ${o.size}px ${o.font}`;
+    if ('letterSpacing' in ctx) ctx.letterSpacing = `${o.ls}px`;
+    const words = T.tag.split(' ');
+    const sp = ctx.measureText(' ').width;
+    const ws = words.map((w) => ctx.measureText(w).width);
+    const total = ws.reduce((a, b) => a + b, 0) + sp * (words.length - 1);
+    let cx = 540 - total / 2;
+    words.forEach((w, i) => {
+      const lit = pop(t, TAG_AT[i], 220, 14);
+      const col = lit > 0.5 ? C.orange : 'rgba(255,255,255,0.85)';
+      ctx.save();
+      ctx.translate(cx + ws[i] / 2, 1170);
+      ctx.scale(1 + 0.08 * Math.sin(Math.PI * clamp(lit)), 1 + 0.08 * Math.sin(Math.PI * clamp(lit)));
+      rise(ctx, w, 0, 0, { ...o, color: col, align: 'center' }, kt, 52);
+      ctx.restore();
+      cx += ws[i] + sp;
+    });
+    ctx.restore();
+  }
   if (t >= E.cta) {
     const s = pop(t, E.cta, 170, 13) * (1 + 0.018 * Math.sin((t - E.cta) * 4.2));
     ctx.save();
