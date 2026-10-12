@@ -125,6 +125,36 @@ SOUND — close, dry, natural French dialogue, lip-synced, each line spoken once
 CONTINUITY — same faces, hair and clothes in every shot. Claire's spoon always visible in her right hand. One orange tablet, screen never visible. No dialogue other than the five quoted lines. Seats fixed: Sam far side left, Julie far side right, Claire standing at the left end. The oven stays lit with the lasagne; no smoke yet.
 ```
 
+### G2 quater — Shmoulik muet : refus de la tête, téléphone, claquement (12 s)
+
+Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Pas de référence audio.
+
+Shmoulik ne parle jamais. Ses répliques sont ajoutées au montage, en texte animé mot par mot sur la moitié gauche de l'image, et lues par la voix off ElevenLabs. Ses gestes sont calés sur cette voix off : « Bloquer les écrans… » (2,0–3,0 s) → regard caméra entendu ; « ça marche jamais. » (3,3–4,6 s) → refus de la tête ; « Il suffit d'installer Kizzo. » (5,2–6,9 s) → il lève le téléphone ; puis claquement de l'autre main à 7,6 s.
+
+```
+Continue the reference video seamlessly from its very last frame: same dining room, same people, same clothes, same light, same seats. A 12-second extension of a live-action family comedy commercial, 16:9, photoreal. Time freezes; a silent presenter steps into the frozen scene, reacts to camera without saying a word, shakes his head, shows his phone, snaps his fingers, and time resumes as the family's tablet receives a notification.
+
+NEW CHARACTER — Shmoulik, as in the reference image: mid-twenties man, fair skin with a warm tone, short light-brown hair with strawberry-blond highlights swept to the side, light green-grey eyes, short light-brown stubble beard and moustache, athletic slim build. Plain classic white crew-neck T-shirt, dark navy-blue straight-leg trousers, chunky white and light-grey technical sneakers with no visible logo. The family never sees him and never looks at him.
+
+SHMOULIK NEVER SPEAKS — his mouth stays closed during the whole clip: lips together, no talking, no mouthing words, no lip movement. He acts only with his eyes, eyebrows, head and hands, like a silent comedy actor.
+
+SEATS — Sam on the far side LEFT, Julie on the far side RIGHT, Claire standing at the LEFT end of the table holding the orange tablet in her left hand and the wooden spoon in her right hand, Shmoulik standing at the RIGHT end. The open kitchen with the lit oven and the lasagne stays behind the children.
+
+SHOTS — four locked-off shots joined by clean cuts, no camera movement.
+0.0–1.6s: Same framing as the last frame of the reference video. The image freezes: Sam with his forehead on the table, Julie with her eyes rolled up, completely still like a paused video, no blinking, no breathing. Shmoulik walks into frame from the right, further back near the kitchen counter, so his whole body including his head stays visible in frame, and stops behind Julie's chair, looking into the lens.
+1.6–8.0s: Cut to a medium shot, 35mm, eye level, locked off, of Shmoulik from the waist up, his whole head and some space above it in frame. He stands in the RIGHT half of the image; the LEFT half of the image shows only the frozen family, soft and out of focus, with no hands, no phone and no object in front of them (this space is kept clear for titles added later).
+  1.6–3.0s: He looks straight into the lens with a knowing, slightly amused look, one eyebrow raised, mouth closed.
+  3.0–4.6s: He slowly and clearly shakes his head "no" three times, left-right-left-right-left-right, lips pressed together in a small ironic pout, as if to say "that never works".
+  4.6–5.2s: He stops, looks back into the lens and gives a small confident smile, mouth closed.
+  5.2–7.4s: With his LEFT hand he raises an ordinary black smartphone with no case and holds it up beside his face on the RIGHT side of the image, screen facing the lens, perfectly still from 5.6s to 7.4s. The screen shows only a plain uniform dark navy-blue colour with a soft glow, nothing else, no text. He never touches the screen. His other hand stays down.
+  7.4–8.0s: Still holding the phone up in his left hand, he raises his RIGHT hand to shoulder height and snaps his fingers once at 7.6s.
+8.0–12.0s: Cut to a wide shot from the near side of the table showing the whole family and Shmoulik. On the snap everyone unfreezes at once: Sam lifts his head, Julie's eyes come down. At 8.3s the orange tablet in Claire's left hand lights up with one soft notification ding; she looks at it, eyebrows raised, glances at the children, hesitates, then holds the tablet out across the table to Sam and says at 9.6–11.0s: "Bon… vas-y." Sam sits up and takes it at 11.4s. Shmoulik stays at the right end of the table, hands in his pockets, a small satisfied smile, mouth closed. Nobody in the family looks at him.
+
+SOUND — while frozen, the room is almost silent: only Shmoulik's footsteps and the rustle of his clothes. Nobody speaks before 9.6s. The only spoken words in the whole clip are Claire's "Bon… vas-y." Shmoulik never makes a sound with his mouth. One finger snap at 7.6s, the normal room tone returns instantly, one soft notification ding at 8.3s. No music, no narrator, no voice-over, no captions, no watermarks.
+
+CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire holds her wooden spoon in every shot.
+```
+
 ### G2 ter — Le gel d'image et Shmoulik, voix inventée par l'IA (12 s)
 
 Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). **Aucune référence audio** : Seedance invente la voix et l'anime en même temps que les lèvres. C'est ce qui donne la synchronisation la plus naturelle.
