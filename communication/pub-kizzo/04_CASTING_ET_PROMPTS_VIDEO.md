@@ -332,7 +332,9 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
   - La séquence 1 joue jusqu'à sa dernière image (15,0 s), qui se fige d'un coup avec une rayure de disque, un clac, un coup de zoom et l'icône pause.
   - « Attends, attends, attends, attends… » à 15,3 s, puis « Bloquer les écrans ?! » à 16,9 s. Shmoulik entre dans la scène figée dès 16,95 s.
   - Un petit symbole pause, sans libellé, reste dans le coin jusqu'au claquement de doigts.
-  - « Jouli » est corrigé : l'appel de Claire est remplacé par sa réplique propre (`claire_01_les_devoirs.wav`), avec une acoustique de cuisine, puis étouffé quand on passe dans la chambre de Sam.
+  - Correction de « Jouli » (v7b) : la voix d'origine de Claire est retirée entièrement, de 1,52 à 2,40 s dans la cuisine et de 2,74 à 3,24 s pour son « Les devoirs ! » entendu depuis la chambre de Sam. Les trous sont bouchés avec l'ambiance réelle de chaque pièce.
+    - Les trois mots propres de `claire_01_les_devoirs.wav` sont calés sur les lèvres : « Sam ! » à 1,56 s, « Julie ! » à 2,00 s, et « Les devoirs ! » à 2,80 s, étouffé.
+    - Contrôle : il ne reste plus aucune trace de la voix d'origine.
 - Montage v6 (abandonné : le scratch n'était pas lisible).
   - Scratch sur les quatre « Attends » (14,3 → 15,76 s) : à chaque « attends », l'image recule de 0,45 s puis revient. L'avance ralentit jusqu'à la dernière image de la séquence 1, et le son suit exactement la position de l'image.
   - Pause sur la dernière image de G1 (identique à la première de G2), puis « Bloquer les écrans ?! ».
