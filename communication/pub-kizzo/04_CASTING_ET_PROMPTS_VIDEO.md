@@ -12,7 +12,7 @@ Les identifiants servent de référence dans les générations vidéo (champ « 
 |---|---|---|---|---|
 | Claire | `assets/char_claire.jpg` | ce83c9d8-5631-4dfb-b710-56b377dbbe15 | Soul Cinema, retouche Seedream 5.0 Pro | Validée |
 | Sam | `assets/char_sam.jpg` | 22a69b68-acb5-446f-bdb9-ff4427e424e3 | GPT Image 2.5, à partir du garçon déjà généré par Shmoulik (référence b636c324-8381-4371-b608-c9f6bec4377f) | Validé |
-| Julie | `assets/char_julie.jpg` | 3d49a105-02a1-4f3c-ba29-b6a244146666 | Soul Cinema, retouche Seedream 5.0 Pro | Validée. Le panneau de dos garde la tête et les bras écartés, sans gêne pour la vidéo car le visage n'y apparaît pas |
+| Julie | `assets/char_julie.jpg` | d3cd97c9-1748-4d39-8f4a-dada32a78bbd | GPT Image 2.5, à partir du portrait de la première version | Validée (refaite : mains et posture corrigées) |
 | Shmoulik | — | — | Avatar à partir de ses photos | **À faire** |
 | Salle à manger | `assets/loc_salle_a_manger.jpg` | 1e27ae7e-e328-4241-9342-4058f1ccf4ce | Soul Cinema | **À corriger** : supprimer les deux chaises du premier plan et éclaircir un peu (2,5 crédits) |
 | Chambre de Sam | `assets/loc_chambre_sam.jpg` | 4c6e644d-1f83-4ea4-b409-91d1cf707c2b | Soul Cinema | Validée |
