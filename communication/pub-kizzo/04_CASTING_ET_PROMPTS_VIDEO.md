@@ -48,16 +48,16 @@ Prix relevés sur ton compte le 12 octobre 2026.
 |---|---|---|---|
 | Seedance 2.0 Mini | 480p | 0,5 | Répétition, en option |
 | Seedance 2.0 | 720p | 4,5 | Rendu économique |
-| **Seedance 2.0** | **1080p** | **9** | **Rendu retenu** |
-| Seedance 2.5 | 1080p | 12 | Abandonné : rendu jugé décevant |
+| Seedance 2.0 | 1080p | 9 | Non retenu |
+| **Seedance 2.5** | **1080p** | **12** | **Rendu retenu : le plus réaliste** |
 
-**Budget de la pub** : 55 secondes en Seedance 2.0 1080p, soit environ 495 crédits pour une prise par séquence.
+**Budget de la pub** : 55 secondes en Seedance 2.5 1080p, soit environ 660 crédits pour une prise par séquence.
 
 ## 3. Le protocole : une seule prise par séquence
 
 1. **Aucune vidéo avant que toutes les références de la séquence soient validées.**
-2. **Une seule prise par séquence, en Seedance 2.0 1080p.** Le prompt doit donc être juste du premier coup.
-3. **Option en cas de doute** : une répétition en Seedance 2.0 Mini 480p coûte 7,5 crédits pour 15 secondes. Elle vérifie le placement et le timing avant de dépenser 135 crédits.
+2. **Une seule prise par séquence, en Seedance 2.5 1080p.** Le prompt doit donc être juste du premier coup. On ne lance une séquence que lorsque toutes ses références sont prêtes.
+3. **Option en cas de doute** : une répétition en Seedance 2.0 Mini 480p coûte 7,5 crédits pour 15 secondes. Elle vérifie le placement et le timing avant de dépenser 180 crédits.
 4. **On ne relance pas une séquence pour un plan raté** si le montage peut le couper ou le cacher.
 5. **Les voix sont remplacées au montage.** Seedance génère l'audio pour caler les lèvres et les bruitages, puis on pose les voix définitives de chaque personnage.
 
@@ -72,7 +72,7 @@ Prix relevés sur ton compte le 12 octobre 2026.
 
 ## 4. Les prompts vidéo
 
-Réglages communs : modèle Seedance 2.0, mode `std`, résolution 1080p, format 16:9, audio activé, genre `comedy`. Les références passent avec le rôle `image_references`. Kizzo n'a pas de voix : ses questions apparaissent en texte à l'écran au montage, avec un son de notification. Les personnages les lisent en silence avant de répondre.
+Réglages communs : modèle Seedance 2.5, mode `omni_reference`, résolution 1080p, format 16:9, audio activé, 15 secondes maximum par séquence. Les références passent avec le rôle `image_references`. Kizzo n'a pas de voix : ses questions apparaissent en texte à l'écran au montage, avec un son de notification. Les personnages les lisent en silence avant de répondre.
 
 Le bloc Shmoulik reste à compléter quand sa fiche sera validée.
 
@@ -214,6 +214,6 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 
 1. **Voix** : casting d'une voix par personnage, puis génération de toutes les répliques avec ces voix.
 2. **Shmoulik** : photos sur Higgsfield, fiche personnage, bloc CAST complété, enregistrement de sa voix.
-3. **G1** en Seedance 2.0 1080p. Elle ne dépend pas de Shmoulik.
+3. **G1** en Seedance 2.5 1080p. Elle ne dépend pas de Shmoulik.
 4. **G2, G3, G4**, dans l'ordre, une prise chacune.
 5. **Montage** : voix définitives, synchronisation labiale des gros plans, questions de Kizzo en texte à l'écran, incrustation des écrans réels, carton final, version 9:16.

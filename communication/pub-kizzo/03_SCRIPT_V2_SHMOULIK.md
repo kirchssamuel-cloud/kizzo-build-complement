@@ -64,7 +64,7 @@ Les trois questions apparaissent à l'écran en texte incrusté au montage, avec
 
 ## 4. Le script
 
-Les séquences B à E gardent leur déroulé ci-dessous. Leurs timecodes exacts, resserrés à 15 secondes par génération pour Seedance 2.0, sont dans le fichier 04.
+Les séquences B à E gardent leur déroulé ci-dessous. Leurs timecodes exacts, resserrés à 15 secondes par génération, sont dans le fichier 04.
 
 ### Séquence A — L'appel, le Wi-Fi et le verdict (0 à 15 s)
 
@@ -125,7 +125,7 @@ Accroche dès la 1re seconde : « Sam ! Julie ! Les devoirs ! » sur les deux pl
 
 ## 6. Découpage pour la génération
 
-Seedance 2.0 génère 15 secondes au maximum. On découpe en quatre générations, une seule prise chacune.
+On découpe en quatre générations de 15 secondes au maximum, en Seedance 2.5 1080p, une seule prise chacune.
 
 | Génération | Séquences | Durée | Décors | Personnages |
 |---|---|---|---|---|
