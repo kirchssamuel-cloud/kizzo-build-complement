@@ -28,6 +28,18 @@ Edit this location still. Remove the two chairs in the foreground on the near si
 
 ---
 
+## 1 bis. Casting des voix
+
+Généré avec Seed Audio 1.0. Les voix de Claire, Sam et Julie sont déduites de leur portrait. Pour Kizzo, ce sont deux voix prêtes à l'emploi. La voix retenue sert ensuite de référence pour toutes les répliques du personnage, ce qui la garde identique d'une séquence à l'autre.
+
+| Personnage | Proposition A | Proposition B | Choix |
+|---|---|---|---|
+| Claire | 28bcf88a-b72c-447c-a2f5-c9d9a45a73de | 0241efbf-8c31-40fd-a3a3-3d1d83bd9b9a | À choisir |
+| Sam | b449101c-9137-4b87-ada6-5ec0ee523b3b | 2c60d077-246a-4023-b06d-fcf99289356f | À choisir |
+| Julie | ab49b13f-2e07-4bf9-8a63-8d1cd335a301 | 92de5169-0431-4c75-9900-6919cc8a083e | À choisir |
+| Kizzo | 104683d3-73bd-43b5-bfe5-28d68965f066 (voix « Elodie ») | ec6969ff-79f2-4b4e-9b61-8434d0fc8c79 (voix « Celine ») | À choisir |
+| Shmoulik | Sa vraie voix, à enregistrer dans Higgsfield | — | À faire |
+
 ## 2. Ce que coûte la vidéo
 
 Prix relevés sur ton compte le 12 octobre 2026.
