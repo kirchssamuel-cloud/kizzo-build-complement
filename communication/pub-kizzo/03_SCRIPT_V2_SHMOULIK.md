@@ -88,7 +88,7 @@ Cette séquence prolonge directement la dernière image de la séquence 1, pour 
 |---|---|---|
 | 0,0–2,0 | **L'image se fige** sur la dernière image de la séquence 1 : Sam le front sur la table, Julie les yeux au ciel. Seule la caméra bouge : elle recule et s'élève jusqu'au plan large, et révèle Claire figée au bout de la table, la tablette contre elle. Shmoulik entre par la droite et s'arrête au bout de la table | Le son de la pièce se coupe net. Seuls ses pas s'entendent |
 | 2,0–6,9 | Shmoulik, regard caméra, plan taille, la famille figée en arrière-plan | SHMOULIK : « Bloquer les écrans ? Ça marche jamais. » … « Il suffit d'installer Kizzo. » |
-| 6,9–8,4 | Il montre son téléphone à la caméra : l'écran Kizzo, avec le logo, est incrusté au montage. Il tape sur l'écran, puis claque des doigts | Claquement de doigts |
+| 6,9–8,4 | Il montre son téléphone à la caméra, un téléphone normal sans coque : l'écran Kizzo, avec le logo, est incrusté au montage. Puis il claque des doigts | Claquement de doigts |
 | 8,4–12,0 | Le temps reprend. La tablette s'allume dans les mains de Claire avec la notification Kizzo. Elle lit, hésite, regarde les enfants, puis tend la tablette à Sam | Notification. Texte incrusté : « Réponds à ton quiz pour débloquer ton temps d'écran ». CLAIRE : « Bon… vas-y. » |
 
 ### Séquence C — Les deux voyages (23 à 40 s)
