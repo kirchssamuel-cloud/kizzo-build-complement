@@ -125,6 +125,32 @@ SOUND — close, dry, natural French dialogue, lip-synced, each line spoken once
 CONTINUITY — same faces, hair and clothes in every shot. Claire's spoon always visible in her right hand. One orange tablet, screen never visible. No dialogue other than the five quoted lines. Seats fixed: Sam far side left, Julie far side right, Claire standing at the left end. The oven stays lit with the lasagne; no smoke yet.
 ```
 
+### G2 bis — Le gel d'image et Shmoulik, avec sa vraie voix (12 s)
+
+Régénération de G2. Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Référence audio : **le vocal réel de Shmoulik, nettoyé** (`voix_shmoulik_reference.wav`, à déposer sur Higgsfield). Plus de voix clonée.
+
+Changements par rapport à G2 : la réplique 1 devient « Moi, bloquer les écrans ? Ça marche jamais. », la voix vient du vrai vocal, le jeu est explicitement naturel, et le téléphone est un modèle noir sans coque, sans geste sur l'écran.
+
+```
+Continue the reference video seamlessly from its very last frame: same dining room, same people, same clothes, same light, same seats. A 12-second extension of a live-action family comedy commercial, 16:9, photoreal. Time freezes; a presenter walks into the frozen scene, talks to camera about Kizzo, snaps his fingers, and time resumes as the family's tablet receives a notification. All dialogue is spoken in natural French.
+
+NEW CHARACTER — Shmoulik, as in the reference image: mid-twenties man, fair skin with a warm tone, short light-brown hair with strawberry-blond highlights swept to the side, light green-grey eyes, short light-brown stubble beard and moustache, athletic slim build. Plain classic white crew-neck T-shirt, dark navy-blue straight-leg trousers, chunky white and light-grey technical sneakers with no visible logo. The family never sees him and never looks at him.
+
+SHMOULIK'S VOICE AND PERFORMANCE — The reference audio is a real recording of Shmoulik's own voice saying his two lines. Reproduce exactly his voice: same timbre, same pitch, same French accent, same words. But perform the lines like a real person talking casually to a friend on camera, not like a voice-over: relaxed natural rhythm, tiny hesitations and breaths, a slight smile in the voice, varied intonation, a knowing deadpan tone. Never robotic, never announcer-like, never flat. His voice sounds like it is recorded live in this dining room by the camera microphone, with the room's natural acoustics, at the same distance as the camera. His lips, jaw, breathing and facial expressions match every syllable perfectly. Claire keeps her own female voice from the reference video; only Shmoulik uses the reference voice.
+
+SEATS — Sam on the far side LEFT, Julie on the far side RIGHT, Claire standing at the LEFT end of the table holding the orange tablet and her wooden spoon, Shmoulik standing at the RIGHT end. The open kitchen with the lit oven and the lasagne stays behind the children.
+
+SHOTS
+0.0–2.0s: The image freezes exactly on the last frame of the reference video: Sam with his forehead on the table, Julie with her eyes rolled up. The family is completely frozen like a paused video: no blinking, no breathing, hair and fabric perfectly still. Only the camera moves: it slowly pulls back and rises from the low two-shot to a wide shot from the empty near side of the table, revealing Claire frozen standing at the left end of the table, the orange tablet held against her chest, the wooden spoon raised in her right hand. During the pull-back, Shmoulik walks in from frame right, the only person who moves, and stops beside the right end of the table at 2.0s, facing the camera.
+2.0–6.8s: Medium shot, 35mm, on Shmoulik at the right end of the table, the frozen family soft in the background at the left. He looks straight into the lens with a relaxed, amused half-smile and says naturally at 2.1–4.7s: "Moi, bloquer les écrans ? Ça marche jamais." with a small shrug and a tiny pause after "écrans". A natural breath. Then at 5.1–6.6s, leaning in slightly, confident: "Il suffit d'installer Kizzo."
+6.8–8.4s: Same framing. He raises an ordinary black smartphone with no case and holds its screen toward the camera from 6.9s; the screen shows only a plain uniform dark navy-blue colour with a soft glow, nothing else, no text. He does not touch the screen. At 8.0s he snaps the fingers of his free hand.
+8.4–12.0s: Back to the wide shot. On the snap everyone unfreezes at once: Sam lifts his head, Julie's eyes come down. At 8.7s the orange tablet in Claire's hands lights up with one soft notification ding; she turns its screen toward herself, reads, eyebrows raised, glances at the children, hesitates, then holds the tablet out across the table to Sam and says at 9.9–11.5s: "Bon… vas-y." Sam sits up and takes it at 11.7s. Shmoulik stays at the right end of the table, hands in his pockets, a small satisfied smile. Nobody in the family looks at him.
+
+SOUND — while frozen, the room tone drops to a very quiet hush; Shmoulik's footsteps and voice are the only clear sounds, recorded in the same room acoustics as the rest of the film. Each line is spoken once at its stated time. One finger snap at 8.0s, the normal room tone returns instantly, one soft notification ding at 8.7s. No music, no narrator, no captions, no watermarks.
+
+CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire keeps her wooden spoon.
+```
+
 ### G2 — Le gel d'image et Shmoulik (12 s)
 
 Mode **prolongement** : Seedance 2.5, mode `video_extension`, sens `forward`, 12 secondes, 1080p. La vidéo de référence est la prise retenue de la séquence 1 (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : la fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Références audio : ses deux répliques générées avec sa voix (17940602-6a1c-4762-990c-6c9ac260b09f, version B de la réplique 1, et 55b97157-3dfa-4dad-9ff1-c5ab69ef3db2). Coût : 144 crédits.
