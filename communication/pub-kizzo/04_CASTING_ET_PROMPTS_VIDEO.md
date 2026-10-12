@@ -214,6 +214,7 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 |---|---|---|---|
 | G1 | Seedance 2.0 1080p | adc89d35-462e-4611-bd8d-4f144798976b | Prise lancée par erreur de modèle. Correcte mais box invisible et décor différent |
 | G1 | **Seedance 2.5 1080p** | **e5886007-2197-4861-958a-ce22dfaeb45b** | **Retenue** : box visible, décor respecté, cohérence des visages |
+| G2 | Seedance 2.5 1080p, prolongement de G1 | 16f11e2d-7228-4cdd-a064-0c9a475e0840 | En rendu |
 
 ## 5. Ordre de marche
 
