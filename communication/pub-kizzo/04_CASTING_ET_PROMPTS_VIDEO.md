@@ -328,6 +328,11 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
+- **Montage v4 des séquences 1 et 2 (29,3 s) : le narrateur prend la télécommande.**
+  - Rembobinage (13,45 → 15,0 s) : pendant « Attends, attends, attends, attends… », l'image remonte jusqu'à Claire qui annonce l'interdiction, avec flou, aberration chromatique, bande de défilement et un son de cassette qui recule.
+  - Pause sur Claire (image de 9,7 s), avec un coup de zoom et une icône de lecteur vidéo, sur « Bloquer les écrans ?! ».
+  - Avance rapide jusqu'aux enfants figés, puis la séquence 2 démarre, toujours en pause : « Ça marche jamais. », puis « Il suffit de télécharger Kizzo ! », avec seulement l'icône Kizzo et le nom, et « Regardez… ». Lecture au claquement de doigts.
+  - Plus de désaturation, plus de fiche appli ni de flèche. Pas encore de musique.
 - **Montage v3 des séquences 1 et 2 (30,4 s).** La fin de la séquence 1 passe au ralenti et se fige à 15,8 s. Le gel est prolongé de 2,6 s sur l'image figée, avec un bouton pause en verre dépoli qui devient un badge « PAUSE » en haut à gauche, puis « LECTURE » au claquement de doigts (26,3 s). Pendant le gel, l'image est légèrement désaturée.
   - Habillage réaliste : Inter Display, entrées en ressort avec flou de mouvement, surlignage orange sur « JAMAIS », une fiche appli Kizzo en verre dépoli dont le bouton « Télécharger » se change en anneau de progression puis en « Installé », et une flèche dessinée vers le téléphone.
   - Son : ralenti façon bande magnétique, quasi-silence pendant le gel, sons d'interface discrets. Pas de musique en attendant les morceaux choisis par Shmoulik.
