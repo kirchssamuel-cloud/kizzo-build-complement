@@ -247,6 +247,7 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
+- **G2 bis (job d8872569, 144 crédits) rejetée** : même avec le vrai vocal en référence audio, Seedance ne reproduit pas la voix de Shmoulik. La hauteur concorde, mais pas le timbre. Le recul de caméra demandé n'a pas été respecté non plus. Conclusion : une personne réelle qui parle face caméra se filme en vrai. L'IA sert à la famille, aux décors et aux voyages.
 
 ## 5. Ordre de marche
 
