@@ -80,16 +80,16 @@ Les séquences B à E gardent leur déroulé ci-dessous. Leurs timecodes exacts,
 | 9,6–11,8 | Claire, plan moyen, tablette contre la poitrine | CLAIRE : « Deux heures d'écran. C'est fini. » |
 | 11,8–15,0 | Gros plan sur les deux enfants : Sam s'écroule le front sur la table, Julie lève les yeux au ciel | SAM et JULIE : « Quoi ?! » |
 
-### Séquence B — Shmoulik (10 s)
+### Séquence B — Shmoulik (12 s)
 
 Cette séquence prolonge directement la dernière image de la séquence 1, pour un raccord parfait.
 
 | Temps | Image | Son |
 |---|---|---|
 | 0,0–2,0 | **L'image se fige** sur la dernière image de la séquence 1 : Sam le front sur la table, Julie les yeux au ciel. Seule la caméra bouge : elle recule et s'élève jusqu'au plan large, et révèle Claire figée au bout de la table, la tablette contre elle. Shmoulik entre par la droite et s'arrête au bout de la table | Le son de la pièce se coupe net. Seuls ses pas s'entendent |
-| 2,0–5,6 | Shmoulik, regard caméra, plan taille, la famille figée en arrière-plan | SHMOULIK : « Bloquer les écrans ? Ça marche jamais. » … « Il suffit d'installer Kizzo. » |
-| 5,6–7,0 | Il montre son téléphone à la caméra : l'écran Kizzo, avec le logo, est incrusté au montage. Il tape sur l'écran, puis claque des doigts | Claquement de doigts |
-| 7,0–10,0 | Le temps reprend. La tablette s'allume dans les mains de Claire avec la notification Kizzo. Elle lit, hésite, regarde les enfants, puis tend la tablette à Sam | Notification. Texte incrusté : « Réponds à ton quiz pour débloquer ton temps d'écran ». CLAIRE : « Bon… vas-y. » |
+| 2,0–6,9 | Shmoulik, regard caméra, plan taille, la famille figée en arrière-plan | SHMOULIK : « Bloquer les écrans ? Ça marche jamais. » … « Il suffit d'installer Kizzo. » |
+| 6,9–8,4 | Il montre son téléphone à la caméra : l'écran Kizzo, avec le logo, est incrusté au montage. Il tape sur l'écran, puis claque des doigts | Claquement de doigts |
+| 8,4–12,0 | Le temps reprend. La tablette s'allume dans les mains de Claire avec la notification Kizzo. Elle lit, hésite, regarde les enfants, puis tend la tablette à Sam | Notification. Texte incrusté : « Réponds à ton quiz pour débloquer ton temps d'écran ». CLAIRE : « Bon… vas-y. » |
 
 ### Séquence C — Les deux voyages (23 à 40 s)
 
@@ -132,7 +132,7 @@ On découpe en quatre générations de 15 secondes au maximum, en Seedance 2.5 1
 | Génération | Séquences | Durée | Décors | Personnages |
 |---|---|---|---|---|
 | G1 | A | 15 s | Cuisine et salle à manger, chambre de Sam, chambre de Julie | Claire, Sam, Julie |
-| G2 | B | 10 s | Salle à manger | Les quatre |
+| G2 | B | 12 s | Salle à manger | Les quatre |
 | G3 | C | 15 s | Salle à manger, vaisseau spatial, Rome | Les quatre |
 | G4 | D et E | 15 s | Rome, salle à manger | Les quatre |
 
