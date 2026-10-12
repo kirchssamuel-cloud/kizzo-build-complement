@@ -328,7 +328,12 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
-- **Montage v6 des séquences 1 et 2 (29 s), version en cours.**
+- **Montage v7 des séquences 1 et 2 (28,9 s), version en cours : arrêt sur image sec.**
+  - La séquence 1 joue jusqu'à sa dernière image (15,0 s), qui se fige d'un coup avec une rayure de disque, un clac, un coup de zoom et l'icône pause.
+  - « Attends, attends, attends, attends… » à 15,3 s, puis « Bloquer les écrans ?! » à 16,9 s. Shmoulik entre dans la scène figée dès 16,95 s.
+  - Un petit symbole pause, sans libellé, reste dans le coin jusqu'au claquement de doigts.
+  - « Jouli » est corrigé : l'appel de Claire est remplacé par sa réplique propre (`claire_01_les_devoirs.wav`), avec une acoustique de cuisine, puis étouffé quand on passe dans la chambre de Sam.
+- Montage v6 (abandonné : le scratch n'était pas lisible).
   - Scratch sur les quatre « Attends » (14,3 → 15,76 s) : à chaque « attends », l'image recule de 0,45 s puis revient. L'avance ralentit jusqu'à la dernière image de la séquence 1, et le son suit exactement la position de l'image.
   - Pause sur la dernière image de G1 (identique à la première de G2), puis « Bloquer les écrans ?! ».
   - La séquence 2 démarre depuis son début : Shmoulik entre dans la scène figée, puis vient le plan face caméra et la lecture au claquement de doigts.
