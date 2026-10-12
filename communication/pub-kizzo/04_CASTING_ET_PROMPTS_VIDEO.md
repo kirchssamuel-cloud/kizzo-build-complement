@@ -56,7 +56,7 @@ Prix relevés sur ton compte le 12 octobre 2026.
 ## 3. Le protocole : une seule prise par séquence
 
 1. **Aucune vidéo avant que toutes les références de la séquence soient validées.**
-2. **Une seule prise par séquence, en Seedance 2.5 1080p.** Le prompt doit donc être juste du premier coup. On ne lance une séquence que lorsque toutes ses références sont prêtes.
+2. **Chaque séquence prolonge la précédente** (mode `video_extension` de Seedance 2.5), pour un raccord parfait. **Une seule prise par séquence, en 1080p.** Le prompt doit donc être juste du premier coup. On ne lance une séquence que lorsque toutes ses références sont prêtes.
 3. **Option en cas de doute** : une répétition en Seedance 2.0 Mini 480p coûte 7,5 crédits pour 15 secondes. Elle vérifie le placement et le timing avant de dépenser 180 crédits.
 4. **On ne relance pas une séquence pour un plan raté** si le montage peut le couper ou le cacher.
 5. **Les voix sont remplacées au montage.** Seedance génère l'audio pour caler les lèvres et les bruitages, puis on pose les voix définitives de chaque personnage.
@@ -127,28 +127,26 @@ CONTINUITY — same faces, hair and clothes in every shot. Claire's spoon always
 
 ### G2 — Le gel d'image et Shmoulik (10 s)
 
-Références, dans cet ordre : Claire, Sam, Julie, Shmoulik, salle à manger corrigée.
+Mode **prolongement** : Seedance 2.5, mode `video_extension`, sens `forward`, 10 secondes, 1080p. La vidéo de référence est la prise retenue de la séquence 1 (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : la fiche de Shmoulik. Coût relevé : 120 crédits.
+
+L'écran du téléphone est généré en bleu nuit uni. L'écran Kizzo (`assets/ecran_telephone_kizzo.jpg`) est incrusté au montage, sur un fond de la même couleur.
 
 ```
-A 10-second live-action family comedy commercial, 16:9, photoreal, in the same dining room. Time freezes; a presenter walks into the frozen scene, talks to camera about Kizzo, snaps his fingers, and time resumes as the family's tablet receives a notification. All dialogue is spoken in natural French.
+Continue the reference video seamlessly from its very last frame: same dining room, same people, same clothes, same light, same seats. A 10-second extension of a live-action family comedy commercial, 16:9, photoreal. Time freezes; a presenter walks into the frozen scene, talks to camera about Kizzo, snaps his fingers, and time resumes as the family's tablet receives a notification. All dialogue is spoken in natural French.
 
-REFERENCES — Image 1: Claire. Image 2: Sam. Image 3: Julie. Image 4: Shmoulik. Image 5: the dining room with the open kitchen. Match faces, hair, clothes and the room exactly.
+NEW CHARACTER — Shmoulik, as in the reference image: mid-twenties man, fair skin with a warm tone, short light-brown hair with strawberry-blond highlights swept to the side, light green-grey eyes, short light-brown stubble beard and moustache, athletic slim build. Plain classic white crew-neck T-shirt, dark navy-blue straight-leg trousers, chunky white and light-grey technical sneakers with no visible logo. Relaxed presenter, deadpan humour, looks straight into the lens. The family never sees him and never looks at him.
 
-[COLLER LE BLOC CAST COMMUN]
-
-DINING ROOM — as Image 5: long light-oak table, the open kitchen with a lit oven holding a dish of lasagne directly behind the far side, a tall window at the left, a white fridge with drawings at the right, warm pendant lamp.
-
-LOOK — clean modern digital cinema, 24–35mm lenses, warm tungsten evening light, natural skin texture, crisp focus. No visible CGI.
+SEATS — Sam on the far side LEFT, Julie on the far side RIGHT, Claire standing at the LEFT end of the table holding the orange tablet and her wooden spoon, Shmoulik standing at the RIGHT end. The open kitchen with the lit oven and the lasagne stays behind the children.
 
 SHOTS
-0.0–1.5s: Locked 24mm wide from the empty near side of the table. The whole family is completely frozen like a paused video: Sam with his forehead on the table on the far side left, Julie on the far side right with her eyes rolled up, Claire standing at the left end holding the tablet against her chest, spoon raised. No blinking, no breathing, hair and fabric perfectly still. Shmoulik walks in from frame right, the only thing that moves, and stops beside the right end of the table by 1.5s, facing the camera.
-1.5–5.5s: Medium shot, 35mm, on Shmoulik at the right end of the table, the frozen family soft in the background at the left. He looks straight into the lens, relaxed, deadpan, and says at 1.6–3.6s: "Bloquer les écrans ? Ça marche jamais." Short beat. At 3.9–5.4s: "Il suffit d'installer Kizzo."
-5.5–7.0s: Same framing. He raises his phone in a vivid orange case and turns its screen toward the camera at 5.6s; the screen shows only a plain uniform bright green, nothing else. At 6.6s he snaps the fingers of his free hand.
-7.0–10.0s: Back to the locked 24mm wide. On the snap everyone unfreezes at once: Sam lifts his head, Julie's eyes come down, Claire's arm relaxes. At 7.4s the tablet vibrates in Claire's hands with a short notification ding. She turns it toward herself, reads, eyebrows raised, intrigued, and at 8.6s hands it across the table to Sam. Shmoulik stays at the right end, hands in his pockets, a small satisfied smile. The family never looks at him. No dialogue.
+0.0–2.0s: The image freezes exactly on the last frame of the reference video: Sam with his forehead on the table, Julie with her eyes rolled up. The family is completely frozen like a paused video: no blinking, no breathing, hair and fabric perfectly still. Only the camera moves: it slowly pulls back and rises from the low two-shot to a wide shot from the empty near side of the table, revealing Claire frozen standing at the left end of the table, the orange tablet held against her chest, the wooden spoon raised in her right hand. During the pull-back, Shmoulik walks in from frame right, the only person who moves, and stops beside the right end of the table at 2.0s, facing the camera.
+2.0–5.6s: Medium shot, 35mm, on Shmoulik at the right end of the table, the frozen family soft in the background at the left. He looks straight into the lens, relaxed and deadpan, and says at 2.1–4.0s: "Bloquer les écrans ? Ça marche jamais." Short beat. At 4.2–5.5s: "Il suffit d'installer Kizzo."
+5.6–7.0s: Same framing. He raises a smartphone in a vivid orange case and turns its screen toward the camera at 5.7s; the screen shows only a plain uniform dark navy-blue colour with a soft glow, nothing else, no text. At 6.0s he taps the screen once with his thumb. At 6.6s he snaps the fingers of his free hand.
+7.0–10.0s: Back to the wide shot. On the snap everyone unfreezes at once: Sam lifts his head, Julie's eyes come down. At 7.3s the orange tablet in Claire's hands lights up with one soft notification ding; she turns its screen toward herself, reads, eyebrows raised, glances at the children, hesitates, then holds the tablet out across the table to Sam and says at 8.8–9.6s: "Bon… vas-y." Sam sits up and takes it at 9.7s. Shmoulik stays at the right end of the table, hands in his pockets, a small satisfied smile. Nobody in the family looks at him.
 
-SOUND — at 0.0s the room tone cuts to total silence while the family is frozen; Shmoulik's footsteps and voice are the only sounds. Close, dry French dialogue, lip-synced, each line once. One finger snap at 6.6s, room tone returns instantly, one soft notification ding at 7.4s. No music, no narrator, no captions, no watermarks.
+SOUND — while frozen, the room tone cuts to total silence; Shmoulik's footsteps and voice are the only sounds. Close, dry French dialogue, lip-synced, each line once at its stated time. One finger snap at 6.6s, room tone returns instantly, one soft notification ding at 7.3s. No music, no narrator, no captions, no watermarks.
 
-CONTINUITY — seats fixed: Sam far side left, Julie far side right, Claire standing at the left end, Shmoulik at the right end. One orange tablet, its screen never visible. The phone screen shows only plain green. Same faces and clothes.
+CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire keeps her wooden spoon.
 ```
 
 ### G3 — Les deux voyages (15 s)
