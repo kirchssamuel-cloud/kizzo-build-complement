@@ -125,6 +125,32 @@ SOUND — close, dry, natural French dialogue, lip-synced, each line spoken once
 CONTINUITY — same faces, hair and clothes in every shot. Claire's spoon always visible in her right hand. One orange tablet, screen never visible. No dialogue other than the five quoted lines. Seats fixed: Sam far side left, Julie far side right, Claire standing at the left end. The oven stays lit with the lasagne; no smoke yet.
 ```
 
+### G2 ter — Le gel d'image et Shmoulik, voix inventée par l'IA (12 s)
+
+Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). **Aucune référence audio** : Seedance invente la voix et l'anime en même temps que les lèvres. C'est ce qui donne la synchronisation la plus naturelle.
+
+Changements par rapport à G2 bis : plus de référence audio ; une voix décrite en texte (jeune Parisien, décontracté, conversationnel) ; plus de mouvement de caméra pendant le gel, remplacé par quatre plans fixes nets, ce que Seedance respecte mieux ; Shmoulik cadré en entier dès son entrée ; aucune autre réplique que les trois prévues ; la cuillère de Claire verrouillée.
+
+```
+Continue the reference video seamlessly from its very last frame: same dining room, same people, same clothes, same light, same seats. A 12-second extension of a live-action family comedy commercial, 16:9, photoreal. Time freezes; a presenter steps into the frozen scene, talks to camera about Kizzo, snaps his fingers, and time resumes as the family's tablet receives a notification. All dialogue is in natural everyday spoken French.
+
+NEW CHARACTER — Shmoulik, as in the reference image: mid-twenties man, fair skin with a warm tone, short light-brown hair with strawberry-blond highlights swept to the side, light green-grey eyes, short light-brown stubble beard and moustache, athletic slim build. Plain classic white crew-neck T-shirt, dark navy-blue straight-leg trousers, chunky white and light-grey technical sneakers with no visible logo. The family never sees him and never looks at him.
+
+SHMOULIK'S VOICE — a young Parisian man in his mid-twenties: warm, medium-low, slightly husky voice, relaxed and friendly, a real person chatting with a friend, like a natural YouTube creator, not an actor, not an announcer, not a voice-over. Casual conversational rhythm with natural micro-pauses, a real breath before each line, a smile in the voice, a light ironic tone on the first line. Spoken live in the room, close to the camera, with the room's natural acoustics. Perfect lip sync, natural jaw and cheek movement, natural blinking.
+
+SEATS — Sam on the far side LEFT, Julie on the far side RIGHT, Claire standing at the LEFT end of the table holding the orange tablet in her left hand and the wooden spoon in her right hand, Shmoulik standing at the RIGHT end. The open kitchen with the lit oven and the lasagne stays behind the children.
+
+SHOTS — four locked-off shots joined by clean cuts, no camera movement.
+0.0–1.6s: Same framing as the last frame of the reference video. The image freezes: Sam with his forehead on the table, Julie with her eyes rolled up, completely still like a paused video, no blinking, no breathing. Shmoulik walks into frame from the right behind the children, fully visible from head to knees, and stops beside Julie's chair, looking into the lens.
+1.6–6.8s: Cut to a medium shot, 35mm, eye level, of Shmoulik from the waist up, his whole head and some space above it in frame, standing at the right end of the table, the frozen family soft in the background at the left. He looks into the lens, half-smiles, and says at 2.0–4.4s: "Moi, bloquer les écrans ? Ça marche jamais." with a small shrug. A breath. At 5.0–6.5s, leaning in slightly: "Il suffit d'installer Kizzo."
+6.8–8.4s: Same medium shot. He raises an ordinary black smartphone with no case in his right hand and holds its screen flat toward the lens, beside his face, from 6.9s; the screen shows only a plain uniform dark navy-blue colour with a soft glow, nothing else. He does not touch the screen and says nothing. At 8.0s he snaps the fingers of his left hand.
+8.4–12.0s: Cut to a wide shot from the near side of the table showing the whole family and Shmoulik. On the snap everyone unfreezes at once: Sam lifts his head, Julie's eyes come down. At 8.7s the orange tablet in Claire's left hand lights up with one soft notification ding; she looks at it, eyebrows raised, glances at the children, hesitates, then holds the tablet out across the table to Sam and says at 9.9–11.3s: "Bon… vas-y." Sam sits up and takes it at 11.6s. Shmoulik stays at the right end of the table, hands in his pockets, a small satisfied smile. Nobody in the family looks at him.
+
+SOUND — while frozen, the room is almost silent; only Shmoulik's footsteps and voice. Exactly three spoken lines in the whole clip: his two lines and Claire's "Bon… vas-y." Nobody else speaks, no other words, no mumbling. One finger snap at 8.0s, the normal room tone returns instantly, one soft notification ding at 8.7s. No music, no narrator, no captions, no watermarks.
+
+CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire holds her wooden spoon in every shot.
+```
+
 ### G2 bis — Le gel d'image et Shmoulik, avec sa vraie voix (12 s)
 
 Régénération de G2. Mode **prolongement** : Seedance 2.5, `video_extension`, sens `forward`, 12 secondes, 1080p, 144 crédits. Vidéo de référence : G1 retenue (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Référence audio : **le vocal réel de Shmoulik, nettoyé** (`voix_shmoulik_reference.wav`, media e53e10b7-ba44-4f5c-9513-2afc94abc409). Plus de voix clonée.
