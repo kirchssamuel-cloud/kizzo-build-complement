@@ -11,7 +11,7 @@ Les identifiants servent de référence dans les générations vidéo (champ « 
 | Asset | Fichier | Identifiant Higgsfield | Modèle | Statut |
 |---|---|---|---|---|
 | Claire | `assets/char_claire.jpg` | ce83c9d8-5631-4dfb-b710-56b377dbbe15 | Soul Cinema, retouche Seedream 5.0 Pro | Validée |
-| Sam | `assets/char_sam.jpg` | 6bc7bd0c-0c84-4a35-b724-419d52cffee8 | Soul Cinema, retouche Seedream 5.0 Pro | Validé |
+| Sam | `assets/char_sam.jpg` | 22a69b68-acb5-446f-bdb9-ff4427e424e3 | GPT Image 2.5, à partir du garçon déjà généré par Shmoulik (référence b636c324-8381-4371-b608-c9f6bec4377f) | Validé |
 | Julie | `assets/char_julie.jpg` | 3d49a105-02a1-4f3c-ba29-b6a244146666 | Soul Cinema, retouche Seedream 5.0 Pro | Validée. Le panneau de dos garde la tête et les bras écartés, sans gêne pour la vidéo car le visage n'y apparaît pas |
 | Shmoulik | — | — | Avatar à partir de ses photos | **À faire** |
 | Salle à manger | `assets/loc_salle_a_manger.jpg` | 1e27ae7e-e328-4241-9342-4058f1ccf4ce | Soul Cinema | **À corriger** : supprimer les deux chaises du premier plan et éclaircir un peu (2,5 crédits) |
@@ -74,7 +74,7 @@ Le bloc Shmoulik reste à compléter quand sa fiche sera validée.
 ```
 CAST — use these same people throughout the clip; match faces, hair and clothes exactly to the reference sheets.
 Claire: 40, fair skin, light-brown eyes, chestnut hair in a loose messy bun with a few loose strands, small gold studs. Mustard-yellow apron over a navy crew-neck sweater with sleeves pushed up, mid-blue jeans, white sneakers. Always holds one plain wooden spoon in her right hand. Stern and tired at first, then delighted and competitive.
-Sam: 10, fair skin, blue-grey eyes, short tousled brown hair, faint freckles on the nose. Forest-green hoodie, black over-ear gaming headset around his neck, charcoal joggers, black sneakers. Bored, then amazed.
+Sam: 10, fair skin with a light natural flush, warm brown eyes, soft features, light chestnut-brown medium-length tousled wavy hair with lighter sun-kissed strands. Forest-green hoodie, black over-ear gaming headset around his neck, charcoal joggers, black sneakers. Bored, then amazed.
 Julie: 8, fair skin, green-hazel eyes, golden-blonde hair in two braids with a short fringe. Raspberry-pink sweatshirt under mid-blue denim dungarees, white sneakers. Sly, quick, deadpan.
 Shmoulik: [À COMPLÉTER APRÈS VALIDATION DE SA FICHE — âge, peau, yeux, cheveux, barbe, tenue]. Relaxed presenter, deadpan humour, often looks straight into the lens. The family never sees him and never looks at him.
 
@@ -93,7 +93,7 @@ REFERENCES — Image 1: Claire's character sheet. Image 2: Sam's character sheet
 
 CAST
 Claire: 40, fair skin, light-brown eyes, chestnut hair in a loose messy bun with a few loose strands, small gold studs. Mustard-yellow apron over a navy crew-neck sweater with sleeves pushed up, mid-blue jeans, white sneakers. Always holds one plain wooden spoon in her right hand. Stern, tired, dry.
-Sam: 10, fair skin, blue-grey eyes, short tousled brown hair, faint freckles on the nose. Forest-green hoodie, black over-ear gaming headset, charcoal joggers, black sneakers. Absorbed, then sulky.
+Sam: 10, fair skin with a light natural flush, warm brown eyes, soft features, light chestnut-brown medium-length tousled wavy hair with lighter sun-kissed strands. Forest-green hoodie, black over-ear gaming headset, charcoal joggers, black sneakers. Absorbed, then sulky.
 Julie: 8, fair skin, green-hazel eyes, golden-blonde hair in two braids with a short fringe. Raspberry-pink sweatshirt under mid-blue denim dungarees, white sneakers. Playful, then disgusted.
 
 PROPS — TABLET: one unbranded tablet in a vivid orange matte silicone kids' case with a carry handle on the top edge; its screen always faces the person holding it, only the orange back faces the camera, never show its screen. CONTROLLER: one black game controller, only in Sam's room. WOODEN SPOON: one plain wooden spoon, always in Claire's right hand.

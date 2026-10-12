@@ -34,7 +34,7 @@ La mère demande de faire les devoirs, et la solution présentée est Kizzo. Il 
 | Personnage | Âge | Signes distinctifs, à ne jamais changer | Jeu |
 |---|---|---|---|
 | Claire, la mère | 40 ans | Cheveux châtains en chignon flou, tablier moutarde sur pull bleu marine, cuillère en bois en main | Débordée, autoritaire, puis enthousiaste et mauvaise perdante |
-| Sam, le fils | 10 ans | Cheveux bruns courts en bataille, sweat à capuche vert sapin, casque gaming noir autour du cou | Joueur, blasé, puis fasciné |
+| Sam, le fils | 10 ans | Cheveux châtain clair mi-longs et ondulés, yeux marron, sweat à capuche vert sapin, casque gaming noir autour du cou | Joueur, blasé, puis fasciné |
 | Julie, la fille | 8 ans | Cheveux blonds en deux tresses, sweat rose framboise, salopette en jean | Vive, rusée, pince-sans-rire |
 | Shmoulik | Lui-même | Avatar créé à partir de ses photos. Tenue à fixer : par exemple t-shirt blanc, surchemise orange Kizzo, jean | Présentateur complice, regard caméra, flegme |
 
