@@ -127,7 +127,7 @@ CONTINUITY — same faces, hair and clothes in every shot. Claire's spoon always
 
 ### G2 — Le gel d'image et Shmoulik (12 s)
 
-Mode **prolongement** : Seedance 2.5, mode `video_extension`, sens `forward`, 12 secondes, 1080p. La vidéo de référence est la prise retenue de la séquence 1 (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : la fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Références audio : ses deux répliques générées avec sa voix (c2d38aed-430c-496a-be30-f0cb3cfda542 et 55b97157-3dfa-4dad-9ff1-c5ab69ef3db2). Coût : 144 crédits.
+Mode **prolongement** : Seedance 2.5, mode `video_extension`, sens `forward`, 12 secondes, 1080p. La vidéo de référence est la prise retenue de la séquence 1 (e5886007-2197-4861-958a-ce22dfaeb45b). Image de référence : la fiche de Shmoulik (e81c9a30-5f6a-45d4-bb19-a20fd6a716be). Références audio : ses deux répliques générées avec sa voix (17940602-6a1c-4762-990c-6c9ac260b09f, version B de la réplique 1, et 55b97157-3dfa-4dad-9ff1-c5ab69ef3db2). Coût : 144 crédits.
 
 L'écran du téléphone est généré en bleu nuit uni. L'écran Kizzo (`assets/ecran_telephone_kizzo.jpg`) est incrusté au montage, sur un fond de la même couleur.
 
