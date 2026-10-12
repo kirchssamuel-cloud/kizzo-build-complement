@@ -328,6 +328,11 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
+- **Montage v5 des séquences 1 et 2 (26,5 s), version en cours.**
+  - La réaction des enfants respire 0,9 s après le « Quoi ?! ».
+  - Rembobinage dans le même plan, sur les quatre « Attends » (14,3 → 15,76 s) : l'image ralentit jusqu'à l'arrêt sur Julie, bouche ouverte (image de 12,8 s).
+  - Pause, puis « Bloquer les écrans ?! » 0,06 s après.
+  - Coupe franche sur le plan taille de Shmoulik (G2 à partir de 2,66 s), toujours en pause, puis lecture au claquement de doigts. Il n'y a plus d'avance rapide ni de retour sur Claire.
 - **Montage v4 des séquences 1 et 2 (29,3 s) : le narrateur prend la télécommande.**
   - Rembobinage (13,45 → 15,0 s) : pendant « Attends, attends, attends, attends… », l'image remonte jusqu'à Claire qui annonce l'interdiction, avec flou, aberration chromatique, bande de défilement et un son de cassette qui recule.
   - Pause sur Claire (image de 9,7 s), avec un coup de zoom et une icône de lecteur vidéo, sur « Bloquer les écrans ?! ».
