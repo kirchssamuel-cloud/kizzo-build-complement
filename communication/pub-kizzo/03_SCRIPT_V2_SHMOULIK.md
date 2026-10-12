@@ -57,7 +57,7 @@ Une voix chaleureuse et enjouée, ni robotique ni enfantine, qui sort de la tabl
 | Cuisine ouverte sur salle à manger, soir | Début, verdict, retour, chute | Table rectangulaire en bois. Vue depuis la cuisine : Sam à gauche, Julie à droite, côte à côte face caméra. Claire debout au bout gauche, Shmoulik au bout droit. Four allumé visible au fond |
 | Chambre de Sam | Un plan de 1 s | Bureau, écran de jeu, lumière bleue d'écran |
 | Chambre de Julie | Un plan de 1 s | Lit avec coussins, guirlande lumineuse, tablette |
-| Station spatiale | Voyage 1 | Même placement autour d'une table blanche. Jupiter dans le grand hublot derrière les enfants |
+| Vaisseau spatial | Voyage 1 | Cockpit à deux rangs face à une grande verrière. Sam et Julie aux sièges pilotes à l'avant, Claire derrière à gauche, Shmoulik derrière à droite. Jupiter entière dans la verrière |
 | Terrasse à Rome | Voyage 2 | Même placement autour d'une table de trattoria. Le Colisée derrière les enfants |
 
 ---
@@ -90,7 +90,7 @@ Une voix chaleureuse et enjouée, ni robotique ni enfantine, qui sort de la tabl
 | Temps | Image | Son |
 |---|---|---|
 | 23,0–27,0 | Sam, la tablette en main, écoute la question, réfléchit, répond et tape | VOIX DE KIZZO, depuis la tablette : « Quelle est la plus grande planète du système solaire ? » SAM : « Jupiter ! » Tap. Question incrustée à l'écran |
-| 27,0–31,0 | **Raccord sur le tap** : même cadre, même mouvement, Sam est dans la station spatiale. La caméra recule : toute la famille et Shmoulik sont là, aux mêmes places, bouche bée. Jupiter dans le hublot. La cuillère en bois s'échappe de la main de Claire et flotte | SAM : « Wouah… » Bourdonnement de la station |
+| 27,0–31,0 | **Raccord sur le tap** : même cadre, même mouvement, Sam est assis au poste de pilotage d'un vaisseau spatial, éclairé par la lueur orangée de Jupiter. La caméra s'élève et passe derrière les sièges : Jupiter remplit la verrière, toute la famille et Shmoulik sont là, penchés vers elle, bouche bée. La cuillère en bois s'échappe de la main de Claire et flotte | SAM : « Wouah… » Bourdonnement des moteurs |
 | 31,0–34,5 | Julie prend la tablette à son frère, écoute la question et tape | JULIE : « À moi ! » VOIX DE KIZZO : « Quelle est la capitale de l'Italie ? » JULIE : « Rome ! » Tap. Question incrustée à l'écran |
 | 34,5–40,0 | **Raccord sur le tap** : terrasse de trattoria au soleil, le Colisée derrière. La cuillère est retombée dans la main de Claire. Elle regarde autour d'elle, émerveillée | CLAIRE : « Mais c'est génial, ce truc ! » Ambiance de rue italienne |
 
@@ -127,7 +127,7 @@ Seedance génère des scènes de 15 à 19 s. On découpe en cinq générations, 
 |---|---|---|---|---|
 | G1 | A | 13 s | Cuisine, chambre de Sam, chambre de Julie | Claire, Sam, Julie |
 | G2 | B | 10 s | Salle à manger | Les quatre |
-| G3 | C | 17 s | Salle à manger, station spatiale, Rome | Les quatre |
+| G3 | C | 17 s | Salle à manger, vaisseau spatial, Rome | Les quatre |
 | G4 | D | 12 s | Rome, salle à manger | Les quatre |
 | G5 | E | 3 s | Salle à manger | Les quatre |
 

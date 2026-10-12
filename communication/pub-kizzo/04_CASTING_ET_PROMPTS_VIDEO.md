@@ -17,7 +17,7 @@ Les identifiants servent de référence dans les générations vidéo (champ « 
 | Salle à manger | `assets/loc_salle_a_manger.jpg` | 1e27ae7e-e328-4241-9342-4058f1ccf4ce | Soul Cinema | **À corriger** : supprimer les deux chaises du premier plan et éclaircir un peu (2,5 crédits) |
 | Chambre de Sam | `assets/loc_chambre_sam.jpg` | 4c6e644d-1f83-4ea4-b409-91d1cf707c2b | Soul Cinema | Validée |
 | Chambre de Julie | `assets/loc_chambre_julie.jpg` | beabd155-2eb2-46e5-a179-8bf81407a0d1 | Soul Cinema | Validée |
-| Station spatiale | `assets/loc_station_spatiale.jpg` | fff51b17-7c24-4b9a-b040-2906518a816b | Soul Cinema | Validée |
+| Vaisseau spatial | `assets/loc_vaisseau_spatial.jpg` | 0306111d-9417-435e-a1e3-195be415d5ce | GPT Image 2.5 | Validé (remplace la station spatiale : Jupiter entière et lisible, cockpit à quatre sièges sur deux rangs) |
 | Rome | `assets/loc_rome.jpg` | 610c338e-28b2-4b1a-867a-28eb7a0107c6 | Soul Cinema | Validée |
 
 Prompt de correction prévu pour la salle à manger (Seedream 5.0 Pro, mode édition) :
@@ -79,7 +79,7 @@ Julie: 8, fair skin, green-hazel eyes, golden-blonde hair in two braids with a s
 Shmoulik: [À COMPLÉTER APRÈS VALIDATION DE SA FICHE — âge, peau, yeux, cheveux, barbe, tenue]. Relaxed presenter, deadpan humour, often looks straight into the lens. The family never sees him and never looks at him.
 
 TABLET — one unbranded tablet in a vivid orange matte silicone kids' case with a carry handle on the top edge. Its screen always faces the person holding it; only the orange back faces the camera. Never show its screen. Never duplicate it.
-SEATING — around every table, as seen from the establishing camera on the empty near side: Sam far side LEFT, Julie far side RIGHT, Claire at the LEFT end, Shmoulik at the RIGHT end. Change camera positions, never seats.
+SEATING — around every table, as seen from the establishing camera on the empty near side: Sam far side LEFT, Julie far side RIGHT, Claire at the LEFT end, Shmoulik at the RIGHT end. In the spaceship: Sam in the front-left pilot seat, Julie in the front-right pilot seat, Claire in the back-left seat, Shmoulik in the back-right seat. Change camera positions, never seats.
 ```
 
 ### G1 — L'appel et le verdict (13 s)
@@ -144,30 +144,30 @@ CONTINUITY — seats fixed: Sam far side left, Julie far side right, Claire stan
 
 ### G3 — Les deux voyages (17 s)
 
-Références, dans cet ordre : Claire, Sam, Julie, Shmoulik, salle à manger corrigée, station spatiale, Rome.
+Références, dans cet ordre : Claire, Sam, Julie, Shmoulik, salle à manger corrigée, vaisseau spatial, Rome.
 
 ```
-A 17-second live-action family comedy commercial, 16:9, photoreal. A boy answers a quiz question on the family tablet and his tap transports the whole family to a space station facing Jupiter; then his sister answers and her tap transports everyone to a terrace facing the Colosseum in Rome. All dialogue is spoken in natural French. No voice ever comes from the tablet.
+A 17-second live-action family comedy commercial, 16:9, photoreal. A boy answers a quiz question on the family tablet and his tap transports the whole family into the cockpit of a spaceship facing Jupiter; then his sister answers and her tap transports everyone to a terrace facing the Colosseum in Rome. All dialogue is spoken in natural French. No voice ever comes from the tablet.
 
-REFERENCES — Image 1: Claire. Image 2: Sam. Image 3: Julie. Image 4: Shmoulik. Image 5: the dining room. Image 6: the space station lounge. Image 7: the Rome terrace. Match faces, hair, clothes and places exactly.
+REFERENCES — Image 1: Claire. Image 2: Sam. Image 3: Julie. Image 4: Shmoulik. Image 5: the dining room. Image 6: the spaceship cockpit. Image 7: the Rome terrace. Match faces, hair, clothes and places exactly.
 
 [COLLER LE BLOC CAST COMMUN]
 
 DINING ROOM — as Image 5, warm evening light, everyone in their seats.
-SPACE STATION — as Image 6: a long white table with four white padded seats, a huge round window directly behind the far side filled with Jupiter, cool white LED light and Jupiter's amber glow. Normal gravity for people; only the wooden spoon floats.
+SPACESHIP — as Image 6: the cockpit of a sleek white passenger spaceship. A huge curved windscreen shows Jupiter as a complete round globe in black starry space, with two tiny moons. Four white padded seats in two rows, all facing the windscreen: Sam in the front-left pilot seat, Julie in the front-right pilot seat, Claire in the back-left seat, Shmoulik in the back-right seat. A low curved dashboard with abstract glowing displays and no text. Cool white interior light and Jupiter's warm amber glow. Normal gravity for people; only the wooden spoon floats.
 ROME — as Image 7: a table with a red-and-white checked tablecloth and four plates of spaghetti, dark-green bistro chairs, the Colosseum behind the far side, hard warm sunlight, deep blue sky.
 
 LOOK — clean modern digital cinema, 24–35mm lenses, natural skin texture, rich colour, crisp focus. Physically plausible camera moves. No visible CGI.
 
 SHOTS
 0.0–4.0s: Medium close-up, 35mm, slow push-in, on Sam seated on the far side left of the dining table, holding the orange tablet in both hands, screen toward him. A soft chime at 0.2s. He listens silently from 0.3s to 2.6s, thinks with his eyes up from 2.6s, then says confidently at 3.2–3.8s: "Jupiter !" He taps the screen with his right index finger at exactly 4.0s.
-4.0–8.0s: Hard match cut on the tap to the space station. Match Sam's pose, face size, frame position, lens and push-in speed across the cut; only location, light and sound change. Jupiter fills the window behind him. At 4.6–5.3s he whispers: "Wouah…" From 5.5s the camera pulls back to a wide from the empty near side of the table: Julie seated far side right, Claire seated at the left end, Shmoulik seated at the right end, everyone staring at Jupiter, mouths open. At 6.5s the wooden spoon slips out of Claire's hand and floats slowly upward, turning in the air.
-8.0–11.5s: Medium two-shot, 35mm, on Sam and Julie on the far side, Jupiter behind them. At 8.2s Julie takes the tablet from Sam and says at 8.2–8.7s: "À moi !" She holds it screen toward herself. A soft chime at 8.9s. She listens silently from 9.0s to 10.6s, then says at 10.7–11.2s: "Rome !" She taps the screen at exactly 11.5s.
+4.0–8.0s: Hard match cut on the tap into the spaceship cockpit. The camera is now at the dashboard looking back at Sam, who sits in the front-left pilot seat in the same pose; match his face size, frame position, lens and push-in speed across the cut. Only location, light and sound change; Jupiter's warm amber light falls on his face and the white seat. At 4.6–5.3s he looks up past the camera and whispers: "Wouah…" From 5.5s the camera rises and arcs smoothly over the seats to end behind the back row, revealing the whole cockpit with Jupiter filling the windscreen: Julie in the front-right pilot seat, Claire in the back-left seat, Shmoulik in the back-right seat, everyone leaning toward the windscreen, staring at Jupiter. At 6.5s the wooden spoon slips out of Claire's hand and floats slowly upward between the seats, turning in the air.
+8.0–11.5s: Medium two-shot, 35mm, from the dashboard looking back at Sam and Julie in the two front pilot seats, their faces lit by Jupiter's amber glow, Claire and Shmoulik soft in the back row. At 8.2s Julie takes the tablet from Sam and says at 8.2–8.7s: "À moi !" She holds it screen toward herself. A soft chime at 8.9s. She listens silently from 9.0s to 10.6s, then says at 10.7–11.2s: "Rome !" She taps the screen at exactly 11.5s.
 11.5–17.0s: Hard match cut on the tap to the Rome terrace. Match Julie's pose, face size, frame position and lens across the cut; only location, light and sound change. Same seats around the checked-tablecloth table, the Colosseum behind the far side. At 12.3s the wooden spoon drops from above into Claire's open right hand. From 12.5s the camera pulls back to the wide from the empty near side. Claire looks around, amazed and delighted, and says at 14.6–16.2s: "Mais c'est génial, ce truc !" Hold until 17.0s.
 
-SOUND — close, dry French dialogue, lip-synced, each line once at its stated time. Two soft app chimes at 0.2s and 8.9s, and no voice from the tablet. Dining room: quiet room tone. Space: low station hum and a soft airy whoosh on the cut. Rome: lively street ambience, distant chatter, a passing scooter. No music, no narrator, no captions, no watermarks.
+SOUND — close, dry French dialogue, lip-synced, each line once at its stated time. Two soft app chimes at 0.2s and 8.9s, and no voice from the tablet. Dining room: quiet room tone. Spaceship: low engine hum, soft cockpit beeps and an airy whoosh on the cut. Rome: lively street ambience, distant chatter, a passing scooter. No music, no narrator, no captions, no watermarks.
 
-CONTINUITY — the same four people keep the same seats in all three places: Sam far side left, Julie far side right, Claire left end, Shmoulik right end. One orange tablet travels Sam to Julie, screen never visible. One wooden spoon: in Claire's hand at home, floating in space, back in her hand in Rome. No furniture follows them between places.
+CONTINUITY — the same four people keep the same relative positions in all three places: at the tables Sam far side left, Julie far side right, Claire left end, Shmoulik right end; in the spaceship Sam front-left, Julie front-right, Claire back-left, Shmoulik back-right. One orange tablet travels Sam to Julie, screen never visible. One wooden spoon: in Claire's hand at home, floating in space, back in her hand in Rome. No furniture follows them between places.
 ```
 
 ### G4 — Le tour de Claire, le retour et la signature (16 s)
