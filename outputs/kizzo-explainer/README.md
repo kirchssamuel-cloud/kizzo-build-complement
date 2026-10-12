@@ -1,0 +1,170 @@
+# Kizzo — film explicatif 3D (37,5 s, 9:16, français)
+
+Animation motion design 3D temps réel (Three.js / WebGL) qui explique Kizzo, au format vertical 1080 × 1920, 60 fps, avec sound design synthétisé. La v2 est en français, reprend les vraies interfaces des apps Kizzo et ajoute la scène du **scan de leçon** : le parent photographie la leçon de l'enfant, Kizzo en génère un quiz, et le parent choisit la fréquence des quiz (toutes les 10, 15, 20 ou 30 min).
+
+| Livrable | Usage |
+|---|---|
+| `kizzo-explainer-fr.html` | **Le film interactif.** Un seul fichier autonome (Three.js, polices et code embarqués) : double-clic, ça marche hors-ligne sur Mac et Windows. |
+| `kizzo-explainer-fr-1080x1920-60fps.mp4` | Export vidéo H.264 + AAC (−14 LUFS), prêt pour LinkedIn / Reels / TikTok. |
+| `kizzo-explainer-fr-poster.png` | Image finale (logo) en 1080 × 1920, pour la miniature. |
+| `v1-en/` | Version 1 (anglais, 30 s, sans scène de scan), archivée. |
+| `kizzo-regles-fr.html` · `kizzo-regles-fr-1080x1080-60fps.mp4` · `kizzo-regles-fr-poster.png` | **Film 2 « Les règles du jeu »**, format carré 1:1 (voir plus bas). |
+| `kizzo-pub-sans-voix-fr-1080x1920-60fps.mp4` · `kizzo-pub-fr-1080x1920-60fps.mp4` · `kizzo-pub-*-fr.html` | **Pub 9:16 « 23:47 »** pour TikTok / Reels / Facebook, sans et avec voix off (voir plus bas). |
+| `kizzo-crash-test-fr-1080x1920-60fps.mp4` · `kizzo-crash-test-fr.html` · `kizzo-crash-test-fr-poster.png` | **Vidéo 9:16 « Crash test »** : accroche-appât au ralenti + motion design (voir plus bas). |
+| `kizzo-promo-3d-fr-1080x1920-60fps.mp4` · `kizzo-promo-3d-fr.html` | **Promo 3D « La reconstruction »**, à coller derrière l'accroche filmée (voir plus bas). |
+| `kizzo-la-demande-fr-1080x1920-60fps.mp4` · `kizzo-la-demande-fr.html` | **Film 9:16 « La demande »** (2D, une seule prise, voix off) : l'enfant écrit à sa mère, Kizzo répond par un quiz (voir plus bas). |
+
+## Lecture
+
+Ouvrir `kizzo-explainer-fr.html` dans Chrome, Edge, Safari ou Firefox → **Lancer avec le son**.
+
+- `Espace` lecture/pause · `R` rejouer · `M` couper le son · `←` `→` ±1 s · barre de progression cliquable / glissable · bouton plein écran.
+- La résolution s'adapte automatiquement à la carte graphique pour tenir 60 fps (rendu interne jusqu'à 1080 × 1920).
+
+Paramètres d'URL (à ajouter après `.html`) :
+
+| Paramètre | Effet |
+|---|---|
+| `?lang=en` | Textes en anglais (français par défaut). |
+| `?autoplay=1` | Démarre seul (son coupé, règle des navigateurs). |
+| `?loop=1` | Boucle infinie (écran de salon, stand). |
+| `?t=17.3` | Démarre à un instant précis. |
+| `?quality=low\|medium\|high` | Force la qualité (sinon automatique). |
+
+## Découpage (timeline)
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 4,9 s | **A · Le temps d'écran** | Ben joue sur son téléphone, une tablette flotte. « Quiz dans 0:00 » → onde de choc, l'écran gèle, écran de verrouillage Kizzo. Titre **« Le temps d'écran, en plus malin »**. Travelling avant dans l'écran → flash. |
+| 4,9 – 12,4 s | **Scan · Le parent crée le quiz** | Téléphone parent au-dessus du cahier de Ben. « Photographier une leçon » → viseur « Page 1 » et balayage laser de la page → « Kizzo lit la leçon de Ben » (%, étapes) pendant que des lignes de la leçon s'envolent → « Questions générées » (Le cycle de l'eau) → « Quiz automatiques » : sélecteur 3D 10 / **15** / 20 / 30 min, planning de l'après-midi recalculé, « Envoyer à Ben ». Titres **« Photographiez ses leçons »** puis **« Un quiz toutes les 15 minutes »**. |
+| 12,4 – 16,5 s | **B · Le quiz arrive** | L'accueil enfant (« Salut Ben », carte « Nouveau quiz ! », évolution, dernier quiz) sort du téléphone en calques 3D, icônes holographiques en orbite. Titre **« Il apprend pour débloquer »**. Tap sur « Lancer le quiz ». |
+| 16,5 – 23,5 s | **C · Le quiz** | Hologramme au-dessus du téléphone : les 3 questions générées depuis la leçon (soleil 3D, nuage qui pleut, réponse à compléter), tuiles de réponses, doigt + onde de toucher, anneau de progression en 3 segments. |
+| 23,5 – 27,9 s | **D · La récompense** | « +15 » extrudé en 3D, rayons, confettis, **« MINUTES DÉBLOQUÉES »**. Écran « Bravo ! » avec +15 min. Titre **« +15 minutes gagnées »**. |
+| 27,9 – 32,9 s | **E · Le parent** | Tableau de bord « Bonjour Léa » (temps restant, quiz automatiques, créer un quiz avec une photo, statistiques). Trois règles (quiz toutes les 15 min, limite 2 h, coucher 20 h 30) rejoignent le téléphone de Ben par des traînées de lumière. Titre **« Vous fixez les règles »**. |
+| 32,9 – 37,5 s | **F · Signature** | Le logo Kizzo extrudé s'assemble, balayage de brillance, rayons. **« kizzo »** + **« Le temps d'écran se gagne en apprenant »**. |
+
+## Film 2 — « Les règles du jeu » (1080 × 1080, 32 s)
+
+Même univers et même charte, autre format (carré, pensé pour le fil LinkedIn / Instagram) et autres illustrations : l'écran réel **« Règles des quiz »** de l'app parent sert de fil rouge, et chaque réglage sort de l'écran en objet 3D.
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 4,6 s | **Accroche** | Les icônes d'applis de Ben sortent de son téléphone et tournent autour ; un anneau compte « Temps d'applis » jusqu'à 15:00, les icônes rentrent, verrou « C'est l'heure d'un quiz ! ». **« 15 minutes d'applis… / …puis un quiz. »** |
+| 4,6 – 14,7 s | **Règles des quiz** | Panoramique vers le téléphone parent. L'interrupteur « Quiz de déblocage » s'active, les 9 puces de fréquence sortent (10 → **15 min**), « Décompté sur le temps d'applis », les jetons 3 → **5 questions**, puis les 6 matières en illustrations 3D (équerre, livre, globe, atome, bulle « Hello! », étoile). « Enregistrer ». |
+| 14,7 – 23,4 s | **Carrousel** | Les illustrations se posent sur 5 cartes de quiz (Maths, Français, Histoire-Géo, Sciences, Anglais) ; le carrousel tourne d'un cran à chaque bonne réponse. **« Il répond, matière par matière »** |
+| 23,4 – 27,9 s | **Récompense** | Retour au téléphone de Ben : un sablier se retourne, « +15 » s'en échappe et se plante dans l'écran, les applis se libèrent. **« +15 minutes d'écran, bien méritées »** |
+| 27,9 – 32 s | **Signature** | Le logo s'assemble, « kizzo », « Le temps d'écran se gagne en apprenant », **kizzo.fr**. |
+
+Code : `src/regles/` (config et textes, écrans Canvas, objets 3D, mise en scène, titres, bande-son). Le lecteur (`src/player.js`), l'environnement, la post-production et le moteur audio (`src/audio-core.js`) sont partagés entre les deux films.
+
+## Pub 9:16 « 23:47 » (1080 × 1920, 30 s)
+
+Format natif réseaux, en 2D plein cadre, vu à travers le téléphone du parent — rien à voir avec les films 3D. Accroche sur la douleur du parent dès la première image.
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 4,9 s | **Accroche** | Écran verrouillé de nuit, **23:47**, notification « Temps d'écran · Ben · 6 h 42 aujourd'hui », puis « Ben a battu son record ! », « jdors bientot promis ». Vibrations. |
+| 4,9 – 10,3 s | **Douleur** | La conversation SMS du soir qui dégénère (« Tu dors ? » / « oui » / « Tu es en ligne depuis 6 h. » …), l'écran rougit et tremble. |
+| 10,3 – 13,1 s | **Bascule** | Écran noir, mots qui claquent : « Et si, pour jouer… il devait d'abord **apprendre ?** » |
+| 13,1 – 22,5 s | **Solution** | Démo plein écran : le jeu se fige, quiz, +15 min ; côté parent : photo de la leçon, questions générées, « Règles des quiz ». |
+| 22,5 – 30,2 s | **Fin** | « Fini les ~~disputes~~. », logo, « Le temps d'écran se gagne en apprenant », bouton **Télécharger Kizzo**. |
+
+- Sous-titres karaoké incrustés (lecture sans le son) ; deux versions : **sans voix off** (bruitages + musique) et **avec voix off** (voix française de synthèse grave, Piper « tom » retraitée, `src/pub/vo/`).
+- Code : `src/pub/` (images 2D `frames.js`, habillage `titles.js`, bande-son `audio.js`). Build `npm run build pub` / `pub-sv` ; export `npm run export -- --film pub-sv --frames-from pub`.
+
+## Vidéo 9:16 « Crash test » (1080 × 1920, 27,6 s)
+
+Accroche-appât façon reel : on attend un crash qui n'arrive jamais, puis un motion design calé sur la musique.
+
+| Temps | Plan | Ce qu'on voit |
+|---|---|---|
+| 0 – 11,6 s | **Appât** | HUD de caméra rapide (« CRASH TEST N°01 », REC, 1 000 IMG/S, timecode). Un crayon Kizzo orange tombe au ralenti vers l'écran d'un téléphone posé sur un bureau, dans le noir (jeu à l'écran). Cinq plans de plus en plus serrés, jusqu'à la pointe et son reflet dans le verre, avec les sous-pixels de l'écran visibles. Compteur en direct **« Tu regardes un crayon tomber depuis 8,3 secondes. »**, puis **« Et tu regardes encore. »**, et l'étiquette **« 1 image avant l'impact »** accrochée à la pointe. |
+| 11,6 – 12,5 s | **Il ne se passe rien** | Arrêt sur image (PAUSE) : **« Il ne va rien se passer. »** |
+| 12,5 – 14 s | **Bascule** | L'image figée est aspirée, une forme orange en sort, remplit l'écran (**« Mais t'es encore là. »**), puis devient le logo Kizzo. |
+| 14 – 27,6 s | **Motion design** | 120 BPM, un évènement par temps. Une seule forme, jamais coupée, se transforme sous un curseur qui clique et glisse : bouton « Jouer », chargement, « C'est l'heure d'un quiz ! », quiz 7 × 8 (56 ✓), « +15:00 », minuteur, « Quiz de déblocage », onglets Maths / Français / Sciences, courbe de progression (92 %), réglage « un quiz toutes les 15 min », notification « Ben a gagné 15 min », pastille, logo, **Télécharger Kizzo**. |
+
+- Style : gris chaud, composants noir et blanc, un seul accent (orange Kizzo). Ressorts à très léger dépassement, flou de bougé par sous-images (6 par image à l'export), zoom de caméra qui suit chaque état.
+- Code : `src/crash/` (ralenti 3D `story.js`, crayon `pencil.js`, jeu à l'écran `game.js`, motion design `motion.js`, habillage `titles.js`, musique et bruitages `audio.js`). Build `npm run build crash` ; export `npm run export -- --film crash`.
+
+## Promo 3D « La reconstruction » (1080 × 1920, 16,3 s) — version recommandée
+
+À coller derrière l'accroche filmée (téléphone écrasé). Concept unique : **le téléphone écrasé se reconstruit, et cette fois il fait apprendre**. Chaque plan naît du précédent, un évènement par temps (120 BPM).
+
+| Temps | Ce qu'on voit |
+|---|---|
+| 0 – 1 s | Dans l'écran écrasé : fissures, puis l'orange revient sous le verre et les éclats lévitent. |
+| 1 – 2,5 s | Sur le temps fort, les éclats se recollent : **« PAS BESOIN / D'EN ARRIVER / LÀ. »** en typo 3D autour d'un vrai téléphone. |
+| 2,5 – 6 s | App enfant : le jeu, **« C'est l'heure d'un quiz ! »** sort de l'écran, la question 7 × 8 et les réponses sortent en 3D (56 ✓, les autres tombent), **+15** en relief. |
+| 6 – 10 s | Le téléphone tourne sur lui-même → app parent : « Règles des quiz », puces **15 min**, interrupteur, courbe 3D **92 %**, notification « Ben a gagné 15 min ». |
+| 10 – 12 s | Dernière mesure : **LE TEMPS / D'ÉCRAN / SE GAGNE / EN APPRENANT.**, un mot et un fond par temps. |
+| 12 – 16,3 s | Logo Kizzo en relief, « kizzo », signature, bouton **Télécharger Kizzo**. |
+
+- Fichiers : `kizzo-promo-3d-fr-1080x1920-60fps.mp4`, `kizzo-promo-3d-fr.html`, `kizzo-promo-3d-fr-poster.png` ; code `src/promo3d/` (build `npm run build promo3d`).
+- Flou de bougé par sous-images sur les mouvements rapides (export).
+
+## Promo motion design « à coller derrière une accroche » (1080 × 1920, 16,3 s)
+
+Format Wants and Needs : une accroche filmée réaliste (vidéo générée par IA, ex. une voiture qui écrase un téléphone) capte l'attention, puis la promo démarre **dans l'écran cassé** de ce téléphone.
+
+| Temps | Ce qu'on voit |
+|---|---|
+| 0 – 0,5 s | Écran fissuré éteint, lignes de pixels morts (raccord avec la fin de l'accroche). |
+| 0,5 – 1 s | L'écran se rallume en orange Kizzo derrière les fissures. |
+| 1 s | Sur le temps fort, les éclats explosent : **« PAS BESOIN / D'EN ARRIVER / LÀ. »** claque mot à mot. |
+| 2 s | Logo Kizzo aux couleurs de la charte. |
+| 2,5 – 12,5 s | Démo pilotée au curseur (Jouer, quiz 7 × 8, +15:00, minuteur), la carte **se retourne** côté parent (réglages, onglets, progression 92 %, un quiz toutes les 15 min), notification « Ben a gagné 15 min ». |
+| 13 – 14,5 s | Signature en typo cinétique : **« LE TEMPS D'ÉCRAN / SE GAGNE / EN APPRENANT. »**, la pastille orange devient surligneur. |
+| 14,5 – 16,3 s | Logo, « kizzo », bouton **Télécharger Kizzo**. |
+
+- Fichiers : `kizzo-promo-motion-fr-1080x1920-60fps.mp4`, `kizzo-promo-motion-fr.html` (build `npm run build crash-promo`).
+- Assemblage avec l'accroche : `sh tools/stitch.sh accroche.mp4 kizzo-promo-motion-fr-1080x1920-60fps.mp4 final.mp4` (zoom dans l'écran + fondu de 0,4 s, son -14 LUFS).
+
+## Interfaces reprises des vraies apps
+
+- **App parent (claire)** : d'après les captures « Bonjour Léa », « Photographier une leçon », viseur « Page 1 », « Kizzo lit la leçon de Ben » et « Questions générées » (dégradé ciel → pêche, boutons orange, cartes blanches).
+- **App enfant (sombre)** : d'après le code de l'app enfant (`HomeScreen`, `LockedScreen`, `QuizPlayScreen`) : navy `#152A4A → #0A1526`, cyan `#3DB4D9`, boutons arrondis avec halo.
+
+## Charte appliquée
+
+Orange signature `#F97316`, navy `#0F172A`, cyan du logo `#3DB5DA` · Outfit / Plus Jakarta Sans (titres et interfaces), Space Grotesk (chiffres), Caveat (écriture du cahier) · rayons généreux sur toutes les cartes UI. Le logo 3D est extrudé depuis le tracé vectoriel du logo fourni.
+
+## Technique (pour l'équipe / l'agence)
+
+- **Rendu** : Three.js r170, matériaux PBR (titane, verre, clearcoat), environnement studio pré-filtré, ombres douces VSM.
+- **Post-production maison** : MSAA → profondeur de champ bokeh → FX additifs non floutés avec test de profondeur → bloom → tone mapping Khronos PBR Neutral, aberration chromatique, zoom-blur, vignette, grain.
+- **Déterminisme** : chaque image est une fonction pure du temps `t` → scrub instantané, boucle parfaite, export image par image identique au temps réel. La scène de scan est insérée dans la timeline par un remappage du temps (`SCAN0`, `SCAN_DUR` dans `src/config.js`).
+- **Interfaces** : dessinées en Canvas 2D (`src/ui-kizzo.js`) puis plaquées sur les écrans 3D, une fois les polices chargées.
+- **Son** : 100 % Web Audio, même partition en temps réel et en rendu hors-ligne pour l'export.
+
+## Modifier / reconstruire
+
+```bash
+cd outputs/kizzo-explainer
+npm install
+npm run build            # -> kizzo-explainer-fr.html + kizzo-regles-fr.html
+npm run export           # -> dist/kizzo-explainer-1080x1920-60fps.mp4 (≈ 2 h 30 sans GPU, reprenable)
+npm run export -- --film regles   # -> dist/kizzo-regles-1080x1080-60fps.mp4 (≈ 1 h 30)
+```
+
+- Textes (FR/EN), couleurs et timing : `src/config.js`.
+- Interfaces : `src/ui-kizzo.js` · scène du scan : `src/scan.js` · mise en scène et caméras : `src/story.js` · son : `src/audio.js`.
+- Aperçus rapides : `node tools/snap.mjs <dossier> 960 6.2 10.9 19.9` (images fixes aux instants donnés) ; `FILM=regles node tools/snap.mjs <dossier> 540 …` pour le film carré.
+- Écrans seuls, sans la 3D : `node tools/ui-preview.mjs out.png "rulesScreen(c,390,860,{})"`.
+
+## Film 9:16 « La demande » (1080 × 1920, 16,6 s, 130 BPM) — une seule prise, voix off
+
+Recette « film de lancement » : 2D, **aucune coupe ni fondu**, chaque scène naît de la précédente (le bouton d'envoi devient le bol, l'orange inonde l'image depuis le bol puis se rétracte dans la bulle, le bouton devient la page). Une caméra, un mouvement par scène, ressorts analytiques, textes qui montent derrière une ligne de masque. Voix off générée (Gemini TTS, voix « Sulafat »), musique baissée sous la voix.
+
+| Temps | Ce qu'on voit | Voix off |
+|---|---|---|
+| 0 – 2,8 s | Gros plan sur le composer d'une messagerie, halo irisé, clavier : l'enfant tape **« Maman je peux avoir / encore 30 min ? / j'ai fini mes devoirs »**. | « Il voulait trente minutes de plus. » |
+| 2,8 – 3,5 s | Envoi : onde cyan, le texte devient une bulle orange, le clavier se retire, la caméra recule sur le téléphone. | |
+| 3,5 – 5,5 s | Le bouton d'envoi devient un **bol cyan** qui lance les matières en l'air (Fractions, Conjugaison, Histoire, Anglais, Sciences, Géographie) sous **« Kizzo mijote ton quiz… »**. | « Kizzo lui a préparé trois questions… |
+| 5,5 – 7,4 s | **Temps fort** : l'orange inonde l'image depuis le bol, trois cartes de quiz jaillissent, la bande glisse, **« Les fractions »** se soulève avec la pastille **« Leçon de mardi »**. | …sur sa leçon de mardi. » |
+| 7,4 – 9,7 s | L'orange se rétracte dans la bulle de l'enfant, la carte file dans la réponse. **« Maman utilise Kizzo »**, « Trouvé ! Les fractions… 3 questions = 30 min. », « On y va ? », clic sur **C'est parti**, roue, **✓ 30 min débloquées**. | « Trois bonnes réponses, trente minutes gagnées. » |
+| 9,7 – 12,5 s | Le bouton devient la page navy, son libellé grossit en titre puis file : **« Il voulait 30 min. / Il les a gagnées. »** mot par mot. | |
+| 12,5 – 13,4 s | Un point orange suit un parcours en 3 étapes ✓ jusqu'à l'épingle… | |
+| 13,4 – 16,6 s | …qui devient le **logo Kizzo** (cyan + orange), « kizzo » sort de derrière, « Le temps d'écran se gagne en apprenant. », bouton **kizzo.fr · bêta gratuite**. | « Kizzo. Le temps d'écran se gagne en apprenant. » |
+
+- Fichiers : `kizzo-la-demande-fr-1080x1920-60fps.mp4`, `kizzo-la-demande-fr.html` ; code `src/launch/` (lecteur 2D `src/player2d.js`, build `npm run build launch`). Voix off : `src/launch/vo/ph1..4.mp3`, prises brutes dans `vo/`.
+- Export : 4 à 16 sous-images par image selon la vitesse du mouvement (flou de bougé sans images fantômes).

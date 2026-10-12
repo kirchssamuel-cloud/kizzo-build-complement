@@ -1,0 +1,44 @@
+/* Film « Les règles du jeu » : cadre carré 1:1 — titres plus compacts, étiquettes 3D, adresse du site. */
+.title { top: 6.5%; width: 90%; font-size: calc(var(--u) * 7.4); line-height: 1.04; }
+.title .tl.accent .tc { background: linear-gradient(180deg, #FFB27A 0%, #F97316 70%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tc { transform-origin: 0 100%; }
+
+.callout { position: absolute; width: 0; height: 0; visibility: hidden; pointer-events: none; }
+.co-dot {
+  position: absolute; left: 0; top: 0;
+  width: calc(var(--u) * 1.6); height: calc(var(--u) * 1.6); border-radius: 50%;
+  background: #fff; box-shadow: 0 0 0 calc(var(--u) * 0.6) rgba(61, 181, 218, 0.35), 0 0 calc(var(--u) * 2.4) rgba(61, 181, 218, 0.9);
+}
+.co-line {
+  position: absolute; left: calc(var(--u) * -0.1); top: 0;
+  width: calc(var(--u) * 0.25); height: calc(var(--u) * 2.6);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.15));
+  transform-origin: 50% 0; transform: scaleY(0);
+}
+.co-label {
+  position: absolute; left: 0; top: calc(var(--u) * 2.9);
+  white-space: nowrap;
+  padding: calc(var(--u) * 1.3) calc(var(--u) * 2.6);
+  border-radius: 999px;
+  background: rgba(10, 21, 38, 0.72);
+  border: 1px solid rgba(127, 211, 236, 0.35);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  font-family: var(--f-display); font-weight: 600; font-size: calc(var(--u) * 3.1);
+  color: #fff; letter-spacing: -0.005em;
+  box-shadow: 0 calc(var(--u) * 1) calc(var(--u) * 4) rgba(2, 6, 23, 0.45);
+}
+
+.sig { top: 63%; }
+.wordmark { font-size: calc(var(--u) * 13); }
+.tagline { margin-top: calc(var(--u) * 1.6); font-size: calc(var(--u) * 3.6); }
+.url {
+  display: inline-block; margin-top: calc(var(--u) * 3.2);
+  padding: calc(var(--u) * 1.2) calc(var(--u) * 3.4);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--orange-2), var(--orange));
+  color: #fff; font-family: var(--f-display); font-weight: 700; font-size: calc(var(--u) * 3.4); letter-spacing: 0.01em;
+  box-shadow: 0 calc(var(--u) * 0.8) 0 #C2410C, 0 calc(var(--u) * 2) calc(var(--u) * 6) rgba(249, 115, 22, 0.45);
+  opacity: 0;
+}
+.start-title { font-size: calc(var(--u) * 7); }
+.start-mark { width: calc(var(--u) * 18); }
