@@ -14,7 +14,7 @@ const arg = (k, d) => {
   return i > 0 ? process.argv[i + 1] : d;
 };
 const FILM = arg('film', 'explainer');
-const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920], crash: [1080, 1920], 'crash-promo': [1080, 1920], promo3d: [1080, 1920] }[FILM];
+const FORMAT = { explainer: [1080, 1920], regles: [1080, 1080], pub: [1080, 1920], 'pub-sv': [1080, 1920], crash: [1080, 1920], 'crash-promo': [1080, 1920], promo3d: [1080, 1920], launch: [1080, 1920] }[FILM];
 const FRAMES = arg('frames-from', FILM);
 const FPS = +arg('fps', 60);
 const H = +arg('h', FORMAT[1]);

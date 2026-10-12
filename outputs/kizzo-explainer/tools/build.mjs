@@ -108,6 +108,15 @@ const FILMS = {
     aria: 'Kizzo — promo 3D 9:16',
     css: 'src/promo3d/film.css',
   },
+  // film « La demande » (2D, une seule prise, 130 BPM) : l'enfant écrit à sa mère, Kizzo répond par un quiz
+  launch: {
+    entry: 'src/launch/main.js',
+    out: 'kizzo-la-demande-fr.html',
+    title: 'Kizzo La Demande',
+    description: "Kizzo — film 9:16 (1080×1920, 60 fps) en une seule prise : l'enfant demande 30 min de plus, Kizzo répond par un quiz.",
+    aria: 'Kizzo — La demande, film 9:16',
+    css: 'src/launch/film.css',
+  },
 };
 
 const only = process.argv[2];

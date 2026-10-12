@@ -12,6 +12,7 @@ Animation motion design 3D temps réel (Three.js / WebGL) qui explique Kizzo, au
 | `kizzo-pub-sans-voix-fr-1080x1920-60fps.mp4` · `kizzo-pub-fr-1080x1920-60fps.mp4` · `kizzo-pub-*-fr.html` | **Pub 9:16 « 23:47 »** pour TikTok / Reels / Facebook, sans et avec voix off (voir plus bas). |
 | `kizzo-crash-test-fr-1080x1920-60fps.mp4` · `kizzo-crash-test-fr.html` · `kizzo-crash-test-fr-poster.png` | **Vidéo 9:16 « Crash test »** : accroche-appât au ralenti + motion design (voir plus bas). |
 | `kizzo-promo-3d-fr-1080x1920-60fps.mp4` · `kizzo-promo-3d-fr.html` | **Promo 3D « La reconstruction »**, à coller derrière l'accroche filmée (voir plus bas). |
+| `kizzo-la-demande-fr-1080x1920-60fps.mp4` · `kizzo-la-demande-fr.html` | **Film 9:16 « La demande »** (2D, une seule prise, voix off) : l'enfant écrit à sa mère, Kizzo répond par un quiz (voir plus bas). |
 
 ## Lecture
 
@@ -149,3 +150,21 @@ npm run export -- --film regles   # -> dist/kizzo-regles-1080x1080-60fps.mp4 (�
 - Interfaces : `src/ui-kizzo.js` · scène du scan : `src/scan.js` · mise en scène et caméras : `src/story.js` · son : `src/audio.js`.
 - Aperçus rapides : `node tools/snap.mjs <dossier> 960 6.2 10.9 19.9` (images fixes aux instants donnés) ; `FILM=regles node tools/snap.mjs <dossier> 540 …` pour le film carré.
 - Écrans seuls, sans la 3D : `node tools/ui-preview.mjs out.png "rulesScreen(c,390,860,{})"`.
+
+## Film 9:16 « La demande » (1080 × 1920, 16,6 s, 130 BPM) — une seule prise, voix off
+
+Recette « film de lancement » : 2D, **aucune coupe ni fondu**, chaque scène naît de la précédente (le bouton d'envoi devient le bol, l'orange inonde l'image depuis le bol puis se rétracte dans la bulle, le bouton devient la page). Une caméra, un mouvement par scène, ressorts analytiques, textes qui montent derrière une ligne de masque. Voix off générée (Gemini TTS, voix « Sulafat »), musique baissée sous la voix.
+
+| Temps | Ce qu'on voit | Voix off |
+|---|---|---|
+| 0 – 2,8 s | Gros plan sur le composer d'une messagerie, halo irisé, clavier : l'enfant tape **« Maman je peux avoir / encore 30 min ? / j'ai fini mes devoirs »**. | « Il voulait trente minutes de plus. » |
+| 2,8 – 3,5 s | Envoi : onde cyan, le texte devient une bulle orange, le clavier se retire, la caméra recule sur le téléphone. | |
+| 3,5 – 5,5 s | Le bouton d'envoi devient un **bol cyan** qui lance les matières en l'air (Fractions, Conjugaison, Histoire, Anglais, Sciences, Géographie) sous **« Kizzo mijote ton quiz… »**. | « Kizzo lui a préparé trois questions… |
+| 5,5 – 7,4 s | **Temps fort** : l'orange inonde l'image depuis le bol, trois cartes de quiz jaillissent, la bande glisse, **« Les fractions »** se soulève avec la pastille **« Leçon de mardi »**. | …sur sa leçon de mardi. » |
+| 7,4 – 9,7 s | L'orange se rétracte dans la bulle de l'enfant, la carte file dans la réponse. **« Maman utilise Kizzo »**, « Trouvé ! Les fractions… 3 questions = 30 min. », « On y va ? », clic sur **C'est parti**, roue, **✓ 30 min débloquées**. | « Trois bonnes réponses, trente minutes gagnées. » |
+| 9,7 – 12,5 s | Le bouton devient la page navy, son libellé grossit en titre puis file : **« Il voulait 30 min. / Il les a gagnées. »** mot par mot. | |
+| 12,5 – 13,4 s | Un point orange suit un parcours en 3 étapes ✓ jusqu'à l'épingle… | |
+| 13,4 – 16,6 s | …qui devient le **logo Kizzo** (cyan + orange), « kizzo » sort de derrière, « Le temps d'écran se gagne en apprenant. », bouton **kizzo.fr · bêta gratuite**. | « Kizzo. Le temps d'écran se gagne en apprenant. » |
+
+- Fichiers : `kizzo-la-demande-fr-1080x1920-60fps.mp4`, `kizzo-la-demande-fr.html` ; code `src/launch/` (lecteur 2D `src/player2d.js`, build `npm run build launch`). Voix off : `src/launch/vo/ph1..4.mp3`, prises brutes dans `vo/`.
+- Export : 4 à 16 sous-images par image selon la vitesse du mouvement (flou de bougé sans images fantômes).
