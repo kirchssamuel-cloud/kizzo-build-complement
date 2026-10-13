@@ -357,7 +357,13 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
-- **Montage v9 des séquences 1 et 2 (25,9 s), version en cours.**
+- **Montage v10 des séquences 1 et 2 (25,9 s), version en cours : la pause est retravaillée.**
+  - Analyse de la v9 : l'image dérivait pendant la pause (saut de zoom de 5 % puis retour sur 0,4 s), la famille gardait de micro-mouvements venus de G2, et l'arrêt n'était pas marqué puisque les enfants étaient déjà immobiles.
+  - Corrections :
+    - zoom sec de 4 % sur le « clac », tenu sans dérive jusqu'à la coupe sur le plan taille ;
+    - flash blanc de 3 images (22 %, 11 %, 4 %) ;
+    - pendant l'entrée de Shmoulik, le décor reste l'image figée et seul Shmoulik est incrusté depuis G2 (masque de mouvement limité à la droite de l'image). Le mouvement côté famille passe à environ 0.
+- Montage v9 (pause pas assez nette).
   - Arrêt sur image à 13,85 s. Le premier « Attends » tombe à 14,05 s, soit 0,65 s après la fin du « Quoi ?! » de Julie.
   - La voix off est posée d'une seule traite (fichier ElevenLabs entier, démarrage à 13,83 s, sans aucune coupe). C'est l'image qui est calée dessus :
     - G2 démarre à 13,91 s, donc Shmoulik entre pendant les « Attends » ;
