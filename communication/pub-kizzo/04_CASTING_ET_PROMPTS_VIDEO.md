@@ -357,7 +357,12 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
 - **La voix clonée ne suffit pas** pour un personnage réel : sa vraie voix, même enregistrée au téléphone, sonne mieux une fois nettoyée.
 - **Les écrans se règlent au montage** : on génère un écran d'une couleur unie et saturée, puis on y incruste l'image exacte en suivant ses contours. Le rendu est net et fidèle.
 - **Le prolongement de séquence garantit le raccord** : on repart toujours de la dernière image de la prise précédente.
-- **Montage v10 des séquences 1 et 2 (25,9 s), version en cours : la pause est retravaillée.**
+- **Montage v11 des séquences 1 et 2 (25,9 s), version en cours.**
+  - Une seule image figée de référence, la première de G2, de l'arrêt jusqu'à la coupe. Le flash et le zoom masquent le passage depuis G1.
+  - Julie est détourée sur l'image figée (modèle MediaPipe « selfie multiclass », haut du crâne recoupé à la main pour exclure les livres derrière elle) et reste toujours au premier plan. Shmoulik est incrusté derrière elle.
+  - Contrôle : mouvement moyen sur les pixels de Julie pendant la pause égal à 0,06, donc immobile.
+- Montage v10 (le visage de Julie scintillait quand Shmoulik passait derrière).
+- Montage v10, détail de la pause :
   - Analyse de la v9 : l'image dérivait pendant la pause (saut de zoom de 5 % puis retour sur 0,4 s), la famille gardait de micro-mouvements venus de G2, et l'arrêt n'était pas marqué puisque les enfants étaient déjà immobiles.
   - Corrections :
     - zoom sec de 4 % sur le « clac », tenu sans dérive jusqu'à la coupe sur le plan taille ;
