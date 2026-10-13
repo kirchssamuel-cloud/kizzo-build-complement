@@ -231,6 +231,49 @@ SOUND — while frozen, the room tone cuts to total silence; Shmoulik's footstep
 CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire keeps her wooden spoon.
 ```
 
+### G4 v2 — Le quiz raté de Claire, l'atterrissage et les lasagnes (15 s, 1080p)
+
+**Prise 1080p réalisée : job 28178095 (180 crédits), en prolongement de la G3 v7.** Changements par rapport à la G4 d'origine :
+- **Shmoulik reste muet** : la phrase de fin est en voix off.
+- **« Cinquante-six » est dit par Sam seul.**
+- **Des maniques au lieu de la cuillère.**
+- **Retour à la maison** : un tonneau fait par Seedance, puis les quatre tombent d'en haut du cadre et atterrissent sur leurs chaises.
+
+Contrôle de la prise :
+- Atterrissage à 5,9–6,1 s : chute, puis boum avec cheveux en bataille et lampe qui se balance.
+- Les places sont respectées.
+- « Mes lasagnes ! » est dit sous l'alarme.
+- Le plat est carbonisé.
+- Shmoulik garde son T-shirt blanc et ne regarde jamais la caméra.
+
+Au montage, on ajoute l'hologramme « Combien font 7 × 8 ? » : le 54 passe au rouge, puis le 56 au vert, avec le badge « Raté ! ».
+
+```
+Continue the reference video seamlessly from its very last frame: same sunny Rome terrace, same family at the same table, same clothes, same hard afternoon light. A 15-second extension of a live-action family comedy commercial, 16:9, photoreal, shot on a cinema camera, natural skin texture, crisp focus. Claire insists on trying the quiz herself, answers wrong, and the whole family is yanked back home: they crash-land on their own chairs around their dining table, as if dropped back from a trip through time, and Claire's lasagne has burnt in the oven. All dialogue is short and in native French. No narrator. No voice ever comes from the tablet. Shmoulik never speaks.
+
+REFERENCES — Image 1: Claire. Image 2: Sam. Image 3: Julie. Image 4: Shmoulik. Image 5: the Rome terrace. Image 6: the family dining room at home. Faces, hair and clothes must stay exactly as in the reference video and Images 1-4 in every shot and in both places.
+Claire: 40, chestnut hair in a loose messy bun, mustard-yellow apron over a navy sweater. She never holds a spoon or any utensil in this video.
+Sam: 10, light chestnut-brown tousled wavy hair, forest-green hoodie, black headphones around his neck.
+Julie: 8, golden-blonde hair in two braids with a short fringe, raspberry-pink sweatshirt under denim dungarees.
+Shmoulik: mid-twenties man, short light-brown hair, short stubble beard, plain white T-shirt, navy trousers: the same plain white T-shirt in every shot. He never speaks. He behaves like a natural, relaxed guest: neutral calm face at rest, real spontaneous reactions, he laughs naturally with the family. He never looks into the lens, never poses, never smirks, never grimaces, never winks.
+
+TABLET — one single unbranded tablet in a vivid orange matte case. Its screen always faces the person holding it; only the orange back faces the camera. Never show its screen. Only one tablet exists.
+
+ROME — as Image 5 and the end of the reference video: the table with the red-and-white checked tablecloth and plates of spaghetti, dark-green bistro chairs, the Colosseum behind, hard warm afternoon sunlight. Same seats as at the end of the reference video: Claire at the left end; Julie and Sam side by side on the far side, Julie next to Claire on the left of frame, Sam on the right of frame; Shmoulik at the right end.
+DINING ROOM — exactly as Image 6: the long light-oak table with a glass water jug and a bowl of fruit on it; exactly four wooden chairs: two on the far side, one at each end, none on the near side closest to the camera; the open kitchen just behind the far side, with the built-in oven directly behind the middle of the table, its glass door glowing orange with a dish of lasagne inside; the fridge covered with children's drawings on the right; the white pendant lamp over the table; deep blue dusk outside the window, warm lamp light. Home seats: Sam on the far-side chair on the left, Julie on the far-side chair on the right, both facing the camera; Claire on the chair at the left end; Shmoulik on the chair at the right end.
+
+SHOTS AND TRANSITION — locked-off shots joined by clean hard cuts, plus one fluid in-camera teleport: the same kind of fast, smooth barrel roll as the teleports in the reference video, rolling in the opposite direction. No morphing faces, no warping bodies, no glitches, no slow motion.
+0.0–1.4s: Same wide shot as the end of the reference video. Without standing up, Claire turns to Julie, takes the orange tablet out of her hands with both hands, delighted, and says at 0.3–0.9s: "À moi !" Julie lets go, surprised; the others watch, amused.
+1.4–5.3s: Hard cut to a medium close-up, 35mm, locked off, on Claire seated at the Rome table, framed slightly right of centre, holding the tablet in both hands, screen toward her; the Colosseum softly out of focus behind her, hard sunlight on her face. A soft app chime at 1.6s. She reads silently, lips closed, from 1.7s to 3.3s, then answers instantly, very sure of herself, with a proud smile, at 3.5–4.3s: "Cinquante-quatre !" She taps the screen once at 4.6s. A short low wrong-answer buzzer sounds at 4.8s: her proud smile freezes, then she winces.
+5.3–6.2s: TELEPORT HOME — the camera does one fast, smooth barrel roll with natural motion blur; during the roll the sunny Rome terrace becomes the family dining room at dusk; the roll settles on a wide, locked-off shot of the dining room from the near side of the table, at adult eye level, framed exactly like Image 6: the whole table, all four chairs, the oven behind. For a brief moment the room is completely empty and all four chairs are empty.
+6.2–11.2s: The same wide, locked-off shot, one continuous take with no cut. At 6.6s, with a rushing whoosh and one loud heavy thump, all four of them drop down into the shot from above the top of the frame at the same instant, at normal speed, and land hard on their own home chairs: Sam on the far-side left chair, Julie on the far-side right chair, Claire on the left-end chair, still clutching the orange tablet, Shmoulik on the right-end chair. Exactly four people in the room. Nobody lands on the table or on the floor. The chairs jolt and scrape and the pendant lamp swings. Their hair is tousled by the landing; they sit frozen, stunned, blinking, from 6.7s to 7.5s. At 7.6–8.2s Sam turns to Claire and says flatly, deadpan: "Cinquante-six." Julie nods solemnly, silent. From 7.8s grey smoke starts seeping out around the oven door behind Sam and Julie and quickly thickens. At 8.6s a smoke alarm starts beeping. Claire's eyes go wide; she cries at 8.8–9.5s: "Mes lasagnes !" She puts the tablet down on the table, jumps up, hurries behind Sam's chair to the oven, grabs a pair of quilted oven mitts from the counter and pulls the oven door open at 10.8s: a big cloud of grey smoke billows out. Sam and Julie twist round in their chairs to watch; Shmoulik, at the right end, bursts out laughing naturally.
+11.2–15.0s: Hard cut to a medium close-up, 35mm, locked off, on Claire standing in front of the open smoking oven, now turned round toward the table and the camera, holding up in her oven-mitted hands a rectangular baking dish of lasagne burnt completely black: charred, cracked, smoking. Her bun is half undone and her hair messy from the landing. She stares down at the ruined dish, deflated, sighs, then lets out a small embarrassed laugh. Off-screen, Sam, Julie and Shmoulik laugh. She never looks into the lens. Hold until 15.0s.
+
+SOUND — exactly four short spoken lines, each spoken once, lip-synced, in native French: "À moi !", "Cinquante-quatre !", "Cinquante-six.", "Mes lasagnes !". Nobody else speaks; no mumbling, no extra words; only laughter and gasps besides these lines. Rome: lively street ambience, a soft app chime at 1.6s, a short low wrong-answer buzzer at 4.8s. A fast airy whoosh during the barrel roll. Home: a rushing whoosh and one loud heavy thump at 6.6s as they land, chairs scraping, then quiet room tone; a smoke alarm beeping from 8.6s to 11.2s, then silent; laughter. No music, no narrator, no captions, no on-screen text, no watermarks.
+
+CONTINUITY — the same four people with the same faces and clothes in both places; Shmoulik always in his plain white T-shirt. One orange tablet, its screen never visible. No spoon anywhere. In the dining room the near side of the table, closest to the camera, has no chairs. Nothing from Rome follows them home.
+```
+
 ### G3 v7 — Les deux voyages, transitions tournées par Seedance (15 s, 1080p)
 
 **Prise 1080p lancée : job 31a7b6aa (180 crédits).** Le brouillon v6 (cca70a66) a été jugé « bien, à quelques détails près ». Corrections :
@@ -612,3 +655,21 @@ Une génération par ligne, avec la même voix et les mêmes réglages. On écri
 | A3 | 4,5–6,2 s : Claire tend la main vers la box Wi-Fi | 1,6 s | `[mischievous] Alors maman… sort l'arme fatale.` |
 | A4 | 7,95–9,2 s : plan large, les enfants à table | 1,2 s | `[dramatic] Et là… c'est le drame.` |
 | B5 | Séquence 2, après le claquement, entre la notification et « Bon… vas-y » (≈ 22,5–24,2 s) | 1,7 s | `[warmly] Une question… et à la clé, du temps d'écran.` |
+
+## 9. Montage final (v2, 59,8 s, 1080p)
+
+- **Ordre des séquences** : la v11 des séquences 1 et 2, puis la G3 v7 avec hologrammes, la G4 v2 avec hologramme, et enfin l'écran de fin de 4 s. Cet écran montre le logo Kizzo, « Même les parents révisent. », le bouton « Rejoins la bêta sur kizzo.fr » et la mention « Vidéo générée par IA ».
+- **Voix off** (ElevenLabs, voix « Père Noël », vitesse 1.00, stabilité 50, similarité 75) :
+  - « Pas toujours évident les devoirs, hein ? » à 3,5 s, pendant que Claire tend la main vers la box.
+  - « Une question… et à la clé, du temps d'écran. » à 25,4 s, juste avant le « Jupiter ! » de Sam.
+  - « Avec Kizzo, pour débloquer ton temps d'écran, il suffit d'apprendre tes leçons. » à 51,35 s, sur le four et les lasagnes.
+  - « Et pour certains… d'apprendre à cuisiner. » à 55,95 s, sur l'écran de fin.
+- **Musique** :
+  - « Sneaky Snitch » (Kevin MacLeod, CC BY 4.0) de 0 à 13,85 s, puis arrêt façon bande ralentie au gel de l'image.
+  - « Whistle Kid / Upbeat Happy Ukulele » (Infraction) de l'apparition de Kizzo (20,01 s) jusqu'à la mauvaise réponse de Claire, arrêt façon bande ralentie.
+  - Le même morceau revient pour sa fin naturelle sur le gros plan des lasagnes et l'écran de fin.
+  - La musique baisse automatiquement sous les voix.
+- **Licences** : Infraction est libre sur YouTube avec crédit, mais une publicité payante demande d'acheter la licence commerciale. Mettre le crédit en description du post.
+- **Son** : -14 LUFS, pic -1,6 dBTP.
+- **Image** : étalonnage commun avec contraste doux, saturation +4 %, léger piqué, vignettage et grain fin. Les séquences 1 et 2 sont éclaircies (gamma 1,05).
+
