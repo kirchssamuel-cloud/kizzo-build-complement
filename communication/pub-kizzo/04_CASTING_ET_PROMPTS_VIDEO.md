@@ -233,7 +233,13 @@ CONTINUITY — same faces, clothes, room and light as the reference video. One o
 
 ### G3 v5 — Les deux voyages, Shmoulik naturel (15 s)
 
-Même prompt que la v4, sauf le jeu de Shmoulik. Sur le brouillon v4, il gardait un sourire en coin figé face caméra, d'où ces changements : visage neutre au repos, réactions spontanées, il regarde Jupiter et le Colisée avec les autres, rit avec la famille, ne pose jamais pour la caméra. Les rotations entre les lieux et la carte quiz Kizzo sont faites au montage.
+Même prompt que la v4, sauf le jeu de Shmoulik. **Brouillon généré : job a997157e (45 crédits).** Shmoulik est naturel (émerveillé devant Jupiter, puis il rit avec la famille à Rome, sans regard caméra). Coupes à 3,08 s (vaisseau), 4,88 s, 6,75 s, 10,79 s (Rome) et 11,67 s.
+
+Habillage de montage (`g3_post.py`) :
+- transition en rotation de 0,29 s de part et d'autre de chaque téléportation (3,08 s et 10,79 s) : rotation de 120°, zoom ×1,9, flou de rotation et éclair orange #F97316 au pic ;
+- carte « Question du jour » Kizzo qui jaillit de la tablette (Outfit, rayon 20 px), avec trois réponses. La bonne passe au vert avec une coche, puis un badge orange « +15 min d'écran » apparaît.
+  - Sam : « Quelle est la plus grosse planète du système solaire ? » (Mars, Jupiter, Saturne).
+  - Julie : « Dans quelle ville se trouve le Colisée ? » (Paris, Rome, Londres). Sur le brouillon v4, il gardait un sourire en coin figé face caméra, d'où ces changements : visage neutre au repos, réactions spontanées, il regarde Jupiter et le Colisée avec les autres, rit avec la famille, ne pose jamais pour la caméra. Les rotations entre les lieux et la carte quiz Kizzo sont faites au montage.
 
 ```
 Continue the reference video seamlessly from its very last frame: same dining room at night, same family, same clothes, same warm lamp light; Sam has just taken the orange tablet from Claire. A 15-second extension of a live-action family comedy commercial, 16:9, photoreal, shot on a cinema camera, natural skin texture, crisp focus. Sam answers a quiz on the tablet and the family is instantly in the cockpit of a spaceship facing Jupiter; then Julie answers and the family is instantly on a sunny terrace facing the Colosseum in Rome. All dialogue is short and in native French. No narrator. No voice ever comes from the tablet. Shmoulik never speaks.
