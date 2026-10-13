@@ -233,7 +233,7 @@ CONTINUITY — same faces, clothes, room and light as the reference video. One o
 
 ### G3 v4 — Les deux voyages, version définitive (15 s)
 
-Brouillon 480p (45 crédits), puis finalisation 1080p du même brouillon si validé. Mode `video_extension` forward depuis G2 quater (a3f98ef3). Images de référence, dans cet ordre : Claire (ce83c9d8), Sam (22a69b68), Julie (d3cd97c9), Shmoulik (e81c9a30), vaisseau (0306111d), Rome (610c338e).
+Brouillon 480p (45 crédits), puis finalisation 1080p du même brouillon si validé. **Brouillon généré : job fa18ce0e (45 crédits).** Coupes à 0,21 s, 3,67 s (vaisseau), 5,54 s (plan large sur Jupiter, la cuillère flotte), 7,42 s (Sam et Julie), 11,12 s (Rome) et 12,08 s (plan large de la terrasse, avec le Colisée). Les quatre personnages, les places et la tablette sont respectés. La finalisation 1080p coûte 180 crédits. Mode `video_extension` forward depuis G2 quater (a3f98ef3). Images de référence, dans cet ordre : Claire (ce83c9d8), Sam (22a69b68), Julie (d3cd97c9), Shmoulik (e81c9a30), vaisseau (0306111d), Rome (610c338e).
 
 Changements par rapport à la v3 :
 - **Coupes franches à la place des éclairs de lumière.** Les transitions orange sont ajoutées au montage, où on les maîtrise totalement.
