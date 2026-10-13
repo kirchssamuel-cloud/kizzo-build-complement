@@ -363,6 +363,7 @@ CONTINUITY — one orange tablet, screen never visible. One wooden spoon, in Cla
     - zoom sec de 4 % sur le « clac », tenu sans dérive jusqu'à la coupe sur le plan taille ;
     - flash blanc de 3 images (22 %, 11 %, 4 %) ;
     - pendant l'entrée de Shmoulik, le décor reste l'image figée et seul Shmoulik est incrusté depuis G2 (masque de mouvement limité à la droite de l'image). Le mouvement côté famille passe à environ 0.
+    - Correctif : le masque pixel par pixel trouait le t-shirt blanc de Shmoulik devant les placards blancs, vers 16 s. On utilise maintenant sa silhouette pleine (enveloppe convexe de chaque zone en mouvement), lissée dans le temps (maximum sur ±3 images), puis dilatée et adoucie.
 - Montage v9 (pause pas assez nette).
   - Arrêt sur image à 13,85 s. Le premier « Attends » tombe à 14,05 s, soit 0,65 s après la fin du « Quoi ?! » de Julie.
   - La voix off est posée d'une seule traite (fichier ElevenLabs entier, démarrage à 13,83 s, sans aucune coupe). C'est l'image qui est calée dessus :
