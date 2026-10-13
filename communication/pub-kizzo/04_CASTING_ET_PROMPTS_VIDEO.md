@@ -231,6 +231,48 @@ SOUND — while frozen, the room tone cuts to total silence; Shmoulik's footstep
 CONTINUITY — same faces, clothes, room and light as the reference video. One orange tablet, its screen never visible to the camera. The phone screen shows only plain dark navy blue. Claire keeps her wooden spoon.
 ```
 
+### G3 v6 — Les deux voyages, raccords corrigés (15 s)
+
+**Brouillon lancé : job cca70a66 (45 crédits).** Le brouillon v5 (a997157e) a été refusé pour trois incohérences, corrigées ici :
+- **Cuillère en double.** Le gag « la cuillère flotte » faisait apparaître une seconde cuillère, pendant que Claire gardait la sienne en main. Correctif : Claire a les mains vides dans le vaisseau et à Rome, et rien ne flotte.
+- **Julie qui se jette sur Sam.** « Julie grabs the tablet » a été joué au pied de la lettre. Correctif : Sam lui tend calmement la tablette, et tout le monde reste assis.
+- **Premier plan de Rome à deux.** On l'assume : même plan à deux que dans le cockpit (Julie à gauche, Sam à droite), donc un vrai raccord cadre à cadre.
+
+Transitions refaites au montage, car la v1 donnait un vortex illisible :
+- rotation de 35° au total au lieu de 120°, en 0,4 s au lieu de 0,58 s ;
+- zoom ×1,12 au lieu de ×1,9 ;
+- vrai flou de mouvement temporel : obturateur 360°, jusqu'à 36 sous-images ;
+- éclat de lumière blanc chaud bref (32 %), en mode écran, au lieu de l'aplat orange à 55 %.
+
+```
+Continue the reference video seamlessly from its very last frame: same dining room at night, same family, same clothes, same warm lamp light; Sam has just taken the orange tablet from Claire. A 15-second extension of a live-action family comedy commercial, 16:9, photoreal, shot on a cinema camera, natural skin texture, crisp focus. Sam answers a quiz on the tablet and the family is instantly in the cockpit of a spaceship facing Jupiter; then Julie answers and the family is instantly on a sunny terrace facing the Colosseum in Rome. All dialogue is short and in native French. No narrator. No voice ever comes from the tablet. Shmoulik never speaks.
+
+REFERENCES — Image 1: Claire. Image 2: Sam. Image 3: Julie. Image 4: Shmoulik. Image 5: the spaceship cockpit. Image 6: the Rome terrace. Faces, hair and clothes must stay exactly as in the reference video and Images 1-4 in every shot and every place.
+Claire: 40, chestnut hair in a loose messy bun, mustard-yellow apron over a navy sweater. In the spaceship and in Rome her hands are empty: no spoon, no utensil, nothing in her hands.
+Sam: 10, light chestnut-brown tousled wavy hair, forest-green hoodie.
+Julie: 8, golden-blonde hair in two braids with a short fringe, raspberry-pink sweatshirt under denim dungarees.
+Shmoulik: mid-twenties man, short light-brown hair, short stubble beard, plain white T-shirt, navy trousers. He never speaks. He behaves like a natural, relaxed guest: neutral calm face at rest, real spontaneous reactions, he looks at Jupiter and at the Colosseum like the others and laughs naturally with the family. He never poses for the camera, never smirks, never grimaces, never winks, no frozen smile.
+
+TABLET — one single unbranded tablet in a vivid orange matte case. Its screen always faces the person holding it; only the orange back faces the camera. Never show its screen. Only one tablet exists.
+
+SEATS — everyone stays seated in their own seat the whole time; nobody stands up, leans over or climbs across a seat. Spaceship seen from behind: Sam front-left seat, Julie front-right seat, Claire back-left seat, Shmoulik back-right seat. Rome: Julie and Sam side by side on the far side of the table facing the camera, Julie on the left of frame, Sam on the right of frame; Claire at the left end, Shmoulik at the right end.
+
+SPACESHIP — as Image 5: the cockpit of a sleek white passenger spaceship; a huge curved windscreen shows Jupiter as a complete round planet in black starry space. Four white seats in two rows facing the windscreen. Abstract glowing displays with no text. Cool white interior light and Jupiter's warm amber glow on the faces. No floating objects.
+ROME — as Image 6: a table with a red-and-white checked tablecloth and four plates of spaghetti, dark-green bistro chairs, the Colosseum close behind, hard warm afternoon sunlight, deep blue sky.
+
+SHOTS — simple locked-off shots joined by clean hard cuts. No camera spin, no warping, no morphing, no transition effects (transitions are added in editing).
+0.0–3.2s: Medium close-up, 35mm, locked off, on Sam seated at the dining table holding the orange tablet in both hands, screen toward him, warm lamp light. A soft app chime at 0.2s. He reads silently, lips closed, from 0.3s to 1.9s, then looks up thinking, and says clearly at 2.2–2.7s: "Jupiter !" He taps the screen once with his right index finger at 3.0s.
+3.2–4.8s: Hard cut. Exactly the same framing, lens and face size on Sam, now sitting in the front-left seat of the spaceship cockpit, same pose, holding the tablet; Jupiter's amber glow on his face. He looks up past the camera, mouth open in awe, and whispers at 3.7–4.2s: "Wouah…"
+4.8–7.4s: Hard cut to a wide shot from behind the back row: the four family members seated in their seats facing the huge windscreen filled by Jupiter, amazed. Claire puts both empty hands to her cheeks in wonder. Nobody speaks; Shmoulik looks at Jupiter with the same natural wonder as the others.
+7.4–10.8s: Hard cut to a medium two-shot, 35mm, locked off, from the dashboard on Julie (left of frame) and Sam (right of frame) in the two front seats, their faces lit by Jupiter. Both stay seated. Sam calmly hands the tablet sideways to Julie; she takes it in both hands and says at 7.6–8.0s: "À moi !" A soft app chime at 8.2s. She reads silently, lips closed, from 8.3s to 9.6s, then says clearly at 9.8–10.2s: "Rome !" She taps the screen once at 10.6s.
+10.8–12.0s: Hard cut. Exactly the same two-shot framing, lens and face sizes: Julie (left of frame, holding the tablet) and Sam (right of frame), now sitting side by side at the Rome terrace table in hard sunlight, same poses; they squint in the sun and break into big delighted smiles.
+12.0–15.0s: Hard cut to a wide shot of the whole terrace table with the Colosseum behind. Everyone looks around at the Colosseum, amazed. Claire says at 12.8–13.5s: "C'est génial !" Sam and Julie laugh. Shmoulik, at the right end of the table, looks at Claire and laughs naturally with the family, relaxed, then glances back at the Colosseum. Nobody looks into the lens. Hold until 15.0s.
+
+SOUND — exactly five short spoken lines, each spoken once, lip-synced, in native French: "Jupiter !", "Wouah…", "À moi !", "Rome !", "C'est génial !". Nobody else speaks; no mumbling, no extra words. Two soft app chimes at 0.2s and 8.2s. Dining room: quiet room tone. Spaceship: low engine hum and soft cockpit beeps. Rome: lively street ambience, distant chatter, a scooter passing. No music, no narrator, no captions, no watermarks.
+
+CONTINUITY — the same four people with the same faces and clothes in all three places. One orange tablet, its screen never visible. No spoon or utensil outside the dining room. No furniture follows them between places.
+```
+
 ### G3 v5 — Les deux voyages, Shmoulik naturel (15 s)
 
 Même prompt que la v4, sauf le jeu de Shmoulik. **Brouillon généré : job a997157e (45 crédits).** Shmoulik est naturel (émerveillé devant Jupiter, puis il rit avec la famille à Rome, sans regard caméra). Coupes à 3,08 s (vaisseau), 4,88 s, 6,75 s, 10,79 s (Rome) et 11,67 s.
