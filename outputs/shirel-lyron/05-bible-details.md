@@ -57,7 +57,7 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 ## I. La demande (Da Nang) — décisions de Samuel
 - [ ] **Déco exactement comme la photo 10** : arche en bois couverte d'orchidées et de roses blanches avec des fougères, table pour deux nappée de blanc, chaises blanches, pétales et bougies sur le sable.
 - [ ] Plage privée vide, coucher de soleil doré, colline boisée à gauche, palmiers au loin (photo 20).
-- [ ] Gestes : Lyron prend doucement la main de Shirel, puis un genou à terre ; elle est surprise et ému aux larmes ; gros plan sur la bague, puis sur son « oui » ; il se relève, baiser, étreinte, puis le drone recule.
+- [ ] Gestes : Lyron prend doucement la main de Shirel, puis un genou à terre ; elle est surprise et émue aux larmes ; gros plan sur la bague, puis sur son « oui » ; il se relève, baiser, étreinte, puis le drone recule.
 - [ ] **Bague** : diamant taille poire, anneau en or jaune ouvert et serti, écrin bleu marine à intérieur gris avec un pétale blanc (photo 17).
 
 ## J. Le Ohel
