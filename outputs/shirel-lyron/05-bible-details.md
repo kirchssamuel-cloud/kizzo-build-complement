@@ -17,7 +17,9 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Pour les expressions : **« mouth closed / not speaking »**, sinon la bouche s'ouvre comme pour parler.
 - [ ] Préciser le **nombre exact d'objets** (« only ONE suitcase »).
 - [ ] Figurants féminins : **jupes longues**, visages de dos ou flous.
-- [ ] Pour corriger une image, repartir de l'image elle-même en référence (« recreate identically, change only… ») pour garder ce qui était réussi.
+- [ ] Pour corriger une image, repartir de l'image elle-même en référence (« recreate identically, change only… ») pour garder ce qui était réussi. **Une seule fois maximum.**
+- [ ] **Jamais de retouche en chaîne** (image déjà retouchée redonnée en référence) : chaque passe ajoute de la chaleur, du contraste et de la netteté, ce qui donne le « filtre bizarre » signalé par Samuel. Au-delà d'une correction, on régénère à partir des références d'origine (sheets, tenues, photos).
+- [ ] Toujours ajouter : **« neutral natural color grade, true-to-life colors, soft natural contrast, no heavy filter, no orange or magenta tint, no oversharpening »**.
 
 ## B. Le film
 - [ ] **Durée : 60 s maximum.** Format **16:9**. Rendu ultra-réaliste, cinéma, aucun effet diaporama.
@@ -83,7 +85,7 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Le mot est écrit lisiblement dès l'image clé, et le mouvement reste minimal pour qu'il ne se déforme pas. En secours, incrustation en post.
 - [ ] **Assistance = des ADULTES de tous âges** (de 25 à 65 ans, barbes, chapeaux noirs pour certains), pas seulement des jeunes (remarque de Samuel).
 - [ ] **Disposition : le rabbin face à l'assemblée, les gens DEVANT lui**, tournés vers lui, et non derrière lui. Lyron fait partie de l'assemblée, face au rabbin.
-- [ ] **Tirage avec des BOULETTES de papier froissé** dans une boîte : jamais des papiers pliés proprement. Le rabbin en tire une, puis la déplie, et le papier « Lyron » est **froissé** (plis de boulette).
+- [ ] **Tirage avec des BOULETTES de papier froissé** dans un **CHAPEAU noir retourné** (feutre noir à bord, ouverture vers le haut), jamais une boîte (remarque de Samuel) : jamais des papiers pliés proprement. Le rabbin en tire une, puis la déplie, et le papier « Lyron » est **froissé** (plis de boulette).
 - [ ] Le rabbin reste silencieux (pas de bouche qui articule).
 
 ## K. Le 770
