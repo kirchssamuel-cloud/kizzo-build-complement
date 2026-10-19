@@ -39,9 +39,23 @@ Le premier regard est construit en champ / contrechamp : chacun est filmé seul,
 Note : le montage fera ~9-10 s pour 8 s prévus ; on resserre au montage (plans de 0,8-1,2 s) pour rester dans le minutage.
 
 ## Points à valider avant de lancer
-1. « Mazal » écrit en lettres latines (comme « Lyron ») ou en hébreu (מזל) ?
+1. ~~Latin ou hébreu ?~~ → **« Mazal » en lettres latines (français)** pour les deux (Samuel, 19/10).
 2. ~~Manteau par-dessus ?~~ → **Non, strictement le script** : robe noire longue + blazer noir + bottes noires (Samuel, 19/10).
 3. ~~Lyron écrit-il ?~~ → **Oui, son script le demande** : plan 2.4b ajouté.
 4. ~~Taxi jaune ?~~ → **Oui** (Samuel, 19/10).
 5. **Tombeau du Rabbi (Ohel)** : Samuel envoie les photos de référence réelles. Aucune image clé de l'Ohel avant de les avoir.
 6. **Calendrier** : la séquence 2 démarre une fois la séquence 1 finalisée.
+
+## Vision seconde par seconde (8 s, TC film 0:10–0:18)
+
+| TC | Durée | Plan | Ce qu'on voit |
+|---|---|---|---|
+| 0:10.0–0:10.9 | 0,9 s | 2.0 | Portes vitrées de l'aéroport JFK, Shirel sort dans le froid, ciel gris, neige au sol, buée ; elle resserre son blazer |
+| 0:10.9–0:11.8 | 0,9 s | 2.1 | Allée enneigée vers l'Ohel, de 3/4 dos, flocons, elle marche seule |
+| 0:11.8–0:12.6 | 0,8 s | 2.2 | Très gros plan : sa main écrit « Mazal » à la lueur des bougies |
+| 0:12.6–0:13.4 | 0,8 s | 2.3 | Elle dépose le papier plié, yeux fermés, visage doux |
+| 0:13.4–0:14.2 | 0,8 s | 2.4a | Même allée, même neige : Lyron arrive en doudoune noire, kippa, buée |
+| 0:14.2–0:14.9 | 0,7 s | 2.4b | Très gros plan : sa main écrit « Mazal », même cadrage que 2.2 (effet miroir) |
+| 0:14.9–0:15.8 | 0,9 s | 2.4c | Il dépose son papier, recueilli, tsitsit visibles |
+| 0:15.8–0:16.9 | 1,1 s | 2.5a | Dehors, fin d'après-midi bleutée : il ouvre la portière du taxi jaune, s'arrête, lève les yeux |
+| 0:16.9–0:18.0 | 1,1 s | 2.5b | Contrechamp : Shirel à la sortie, le regarde ; sourire à peine esquissé. Coupe sur la scène 3 |
