@@ -122,7 +122,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Sheet Lyron v4b (golfes adoucis, vrai profil) — **VALIDÉ par Samuel** | `619af3ea-85ad-43a3-83e7-0760e588e65f` | 3 |
 | Tenue Shirel scène 1 « jogging beige » | `041d0678-fbae-4f6d-9010-ea6fd267de44` — écartée (Samuel préfère le style sport-chic noir de ses photos d'inspiration) | 3 |
 | Références v4 : Shirel T1 noir + Lyron T5, T6, T7, L1 (t-shirt) et planche sourire, depuis le sheet v4b | T1 `8308e0cc-02db-4317-a802-38fb8689d10e` · T5 `c174778e-d810-475b-9d0a-58cac5ae2a5e` · T6 `62877f13-97c5-421d-bfc7-daea3fcb3af7` · T7 `40d6d585-908e-4879-a5e9-67193ddbfc36` · L1 `6e7186aa-c8e3-4350-866c-759eb209c23f` · Sourires Lyron `31d708e0-3636-42c1-8aa3-e66644fccc9b` (en cours). Tenues conformes. Samuel : « plus tu génères, moins les visages ressemblent » → règle anti-dérive dans la bible | 18 |
-| **Total dépensé** | | **500 cr** |
+| **Sheet de référence Lyron DÉFINITIF choisi par Samuel : `7519d1e5-dd30-40f9-9861-97c767e5fea4`** (v4, d'après ses vraies photos). Planche test L1 (t-shirt + jean) depuis ce sheet + 2 vraies photos uniquement | `0c9fc2a6-3684-4ffb-bc07-22f9a305c6e0` : comparaison côte à côte → visage identique au sheet ✓ | 3 |
+| **Total dépensé** | | **503 cr** |
 
 Références v3 retenues : Sheet Shirel `da688b2a-951a-4108-a7b6-d6e8cca2e108` · Sheet Lyron `cdb3db5e-e37b-4337-ae33-ee1222a64512` · T1 `b5a37e57-b8e9-4f75-95ae-8ea99d1ea823` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · T5 `e523ee94-7f92-45f0-8f7e-bbc55f666d2b` · T6 `6fd4bbc4-94a1-40e9-9ed0-aef1640dde0b` · T7 `63f9c04c-49c1-4862-935f-21b1111828c2` · Sourires Shirel `39c2ea5a-757e-43e5-a729-688fda2fb476` · Sourires Lyron `3e410da5-d666-4c7c-a053-c29f05f095cb` · Photo de référence Shirel `5fc6f1cb-77f2-4008-902c-b8287a3862b6`. **Toutes les références v2 sont dépassées.**
 
