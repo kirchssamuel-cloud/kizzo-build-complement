@@ -14,7 +14,7 @@ Les 8 scènes du client sont toutes là. Le temps va là où se trouve l'émotio
 | **Kippa** : velours noir, inscription brodée en blanc tout autour (« …משיח לעולם ועד ») | Les photos 1 et 9 servent de référence. Ta photo de face complétera |
 | **La vraie demande (photo 10)** : **arche en bois couverte de fleurs blanches et de feuillage, table pour deux nappée de blanc, chaises blanches, pétales**, plage dorée, fin d'après-midi | **Je propose de recréer leur vraie déco** plutôt qu'une plage vide : c'est leur souvenir, l'émotion sera décuplée. La plage reste privatisée, vide, au coucher du soleil, comme dans le script |
 | **Tenue réelle de la demande (photo 1)** : Lyron en chemise blanche oversize, Ray-Ban noires, kippa, **pantalon marron à motif** ; Shirel en **robe blanche courte à manches longues** | Je suis les photos, puisque c'est ce qu'ils portaient vraiment. ⚠ Le script dit « pantalon en lin marron chocolat » et « sandales blanches » ; sur la photo, le pantalon est à motif et les claquettes de Shirel sont sombres. **À trancher** |
-| **La bague (photo 12)** : anneau or fin, pierre taille émeraude (rectangulaire) | Une photo nette en gros plan serait idéale pour le plan 6.4 |
+| **La bague (photo 17)** : diamant **taille poire** sur anneau **or jaune ouvert, pavé**, écrin **bleu marine** intérieur gris, pétale blanc | Référence exacte pour le plan 6.4 |
 
 ---
 
@@ -63,7 +63,7 @@ Montage alterné et rythmé : chaque geste de l'un répond à un geste de l'autr
 | 0:33–0:34,5 | **6.1** | Ben Gourion, départ : tous les deux en pull Kith, jogging large, Asics, complices |
 | 0:34,5–0:36 | **6.2** | Drone au-dessus de la côte de Da Nang au coucher du soleil ; on découvre l'arche fleurie seule sur la plage vide |
 | 0:36–0:40 | **6.3 ★** | Devant l'arche, Lyron prend doucement la main de Shirel et met un genou à terre ; elle est surprise, les mains devant la bouche, les larmes montent |
-| 0:40–0:41,5 | **6.4** | Gros plan sur l'écrin et la bague taille émeraude dans la lumière dorée |
+| 0:40–0:41,5 | **6.4** | Gros plan sur l’écrin bleu marine et la bague (diamant poire, or jaune) dans la lumière dorée |
 | 0:41,5–0:43 | **6.5 ★** | Gros plan sur Shirel : « oui », entre les larmes et les rires |
 | 0:43–0:46 | **6.6 ★** | Il se relève, baiser, étreinte ; le drone recule : seuls sur la plage, l'arche, le soleil couchant |
 
