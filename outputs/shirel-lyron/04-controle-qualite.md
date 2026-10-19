@@ -134,3 +134,17 @@ Puis, pour chaque planche :
 Le pull Kith (plan 6.1, une seule apparition) n'a pas de planche : il est décrit directement dans le prompt du plan, avec la photo officielle Kith en référence.
 
 **Coût : 7 × 3 = 21 cr (~1 €)**, plus d'éventuelles corrections.
+
+---
+
+## 9. Règles transverses pour tous les plans à deux (demande de Samuel)
+
+**Proportions** (mesurées sur les photos 1 et 20) — bloc obligatoire dans chaque prompt où ils sont ensemble :
+```
+Height and build difference must match reality: he is about 20-25 cm taller than her; when both stand flat-footed, the top of her head reaches his mouth level; on tiptoe she barely reaches his chin. His shoulders are much broader and his frame much heavier than hers; she is slim with a small frame.
+```
+Références de proportions : photos 1 et 20 (`1a472817…`, `e0a6ee58…`). Contrôle en porte B sur chaque image clé à deux.
+
+**Sourires** : sur tout plan où l'un d'eux sourit, ajouter en références la planche sourire et la photo réelle correspondante. Les grands sourires de Shirel sont cadrés de 3/4 ou de profil (les seuls angles documentés par ses vraies photos). Le sourire naît dans le plan (les yeux d'abord, puis la bouche), il n'est jamais plaqué.
+
+Références sourire : Shirel `df24eeb2…` (bouche fermée 3/4), `57a3fdde…` (bouche fermée face), `85e1cb68…` (grand sourire 3/4), `96199618…` (rire de profil) · Lyron `d935a069…` (bouche fermée face), `d1027aca…` (grand sourire face).
