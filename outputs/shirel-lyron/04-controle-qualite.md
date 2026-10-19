@@ -92,3 +92,16 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 **Décor (photos 10 et 20)** : grande plage de sable doré de Da Nang, mer turquoise, une colline boisée à gauche, une rangée de palmiers et d'hôtels blancs flous au loin, ciel de fin d'après-midi chaud. L'arche et la table sont décrites en section 6 du script v3.
 
 **Contrôle à faire après génération** : imprimé losange du pantalon (pas de rayures, pas d'uni), semelles jute des sandales, transparence légère de la chemise, robe à manches longues **courte**, platform des sandales de Shirel, bracelets de cheville.
+
+---
+
+## 7. Journal de production
+
+| Étape | Résultat | Crédits |
+|---|---|---|
+| Upload des 15 références | OK (après ouverture réseau de `upload.higgsfield.ai`) | 0 |
+| Character sheets v1 | Rejetés en porte B : yeux de Shirel trop marron, mâchoire trop carrée, grille non conforme ; kippa de Lyron trop petite, lettres déformées | 6 |
+| Character sheets v2 | Porte B passée : yeux noisette-vert, visage adouci, panneau sourire ajouté ; kippa en dôme, ressemblance forte. Reste : quelques lettres de la kippa imparfaites (correction prévue en post), grille de Lyron à 7 vignettes au lieu de 5 (sans impact) | 6 |
+| **Total dépensé** | | **12 cr (~0,60 €)** |
+
+Job IDs (pour réutilisation comme références) : Shirel v2 `3a64aa3c-6fec-40e3-b64d-cdc8c158ae8f` · Lyron v2 `0593f82b-883a-45b7-bcb6-7ef5d4b3f734`
