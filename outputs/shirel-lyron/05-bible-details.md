@@ -17,7 +17,15 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 - [ ] ⚠️ **RÉFÉRENCES v3 (19/10) — remplacent toutes les précédentes** : voir la liste des IDs à la fin du journal (04, §7). Shirel = nouvelle photo (cheveux longs ondulés naturels, frisottis). Lyron = plus mince, cheveux plus fournis (« full dense hairline, no receding temples » dans CHAQUE prompt). Proportions mises à jour : Lyron 20-25 cm plus grand, épaules nettement plus larges mais silhouette mince et athlétique (plus « carrure massive »).
 
-- [ ] **Cheveux de Lyron (19/10)** : sheet de référence = **v3c `57396152-b3b6-4066-9266-05a17c57ee76`**. Ne JAMAIS donner en référence une image où l'on voit ses golfes (vraies photos, sheets v1/v2/v3/v3b, anciennes planches T5/T6/T7 non recadrées) : l'IA recopie l'image, pas le texte. Pour les tenues, utiliser les anciennes planches recadrées sous le cou.
+- [ ] **Cheveux de Lyron (19/10, VALIDÉ par Samuel)** : sheet de référence = **v4b `619af3ea-85ad-43a3-83e7-0760e588e65f`** (fait d'après ses vraies photos ; v3c rejeté car « pas du tout réaliste »). Dans CHAQUE prompt image ET vidéo : « his hairline exactly as in the sheet, receding temples NOT accentuated, do not enlarge the forehead, never make him look bald ». Kippa portée vers l'avant comme sur sa photo réelle `f546c92d-daa2-4b2d-907c-ec0ab365a694`. Ancienne consigne : Ne JAMAIS donner en référence une image où l'on voit ses golfes (vraies photos, sheets v1/v2/v3/v3b, anciennes planches T5/T6/T7 non recadrées) : l'IA recopie l'image, pas le texte. Pour les tenues, utiliser les anciennes planches recadrées sous le cou.
+
+- [ ] **Shirel, tenue de la scène 1 (19/10)** : tenue « moins religieuse » à la demande de Shirel → ensemble sport-chic noir (sweat demi-zippé + jogging large), baskets argentées, grand cabas noir à rabat rose pâle, aucun logo. Le manteau camel + jupe plissée (ancien T1) et l'ensemble jogging beige sont écartés.
+
+- [ ] ⛔ **ANTI-DÉRIVE DES VISAGES (remarque de Samuel, 19/10)** : une image générée à partir d'une image générée perd un peu de ressemblance à chaque fois (photocopie de photocopie). Donc, pour CHAQUE image clé et CHAQUE vidéo :
+  1. Le visage vient TOUJOURS de : sheet validé + **1 à 2 VRAIES photos** (Lyron : `f546c92d…`, `d1027aca…`, `d935a069…` ; Shirel : `5fc6f1cb…`). Jamais d'une planche de tenue.
+  2. Les planches de tenue sont données **recadrées sous le cou** (vêtements seulement), pour qu'aucun visage généré ne concurrence le vrai.
+  3. Plans héros cadrés assez serrés (plan taille ou plus près) : plus le visage est petit, plus il dérive.
+  4. Porte B : comparaison **côte à côte avec la vraie photo** avant de montrer quoi que ce soit.
 
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
