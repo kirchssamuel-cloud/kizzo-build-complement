@@ -104,7 +104,10 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Character sheets v2 | Porte B passée : yeux noisette-vert, visage adouci, panneau sourire ajouté ; kippa en dôme, ressemblance forte. Reste : quelques lettres de la kippa imparfaites (correction prévue en post), grille de Lyron à 7 vignettes au lieu de 5 (sans impact) | 6 |
 | 7 planches de tenue | 6 passées en porte B au premier essai. T3 refaite : la robe blanche était trop transparente, sous-vêtements visibles, inadapté pour une vidéo familiale religieuse ; version opaque, tous les détails conservés | 24 |
 | 2 planches sourire | Porte B passée avec 2 réserves : dents de Shirel un peu trop blanches (à corriger dans les prompts) ; 4e vignette de Lyron écartée (clin d'œil involontaire) | 6 |
-| **Total dépensé** | | **42 cr (~2,10 €)** |
+| Scène 1 : 6 images clés | 2 validées du premier coup (1.4, 1.5). Corrigées : 1.1 (regard caméra), 1.2a (guillemets parasites autour de « Lyron »), 1.2b (bouche ouverte = parole), 1.3 (2 valises, amies en pantalon, visage d'amie net : 2 passes) | 33 |
+| **Total dépensé** | | **75 cr (~3,75 €)** |
+
+Images clés scène 1 retenues : 1.1 `1ba5c7a2-c664-49c0-ab72-fd1c6fab6293` · 1.2a `f2610722-9751-434a-9696-599968d94dc2` · 1.2b `dce9bfaf-52d2-42a5-b4f1-311e3b8a74a2` · 1.3 `4af9cc7a-8bc6-49c4-88f5-054763e8693e` · 1.4 `764578d8-6900-4794-a786-d04cc404c362` · 1.5 `83635212-5452-4b9b-b6a5-879eb6d5228c`
 
 Job IDs (pour réutilisation comme références) : Shirel v2 `3a64aa3c-6fec-40e3-b64d-cdc8c158ae8f` · Lyron v2 `0593f82b-883a-45b7-bcb6-7ef5d4b3f734`
 Planches : T1 `cff1a83c-16f2-4070-8286-701e1f8b0532` · T2 `c16fc665-78db-4d91-b6dc-7c7943ce1174` · T3 `e0bd67ec-9f1e-4565-a33f-a3bd55f2ae90` · T4 `4d22cf0d-e386-46fb-8180-1622bd4b1e8a` · T5 `ba74f245-678b-49b9-8537-aba10325a66b` · T6 `313581d7-aae4-4d6f-bac4-edecebb08622` · T7 `ab1c55f8-0afc-4220-a382-d5bbad8a68c6`

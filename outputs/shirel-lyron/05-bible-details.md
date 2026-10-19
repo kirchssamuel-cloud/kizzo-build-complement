@@ -11,6 +11,14 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Le moindre détail compte : premier client, zéro erreur tolérée.
 - [ ] Budget : brouillon 480p puis 1080p pour les 6 plans héros, 720p pour les autres. Objectif total sous les 150 € de crédits.
 
+## A2. Leçons apprises en production (à appliquer à chaque prompt)
+- [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
+- [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
+- [ ] Pour les expressions : **« mouth closed / not speaking »**, sinon la bouche s'ouvre comme pour parler.
+- [ ] Préciser le **nombre exact d'objets** (« only ONE suitcase »).
+- [ ] Figurants féminins : **jupes longues**, visages de dos ou flous.
+- [ ] Pour corriger une image, repartir de l'image elle-même en référence (« recreate identically, change only… ») pour garder ce qui était réussi.
+
 ## B. Le film
 - [ ] **Durée : 60 s maximum.** Format **16:9**. Rendu ultra-réaliste, cinéma, aucun effet diaporama.
 - [ ] Scènes et timing : voir `03-script-60s.md` (FaceTime : 3 s ; demande : 13 s).
