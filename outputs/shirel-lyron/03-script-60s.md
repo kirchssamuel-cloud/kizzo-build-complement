@@ -23,8 +23,9 @@ Les 8 scènes du client sont toutes là. Le temps va là où se trouve l'émotio
 ### SCÈNE 1 — Deux départs · 0:00–0:09 (9 s)
 | TC | Plan | Image |
 |---|---|---|
-| 0:00–0:02,5 | **1.1** | Paris à l'aube, toits et tour Eiffel au loin. Shirel ferme sa valise devant la fenêtre et sourit |
-| 0:02,5–0:05 | **1.2** | Beth Habad en Israël, le Goral : le nom est lu, Lyron réalise, ses amis l'acclament, main sur le cœur |
+| 0:00–0:02 | **1.1** | Paris à l'aube, toits et tour Eiffel au loin. Shirel ferme sa valise devant la fenêtre et sourit |
+| 0:02–0:03 | **1.2a** | Insert : les mains du rabbin déplient le papier du Goral, **« Lyron » écrit à la main**, en gros plan |
+| 0:03–0:05 | **1.2b** | Lyron réalise, ses amis l'acclament et lui tapent sur l'épaule, il pose la main sur le cœur |
 | 0:05–0:07 | **1.3** | Terminal CDG : Shirel avance avec ses sœurs et ses copines, valises, rires (les autres de dos ou floues) |
 | 0:07–0:08 | **1.4** | Nuit en Israël : Lyron jette ses affaires dans sa valise et pose le billet dessus |
 | 0:08–0:09 | **1.5** | Un avion décolle dans le soleil levant |

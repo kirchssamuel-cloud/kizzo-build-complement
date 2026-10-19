@@ -14,7 +14,9 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 ## B. Le film
 - [ ] **Durée : 60 s maximum.** Format **16:9**. Rendu ultra-réaliste, cinéma, aucun effet diaporama.
 - [ ] Scènes et timing : voir `03-script-60s.md` (FaceTime : 3 s ; demande : 13 s).
-- [ ] Musique romantique, douce puis de plus en plus intense, **sous licence** (à choisir). Pas de dialogue.
+- [ ] Musique romantique, douce puis de plus en plus intense, **sous licence** (à choisir).
+- [ ] **AUCUNE PAROLE dans la vidéo** (remarque de Samuel) : chaque moment clé doit se comprendre **uniquement par l'image**. Personne ne parle face caméra, pas de lèvres qui articulent des phrases, et l'audio Seedance est toujours désactivé (`generate_audio: false`).
+- [ ] Moments à rendre lisibles par l'image : le Goral (gros plan sur le papier « Lyron »), l'écriture de Mazal / Mazel (inserts), le coup de foudre (regards, ralenti), les appels de 3 h (horloge et compteur), les 4 000 km (carte animée), le « oui » (hochement de tête et larmes, bague au doigt).
 - [ ] **Aucun texte généré par l'IA.** Tout texte est incrusté en post-production.
 
 ## C. Visages (sheets validés par Samuel)
@@ -67,6 +69,10 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Ambiance silencieuse, spirituelle, respectueuse. Shirel côté femmes.
 - [ ] ⚠ **À faire confirmer par le client** : « déposer entre les tombeaux du Rabbi et de la Rabbanite » (à ma connaissance, la Rabbanite n'est pas inhumée dans l'enceinte du Ohel).
 - [ ] Shirel écrit **« Mazal »**, Lyron écrit **« Mazel »** : incrustés en post, manuscrits, parfaitement lisibles.
+
+## J2. Le Goral (remarque de Samuel)
+- [ ] **Gros plan sur le papier tiré au sort, avec « Lyron » écrit à la main**, juste avant sa réaction : c'est ce qui fait comprendre sans un mot que c'est lui qui gagne.
+- [ ] Le mot est écrit lisiblement dès l'image clé, et le mouvement reste minimal pour qu'il ne se déforme pas. En secours, incrustation en post.
 
 ## K. Le 770
 - [ ] Façade reconnaissable (brique rouge, trois pignons néogothiques), validée sur l'image clé. Le « 770 » est retouché en post s'il est déformé.
