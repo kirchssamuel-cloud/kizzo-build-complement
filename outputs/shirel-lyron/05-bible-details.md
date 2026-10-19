@@ -81,6 +81,10 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 ## J2. Le Goral (remarque de Samuel)
 - [ ] **Gros plan sur le papier tiré au sort, avec « Lyron » écrit à la main**, juste avant sa réaction : c'est ce qui fait comprendre sans un mot que c'est lui qui gagne.
 - [ ] Le mot est écrit lisiblement dès l'image clé, et le mouvement reste minimal pour qu'il ne se déforme pas. En secours, incrustation en post.
+- [ ] **Assistance = des ADULTES de tous âges** (de 25 à 65 ans, barbes, chapeaux noirs pour certains), pas seulement des jeunes (remarque de Samuel).
+- [ ] **Disposition : le rabbin face à l'assemblée, les gens DEVANT lui**, tournés vers lui, et non derrière lui. Lyron fait partie de l'assemblée, face au rabbin.
+- [ ] **Tirage avec des BOULETTES de papier froissé** dans une boîte : jamais des papiers pliés proprement. Le rabbin en tire une, puis la déplie, et le papier « Lyron » est **froissé** (plis de boulette).
+- [ ] Le rabbin reste silencieux (pas de bouche qui articule).
 
 ## K. Le 770
 - [ ] Façade reconnaissable (brique rouge, trois pignons néogothiques), validée sur l'image clé. Le « 770 » est retouché en post s'il est déformé.
