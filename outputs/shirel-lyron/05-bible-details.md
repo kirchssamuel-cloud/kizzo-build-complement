@@ -33,6 +33,9 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 - [ ] **KIPPA (remarque de Samuel, 19/10 : « c'est pas top les écritures »)** : sur CHAQUE plan avec Lyron (image ET vidéo), donner en référence le **gros plan de la vraie kippa `c0115fde-c216-4fa1-87fb-28d00cc1cffb`** + écrire le texte exact « יחי אדוננו מורנו ורבנו מלך המשיח לעולם ועד », lettres blanc argenté nettes et bien formées. Contrôle des lettres en porte B ; retouche en post sur les plans serrés si besoin.
 
+- [ ] **Kippa de Lyron — taille (Samuel, 19/10 : « beaucoup trop grosse »)** : PETITE kippa, ~15 cm, posée sur le haut du crâne, taille identique au sheet. Ne PAS donner le gros plan agrandi `c0115fde…` (il gonfle la kippa) : utiliser la photo d'origine `f966b938…` pour les lettres. Golfes : « temples look fuller, receding corners barely noticeable, forehead looks shorter, soft frontal light, no harsh top light ».
+- [ ] **Décors (Samuel : « la chambre elle est dégueulasse »)** : réaliste mais PROPRE et agréable. Jamais de murs sales, tachés ou gribouillés. Chambre de Lyron = appartement israélien moderne et propre (murs blancs nets, carrelage clair, lit fait, chevet en bois, lampe chaude).
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
