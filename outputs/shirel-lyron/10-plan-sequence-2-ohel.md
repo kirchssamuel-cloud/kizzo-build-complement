@@ -46,16 +46,31 @@ Note : le montage fera ~9-10 s pour 8 s prévus ; on resserre au montage (plans 
 5. **Tombeau du Rabbi (Ohel)** : Samuel envoie les photos de référence réelles. Aucune image clé de l'Ohel avant de les avoir.
 6. **Calendrier** : la séquence 2 démarre une fois la séquence 1 finalisée.
 
-## Vision seconde par seconde (8 s, TC film 0:10–0:18)
+## Vision seconde par seconde — v2 (corrigée par Samuel + recherches sur l'Ohel)
+
+**Ce que disent les sources sur le lieu** (Wikipedia, chabad.org « What to Expect at the Ohel ») :
+- L'Ohel est au cimetière Old Montefiore, Cambria Heights (Queens), à 10 min de JFK.
+- On écrit sa lettre (le « pan ») au centre d'accueil : des maisons avec, derrière, une grande structure type tente, des tables et des chaises, des stylos et du papier fournis, des étagères de livres et un grand écran qui diffuse le Rabbi.
+- On sort par la porte de derrière, puis on suit une allée clôturée jusqu'à l'Ohel.
+- L'Ohel est un mausolée à ciel ouvert. Dans la petite antichambre, il y a des présentoirs de bougies allumées.
+- **Hommes et femmes entrent par deux portes séparées.**
+- On lit sa lettre à voix basse, **on la déchire et on jette les morceaux sur le tas de lettres** qui recouvre les tombes (on ne la dépose pas pliée).
+- Pas de chaussures en cuir à l'intérieur : on prend des chaussons ou des Crocs à l'accueil.
+- **On ressort à reculons**, pour ne pas tourner le dos aux tombes.
 
 | TC | Durée | Plan | Ce qu'on voit |
 |---|---|---|---|
-| 0:10.0–0:10.9 | 0,9 s | 2.0 | Portes vitrées de l'aéroport JFK, Shirel sort dans le froid, ciel gris, neige au sol, buée ; elle resserre son blazer |
-| 0:10.9–0:11.8 | 0,9 s | 2.1 | Allée enneigée vers l'Ohel, de 3/4 dos, flocons, elle marche seule |
-| 0:11.8–0:12.6 | 0,8 s | 2.2 | Très gros plan : sa main écrit « Mazal » à la lueur des bougies |
-| 0:12.6–0:13.4 | 0,8 s | 2.3 | Elle dépose le papier plié, yeux fermés, visage doux |
-| 0:13.4–0:14.2 | 0,8 s | 2.4a | Même allée, même neige : Lyron arrive en doudoune noire, kippa, buée |
-| 0:14.2–0:14.9 | 0,7 s | 2.4b | Très gros plan : sa main écrit « Mazal », même cadrage que 2.2 (effet miroir) |
-| 0:14.9–0:15.8 | 0,9 s | 2.4c | Il dépose son papier, recueilli, tsitsit visibles |
-| 0:15.8–0:16.9 | 1,1 s | 2.5a | Dehors, fin d'après-midi bleutée : il ouvre la portière du taxi jaune, s'arrête, lève les yeux |
-| 0:16.9–0:18.0 | 1,1 s | 2.5b | Contrechamp : Shirel à la sortie, le regarde ; sourire à peine esquissé. Coupe sur la scène 3 |
+| 0:10,0–0:10,8 | 0,8 s | 2.0 | Arrivée à New York : Shirel sort de JFK dans le froid, neige, buée |
+| 0:10,8–0:11,8 | 1,0 s | 2.1 | **Le lieu précis (photos de Samuel)** : assise à une table du centre d'accueil, très gros plan sur sa main qui écrit « Mazal » |
+| 0:11,8–0:12,8 | 1,0 s | 2.2 | Dans l'Ohel, côté femmes, à la lueur des bougies : elle lit tout bas, déchire le papier, les morceaux tombent sur le tas de lettres (flou, aucune inscription lisible) |
+| 0:12,8–0:13,6 | 0,8 s | 2.3 | Lyron descend d'un **taxi jaune** devant le centre d'accueil, neige, doudoune noire |
+| 0:13,6–0:14,4 | 0,8 s | 2.4 | **Même table, même cadrage** : sa main écrit « Mazal » (effet miroir) |
+| 0:14,4–0:15,2 | 0,8 s | 2.5 | Côté hommes : il déchire son papier, les morceaux tombent sur le même tas |
+| 0:15,2–0:16,4 | 1,2 s | 2.6 | Dehors, plan large : chacun sort de sa porte à reculons, puis ils se retournent dans la neige. C'est la première fois qu'ils sont dans le même cadre (de loin) |
+| 0:16,4–0:17,2 | 0,8 s | 2.7 | Gros plan : Lyron lève les yeux, buée |
+| 0:17,2–0:18,0 | 0,8 s | 2.8 | Contrechamp : Shirel le regarde, sourire à peine esquissé. Coupe sur le 770 |
+
+**Points de réalisme intégrés :**
+- **Chaussures** : les plans dans l'Ohel sont cadrés buste et mains, jamais les pieds. Les bottes de Shirel ne sont vues que dehors.
+- **Plan 2.6** : c'est le seul plan à deux personnes. Ils sont de loin, donc le risque de mélange des visages reste faible ; les visages sont montrés seuls en 2.7 et 2.8.
+- Aucune image du lieu n'est générée avant les photos de référence de Samuel.
