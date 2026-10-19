@@ -36,6 +36,8 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] **Kippa de Lyron — taille (Samuel, 19/10 : « beaucoup trop grosse »)** : PETITE kippa, ~15 cm, posée sur le haut du crâne, taille identique au sheet. Ne PAS donner le gros plan agrandi `c0115fde…` (il gonfle la kippa) : utiliser la photo d'origine `f966b938…` pour les lettres. Golfes : « temples look fuller, receding corners barely noticeable, forehead looks shorter, soft frontal light, no harsh top light ».
 - [ ] **Décors (Samuel : « la chambre elle est dégueulasse »)** : réaliste mais PROPRE et agréable. Jamais de murs sales, tachés ou gribouillés. Chambre de Lyron = appartement israélien moderne et propre (murs blancs nets, carrelage clair, lit fait, chevet en bois, lampe chaude).
 
+- [ ] **Shirel — PAS DE GRAND RIRE (Samuel, 19/10)** : on n'a pas assez de visuels de son vrai rire. Toujours un **sourire doux et naturel**, comme sur sa photo d'aéroport `5fc6f1cb…` (lèvres entrouvertes, un peu de dents, pommettes relevées). Ne plus utiliser la planche sourire (rires) comme référence pour elle. Vaut aussi pour les vidéos.
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.

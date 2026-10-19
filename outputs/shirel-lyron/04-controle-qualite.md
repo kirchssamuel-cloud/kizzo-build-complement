@@ -134,7 +134,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Retouches ciblées par masque (inpainting) | 1.2d `d9cf4b73-d1b9-4f51-9fbf-b2f77e5257a4` : tempes nettement plus garnies ✓, reste identique (légère teinte plus chaude) · 1.2a `c60ac9c1-9efc-4f77-9347-ffa4364e3a26` : kippa à peine réduite (changement minime) | 6 |
 | Vidéos 720p scène 1 v5 (Samuel : « je préfère la version 1 largement ») | Shirel `8b130048-867d-4936-ae39-42773065e9e9` · Lyron `4e5d8db4-69dd-4684-ac3f-8ab267329613`. Analyse : lumière trop froide, 720p moins net, valise trop large, Shirel presque face caméra → gardées comme brouillons de référence | 91 |
 | 2 images clés refaites (chaleur + cadrage) | 1.4 `006a0b81-2452-44f0-9331-c8555659928b` plan rapproché, lampe chaude, chambre propre, petite kippa ✓ · 1.3 `b0ca30ec-4bce-4d3d-a072-053ba1156d07` lumière dorée, regard vers l'amie ✓. Décision Samuel : main + papier « Lyron » repris de la v1 1080p au montage | 6 |
-| **Total dépensé** | | **660 cr** |
+| 1.3 refait avec un sourire doux (Samuel : pas de grand rire, on ne connaît pas son vrai rire) | `bed90f25-c1ce-476c-a381-6bb5e6b98004` : sourire doux comme sur sa photo, regard vers l'amie, lumière dorée ✓ | 3 |
+| **Total dépensé** | | **663 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
