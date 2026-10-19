@@ -138,7 +138,10 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Vidéos 1080p scène 1 v5 (prompts passés à la checklist) | Shirel `643f77a6-d427-46ff-9f97-7cc59178bc7a` (5 s) · Lyron `e894c8c7-e709-4cf1-96ab-a50baf00e8ec` (6 s). Montage 11,67 s livré. Défauts relevés : salle de la réaction différente du plan large, billet 0,5 s seulement, pas de plan d'ouverture sur Paris | 176 |
 | 2 images clés (demande de Samuel) | Toits de Paris à l'aube `ecdbe0f6-7f79-4560-a4a1-658cede9901b` ✓ · Réaction dans la même salle que le plan large `456d4131-f199-4b09-bc01-67234ab2ef0e` ✓ (murs en pierre, bibliothèques, lustres, même foule, petite kippa) | 6 |
 | 2 vidéos 1080p de 4 s (ouverture Paris + réaction) | Paris `5691cee7-420b-48e6-ab25-665dc66ecdb2` · Réaction `abd1e9af-8c8f-4cf7-b5dc-98c0cdfa8873`. Le billet est retiré du montage | 128 |
-| **Total dépensé** | | **973 cr** |
+| Séquence 2 · planche T2 Shirel v6 (blazer cintré) | `5fba4790-25ba-4809-963b-e29d2bdd3abf` — rejetée par Samuel : « c'est une veste, pas un blazer » | 3 |
+| Séquence 2 · planche T2 Shirel v7 (vrai blazer : croisé, 6 boutons dorés métalliques, revers en pointe, coupe longue) | `b097245a-45e8-4d48-a336-a86dbb25b3be` · visage = sheet ✓ | 3 |
+| Séquence 2 · image test 2.7 (Lyron au taxi jaune devant l'Ohel) | `5613b3bb-3f45-4281-9fe3-1cf396f33619` : façade fidèle (auvent, marches, muret, haies sous la neige), taxi jaune, visage = sheet, petite kippa, golfes discrets, tsitsit ✓ | 3 |
+| **Total dépensé** | | **982 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 

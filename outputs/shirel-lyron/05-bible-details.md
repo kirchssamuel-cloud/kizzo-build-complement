@@ -141,3 +141,6 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 ## Checklist par plan (porte B) — à recopier dans le journal pour chaque plan généré
 `Visage S ☐ · Visage L ☐ · Sourire conforme ☐ · Taille relative ☐ · Kippa (dôme + lettres) ☐ · Tsitsit ☐ · Tenue conforme ☐ · Mains (5 doigts) ☐ · Décor fidèle ☐ · Lumière / raccord ☐ · Aucun texte parasite ☐ · Mouvement naturel ☐`
+
+## Blazer (règle du 19/10)
+Un **blazer** n'est pas une veste de tailleur. Dans les prompts, toujours écrire : « TRUE CLASSIC BLAZER, NOT a suit jacket: double-breasted, polished gold metal buttons, peaked lapels, structured shoulders, long cut to upper-mid thigh, flap pockets ». Une veste cintrée à un bouton ton sur ton = veste de tailleur (refusée par Samuel).

@@ -10,7 +10,7 @@ Le plan suit le script de Shirel, les décisions de Samuel et les photos réelle
 - Shirel arrive à New York pour Youd Chvat et se rend à l'Ohel du Rabbi.
 - Elle écrit « Mazal » sur son papier.
 - Lyron arrive lui aussi à New York, se rend à l'Ohel et écrit « Mazal ».
-- À la sortie, par un grand froid, leurs regards se croisent pour la première fois.
+- À la sortie, par un grand froid, quand Lyron monte dans son taxi pour Brooklyn, leurs regards se croisent pour la première fois.
 
 ## 2. Décisions validées par Samuel
 
@@ -20,8 +20,8 @@ Le plan suit le script de Shirel, les décisions de Samuel et les photos réelle
 | Tenue de Shirel (T2) | Exactement le script : robe noire longue, blazer noir, bottes noires. **Pas de manteau** |
 | Tenue de Lyron (T5) | Doudoune noire, jogging noir, Asics, tsitsit, petite kippa |
 | Lieu d'écriture | **Le même endroit pour les deux** : la salle d'écriture du centre d'accueil |
-| Premier regard | **À la sortie de l'Ohel** (pas dans le taxi) |
-| Taxi | Jaune, gardé pour l'arrivée de Lyron |
+| Premier regard | **Dans la rue, devant la maison, au moment où Lyron monte dans son taxi pour Brooklyn** (comme le dit le script) |
+| Taxi | Jaune, celui qui emmène Lyron à Brooklyn |
 | Calendrier | On lance une fois la séquence 1 validée |
 
 ## 3. Le lieu réel, zone par zone
@@ -53,28 +53,28 @@ Le plan suit le script de Shirel, les décisions de Samuel et les photos réelle
 | 2.0 | 0:10,0–0:10,8 | 0,8 s | A | Shirel arrive à pied dans la neige devant la maison à l'auvent, une petite valise à la main (elle vient tout droit de JFK, à 10 min), et monte les marches | Plan large, de 3/4 dos |
 | 2.1 | 0:10,8–0:11,8 | 1,0 s | B | Assise sur le banc, sa main écrit « Mazal » | Très gros plan main + papier, salle floue derrière |
 | 2.2 | 0:11,8–0:12,8 | 1,0 s | D, côté femmes | Debout au muret, elle lit tout bas, déchire le papier, les morceaux tombent sur la mer de lettres | Plan rapproché de 3/4, stèles floues ou hors cadre |
-| 2.3 | 0:12,8–0:13,5 | 0,7 s | A | Un taxi jaune s'arrête devant la même maison, Lyron en descend, buée | Plan moyen |
+| 2.3 | 0:12,8–0:13,5 | 0,7 s | A | Lyron arrive à pied dans la neige devant la même maison et monte les marches, buée | Plan moyen, de 3/4 dos (miroir de 2.0) |
 | 2.4 | 0:13,5–0:14,2 | 0,7 s | B | **Même table, même cadrage que 2.1** : sa main écrit « Mazal » | Très gros plan (miroir) |
 | 2.5 | 0:14,2–0:15,2 | 1,0 s | D, côté hommes | Il déchire son papier et jette les morceaux. **Derrière le rideau de chaînettes, flou, une silhouette en blazer noir aux cheveux longs : Shirel.** Ils sont à deux mètres l'un de l'autre sans le savoir | Plan rapproché de 3/4 |
-| 2.6 | 0:15,2–0:16,4 | 1,2 s | Sortie de l'Ohel | Dans la neige, chacun sort de sa porte à reculons (la coutume), puis ils se retournent. Première fois dans le même cadre | Plan large, visages lointains |
-| 2.7 | 0:16,4–0:17,2 | 0,8 s | Sortie | Lyron lève les yeux vers elle, buée | Gros plan |
-| 2.8 | 0:17,2–0:18,0 | 0,8 s | Sortie | Contrechamp : Shirel le regarde, sourire à peine esquissé. Coupe sur le 770 | Gros plan |
+| 2.6 | 0:15,2–0:16,4 | 1,2 s | A, la rue | Fin d'après-midi, neige. Un taxi jaune attend le long du trottoir. Lyron sort de la maison et ouvre la portière ; au même moment Shirel descend les marches sous l'auvent. Première fois dans le même cadre | Plan large, visages lointains |
+| 2.7 | 0:16,4–0:17,2 | 0,8 s | A, la rue | La main sur la portière du taxi, Lyron s'arrête et lève les yeux vers elle, buée | Gros plan |
+| 2.8 | 0:17,2–0:18,0 | 0,8 s | A, la rue | Contrechamp : Shirel sur les marches le regarde, sourire à peine esquissé. Coupe sur le 770 | Gros plan |
 
 **Pourquoi c'est construit comme ça :**
 - **Effet miroir** : même façade, même table, même cadrage, même mot. Le spectateur comprend sans texte qu'ils demandent la même chose.
 - **Le rideau de chaînettes** (plan 2.5) : c'est la vraie séparation du lieu, et elle crée la tension. Ils sont presque côte à côte sans se voir, et le spectateur, lui, le sait.
-- **La sortie à reculons** est la vraie coutume. Elle donne naturellement le moment où chacun se retourne et découvre l'autre.
+- **Le taxi pour Brooklyn** : c'est le moment du script. Il part, elle arrive en haut des marches : un regard, et le taxi l'emmène. La rencontre est brève, ce qui donne envie de la suite (le 770).
 - **La valise** suffit à dire « elle arrive à New York », sans tourner un plan de plus à l'aéroport.
 
 ## 5. Images clés (9 × 3 cr = 27 cr)
 
 | Plan | Références |
 |---|---|
-| 2.0, 2.3 | Façade 09 + rue 06 (recadrée sans l'interface Google) · sheet + photo réelle + tenue |
+| 2.0, 2.3, 2.6, 2.7, 2.8 | Façade 09 + rue 06 (recadrée sans l'interface Google) · sheet + photo réelle + tenue |
 | 2.1, 2.4 | Salle 01 sans filigrane · tenue (manche du blazer / de la doudoune) |
 | 2.2, 2.5 | Ohel 03, 04, 10 · sheet + photo réelle + tenue · kippa `f966b938` pour Lyron |
-| 2.6 | Ohel 04 (granit, néons) + neige · 2 sheets |
-| 2.7, 2.8 | Sheet + photo réelle + tenue + planche sourire |
+| 2.6 | + 2 sheets, visages lointains |
+| 2.7, 2.8 | + planche sourire |
 
 Méthode habituelle : test sur 1 image, comparaison côte à côte avec la vraie photo, puis le reste.
 
