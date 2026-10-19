@@ -28,6 +28,9 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Shirel : sourire bouche fermée en demi-sourire asymétrique (photos 15, 12) ; grand sourire avec toutes les dents du haut, pommettes hautes, yeux plissés (photo 20) ; rire de profil (photo 1). **Les grands sourires de Shirel se cadrent de 3/4 ou de profil.**
 - [ ] Lyron : sourire bouche fermée, lèvres pleines (photo 12) ; grand sourire avec les dents du haut, la moustache qui se soulève, les yeux plissés (photo 16).
 - [ ] **Sourire naturel** : il naît dans le plan (les yeux d'abord, puis la bouche), jamais exagéré.
+- [ ] Planches sourire : Shirel `e8c19b07-a2b1-469d-b828-13baecf0ae1e`, Lyron `8aca4a77-7285-4ae8-a7bc-8b777caa40e9`.
+- [ ] **Dents naturelles** : couleur et forme réelles, jamais un blanc « Hollywood » trop parfait (point de vigilance relevé sur la planche de Shirel).
+- [ ] ⛔ Ne pas utiliser la 4e vignette de la planche de Lyron (un œil fermé, on dirait un clin d'œil) : un rire naturel garde les deux yeux plissés de façon égale.
 
 ## E. Proportions (remarque de Samuel)
 - [ ] **Lyron est 20 à 25 cm plus grand** : debout à plat, le haut de la tête de Shirel arrive **au niveau de sa bouche** ; sur la pointe des pieds, elle atteint à peine son menton.
