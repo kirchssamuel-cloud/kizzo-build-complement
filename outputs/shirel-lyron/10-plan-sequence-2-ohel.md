@@ -1,93 +1,95 @@
-# Séquence 2 — L'Ohel (0:10–0:18, 8 s) · plan de production
+# Séquence 2 — L'Ohel · plan de production v3
 
-**Relu phrase par phrase avec le script de Shirel (scène 2).** D'après son script : arrivée à New York pour Youd Chvat, l'Ohel du Rabbi et de la Rabbanite, chacun écrit « Mazal » et dépose son papier, et à la sortie, dans le grand froid, leurs regards se croisent pour la première fois quand Lyron monte dans son taxi pour Brooklyn.
+**Durée : 8 s, de 0:10 à 0:18 dans le film. Coût : 203 cr (9 images clés + 2 vidéos 1080p).**
+Le plan suit le script de Shirel, les décisions de Samuel et les photos réelles du lieu (dossier `references-ohel/`).
 
-## Ambiance
-- Fin janvier à New York (Youd Chvat) : neige au sol, flocons légers, buée qui sort de la bouche, ciel gris bleuté de fin d'après-midi.
-- À l'intérieur : lumière chaude des bougies et des lampes, recueillement, silence.
-- Respect absolu : aucune inscription de tombe lisible, plans de mains, de dos et de 3/4, aucune mise en scène théâtrale. Hommes et femmes chacun de leur côté, comme dans la réalité.
+---
 
-## Découpage
+## 1. Ce que demande le script de Shirel
 
-| # | Durée | Plan | Personnage / tenue | Cadrage |
-|---|---|---|---|---|
-| 2.0 | 1,0 s | **Arrivée à New York** (script : « Montrer Shirel qui arrive à New York ») : Shirel sort de l'aéroport / d'un taxi dans le froid new-yorkais, neige | Shirel T2 | Plan moyen |
-| 2.1 | 1,2 s | Shirel arrive à pied dans l'allée enneigée vers l'Ohel, buée, flocons | Shirel T2 (robe noire longue, blazer noir, bottes noires) | Plan moyen de 3/4 dos, puis profil |
-| 2.2 | 1,2 s | Gros plan : sa main écrit « Mazal » sur un petit papier, à la lueur des bougies | Main de Shirel, manche du blazer, bagues fines | Très gros plan |
-| 2.3 | 1,5 s | Elle dépose le papier plié parmi les lettres, yeux fermés, émue | Shirel T2 | Gros plan de 3/4, visage doux |
-| 2.4a | 0,8 s | **Lyron arrive à New York** et entre à l'Ohel (script : « Couper vers Lyron qui arrive à New York et se rend lui aussi au Ohel ») | Lyron T5 | Plan moyen |
-| 2.4b | 1,0 s | **Sa main écrit « Mazal »** (script : « Il écrit Mazal sur son papier ») | Main de Lyron, manche de doudoune | Très gros plan |
-| 2.4c | 1,2 s | Il dépose à son tour son papier, recueilli | Lyron T5 (doudoune noire, jogging, Asics, tsitsit, petite kippa) | Gros plan de 3/4 |
-| 2.5a | 1,3 s | Dehors, il ouvre la portière d'un taxi jaune, buée, il lève les yeux | Lyron T5 | Plan rapproché |
-| 2.5b | 1,0 s | Contrechamp : Shirel, à la sortie, le regarde. Premier regard | Shirel T2 | Plan rapproché, sourire à peine esquissé |
+- Shirel arrive à New York pour Youd Chvat et se rend à l'Ohel du Rabbi.
+- Elle écrit « Mazal » sur son papier.
+- Lyron arrive lui aussi à New York, se rend à l'Ohel et écrit « Mazal ».
+- À la sortie, par un grand froid, leurs regards se croisent pour la première fois.
 
-Le premier regard est construit en champ / contrechamp : chacun est filmé seul, ce qui garde les deux visages parfaits (pas de risque de mélange à deux dans la même image).
+## 2. Décisions validées par Samuel
 
-## Images clés (9 × 3 cr = 27 cr)
-2.0, 2.1, 2.2, 2.3, 2.4a, 2.4b, 2.4c, 2.5a, 2.5b — chacune avec le sheet complet + la vraie photo + la tenue de la scène (recadrée sans tête) ; pour Lyron, la vraie kippa `f966b938` en petite taille. Test sur 1 image d'abord.
+| Sujet | Décision |
+|---|---|
+| Mot écrit | **« Mazal » en lettres latines**, pour les deux |
+| Tenue de Shirel (T2) | Exactement le script : robe noire longue, blazer noir, bottes noires. **Pas de manteau** |
+| Tenue de Lyron (T5) | Doudoune noire, jogging noir, Asics, tsitsit, petite kippa |
+| Lieu d'écriture | **Le même endroit pour les deux** : la salle d'écriture du centre d'accueil |
+| Premier regard | **À la sortie de l'Ohel** (pas dans le taxi) |
+| Taxi | Jaune, gardé pour l'arrivée de Lyron |
+| Calendrier | On lance une fois la séquence 1 validée |
 
-## Vidéo (2 générations multi-plans)
-| Génération | Plans | Durée | Brouillon 480p | Finale 1080p |
-|---|---|---|---|---|
-| A Shirel | 2.0 → 2.1 → 2.2 → 2.3 → 2.5b | 6 s | 18 | 96 |
-| B Lyron | 2.4a → 2.4b → 2.4c → 2.5a | 5 s | 15 | 80 |
+## 3. Le lieu réel, zone par zone
 
-## Coût
-- Avec brouillons : 27 + 33 + 176 = **236 cr (~11,80 €)**
-- Sans brouillons (1080p direct) : 27 + 176 = **203 cr (~10 €)**
+**A. La rue et la façade** (photos 05, 06, 07, 09)
+- Francis Lewis Boulevard, Queens. Maison basse en briques beige, toit gris, cheminée.
+- Auvent marron arrondi, petit escalier avec rampe noire, muret de briques rouges, pelouse et haies taillées.
+- À gauche, une clôture blanche et le cimetière derrière. Voitures garées le long du trottoir.
+- En janvier : neige sur la pelouse et les haies, trottoir déneigé, ciel gris.
 
-Note : le montage fera ~9-10 s pour 8 s prévus ; on resserre au montage (plans de 0,8-1,2 s) pour rester dans le minutage.
+**B. La salle d'écriture** (photo 01)
+- Long hangar blanc en tôle ondulée, néons et ventilateurs au plafond, carrelage ocre.
+- Longues tables au plateau clair avec bancs en bois brun fixés. Hommes, femmes et enfants écrivent côte à côte.
 
-## Points à valider avant de lancer
-1. ~~Latin ou hébreu ?~~ → **« Mazal » en lettres latines (français)** pour les deux (Samuel, 19/10).
-2. ~~Manteau par-dessus ?~~ → **Non, strictement le script** : robe noire longue + blazer noir + bottes noires (Samuel, 19/10).
-3. ~~Lyron écrit-il ?~~ → **Oui, son script le demande** : plan 2.4b ajouté.
-4. ~~Taxi jaune ?~~ → **Oui** (Samuel, 19/10).
-5. **Tombeau du Rabbi (Ohel)** : Samuel envoie les photos de référence réelles. Aucune image clé de l'Ohel avant de les avoir.
-6. **Calendrier** : la séquence 2 démarre une fois la séquence 1 finalisée.
+**C. L'allée vers l'Ohel**
+- Allée clôturée derrière la maison. **On ne la montre pas** (ellipse) : c'est un plan en moins, sans perte pour l'histoire.
 
-## Vision seconde par seconde — v2 (corrigée par Samuel + recherches sur l'Ohel)
+**D. L'Ohel** (photos 02, 03, 04, 08, 10)
+- Enceinte à ciel ouvert, murs et piliers en granit gris, auvent périphérique avec néons, portes en bois brun.
+- **Rideau de chaînettes métalliques** suspendu : la séparation hommes / femmes.
+- Muret blanc rempli d'une mer de papiers blancs, deux stèles grises au fond.
+- Les visiteurs se tiennent debout le long du muret, des livrets rouges posés sur le rebord.
+- En hiver : manteaux, buée, néons allumés en fin de journée.
 
-**Ce que disent les sources sur le lieu** (Wikipedia, chabad.org « What to Expect at the Ohel ») :
-- L'Ohel est au cimetière Old Montefiore, Cambria Heights (Queens), à 10 min de JFK.
-- On écrit sa lettre (le « pan ») au centre d'accueil : des maisons avec, derrière, une grande structure type tente, des tables et des chaises, des stylos et du papier fournis, des étagères de livres et un grand écran qui diffuse le Rabbi.
-- On sort par la porte de derrière, puis on suit une allée clôturée jusqu'à l'Ohel.
-- L'Ohel est un mausolée à ciel ouvert. Dans la petite antichambre, il y a des présentoirs de bougies allumées.
-- **Hommes et femmes entrent par deux portes séparées.**
-- On lit sa lettre à voix basse, **on la déchire et on jette les morceaux sur le tas de lettres** qui recouvre les tombes (on ne la dépose pas pliée).
-- Pas de chaussures en cuir à l'intérieur : on prend des chaussons ou des Crocs à l'accueil.
-- **On ressort à reculons**, pour ne pas tourner le dos aux tombes.
+## 4. Découpage seconde par seconde
 
-| TC | Durée | Plan | Ce qu'on voit |
+| # | TC | Durée | Lieu | Ce qu'on voit | Cadrage |
+|---|---|---|---|---|---|
+| 2.0 | 0:10,0–0:10,8 | 0,8 s | A | Shirel arrive à pied dans la neige devant la maison à l'auvent, une petite valise à la main (elle vient tout droit de JFK, à 10 min), et monte les marches | Plan large, de 3/4 dos |
+| 2.1 | 0:10,8–0:11,8 | 1,0 s | B | Assise sur le banc, sa main écrit « Mazal » | Très gros plan main + papier, salle floue derrière |
+| 2.2 | 0:11,8–0:12,8 | 1,0 s | D, côté femmes | Debout au muret, elle lit tout bas, déchire le papier, les morceaux tombent sur la mer de lettres | Plan rapproché de 3/4, stèles floues ou hors cadre |
+| 2.3 | 0:12,8–0:13,5 | 0,7 s | A | Un taxi jaune s'arrête devant la même maison, Lyron en descend, buée | Plan moyen |
+| 2.4 | 0:13,5–0:14,2 | 0,7 s | B | **Même table, même cadrage que 2.1** : sa main écrit « Mazal » | Très gros plan (miroir) |
+| 2.5 | 0:14,2–0:15,2 | 1,0 s | D, côté hommes | Il déchire son papier et jette les morceaux. **Derrière le rideau de chaînettes, flou, une silhouette en blazer noir aux cheveux longs : Shirel.** Ils sont à deux mètres l'un de l'autre sans le savoir | Plan rapproché de 3/4 |
+| 2.6 | 0:15,2–0:16,4 | 1,2 s | Sortie de l'Ohel | Dans la neige, chacun sort de sa porte à reculons (la coutume), puis ils se retournent. Première fois dans le même cadre | Plan large, visages lointains |
+| 2.7 | 0:16,4–0:17,2 | 0,8 s | Sortie | Lyron lève les yeux vers elle, buée | Gros plan |
+| 2.8 | 0:17,2–0:18,0 | 0,8 s | Sortie | Contrechamp : Shirel le regarde, sourire à peine esquissé. Coupe sur le 770 | Gros plan |
+
+**Pourquoi c'est construit comme ça :**
+- **Effet miroir** : même façade, même table, même cadrage, même mot. Le spectateur comprend sans texte qu'ils demandent la même chose.
+- **Le rideau de chaînettes** (plan 2.5) : c'est la vraie séparation du lieu, et elle crée la tension. Ils sont presque côte à côte sans se voir, et le spectateur, lui, le sait.
+- **La sortie à reculons** est la vraie coutume. Elle donne naturellement le moment où chacun se retourne et découvre l'autre.
+- **La valise** suffit à dire « elle arrive à New York », sans tourner un plan de plus à l'aéroport.
+
+## 5. Images clés (9 × 3 cr = 27 cr)
+
+| Plan | Références |
+|---|---|
+| 2.0, 2.3 | Façade 09 + rue 06 (recadrée sans l'interface Google) · sheet + photo réelle + tenue |
+| 2.1, 2.4 | Salle 01 sans filigrane · tenue (manche du blazer / de la doudoune) |
+| 2.2, 2.5 | Ohel 03, 04, 10 · sheet + photo réelle + tenue · kippa `f966b938` pour Lyron |
+| 2.6 | Ohel 04 (granit, néons) + neige · 2 sheets |
+| 2.7, 2.8 | Sheet + photo réelle + tenue + planche sourire |
+
+Méthode habituelle : test sur 1 image, comparaison côte à côte avec la vraie photo, puis le reste.
+
+## 6. Vidéo (2 générations multi-plans, 1080p direct)
+
+| Génération | Plans | Durée | Coût |
 |---|---|---|---|
-| 0:10,0–0:10,8 | 0,8 s | 2.0 | Arrivée à New York : Shirel sort de JFK dans le froid, neige, buée |
-| 0:10,8–0:11,8 | 1,0 s | 2.1 | **Le lieu précis (photos de Samuel)** : assise à une table du centre d'accueil, très gros plan sur sa main qui écrit « Mazal » |
-| 0:11,8–0:12,8 | 1,0 s | 2.2 | Dans l'Ohel, côté femmes, à la lueur des bougies : elle lit tout bas, déchire le papier, les morceaux tombent sur le tas de lettres (flou, aucune inscription lisible) |
-| 0:12,8–0:13,6 | 0,8 s | 2.3 | Lyron descend d'un **taxi jaune** devant le centre d'accueil, neige, doudoune noire |
-| 0:13,6–0:14,4 | 0,8 s | 2.4 | **Même table, même cadrage** : sa main écrit « Mazal » (effet miroir) |
-| 0:14,4–0:15,2 | 0,8 s | 2.5 | Côté hommes : il déchire son papier, les morceaux tombent sur le même tas |
-| 0:15,2–0:16,4 | 1,2 s | 2.6 | Dehors, plan large : chacun sort de sa porte à reculons, puis ils se retournent dans la neige. C'est la première fois qu'ils sont dans le même cadre (de loin) |
-| 0:16,4–0:17,2 | 0,8 s | 2.7 | Gros plan : Lyron lève les yeux, buée |
-| 0:17,2–0:18,0 | 0,8 s | 2.8 | Contrechamp : Shirel le regarde, sourire à peine esquissé. Coupe sur le 770 |
+| A — Shirel | 2.0 → 2.1 → 2.2 → 2.8 | 5 s | 80 cr |
+| B — Lyron + sortie | 2.3 → 2.4 → 2.5 → 2.6 → 2.7 | 6 s | 96 cr |
+| **Total séquence 2** | | | **27 + 176 = 203 cr (~10 €)** |
 
-**Points de réalisme intégrés :**
-- **Chaussures** : les plans dans l'Ohel sont cadrés buste et mains, jamais les pieds. Les bottes de Shirel ne sont vues que dehors.
-- **Plan 2.6** : c'est le seul plan à deux personnes. Ils sont de loin, donc le risque de mélange des visages reste faible ; les visages sont montrés seuls en 2.7 et 2.8.
-- Aucune image du lieu n'est générée avant les photos de référence de Samuel.
+## 7. Règles de respect et de réalisme
 
-## Références réelles du lieu (envoyées par Samuel, dossier `references-ohel/`)
-
-| Photo | Ce qu'elle montre | Plans concernés |
-|---|---|---|
-| 01 salle d'écriture (version sans filigrane à utiliser) | Long hangar blanc en tôle ondulée, néons, ventilateurs au plafond, sol en carrelage beige-ocre, longues tables au plateau clair avec bancs en bois brun fixés. Hommes, femmes et enfants écrivent côte à côte. Mouchoirs et papiers sur les tables | 2.1, 2.4 |
-| 02, 03 intérieur de l'Ohel (jour) | Enceinte à ciel ouvert, murs en granit gris, deux grandes stèles grises arrondies, muret blanc rempli d'une mer de papiers blancs. On se tient debout le long du muret avec un livret | 2.2, 2.5 |
-| 04 intérieur de l'Ohel (nuit, hiver) | Auvent périphérique avec néons, piliers en granit, jeunes en doudounes, bonnets et manteaux autour du muret | 2.2, 2.5 (lumière d'hiver) |
-| 05 centre d'accueil | Maison en briques, auvent beige « Ohel Chabad Lubavitch », marches, haie, pelouse | 2.3 (arrivée de Lyron en taxi jaune) |
-
-**Ce que ça change dans les plans :**
-- **2.1 / 2.4 (écriture)** : assis sur le banc, à la même table, avec le même cadrage pour les deux (effet miroir). Le hangar blanc et les néons donnent une lumière froide et neutre. On la réchauffe légèrement, sans trahir le lieu.
-- **2.2 / 2.5 (déchirer)** : debout le long du muret blanc, les morceaux tombent sur la mer de papiers. **Les stèles restent floues ou hors cadre**, jamais d'inscription lisible. Pas de plan des pieds.
-- **2.3** : le taxi jaune s'arrête devant la maison en briques à l'auvent beige. Le texte de l'auvent reste flou.
-- Les photos à filigrane ne servent jamais telles quelles de référence (sinon le filigrane réapparaît dans l'image générée).
-
-**Encore utile :** l'allée entre la maison et l'Ohel, l'antichambre aux bougies, les portes de sortie, et l'extérieur de l'Ohel sous la neige (pour le plan du regard 2.6 à 2.8).
+- **Aucune inscription de stèle lisible** : stèles floues ou hors du cadre.
+- **Pas de plan des pieds dans l'Ohel** (on n'y entre pas en chaussures de cuir) ; les bottes de Shirel ne sont vues que dehors.
+- Texte de l'auvent flou. Personne ne parle, personne ne regarde la caméra.
+- **Photos à filigrane (08 Alamy) : guide visuel seulement, jamais en référence de génération**, sinon le filigrane réapparaît. La 01 est utilisée recadrée.
+- Lumière : froide et grise dehors (neige), néons neutres légèrement réchauffés à l'intérieur ; même rendu documentaire que la séquence 1.
