@@ -17,6 +17,8 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 - [ ] ⚠️ **RÉFÉRENCES v3 (19/10) — remplacent toutes les précédentes** : voir la liste des IDs à la fin du journal (04, §7). Shirel = nouvelle photo (cheveux longs ondulés naturels, frisottis). Lyron = plus mince, cheveux plus fournis (« full dense hairline, no receding temples » dans CHAQUE prompt). Proportions mises à jour : Lyron 20-25 cm plus grand, épaules nettement plus larges mais silhouette mince et athlétique (plus « carrure massive »).
 
+- [ ] **Cheveux de Lyron (19/10)** : sheet de référence = **v3c `57396152-b3b6-4066-9266-05a17c57ee76`**. Ne JAMAIS donner en référence une image où l'on voit ses golfes (vraies photos, sheets v1/v2/v3/v3b, anciennes planches T5/T6/T7 non recadrées) : l'IA recopie l'image, pas le texte. Pour les tenues, utiliser les anciennes planches recadrées sous le cou.
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
