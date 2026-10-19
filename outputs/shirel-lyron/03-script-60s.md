@@ -20,12 +20,14 @@ Les 8 scènes du client sont toutes là. Le temps va là où se trouve l'émotio
 
 ## 2. Script minuté — 60 s
 
-### SCÈNE 1 — Deux départs · 0:00–0:09 (9 s)
+### SCÈNE 1 — Deux départs · 0:00–0:11 (11 s, Goral renforcé à la demande de Samuel)
 | TC | Plan | Image |
 |---|---|---|
 | 0:00–0:02 | **1.1** | Paris à l'aube, toits et tour Eiffel au loin. Shirel ferme sa valise devant la fenêtre et sourit |
-| 0:02–0:03 | **1.2a** | Insert : les mains du rabbin déplient le papier du Goral, **« Lyron » écrit à la main**, en gros plan |
-| 0:03–0:05 | **1.2b** | Lyron réalise, ses amis l'acclament et lui tapent sur l'épaule, il pose la main sur le cœur |
+| 0:02–0:04 | **1.2a** | Plan large de la choule : le rabbin secoue la boîte de papiers et brandit l'enveloppe du billet (pictogramme d'avion), tous les regards sont fixés sur la boîte |
+| 0:04–0:05 | **1.2b** | Insert : la main du rabbin plonge dans la boîte et tire un seul papier |
+| 0:05–0:06 | **1.2c** | Les mains déplient le papier : **« Lyron »** en gros plan |
+| 0:06–0:08 | **1.2d** | Lyron réalise, ses amis l'acclament, main sur le cœur |
 | 0:05–0:07 | **1.3** | Terminal CDG : Shirel avance avec ses sœurs et ses copines, valises, rires (les autres de dos ou floues) |
 | 0:07–0:08 | **1.4** | Nuit en Israël : Lyron jette ses affaires dans sa valise et pose le billet dessus |
 | 0:08–0:09 | **1.5** | Un avion décolle dans le soleil levant |

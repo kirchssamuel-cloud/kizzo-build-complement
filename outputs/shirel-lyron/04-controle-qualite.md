@@ -105,7 +105,9 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | 7 planches de tenue | 6 passées en porte B au premier essai. T3 refaite : la robe blanche était trop transparente, sous-vêtements visibles, inadapté pour une vidéo familiale religieuse ; version opaque, tous les détails conservés | 24 |
 | 2 planches sourire | Porte B passée avec 2 réserves : dents de Shirel un peu trop blanches (à corriger dans les prompts) ; 4e vignette de Lyron écartée (clin d'œil involontaire) | 6 |
 | Scène 1 : 6 images clés | 2 validées du premier coup (1.4, 1.5). Corrigées : 1.1 (regard caméra), 1.2a (guillemets parasites autour de « Lyron »), 1.2b (bouche ouverte = parole), 1.3 (2 valises, amies en pantalon, visage d'amie net : 2 passes) | 33 |
-| **Total dépensé** | | **75 cr (~3,75 €)** |
+| Test en mouvement 1.4 (brouillon 480p, 5 s) | **Validé** : visage stable du début à la fin, vrai sourire qui s'ouvre (yeux qui se plissent, dents), kippa en dôme stable, tsitsit et montre présents, billet posé dans la valise, aucune parole, aucun regard caméra. Le pipeline image clé → Seedance est validé | 15 |
+| Goral : 2 nouvelles images clés (plan large, main dans la boîte) | Validées du premier coup. Vigilance pour la vidéo : le rabbin a la bouche entrouverte, à garder silencieux dans le prompt | 6 |
+| **Total dépensé** | | **96 cr (~4,80 €)** |
 
 Images clés scène 1 retenues : 1.1 `1ba5c7a2-c664-49c0-ab72-fd1c6fab6293` · 1.2a `f2610722-9751-434a-9696-599968d94dc2` · 1.2b `dce9bfaf-52d2-42a5-b4f1-311e3b8a74a2` · 1.3 `4af9cc7a-8bc6-49c4-88f5-054763e8693e` · 1.4 `764578d8-6900-4794-a786-d04cc404c362` · 1.5 `83635212-5452-4b9b-b6a5-879eb6d5228c`
 
