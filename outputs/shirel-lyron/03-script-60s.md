@@ -112,3 +112,29 @@ Les prompts détaillés de la v2 (`02-dossier-production-v2.md`) restent valable
 - **Ce qui marchera :** sur tous les plans moyens et larges, on verra une kippa en velours noir avec la bande de lettres blanches brodées tout autour. Elle sera reconnaissable.
 - **Ce qui est risqué :** l'inscription **lisible lettre par lettre** en mouvement. Les modèles vidéo déforment l'hébreu.
 - **Ma méthode :** (1) ta photo de face de la kippa + les photos 1 et 9 en référence ; (2) les images clés sont faites avec un modèle d'image qui gère le texte, et je les vérifie lettre par lettre ; (3) sur les gros plans, je cadre de 3/4 ou de dos, là où la broderie se lit comme un motif. Si une lettre « bave » sur un plan clé, je retouche en post.
+
+---
+
+## 6. Décisions validées par Samuel
+
+- **Déco de la demande** : identique à la photo 10 (arche en bois, fleurs blanches et fougères, table nappée de blanc, chaises blanches, pétales et bougies sur le sable).
+- **Tenue de la demande** : celle des photos 1 et 10 (Lyron : chemise blanche oversize, Ray-Ban noires, kippa, pantalon marron à petit motif, sandales ; Shirel : robe blanche courte à manches longues, claquettes sombres).
+- **Kippa** (photo 18) : tissu noir tissé (pas du velours), inscription **יחי אדוננו מורנו ורבנו מלך המשיח לעולם ועד** brodée en fil blanc argenté tout autour du bord.
+- **Pull Kith** : référence Kith Williams, gris chiné clair, logo « KITH » brodé ton sur ton (photo produit officielle kith.com).
+- **Accord écrit** : géré par Samuel.
+
+## 7. Character sheets — prompts prêts (en attente de feu vert)
+
+Modèle : `nano_banana_2_1`, 2K, 16:9, ~2 cr par sheet. Références : les photos du personnage.
+
+**Shirel** (réf. photos 2, 5, 6, 7, 13, 14, 15)
+```
+Character reference sheet, 16:9, pure white seamless studio background. Left: full-body standing shot, neutral straight pose facing camera, arms relaxed, head-to-toe with both feet visible. Right: a 2x2 grid of head-and-shoulders close-ups of the same woman: front view, three-quarter left, three-quarter right, side profile. The woman is exactly the person in the reference photos, same face, same identity: young woman in her mid-twenties, sun-tanned olive skin with many natural freckles across the nose and cheeks, thick dark well-groomed eyebrows, hazel-green almond eyes, straight nose, full natural lips, long dark brown hair parted in the middle falling past the shoulders in soft loose waves, several small gold and diamond earrings along the ear, thin layered gold necklaces with tiny pendants, white French-tip nails. Wearing a simple fitted black long-sleeve top, a black midi skirt and black ankle boots. Visible real skin texture and pores, no beauty filter, no airbrushing, soft diffused studio light, unretouched high-end photography, single subject only, no text, no watermark.
+```
+
+**Lyron** (réf. photos 3, 4, 9, 11, 16 + kippa photo 18)
+```
+Character reference sheet, 16:9, pure white seamless studio background. Left: full-body standing shot, neutral straight pose facing camera, arms relaxed, head-to-toe with both feet visible. Right: a 2x2 grid of head-and-shoulders close-ups of the same man: front view, three-quarter left, three-quarter right, side profile. The man is exactly the person in the reference photos, same face, same identity: man in his late twenties, light olive skin, short dark brown hair with a receding hairline and high forehead, short neatly trimmed dark beard with mustache, dark brown eyes, strong straight nose, medium solid build. He wears the exact black woven kippah from the reference, with white-silver embroidered Hebrew lettering around the entire rim. Wearing an oversized plain white crew-neck t-shirt with white tzitzit strings hanging at the hips, loose black trousers, white sneakers, a steel chronograph watch with a white dial on his left wrist. Visible real skin texture and pores, no beauty filter, unretouched high-end photography, single subject only, no text other than the kippah embroidery, no watermark.
+```
+
+Coût total des deux sheets : **~4 crédits (~0,20 €)**. Upload des photos sur Higgsfield : gratuit.
