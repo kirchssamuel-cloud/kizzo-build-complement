@@ -102,9 +102,11 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Upload des 15 références | OK (après ouverture réseau de `upload.higgsfield.ai`) | 0 |
 | Character sheets v1 | Rejetés en porte B : yeux de Shirel trop marron, mâchoire trop carrée, grille non conforme ; kippa de Lyron trop petite, lettres déformées | 6 |
 | Character sheets v2 | Porte B passée : yeux noisette-vert, visage adouci, panneau sourire ajouté ; kippa en dôme, ressemblance forte. Reste : quelques lettres de la kippa imparfaites (correction prévue en post), grille de Lyron à 7 vignettes au lieu de 5 (sans impact) | 6 |
-| **Total dépensé** | | **12 cr (~0,60 €)** |
+| 7 planches de tenue | 6 passées en porte B au premier essai. T3 refaite : la robe blanche était trop transparente, sous-vêtements visibles, inadapté pour une vidéo familiale religieuse ; version opaque, tous les détails conservés | 24 |
+| **Total dépensé** | | **36 cr (~1,80 €)** |
 
 Job IDs (pour réutilisation comme références) : Shirel v2 `3a64aa3c-6fec-40e3-b64d-cdc8c158ae8f` · Lyron v2 `0593f82b-883a-45b7-bcb6-7ef5d4b3f734`
+Planches : T1 `cff1a83c-16f2-4070-8286-701e1f8b0532` · T2 `c16fc665-78db-4d91-b6dc-7c7943ce1174` · T3 `e0bd67ec-9f1e-4565-a33f-a3bd55f2ae90` · T4 `4d22cf0d-e386-46fb-8180-1622bd4b1e8a` · T5 `ba74f245-678b-49b9-8537-aba10325a66b` · T6 `313581d7-aae4-4d6f-bac4-edecebb08622` · T7 `ab1c55f8-0afc-4220-a382-d5bbad8a68c6`
 
 ---
 
