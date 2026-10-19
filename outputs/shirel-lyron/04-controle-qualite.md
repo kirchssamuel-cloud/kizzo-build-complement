@@ -127,7 +127,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Sheet Lyron : ajout du profil par montage (v4 + 3/4 et profil du v4b) → `47cb751b-7007-4bf4-a6a7-ebbef581ed25` | Sans génération | 0 |
 | Planche test Shirel T1 (ensemble noir) depuis sheet `da688b2a…` + vraie photo | `accd5f3b-32e9-49da-91eb-f68daf953b4c` : visage identique au sheet ✓ ; petit logo « N » sur les baskets (à ignorer ou flouter) | 3 |
 | Shirel T1 sans sac (demande de Samuel) | 1er essai échoué côté Higgsfield (remboursé) ; 2e : `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` ✓ sans sac, sans logo, visage = sheet. T2/T3/T4/sourires d'hier conservés après comparaison (même visage que le sheet) → 12 cr économisés | 3 |
-| **Total dépensé** | | **521 cr** |
+| Scène 1 v5 : 6 images clés (prompts de la version validée, nouveaux visages/tenues) | 1.1 `0ac3314d-d3c1-417a-8cbe-2295ef138c9c` · 1.2a `2574696a-7b07-40b0-8500-31df49febc47` · 1.2d `074eedac-a8ac-43d9-a82d-89414ee16c10` (1er essai échoué, remboursé ; relancé avec gros plan kippa `c0115fde…`) · 1.3 `0173a11b-954c-4717-9e1f-63b7352676a1` · 1.3b `f74d9561-bafa-49a5-9b8d-74d505f99d91` · 1.4 `889beb73-fe1f-47e4-83f0-34db3d0e3c28`. Kippa : nettement mieux sur 1.2d mais 1-2 lettres imparfaites ; 1.2a et 1.4 faites sans le gros plan kippa (lettres approximatives). 1.3 : cheveux un peu plus courts que le sheet | 18 |
+| **Total dépensé** | | **539 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 

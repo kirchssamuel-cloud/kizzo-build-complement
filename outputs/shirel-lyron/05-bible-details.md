@@ -31,6 +31,8 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 - [ ] **Références par plan (validé par Samuel, 19/10)** : pour chaque image clé / vidéo, donner le **sheet complet** du personnage (visage sous tous les angles) + 1-2 vraies photos + la planche de tenue de la scène. Lyron : sheet `47cb751b…` ; Shirel : sheet `da688b2a…`. Shirel T1 voyage : **sans sac** (demande de Samuel).
 
+- [ ] **KIPPA (remarque de Samuel, 19/10 : « c'est pas top les écritures »)** : sur CHAQUE plan avec Lyron (image ET vidéo), donner en référence le **gros plan de la vraie kippa `c0115fde-c216-4fa1-87fb-28d00cc1cffb`** + écrire le texte exact « יחי אדוננו מורנו ורבנו מלך המשיח לעולם ועד », lettres blanc argenté nettes et bien formées. Contrôle des lettres en porte B ; retouche en post sur les plans serrés si besoin.
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
