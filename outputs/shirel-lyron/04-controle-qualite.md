@@ -135,7 +135,10 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Vidéos 720p scène 1 v5 (Samuel : « je préfère la version 1 largement ») | Shirel `8b130048-867d-4936-ae39-42773065e9e9` · Lyron `4e5d8db4-69dd-4684-ac3f-8ab267329613`. Analyse : lumière trop froide, 720p moins net, valise trop large, Shirel presque face caméra → gardées comme brouillons de référence | 91 |
 | 2 images clés refaites (chaleur + cadrage) | 1.4 `006a0b81-2452-44f0-9331-c8555659928b` plan rapproché, lampe chaude, chambre propre, petite kippa ✓ · 1.3 `b0ca30ec-4bce-4d3d-a072-053ba1156d07` lumière dorée, regard vers l'amie ✓. Décision Samuel : main + papier « Lyron » repris de la v1 1080p au montage | 6 |
 | 1.3 refait avec un sourire doux (Samuel : pas de grand rire, on ne connaît pas son vrai rire) | `bed90f25-c1ce-476c-a381-6bb5e6b98004` : sourire doux comme sur sa photo, regard vers l'amie, lumière dorée ✓ | 3 |
-| **Total dépensé** | | **663 cr** |
+| Vidéos 1080p scène 1 v5 (prompts passés à la checklist) | Shirel `643f77a6-d427-46ff-9f97-7cc59178bc7a` (5 s) · Lyron `e894c8c7-e709-4cf1-96ab-a50baf00e8ec` (6 s). Montage 11,67 s livré. Défauts relevés : salle de la réaction différente du plan large, billet 0,5 s seulement, pas de plan d'ouverture sur Paris | 176 |
+| 2 images clés (demande de Samuel) | Toits de Paris à l'aube `ecdbe0f6-7f79-4560-a4a1-658cede9901b` ✓ · Réaction dans la même salle que le plan large `456d4131-f199-4b09-bc01-67234ab2ef0e` ✓ (murs en pierre, bibliothèques, lustres, même foule, petite kippa) | 6 |
+| 2 vidéos 1080p de 4 s (ouverture Paris + réaction) | Paris `5691cee7-420b-48e6-ab25-665dc66ecdb2` · Réaction `abd1e9af-8c8f-4cf7-b5dc-98c0cdfa8873`. Le billet est retiré du montage | 128 |
+| **Total dépensé** | | **973 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
