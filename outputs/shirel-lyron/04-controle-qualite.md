@@ -72,3 +72,23 @@ Professional character reference sheet, 16:9, pure white seamless studio backgro
 **Lyron** : ligne des cheveux dégarnie aux tempes (l'IA a tendance à « rajeunir » les cheveux), forme de la barbe, nez, oreilles, carrure (pas amincie par l'IA), kippa : tissu noir mat, lettres blanches nettes.
 
 Si un point échoue, je corrige le prompt avant de te montrer quoi que ce soit.
+
+---
+
+## 6. Tenues de la demande — description verrouillée (photos 1, 10, 19, 20)
+
+Ces descriptions remplacent celles du script v3 pour les plans 6.2 à 6.6. Elles serviront aussi à générer la planche de tenue « demande ».
+
+**Lyron**
+```
+Oversized long-sleeve white shirt in a light, slightly sheer crinkled cotton-gauze fabric with a fine vertical texture, relaxed open collar, dropped shoulders, buttoned cuffs with small dark buttons, worn untucked and loose. Very wide-leg, floor-length flowing trousers in a bronze-brown fabric with a small dark geometric diamond-lattice print, pooling slightly over the feet. Dark navy leather slide sandals with wide crossed straps on natural jute espadrille soles. Black rectangular sunglasses. The black woven kippah with white embroidered Hebrew lettering around the rim and a small white embroidered emblem on the side panel. No watch visible.
+```
+
+**Shirel**
+```
+Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round crew neckline, fitted bodice, short A-line skirt at mid-thigh. Turquoise beaded short necklace. Stacked thin gold bangles and several gold rings on her right wrist and hand. Multiple colorful seed-bead anklets on her right ankle, a green beaded anklet with a small charm on her left ankle. Dark brown knotted-fabric thong sandals on chunky double-layer padded black platform soles, white pedicure. Long dark brown hair worn loose, moving in the sea breeze.
+```
+
+**Décor (photos 10 et 20)** : grande plage de sable doré de Da Nang, mer turquoise, une colline boisée à gauche, une rangée de palmiers et d'hôtels blancs flous au loin, ciel de fin d'après-midi chaud. L'arche et la table sont décrites en section 6 du script v3.
+
+**Contrôle à faire après génération** : imprimé losange du pantalon (pas de rayures, pas d'uni), semelles jute des sandales, transparence légère de la chemise, robe à manches longues **courte**, platform des sandales de Shirel, bracelets de cheville.
