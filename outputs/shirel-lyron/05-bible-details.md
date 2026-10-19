@@ -19,6 +19,9 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Figurants féminins : **jupes longues**, visages de dos ou flous.
 - [ ] Pour corriger une image, repartir de l'image elle-même en référence (« recreate identically, change only… ») pour garder ce qui était réussi. **Une seule fois maximum.**
 - [ ] **Jamais de retouche en chaîne** (image déjà retouchée redonnée en référence) : chaque passe ajoute de la chaleur, du contraste et de la netteté, ce qui donne le « filtre bizarre » signalé par Samuel. Au-delà d'une correction, on régénère à partir des références d'origine (sheets, tenues, photos).
+- [ ] **Réalisme (remarque de Samuel : « pas hyper réaliste »)** : style photo documentaire prise sur le vif, jamais « cinematic film still ». Bloc à mettre : « Unedited real photograph, candid documentary, shot handheld on a Sony A7 IV, available light only, natural white balance, imperfect framing, slight motion blur, real skin with pores, lived-in environment with everyday clutter, no cinematic color grade, no glow, no beauty retouching, no HDR, no CGI look ». Seedance reprend le rendu de l'image de départ : le réalisme se joue à l'image clé.
+- [ ] **Visages en plan large** : plus le visage est petit, plus l'IA dérive. Pour un plan héros de Shirel ou Lyron, cadrer en plan rapproché (taille) pour que l'identité tienne.
+- [ ] **Vidéo** : générer une scène en 1 seule génération multi-plans (« HARD CUT », minutage par plan) plutôt qu'1 génération par plan (minimum facturé 4 s). Brouillon 480p (3 cr/s) → finalisation 1080p (16 cr/s) du même mouvement.
 - [ ] Toujours ajouter : **« neutral natural color grade, true-to-life colors, soft natural contrast, no heavy filter, no orange or magenta tint, no oversharpening »**.
 
 ## B. Le film
