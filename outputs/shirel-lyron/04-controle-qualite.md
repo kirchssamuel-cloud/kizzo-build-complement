@@ -107,7 +107,11 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Scène 1 : 6 images clés | 2 validées du premier coup (1.4, 1.5). Corrigées : 1.1 (regard caméra), 1.2a (guillemets parasites autour de « Lyron »), 1.2b (bouche ouverte = parole), 1.3 (2 valises, amies en pantalon, visage d'amie net : 2 passes) | 33 |
 | Test en mouvement 1.4 (brouillon 480p, 5 s) | **Validé** : visage stable du début à la fin, vrai sourire qui s'ouvre (yeux qui se plissent, dents), kippa en dôme stable, tsitsit et montre présents, billet posé dans la valise, aucune parole, aucun regard caméra. Le pipeline image clé → Seedance est validé | 15 |
 | Goral : 2 nouvelles images clés (plan large, main dans la boîte) | Validées du premier coup. Vigilance pour la vidéo : le rabbin a la bouche entrouverte, à garder silencieux dans le prompt | 6 |
-| **Total dépensé** | | **96 cr (~4,80 €)** |
+| Goral v2 (adultes devant le rabbin, boulettes) + plan large v3 | Retours de Samuel appliqués, mais « filtre bizarre » relevé par Samuel : retouches en chaîne qui cumulent teinte chaude, contraste et netteté. Plan large v3 écarté (boîte) | 15 |
+| Goral v4 : chapeau + couleurs neutres (4 images depuis les références d'origine, sans chaîne) | Porte B passée : chapeau noir retourné, boulettes, papier froissé « Lyron » lisible sans guillemets, assemblée adulte devant le rabbin, visage de Lyron conforme au sheet, couleurs naturelles. Plan large corrigé 1 fois : chapeau tenu à la verticale (les boulettes tomberaient) → tenu à plat comme un bol ; climatiseur retiré. Réserves : micro-texte illisible sur l'enveloppe (flou en vidéo, nettoyage en post si besoin) ; rabbin bouche légèrement entrouverte → « silent, mouth closed » dans le prompt vidéo | 15 |
+| **Total dépensé** | | **126 cr (~6,30 €)** |
+
+Goral retenu (v4) : 1.2a plan large `0ee87be9-aedb-483f-99c2-11aebd9e84e8` · 1.2b main dans le chapeau `219ec3e0-3cde-4220-b669-f37222838ff7` · 1.2c papier « Lyron » `f74a2044-0031-49ab-9d4a-a09450a21b0c` · 1.2d réaction `ca2ae380-1512-4797-bddd-697c81dd233b`. Toutes les versions précédentes du Goral sont dépassées.
 
 Images clés scène 1 retenues : 1.1 `1ba5c7a2-c664-49c0-ab72-fd1c6fab6293` · 1.2a `f2610722-9751-434a-9696-599968d94dc2` · 1.2b `dce9bfaf-52d2-42a5-b4f1-311e3b8a74a2` · 1.3 `4af9cc7a-8bc6-49c4-88f5-054763e8693e` · 1.4 `764578d8-6900-4794-a786-d04cc404c362` · 1.5 `83635212-5452-4b9b-b6a5-879eb6d5228c`
 
