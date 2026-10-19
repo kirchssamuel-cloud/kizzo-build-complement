@@ -126,7 +126,10 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Références v5 Lyron (méthode anti-dérive : sheet `7519d1e5…` + 2 vraies photos + tenues recadrées sans tête) | T5 `db13a2f8-eae8-41b3-8ffc-75db13a188b2` · T6 `c9ee84e0-f33e-442f-ae8c-f311686a47b7` · T7 `c7bb5a35-651f-4002-a9a9-ece257937bff` · Sourires `4fa7710c-ef32-4a7e-a1eb-40c91fa0ad4e`. Comparaison côte à côte : même visage que le sheet sur les 3 tenues ✓. Sourires : vignettes 1, 2 et 4 bonnes ; vignette 3 (rire de 3/4) un œil plus fermé → à éviter | 12 |
 | Sheet Lyron : ajout du profil par montage (v4 + 3/4 et profil du v4b) → `47cb751b-7007-4bf4-a6a7-ebbef581ed25` | Sans génération | 0 |
 | Planche test Shirel T1 (ensemble noir) depuis sheet `da688b2a…` + vraie photo | `accd5f3b-32e9-49da-91eb-f68daf953b4c` : visage identique au sheet ✓ ; petit logo « N » sur les baskets (à ignorer ou flouter) | 3 |
-| **Total dépensé** | | **518 cr** |
+| Shirel T1 sans sac (demande de Samuel) | 1er essai échoué côté Higgsfield (remboursé) ; 2e : `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` ✓ sans sac, sans logo, visage = sheet. T2/T3/T4/sourires d'hier conservés après comparaison (même visage que le sheet) → 12 cr économisés | 3 |
+| **Total dépensé** | | **521 cr** |
+
+**Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
 **Références Lyron définitives (v5) :** sheet `7519d1e5-dd30-40f9-9861-97c767e5fea4` · L1 t-shirt `0c9fc2a6-3684-4ffb-bc07-22f9a305c6e0` · T5 `db13a2f8-eae8-41b3-8ffc-75db13a188b2` · T6 `c9ee84e0-f33e-442f-ae8c-f311686a47b7` · T7 `c7bb5a35-651f-4002-a9a9-ece257937bff` · Sourires `4fa7710c-ef32-4a7e-a1eb-40c91fa0ad4e`. Toutes les autres versions de Lyron sont dépassées.
 

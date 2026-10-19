@@ -29,6 +29,8 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 - [ ] **Tout sheet doit avoir : face neutre, face sourire, 3/4 ET profil strict.** Vérifier les 4 vues avant de le présenter (erreur du 19/10 : sheet de Lyron sans profil).
 
+- [ ] **Références par plan (validé par Samuel, 19/10)** : pour chaque image clé / vidéo, donner le **sheet complet** du personnage (visage sous tous les angles) + 1-2 vraies photos + la planche de tenue de la scène. Lyron : sheet `47cb751b…` ; Shirel : sheet `da688b2a…`. Shirel T1 voyage : **sans sac** (demande de Samuel).
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
