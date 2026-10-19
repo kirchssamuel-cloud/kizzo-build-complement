@@ -105,3 +105,30 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | **Total dépensé** | | **12 cr (~0,60 €)** |
 
 Job IDs (pour réutilisation comme références) : Shirel v2 `3a64aa3c-6fec-40e3-b64d-cdc8c158ae8f` · Lyron v2 `0593f82b-883a-45b7-bcb6-7ef5d4b3f734`
+
+---
+
+## 8. Planches de tenue — prompts (porte A passée, en attente de feu vert)
+
+**Réglages communs :** `nano_banana_2_1` · 4K · 16:9 · ~3 cr chacune · références : **sheet validé** (job ID) + références de tenue quand elles existent.
+
+**Gabarit commun** (début de chaque prompt) :
+> Wardrobe reference board, 16:9, pure white seamless studio background, soft diffused even studio lighting. Exactly four panels: LEFT: full-body front view standing straight, head to feet visible. CENTER-LEFT: full-body back view, head to feet visible. RIGHT COLUMN: two stacked detail close-ups (top: upper body and accessories; bottom: shoes and lower legs). The person is exactly the same person as in the character reference sheet: identical face, hair, skin, freckles and proportions. Visible real skin and fabric texture, unretouched photography. Single subject only, no other people, no props, no text, no watermark.
+
+Puis, pour chaque planche :
+
+| # | Planche | Références | Description de la tenue |
+|---|---|---|---|
+| **T1** | Shirel · Départ de Paris (1.1, 1.3) | sheet Shirel | Long camel double-faced wool coat worn open, cream chunky ribbed turtleneck sweater, long dark chocolate-brown pleated midi skirt below the knee, brown leather knee-high boots, small gold hoops and her layered gold necklaces, hair loose. |
+| **T2** | Shirel · Ohel + 770 (2.1, 2.2, 3.x) | sheet Shirel | **Fitted black long-sleeve midi dress below the knee, tailored single-breasted black wool blazer worn over it, black leather knee-high boots with a low block heel**, thin layered gold necklaces, small earrings, hair loose. *(Tenue imposée par le client.)* |
+| **T3** | Shirel · Demande (6.x) | sheet Shirel + photos 1, 20 | Fitted white long-sleeve mini dress in soft slightly sheer jersey, high round crew neckline, short A-line skirt at mid-thigh; turquoise beaded short necklace; stacked thin gold bangles and gold rings on the right hand; colorful seed-bead anklets on the right ankle, green beaded anklet with a small charm on the left ankle; dark brown knotted-fabric thong sandals on chunky double-layer padded black platform soles; white pedicure. |
+| **T4** | Shirel · Israël (7.1, 8.1) | sheet Shirel | **Long white fitted maxi dress, close to the body, floor-length**, long sleeves, elegant matte crepe fabric, delicate gold jewelry, the pear-diamond engagement ring on her left ring finger, flat white sandals, hair loose and glossy. |
+| **T5** | Lyron · Ohel + 770 (2.3, 2.4, 3.x) | sheet Lyron + kippa | **Black matte quilted puffer jacket (doudoune), black joggers, Asics sneakers in silver-white with grey details, white tzitzit strings hanging at the hips, the black kippah with white embroidered lettering.** *(Tenue imposée par le client.)* |
+| **T6** | Lyron · Demande (6.x) | sheet Lyron + photos 1, 19, 20 + kippa | Oversized long-sleeve white shirt in light slightly sheer crinkled cotton-gauze with fine vertical texture, relaxed open collar, buttoned cuffs with small dark buttons, untucked; very wide-leg floor-length bronze-brown trousers with a small dark geometric diamond-lattice print; dark navy leather slide sandals with wide crossed straps on natural jute espadrille soles; black rectangular sunglasses; the black kippah with white embroidered lettering and a small white emblem on the side. |
+| **T7** | Lyron · Israël (7.1, 8.1) | sheet Lyron + kippa | **Oversized white shirt with white tzitzit worn underneath (strings visible at the hips), oversized white linen trousers, camel leather sandals, the black kippah with white lettering embroidered all around.** *(Tenue imposée par le client.)* |
+
+**Contrôle après génération (porte B) :** visage identique au sheet, longueur des robes (T2 et T4 longues, T3 courte), imprimé du pantalon T6, semelles jute, tsitsit visibles (T5, T7), kippa en dôme avec lettres blanches, bague poire (T4).
+
+Le pull Kith (plan 6.1, une seule apparition) n'a pas de planche : il est décrit directement dans le prompt du plan, avec la photo officielle Kith en référence.
+
+**Coût : 7 × 3 = 21 cr (~1 €)**, plus d'éventuelles corrections.
