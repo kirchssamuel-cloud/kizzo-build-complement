@@ -40,6 +40,12 @@ Aucune parole. Musique seule. Tous les textes sont ajoutés en post-production.
 - **Le FaceTime et les 4 000 km font 5 s chacun** : ce sont des scènes de transition, des plans très courts suffisent à faire passer le temps et la distance.
 - **L'écran final a 8 s** : il faut le temps de lire le texte doré, puis « Merci Rabbi ».
 
+## Décisions de Samuel (19/10)
+
+- Tenues de la demande : **on garde T3 (Shirel) et T6 (Lyron)**, faites d'après les photos 19 et 20.
+- Tsitsit : **uniquement à New York** (Ohel et 770).
+- Couleurs du TMAX et de la Smart : Samuel les communique plus tard.
+
 ## Points à valider avec Shirel
 
 1. **Tenue de la demande** : son script décrit une tenue différente de celle des photos (photos 19 et 20). On suit son script ?

@@ -114,7 +114,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Finalisation 1080p des 2 brouillons (validée par Samuel) | Conforme aux brouillons, mêmes coupes. A `299cceae-1a92-4e2e-88d7-371581963f93` · B `c3224931-ed28-4efe-96fa-d7f60c5e1004`. Montage 10 s : `scene1-1080p.mp4` (glance caméra de Shirel coupé au montage) ; rushes dans `rushes/` | 160–208 |
 | Plan avion régénéré seul (720p, 4 s) | Décollage visible ; reflet d'objectif sur la dérive, pas un logo. Monté en v4 (12 s) | 28 |
 | Sheets v3 (retours de Shirel : nouvelle photo pour elle ; Lyron plus mince, plus de cheveux) | Shirel `a52b22ef-4ea2-4803-8d1a-c5cc50aa9955` : cheveux longs ondulés caramel conformes, visage proche de la photo. Lyron `49dc0cfa-c025-4e15-a1fb-9e274d3641cf` : nettement plus mince ✓, mais les golfes restent visibles (cheveux pas assez) ; tsitsit ajoutés par l'IA alors que non demandés | 6 |
-| **Total dépensé** | | **437 cr** |
+| Sheet Lyron v3b (correction validée par Samuel) | `cdb3db5e-e37b-4337-ae33-ee1222a64512` : tsitsit retirés ✓ ; golfes un peu comblés de face, mais toujours visibles de 3/4 et de profil | 3 |
+| **Total dépensé** | | **440 cr** |
 
 Scène 1 v5 retenue : 1.1 `7aec71c4-07a5-4350-b04f-9daa6121bf9b` · 1.2a `7cb29bfe-410e-4c16-a6c3-81d380ecd02f` · 1.2b `988b7d2e-064b-4163-b051-f5b5cab5e607` · 1.2c `964cb851-ef38-421c-a19d-f68a6765d415` · 1.2d `21b054db-d211-45d7-bed2-1155a3e09973` · 1.3 `ec046ea6-f689-485b-b031-e400d127aee7` · 1.4 `2e282d56-2f14-42d1-83f3-4cc6b126bd57` · 1.5 `83635212-5452-4b9b-b6a5-879eb6d5228c` (inchangé). Toutes les versions précédentes de la scène 1 sont dépassées.
 

@@ -13,6 +13,8 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 - [ ] ⛔ **RÈGLE CRÉDITS (Samuel, 19/10)** : AUCUNE génération (image, correction, relance, brouillon, vidéo) sans un « oui » explicite de Samuel pour CE lot précis, avec le coût exact annoncé avant. Un « oui » à un plan global ne vaut pas pour les corrections ni les relances : chaque dépense imprévue = nouvelle demande. Économiser au maximum.
 
+- [ ] **Décisions du 19/10 (script de Shirel)** : film de **60 s** (pas 1:40). Style **moins religieux** : Lyron en t-shirt (pas de chemise) hors demande et Israël. **Tsitsit uniquement à New York** (Ohel + 770), nulle part ailleurs. **Tenues de la demande : on garde T3 / T6** (d'après les photos), pas la description du script. Couleurs TMAX / Smart : en attente de Samuel. Copines : de dos ou floues (pas de visages).
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
