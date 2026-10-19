@@ -74,3 +74,20 @@ Note : le montage fera ~9-10 s pour 8 s prévus ; on resserre au montage (plans 
 - **Chaussures** : les plans dans l'Ohel sont cadrés buste et mains, jamais les pieds. Les bottes de Shirel ne sont vues que dehors.
 - **Plan 2.6** : c'est le seul plan à deux personnes. Ils sont de loin, donc le risque de mélange des visages reste faible ; les visages sont montrés seuls en 2.7 et 2.8.
 - Aucune image du lieu n'est générée avant les photos de référence de Samuel.
+
+## Références réelles du lieu (envoyées par Samuel, dossier `references-ohel/`)
+
+| Photo | Ce qu'elle montre | Plans concernés |
+|---|---|---|
+| 01 salle d'écriture (version sans filigrane à utiliser) | Long hangar blanc en tôle ondulée, néons, ventilateurs au plafond, sol en carrelage beige-ocre, longues tables au plateau clair avec bancs en bois brun fixés. Hommes, femmes et enfants écrivent côte à côte. Mouchoirs et papiers sur les tables | 2.1, 2.4 |
+| 02, 03 intérieur de l'Ohel (jour) | Enceinte à ciel ouvert, murs en granit gris, deux grandes stèles grises arrondies, muret blanc rempli d'une mer de papiers blancs. On se tient debout le long du muret avec un livret | 2.2, 2.5 |
+| 04 intérieur de l'Ohel (nuit, hiver) | Auvent périphérique avec néons, piliers en granit, jeunes en doudounes, bonnets et manteaux autour du muret | 2.2, 2.5 (lumière d'hiver) |
+| 05 centre d'accueil | Maison en briques, auvent beige « Ohel Chabad Lubavitch », marches, haie, pelouse | 2.3 (arrivée de Lyron en taxi jaune) |
+
+**Ce que ça change dans les plans :**
+- **2.1 / 2.4 (écriture)** : assis sur le banc, à la même table, avec le même cadrage pour les deux (effet miroir). Le hangar blanc et les néons donnent une lumière froide et neutre. On la réchauffe légèrement, sans trahir le lieu.
+- **2.2 / 2.5 (déchirer)** : debout le long du muret blanc, les morceaux tombent sur la mer de papiers. **Les stèles restent floues ou hors cadre**, jamais d'inscription lisible. Pas de plan des pieds.
+- **2.3** : le taxi jaune s'arrête devant la maison en briques à l'auvent beige. Le texte de l'auvent reste flou.
+- Les photos à filigrane ne servent jamais telles quelles de référence (sinon le filigrane réapparaît dans l'image générée).
+
+**Encore utile :** l'allée entre la maison et l'Ohel, l'antichambre aux bougies, les portes de sortie, et l'extérieur de l'Ohel sous la neige (pour le plan du regard 2.6 à 2.8).
