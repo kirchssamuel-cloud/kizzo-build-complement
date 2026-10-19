@@ -131,7 +131,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | 1.2a refait à neuf (Samuel : « filtre bizarre » — cause : retouche d'une image déjà retouchée, violation de la règle A2) + 1.4 refait avec le gros plan kippa | 1.2a `d5479c71-3b77-41e6-962b-00e45304498a` : couleurs naturelles, kippa lisible (« אדוננו »), rabbin bouche fermée ✓ · 1.4 `96d693e0-702e-456c-aa5e-295987dcb765` : kippa lisible (« יחי אדוננו »), visage conforme ✓ | 6 |
 | Test 1.4 (kippa à la bonne taille + golfes atténués) | `3cd4f51c-23c8-4aa9-836a-ad3ebaba5017` : kippa nettement plus petite, proche du sheet, lettres lisibles ; golfes à peine visibles ✓. Décor encore sale (ancien prompt) → image de test seulement | 3 |
 | 3 plans Lyron finaux (petite kippa, golfes atténués, chambre propre) | 1.4 `56e1eebd-23ac-4e88-ac2a-21fbcec6dd52` ✓ chambre propre, petite kippa lisible, golfes à peine visibles · 1.2d `23cc3797-0a4e-444f-91b5-5f775c1773d6` : petite kippa ✓ mais golfes encore assez visibles · 1.2a `26f389e7-333a-40ce-9a0c-11ce4915eb91` : ÉCHEC, la retouche n'a pas réduit la kippa (identique à avant) | 9 |
-| **Total dépensé** | | **557 cr** |
+| Retouches ciblées par masque (inpainting) | 1.2d `d9cf4b73-d1b9-4f51-9fbf-b2f77e5257a4` : tempes nettement plus garnies ✓, reste identique (légère teinte plus chaude) · 1.2a `c60ac9c1-9efc-4f77-9347-ffa4364e3a26` : kippa à peine réduite (changement minime) | 6 |
+| **Total dépensé** | | **563 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
