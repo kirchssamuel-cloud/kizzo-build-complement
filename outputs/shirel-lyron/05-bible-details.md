@@ -11,6 +11,8 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 - [ ] Le moindre détail compte : premier client, zéro erreur tolérée.
 - [ ] Budget : brouillon 480p puis 1080p pour les 6 plans héros, 720p pour les autres. Objectif total sous les 150 € de crédits.
 
+- [ ] ⛔ **RÈGLE CRÉDITS (Samuel, 19/10)** : AUCUNE génération (image, correction, relance, brouillon, vidéo) sans un « oui » explicite de Samuel pour CE lot précis, avec le coût exact annoncé avant. Un « oui » à un plan global ne vaut pas pour les corrections ni les relances : chaque dépense imprévue = nouvelle demande. Économiser au maximum.
+
 ## A2. Leçons apprises en production (à appliquer à chaque prompt)
 - [ ] Toujours préciser **« does not look at the camera »** : sinon l'IA fait regarder l'objectif.
 - [ ] Pour un mot écrit : **« no quotation marks, no punctuation »**.
