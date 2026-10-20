@@ -111,3 +111,18 @@ Samuel : la marche l'un vers l'autre ne sert à rien, on l'enlève.
 | 3,0–4,0 | Yeux de Shirel, levés vers lui |
 | 4,0–5,0 | Yeux de Lyron, baissés vers elle |
 | 5,0–8,0 | Sourires francs, la caméra tourne autour d'eux (ralenti) |
+
+## Montage v6, « version producteur » (20/10) — `scene3-v6.mp4` (12,1 s) · film `film-sequences-1-3-v6.mp4` (33 s)
+Samuel me laisse carte blanche avec tous les rushes. Idée : suivre le script mot à mot (ils se croisent, le temps ralentit, ils se retournent) et rendre le ralenti littéral avec une rampe de vitesse.
+
+| TC | Plan | Pourquoi |
+|---|---|---|
+| 0–1,3 | Façade du 770, passants, lent zoom, fondu | On pose le lieu |
+| 1,0–2,0 | La rue vide, puis Shirel entre par la droite, Lyron par la gauche | Deux inconnus, chacun sa route |
+| 2,0–2,7 | Le croisement en accéléré ×2 | Le frôlement passe en un éclair, on ne s'y attarde pas |
+| 2,7–5,1 | Bascule en ralenti ×1,6 : dos à dos, chacun se retourne, les regards se trouvent | « Le temps semble ralentir » |
+| 5,1–7,1 | Plan continu : ils restent face à face à un mètre, le sourire naît (raccord invisible entre la vidéo du croisement et celle des sourires) | Le coup de foudre |
+| 7,1–9,2 | Yeux de Shirel (levés), yeux de Lyron (baissés) | On entre dans leur regard |
+| 9,2–12,1 | Sourires francs, la caméra tourne autour d'eux (ralenti) | L'émotion, fin de séquence |
+
+Rushes utilisés : `scene3-A-croisement`, `scene3-B-sourires`, `scene3-C-yeux`, image 3.1. Non utilisé : `scene3-A-croisement-yeux` (ils se font face dès le départ, trop proches pour des inconnus).
