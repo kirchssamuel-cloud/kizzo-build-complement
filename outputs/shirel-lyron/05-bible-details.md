@@ -142,5 +142,5 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 ## Checklist par plan (porte B) — à recopier dans le journal pour chaque plan généré
 `Visage S ☐ · Visage L ☐ · Sourire conforme ☐ · Taille relative ☐ · Kippa (dôme + lettres) ☐ · Tsitsit ☐ · Tenue conforme ☐ · Mains (5 doigts) ☐ · Décor fidèle ☐ · Lumière / raccord ☐ · Aucun texte parasite ☐ · Mouvement naturel ☐`
 
-## Blazer (règle du 19/10)
-Un **blazer** n'est pas une veste de tailleur. Dans les prompts, toujours écrire : « TRUE CLASSIC BLAZER, NOT a suit jacket: double-breasted, polished gold metal buttons, peaked lapels, structured shoulders, long cut to upper-mid thigh, flap pockets ». Une veste cintrée à un bouton ton sur ton = veste de tailleur (refusée par Samuel).
+## Blazer de Shirel (décision de Samuel, 20/10)
+Planche T2 DÉFINITIVE = la v6 (blazer cintré, revers crantés, un bouton), corrigée en **noir pur** sans génération (`references-v5-shirel/tenue-T2-DEFINITIF-blazer-noir.png`). La v7 croisée à boutons dorés est écartée. Le défaut de la v6 était sa teinte bleu marine. Dans chaque prompt : « JET BLACK, pure neutral black, not navy, not dark blue », pour le blazer, la robe et les bottes.
