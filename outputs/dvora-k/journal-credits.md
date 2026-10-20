@@ -14,4 +14,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Image clé plan 2b v2 : elle lit le compte-rendu (diagnostic, chimiothérapie, perte des cheveux). La brochure (v1) est écartée | `da89941d-8840-4fa7-97d1-028e3db58d55` | 3 |
 | 20/10 | Image clé plan 2b v3 (plongée) : écartée, la feuille est tendue vers la caméra et le texte fait plaqué | `66baa721-5379-4be4-957d-31e68d6b42ca` | 3 |
 | 20/10 | Image clé plan 2b v4 : vue subjective, elle lit son compte-rendu (texte vérifié) | `48dec942-72e5-4517-9ccf-b299e33bdb17` | 3 |
-| | **Total** | | **275 cr** |
+| 20/10 | Vidéo plan 2b : elle lit son compte-rendu, 4 s 1080p 9:16 | `ab4a7187-94e9-4c89-a241-ad4fde45fe9f` | 64 |
+| | **Total** | | **339 cr** |
