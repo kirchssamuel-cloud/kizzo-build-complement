@@ -72,3 +72,6 @@ Décision de Samuel (20/10) : nouvelle tête pour Shirel (réaliste), plus de ch
 Nouvelles photos reçues : 3 de Shirel, 2 de Lyron (Higgsfield `22f2ca98`, `195dcff5`, `31a0665b` · `2be72a09`, `76a01d85`).
 - **Shirel** `991b9683` : vraie peau (taches de rousseur, pores, asymétrie), yeux **noisette-brun** (et non vert clair comme avant : c'était une des erreurs), sourcils épais, nez et visage fidèles. Points faibles : elle paraît un peu plus âgée et plus sévère, cheveux moins ondulés et moins volumineux que sur ses photos.
 - **Lyron** `b1d66009` : même visage, cheveux nettement plus fournis, ligne frontale pleine, kippa brodée. Point faible : les coins des tempes restent légèrement dégarnis de 3/4.
+
+## Planche Shirel v7 (20/10) — `references-v6/planche-shirel-v7-plus-jeune.jpg`, `4af0118d`
+Retour de Shirel sur la v6 : « ça me fait rider et vieille ». Elle a envoyé une photo d'inspiration (passerelle d'avion, manteau camel, grand sourire par-dessus l'épaule, cheveux longs ondulés). v7 : début de vingtaine, peau lisse et lumineuse mais réelle (pores, taches de rousseur), aucune ride, lumière douce et chaude, cheveux longs ondulés aux reflets caramel, sourire par-dessus l'épaule, plein pied (1,60 m, silhouette fine). Profil strict présent. Petit défaut : les deux vues de 3/4 sont presque identiques (même côté).
