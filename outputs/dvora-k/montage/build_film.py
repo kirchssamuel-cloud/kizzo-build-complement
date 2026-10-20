@@ -1,7 +1,7 @@
 """Assemblage du film Dvora K : segments, textes, carton machine à écrire, carton final.
 
 Usage : python3 build_film.py <dossier_polices>
-Sortie : montage/dvora-k-film-v1.mp4
+Sortie : montage/dvora-k-film-v2.mp4
 """
 import os, subprocess, sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -145,14 +145,17 @@ s5 = f"{TMP}/05-arrivee.mp4"
 run(["-i", f"{M}/sequence-salon-arrivee-v1.mp4", "-vf", YUV, *ENC, s5])
 segs.append(s5)
 
-# 6. Pose de la perruque (image validée, en attendant la vidéo) + texte
+# 6. Dans le salon : elle découvre les perruques, la pose, puis le miroir (avec texte)
 still = f"{ROOT}/images-cles/plan-13.jpg"
+s6a = f"{TMP}/06a-salon-pose.mp4"
+run(["-i", f"{R}/video-A-salon.mp4", "-i", f"{R}/video-B-pose.mp4", "-filter_complex",
+     f"[0:v]trim=0.5:3.6,setpts=PTS-STARTPTS,{YUV}[a];[1:v]trim=0:3.4,setpts=PTS-STARTPTS,{YUV}[b];"
+     f"[a][b]concat=n=2:v=1:a=0[v]", "-map", "[v]", *ENC, s6a])
+segs.append(s6a)
 raw6 = f"{TMP}/06-raw.mp4"
-run(["-loop", "1", "-i", still, "-filter_complex",
-     f"[0]scale=2160:3870,crop=2160:3840,zoompan=z='1.0+0.06*on/96':x='iw/2-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,"
-     f"trim=0:4,setpts=PTS-STARTPTS,{YUV}[v]", "-map", "[v]", *ENC, raw6])
-s6 = f"{TMP}/06-pose.mp4"
-overlay_text(raw6, s6, text_layer(f"{TMP}/t3.png", caption("Rester soi. Rester belle."), y_center=1560, scrim=True), 1.2, 4.0)
+run(["-i", f"{R}/video-C-miroir.mp4", "-vf", f"trim=0.2:5.0,setpts=PTS-STARTPTS,{YUV}", *ENC, raw6])
+s6 = f"{TMP}/06-miroir.mp4"
+overlay_text(raw6, s6, text_layer(f"{TMP}/t3.png", caption("Rester soi. Rester belle."), y_center=1560, scrim=True), 1.6, 4.8)
 segs.append(s6)
 
 # 7. Carton final sur fond flou du salon
@@ -183,7 +186,7 @@ with open(lst, "w") as fh:
     for s in segs[:-1]:
         fh.write(f"file '{s}'\n")
 run(["-f", "concat", "-safe", "0", "-i", lst, *ENC, body])
-out = f"{M}/dvora-k-film-v1.mp4"
+out = f"{M}/dvora-k-film-v2.mp4"
 run(["-i", body, "-i", s6, "-i", s7, "-f", "lavfi", "-t", "60", "-i", "anullsrc=r=48000:cl=stereo", "-filter_complex",
      f"[1][2]xfade=transition=fade:duration=0.6:offset={d6 - 0.6:.3f}[end];[0][end]concat=n=2:v=1:a=0,{YUV}[v]",
      "-map", "[v]", "-map", "3:a", "-shortest", *ENC, "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out])
