@@ -16,3 +16,4 @@ build/
 *.log
 .DS_Store
 coverage/
+outputs/dvora-k/montage/_build/
