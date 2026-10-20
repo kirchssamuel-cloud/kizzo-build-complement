@@ -115,3 +115,20 @@ Méthode habituelle : test sur 1 image, comparaison côte à côte avec la vraie
 | 2.8 | 0,7 s | Gros plan : Shirel le regarde, sourire à peine esquissé |
 
 Vidéos : A Shirel (2.0a → 2.0 → 2.1 → 2.2 → 2.8) 5 s = 80 cr · B Lyron (2.3 → 2.4 → 2.5 → 2.6 → 2.7) 5 s = 80 cr · **total vidéo 160 cr**.
+
+## Découpage final des images clés (20/10)
+
+| # | Plan | Image |
+|---|---|---|
+| 2.0a | JFK, Shirel de dos | `074545c3` |
+| 2.0 | Elle monte l'escalier, mains vides | `540b0a78` |
+| 2.1 | Sa main écrit « Mazal » | `1dbacdde` |
+| 2.3 | Lyron monte l'escalier | `de4bed14` |
+| 2.4 | Sa main écrit « Mazal » | `d819a60c` |
+| 2.5 | **Les deux dans l'Ohel**, chacun de son côté de la séparation, ils jettent leur papier sans se voir | `48afb6f5` |
+| 2.6 | Shirel seule descend l'escalier, absorbée (le croisement n'est pas prévu) | `cc2da833` |
+| 2.7 | Lyron à la portière du taxi lève les yeux et sourit | `ff17ff52` |
+| 2.8 | Shirel le voit et sourit | `68f6d225` |
+
+En réserve : 2.2 Shirel seule près des stèles `7922f177`, 2.5 Lyron seul `32a4a602`.
+Vidéos : A Shirel (2.0a → 2.0 → 2.1 → 2.6 → 2.8) 5 s = 80 cr · B Lyron + Ohel (2.3 → 2.4 → 2.5 → 2.7) 5 s = 80 cr.
