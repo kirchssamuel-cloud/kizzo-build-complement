@@ -126,3 +126,13 @@ Samuel me laisse carte blanche avec tous les rushes. Idée : suivre le script mo
 | 9,2–12,1 | Sourires francs, la caméra tourne autour d'eux (ralenti) | L'émotion, fin de séquence |
 
 Rushes utilisés : `scene3-A-croisement`, `scene3-B-sourires`, `scene3-C-yeux`, image 3.1. Non utilisé : `scene3-A-croisement-yeux` (ils se font face dès le départ, trop proches pour des inconnus).
+
+## Montage v7, corrections gratuites (20/10) — `scene3-v7.mp4` (10,1 s) · film `film-sequences-1-3-v7.mp4` (30,9 s)
+Analyse de la v6 et corrections, sans crédit :
+1. **Rampe de vitesse** : l'accéléré (images sautées, saccadé) est supprimé. La marche reste en vitesse normale jusqu'avant le frôlement, puis on coupe sur un plan serré (recadrage ×1,33) où ils viennent de se dépasser. Le ralenti arrive progressivement (de ×1 à ×1,6 en 0,4 s) pendant qu'ils se retournent.
+2. **Façade** : c'est une photo figée (passants immobiles en plein pas). Elle est recadrée sur les pignons et la porte, sans les passants, avec un lent zoom et un léger panoramique vers le bas, adoucis au début et à la fin.
+3. **Couleurs** : la dominante magenta du croisement et des sourires est neutralisée, avec un peu plus de contraste. Les gros plans des yeux sont légèrement refroidis.
+4. **Gros plans des yeux** : 0,7 s chacun au lieu de 1 s, pour qu'on remarque moins le mur de briques et la neige.
+5. **Temps mort** : ils restent face à face environ 1,2 s avant les gros plans, au lieu de 2 s.
+
+Défauts restants (payants) : décor des gros plans (mur de briques au lieu du 770 au loin, neige qui tombe), visage de Lyron en gros plan plus jeune que dans le plan large → régénérer la vidéo des yeux (64 cr). Façade animée avec de vrais passants : 28 cr.
