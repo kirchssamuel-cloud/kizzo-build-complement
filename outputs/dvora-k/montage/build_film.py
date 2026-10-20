@@ -153,9 +153,9 @@ run(["-i", f"{R}/video-A-salon.mp4", "-i", f"{R}/video-B-pose.mp4", "-filter_com
      f"[a][b]concat=n=2:v=1:a=0[v]", "-map", "[v]", *ENC, s6a])
 segs.append(s6a)
 raw6 = f"{TMP}/06-raw.mp4"
-run(["-i", f"{R}/video-C-miroir.mp4", "-vf", f"trim=0.2:5.0,setpts=PTS-STARTPTS,{YUV}", *ENC, raw6])
+run(["-i", f"{R}/video-C2-miroir-epaule.mp4", "-vf", f"trim=0:4.0,setpts=PTS-STARTPTS,{YUV}", *ENC, raw6])
 s6 = f"{TMP}/06-miroir.mp4"
-overlay_text(raw6, s6, text_layer(f"{TMP}/t3.png", caption("Rester soi. Rester belle."), y_center=1560, scrim=True), 1.6, 4.8)
+overlay_text(raw6, s6, text_layer(f"{TMP}/t3.png", caption("Rester soi. Rester belle."), y_center=1500, scrim=True), 1.3, 4.0)
 segs.append(s6)
 
 # 7. Carton final sur fond flou du salon
