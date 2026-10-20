@@ -42,3 +42,26 @@ Visage = planche · cheveux pleins (Lyron) · kippa petite et lettres nettes · 
 
 ## 5. Budget
 Restant : 759 cr. Après la refonte : ≈ 345 à 420 cr. Séquences 4 à 8 prévues : ≈ 615 cr (réserve comprise). → Il faudra soit relever le plafond (≈ 1 450 au total), soit alléger les séquences 4 à 8.
+
+## 6. Améliorations par rapport à la première version (audit image par image du film v9)
+La retouche est facturée à la durée, pas au nombre de corrections : chaque passage corrige tout ce qui ne va pas dans le plan, sans surcoût.
+
+**Visages**
+- Shirel : visage v7 (plus jeune, sans rides, cheveux longs ondulés). **Yeux noisette-brun** : dans la v1, ils étaient vert clair (gros plan des yeux, sortie de l'Ohel), c'est une des raisons du « c'est pas elle ».
+- Lyron : cheveux pleins, kippa petite (≈ 15 cm) et de la même taille dans tous les plans. Dans la v1, elle variait d'un plan à l'autre (plus grosse à la synagogue).
+
+**Mise en scène corrigée pendant la retouche**
+- Plan 6 (portière du taxi) : dans la v1, Lyron regarde la maison et ne voit pas Shirel, alors que le script dit que leurs regards se croisent à ce moment-là. Retouche : il lève les yeux vers elle sur les marches et esquisse un sourire.
+- Plan 7 (Shirel à la sortie de l'Ohel) : dans la v1, elle a un visage fermé. Retouche : un sourire à peine esquissé (script : « sourire à peine esquissé »), sourire doux comme sur la planche, jamais de grand rire.
+- Plan 9 (gros plans des yeux) : un mur de briques plat collé derrière eux et de la neige qui tombe, alors que dans les plans larges le 770 est loin derrière et il ne neige pas. Retouche : arrière-plan = la façade du 770 très floue au loin, pas de neige qui tombe. Regards inchangés (elle lève les yeux, il les baisse).
+
+**Montage (gratuit)**
+- Étalonnage commun à toute la séquence 2 et 3 (dominante magenta des plans de New York neutralisée), raccord de couleurs avec les plans gardés.
+- Papier « Lyron » du tirage (séquence 1) : écriture un peu pâle → contraste renforcé localement en post pour qu'on lise le prénom sans effort.
+- Contrôle final plan par plan avec les deux fiches personnage.
+
+**Méthode (leçons des générations précédentes)**
+- Pack de références complet à chaque passage : planche visage + profil strict + kippa ; photo du couple pour les plans à deux. Jamais les vraies photos de Lyron (golfes).
+- Tailles en chiffres dans chaque prompt (1,88 m / 1,60 m) : c'est ce qui a fonctionné pour l'écart de taille.
+- Prix exact vérifié avant chaque lancement ; un groupe à la fois, contrôle complet avant le suivant.
+- Une seule reprise maximum par groupe, avec l'accord de Samuel.
