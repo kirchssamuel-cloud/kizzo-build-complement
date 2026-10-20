@@ -165,9 +165,10 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Refonte · planche Lyron v6 (plus de cheveux) | `b1d66009-a9e7-4cd4-817b-67a7f41dd28d` | 3 |
 | Refonte · planches Lyron v6 : L1 t-shirt `88a8d247-758b-46e4-9d50-f10b86ded731` · T5 New York `14f32739-0a97-4728-9297-9a945f1ac3e8` · T6 demande `42527c3d-88bd-4955-b797-ae64e5426f86` · T7 Israël `ea898466-845a-4caf-8658-ce8c49ec8cf2` · sourires `26edf829-a1c7-4da5-b4c9-16605a008fa2` (vignettes 1-2 seulement : la 3 n'est pas un sourire, la 4 est un clin d'œil) | 5 jobs | 15 |
 | Refonte · planche Shirel v7 (plus jeune, d'après ses vraies photos et la photo d'inspiration qu'elle a choisie) | `4af0118d-ec23-4f37-ac7c-5f1e75d1d93c` | 3 |
-| **Total dépensé** | | **1 792 cr** |
+| Refonte · planche Shirel v8 (3 nouvelles photos récentes, photo de la plage en principale) | `01323d9f-4569-44db-825c-d0ba06b01801` | 3 |
+| **Total dépensé** | | **1 795 cr** |
 
-Budget fin du film (plafond 1 200 cr à partir de 1 351 cr) : 441 cr dépensés, **759 cr restants** pour les séquences 4 à 8.
+Budget fin du film (plafond 1 200 cr à partir de 1 351 cr) : 444 cr dépensés, **756 cr restants** pour les séquences 4 à 8.
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 

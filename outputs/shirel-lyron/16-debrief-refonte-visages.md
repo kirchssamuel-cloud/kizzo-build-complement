@@ -75,3 +75,6 @@ Nouvelles photos reçues : 3 de Shirel, 2 de Lyron (Higgsfield `22f2ca98`, `195d
 
 ## Planche Shirel v7 (20/10) — `references-v6/planche-shirel-v7-plus-jeune.jpg`, `4af0118d`
 Retour de Shirel sur la v6 : « ça me fait rider et vieille ». Elle a envoyé une photo d'inspiration (passerelle d'avion, manteau camel, grand sourire par-dessus l'épaule, cheveux longs ondulés). v7 : début de vingtaine, peau lisse et lumineuse mais réelle (pores, taches de rousseur), aucune ride, lumière douce et chaude, cheveux longs ondulés aux reflets caramel, sourire par-dessus l'épaule, plein pied (1,60 m, silhouette fine). Profil strict présent. Petit défaut : les deux vues de 3/4 sont presque identiques (même côté).
+
+## Planche Shirel v8 (20/10) — `references-v6/planche-shirel-v8-photos-recentes.jpg`, `01323d9f`
+3 nouvelles photos récentes (Higgsfield `8d5bbfee` plage avec la bague = principale, `68ae271e`, `62eff9e4`). Ce qu'elles apprennent : visage plus rond (joues pleines, menton doux), cheveux **lisses** brun foncé, raie au milieu (et non très ondulés), grand sourire lumineux avec les dents du haut. v8 : visage rond et jeune, cheveux lisses, yeux noisette-brun, grand sourire fidèle à la photo de la plage, deux vues de 3/4 enfin différentes, profil strict, plein pied 1,60 m.
