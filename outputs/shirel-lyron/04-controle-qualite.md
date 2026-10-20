@@ -141,7 +141,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Séquence 2 · planche T2 Shirel v6 (blazer cintré) | `5fba4790-25ba-4809-963b-e29d2bdd3abf` — finalement retenue par Samuel (« il était bien, on dirait juste pas que c'est noir ») → teinte bleu marine corrigée en noir pur en local, sans génération | 3 |
 | Séquence 2 · planche T2 Shirel v7 (vrai blazer : croisé, 6 boutons dorés métalliques, revers en pointe, coupe longue) | `b097245a-45e8-4d48-a336-a86dbb25b3be` · visage = sheet ✓ — écartée (Samuel préfère la v6) | 3 |
 | Séquence 2 · image test 2.7 (Lyron au taxi jaune devant l'Ohel) | `5613b3bb-3f45-4281-9fe3-1cf396f33619` : façade fidèle (auvent, marches, muret, haies sous la neige), taxi jaune, visage = sheet, petite kippa, golfes discrets, tsitsit ✓ | 3 |
-| **Total dépensé** | | **982 cr** |
+| Séquence 2 · 8 images clés | 2.0 `464d4cd7-e4c0-4e31-951d-815d4b6fc561` (1er essai `ec48de16` échoué côté Higgsfield) ✓ · 2.1 `1dbacdde-2784-485f-8678-36343def83ae` (cadrage différent de 2.4, petit pupitre au lieu de la longue table) · 2.2 `0ee26223-2081-44eb-ac2a-d827ac753cfa` ✓ · 2.3 `fd5ad7e0-8e0a-400a-a548-4419d1be0dfc` ✓ · 2.4 `d819a60c-2ae2-47db-b75e-0d4848a8114f` ✓ · 2.5 `19b8b42f-babc-4dec-b89e-4df9a8de74f9` ✗ Shirel nette et du côté des hommes, pas derrière le rideau de chaînettes · 2.6 `38a2f515-b883-4fec-8d25-44dcc42f7dfc` ✓ · 2.8 `68f6d225-1a99-4735-b2e9-c7e9c768b544` ✓ | 24 |
+| **Total dépensé** | | **1 006 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
