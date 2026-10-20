@@ -149,7 +149,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Séquence 2 · 2.7 et 2.8 refaits (idée de Samuel : Shirel sort en arrière-plan pendant que Lyron est au taxi) | 2.7 `d373c0bf-2f52-46b2-9227-5a3008094d43` : Lyron au taxi, Shirel descend l'escalier derrière lui ; il regarde encore vers la rue → il tournera la tête vers elle dans la vidéo · 2.8 `fa0832db-e56a-4f6c-9391-5ff18b2103a4` : Shirel au pied de l'escalier, yeux baissés, sourire → elle lèvera les yeux vers lui dans la vidéo | 6 |
 | Séquence 2 · vidéos 1080p (une seule tentative, accord de Samuel) | A Shirel 5 s `8f4c934d-0ad3-4e1f-9809-9a5cb8d680dd` · B Lyron 5 s `6ea1e2f3-6edd-4d7e-ac49-70f84b2e8d30` | 160 |
 | Séquence 2 · arrivée de Lyron à JFK (demande de Samuel) | image clé miroir de 2.0a `41dd7401-9465-4c28-8ec5-52599f9b72f1` ✓ · vidéo 4 s 1080p `8843567f-c29e-4de2-b100-6afcd07fa3e4` | 67 |
-| **Total dépensé** | | **1 284 cr** |
+| Séquence 2 · Lyron arrive en taxi (remplace le plan JFK miroir, refusé par Samuel : « redondant ») | image `48ce7e79-9c36-475a-aa73-fad565df21ef` ✓ · vidéo 4 s 1080p `22eebbbb-78d9-4622-9d22-b3b7ee6bf38a` ✓ (le plan JFK de Lyron `8843567f`, lancé sans validation de l'image, est inutilisé : 67 cr perdus) | 67 |
+| **Total dépensé** | | **1 351 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
