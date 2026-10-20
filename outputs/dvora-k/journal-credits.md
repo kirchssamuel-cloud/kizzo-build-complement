@@ -38,4 +38,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Vidéo A : elle découvre le salon, 4 s 1080p | `8f8f19e2-6884-4634-9da6-ff9ee6080bd5` | 64 |
 | 20/10 | Vidéo B : Dvora pose la perruque (pose v2 validée), 5 s 1080p | `979b0ed9-cc4d-4f43-a3fb-4bf0ab69cc72` | 80 |
 | 20/10 | Vidéo C : le miroir, elle se retrouve, 5 s 1080p | `13f2b0e1-0642-42a9-a226-936fd5c31f1b` | 80 |
-| | **Total** | | **1 195 cr** |
+| 20/10 | Image miroir v4 : par-dessus l'épaule, miroir visible | `e1bf1248-7246-4205-bf37-ac6351bbcc5b` | 3 |
+| | **Total** | | **1 198 cr** |
