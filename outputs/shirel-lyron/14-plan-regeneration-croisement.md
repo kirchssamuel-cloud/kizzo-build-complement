@@ -23,3 +23,7 @@ Samuel valide les gros plans des yeux, le plan final des sourires et la façade 
 2. **Vidéo** Seedance 2.5, 1080p, image de départ + image de fin + vraies photos des visages : **6 s = 96 cr** (6 s plutôt que 5 s pour un rythme de marche naturel, sans précipiter le retournement).
 
 **Total : 99 cr** (option 5 s : 83 cr). Budget restant : 882 cr.
+
+## Résultat (20/10) — `rushes/scene3-D-croisement-naturel-1080p.mp4` · `scene3-v9.mp4` (11,8 s) · film `film-sequences-1-3-v9.mp4` (32,7 s)
+Contrôle : marche naturelle en temps réel · ils se croisent à environ 1,6 s, lui devant, elle derrière, sans se frôler · il se retourne vers 2 s, elle aussi, regard vers 3 s · chacun revient de quelques pas · les passants montent les marches du 770 · fin quasi identique à la 1re image des sourires (seul l'homme sur le pas de la porte diffère, d'où les gros plans des yeux placés entre les deux pour masquer le raccord).
+Montage : façade (cadrage d'origine, fondu) → croisement en temps réel (0,2–5,2 s) → yeux de Shirel → yeux de Lyron → sourires en continu (0–1,5 s puis ralenti ×1,4 avec la caméra qui tourne). Étalonnage commun (dominante magenta neutralisée).

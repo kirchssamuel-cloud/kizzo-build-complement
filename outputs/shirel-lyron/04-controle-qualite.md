@@ -160,9 +160,10 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Séquence 3 · vidéo croisement (fin imposée = 1re image de la vidéo des sourires, vraies photos en référence) 5 s 1080p | `0d41d306-ad08-4793-ac4f-ab2fb753fec9` | 80 |
 | Séquence 3 · vidéo des yeux (regard levé / baissé) 4 s 1080p | `0e1b81ec-54ee-4529-821c-9f0a05838fcb` | 64 |
 | Séquence 3 · image de départ du nouveau croisement (couloirs séparés, passants) | `bbf7d89f-e932-4dbb-bd0b-5eb064b7d95e` | 3 |
-| **Total dépensé** | | **1 672 cr** |
+| Séquence 3 · vidéo du nouveau croisement naturel 6 s 1080p (image de départ + image de fin) | `01c4e4bc-b26e-4039-a55d-dcc0cfbf6df0` | 96 |
+| **Total dépensé** | | **1 768 cr** |
 
-Budget fin du film (plafond 1 200 cr à partir de 1 351 cr) : 321 cr dépensés, **879 cr restants** pour les séquences 4 à 8.
+Budget fin du film (plafond 1 200 cr à partir de 1 351 cr) : 417 cr dépensés, **783 cr restants** pour les séquences 4 à 8.
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
