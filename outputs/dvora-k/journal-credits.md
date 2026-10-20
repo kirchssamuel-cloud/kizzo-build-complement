@@ -26,4 +26,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Images clés plans 10 à 14 (rue, porte, accueil Dvora, pose de la perruque, miroir) : 10 `0f91ab48` · 11 `3c10515b` · 12 `1082787b` · 13 `e1c446e8` · 14 `a5e328d9` | 5 jobs | 15 |
 | 20/10 | Images clés plans 12-13-14 v2 (vrai décor du salon, traits de Dvora) : 12 `7d620b05` · 13 `0578d3c4` · 14 `99cc7ec4` ; recadrages 12 `02c4da40` et 14 `eb105b02` (gratuits) | 3 jobs | 9 |
 | 20/10 | Images clés plans 12-13-14 v3 (photos nettes de Dvora) : 12 `7ab51e08` · 13 `51599f06` · 14 `c8c058f2` | 3 jobs | 9 |
-| | **Total** | | **733 cr** |
+| 20/10 | Planche de Dvora v2 (ultra réaliste, photos nettes) | `aa52b746-fca6-446e-b638-006641651f22` | 3 |
+| | **Total** | | **736 cr** |
