@@ -22,3 +22,13 @@ Femme d'environ 45 ans, mince, longs cheveux châtain caramel ondulés avec refl
 
 ## Le salon
 Murs blancs + un mur gris anthracite avec cadres photo dorés, suspensions en verre doré, fauteuils de coiffure noirs, sol gris clair, mur de perruques (blond → brun), têtes de présentation blanches, stores zébrés aux vitrines, enseigne « Dvora K » en lettres argentées sur bandeau gris.
+
+## Recadrages « Dvora seule » (pour la planche v2)
+La planche v1 a été refusée par Samuel (« pas du tout elle, pas réaliste ») : les références contenaient plusieurs personnes et des incrustations Instagram, et le fond studio gris faisait artificiel.
+Recadrages envoyés à Higgsfield (Dvora seule, sans clientes ni texte) :
+- c14 `9744abe7-a6e3-4258-b5e7-46fccc70a2b9` (assise, chemise grise)
+- c4 `64238866-0f03-410e-948d-621aec737d33` (pull gris, sourire)
+- c12 `6997de87-371b-469b-a4c8-dff7e1e9e616` (3/4, chemise grise)
+- c10 `06b1c936-975e-49f6-a1fa-da212ba0e2b8` (face, rouge à lèvres, tenue noire)
+- c13 `2c0ea701-a416-4472-8399-539142c0a25a` (face, yeux baissés)
+Cheveux réels : longs, presque raides, brun foncé aux racines, balayage brun clair / miel sur les longueurs (pas roux).
