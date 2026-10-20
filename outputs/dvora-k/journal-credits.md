@@ -9,4 +9,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Images clés plans 1 à 9 (9:16) : 1 `47e20ac6` · 2 `96bccffa` · 3 `6c7d738f` · 4 `323b6d8a` · 5 `607e7bb6` · 6 `5caf51cc` · 7 `c156dbc2` · 8 `f7903904` · 9 `cf552c4a` | 9 jobs | 27 |
 | 20/10 | Plans 1 et 2 refaits (cabinet clairement médical) : `874ffe64` · `9698c504` | 2 jobs | 6 |
 | 20/10 | Vidéo 1 : le cabinet (plans 1 à 3), 10 s 1080p 9:16 | `c4425a2f-1e67-47ec-b8f6-5ecc0449f56b` | 160 |
-| | **Total** | | **199 cr** |
+| 20/10 | Image clé plan 2b : brochure « La chimiothérapie — Guide du patient » (sans personne sur la couverture) | `42e31445-f98b-4144-950b-6fcc7f352cb7` | 3 |
+| | **Total** | | **202 cr** |
