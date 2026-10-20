@@ -62,3 +62,17 @@ Budget séquence 3 prévu : 92 cr. L'option A est quasiment dans le budget ; l'o
 1. Option : Samuel laisse le choix → **option A** (101 cr), le ralenti du mouvement circulaire est fait au montage.
 2. Photos du 770 : reçues ✓
 3. Son « oui » pour lancer l'image test (3 cr).
+
+## Mise à jour du 20/10 — plan final (option B allégée)
+
+Image du croisement **validée** : `494eb39c` (3.4, visages retouchés). Les plans 3.2 et 3.3 (chacun qui marche seul) sont supprimés : le croisement est filmé en continu à partir de 3.4 (ils marchent l'un vers l'autre, se croisent, se regardent). Économie : 6 cr et un rythme moins haché.
+
+| # | Plan | Image clé | Références |
+|---|---|---|---|
+| 3.1 | Façade du 770 sous la neige, contre-plongée (image animée au montage, gratuit) | à générer | photos du 770 |
+| 3.4 | Le croisement (ils marchent, se croisent, se regardent) | ✓ `494eb39c` | — |
+| 3.5 | Très gros plan : les yeux de Shirel, elle le regarde (vers la droite de l'écran) | à générer | 3 vraies photos de face / 3/4 + sheet · taches de rousseur |
+| 3.6 | Très gros plan : les yeux de Lyron, il la regarde (vers la gauche de l'écran) | à générer | sheet validé + photo de face (pas la photo de profil : golfes) + kippa |
+| 3.7 | Les deux arrêtés à un mètre, sourires, la caméra tourne autour | à générer | 3.4 (lieu, lumière) + photo de couple (tailles) + visages + tenues |
+
+**Coût :** 4 images × 3 = 12 cr · vidéo A 5 s 1080p (3.4 → 3.5 → 3.6) = 80 cr · vidéo B 4 s 1080p (3.7, mouvement circulaire) = 64 cr → **156 cr** (+ 12 cr déjà dépensés sur 3.4).
