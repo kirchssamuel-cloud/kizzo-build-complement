@@ -23,4 +23,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Vidéo plan 8 refaite avec Higgsfield (enregistrement Instagram de Dvora en vidéo de référence), 4 s 1080p | `0f1c722b-c217-47db-a0b0-d56e4100fc6f` | 64 |
 | 20/10 | Photo de la perruque v1 (reprend ses cheveux d'avant, sur tête de présentation dans le salon) | `22855b79-61c3-4b49-8a3e-ee89c9afb410` | 3 |
 | 20/10 | Planche de Dvora v1 | `d6b789e7-00bd-4c3e-a3d2-b612003cecf0` | 3 |
-| | **Total** | | **700 cr** |
+| 20/10 | Images clés plans 10 à 14 (rue, porte, accueil Dvora, pose de la perruque, miroir) : 10 `0f91ab48` · 11 `3c10515b` · 12 `1082787b` · 13 `e1c446e8` · 14 `a5e328d9` | 5 jobs | 15 |
+| | **Total** | | **715 cr** |
