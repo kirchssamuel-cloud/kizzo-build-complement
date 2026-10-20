@@ -151,3 +151,9 @@ Les visiteurs se tiennent TOUJOURS à l'extérieur du muret blanc, sur l'allée.
 ## Références Lyron v6 — DÉFINITIVES (20/10, validées par Samuel)
 Demande de Lyron : plus de cheveux. Sheet visage `b1d66009-a9e7-4cd4-817b-67a7f41dd28d` (cheveux pleins, ligne frontale naturelle, tempes comblées). Planches : L1 t-shirt `88a8d247…` · T5 New York `14f32739…` · T6 demande `42527c3d…` · T7 Israël `ea898466…` · sourires `26edf829…` (vignettes 1 et 2 uniquement). Tenues d'origine recadrées sous le cou : L1 `db993b78…`, T5 `89ea2243…`, T6 `7ed1a6cc…`, T7 `8c9be165…`.
 Règle : ne plus JAMAIS donner ses vraies photos ni les anciennes planches (v4/v5) en référence d'image ou de vidéo : elles ramènent les golfes. Dans chaque prompt : « full head of thick dark hair, full natural front hairline, filled-in temples, never receding ». Toutes les références Lyron antérieures sont dépassées.
+
+## Références Shirel v8 — DÉFINITIVES (20/10, validées par Samuel et Shirel)
+Voir `shirel/00-FICHE-SHIREL.md`. Planche `01323d9f…` · profil `2cf32ee3…` · sourire `959ec434…` · vraie photo n°1 `8d5bbfee…`. Toutes les références Shirel antérieures sont dépassées.
+- **Yeux noisette-brun, jamais verts** (remplace « noisette-vert » de la section C).
+- **Visage jeune, rond, sans rides** ; cheveux longs **lisses**, raie au milieu.
+- ⚠️ **NOUVELLE RÈGLE SOURIRE** : on a son vrai sourire → elle peut sourire, y compris un grand sourire, dans les vidéos. Remplace la règle « PAS DE GRAND RIRE » (section A) et la ligne « grands sourires cadrés de 3/4 ou de profil » (section D).
