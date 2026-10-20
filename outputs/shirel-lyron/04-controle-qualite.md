@@ -161,6 +161,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Séquence 3 · vidéo des yeux (regard levé / baissé) 4 s 1080p | `0e1b81ec-54ee-4529-821c-9f0a05838fcb` | 64 |
 | **Total dépensé** | | **1 669 cr** |
 
+Budget fin du film (plafond 1 200 cr à partir de 1 351 cr) : 318 cr dépensés, **882 cr restants** pour les séquences 4 à 8.
+
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
 **Références Lyron définitives (v5) :** sheet `7519d1e5-dd30-40f9-9861-97c767e5fea4` · L1 t-shirt `0c9fc2a6-3684-4ffb-bc07-22f9a305c6e0` · T5 `db13a2f8-eae8-41b3-8ffc-75db13a188b2` · T6 `c9ee84e0-f33e-442f-ae8c-f311686a47b7` · T7 `c7bb5a35-651f-4002-a9a9-ece257937bff` · Sourires `4fa7710c-ef32-4a7e-a1eb-40c91fa0ad4e`. Toutes les autres versions de Lyron sont dépassées.

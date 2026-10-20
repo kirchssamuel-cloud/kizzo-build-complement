@@ -76,3 +76,17 @@ Image du croisement **validée** : `494eb39c` (3.4, visages retouchés). Les pla
 | 3.7 | Les deux arrêtés à un mètre, sourires, la caméra tourne autour | à générer | 3.4 (lieu, lumière) + photo de couple (tailles) + visages + tenues |
 
 **Coût :** 4 images × 3 = 12 cr · vidéo A 5 s 1080p (3.4 → 3.5 → 3.6) = 80 cr · vidéo B 4 s 1080p (3.7, mouvement circulaire) = 64 cr → **156 cr** (+ 12 cr déjà dépensés sur 3.4).
+
+## Montage v1 (20/10) — `scene3-v1.mp4` (11,7 s) · film complet `film-sequences-1-3-v1.mp4` (32,5 s)
+
+| TC séquence | Plan | Source |
+|---|---|---|
+| 0,0–1,25 | Façade du 770, lent zoom (fondu vers la suite) | image 3.1 |
+| 1,0–3,0 | Ils marchent chacun de son côté et se croisent sans se regarder | `rushes/scene3-A-croisement-1080p.mp4` 0,8–2,85 |
+| 3,0–5,2 | Ralenti ×1,6 : chacun se retourne, les regards se trouvent | idem 2,85–4,25 |
+| 5,2–6,2 | Très gros plan : yeux de Shirel, levés vers lui (ralenti ×1,25) | `rushes/scene3-C-yeux-1080p.mp4` 0,62–1,42, **retourné horizontalement** |
+| 6,2–7,2 | Très gros plan : yeux de Lyron, baissés vers elle (ralenti ×1,25) | idem 2,45–3,25 |
+| 7,2–11,7 | Les sourires, la caméra tourne autour d'eux (ralenti ×1,4 sur la fin) | `rushes/scene3-B-sourires-1080p.mp4` |
+
+Contrôles : la dernière image du croisement correspond à la 1re image des sourires (raccord invisible après les gros plans) · écart de taille visible (le haut de sa tête arrive à son menton) · le 770 reste derrière eux tout du long · clignements d'yeux coupés au montage.
+Correction gratuite : dans la vidéo, Shirel regardait vers la gauche de l'écran (à l'opposé de Lyron). Le plan a été retourné pour qu'elle regarde vers le haut à droite, vers lui.
