@@ -100,3 +100,14 @@ Retour de Samuel : dans la v2, ils se rapprochent trop alors qu'ils ne se connai
 ## Montage v4 (20/10) — `scene3-v4.mp4` (9 s) · film `film-sequences-1-3-v4.mp4` (29,9 s)
 Demande de Samuel : couper le plan des sourires en deux et placer les yeux au milieu.
 Ordre : façade → croisement (coupé à un mètre l'un de l'autre) → sourires, 1re partie (ils se regardent, le sourire naît, 1,5 s) → yeux de Shirel → yeux de Lyron → sourires, 2e partie (la caméra tourne autour d'eux, sourires francs, ralenti).
+
+## Montage v5 (20/10) — `scene3-v5.mp4` (8 s) · film `film-sequences-1-3-v5.mp4` (28,9 s) ← version en cours
+Samuel : la marche l'un vers l'autre ne sert à rien, on l'enlève.
+
+| TC séquence | Plan |
+|---|---|
+| 0–1,5 | Façade du 770, lent zoom, fondu de 0,4 s vers le plan suivant |
+| 1,1–3,0 | Premier regard : ils sont face à face devant le 770, le sourire naît (ralenti ×1,3) |
+| 3,0–4,0 | Yeux de Shirel, levés vers lui |
+| 4,0–5,0 | Yeux de Lyron, baissés vers elle |
+| 5,0–8,0 | Sourires francs, la caméra tourne autour d'eux (ralenti) |
