@@ -12,4 +12,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Image clé plan 2b : brochure « La chimiothérapie — Guide du patient » (sans personne sur la couverture) | `42e31445-f98b-4144-950b-6fcc7f352cb7` | 3 |
 | 20/10 | Vidéo plan 2b : brochure chimiothérapie, 4 s 1080p 9:16 | `65cb0b4a-6e32-4008-a6b0-f6ec03629f02` | 64 |
 | 20/10 | Image clé plan 2b v2 : elle lit le compte-rendu (diagnostic, chimiothérapie, perte des cheveux). La brochure (v1) est écartée | `da89941d-8840-4fa7-97d1-028e3db58d55` | 3 |
-| | **Total** | | **269 cr** |
+| 20/10 | Image clé plan 2b v3 (plongée) : écartée, la feuille est tendue vers la caméra et le texte fait plaqué | `66baa721-5379-4be4-957d-31e68d6b42ca` | 3 |
+| | **Total** | | **272 cr** |
