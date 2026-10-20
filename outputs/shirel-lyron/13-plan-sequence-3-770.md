@@ -96,3 +96,7 @@ Samuel n'aime pas le croisement de la v1 (de 2 à 4 s). Il est remplacé par le 
 
 ## Montage v3 (20/10) — `scene3-v3.mp4` (9 s) · film `film-sequences-1-3-v3.mp4` (29,9 s)
 Retour de Samuel : dans la v2, ils se rapprochent trop alors qu'ils ne se connaissent pas encore. Le croisement est coupé à 0,96 s de la vidéo source, au moment où ils s'arrêtent à environ un mètre l'un de l'autre et se regardent (ralenti ×2,2 sur ce regard). On enchaîne directement sur les gros plans des yeux, puis sur les sourires (où ils sont aussi à un mètre l'un de l'autre, donc le raccord est cohérent).
+
+## Montage v4 (20/10) — `scene3-v4.mp4` (9 s) · film `film-sequences-1-3-v4.mp4` (29,9 s)
+Demande de Samuel : couper le plan des sourires en deux et placer les yeux au milieu.
+Ordre : façade → croisement (coupé à un mètre l'un de l'autre) → sourires, 1re partie (ils se regardent, le sourire naît, 1,5 s) → yeux de Shirel → yeux de Lyron → sourires, 2e partie (la caméra tourne autour d'eux, sourires francs, ralenti).
