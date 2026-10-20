@@ -14,8 +14,11 @@
 - Sens de la marche : Shirel de gauche à droite, Lyron de droite à gauche. Après le croisement, Shirel regarde vers la gauche de l'écran, Lyron vers la droite (les regards se répondent).
 - Sourires : Shirel bouche fermée, jamais de grand rire ; Lyron sourire franc.
 
+## Différence de taille (rappel de Samuel, 20/10) — OBLIGATOIRE
+Lyron est nettement plus grand que Shirel (20 à 25 cm) : le haut de la tête de Shirel arrive à hauteur de sa bouche, ses épaules à lui sont bien plus larges, elle est fine. Dans chaque plan où ils sont ensemble (3.4, 3.7), le prompt contient le bloc proportions de la bible et les deux vraies photos du couple en référence (`1a472817-1375-4850-a44a-a001d4b39f85`, `e0a6ee58-dbd2-4b31-b487-185bbc71df49`). Contrôle à la règle sur l'image avant validation.
+
 ## Références du lieu
-770 Eastern Parkway : bâtiment en briques rouges de style néo-gothique à trois pignons, perron en pierre, large trottoir de l'Eastern Parkway avec arbres et bancs, passants en manteaux noirs et chapeaux. Je propose de prendre 2 ou 3 photos libres de droits sur Wikimedia Commons (gratuit, sans filigrane). Samuel peut aussi en envoyer, comme pour l'Ohel.
+770 Eastern Parkway : bâtiment en briques rouges de style néo-gothique à trois pignons, perron en pierre, large trottoir de l'Eastern Parkway avec arbres et bancs, passants en manteaux noirs et chapeaux. Photos envoyées par Samuel (`references-770/`) : 02 face (hiver, trottoir, bancs, lampadaires) = référence principale ; 01 de 3/4 ; 03 vue de drone avec filigrane = guide visuel seulement (version recadrée sans filigrane disponible).
 
 ## Découpage (8 s)
 
@@ -56,6 +59,6 @@ Méthode : 1 image test d'abord (3.4, la plus difficile), contrôle de cohérenc
 Budget séquence 3 prévu : 92 cr. L'option A est quasiment dans le budget ; l'option B le dépasse de 73 cr (la marge globale le permet).
 
 ## Ce qu'il me faut de Samuel
-1. Option A ou B.
-2. Photos du 770 : je prends celles de Wikimedia, ou il en envoie.
+1. Option : Samuel laisse le choix → **option A** (101 cr), le ralenti du mouvement circulaire est fait au montage.
+2. Photos du 770 : reçues ✓
 3. Son « oui » pour lancer l'image test (3 cr).
