@@ -67,3 +67,8 @@ Décision de Samuel (20/10) : nouvelle tête pour Shirel (réaliste), plus de ch
 2. Pour Lyron : une ancienne photo où il a plus de cheveux, ou une indication (« comme il y a 2 ans », « juste les golfes comblés »…).
 3. Un « oui » pour lancer les planches (≈ 20 cr).
 4. Le choix pour le budget (plafond relevé ou séquences 4 à 8 allégées).
+
+## Planches v6 (20/10) — `references-v6/`
+Nouvelles photos reçues : 3 de Shirel, 2 de Lyron (Higgsfield `22f2ca98`, `195dcff5`, `31a0665b` · `2be72a09`, `76a01d85`).
+- **Shirel** `991b9683` : vraie peau (taches de rousseur, pores, asymétrie), yeux **noisette-brun** (et non vert clair comme avant : c'était une des erreurs), sourcils épais, nez et visage fidèles. Points faibles : elle paraît un peu plus âgée et plus sévère, cheveux moins ondulés et moins volumineux que sur ses photos.
+- **Lyron** `b1d66009` : même visage, cheveux nettement plus fournis, ligne frontale pleine, kippa brodée. Point faible : les coins des tempes restent légèrement dégarnis de 3/4.
