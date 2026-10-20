@@ -144,3 +144,6 @@ Ce fichier regroupe toutes les remarques et décisions de Samuel et du client. I
 
 ## Blazer de Shirel (décision de Samuel, 20/10)
 Planche T2 DÉFINITIVE = la v6 (blazer cintré, revers crantés, un bouton), corrigée en **noir pur** sans génération (`references-v5-shirel/tenue-T2-DEFINITIF-blazer-noir.png`). La v7 croisée à boutons dorés est écartée. Le défaut de la v6 était sa teinte bleu marine. Dans chaque prompt : « JET BLACK, pure neutral black, not navy, not dark blue », pour le blazer, la robe et les bottes.
+
+## Ohel : règle d'espace (20/10)
+Les visiteurs se tiennent TOUJOURS à l'extérieur du muret blanc, sur l'allée. Personne n'est dans l'enceinte avec les papiers et les stèles. Dans les prompts : « visitors stand OUTSIDE the white marble wall… nobody stands inside the enclosure ». Cadrage conseillé : de 3/4 dos, par-dessus l'épaule, vers les stèles floues.
