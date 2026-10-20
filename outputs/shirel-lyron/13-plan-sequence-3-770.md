@@ -90,3 +90,6 @@ Image du croisement **validée** : `494eb39c` (3.4, visages retouchés). Les pla
 
 Contrôles : la dernière image du croisement correspond à la 1re image des sourires (raccord invisible après les gros plans) · écart de taille visible (le haut de sa tête arrive à son menton) · le 770 reste derrière eux tout du long · clignements d'yeux coupés au montage.
 Correction gratuite : dans la vidéo, Shirel regardait vers la gauche de l'écran (à l'opposé de Lyron). Le plan a été retourné pour qu'elle regarde vers le haut à droite, vers lui.
+
+## Montage v2 (20/10) — `scene3-v2.mp4` (10,6 s) · film `film-sequences-1-3-v2.mp4` (31,4 s)
+Samuel n'aime pas le croisement de la v1 (de 2 à 4 s). Il est remplacé par le croisement de la vidéo précédente (`rushes/scene3-A-croisement-yeux-1080p.mp4` 0–2,35 s : ils marchent l'un vers l'autre devant le 770 et s'arrêtent, ralenti ×1,5 sur l'arrêt et le regard). Les gros plans des yeux (vidéo C) et les sourires (vidéo B) ne changent pas.
