@@ -19,4 +19,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Vidéo plan 4 flash : lumière froide et angoissante, 4 s 1080p 9:16 | `858a8a4f-c23f-430b-9fb8-6ebe3252e17c` | 64 |
 | 20/10 | Vidéo plan 5 : miroir de la salle de bain, 4 s 1080p | `b5837b24-7bc3-4d21-8e32-d905a4bf43b8` | 64 |
 | 20/10 | Vidéo plan 6 : bord du lit, regard vers le foulard, 4 s 1080p | `6bc1dac9-b220-4e82-9601-ee5d4231fb80` | 64 |
-| | **Total** | | **534 cr** |
+| 20/10 | Vidéo multi-plans 7-8-9 (canapé 2 s, téléphone écran blanc 2,5 s, sourire 1,5 s), 6 s 1080p | `4f4461a4-a0ac-4cd2-aac5-da2ade47816e` | 96 |
+| | **Total** | | **630 cr** |
