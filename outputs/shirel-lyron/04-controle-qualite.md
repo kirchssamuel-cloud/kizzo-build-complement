@@ -154,7 +154,8 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Séquence 3 · image test 3.4, essai 2 (vraies photos de Shirel de face et de profil, vrai croisement) | `2f1ae263-be67-447f-967b-93f89f4a8387` : 770 reconnaissable, croisement naturel, tenues ✓ · ✗ **Shirel aussi grande que Lyron** | 3 |
 | Séquence 3 · image test 3.4, essai 3 (juste devant l'entrée du 770, écart de taille chiffré 1,88 m / 1,60 m) | `8bcb407c-8597-4981-bd50-eaf021cb27bb` : écart de taille visible (sa tête au niveau du menton de Lyron, -10 %) ✓ · devant le perron et la porte du 770 ✓ · ils vont se croiser ✓ · taches de rousseur peu visibles de profil | 3 |
 | Séquence 3 · retouche ciblée des 2 visages de 3.4 (vraies photos de profil) | `494eb39c-9e2a-4f20-a8f1-2f13568afbb7` : Shirel un peu plus proche (joues plus pleines) · Lyron plus ressemblant (visage plus plein, nez plus rond) mais ✗ golfes revenus (la vraie photo de profil les montre) | 3 |
-| **Total dépensé** | | **1 363 cr** |
+| Séquence 3 · 4 images clés | 3.1 façade `72a5b5bb-10b5-4347-af51-88715cd50c22` ✓ · 3.5 yeux de Shirel `f5108ccd-79e6-4155-9077-c0611668f187` ✓ taches de rousseur, yeux verts, très ressemblante · 3.6 yeux de Lyron `adc0b261-7cfa-4091-aa47-ab7fc2e7bcb1` ✓ · 3.7 les deux `aaa9c79c-a8d3-432e-afa3-fc7cb681071e` : écart de taille ✓ mais plan trop large, visages de profil, sourires peu visibles | 12 |
+| **Total dépensé** | | **1 375 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
