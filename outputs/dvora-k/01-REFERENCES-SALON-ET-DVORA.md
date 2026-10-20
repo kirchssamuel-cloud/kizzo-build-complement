@@ -46,3 +46,9 @@ Cheveux réels : longs, presque raides, brun foncé aux racines, balayage brun c
 - t53 de face, chemise kaki, cheveux attachés `c4c44122-46b8-4195-a379-a7a6d4c6668c`
 - t54 de face, trench beige, cheveux longs ondulés, dans le salon `cbb54f36-bc14-4db0-97d3-5395d1e5b65b`
 Traits : visage long et fin, nez droit et marqué, yeux noisette en amande, pommettes hautes, rouge à lèvres prune, collier trèfle blanc (Alhambra), boucles d'oreilles pendantes, bagues. Cheveux longs châtain foncé, ondulés, pointes plus claires.
+
+## Images validées par Samuel pour Dvora (20/10)
+Seules ces deux images de pose de la perruque sont jugées « vraies et réalistes » par Samuel :
+- plan 13 v1 `e1c446e8-804d-470d-a146-38aecc415995` (Dvora en noir, cliente pull col V, perruque tenue par le tulle au-dessus de la tête)
+- plan 13 v2 `0578d3c4-7e05-4eab-a498-a0db53424c67` (Dvora en chemise grise, cliente pull crème, mur de perruques sur lambris)
+Toutes les autres images de Dvora (planches v1 et v2, plans 12/14 v1 à v4) ne sont pas validées.
