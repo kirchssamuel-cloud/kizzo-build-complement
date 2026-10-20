@@ -5,4 +5,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | Date | Génération | ID Higgsfield | Crédits |
 |---|---|---|---|
 | 20/10 | Planche de l'héroïne v1 (femme d'environ 40 ans, longs cheveux châtains ondulés, tenue sobre et élégante) | `19b3a0a5-d3f1-40c8-960b-a4cbca7ad1b1` | 3 |
-| | **Total** | | **3 cr** |
+| 20/10 | Planche de l'héroïne sans cheveux (option B : quelques semaines plus tard, foulard) | `a7bf81ba-34e3-4b69-8b45-3b1c18bcbf05` | 3 |
+| | **Total** | | **6 cr** |
