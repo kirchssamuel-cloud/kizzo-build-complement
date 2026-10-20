@@ -10,7 +10,7 @@
 | 01 | `01-sheet-visage-VALIDE.jpg` | **Visage** sous tous les angles : face, 3/4 droite, 3/4 gauche, profil, grand sourire, plein pied | `01323d9f-4569-44db-825c-d0ba06b01801` |
 | 02 | `02-profil-strict.jpg` | **Profil strict seul** (recadré de la planche) | `2cf32ee3-d664-4cd6-bd39-74b1f3f3e165` |
 | 03 | `03-sourire-a-utiliser.jpg` | **Son grand sourire** (recadré de la planche, fidèle à sa vraie photo de la plage) | `959ec434-bdb0-4a0e-a14d-59864ce8262f` |
-| 04 | `04-tenue-T1-sport-noir-sequence1-recadree.jpg` | Tenue T1 (séquence 1) recadrée sous le cou | `61b6dcea-b0bd-45e1-b333-6f4c12890831` |
+| 04 | `04-tenue-T1-sport-noir-sequence1-SANS-SAC.jpg` | Tenue T1 (séquence 1) recadrée sous le cou, **sans sac** (haut + bas/baskets) | `16850956-c502-4529-abd2-96ff60f58725` |
 | 05 | `05-tenue-T2-blazer-noir-new-york-recadree.jpg` | Tenue T2 (New York) recadrée sous le cou | `84b9912f-5c60-46ee-a939-e29a942fff0d` |
 | — | Vraie photo de référence n°1 (plage, bague, grand sourire) | Ressemblance + sourire | `8d5bbfee-f5c1-4b91-8da4-ab65a0cf0beb` |
 | — | Vraies photos n°2 et 3 (selfie, cheveux attachés) | Ressemblance | `68ae271e-3a2d-4842-91b8-19b58b74c21f` · `62eff9e4-a071-4282-92e7-a95062609a09` |
@@ -24,7 +24,7 @@
 5. La tenue de la scène, recadrée sans tête (04, 05 ; T3 et T4 à recadrer pour la suite)
 6. Sur tout plan à deux : la photo réelle du couple pour les tailles `1a472817-1375-4850-a44a-a001d4b39f85`
 
-⛔ **Interdit en référence** : les anciennes planches visage (v1 à v7), les anciennes planches sourire (`e8c19b07…`, `39c2ea5a…`), les anciennes planches de tenue non recadrées (ancien visage, cheveux trop ondulés), la photo d'aéroport `5fc6f1cb…`. Elles ramènent l'ancien visage.
+⛔ **Interdit en référence** : l'ancienne planche T1 et son recadrage `61b6dcea…` (on y voit le cabas : la tenue se fait SANS SAC) ; les anciennes planches visage (v1 à v7), les anciennes planches sourire (`e8c19b07…`, `39c2ea5a…`), les anciennes planches de tenue non recadrées (ancien visage, cheveux trop ondulés), la photo d'aéroport `5fc6f1cb…`. Elles ramènent l'ancien visage.
 
 ## 3. Visage
 - **Début de vingtaine**, jeune et fraîche. Remarque de Shirel : jamais l'air ridée ni plus âgée.
@@ -57,7 +57,7 @@
 ## 7. Tenues par scène
 | Scène | Tenue |
 |---|---|
-| Séquence 1 (Paris, valise, aéroport) | **T1** ensemble sport-chic noir : sweat demi-zippé + jogging large, baskets argentées, grand cabas noir à rabat rose pâle, aucun logo. Pas de valise dans les plans où elle ne voyage pas ; une seule valise quand elle voyage |
+| Séquence 1 (Paris, valise, aéroport) | **T1** ensemble sport-chic noir : sweat demi-zippé + jogging large, baskets argentées, aucun logo. **SANS SAC** (demande de Samuel) : ni cabas, ni sac à main. Une seule valise quand elle voyage |
 | New York (JFK, Ohel, 770) | **T2** robe noire longue, blazer noir cintré à un bouton, bottes noires. **Noir pur**, jamais bleu marine. **Pas de manteau** |
 | FaceTime | tenue d'intérieur (prompt) |
 | Demande (Da Nang) | **T3** robe blanche courte à manches longues, **opaque**, collier turquoise, bracelets en or, bracelets de cheville en perles, sandales plateforme à nœud |
