@@ -93,3 +93,25 @@ Méthode habituelle : test sur 1 image, comparaison côte à côte avec la vraie
 - Texte de l'auvent flou. Personne ne parle, personne ne regarde la caméra.
 - **Photos à filigrane (08 Alamy) : guide visuel seulement, jamais en référence de génération**, sinon le filigrane réapparaît. La 01 est utilisée recadrée.
 - Lumière : froide et grise dehors (neige), néons neutres légèrement réchauffés à l'intérieur ; même rendu documentaire que la séquence 1.
+
+## Mise à jour du 20/10 (retours de Samuel sur les images)
+
+- **Plan 2.0a ajouté : arrivée de Shirel à JFK** (de dos, valise, taxis jaunes), puis 2.0 : elle **monte le vrai escalier** (pas le muret de briques). Idem pour Lyron en 2.3.
+- **Dans l'Ohel (2.2, 2.5), on voit les deux stèles**, légèrement floues, pour qu'on reconnaisse le lieu. Les inscriptions seront adoucies au montage.
+- 2.5 : on les voit **tous les deux en train de prier**, Lyron au premier plan, Shirel derrière le rideau de chaînettes.
+- Caméra : **mouvements fluides**, transitions par des plans de dos.
+
+| # | Durée | Plan |
+|---|---|---|
+| 2.0a | 0,7 s | JFK : Shirel sort du terminal, de dos, avec sa valise |
+| 2.0 | 0,7 s | Elle monte l'escalier de la maison de l'Ohel, de dos |
+| 2.1 | 0,8 s | Sa main écrit « Mazal » |
+| 2.2 | 1,0 s | Côté femmes : elle déchire son papier, les deux stèles floues au fond |
+| 2.3 | 0,7 s | Lyron monte le même escalier, de dos (miroir) |
+| 2.4 | 0,7 s | Sa main écrit « Mazal » |
+| 2.5 | 1,0 s | Côté hommes : il déchire son papier ; Shirel floue derrière les chaînettes |
+| 2.6 | 1,0 s | La rue : le taxi jaune, Lyron à la portière, Shirel en haut des marches |
+| 2.7 | 0,7 s | Gros plan : Lyron la regarde |
+| 2.8 | 0,7 s | Gros plan : Shirel le regarde, sourire à peine esquissé |
+
+Vidéos : A Shirel (2.0a → 2.0 → 2.1 → 2.2 → 2.8) 5 s = 80 cr · B Lyron (2.3 → 2.4 → 2.5 → 2.6 → 2.7) 5 s = 80 cr · **total vidéo 160 cr**.
