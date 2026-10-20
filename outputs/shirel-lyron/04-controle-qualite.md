@@ -157,7 +157,9 @@ Fitted white long-sleeve mini dress in a soft, slightly sheer jersey, high round
 | Séquence 3 · 4 images clés | 3.1 façade `72a5b5bb-10b5-4347-af51-88715cd50c22` ✓ · 3.5 yeux de Shirel `f5108ccd-79e6-4155-9077-c0611668f187` ✓ taches de rousseur, yeux verts, très ressemblante · 3.6 yeux de Lyron `adc0b261-7cfa-4091-aa47-ab7fc2e7bcb1` ✓ · 3.7 les deux `aaa9c79c-a8d3-432e-afa3-fc7cb681071e` : écart de taille ✓ mais plan trop large, visages de profil, sourires peu visibles | 12 |
 | Séquence 3 · vidéos 1080p (option B, accord de Samuel) | A 5 s croisement + yeux `28c2a0a5-8819-414d-be3b-1e6d847c8f95` : ✗ croisement (ils s'arrêtent face à face, l'image de départ les montrait déjà en train de se regarder) · ✓ gros plans des yeux (Shirel très ressemblante) · B 4 s sourires `bf7f38cd-64fa-4d42-a41c-e4d99eee5241` ✓ sourires et écart de taille, mouvement circulaire léger | 144 |
 | Séquence 3 · 2 gros plans des yeux (regard levé / baissé, vraies photos uniquement) | Shirel `78801bf5-8264-43ca-9afe-c863d317ae06` ✓ très ressemblante (taches de rousseur, yeux verts), regard levé mais vers la gauche → retournée en miroir (gratuit) pour regarder vers la droite · Lyron `16effcd7-8887-4a8c-8571-cd759eb8b434` ✓ ressemblant, regard baissé vers la gauche | 6 |
-| **Total dépensé** | | **1 525 cr** |
+| Séquence 3 · vidéo croisement (fin imposée = 1re image de la vidéo des sourires, vraies photos en référence) 5 s 1080p | `0d41d306-ad08-4793-ac4f-ab2fb753fec9` | 80 |
+| Séquence 3 · vidéo des yeux (regard levé / baissé) 4 s 1080p | `0e1b81ec-54ee-4529-821c-9f0a05838fcb` | 64 |
+| **Total dépensé** | | **1 669 cr** |
 
 **Références Shirel définitives (v5) :** sheet `da688b2a-951a-4108-a7b6-d6e8cca2e108` · photo réelle `5fc6f1cb-77f2-4008-902c-b8287a3862b6` · T1 voyage `e38c01ef-40d5-47a2-afbc-776a7ba2cd00` · T2 `0b9e3e4a-60aa-4238-befb-4832e5befcdf` · T3 `d951d6b5-89e3-4e50-8d18-107bcc6e47a5` · T4 `b8c2ecc2-d75c-4051-a160-1134c45960b7` · Sourires `39c2ea5a-757e-43e5-a729-688fda2fb476`.
 
