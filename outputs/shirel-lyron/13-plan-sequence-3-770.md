@@ -93,3 +93,6 @@ Correction gratuite : dans la vidéo, Shirel regardait vers la gauche de l'écra
 
 ## Montage v2 (20/10) — `scene3-v2.mp4` (10,6 s) · film `film-sequences-1-3-v2.mp4` (31,4 s)
 Samuel n'aime pas le croisement de la v1 (de 2 à 4 s). Il est remplacé par le croisement de la vidéo précédente (`rushes/scene3-A-croisement-yeux-1080p.mp4` 0–2,35 s : ils marchent l'un vers l'autre devant le 770 et s'arrêtent, ralenti ×1,5 sur l'arrêt et le regard). Les gros plans des yeux (vidéo C) et les sourires (vidéo B) ne changent pas.
+
+## Montage v3 (20/10) — `scene3-v3.mp4` (9 s) · film `film-sequences-1-3-v3.mp4` (29,9 s)
+Retour de Samuel : dans la v2, ils se rapprochent trop alors qu'ils ne se connaissent pas encore. Le croisement est coupé à 0,96 s de la vidéo source, au moment où ils s'arrêtent à environ un mètre l'un de l'autre et se regardent (ralenti ×2,2 sur ce regard). On enchaîne directement sur les gros plans des yeux, puis sur les sourires (où ils sont aussi à un mètre l'un de l'autre, donc le raccord est cohérent).
