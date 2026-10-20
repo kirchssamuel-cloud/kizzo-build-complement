@@ -33,4 +33,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Image clé plan 10 v3 (de dos, elle marche vers la boutique) | `d0253762-2c9b-4058-8ed3-41ac4c402105` | 3 |
 | 20/10 | Vidéo plan 10 v2 : elle marche vers la boutique (vraie rue), 4 s 1080p | `73f52b50-15dc-4b27-a5d4-58ee42e47ea9` | 64 |
 | 20/10 | Images clés plan A (elle découvre le salon) `a0e66feb` et plan C (miroir, sourire, mains de Dvora) `103ca1aa` ; recadrage C `57b6dabc` (gratuit) | 2 jobs | 6 |
-| | **Total** | | **965 cr** |
+| 20/10 | Image miroir v2, elle seule (visage du cabinet en référence) | `91d483ef-341e-441b-8ce9-5c8a04183b3e` | 3 |
+| | **Total** | | **968 cr** |
