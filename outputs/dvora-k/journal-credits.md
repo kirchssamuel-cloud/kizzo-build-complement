@@ -28,4 +28,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Images clés plans 12-13-14 v3 (photos nettes de Dvora) : 12 `7ab51e08` · 13 `51599f06` · 14 `c8c058f2` | 3 jobs | 9 |
 | 20/10 | Planche de Dvora v2 (ultra réaliste, photos nettes) | `aa52b746-fca6-446e-b638-006641651f22` | 3 |
 | 20/10 | Images clés plans 12-13-14 v4 (photos de Dvora directement, rendu brut) : 12 `ba6d25cd` · 13 `1f23fc7f` · 14 `5c10943d` | 3 jobs | 9 |
-| | **Total** | | **745 cr** |
+| 20/10 | Vidéo multi-plans 10-11 : arrivée rue, gros plan façade, entrée (3 × 3 s), 9 s 1080p | `84fe898f-afc0-4294-9b6d-43fe83b05a5a` | 144 |
+| | **Total** | | **889 cr** |
