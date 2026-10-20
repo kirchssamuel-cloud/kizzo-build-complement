@@ -32,3 +32,10 @@ Recadrages envoyés à Higgsfield (Dvora seule, sans clientes ni texte) :
 - c10 `06b1c936-975e-49f6-a1fa-da212ba0e2b8` (face, rouge à lèvres, tenue noire)
 - c13 `2c0ea701-a416-4472-8399-539142c0a25a` (face, yeux baissés)
 Cheveux réels : longs, presque raides, brun foncé aux racines, balayage brun clair / miel sur les longueurs (pas roux).
+
+## Recadrages « décor seul » (sans personne), pour un intérieur fidèle
+- s1 mur gris anthracite, suspensions verre/doré, cadres, têtes blanches `e066e93d-ebdd-4b81-8d02-ef62f49766ed`
+- s2 mur de perruques sur fond de lambris blanc `d9ba704e-75fe-4282-b27c-5c630463d1aa`
+- s3 vitrine avec stores zébrés blancs `a27d2259-8814-47b1-b6f8-f62c4f844ad9`
+- s4 mur gris, cadres photo, étagère, perruques sur têtes, bouquet de pampa `4c692146-5ed9-4d5e-9eff-8f5030f60504`
+- s5 perruques longues en gros plan `48313dfe-da2a-4132-8c10-2b7192cf7a5a`
