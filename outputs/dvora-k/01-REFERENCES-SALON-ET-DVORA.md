@@ -39,3 +39,10 @@ Cheveux réels : longs, presque raides, brun foncé aux racines, balayage brun c
 - s3 vitrine avec stores zébrés blancs `a27d2259-8814-47b1-b6f8-f62c4f844ad9`
 - s4 mur gris, cadres photo, étagère, perruques sur têtes, bouquet de pampa `4c692146-5ed9-4d5e-9eff-8f5030f60504`
 - s5 perruques longues en gros plan `48313dfe-da2a-4132-8c10-2b7192cf7a5a`
+
+## Photos nettes de Dvora (captures TikTok envoyées par Samuel, recadrées sans interface)
+- t51 trench beige, cheveux longs ondulés, profil 3/4 `c8900cf7-70e5-4449-a9ed-18fc3e5cbe20`
+- t52 gros plan de face, cheveux attachés `74d8fb55-7ef0-4526-95ac-fd78911190bd`
+- t53 de face, chemise kaki, cheveux attachés `c4c44122-46b8-4195-a379-a7a6d4c6668c`
+- t54 de face, trench beige, cheveux longs ondulés, dans le salon `cbb54f36-bc14-4db0-97d3-5395d1e5b65b`
+Traits : visage long et fin, nez droit et marqué, yeux noisette en amande, pommettes hautes, rouge à lèvres prune, collier trèfle blanc (Alhambra), boucles d'oreilles pendantes, bagues. Cheveux longs châtain foncé, ondulés, pointes plus claires.
