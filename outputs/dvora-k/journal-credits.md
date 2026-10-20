@@ -31,4 +31,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Vidéo multi-plans 10-11 : arrivée rue, gros plan façade, entrée (3 × 3 s), 9 s 1080p | `84fe898f-afc0-4294-9b6d-43fe83b05a5a` | 144 |
 | 20/10 | Image clé plan 10 v2 (vraie rue d'Hautpoul) | `d6c6b1d9-7afe-4dc1-89c5-5c1c45a64266` | 3 |
 | 20/10 | Image clé plan 10 v3 (de dos, elle marche vers la boutique) | `d0253762-2c9b-4058-8ed3-41ac4c402105` | 3 |
-| | **Total** | | **895 cr** |
+| 20/10 | Vidéo plan 10 v2 : elle marche vers la boutique (vraie rue), 4 s 1080p | `73f52b50-15dc-4b27-a5d4-58ee42e47ea9` | 64 |
+| | **Total** | | **959 cr** |
