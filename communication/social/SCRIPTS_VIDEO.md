@@ -61,6 +61,47 @@ Les coûts ci-dessous sont des coûts unitaires déjà vérifiés sur Higgsfield
 
 Plafond avec 2 reprises au maximum : 86,5 crédits.
 
+### Épisode 1 produit le 21 octobre (version finale, 43,2 s, 1080 × 1920, sans musique ni sous-titres)
+Le script a évolué à la production :
+- **Kizzo arrive dès l'épisode 1**, et pas seulement en cliffhanger. Kiwi joue sur la tablette orange, Mamie Pomme demande « tu connais Kizzo ? », Maman scanne la leçon et le quiz arrive sur la tablette de Kiwi.
+- **Le cliffhanger porte sur la suite** : Clémentine veut, elle aussi, gagner du temps.
+
+**Fichiers** : `Famille_Pepin_ep1_v2.mp4`, et une copie allégée pour l'envoi.
+
+| Temps | Plan | Réplique |
+|---|---|---|
+| 0,0-2,4 | Très gros plan sur Kiwi, éclairé par sa tablette orange (langue tirée) | KIWI : « Encore cinq minutes ! » |
+| 2,4-5,3 | Contre-plongée : Maman Fraise dans l'encadrement de la porte, mains sur les hanches | MAMAN : « Tu m'as dit ça il y a DEUX heures ! » |
+| 5,3-8,3 | Par-dessus l'épaule de Maman : Kiwi sur le canapé, qui ne lève pas les yeux | KIWI : « Je peux pas mettre pause, c'est en ligne ! » |
+| 8,3-12,6 | Gros plan sur la box : Maman compte sur ses doigts, puis débranche (voyants éteints, arrêt sur image) | MAMAN : « Un… deux… » / KIWI : « T'oserais pas… » / clic |
+| 12,6-15,6 | Ralenti : Kiwi à genoux, bras au ciel | KIWI : « NOOOON ! » (ralenti, réverbération) |
+| 15,6-18,5 | Clémentine blasée avec son pop-corn | CLÉMENTINE : « Tous les soirs, c'est pareil. » / sonnette |
+| 18,5-22,6 | Mamie Pomme à la porte, remonte ses lunettes | MAMIE : « Ma Fraise… tu connais Kizzo ? » |
+| 22,6-25,6 | Par-dessus l'épaule de Maman : elle scanne la leçon de Kiwi avec son téléphone (coins orange, flash) | MAMIE : « Tu prends sa leçon en photo… et hop ! » |
+| 25,6-27,2 | (flash) Le quiz Kizzo arrive sur la tablette orange, avec le logo | MAMIE : « Le quiz arrive direct sur sa tablette. » |
+| 27,2-31,3 | Kiwi réfléchit, trouve, lève le poing, sticker « +5 min » | KIWI : « Hmm… Clovis ! » / « J'ai gagné cinq minutes ?! » |
+| 31,3-34,3 | Maman (mains sur les joues) et Mamie (clin d'œil) | MAMAN : « Attends… il apprend sa leçon, là ?! » |
+| 34,3-36,5 | Zoom dramatique sur Mamie | MAMIE : « Et toi, tu débranches plus rien. » |
+| 36,5-40,5 | Clémentine debout sur le canapé, le cahier de son frère contre elle | CLÉMENTINE : « Moi aussi… je veux gagner du temps. » / « dun dun DUNNN » |
+| 40,5-43,2 | Arrêt sur image : « À SUIVRE… », « PARTIE 2 », « Clémentine a un plan… », badge Kizzo | — |
+
+**Voix** : ElevenLabs v4 via Higgsfield. Casting vérifié automatiquement : français natif, hauteur adaptée à l'âge.
+| Personnage | Voix | Traitement |
+|---|---|---|
+| Kiwi | Kiki (`2d51d9d0-b2a4-5e8b-9c63-f310adafd5f7`) | +1 demi-ton |
+| Maman Fraise | Céline (`57ccb351-84d7-54ba-afd4-26b566ca6023`) | aucun |
+| Clémentine | Daisy (`032386ec-491b-5bdc-81ac-49e9a6a2c89d`) | +3 demi-tons |
+| Mamie Pomme | Opal (`66f35c82-2088-55eb-a0aa-7bf715dc03b7`) | -1 demi-ton, timbre conservé |
+
+**Astuces de prononciation** :
+- écrire « kwiz » pour que la voix dise bien « quiz » ;
+- éviter « révise », prononcé « révisse » par cette voix.
+
+**Coût réel : 77,4 crédits.**
+- 5,5 crédits pour les images de départ.
+- 64,75 crédits de vidéo (Kling 3.0 pro, en 1080p).
+- Environ 7 crédits de voix (casting et prises de rechange compris).
+
 ### Épisode 2 : « Le plan de Mamie Pomme » (environ 40 s), seulement si l'épisode 1 passe les seuils
 1. « Précédemment chez les Pépin… » : reprise de l'épisode 1, 0 crédit.
 2. Mamie Pomme prend le cahier d'histoire de Kiwi, qui boude, et sort son téléphone. MAMIE POMME : « Ta leçon d'histoire ? Je la scanne. »
@@ -78,7 +119,7 @@ Plafond avec 2 reprises au maximum : 86,5 crédits.
 - Papa Ananas veut prouver qu'il est plus fort que Kiwi au quiz, et perd (« Même les parents révisent », la signature de la pub).
 - Le jour où Kiwi a demandé un quiz de plus.
 
-### Voix (ElevenLabs, générées par Samuel)
+### Voix prévues au départ (remplacées par le casting de l'épisode 1)
 | Personnage | Voix à choisir |
 |---|---|
 | Maman Fraise | Femme de 35-40 ans, ferme, exaspérée mais drôle, ton de comédie familiale |
@@ -152,6 +193,12 @@ Chaque réplique s'exporte en fichier séparé, en WAV.
 | 24,2-27,2 | Carton Kizzo : « L'écran se gagne. », « Bêta ouverte · kizzo.fr » | « Kizzo. L'écran se gagne. » |
 
 **Sous-titres** : les placer dans la zone de 1500 à 1650 px de haut pour ne pas couvrir la tablette du quiz. Sur le carton de fin, inutile d'en ajouter.
+
+**Version 2 avec la voix off de Samuel** : voix « Marie », ElevenLabs v4, vitesse 1,1, 24,7 s.
+- Durée : 25,7 s, coupes recalées sur chaque phrase.
+- Points de synchronisation : « Avec Kizzo » sur la tablette orange (10,1 s), le flash du scan sur « photo » (12,1 s), le quiz sur « le quiz arrive » (12,6 s), le « +5 min » sur « débloque du temps d'écran » (16,8 s).
+- Son : quelques bruitages discrets, pas de musique. Volume : -16 LUFS, ce qui laisse de la place pour la musique.
+- Fichier : `Kizzo_comment_ca_marche_v2_voix.mp4`.
 
 **Logique produit** : c'est le parent qui scanne la leçon, et le quiz arrive directement sur l'écran de l'enfant.
 

@@ -21,9 +21,9 @@
 | 8 | Lun 26 | 20h45 | Quiz des parents #3 | « Combien de planètes dans le système solaire ? » (Pluton : débat garanti) | Découverte | 0 | Je produis |
 | 9 | Mar 27 | 12h30 | Carrousel Cahier #3 | « Pourquoi relire sa leçon ne suffit pas » (l'effet test) | Valeur | 0 | Je produis |
 | 10 | Mar 27 | 20h45 | La pub | La pub complète en 9:16, avec l'atterrissage « BAM » en ouverture et l'appel à la bêta | Conversion | 0 | En attente de l'avis de Samuel sur la version 9:16 |
-| 11 | Mer 28 | 20h45 | Famille Pépin, ép. 1 | « Encore 5 minutes » | Découverte | 71 | Feu vert requis (sinon : POV #2 avancé) |
+| 11 | Mer 28 | 20h45 | Famille Pépin, ép. 1 | « Encore 5 minutes » | Découverte | 77,4 (dépensés) | Prêt (v2, voix et bruitages) ; musique et sous-titres par Samuel |
 | 12 | Jeu 29 | 20h45 | POV du soir #2 | « Je compte jusqu'à 3… et j'ai aucun plan pour le 3 » | Découverte | 0 | Je produis |
-| 13 | Ven 30 | 20h45 | Comment ça marche #1 | « Ton enfant relit sa leçon trois fois… » (format narration, voir `SCRIPTS_VIDEO.md` §2) | Conversion | 55,5 (dépensés) | Vidéo prête (v1) ; voix off, musique et sous-titres par Samuel |
+| 13 | Ven 30 | 20h45 | Comment ça marche #1 | « Ton enfant relit sa leçon trois fois… » (format narration, voir `SCRIPTS_VIDEO.md` §2) | Conversion | 55,5 (dépensés) | Prête avec la voix off (v2) ; musique et sous-titres par Samuel |
 | 14 | Sam 31 | 10h | Carrousel du week-end #4 | « Les repères 3-6-9-12 de Serge Tisseron, expliqués » (source vérifiée, on le mentionne) | Valeur | 0 | Je produis |
 | 15 | Sam 31 | 12h30 | Quiz des parents bonus | Spécial Halloween : « D'où vient Halloween ? » | Découverte | 0 | Je produis |
 | 16 | Dim 1er | 11h | Carrousel Cahier #5 | « Rentrée demain : 5 règles d'écran pour reprendre le rythme » | Valeur | 0 | Je produis |
