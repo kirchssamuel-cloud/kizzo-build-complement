@@ -1,5 +1,7 @@
 # Kizzo — Plan de test des formats réseaux sociaux
 
+> **Mise à jour du 21 octobre 2026** : pour Instagram et TikTok, ce plan est remplacé par `social/STRATEGIE_IG_TIKTOK.md`, avec 1 à 2 posts par jour et le suivi du taux d'accroche et du taux de rétention. La partie LinkedIn reste valable.
+
 Durée : 6 semaines. Objectif unique : inscriptions bêta sur kizzo.fr.
 Rythme fixe : 3 publications par semaine sur Instagram/TikTok (même vidéo recyclée sur les deux), 2 publications par semaine sur LinkedIn.
 Règle : on ne change qu'une variable à la fois, le format. Le rythme, le ton et l'appel à l'action restent identiques.
