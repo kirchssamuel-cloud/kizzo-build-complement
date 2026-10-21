@@ -31,6 +31,8 @@ Les coûts ci-dessous sont des coûts unitaires déjà vérifiés sur Higgsfield
 ### Look et personnages (les nôtres)
 **Le look.** Un film d'animation familial en 3D, avec une lumière chaude du soir. Les têtes-fruits sont expressives et mignonnes : grands yeux, aucune texture effrayante. Le salon français est cosy, avec des touches bleu nuit et orange, les couleurs Kizzo. Un seul décor : le salon des Pépin, le soir.
 
+**Références générées le 21 octobre** : dans `references/famille_pepin/` (les quatre personnages, le salon). Elles attendent la validation du look par Samuel.
+
 | Personnage | Apparence | Caractère |
 |---|---|---|
 | **Maman Fraise**, 38 ans | Tête de fraise avec un chignon de feuilles, pull bleu marine | Exaspérée mais drôle, jamais méchante |
@@ -61,9 +63,9 @@ Plafond avec 2 reprises au maximum : 86,5 crédits.
 
 ### Épisode 2 : « Le plan de Mamie Pomme » (environ 40 s), seulement si l'épisode 1 passe les seuils
 1. « Précédemment chez les Pépin… » : reprise de l'épisode 1, 0 crédit.
-2. Mamie Pomme tend la tablette orange à Kiwi, qui boude. MAMIE POMME : « Ta leçon d'histoire. Prends-la en photo. »
-3. Insert : la main de Kiwi photographie son cahier avec la tablette, flash.
-4. La carte quiz Kizzo animée au style « Cahier » (0 crédit) : « Qui était le premier roi des Francs ? »
+2. Mamie Pomme prend le cahier d'histoire de Kiwi, qui boude, et sort son téléphone. MAMIE POMME : « Ta leçon d'histoire ? Je la scanne. »
+3. Insert : le téléphone de Mamie Pomme scanne la page du cahier, flash.
+4. Sur la tablette orange de Kiwi apparaît la carte quiz Kizzo, animée au style « Cahier » (0 crédit) : « Qui était le premier roi des Francs ? »
 5. Kiwi réfléchit, puis lève le poing : « Clovis ! » Le sticker « +5 min » apparaît (0 crédit).
 6. Maman Fraise reste bouche bée. MAMIE POMME : « Il révise, il gagne. Et toi, tu ne débranches plus rien. »
 7. Clémentine bondit du canapé : « Moi aussi je veux un quiz ! »
@@ -72,7 +74,7 @@ Plafond avec 2 reprises au maximum : 86,5 crédits.
 **Coût exact : 6 plans IA × (0,25 + 7,5) = 46,5 crédits.**
 
 ### Pistes pour la suite, si la série prend
-- Clémentine veut tricher : elle photographie le cahier de CM2 de son frère et se plante.
+- Clémentine veut tricher : elle fait scanner à Maman le cahier de CM2 de son frère, et se retrouve avec un quiz de CM2.
 - Papa Ananas veut prouver qu'il est plus fort que Kiwi au quiz, et perd (« Même les parents révisent », la signature de la pub).
 - Le jour où Kiwi a demandé un quiz de plus.
 
@@ -100,8 +102,8 @@ Chaque réplique s'exporte en fichier séparé, en WAV.
 ### Texte de la voix off (environ 27 s)
 > Ton enfant relit sa leçon trois fois… et le lendemain, plus rien ?
 > C'est normal : relire, c'est passif. Le cerveau retient ce qu'on l'oblige à retrouver.
-> Avec Kizzo, il prend sa leçon en photo… et l'appli en fait un quiz. Sur SA leçon.
-> Chaque bonne réponse débloque du temps d'écran.
+> Avec Kizzo, tu prends sa leçon en photo… et le quiz arrive direct sur son écran. Sur SA leçon.
+> Chaque bonne réponse lui débloque du temps d'écran.
 > Il révise vraiment. Et toi, tu n'as plus rien à négocier.
 > Kizzo. L'écran se gagne.
 
@@ -117,22 +119,58 @@ Chaque réplique s'exporte en fichier séparé, en WAV.
 - A : « Ton enfant relit sa leçon trois fois… et le lendemain, plus rien ? »
 - B : « Relire sa leçon, ça ne sert presque à rien. Voilà pourquoi. »
 
-### Plans
-| # | Image | Source |
+### Version 1 produite le 21 octobre (27,2 s, 1080 × 1920, 24 i/s, sans musique ni sous-titres)
+
+**Ce qu'on a repris de Joe's Pasta**, après analyse plan par plan des deux vidéos :
+- **Rythme** : environ 12 plans en 34 s, chaque plan dure de 2 à 3 s.
+- **Mouvement** : la caméra bouge toujours un peu (lente poussée, léger flottement).
+- **Angles variés** :
+  - plan moyen à hauteur d'yeux ;
+  - par-dessus l'épaule ;
+  - plongée verticale sur les mains ;
+  - contre-plongée avec premier plan net.
+- **Transitions dans le mouvement** : un filé rapide (« whip ») et un flash.
+- **Lumière** : chaude et naturelle, peu de profondeur de champ.
+
+**Fichiers :**
+- `Kizzo_comment_ca_marche_v1.mp4` : avec l'écran du quiz sur la tablette, le sticker « +5 min » et le carton de fin ;
+- `Kizzo_comment_ca_marche_plans_seuls_v1.mp4` : les 8 plans seuls, 22,7 s.
+
+**Références** : dans `references/comment_ca_marche/` (chambre, cahier et tablette, storyboard).
+
+| Temps | Plan | Voix off à caler dessus |
 |---|---|---|
-| 1 | Sam à son bureau le soir, relit son cahier, la joue dans la main, s'ennuie | IA |
-| 2 | Gros plan : son regard glisse du cahier vers la tablette orange posée sur le lit | IA |
-| 3 | Claire dans l'encadrement de la porte, bras croisés, soupire | IA |
-| 4 | Insert : la main de Sam tient la tablette orange au-dessus du cahier, flash de l'appareil photo | IA |
-| 5 | La carte quiz Kizzo animée, au style « Cahier » | 0 crédit |
-| 6 | Sam répond, petit poing de victoire, grand sourire | IA |
-| 7 | Le sticker « +5 min » et l'anneau de temps d'écran | 0 crédit |
-| 8 | Claire s'assoit sur le lit, elle et Sam se tapent dans la main | IA |
-| 9 | Le carton Kizzo : « L'écran se gagne. Bêta sur kizzo.fr » | 0 crédit |
+| 0,0-2,6 | Sam s'ennuie à son bureau, le soir (poussée lente) | « Ton enfant relit sa leçon trois fois… » |
+| 2,6-4,8 | Le lendemain au petit-déjeuner, par-dessus l'épaule de Claire : Sam hausse les épaules | « et le lendemain, plus rien ? » |
+| 4,8-7,2 | Plongée sur le cahier : le doigt de Sam relit les lignes | « C'est normal : relire, c'est passif. » |
+| 7,2-10,2 | (whip) Tablette orange nette sur le lit, Sam au loin qui la regarde | « Le cerveau retient ce qu'on l'oblige à retrouver. » |
+| 10,2-12,9 | Par-dessus l'épaule de Claire : elle scanne la leçon avec son téléphone, flash | « Avec Kizzo, tu prends sa leçon en photo… » |
+| 12,9-14,4 | (flash) Le quiz arrive sur la tablette orange de Sam | « et le quiz arrive direct sur son écran. » |
+| 14,4-17,1 | Sam lit la question, se mord la lèvre, sourit | « Sur SA leçon. » |
+| 17,1-20,1 | (whip) Sam lève le poing, sticker « +5 min » | « Chaque bonne réponse lui débloque du temps d'écran. » |
+| 20,1-24,2 | Claire et Sam se tapent dans la main, elle lui ébouriffe les cheveux | « Il révise vraiment. Et toi, tu n'as plus rien à négocier. » |
+| 24,2-27,2 | Carton Kizzo : « L'écran se gagne. », « Bêta ouverte · kizzo.fr » | « Kizzo. L'écran se gagne. » |
 
-**Coût exact : 6 plans IA × (0,25 + 7,5) = 46,5 crédits.**
+**Sous-titres** : les placer dans la zone de 1500 à 1650 px de haut pour ne pas couvrir la tablette du quiz. Sur le carton de fin, inutile d'en ajouter.
 
-Ce format remplace le pack de 4 plans de mains à 30 crédits proposé pour la semaine 44 : il contient déjà l'insert de la photo du cahier.
+**Logique produit** : c'est le parent qui scanne la leçon, et le quiz arrive directement sur l'écran de l'enfant.
+
+**Coût réel : 55,5 crédits.**
+- 1 crédit de références.
+- 5,5 crédits d'images de départ.
+- 49 crédits de vidéo (Kling 3.0 pro, en 1080p).
+- Dont 5,25 crédits perdus : le premier plan de scan montrait Sam qui photographiait sa leçon. Il a été refait avec Claire.
+
+**Identifiants Higgsfield à réutiliser** (références, sans nouvel envoi) :
+| Élément | Identifiant |
+|---|---|
+| Fiche de Sam | `3543f91e-9654-4547-86d6-b179425384b3` |
+| Fiche de Claire | `ae81c53d-3623-4187-afd9-8ea427f80854` |
+| Salle à manger | `f0789874-cf57-4ae3-8329-83b0141782e5` |
+| Chambre de Sam | `f1a5e9c0-a4fd-4bb9-af88-1cbb531c671e` |
+| Cahier et tablette | `4ca6787f-15f6-4ef2-a8ad-c71717650a39` |
+| Famille Pépin, personnages | `bd6cb439-9d7f-43a7-83be-aeccb24c95e4` |
+| Famille Pépin, salon | `b1f0bf9e-f5d8-476a-9b7b-500527741a1b` |
 
 ---
 
@@ -140,7 +178,7 @@ Ce format remplace le pack de 4 plans de mains à 30 crédits proposé pour la s
 Le cadre ci-dessous est à remplir avec la vraie histoire de Samuel. **On n'invente rien.**
 1. **Accroche (3 s)** : « J'ai 23 ans, pas d'enfant… et je construis une appli pour les parents. »
 2. **Le déclic (10 s)** : le vrai moment qui a lancé Kizzo.
-3. **Ce qu'on construit (10 s)** : « Ton enfant prend sa leçon en photo, l'appli en fait un quiz, chaque bonne réponse débloque du temps d'écran. »
+3. **Ce qu'on construit (10 s)** : « Tu scannes la leçon de ton enfant, le quiz arrive directement sur son écran, et chaque bonne réponse lui débloque du temps d'écran. »
 4. **Ce qu'on cherche (5 s)** : « On ouvre la bêta aux premières familles. »
 5. **Appel (3 s)** : « Lien en bio. Et dis-moi en commentaire : c'est quoi, ta pire bataille d'écran ? »
 

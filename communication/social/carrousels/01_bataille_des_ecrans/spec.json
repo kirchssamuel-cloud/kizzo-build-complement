@@ -69,7 +69,7 @@
  {
   "type": "notebook",
   "label": "ÉTAPE 1",
-  "title": "Il prend sa leçon\n**en photo.**",
+  "title": "Tu prends sa leçon\n**en photo.**",
   "size": 84,
   "max_lines": 2,
   "text": "Maths, histoire, anglais… Kizzo reconnaît la matière."
@@ -77,10 +77,10 @@
  {
   "type": "quizcard",
   "label": "ÉTAPE 2",
-  "title": "Kizzo en fait\n**un quiz.**",
+  "title": "Le quiz arrive\n**sur son écran.**",
   "size": 84,
   "max_lines": 2,
-  "text": "Sur SA leçon. Pas sur un programme générique."
+  "text": "Généré sur SA leçon, pas sur un programme générique."
  },
  {
   "type": "ring",

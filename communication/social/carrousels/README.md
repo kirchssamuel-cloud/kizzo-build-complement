@@ -19,7 +19,7 @@ Un dossier par carrousel. Chaque dossier contient :
 |---|---|
 | `quiz` | Question et cartes-réponses A, B, C (la couverture) |
 | `reveal` | Réponses corrigées : `bad` est barré avec une croix, `good` est en vert avec une coche, et on peut ajouter une note en dessous |
-| `notebook` | Page de cahier photographiée, avec viseur et « Matière détectée » |
+| `notebook` | Page de cahier scannée, avec viseur et « Matière détectée » |
 | `quizcard` | Carte de quiz façon appli, avec le sticker « +5 min » |
 | `ring` | Anneau de temps d'écran débloqué |
 | `check` | Liste cochée, avec titre et sous-titre |

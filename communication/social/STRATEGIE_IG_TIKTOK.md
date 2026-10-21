@@ -38,7 +38,7 @@ Quand on publie un deuxième post dans la journée, à 12h30, on recycle un cont
 
 ## Style visuel « Le Cahier » (le nôtre)
 Les carrousels et les couvertures de Reels partagent un même système. Comme la grille du profil reste cohérente, on reconnaît Kizzo d'un coup d'œil.
-- **Fond** : papier crème à grands carreaux Seyès, avec des lignes bleu ciel reprises du bleu du logo et une marge orange à la place de la marge rouge des cahiers. C'est l'école française, que tous les parents reconnaissent, et c'est le cahier que l'enfant photographie dans Kizzo.
+- **Fond** : papier crème à grands carreaux Seyès, avec des lignes bleu ciel reprises du bleu du logo et une marge orange à la place de la marge rouge des cahiers. C'est l'école française, que tous les parents reconnaissent, et c'est le cahier que le parent scanne dans Kizzo.
 - **Chaque carrousel s'ouvre sur une question.** Le quiz, c'est le cœur de l'app, et c'est notre signature.
 - **Barre de progression de quiz** en haut (un segment par visuel), étiquette de rubrique en orange.
 - **Titres** : Outfit 800 bleu nuit, en casse normale. Les mots clés sont en orange, soulignés d'un coup de stylo.
@@ -60,7 +60,7 @@ Les carrousels et les couvertures de Reels partagent un même système. Comme la
 - **Nom du profil Instagram** (le nom est indexé par la recherche Instagram) : « Kizzo · Écrans & devoirs ».
 - **Bio** (moins de 150 caractères) :
   > L'écran, ça se gagne 📚
-  > Ton enfant photographie sa leçon, Kizzo en fait un quiz, chaque bonne réponse débloque de l'écran.
+  > Tu scannes sa leçon, Kizzo en fait un quiz sur son écran. Chaque bonne réponse débloque du temps d'écran.
   > Bêta ouverte 👇
 - **Lien** : vers kizzo.fr, avec une balise de suivi (`?utm_source=instagram&utm_medium=bio`, et `utm_source=tiktok` sur TikTok) pour savoir d'où viennent les inscriptions.
 - **Stories à la une** : « Kizzo ? », « Comment ça marche », « Bêta », « Conseils », « Coulisses ». Les couvertures suivent le style Cahier ; je les produis.

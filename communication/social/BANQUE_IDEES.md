@@ -49,7 +49,7 @@ Une phrase de parent que tout le monde reconnaît, posée sur un plan d'ambiance
 ## La Famille Pépin (mercredi, épisode de 30 à 40 s)
 Voir `SCRIPTS_VIDEO.md`. Pilote d'abord, avec un critère d'arrêt.
 1. « Encore 5 minutes » : le Wi-Fi coupé, et Mamie Pomme arrive.
-2. « Le plan de Mamie Pomme » : la photo de la leçon, le quiz, et « Moi aussi je veux un quiz ! ».
+2. « Le plan de Mamie Pomme » : elle scanne la leçon, le quiz arrive sur la tablette de Kiwi, et « Moi aussi je veux un quiz ! ».
 3. « Clémentine veut tricher » : elle prend le cahier de CM2 de son frère et rate tout.
 4. « Papa Ananas contre le quiz » : il veut battre Kiwi et perd. « Même les parents révisent. »
 5. « Le jour où Kiwi a demandé un quiz de plus. »
