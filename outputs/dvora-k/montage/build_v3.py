@@ -21,9 +21,11 @@ YUV = "format=yuv420p"
 NORM = "settb=1/24,fps=24,format=yuv420p"
 
 # Points de coupe des nouveaux rushes (secondes, mesurés à la détection de plans)
-V1_CUT = float(os.environ.get("V1_CUT", "2.125"))   # vidéo 1 : porte -> mur de perruques
-V2_CUT_A = float(os.environ.get("V2_CUT_A", "3.0"))  # vidéo 2 : pose -> elle seule
-V2_CUT_B = float(os.environ.get("V2_CUT_B", "5.0"))  # vidéo 2 : elle seule -> miroir de dos
+V1_CUT = 2.125                 # vidéo 1 : porte -> mur de perruques
+V2_POSE = (0.0, 2.50)          # vidéo 2 : pose par Dvora
+V2_ALONE = (2.58, 3.67)        # vidéo 2 : elle seule, sourire (ralenti 1,6x)
+V2_MIRROR = (5.46, 8.04)       # vidéo 2 : de dos au miroir (ralenti 1,25x) ; le gros plan en pleurs (3,71-5,42) est écarté
+ALONE_SLOW, MIRROR_SLOW = 1.6, 1.25
 
 
 def run(args):
@@ -199,8 +201,15 @@ p4_starts = xfade_chain([a, b, c, dd], [0, 0.3, 0], P[4])
 # P5. Vidéo 2 : pose par Dvora (texte), elle seule, miroir de dos (texte)
 v2 = f"{R}/video-V2-pose-miroir.mp4"
 raw = f"{TMP}/p5-raw.mp4"
-run(["-i", v2, "-vf", f"setpts=PTS-STARTPTS,{YUV}", *ENC, raw])
+MI = "minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:vsbmc=1"
+run(["-i", v2, "-filter_complex",
+     f"[0:v]trim={V2_POSE[0]}:{V2_POSE[1]},setpts=PTS-STARTPTS,{YUV}[a];"
+     f"[0:v]trim={V2_ALONE[0]}:{V2_ALONE[1]},setpts={ALONE_SLOW}*(PTS-STARTPTS),{MI},{YUV}[b];"
+     f"[0:v]trim={V2_MIRROR[0]}:{V2_MIRROR[1]},setpts={MIRROR_SLOW}*(PTS-STARTPTS),{MI},{YUV}[c];"
+     f"[a][b][c]concat=n=3:v=1:a=0[v]", "-map", "[v]", *ENC, raw])
 d5 = dur(raw)
+V2_CUT_A = V2_POSE[1] - V2_POSE[0]
+V2_CUT_B = V2_CUT_A + (V2_ALONE[1] - V2_ALONE[0]) * ALONE_SLOW
 P[5] = f"{TMP}/p5.mp4"
 overlay_texts(raw, P[5], [
     (text_layer(f"{TMP}/t5.png", caption("Chaque perruque, posée par Dvora"), y_center=1180, scrim=True), 0.45, V2_CUT_A - 0.1),
