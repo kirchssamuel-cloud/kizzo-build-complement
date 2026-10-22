@@ -18,7 +18,7 @@ SERIF, SERIF_I, SCRIPT = f"{FONTS}/f3.ttf", f"{FONTS}/f1.ttf", f"{FONTS}/f4.ttf"
 SANS = "/usr/share/fonts/opentype/inter/Inter-Light.otf"
 ENC = ["-c:v", "libx264", "-crf", "16", "-preset", "slow", "-pix_fmt", "yuv420p", "-r", str(FPS)]
 YUV = "format=yuv420p"
-NORM = "settb=1/24,fps=24,format=yuv420p"
+NORM = "settb=1/24,fps=24,setsar=1,format=yuv420p"
 
 # Points de coupe des nouveaux rushes (secondes, mesurés à la détection de plans)
 V1_CUT = 2.125                 # vidéo 1 : porte -> mur de perruques
@@ -183,7 +183,7 @@ b_raw, b = f"{TMP}/p4b-raw.mp4", f"{TMP}/p4b.mp4"
 FAC_D = 2.3
 nf = int(FAC_D * FPS)
 run(["-loop", "1", "-i", f"{K}/plan-V2-facade-reelle-fermee.jpg", "-vf",
-     f"scale=2160:3840,zoompan=z='1.0+0.07*on/{nf}':x='iw/2-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,{YUV}",
+     f"scale=2160:-2,crop=2160:3840,setsar=1,zoompan=z='1.0+0.07*on/{nf}':x='iw/2-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,setsar=1,{YUV}",
      "-frames:v", str(nf), *ENC, b_raw])
 overlay_texts(b_raw, b, [(text_layer(f"{TMP}/t4.png", caption("Dvora K · Paris 19e"), y_center=1180, scrim=True), 0.35, FAC_D)])
 c = f"{TMP}/p4c.mp4"
