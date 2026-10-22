@@ -54,4 +54,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 22/10 | Image clé : de dos face au miroir rond, coin pose réel (tête à perruque retirée) | `407af4df-91ea-44ad-9aae-6aaa851bd11a` | 3 |
 | 22/10 | Vidéo 2 : pose par Dvora, elle seule, miroir de dos, 8 s 1080p | `2fea66a4-b2f8-43ee-a119-751a492fad0b` | 128 |
 | 22/10 | Image clé façade : vraie photo de face, porte fermée, actrice qui arrive | `58450dc9-0a84-4653-b0d9-4bf1a1420e7a` | 3 |
-| | **Total** | | **1 522 cr** |
+| 22/10 | Plan de face refait, 2 versions plus réalistes : A `65a75323-f7bf-4213-a78e-d3b1a1e9d85e` · B `4ec1647c-5930-4626-8a66-0afe4824ca6c` | 2 jobs | 6 |
+| | **Total** | | **1 528 cr** |

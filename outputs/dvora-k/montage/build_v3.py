@@ -212,8 +212,8 @@ V2_CUT_A = V2_POSE[1] - V2_POSE[0]
 V2_CUT_B = V2_CUT_A + (V2_ALONE[1] - V2_ALONE[0]) * ALONE_SLOW
 P[5] = f"{TMP}/p5.mp4"
 overlay_texts(raw, P[5], [
-    (text_layer(f"{TMP}/t5.png", caption("Chaque perruque, posée par Dvora"), y_center=1180, scrim=True), 0.45, V2_CUT_A - 0.1),
-    (text_layer(f"{TMP}/t6.png", caption("Rester soi. Rester belle."), y_center=1500, scrim=True), V2_CUT_B + 0.5, d5)])
+    (text_layer(f"{TMP}/t5.png", [("Chaque perruque,", SERIF_I, 92, 1, (255, 255, 255, 255)), ("posée par Dvora", SERIF_I, 92, 1, (255, 255, 255, 255))], y_center=1180, scrim=True), 0.4, V2_CUT_A - 0.05),
+    (text_layer(f"{TMP}/t6.png", caption("Rester soi. Rester belle."), y_center=1500, scrim=True), V2_CUT_B + 0.4, d5 - 0.65)])
 
 # P6. Carton final : signature « Dvora K » qui s'écrit, puis les informations
 last = f"{TMP}/v2-last.png"
@@ -230,7 +230,7 @@ sig_img = Image.open(sig)
 alpha = np.array(sig_img.split()[3])
 cols = np.where(alpha.max(0) > 0)[0]
 x0, x1 = int(cols.min()), int(cols.max())
-END_D, SIG_T0, SIG_D = 5.8, 0.25, 1.5
+END_D, SIG_T0, SIG_D = 6.5, 0.35, 1.5
 layers = [Image.open(p) for p in (L2, L3, L4)]
 fades = [(1.75, 0.6), (2.2, 0.6), (2.65, 0.6)]
 end_dir = f"{TMP}/end"
