@@ -51,4 +51,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 22/10 | Image clé pose (capture Instagram de Dvora nettoyée, actrice à la place de la cliente) | `44d6f70e-86f0-4f75-aa17-2c7a8b9398bf` | 3 |
 | 22/10 | Pose corrigée (garçon du fond effacé) | `f24b132b-db9a-48ef-ba99-405ad8d417a4` | 3 |
 | 22/10 | Image clé : l'actrice seule avec la perruque | `7db6a34d-93b0-4a4b-a439-cf5c98d55003` | 3 |
-| | **Total** | | **1 388 cr** |
+| 22/10 | Image clé : de dos face au miroir rond, coin pose réel (tête à perruque retirée) | `407af4df-91ea-44ad-9aae-6aaa851bd11a` | 3 |
+| | **Total** | | **1 391 cr** |
