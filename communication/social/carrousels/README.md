@@ -30,3 +30,4 @@ Les champs communs à tous les types :
 - `title` : `**mots**` met les mots en orange soulignés, `\n` force un retour à la ligne ;
 - `text` : un paragraphe sous le titre ;
 - `hint` : le texte à côté de la flèche en bas.
+- `sticker` : le mot-clé du CTA dans un sticker orange en haut à droite, par exemple « Commente BÊTA ». C'est le « CTA tôt » de la méthode de script, à mettre sur le visuel 1.

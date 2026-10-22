@@ -203,8 +203,8 @@ def illus_quiz(c, y):
         answer(c, yy, L, t, st, None, x0+30, x1-30, 36); yy += 108 + 14
     sticker(c, x1 - 70, y + 6, '+5 min')
     return h
-def sticker(c, cx, cy, t):
-    f = F(40, 850); w = tl(f, t) + 52; h = 74
+def sticker(c, cx, cy, t, size=40):
+    f = F(size, 850); w = tl(f, t) + 52; h = size*1.85
     lay = C(w+40, h+40); lay.im = Image.new('RGBA', lay.im.size, (0, 0, 0, 0)); lay.d = ImageDraw.Draw(lay.im)
     lay.shadow(20, 20, 20+w, 20+h, a=0.22, blur=8, dy=6); lay.rect(20, 20, 20+w, 20+h, 20, fill=ORANGE); lay.text(20+w/2, 20+h/2+1, t, f, WHITE, 'mm')
     lay.im = lay.im.rotate(8, Image.BICUBIC, expand=True)
@@ -276,5 +276,7 @@ for n, s in enumerate(spec, 1):
     y = ZONE[0] + max(0, (ZONE[1] - ZONE[0] - hgt)/2 - 20)
     block(c, s, y)
     if s.get('hint'): c.text(X1 - 92, FOOT_Y, s['hint'], F(30, 650), MUTED, 'rm')
+    if s.get('sticker'):                                 # CTA tôt (méthode de script) : mot-clé en haut à droite
+        sw = tl(F(34, 850), s['sticker']) + 52; sticker(c, X1 - sw/2 - 6, PROG_Y + 62, s['sticker'], 34)
     c.im.resize((W, H), Image.LANCZOS).save(f'{OUT}/slide_{n:02d}.png', optimize=True)
 print('ok', total, FMT)

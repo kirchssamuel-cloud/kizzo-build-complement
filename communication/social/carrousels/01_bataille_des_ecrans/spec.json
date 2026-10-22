@@ -18,7 +18,8 @@
     "Lui faire gagner son écran"
    ]
   ],
-  "hint": "Swipe pour la réponse"
+  "hint": "Swipe pour la réponse",
+  "sticker": "Commente BÊTA"
  },
  {
   "type": "reveal",
@@ -112,11 +113,11 @@
  },
  {
   "type": "cta",
-  "label": "BIENTÔT",
-  "title": "Kizzo arrive.\n**Tu veux tester ?**",
+  "label": "TON ACCÈS",
+  "title": "Tu veux le tester\n**en avant-première ?**",
   "size": 100,
-  "text": "On ouvre la bêta aux premières familles.",
-  "button": "Rejoins la bêta sur kizzo.fr",
+  "text": "On ouvre la bêta aux premières familles. Commente BÊTA : on t'envoie l'accès en message.",
+  "button": "Commente BÊTA",
   "actions": [
    [
     "plane",

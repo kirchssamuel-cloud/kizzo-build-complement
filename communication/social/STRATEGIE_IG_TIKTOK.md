@@ -1,118 +1,141 @@
-# Kizzo — Stratégie Instagram + TikTok (v3, 21 octobre 2026)
+# Kizzo — Stratégie Instagram + TikTok (v4, 22 octobre 2026)
 
 Pour Instagram et TikTok, ce document remplace le plan de test à 3 posts par semaine (`../STRATEGIE_TEST_FORMATS.md`). Ce plan reste valable pour LinkedIn.
 
+**Ce qui change en v4** :
+- toutes les vidéos suivent la méthode de script d'un pro du contenu court, transmise par Samuel ;
+- chaque publication a un CTA par mot-clé (ManyChat) ;
+- on lance un test de 14 jours pour choisir les formats avant de produire en série.
+
 Les autres documents du dossier :
-- **Planning et kits de publication** : `PLANNING.md`.
-- **Scripts vidéo** : `SCRIPTS_VIDEO.md`.
-- **Idées** : `BANQUE_IDEES.md`.
-- **Carrousels** : `carrousels/`.
+- **la méthode de script**, à appliquer à chaque vidéo et à chaque carrousel : `METHODE_SCRIPT.md` ;
+- **le test de 14 jours** (calendrier, indicateurs, règles de décision) : `PLANNING.md` ;
+- **les scripts du test** : `SCRIPTS_TEST_14J.md` ;
+- **les mots-clés et les messages automatiques** : `MANYCHAT.md` ;
+- **les PDF gratuits** (contrat d'écran, méthode des 10 minutes, phrases anti-crise) : `lead_magnets/` ;
+- **le journal de production** des vidéos déjà faites : `SCRIPTS_VIDEO.md` ;
+- **les idées** : `BANQUE_IDEES.md` ;
+- **les carrousels** : `carrousels/`.
 
 ## Règles du jeu
-- **Rythme** : 1 à 2 publications par jour. Le même contenu part sur Instagram et TikTok (Reels, carrousels, et carrousels en mode photo sur TikTok).
-- **Répartition** : 50 % découverte (portée, accroches fortes), 30 % valeur (pédagogie, conseils), 20 % conversion (bêta, démo). En plus, chaque carrousel se termine par l'appel à la bêta.
-- **Cible** : parents de 30 à 45 ans, jamais les ados directement.
-- **Ton** : Kizzo est un partenaire de dialogue, jamais un outil de surveillance punitive. On dit « on a tous ce problème, voilà une solution », jamais « les écrans c'est mal ».
-- **Mention IA** : chaque vidéo qui montre des personnages générés par IA porte l'étiquette « contenu généré par IA » (option TikTok, étiquette IA d'Instagram).
-- **Inspiration, pas copie** : on reprend les mécaniques qui marchent ailleurs (feuilleton, quiz, structure de récit), jamais le look ni les phrases d'un autre compte.
+- **Tout pour le temps de visionnage.** Chaque vidéo suit les 5 blocs de la méthode : hook, pic d'intrigue, valeur, climax avec contrepied, CTA. Rien ne part sans avoir passé la grille de validation.
+- **La valeur d'abord.** Chaque vidéo donne quelque chose d'utile dès ce soir, même sans Kizzo. Kizzo arrive ensuite comme la version automatique.
+- **Un CTA par mot-clé** : « Commente MOT pour recevoir RESSOURCE ». Quatre mots-clés : CONTRAT, CRISE, MÉTHODE, BÊTA.
+- **Le rythme** :
+  - pendant le test, une vidéo par jour et 5 carrousels ;
+  - ensuite, le rythme décidé au bilan final ;
+  - chaque Reel part aussi sur la Page Facebook.
+- **La cible** : les parents de 30 à 45 ans, jamais les ados directement.
+- **Le ton** : Kizzo est un partenaire de dialogue, jamais un outil de surveillance punitive. On dit « on a tous ce problème, voilà une solution », jamais « les écrans, c'est mal ».
+- **L'IA** :
+  - chaque vidéo qui montre des personnages générés par IA porte l'étiquette IA (option de TikTok, étiquette IA d'Instagram) ;
+  - **jamais de faux témoignage** : aucun personnage IA ne se présente comme un vrai utilisateur.
+- **Rien d'inventé** : chiffres, études et histoires personnelles sont vrais et vérifiés avant publication.
+- **Inspiration, pas copie** : on reprend les mécaniques qui marchent ailleurs, jamais le look ni les phrases d'un autre compte.
 
 ## Horaires
-- **Créneau principal : 20h45.** C'est l'heure où les enfants sont couchés et où les parents scrollent.
-- **Créneau secondaire : 12h30**, la pause déjeuner. Le samedi, 10h, parce que les parents ont le temps de lire.
-- **À tester.** On compare la portée de 12h30 et de 20h45 sur deux semaines, puis on garde le meilleur créneau.
+- **Vidéos : 20 h 45.** C'est l'heure où les enfants sont couchés et où les parents font défiler leur fil.
+- **Carrousels : 12 h 30**, la pause déjeuner.
+- Les horaires ne bougent pas pendant le test de 14 jours, pour que la comparaison des formats soit juste. On testera l'heure ensuite.
 
-## La semaine type : 7 rubriques
-Avoir une rubrique fixe par jour permet de publier tous les jours sans chercher l'idée à chaque fois, et donne aux abonnés des rendez-vous.
+## Les formats testés
+La grille hebdomadaire à 7 rubriques revient après le test, construite sur les formats gagnants.
 
-| Jour | Rubrique | Format | Pilier | Pourquoi |
+| Code | Format | Durée | Ce qu'il apporte | Production |
 |---|---|---|---|---|
-| Lundi 20h45 | **Le quiz des parents** | Reel de 8 à 10 s | Découverte | Le parent joue 3 s (rétention) et répond en commentaire (algorithme). Ça montre le produit sans le dire. |
-| Mardi 12h30 | **Le carrousel Cahier** | 8 visuels, qui s'ouvrent sur un quiz | Valeur | Un carrousel s'enregistre et s'envoie : c'est ce qui fait sortir un post de sa communauté. |
-| Mercredi 20h45 | **La Famille Pépin** | Épisode de 30 à 40 s, avec cliffhanger | Découverte | Le mercredi est le jour des écrans. Le feuilleton crée un rendez-vous. Pilote d'abord, voir `SCRIPTS_VIDEO.md`. |
-| Jeudi 20h45 | **POV du soir** | Reel de 6 à 8 s, une phrase de parent | Découverte | Le format le plus partageable (« c'est nous »), produit en 20 minutes. |
-| Vendredi 20h45 | **Kizzo, comment ça marche** | Narration et images, 25 à 35 s | Conversion | Transformer l'attention de la semaine en inscriptions à la bêta. |
-| Samedi 10h | **Le carrousel du week-end** | Repères, idées reçues, FAQ | Valeur | Le samedi matin, on lit. |
-| Dimanche 20h45 | **Les coulisses** | Samuel face caméra, 30 à 45 s | Découverte | Un fondateur de 23 ans qui construit une app pour les parents, c'est une histoire. On suit des personnes, pas des logos. |
-
-Quand on publie un deuxième post dans la journée, à 12h30, on recycle un contenu existant : un extrait de la pub, un carrousel décliné en Reel ou un quiz bonus.
+| FC | Face caméra, Samuel | 30 à 45 s | L'authenticité : un fondateur de 23 ans qui construit une app pour les parents | Tournage au téléphone, 0 crédit |
+| NA | Narration avec images | 25 à 35 s | Montrer Kizzo en action, sans dialogue à synchroniser | Plans existants, voix off de Samuel, 0 crédit |
+| FI | Fiction IA « Les Clémentine » | 30 à 45 s | Le feuilleton : un rendez-vous, une « partie 2 » qu'on va chercher | Kling 3.0 Omni, sur feu vert |
+| QZ | Quiz des parents | 10 à 15 s | Le parent joue 3 s et répond en commentaire | Plans de la pub ou animation, 0 crédit |
+| PV | POV et humour | 6 à 10 s | Le « c'est nous » qu'on partage | Plans existants, 0 crédit |
+| CA | Carrousel « Le Cahier » | 8 visuels | Ce qu'on enregistre et qu'on renvoie | 0 crédit |
 
 ## Style visuel « Le Cahier » (le nôtre)
-Les carrousels et les couvertures de Reels partagent un même système. Comme la grille du profil reste cohérente, on reconnaît Kizzo d'un coup d'œil.
+Les carrousels, les couvertures de Reels et les PDF gratuits partagent un même système. La grille du profil reste cohérente : on reconnaît Kizzo d'un coup d'œil.
 - **Fond** : papier crème à grands carreaux Seyès, avec des lignes bleu ciel reprises du bleu du logo et une marge orange à la place de la marge rouge des cahiers. C'est l'école française, que tous les parents reconnaissent, et c'est le cahier que le parent scanne dans Kizzo.
 - **Chaque carrousel s'ouvre sur une question.** Le quiz, c'est le cœur de l'app, et c'est notre signature.
 - **Barre de progression de quiz** en haut (un segment par visuel), étiquette de rubrique en orange.
 - **Titres** : Outfit 800 bleu nuit, en casse normale. Les mots clés sont en orange, soulignés d'un coup de stylo.
 - **Éléments de jeu** :
   - cartes-réponses A, B et C ;
-  - bonne réponse en vert, coche ;
+  - bonne réponse en vert, avec une coche ;
   - mauvaise réponse barrée ;
   - sticker « +5 min » ;
   - anneau de temps d'écran.
 - **Cartes** : blanches, coins arrondis de 20 px, ombre douce.
 - **Annotations manuscrites orange** (police Caveat), comme la correction d'un prof : une seule par carrousel au maximum. C'est le seul écart à la charte Outfit et Inter, **à valider par Samuel**.
-- **Bas de page** : logo Kizzo, plus le bouton flèche orange pour inviter à swiper.
+- **Bas de page** : logo Kizzo, plus le bouton flèche orange pour inviter à faire défiler.
 - **Formats** :
   - Instagram en 4:5 (1080 × 1350) ;
   - TikTok en 9:16 (1080 × 1920). Le contenu reste dans la zone utile : rien dans le quart du bas, où TikTok affiche la légende.
-- **Outil** : `outils/carrousel_cahier.py` génère les deux formats depuis un fichier `spec.json`, avec un seul script pour garantir que tout reste identique d'un carrousel à l'autre.
+- **Outils** :
+  - `outils/carrousel_cahier.py` génère les deux formats depuis un fichier `spec.json` ;
+  - `lead_magnets/construire.sh` génère les PDF.
 
 ## Mise en place du compte (une fois)
-- **Nom du profil Instagram** (le nom est indexé par la recherche Instagram) : « Kizzo · Écrans & devoirs ».
+- **Nom du profil Instagram** (il est indexé par la recherche Instagram) : « Kizzo · Écrans & devoirs ».
 - **Bio** (moins de 150 caractères) :
   > L'écran, ça se gagne 📚
   > Tu scannes sa leçon, Kizzo en fait un quiz sur son écran. Chaque bonne réponse débloque du temps d'écran.
   > Bêta ouverte 👇
-- **Lien** : vers kizzo.fr, avec une balise de suivi (`?utm_source=instagram&utm_medium=bio`, et `utm_source=tiktok` sur TikTok) pour savoir d'où viennent les inscriptions.
+- **Lien** : vers kizzo.fr, avec une balise de suivi (`?utm_source=instagram&utm_medium=bio`, et `utm_source=tiktok` sur TikTok), pour savoir d'où viennent les inscriptions.
+- **Messages automatiques** : ManyChat sur Instagram et Facebook ; réponse par mot-clé de TikTok (voir `MANYCHAT.md`).
 - **Stories à la une** : « Kizzo ? », « Comment ça marche », « Bêta », « Conseils », « Coulisses ». Les couvertures suivent le style Cahier ; je les produis.
 - **3 posts épinglés** :
   - le carrousel « Comment finir la bataille des écrans sans crier ? » ;
-  - la pub ;
-  - l'appel à la bêta.
+  - la meilleure vidéo de la semaine 1 ;
+  - la vidéo face caméra de Samuel (« J'ai 23 ans, pas d'enfant… »).
 - **Grille** : on alterne carrousel (clair) et vidéo. Toutes les couvertures de Reels ont le titre au même endroit et dans la même typo.
-- **TikTok** : compte Business, pour les statistiques détaillées et le lien. Attention, en compte Business on ne peut utiliser que la bibliothèque musicale commerciale de TikTok.
+- **TikTok** :
+  - compte Entreprise, pour les statistiques détaillées, le lien et les messages automatiques ;
+  - attention, un compte Entreprise ne peut utiliser que la bibliothèque musicale commerciale de TikTok ;
+  - le lien en bio n'apparaît qu'avec 1 000 abonnés ou un compte Entreprise vérifié.
 
-## Ce qu'on retient des comptes et vidéos d'inspiration
+## Ce qu'on retient des inspirations
+- **La méthode de script du pro** (transmise par Samuel le 22 octobre) : c'est la référence pour toutes nos vidéos. Voir `METHODE_SCRIPT.md`.
 - **STR8UP** : la discipline du système (un gabarit, une couleur d'accent, des éléments toujours au même endroit), le fondateur à l'image, le produit montré en situation réelle. On garde la discipline, pas leur look : notre style, c'est « Le Cahier ».
 - **Joe's Pasta** :
   - un récit problème → pourquoi → solution → résultat en 30 s ;
   - une narration chaleureuse ;
   - des personnages cohérents qui ne parlent jamais, donc aucun souci de synchro labiale.
 
-  Ça devient notre rubrique « Comment ça marche ».
-- **Fruit IA** :
-  - le feuilleton, un conflit par épisode ;
-  - le cliffhanger « partie 2 », que les gens vont chercher dans la barre de recherche TikTok ;
-  - les sous-titres mot à mot.
+  Ça devient notre format « Narration avec images ».
+- **Les vidéos de fruits IA** :
+  - le look hyperréaliste ;
+  - le drame et les émotions fortes dès la première seconde ;
+  - le feuilleton et la « partie 2 » ;
+  - les voix jouées dans la scène.
 
-  Ça devient « La Famille Pépin », avec notre look, notre conflit (les écrans) et de l'humour plutôt que du drame.
+  Ça devient « Les Clémentine » : toute la famille en clémentines, notre conflit (les écrans, les devoirs) et une chute drôle.
 
 ## Indicateurs et décisions
-| Indicateur | Objectif | Seuil d'échec |
-|---|---|---|
-| Taux d'accroche (spectateurs encore là à 3 s) | ≥ 40 % TikTok, ≥ 30 % Instagram | < 18 % TikTok, < 15 % Instagram : on refait le format entièrement, on ne le retouche pas |
-| Taux de rétention (à 15 s, ou fin de vidéo pour les formats courts) | à fixer après les 10 premiers posts | — |
-| Carrousels : enregistrements et envois rapportés à la portée | > 2 % | < 0,5 % : on change d'angle |
-| Partages et enregistrements des vidéos rapportés aux vues | > 1 % | — |
-| Clics sur le lien en bio, inscriptions à la bêta (balise de suivi) | suivis à chaque post | — |
-
-Relevé à J+2 de chaque post (courbe de rétention et statistiques), consigné dans `../SUIVI_PUBLICATIONS.csv`. Bilan hebdomadaire le lundi : quelles rubriques on garde, lesquelles on refait.
+Ils sont dans `PLANNING.md` :
+- le taux de skip et la rétention à 3 s ;
+- le pourcentage moyen regardé ;
+- les commentaires avec mot-clé pour 1 000 vues ;
+- les partages et enregistrements ;
+- les e-mails de la bêta ;
+- la lecture de la courbe de rétention bloc par bloc ;
+- les bilans du jour 7 et du jour 14.
 
 ## Leçons déjà apprises
-- **Séries IA avec dialogue.** Écartées au départ, puis rouvertes par Samuel le 21 octobre pour un pilote encadré, la Famille Pépin :
-  - un seul décor ;
-  - des voix faites à part ;
-  - un critère d'arrêt sur l'accroche ;
-  - pas d'épisode 2 tant que l'épisode 1 n'a pas passé les seuils.
+- **Pas de hook, pas de vidéo.** La première version de la vidéo « Comment ça marche » et l'épisode 1 de la Famille Pépin n'en avaient pas. Samuel : « ya pas de hook ». D'où la méthode, et un hook visuel dans les 3 premières secondes.
+- **Ne pas donner la réponse trop tôt.** La v3 de « Comment ça marche » expliquait tout dès la 4e seconde. La v4 (NA1) garde l'explication pour le dernier quart.
+- **Les voix posées par-dessus la vidéo ne marchent pas** pour la fiction. Elles sont générées avec la vidéo (voix natives).
+- **Le look mignon et les fruits mélangés ont été rejetés** : la famille est 100 % clémentine, hyperréaliste. L'ancien épisode de la Famille Pépin est abandonné.
+- **Le produit, tel qu'il est** : c'est le parent qui prend la leçon en photo ; le quiz arrive sur l'écran de l'enfant.
 - **Les captures d'écran de l'app** ne suffisent jamais seules. Il faut :
   - des plans courts de 0,5 à 2 s ;
   - des légendes de 1 à 3 mots posées sur l'image ;
   - des inserts serrés sur un détail.
-- **Les plans d'illustration IA** (mains et objets, ou personnages qui ne parlent pas) sont l'usage le plus sûr.
 - **Ne jamais calquer un compte d'inspiration.** Le premier carrousel reprenait la mise en page et les formulations de STR8UP, et a été refait. On transpose une mécanique, on ne recopie ni le look ni le texte.
 
 ## Crédits Higgsfield
 Avant toute génération, on présente le concept plan par plan avec son coût exact en crédits, et on attend le feu vert de Samuel. Aucune génération « pour voir ».
 
 Coûts unitaires vérifiés :
-- image `gpt_image_2_5` : 0,25 crédit ;
-- plan Kling 3.0 standard de 5 s, en 9:16 et sans son : 7,5 crédits.
+- image `gpt_image_2_5` : 0,25 crédit (qualité basse) à 2,75 crédits (haute, 2k) ;
+- plan Kling 3.0 standard de 5 s, en 9:16 et sans son : 7,5 crédits ;
+- plan Kling 3.0 pro de 5 s avec le son : 12,5 crédits ;
+- scène Kling 3.0 Omni de 15 s, pro, avec le son et jusqu'à 7 images de référence : 30 crédits ;
+- scène Seedance 2.0 de 15 s, rapide, en 720p avec le son : 37,5 crédits.

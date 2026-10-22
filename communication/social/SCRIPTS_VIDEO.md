@@ -1,4 +1,6 @@
-# Scripts vidéo Instagram + TikTok (21 octobre 2026)
+# Journal de production des vidéos (mis à jour le 22 octobre 2026)
+
+**Les scripts du test de 14 jours, réécrits selon la méthode de script, sont dans `SCRIPTS_TEST_14J.md`.** Ce document garde l'historique : ce qui a été produit, avec quels réglages et pour quel coût, et les identifiants Higgsfield à réutiliser.
 
 Deux formats inspirés des exemples envoyés par Samuel. On reprend la mécanique de chaque exemple, jamais son look ni ses phrases.
 
@@ -11,6 +13,8 @@ Les coûts ci-dessous sont des coûts unitaires déjà vérifiés sur Higgsfield
 ---
 
 ## 1. « La Famille Pépin » : notre feuilleton (inspiré des vidéos Fruit IA)
+
+**Abandonnée le 22 octobre.** Samuel a rejeté le look mignon, la famille aux fruits mélangés, les voix posées par-dessus la vidéo et l'absence de hook. Elle est remplacée par « Les Clémentine » (section 1 bis). Cette section reste pour mémoire.
 
 ### Ce qu'on reprend, ce qu'on laisse
 | On reprend | On laisse |
@@ -131,6 +135,41 @@ Chaque réplique s'exporte en fichier séparé, en WAV.
 
 ---
 
+## 1 bis. « Les Clémentine » : la fiction IA hyperréaliste (depuis le 22 octobre)
+**Ce que Samuel a demandé** :
+- le look hyperréaliste de ses vidéos de référence ;
+- une famille entièrement en clémentines ;
+- des voix générées avec la vidéo, pas posées par-dessus ;
+- un hook fort dès la première seconde.
+
+**Références de style** : des images extraites des vidéos de référence de Samuel, utilisées comme références de style.
+
+| Élément | Identifiant Higgsfield |
+|---|---|
+| Style, image 1 | `98be364b-b803-4d28-bbab-a4f5400537f9` |
+| Style, image 2 | `8b120397-1acd-4daf-8985-75668523567f` |
+| Style, image 3 | `34c31e9f-26ed-493c-9128-b10be2829069` |
+| Maman (cheveux bruns ondulés, pull bleu marine) | `939d0ba6-8250-43fb-b8ec-2b355053967d` |
+| Clément, 10 ans (sweat vert, casque) | `3b29b8ac-68b4-4385-bb6a-282a4acb355e` |
+| Lili, la petite sœur | `2beb5e4f-714b-4a2b-9f5c-e7deaf931ec8` |
+| Mamie | `48978dcb-4aca-4557-b8ef-43ac091a0d04` |
+
+**Scène test du 22 octobre** (Kling 3.0 Omni, 15 s, qualité pro, son natif, 4 plans ; travail `aaa924d9-9dc9-48ab-8a7b-d696c0506c42`) :
+1. Maman fait irruption, la copie 4/20 à la main : « Quatre sur vingt ?! »
+2. Clément cache la tablette sous la couette : « C'est pas ma faute… »
+3. Maman arrache la couette : « Encore la tablette ?! À minuit ?! »
+4. Les larmes : « J'voulais juste… cinq minutes… » / « Cinq minutes… tous les soirs… »
+
+**Coût** : environ 32 crédits, images de référence comprises.
+
+**Point de vigilance : le français.** La transcription automatique a entendu « Quoi très souvent ? » au lieu de « Quatre sur vingt ?! ». Si Samuel juge le français trop peu net, on passe à Seedance 2.0.
+
+**Suite** : l'épisode 1 complet est scripté dans `SCRIPTS_TEST_14J.md` (FI1). Il attend le feu vert de Samuel :
+- Kling, scènes 2 et 3 : 60 crédits ;
+- Seedance, les 3 scènes refaites : 112,5 crédits.
+
+---
+
 ## 2. « Comment ça marche », format narration (inspiré de Joe's Pasta)
 
 **Ce qu'on reprend :** la structure problème → pourquoi → solution → résultat en 30 s, une narration chaleureuse et des images sans dialogue. Sans dialogue, il n'y a aucun problème de synchro labiale.
@@ -200,6 +239,13 @@ Chaque réplique s'exporte en fichier séparé, en WAV.
 - Son : quelques bruitages discrets, pas de musique. Volume : -16 LUFS, ce qui laisse de la place pour la musique.
 - Fichier : `Kizzo_comment_ca_marche_v2_voix.mp4`.
 
+**Version 3, avec un hook (22 octobre)** :
+- ouverture sur une copie notée 4/20, avec un zoom poussé ; c'est un nouveau plan Kling, à 5,75 crédits ;
+- durée : 25,7 s ;
+- fichier : `Kizzo_comment_ca_marche_v3_hook.mp4`.
+
+**La version 4 est le NA1 du test** (`SCRIPTS_TEST_14J.md`). Elle réécrit la voix off selon la méthode : la réponse au hook (« relire donne l'impression de savoir ») arrive dans le dernier quart, et non plus à la 4e seconde.
+
 **Logique produit** : c'est le parent qui scanne la leçon, et le quiz arrive directement sur l'écran de l'enfant.
 
 **Coût réel : 55,5 crédits.**
@@ -216,12 +262,17 @@ Chaque réplique s'exporte en fichier séparé, en WAV.
 | Salle à manger | `f0789874-cf57-4ae3-8329-83b0141782e5` |
 | Chambre de Sam | `f1a5e9c0-a4fd-4bb9-af88-1cbb531c671e` |
 | Cahier et tablette | `4ca6787f-15f6-4ef2-a8ad-c71717650a39` |
+| Claire qui scanne, image de départ | `2157f8fe-178f-42aa-bc05-e5f9d9dcda33` |
+| Copie 4/20, image de départ | `21e42f23-e0e0-4bff-8159-922efc46c56a` |
+| Copie 4/20, vidéo | `d20c757c-0546-44a3-8d47-167f8ed7bd3b` |
 | Famille Pépin, personnages | `bd6cb439-9d7f-43a7-83be-aeccb24c95e4` |
 | Famille Pépin, salon | `b1f0bf9e-f5d8-476a-9b7b-500527741a1b` |
 
 ---
 
 ## 3. Coulisses : Samuel face caméra (0 crédit, à tourner au téléphone)
+
+**Remplacé par FC1 dans `SCRIPTS_TEST_14J.md`** : la même idée, réécrite selon la méthode, avec un pic d'intrigue, une valeur et un contrepied.
 Le cadre ci-dessous est à remplir avec la vraie histoire de Samuel. **On n'invente rien.**
 1. **Accroche (3 s)** : « J'ai 23 ans, pas d'enfant… et je construis une appli pour les parents. »
 2. **Le déclic (10 s)** : le vrai moment qui a lancé Kizzo.
