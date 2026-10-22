@@ -46,4 +46,5 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 22/10 | Vrai salon plan large (logo) et coin pose : personnes effacées : logo `6f369105` · coin pose `842529ff` | 2 jobs | 3 |
 | 22/10 | Ces deux décors en 4K : logo `83a7e1a4` · coin pose `7f477b68` | 2 jobs | 4 |
 | 22/10 | Images clés vidéo 1 dans le vrai salon : elle pousse la porte `5295c14d-863e-4a4d-9959-905712a85ecc` · elle regarde les perruques `5d9f1419-d609-4f02-b160-9d98723855f1` | 2 jobs | 6 |
-| | **Total** | | **1 296 cr** |
+| 22/10 | Image clé vidéo 1 : porte vitrée fermée, vrai salon visible à travers | `3c759e95-74bb-46ba-8ea5-1885ed53adbb` | 3 |
+| | **Total** | | **1 299 cr** |
