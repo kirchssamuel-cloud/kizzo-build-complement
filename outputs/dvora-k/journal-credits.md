@@ -40,4 +40,7 @@ Script : doc « Dvora K — Script publicité Instagram » (claude.ai/code/artif
 | 20/10 | Vidéo C : le miroir, elle se retrouve, 5 s 1080p | `13f2b0e1-0642-42a9-a226-936fd5c31f1b` | 80 |
 | 20/10 | Image miroir v4 : par-dessus l'épaule, miroir visible | `e1bf1248-7246-4205-bf37-ac6351bbcc5b` | 3 |
 | 20/10 | Vidéo miroir v2 (par-dessus l'épaule), 5 s 1080p | `c260a19d-833f-437d-824e-3085cbcc0a68` | 80 |
-| | **Total** | | **1 278 cr** |
+| 22/10 | Vrai salon (image tirée de la vidéo WhatsApp) : ballon bleu effacé | `98f62ff5-ecc6-4879-93d0-3580dfc14686` | 1,5 |
+| 22/10 | Vrai salon : Dvora effacée aussi, salon vide pour y placer l'actrice | `fb98c028-1c0f-4f15-bc90-e6728d7495f7` | 1,5 |
+| 22/10 | Vrai salon vide, amélioration en 4K (2294×4096) | `f40c8a20-93e5-46bd-be27-58334421ec1c` | 2 |
+| | **Total** | | **1 283 cr** |
