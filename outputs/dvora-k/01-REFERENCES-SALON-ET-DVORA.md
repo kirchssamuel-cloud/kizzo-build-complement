@@ -52,3 +52,14 @@ Seules ces deux images de pose de la perruque sont jugées « vraies et réalist
 - plan 13 v1 `e1c446e8-804d-470d-a146-38aecc415995` (Dvora en noir, cliente pull col V, perruque tenue par le tulle au-dessus de la tête)
 - plan 13 v2 `0578d3c4-7e05-4eab-a498-a0db53424c67` (Dvora en chemise grise, cliente pull crème, mur de perruques sur lambris)
 Toutes les autres images de Dvora (planches v1 et v2, plans 12/14 v1 à v4) ne sont pas validées.
+
+## Vraies vidéos du salon (WhatsApp, 576×1024, envoyées le 22/10)
+
+| Vidéo | Contenu | media_id Higgsfield |
+|---|---|---|
+| salon-v0 (5,1 s) | Mur de perruques, Dvora choisit une perruque puis sourit à la caméra (ballon bleu à effacer) | `8d56a846-29ea-42d1-b8e3-175b193e3a70` |
+| salon-v1 (2,8 s) | Plan large, logo doré Dvora K, suspensions, têtes avec perruques | `a4b77248-8ca2-4ead-806f-d152c7ef0120` |
+| v2 (3,9 s) | Coin pose, miroirs ronds, vraie cliente visible : référence de décor seulement | non envoyée |
+| v3 (2,75 s) | Fauteuils roses et ballon bleu : écartée (doublon de v0) | non envoyée |
+
+Prix vérifiés (get_cost) : effacement du ballon + passage en 1080p sur v0 (Seedance 2.5 video_edit) 103 cr ; Genjutsu 120 cr ; v1 en Seedance video_edit 80 cr ; scène heureuse 4 s 64 cr + image clé 3 cr.
