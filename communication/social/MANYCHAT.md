@@ -90,14 +90,15 @@ ManyChat indique (septembre 2026) que ses automatisations TikTok ne sont pas enc
 
 1. **Compte Entreprise.** Paramètres → Compte → Passer à un compte Entreprise.
 2. **Messages ouverts à tous.** Paramètres → Confidentialité → Messages privés → « Tout le monde ».
-3. **Réponse automatique par mot-clé.** Business Suite → Messages automatiques → Réponse par mot-clé. Les mêmes mots-clés (CONTRAT, CRISE, METHODE, BETA, avec et sans accents), avec la ressource et l'adresse courte à taper (section 5).
-   - TikTok valide ces messages en 1 à 5 jours : **on les crée le vendredi 23 octobre**.
+3. **Relier le compte à TikTok for Business** (gratuit, sur ordinateur). Sans ça, pas de Business Suite ni de messages automatiques : TikTok les réserve aux comptes « avec accès avancé » (aide TikTok, mai 2026). Sur business.tiktok.com : « S'inscrire avec TikTok », se connecter au compte Kizzo, « Autoriser », puis créer le compte TikTok Ads Manager. Aucun paiement tant qu'on ne lance pas de pub.
+4. **Réponse automatique par mot-clé.** Profil → menu ☰ → Business Suite → Centre de messages → Réponse par mot-clé → activer → Créer. Les mêmes mots-clés (CONTRAT, CRISE, METHODE, BETA, avec et sans accents), avec la ressource et l'adresse courte à taper (section 5). Mots-clés : 40 caractères au maximum ; réponses : 500 caractères au maximum.
+   - TikTok valide ces messages en 1 à 5 jours ouvrés : **on les crée dès le jeudi 22 octobre**.
    - Si le lien n'est pas cliquable dans la messagerie, l'adresse courte suffit (kizzo.fr/contrat).
-4. **Le commentaire épinglé** sous chaque vidéo : « 📩 Pour recevoir [la ressource] : envoie-nous [MOT] en message privé, c'est automatique. Ou tape kizzo.fr/[mot] »
-5. **La première heure** : on répond à chaque commentaire avec le mot-clé, en variant la formulation (des réponses identiques en série passent pour du spam). Par exemple : « Envoie-nous CONTRAT en message, tu le reçois tout de suite 📩 »
-6. **La vidéo-réponse**, l'arme de TikTok : on répond en vidéo aux meilleurs commentaires. Ça fait un nouveau post, avec le commentaire affiché en accroche.
+5. **Le commentaire épinglé** sous chaque vidéo : « 📩 Pour recevoir [la ressource] : envoie-nous [MOT] en message privé, c'est automatique. Ou tape kizzo.fr/[mot] »
+6. **La première heure** : on répond à chaque commentaire avec le mot-clé, en variant la formulation (des réponses identiques en série passent pour du spam). Par exemple : « Envoie-nous CONTRAT en message, tu le reçois tout de suite 📩 »
+7. **La vidéo-réponse**, l'arme de TikTok : on répond en vidéo aux meilleurs commentaires. Ça fait un nouveau post, avec le commentaire affiché en accroche.
 
-**Le lien en bio sur TikTok** dépend du compte : il faut 1 000 abonnés, ou un compte Entreprise vérifié. Tant qu'il n'apparaît pas, l'adresse courte fait le travail.
+**Le lien en bio sur TikTok** ne s'affiche qu'avec un **compte Entreprise vérifié** : TikTok vérifie l'entreprise avec ses documents officiels (le Kbis). La vérification débloque aussi un lien cliquable sous les vidéos. À lancer dès que possible ; en attendant, l'adresse courte fait le travail.
 
 ---
 
