@@ -23,7 +23,7 @@ NORM = "settb=1/24,fps=24,setsar=1,format=yuv420p"
 # Points de coupe des nouveaux rushes (secondes, mesurés à la détection de plans)
 V1_CUT = 2.125                 # vidéo 1 : porte -> mur de perruques
 V2_POSE = (0.0, 2.50)          # vidéo 2 : pose par Dvora
-V2_ALONE = (0.4, 2.9)          # plan de face refait (video-V2b-face.mp4) : elle seule, sourire
+V2_ALONE = (1.5, 4.0)          # plan de face refait (video-V2b-face.mp4) : elle seule, sourire
 V2_MIRROR = (5.46, 8.04)       # vidéo 2 : de dos au miroir (ralenti 1,25x) ; le gros plan en pleurs (3,71-5,42) est écarté
 ALONE_SLOW, MIRROR_SLOW = 1.0, 1.25
 
@@ -107,96 +107,110 @@ def xfade_chain(parts, joins, out):
 
 
 # ======================= 1. Parties du film =======================
-P = {}
+P = {k: f"{TMP}/p{k}.mp4" for k in range(7)}
+FAST = os.environ.get("FAST") == "1"
+
+
+def need(k):
+    return not (FAST and os.path.exists(P[k]))
+
 
 # P0. Cabinet : large, mains, compte-rendu, larmes, flash, retour à la réalité (fondu au noir final)
-raw = f"{TMP}/p0-raw.mp4"
-run(["-i", f"{R}/video1-cabinet.mp4", "-i", f"{R}/video-2b-compte-rendu.mp4", "-i", f"{R}/video-4-flash.mp4", "-filter_complex",
-     f"[0:v]trim=0.3:2.8,setpts=PTS-STARTPTS,{YUV}[a];"
-     f"[0:v]trim=3.3:4.8,setpts=PTS-STARTPTS,{YUV}[b];"
-     f"[1:v]{YUV},scale=2160:3840,zoompan=z='1.12+0.18*on/97':x='iw/2-(iw/zoom/2)':y='ih*0.46-(ih/zoom/2)':d=1:s=1080x1920:fps=24,trim=0.6:3.4,setpts=PTS-STARTPTS[c];"
-     f"[0:v]trim=5.8:7.2,setpts=PTS-STARTPTS,{YUV},fade=t=out:st=1.28:d=0.12:color=white[d];"
-     f"[2:v]trim=1.5:3.1,setpts=PTS-STARTPTS,scale=1188:2112,crop=1080:1920:4:57,curves=all='0/0.04 0.5/0.6 1/1',"
-     f"colorbalance=rs=-0.06:bs=0.10:rm=-0.04:bm=0.06,eq=saturation=0.65,vignette=PI/6,{YUV},"
-     f"fade=t=in:st=0:d=0.15:color=white,fade=t=out:st=1.48:d=0.12:color=white[e];"
-     f"[0:v]trim=8.0:10.04,setpts=PTS-STARTPTS,{YUV},fade=t=in:st=0:d=0.15:color=white[f];"
-     f"[a][b][c][d][e][f]concat=n=6:v=1:a=0[v]", "-map", "[v]", *ENC, raw])
-d0 = dur(raw)
-tmp0 = f"{TMP}/p0-txt.mp4"
-overlay_texts(raw, tmp0, [(text_layer(f"{TMP}/t1.png", caption("Le jour où tout bascule."), scrim=True), d0 - 1.85, d0)])
-P[0] = f"{TMP}/p0.mp4"
-run(["-i", tmp0, "-vf", f"fade=t=out:st={d0 - 0.3:.3f}:d=0.3,{YUV}", *ENC, P[0]])
+if need(0):
+    raw = f"{TMP}/p0-raw.mp4"
+    run(["-i", f"{R}/video1-cabinet.mp4", "-i", f"{R}/video-2b-compte-rendu.mp4", "-i", f"{R}/video-4-flash.mp4", "-filter_complex",
+         f"[0:v]trim=0.3:2.8,setpts=PTS-STARTPTS,{YUV}[a];"
+         f"[0:v]trim=3.3:4.8,setpts=PTS-STARTPTS,{YUV}[b];"
+         f"[1:v]{YUV},scale=2160:3840,zoompan=z='1.12+0.18*on/97':x='iw/2-(iw/zoom/2)':y='ih*0.46-(ih/zoom/2)':d=1:s=1080x1920:fps=24,trim=0.6:3.4,setpts=PTS-STARTPTS[c];"
+         f"[0:v]trim=5.8:7.2,setpts=PTS-STARTPTS,{YUV},fade=t=out:st=1.28:d=0.12:color=white[d];"
+         f"[2:v]trim=1.5:3.1,setpts=PTS-STARTPTS,scale=1188:2112,crop=1080:1920:4:57,curves=all='0/0.04 0.5/0.6 1/1',"
+         f"colorbalance=rs=-0.06:bs=0.10:rm=-0.04:bm=0.06,eq=saturation=0.65,vignette=PI/6,{YUV},"
+         f"fade=t=in:st=0:d=0.15:color=white,fade=t=out:st=1.48:d=0.12:color=white[e];"
+         f"[0:v]trim=8.0:10.04,setpts=PTS-STARTPTS,{YUV},fade=t=in:st=0:d=0.15:color=white[f];"
+         f"[a][b][c][d][e][f]concat=n=6:v=1:a=0[v]", "-map", "[v]", *ENC, raw])
+    d0 = dur(raw)
+    tmp0 = f"{TMP}/p0-txt.mp4"
+    overlay_texts(raw, tmp0, [(text_layer(f"{TMP}/t1.png", caption("Le jour où tout bascule."), scrim=True), d0 - 1.85, d0)])
+    P[0] = f"{TMP}/p0.mp4"
+    run(["-i", tmp0, "-vf", f"fade=t=out:st={d0 - 0.3:.3f}:d=0.3,{YUV}", *ENC, P[0]])
 
 # P1. Carton « Quelques semaines plus tard » écrit lettre par lettre
-card_dir = f"{TMP}/card"
-os.makedirs(card_dir, exist_ok=True)
 msg = "Quelques semaines plus tard"
-f = ImageFont.truetype(SERIF_I, 92)
-tmpd = ImageDraw.Draw(Image.new("RGB", (W, H)))
-widths = [tmpd.textlength(c, font=f) for c in msg]
-track = 2
-total_w = sum(widths) + track * (len(msg) - 1)
-n_frames = int(3.0 * FPS)
-start, per_letter, letter_fade = 6, 1.4, 4
-end_fade_start = n_frames - 10
-for k in range(n_frames):
-    img = Image.new("RGB", (W, H), (0, 0, 0))
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    x = (W - total_w) / 2
-    for i, (c, cw) in enumerate(zip(msg, widths)):
-        a = max(0.0, min(1.0, (k - (start + i * per_letter)) / letter_fade))
-        if k >= end_fade_start:
-            a *= max(0.0, 1 - (k - end_fade_start) / 10)
-        if a > 0:
-            d.text((x, 900), c, font=f, fill=(255, 255, 255, int(255 * a)))
-        x += cw + track
-    img.paste(layer, (0, 0), layer)
-    img.save(f"{card_dir}/{k:03d}.png")
-P[1] = f"{TMP}/p1.mp4"
-run(["-framerate", str(FPS), "-i", f"{card_dir}/%03d.png", *ENC, P[1]])
+if need(1):
+    card_dir = f"{TMP}/card"
+    os.makedirs(card_dir, exist_ok=True)
+    f = ImageFont.truetype(SERIF_I, 92)
+    tmpd = ImageDraw.Draw(Image.new("RGB", (W, H)))
+    widths = [tmpd.textlength(c, font=f) for c in msg]
+    track = 2
+    total_w = sum(widths) + track * (len(msg) - 1)
+    n_frames = int(3.0 * FPS)
+    start, per_letter, letter_fade = 6, 1.4, 4
+    end_fade_start = n_frames - 10
+    for k in range(n_frames):
+        img = Image.new("RGB", (W, H), (0, 0, 0))
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        x = (W - total_w) / 2
+        for i, (c, cw) in enumerate(zip(msg, widths)):
+            a = max(0.0, min(1.0, (k - (start + i * per_letter)) / letter_fade))
+            if k >= end_fade_start:
+                a *= max(0.0, 1 - (k - end_fade_start) / 10)
+            if a > 0:
+                d.text((x, 900), c, font=f, fill=(255, 255, 255, int(255 * a)))
+            x += cw + track
+        img.paste(layer, (0, 0), layer)
+        img.save(f"{card_dir}/{k:03d}.png")
+    P[1] = f"{TMP}/p1.mp4"
+    run(["-framerate", str(FPS), "-i", f"{card_dir}/%03d.png", *ENC, P[1]])
 
 # P2. Miroir de la salle de bain + lit (ouverture en fondu depuis le noir)
-P[2] = f"{TMP}/p2.mp4"
-run(["-i", f"{R}/video-5-miroir.mp4", "-i", f"{R}/video-6-lit.mp4", "-filter_complex",
-     f"[0:v]trim=1.2:3.7,setpts=PTS-STARTPTS,{YUV}[a];[1:v]trim=0.8:4.0,setpts=PTS-STARTPTS,{YUV}[b];"
-     f"[a][b]concat=n=2:v=1:a=0,fade=t=in:st=0:d=0.35[v]", "-map", "[v]", *ENC, P[2]])
+if need(2):
+    P[2] = f"{TMP}/p2.mp4"
+    run(["-i", f"{R}/video-5-miroir.mp4", "-i", f"{R}/video-6-lit.mp4", "-filter_complex",
+         f"[0:v]trim=1.2:3.7,setpts=PTS-STARTPTS,{YUV}[a];[1:v]trim=0.8:4.0,setpts=PTS-STARTPTS,{YUV}[b];"
+         f"[a][b]concat=n=2:v=1:a=0,fade=t=in:st=0:d=0.35[v]", "-map", "[v]", *ENC, P[2]])
 
 # P3. Canapé, Instagram de Dvora K, sourire (ralenti léger)
-raw = f"{TMP}/p3-raw.mp4"
-run(["-i", f"{R}/video-789-multiplan.mp4", "-i", f"{R}/video-8-instagram-higgsfield.mp4", "-filter_complex",
-     f"[0:v]trim=0:1.917,setpts=PTS-STARTPTS,{YUV}[a];"
-     f"[1:v]trim=0.8:2.5,setpts=PTS-STARTPTS,{YUV}[b];"
-     f"[0:v]trim=4.083:6.04,setpts=1.35*(PTS-STARTPTS),minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:vsbmc=1,{YUV}[c];"
-     f"[a][b][c]concat=n=3:v=1:a=0[v]", "-map", "[v]", *ENC, raw])
-d3 = dur(raw)
 P3_INSTA, P3_SMILE = 1.917, 1.917 + 1.7
-P[3] = f"{TMP}/p3.mp4"
-overlay_texts(raw, P[3], [
-    (text_layer(f"{TMP}/t2a.png", caption("Elle découvre Dvora K"), scrim=True), P3_INSTA + 0.1, P3_SMILE + 0.05),
-    (text_layer(f"{TMP}/t2.png", caption("Et si je restais moi ?"), scrim=True), d3 - 2.35, d3)])
+if need(3):
+    raw = f"{TMP}/p3-raw.mp4"
+    run(["-i", f"{R}/video-789-multiplan.mp4", "-i", f"{R}/video-8-instagram-higgsfield.mp4", "-filter_complex",
+         f"[0:v]trim=0:1.917,setpts=PTS-STARTPTS,{YUV}[a];"
+         f"[1:v]trim=0.8:2.5,setpts=PTS-STARTPTS,{YUV}[b];"
+         f"[0:v]trim=4.083:6.04,setpts=1.35*(PTS-STARTPTS),minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:vsbmc=1,{YUV}[c];"
+         f"[a][b][c]concat=n=3:v=1:a=0[v]", "-map", "[v]", *ENC, raw])
+    d3 = dur(raw)
+    P[3] = f"{TMP}/p3.mp4"
+    overlay_texts(raw, P[3], [
+        (text_layer(f"{TMP}/t2a.png", caption("Elle découvre Dvora K"), scrim=True), P3_INSTA + 0.1, P3_SMILE + 0.05),
+        (text_layer(f"{TMP}/t2.png", caption("Et si je restais moi ?"), scrim=True), d3 - 2.35, d3)])
 
 # P4. Arrivée : rue -> vraie façade -> vrai salon (logo) vu par ses yeux -> mur de perruques
-a = f"{TMP}/p4a.mp4"
-run(["-i", f"{R}/video-10-v2-rue.mp4", "-vf", f"trim=0.8:4.0,setpts=PTS-STARTPTS,{YUV}", *ENC, a])
-b_raw, b = f"{TMP}/p4b-raw.mp4", f"{TMP}/p4b.mp4"
-FAC_D = 2.3
-nf = int(FAC_D * FPS)
-run(["-loop", "1", "-i", f"{K}/plan-V2-facade-reelle-fermee.jpg", "-vf",
-     f"scale=2160:-2,crop=2160:3840,setsar=1,zoompan=z='1.0+0.07*on/{nf}':x='iw/2-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,setsar=1,{YUV}",
-     "-frames:v", str(nf), *ENC, b_raw])
-overlay_texts(b_raw, b, [(text_layer(f"{TMP}/t4.png", caption("Dvora K · Paris 19e"), y_center=1180, scrim=True), 0.35, FAC_D)])
-c = f"{TMP}/p4c.mp4"
-run(["-i", f"{R}/reel-salon-logo-1080p.mp4", "-vf", f"trim=0.15:2.6,setpts=PTS-STARTPTS,{YUV}", *ENC, c])
-dd = f"{TMP}/p4d.mp4"
-wig_len = dur(f"{R}/video-V1-entree-perruques.mp4") - V1_CUT - 0.05
-nw = int(wig_len * FPS)
-run(["-i", f"{R}/video-V1-entree-perruques.mp4", "-vf",
-     f"trim={V1_CUT + 0.04:.3f}:{V1_CUT + 0.04 + wig_len:.3f},setpts=PTS-STARTPTS,scale=2160:3840,"
-     f"zoompan=z='1.0+0.13*on/{nw}':x='iw*0.60-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,{YUV}",
-     *ENC, dd])
-P[4] = f"{TMP}/p4.mp4"
-p4_starts = xfade_chain([a, b, c, dd], [0, 0.3, 0], P[4])
+if need(4):
+    a = f"{TMP}/p4a.mp4"
+    run(["-i", f"{R}/video-10-v2-rue.mp4", "-vf", f"trim=0.8:4.0,setpts=PTS-STARTPTS,{YUV}", *ENC, a])
+    b_raw, b = f"{TMP}/p4b-raw.mp4", f"{TMP}/p4b.mp4"
+    FAC_D = 2.3
+    nf = int(FAC_D * FPS)
+    run(["-loop", "1", "-i", f"{K}/plan-V2-facade-reelle-fermee.jpg", "-vf",
+         f"scale=2160:-2,crop=2160:3840,setsar=1,zoompan=z='1.0+0.07*on/{nf}':x='iw/2-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,setsar=1,{YUV}",
+         "-frames:v", str(nf), *ENC, b_raw])
+    overlay_texts(b_raw, b, [(text_layer(f"{TMP}/t4.png", caption("Dvora K · Paris 19e"), y_center=1180, scrim=True), 0.35, FAC_D)])
+    c = f"{TMP}/p4c.mp4"
+    run(["-i", f"{R}/reel-salon-logo-1080p.mp4", "-vf", f"trim=0.15:2.6,setpts=PTS-STARTPTS,{YUV}", *ENC, c])
+    dd = f"{TMP}/p4d.mp4"
+    wig_len = dur(f"{R}/video-V1-entree-perruques.mp4") - V1_CUT - 0.05
+    nw = int(wig_len * FPS)
+    run(["-i", f"{R}/video-V1-entree-perruques.mp4", "-vf",
+         f"trim={V1_CUT + 0.04:.3f}:{V1_CUT + 0.04 + wig_len:.3f},setpts=PTS-STARTPTS,scale=2160:3840,"
+         f"zoompan=z='1.0+0.13*on/{nw}':x='iw*0.60-(iw/zoom/2)':y='ih*0.40-(ih/zoom/2)':d=1:s=1080x1920:fps=24,{YUV}",
+         *ENC, dd])
+    p4_starts = xfade_chain([a, b, c, dd], [0, 0.3, 0], P[4])
+
+else:
+    la, lb, lc = (dur(f"{TMP}/p4{x}.mp4") for x in "abc")
+    p4_starts = [0.0, la, la + lb - 0.3, la + lb - 0.3 + lc]
 
 # P5. Vidéo 2 : pose par Dvora (texte), elle seule, miroir de dos (texte)
 v2 = f"{R}/video-V2-pose-miroir.mp4"
@@ -210,53 +224,52 @@ run(["-i", v2, "-i", f"{R}/video-V2b-face.mp4", "-filter_complex",
 d5 = dur(raw)
 V2_CUT_A = V2_POSE[1] - V2_POSE[0]
 V2_CUT_B = V2_CUT_A + (V2_ALONE[1] - V2_ALONE[0]) * ALONE_SLOW
-P[5] = f"{TMP}/p5.mp4"
 overlay_texts(raw, P[5], [
     (text_layer(f"{TMP}/t5.png", [("Chaque perruque,", SERIF_I, 92, 1, (255, 255, 255, 255)), ("posée par Dvora", SERIF_I, 92, 1, (255, 255, 255, 255))], y_center=1180, scrim=True), 0.4, V2_CUT_A - 0.05),
     (text_layer(f"{TMP}/t6.png", caption("Rester soi. Rester belle."), y_center=1500, scrim=True), V2_CUT_B + 0.4, d5 - 0.65)])
 
 # P6. Carton final : signature « Dvora K » qui s'écrit, puis les informations
-last = f"{TMP}/v2-last.png"
-run(["-sseof", "-0.1", "-i", v2, "-frames:v", "1", last])
-bg = Image.open(last).convert("RGB").resize((W, H)).filter(ImageFilter.GaussianBlur(28))
-bg = Image.blend(bg, Image.new("RGB", (W, H), (18, 12, 10)), 0.64)
-sig = text_layer(f"{TMP}/e1.png", [("Dvora K", SCRIPT, 200, 0, (255, 255, 255, 255))], y_center=760, shadow=False)
-L2 = text_layer(f"{TMP}/e2.png", [("PERRUQUES NATURELLES", SANS, 34, 9, (235, 222, 205, 255)),
-                                   ("sur-mesure, posées avec douceur", SERIF_I, 46, 1, (235, 222, 205, 255))], y_center=980, shadow=False)
-L3 = text_layer(f"{TMP}/e3.png", [("65 rue d'Hautpoul · Paris 19e", SERIF, 50, 1, (255, 255, 255, 255)),
-                                   ("@dvora_k_perruque", SANS, 38, 3, (255, 255, 255, 230))], y_center=1190, shadow=False)
-L4 = text_layer(f"{TMP}/e4.png", [("Prenez rendez-vous", SERIF_I, 64, 1, (255, 255, 255, 255))], y_center=1400, shadow=False)
-sig_img = Image.open(sig)
-alpha = np.array(sig_img.split()[3])
-cols = np.where(alpha.max(0) > 0)[0]
-x0, x1 = int(cols.min()), int(cols.max())
 END_D, SIG_T0, SIG_D = 6.5, 0.35, 1.5
-layers = [Image.open(p) for p in (L2, L3, L4)]
-fades = [(1.75, 0.6), (2.2, 0.6), (2.65, 0.6)]
-end_dir = f"{TMP}/end"
-os.makedirs(end_dir, exist_ok=True)
-xs = np.arange(W)
-for k in range(int(END_D * FPS)):
-    t = k / FPS
-    fr = bg.copy().convert("RGBA")
-    # signature dévoilée de gauche à droite, avec un bord doux, comme une plume
-    p = min(1.0, max(0.0, (t - SIG_T0) / SIG_D))
-    p = 1 - (1 - p) ** 2
-    edge = x0 + (x1 - x0 + 60) * p
-    ramp = np.clip((edge - xs) / 60.0, 0, 1)
-    m = (alpha * ramp[None, :]).astype(np.uint8)
-    s = sig_img.copy(); s.putalpha(Image.fromarray(m))
-    fr = Image.alpha_composite(fr, s)
-    for lay, (st, fd) in zip(layers, fades):
-        a_ = min(1.0, max(0.0, (t - st) / fd))
-        if a_ > 0:
-            l2 = lay.copy(); l2.putalpha(lay.split()[3].point(lambda v, a_=a_: int(v * a_)))
-            fr = Image.alpha_composite(fr, l2)
-    fo = min(1.0, max(0.0, (END_D - 0.6 - t) / 0.6)) if t > END_D - 0.6 else 1.0
-    fr = Image.blend(Image.new("RGB", (W, H)), fr.convert("RGB"), fo)
-    fr.save(f"{end_dir}/{k:03d}.png")
-P[6] = f"{TMP}/p6.mp4"
-run(["-framerate", str(FPS), "-i", f"{end_dir}/%03d.png", *ENC, P[6]])
+if need(6):
+    last = f"{TMP}/v2-last.png"
+    run(["-sseof", "-0.1", "-i", v2, "-frames:v", "1", last])
+    bg = Image.open(last).convert("RGB").resize((W, H)).filter(ImageFilter.GaussianBlur(28))
+    bg = Image.blend(bg, Image.new("RGB", (W, H), (18, 12, 10)), 0.64)
+    sig = text_layer(f"{TMP}/e1.png", [("Dvora K", SCRIPT, 200, 0, (255, 255, 255, 255))], y_center=760, shadow=False)
+    L2 = text_layer(f"{TMP}/e2.png", [("PERRUQUES NATURELLES", SANS, 34, 9, (235, 222, 205, 255)),
+                                       ("sur-mesure, posées avec douceur", SERIF_I, 46, 1, (235, 222, 205, 255))], y_center=980, shadow=False)
+    L3 = text_layer(f"{TMP}/e3.png", [("65 rue d'Hautpoul · Paris 19e", SERIF, 50, 1, (255, 255, 255, 255)),
+                                       ("@dvora_k_perruque", SANS, 38, 3, (255, 255, 255, 230))], y_center=1190, shadow=False)
+    L4 = text_layer(f"{TMP}/e4.png", [("Prenez rendez-vous", SERIF_I, 64, 1, (255, 255, 255, 255))], y_center=1400, shadow=False)
+    sig_img = Image.open(sig)
+    alpha = np.array(sig_img.split()[3])
+    cols = np.where(alpha.max(0) > 0)[0]
+    x0, x1 = int(cols.min()), int(cols.max())
+    layers = [Image.open(p) for p in (L2, L3, L4)]
+    fades = [(1.75, 0.6), (2.2, 0.6), (2.65, 0.6)]
+    end_dir = f"{TMP}/end"
+    os.makedirs(end_dir, exist_ok=True)
+    xs = np.arange(W)
+    for k in range(int(END_D * FPS)):
+        t = k / FPS
+        fr = bg.copy().convert("RGBA")
+        # signature dévoilée de gauche à droite, avec un bord doux, comme une plume
+        p = min(1.0, max(0.0, (t - SIG_T0) / SIG_D))
+        p = 1 - (1 - p) ** 2
+        edge = x0 + (x1 - x0 + 60) * p
+        ramp = np.clip((edge - xs) / 60.0, 0, 1)
+        m = (alpha * ramp[None, :]).astype(np.uint8)
+        s = sig_img.copy(); s.putalpha(Image.fromarray(m))
+        fr = Image.alpha_composite(fr, s)
+        for lay, (st, fd) in zip(layers, fades):
+            a_ = min(1.0, max(0.0, (t - st) / fd))
+            if a_ > 0:
+                l2 = lay.copy(); l2.putalpha(lay.split()[3].point(lambda v, a_=a_: int(v * a_)))
+                fr = Image.alpha_composite(fr, l2)
+        fo = min(1.0, max(0.0, (END_D - 0.6 - t) / 0.6)) if t > END_D - 0.6 else 1.0
+        fr = Image.blend(Image.new("RGB", (W, H)), fr.convert("RGB"), fo)
+        fr.save(f"{end_dir}/{k:03d}.png")
+    run(["-framerate", str(FPS), "-i", f"{end_dir}/%03d.png", *ENC, P[6]])
 
 # ======================= 2. Assemblage + signature discrète =======================
 order = [P[k] for k in range(7)]
@@ -282,12 +295,14 @@ wm = Image.alpha_composite(wm, sh.filter(ImageFilter.GaussianBlur(6)))
 wm = Image.alpha_composite(wm, glyph)
 wm_path = f"{TMP}/wm.png"; wm.save(wm_path)
 windows = [(t_insta + 0.2, t_street - 0.1), (t_wig + 0.3, t_endcard - 0.1)]   # pas sur la façade ni sur le logo réel
-expr = "+".join(
-    f"between(T,{a0:.3f},{b0:.3f})*min(1,min((T-{a0:.3f})/0.5,({b0:.3f}-T)/0.4))" for a0, b0 in windows)
 video = f"{TMP}/video.mp4"
-run(["-i", body, "-loop", "1", "-i", wm_path, "-filter_complex",
-     f"[1]format=rgba,geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':a='alpha(X,Y)*({expr})'[w];"
-     f"[0][w]overlay=0:0:shortest=1,{YUV}[v]", "-map", "[v]", *ENC, video])
+inputs, fc, lab = ["-i", body], "", "0"
+for k, (a0, b0) in enumerate(windows, 1):
+    inputs += ["-loop", "1", "-t", f"{b0:.3f}", "-i", wm_path]
+    fc += (f"[{k}]format=rgba,fade=t=in:st={a0:.3f}:d=0.5:alpha=1,fade=t=out:st={b0 - 0.4:.3f}:d=0.4:alpha=1[w{k}];"
+           f"[{lab}][w{k}]overlay=0:0:eof_action=pass[o{k}];")
+    lab = f"o{k}"
+run([*inputs, "-filter_complex", fc + f"[{lab}]{YUV}[v]", "-map", "[v]", *ENC, video])
 
 # ======================= 3. Bruitages =======================
 N = int(TV * SR) + SR
