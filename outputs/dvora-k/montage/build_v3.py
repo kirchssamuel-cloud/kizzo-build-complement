@@ -23,9 +23,9 @@ NORM = "settb=1/24,fps=24,setsar=1,format=yuv420p"
 # Points de coupe des nouveaux rushes (secondes, mesurés à la détection de plans)
 V1_CUT = 2.125                 # vidéo 1 : porte -> mur de perruques
 V2_POSE = (0.0, 2.50)          # vidéo 2 : pose par Dvora
-V2_ALONE = (2.58, 3.67)        # vidéo 2 : elle seule, sourire (ralenti 1,6x)
+V2_ALONE = (0.4, 2.9)          # plan de face refait (video-V2b-face.mp4) : elle seule, sourire
 V2_MIRROR = (5.46, 8.04)       # vidéo 2 : de dos au miroir (ralenti 1,25x) ; le gros plan en pleurs (3,71-5,42) est écarté
-ALONE_SLOW, MIRROR_SLOW = 1.6, 1.25
+ALONE_SLOW, MIRROR_SLOW = 1.0, 1.25
 
 
 def run(args):
@@ -202,9 +202,9 @@ p4_starts = xfade_chain([a, b, c, dd], [0, 0.3, 0], P[4])
 v2 = f"{R}/video-V2-pose-miroir.mp4"
 raw = f"{TMP}/p5-raw.mp4"
 MI = "minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:vsbmc=1"
-run(["-i", v2, "-filter_complex",
+run(["-i", v2, "-i", f"{R}/video-V2b-face.mp4", "-filter_complex",
      f"[0:v]trim={V2_POSE[0]}:{V2_POSE[1]},setpts=PTS-STARTPTS,{YUV}[a];"
-     f"[0:v]trim={V2_ALONE[0]}:{V2_ALONE[1]},setpts={ALONE_SLOW}*(PTS-STARTPTS),{MI},{YUV}[b];"
+     f"[1:v]trim={V2_ALONE[0]}:{V2_ALONE[1]},setpts=PTS-STARTPTS,{YUV}[b];"
      f"[0:v]trim={V2_MIRROR[0]}:{V2_MIRROR[1]},setpts={MIRROR_SLOW}*(PTS-STARTPTS),{MI},{YUV}[c];"
      f"[a][b][c]concat=n=3:v=1:a=0[v]", "-map", "[v]", *ENC, raw])
 d5 = dur(raw)
