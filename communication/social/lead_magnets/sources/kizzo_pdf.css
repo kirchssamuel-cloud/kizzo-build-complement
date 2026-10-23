@@ -1,0 +1,82 @@
+/* Charte des ressources Kizzo à imprimer (A4) : Outfit pour les titres, Inter pour le texte */
+/* Instances statiques d'Outfit (OFL) : la police variable serait intégrée au PDF en glyphes Type 3, moins nets et non sélectionnables */
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-SemiBold.ttf'); font-weight: 600; }
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-ExtraBold.ttf'); font-weight: 800 900; }
+/* Inter converti en TrueType et réduit aux caractères latins (outils/otf_vers_ttf.py, puis pyftsubset) */
+@font-face { font-family: 'Inter'; src: url('../../outils/polices/statiques/Inter-Regular.ttf'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../outils/polices/statiques/Inter-Italic.ttf'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Inter'; src: url('../../outils/polices/statiques/Inter-Bold.ttf'); font-weight: 600 900; font-style: normal; }
+
+:root {
+  --orange: #F97316;
+  --orange-clair: #FFEDD5;
+  --orange-pale: #FFF7ED;
+  --nuit: #0F172A;
+  --gris: #475569;
+  --gris-clair: #94A3B8;
+  --trait: #CBD5E1;
+  --bleu: #2FB6E6;
+  --creme: #FFFBF4;
+  --vert: #16A34A;
+  --rayon: 20px;
+}
+
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Inter', sans-serif; color: var(--nuit); font-size: 10.5pt; line-height: 1.42; background: #fff; }
+
+.page { width: 210mm; height: 297mm; padding: 11mm 13mm 9mm; position: relative; overflow: hidden; display: flex; flex-direction: column; break-after: page; }
+.page:last-child { break-after: auto; }
+
+/* En-tête */
+.tete { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5mm; }
+.marque { display: flex; align-items: center; gap: 2.2mm; font-family: 'Outfit'; font-weight: 800; font-size: 17pt; color: var(--nuit); letter-spacing: -0.2pt; }
+.marque img { height: 8.5mm; }
+.etiquette { font-family: 'Outfit'; font-weight: 700; font-size: 8.5pt; letter-spacing: 1.4pt; color: var(--orange); text-transform: uppercase; }
+
+/* Bloc titre « Le Cahier » : papier crème à carreaux Seyès, marge orange */
+.cahier { border-radius: var(--rayon); padding: 7mm 8mm 6.5mm 24mm; margin-bottom: 5mm;
+  background-color: var(--creme);
+  background-image:
+    linear-gradient(90deg, transparent 16mm, var(--orange) 16mm, var(--orange) 16.5mm, transparent 16.5mm),
+    repeating-linear-gradient(180deg, rgba(47,182,230,.38) 0 0.25mm, transparent 0.25mm 8mm),
+    repeating-linear-gradient(180deg, rgba(47,182,230,.16) 0 0.2mm, transparent 0.2mm 2mm);
+}
+h1 { font-family: 'Outfit'; font-weight: 800; font-size: 30pt; line-height: 1.04; letter-spacing: -0.6pt; }
+h1 em, h2 em { font-style: normal; color: var(--orange); }
+.sous-titre { font-family: 'Outfit'; font-weight: 500; font-size: 13pt; color: var(--gris); margin-top: 2.5mm; }
+
+h2 { font-family: 'Outfit'; font-weight: 800; font-size: 15pt; line-height: 1.15; margin-bottom: 2.5mm; display: flex; align-items: center; gap: 2.5mm; }
+h3 { font-family: 'Outfit'; font-weight: 700; font-size: 11.5pt; line-height: 1.2; }
+.num { flex: none; width: 7.2mm; height: 7.2mm; border-radius: 50%; background: var(--orange); color: #fff; font-family: 'Outfit'; font-weight: 800; font-size: 10.5pt; display: inline-flex; align-items: center; justify-content: center; }
+p + p { margin-top: 1.6mm; }
+.petit { font-size: 8.5pt; color: var(--gris); }
+.gris { color: var(--gris); }
+strong { font-weight: 700; }
+
+/* Cartes */
+.carte { background: #fff; border: 0.35mm solid var(--trait); border-radius: var(--rayon); padding: 4.2mm 5mm; }
+.carte.pale { background: var(--orange-pale); border-color: var(--orange-clair); }
+.carte.nuit { background: var(--nuit); border: none; color: #fff; }
+.grille2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.pile > * + * { margin-top: 4mm; }
+
+/* Lignes à remplir et cases à cocher */
+.ligne { display: flex; align-items: flex-end; gap: 2mm; margin-top: 2.6mm; }
+.ligne .trou { flex: 1; border-bottom: 0.35mm dotted var(--gris-clair); height: 5.2mm; }
+.ligne .court { flex: 0 0 18mm; border-bottom: 0.35mm dotted var(--gris-clair); height: 5.2mm; }
+.cases { list-style: none; }
+.cases li { display: flex; align-items: center; gap: 2.4mm; padding: 1.15mm 0; }
+.cases li::before { content: ''; flex: none; width: 4.2mm; height: 4.2mm; border: 0.45mm solid var(--nuit); border-radius: 1.2mm; }
+.cases li .trou { flex: 1; border-bottom: 0.35mm dotted var(--gris-clair); height: 4.4mm; }
+
+/* Bandeau Kizzo de bas de page */
+.bandeau { margin-top: auto; background: var(--nuit); color: #fff; border-radius: var(--rayon); padding: 5mm 6mm; display: flex; align-items: center; gap: 5mm; }
+.bandeau img { height: 17mm; flex: none; }
+.bandeau h3 { color: #fff; font-size: 12.5pt; margin-bottom: 1mm; }
+.bandeau p { font-size: 9.5pt; color: #E2E8F0; }
+.bandeau .url { color: var(--orange); font-family: 'Outfit'; font-weight: 800; font-size: 11pt; }
+.pied { margin-top: 3mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--gris-clair); }

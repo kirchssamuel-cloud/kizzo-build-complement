@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Réviser sans relire : la méthode des 10 minutes · Kizzo</title>
+<link rel="stylesheet" href="kizzo_pdf.css">
+<style>
+  .graphique { display: flex; gap: 12mm; align-items: flex-end; justify-content: center; height: 52mm; padding: 0 4mm; border-bottom: 0.45mm solid var(--nuit); }
+  .groupe { display: flex; gap: 3mm; align-items: flex-end; height: 100%; }
+  .barre { width: 17mm; border-radius: 3mm 3mm 0 0; position: relative; }
+  .barre span { position: absolute; top: -6.5mm; left: 0; right: 0; text-align: center; font-family: 'Outfit'; font-weight: 800; font-size: 12.5pt; }
+  .barre.relit { background: var(--nuit); }
+  .barre.teste { background: var(--orange); }
+  .barre.teste span { color: var(--orange); }
+  .axes { display: flex; gap: 12mm; justify-content: center; padding: 2mm 4mm 0; }
+  .axes div { width: 37mm; text-align: center; font-family: 'Outfit'; font-weight: 700; font-size: 10.5pt; }
+  .legende { display: flex; gap: 6mm; justify-content: center; margin-top: 3.5mm; font-size: 9pt; }
+  .legende span { display: inline-flex; align-items: center; gap: 1.8mm; }
+  .legende i { width: 3.6mm; height: 3.6mm; border-radius: 1mm; display: inline-block; }
+  .verdict { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 2.5mm; }
+  .verdict ul { list-style: none; }
+  .verdict li { font-family: 'Outfit'; font-weight: 700; font-size: 11.5pt; padding: 0.8mm 0; display: flex; gap: 2.4mm; align-items: center; }
+  .verdict .oui li::before { content: '✓'; color: var(--vert); font-weight: 900; }
+  .verdict .non li::before { content: '✕'; color: var(--orange); font-weight: 900; }
+  .etape { display: flex; gap: 5mm; align-items: flex-start; }
+  .etape .num { width: 10mm; height: 10mm; font-size: 15pt; }
+  .etape h3 { font-size: 14pt; margin-bottom: 1.2mm; display: flex; align-items: center; gap: 3mm; }
+  .duree { font-family: 'Outfit'; font-weight: 700; font-size: 8.5pt; background: var(--orange-clair); color: #9A3412; border-radius: 10mm; padding: 0.6mm 2.8mm; }
+  .calendrier { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+  .calendrier div { border-radius: var(--rayon); background: var(--orange-pale); border: 0.35mm solid var(--orange-clair); padding: 3mm 3.5mm; }
+  .calendrier b { display: block; font-family: 'Outfit'; font-weight: 800; font-size: 11pt; }
+  .calendrier span { font-size: 9pt; color: var(--gris); }
+  .questions { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2mm; }
+  .questions .carte { padding: 3.4mm 4.4mm; }
+  .questions h3 { color: var(--orange); font-size: 10.5pt; margin-bottom: 1mm; text-transform: uppercase; letter-spacing: 0.8pt; }
+  .questions ol { list-style: none; counter-reset: q var(--depart); }
+  .questions li { counter-increment: q; display: flex; gap: 2mm; padding: 0.7mm 0; font-size: 10.6pt; }
+  .questions li::before { content: counter(q); flex: none; width: 5mm; font-family: 'Outfit'; font-weight: 800; color: var(--gris-clair); }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <header class="tete">
+    <div class="marque"><img src="../../outils/assets/kizzo_icone.png" alt="">kizzo</div>
+    <div class="etiquette">La méthode · 10 minutes par leçon</div>
+  </header>
+
+  <div class="cahier">
+    <h1>Réviser <em>sans relire</em></h1>
+    <p class="sous-titre">La méthode des 10 minutes,<br>et les 20 questions qui marchent sur toutes les leçons.</p>
+  </div>
+
+  <h2>Pourquoi relire ne marche pas</h2>
+  <p style="margin-bottom:9mm">Deux chercheurs américains ont fait lire un texte à des étudiants. Un groupe l'a relu 4 fois. L'autre l'a lu 1 fois, puis a essayé 3 fois de s'en souvenir, de mémoire. Ensuite, on leur a demandé ce qu'ils avaient retenu.</p>
+
+  <div class="carte" style="padding-top:9mm">
+    <div class="graphique">
+      <div class="groupe">
+        <div class="barre relit" style="height:83%"><span>83 %</span></div>
+        <div class="barre teste" style="height:71%"><span>71 %</span></div>
+      </div>
+      <div class="groupe">
+        <div class="barre relit" style="height:40%"><span>40 %</span></div>
+        <div class="barre teste" style="height:60%"><span>60 %</span></div>
+      </div>
+    </div>
+    <div class="axes"><div>5 minutes après</div><div>1 semaine après</div></div>
+    <div class="legende">
+      <span><i style="background:var(--nuit)"></i>Relit le texte 4 fois</span>
+      <span><i style="background:var(--orange)"></i>Le lit 1 fois, puis s'interroge 3 fois</span>
+    </div>
+    <p class="petit" style="text-align:center; margin-top:2mm">Part du texte retrouvée de mémoire (arrondie). Roediger et Karpicke, <i>Psychological Science</i>, 2006.</p>
+  </div>
+
+  <div class="carte pale" style="margin-top:4mm">
+    <h3 style="margin-bottom:1mm">Juste après, relire gagne. Une semaine après, c'est l'inverse.</h3>
+    <p>Relire donne l'impression de savoir : le texte devient familier. Mais le jour du contrôle, il n'y a plus de texte sous les yeux. Il faut aller chercher l'information dans sa tête. Et c'est exactement ce que s'interroger entraîne.</p>
+  </div>
+
+  <div class="carte" style="margin-top:4mm">
+    <h3>10 méthodes de révision passées au crible</h3>
+    <p class="gris" style="margin-top:0.8mm">En 2013, une équipe de chercheurs a évalué les techniques que les élèves utilisent pour réviser.</p>
+    <div class="verdict">
+      <div><p class="petit">Les plus utiles</p><ul class="oui"><li>Se tester</li><li>Étaler ses révisions</li></ul></div>
+      <div><p class="petit">Parmi les moins utiles</p><ul class="non"><li>Relire</li><li>Surligner</li></ul></div>
+    </div>
+    <p class="petit" style="margin-top:1.5mm">Dunlosky et al., <i>Psychological Science in the Public Interest</i>, 2013.</p>
+  </div>
+
+  <div class="pied" style="margin-top:auto"><span>Offert par Kizzo · kizzo.fr</span><span>La méthode en 3 étapes : page suivante</span></div>
+</section>
+
+<section class="page">
+  <header class="tete">
+    <div class="marque"><img src="../../outils/assets/kizzo_icone.png" alt="">kizzo</div>
+    <div class="etiquette">La méthode · 10 minutes par leçon</div>
+  </header>
+
+  <div class="cahier">
+    <h1><em>10 minutes</em>, 3 étapes</h1>
+    <p class="sous-titre">Pas besoin de connaître la leçon : les réponses sont dans le cahier.</p>
+  </div>
+
+  <div class="pile">
+    <div class="carte etape"><span class="num">1</span><div>
+      <h3>Il la lit une fois. On ferme le cahier. <span class="duree">2 min</span></h3>
+      <p>Une lecture attentive, pas trois en diagonale. Puis le cahier se ferme : c'est là que le travail commence.</p>
+    </div></div>
+    <div class="carte etape"><span class="num">2</span><div>
+      <h3>Tu lui poses 5 questions. <span class="duree">5 min</span></h3>
+      <p>Il répond de mémoire, à l'oral. Après chaque réponse, vous vérifiez ensemble dans le cahier. S'il bloque : un indice, pas la réponse.</p>
+    </div></div>
+    <div class="carte etape"><span class="num">3</span><div>
+      <h3>Demain, on recommence. Sans relire avant. <span class="duree">3 min</span></h3>
+      <p>Trois questions le lendemain, puis trois jours après, puis la veille du contrôle. Les questions ratées passent en premier.</p>
+    </div></div>
+  </div>
+
+  <div class="carte nuit" style="margin-top:4mm; text-align:center; padding:5mm">
+    <p class="etiquette" style="color:var(--orange)">La règle d'or</p>
+    <p style="font-family:'Outfit'; font-weight:800; font-size:17pt; margin-top:1mm">Il cherche dans sa tête<br>avant de chercher dans le cahier.</p>
+  </div>
+
+  <h2 style="margin-top:5mm">Le calendrier</h2>
+  <div class="calendrier">
+    <div><b>Aujourd'hui</b><span>5 questions</span></div>
+    <div><b>Demain</b><span>3 questions</span></div>
+    <div><b>Dans 3 jours</b><span>3 questions</span></div>
+    <div><b>La veille du contrôle</b><span>Les questions ratées</span></div>
+  </div>
+
+  <h2 style="margin-top:5mm">Si ça coince</h2>
+  <div class="grille2" style="grid-template-columns:1fr 1fr 1fr; gap:3mm">
+    <div class="carte"><h3>Il ne trouve pas</h3><p style="margin-top:1mm">Un indice : la première lettre, la page, un exemple. Pas la réponse.</p></div>
+    <div class="carte"><h3>Il s'énerve</h3><p style="margin-top:1mm">On s'arrête à 3 questions. Ce qui compte, c'est de recommencer demain.</p></div>
+    <div class="carte"><h3>« Je la sais ! »</h3><p style="margin-top:1mm">« Super. Alors explique-la-moi, cahier fermé. »</p></div>
+  </div>
+
+  <div class="pied" style="margin-top:auto"><span>Offert par Kizzo · kizzo.fr</span><span>Les 20 questions : page suivante</span></div>
+</section>
+
+<section class="page">
+  <header class="tete">
+    <div class="marque"><img src="../../outils/assets/kizzo_icone.png" alt="">kizzo</div>
+    <div class="etiquette">À garder près du cahier</div>
+  </header>
+
+  <div class="cahier" style="padding-top:6mm; padding-bottom:5.5mm">
+    <h1>Les <em>20 questions</em> qui marchent sur toutes les leçons</h1>
+  </div>
+
+  <div class="questions">
+    <div class="carte"><h3>Pour vérifier qu'il a compris</h3><ol style="--depart:0">
+      <li>Explique-moi avec tes mots.</li>
+      <li>Donne-moi un exemple.</li>
+      <li>Quelle est la différence entre ___ et ___ ?</li>
+      <li>Pourquoi ___ ?</li>
+    </ol></div>
+    <div class="carte"><h3>Histoire et géographie</h3><ol style="--depart:4">
+      <li>Quand ? Qui ? Où ?</li>
+      <li>Que s'est-il passé juste avant ? Et juste après ?</li>
+      <li>Pourquoi c'est important ?</li>
+      <li>Montre-le-moi sur la carte.</li>
+    </ol></div>
+    <div class="carte"><h3>Sciences</h3><ol style="--depart:8">
+      <li>Comment ça marche ?</li>
+      <li>Que se passerait-il si ___ ?</li>
+      <li>Refais-moi le schéma de mémoire.</li>
+    </ol></div>
+    <div class="carte"><h3>Français</h3><ol style="--depart:11">
+      <li>Donne-moi la règle, puis un exemple.</li>
+      <li>Où est le piège de cette règle ?</li>
+      <li>Comment s'écrit ___, et pourquoi ?</li>
+    </ol></div>
+    <div class="carte"><h3>Maths</h3><ol style="--depart:14">
+      <li>Refais l'exercice corrigé sans regarder.</li>
+      <li>Invente-moi un problème avec cette règle.</li>
+      <li>Comment tu as trouvé ?</li>
+    </ol></div>
+    <div class="carte"><h3>Langues et bonus</h3><ol style="--depart:17">
+      <li>Comment on dit ___ ? Fais-moi une phrase avec.</li>
+      <li>Si c'était toi le prof, quelle question tu mettrais au contrôle ?</li>
+      <li>Explique-la-moi comme si j'avais 5 ans.</li>
+    </ol></div>
+  </div>
+
+  <div class="carte pale" style="margin-top:4mm">
+    <h3 style="margin-bottom:1.2mm">Comment s'en servir</h3>
+    <div class="grille2" style="grid-template-columns:1fr 1fr 1fr; gap:4mm">
+      <p><b>5 questions, pas 20.</b> Choisis celles qui collent à la leçon du jour.</p>
+      <p><b>Remplace les ___</b> par un mot, une date ou un nom de la leçon.</p>
+      <p><b>Note les questions ratées.</b> Ce sont elles qui reviennent demain.</p>
+    </div>
+  </div>
+
+  <div class="bandeau" style="margin-top:auto">
+    <img src="../../outils/assets/kizzo_logo.png" alt="Kizzo">
+    <div>
+      <h3>Kizzo fait exactement ça, automatiquement.</h3>
+      <p>Tu prends sa leçon en photo, le quiz arrive sur son écran, et chaque bonne réponse lui débloque du temps d'écran. Il révise, il gagne. Et toi, tu n'as plus rien à négocier.</p>
+      <p style="margin-top:1.5mm">Bêta ouverte : <span class="url">kizzo.fr</span></p>
+    </div>
+  </div>
+  <p class="petit" style="margin-top:2.5mm">Sources : Roediger, H. L. et Karpicke, J. D. (2006), <i>Test-enhanced learning</i>, Psychological Science, 17(3), 249-255. Dunlosky, J. et al. (2013), <i>Improving Students' Learning With Effective Learning Techniques</i>, Psychological Science in the Public Interest, 14(1), 4-58.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+[
+ {
+  "type": "quiz",
+  "label": "LE QUIZ DES PARENTS",
+  "title": "Comment finir\nla **bataille des écrans**\nsans crier ?",
+  "size": 88,
+  "answers": [
+   [
+    "A",
+    "Couper le Wi-Fi"
+   ],
+   [
+    "B",
+    "Cacher la tablette"
+   ],
+   [
+    "C",
+    "Lui faire gagner son écran"
+   ]
+  ],
+  "hint": "Swipe pour la réponse"
+ },
+ {
+  "type": "reveal",
+  "label": "LA RÉPONSE",
+  "title": "La bonne réponse ? **La C.**",
+  "size": 92,
+  "answers": [
+   [
+    "A",
+    "Couper le Wi-Fi",
+    "bad",
+    "Ça marche… jusqu'à demain soir."
+   ],
+   [
+    "B",
+    "Cacher la tablette",
+    "bad",
+    "Il la retrouve toujours."
+   ],
+   [
+    "C",
+    "Lui faire gagner son écran",
+    "good"
+   ]
+  ],
+  "annot": "C'est tout le principe de Kizzo"
+ },
+ {
+  "type": "reveal",
+  "label": "LE PRINCIPE KIZZO",
+  "title": "L'écran ne se\nnégocie plus.\n**Il se gagne.**",
+  "size": 104,
+  "answers": [
+   [
+    "",
+    "« Encore 5 minutes ! »",
+    "bad",
+    "Avant : la même négociation, tous les soirs."
+   ],
+   [
+    "",
+    "« J'ai gagné 15 minutes ! »",
+    "good",
+    "Avec Kizzo : il révise d'abord, il joue ensuite."
+   ]
+  ]
+ },
+ {
+  "type": "notebook",
+  "label": "ÉTAPE 1",
+  "title": "Tu prends sa leçon\n**en photo.**",
+  "size": 84,
+  "max_lines": 2,
+  "text": "Maths, histoire, anglais… Kizzo reconnaît la matière."
+ },
+ {
+  "type": "quizcard",
+  "label": "ÉTAPE 2",
+  "title": "Le quiz arrive\n**sur son écran.**",
+  "size": 84,
+  "max_lines": 2,
+  "text": "Généré sur SA leçon, pas sur un programme générique."
+ },
+ {
+  "type": "ring",
+  "label": "ÉTAPE 3",
+  "title": "Bonne réponse =\n**temps d'écran.**",
+  "size": 84,
+  "max_lines": 2,
+  "text": "Il révise, il gagne. Et toi, tu n'as plus à dire non."
+ },
+ {
+  "type": "check",
+  "label": "ET TOI ?",
+  "title": "Pendant ce temps,\n**tu souffles.**",
+  "size": 92,
+  "items": [
+   [
+    "Tu suis ses progrès",
+    "Matière par matière, dans ton appli."
+   ],
+   [
+    "Vous fixez les règles ensemble",
+    "Combien de minutes par bonne réponse."
+   ],
+   [
+    "Fini les négociations du soir",
+    "La règle est claire pour tout le monde."
+   ]
+  ]
+ },
+ {
+  "type": "cta",
+  "label": "BIENTÔT",
+  "title": "Kizzo arrive.\n**Tu veux tester ?**",
+  "size": 100,
+  "text": "On ouvre la bêta aux premières familles.",
+  "button": "Rejoins la bêta sur kizzo.fr",
+  "actions": [
+   [
+    "plane",
+    "Envoie ce post à l'autre parent"
+   ],
+   [
+    "bookmark",
+    "Enregistre-le pour ce soir"
+   ]
+  ]
+ }
+]

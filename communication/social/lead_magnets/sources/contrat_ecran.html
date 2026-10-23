@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Notre contrat d'écran · Kizzo</title>
+<link rel="stylesheet" href="kizzo_pdf.css">
+<style>
+  .temps { width: 100%; border-collapse: separate; border-spacing: 0; border: 0.35mm solid var(--trait); border-radius: var(--rayon); overflow: hidden; }
+  .temps th, .temps td { padding: 2.4mm 4mm; text-align: left; border-bottom: 0.35mm solid var(--trait); }
+  .temps tr:last-child td { border-bottom: none; }
+  .temps th { font-family: 'Outfit'; font-weight: 700; font-size: 9.5pt; color: var(--gris); background: var(--orange-pale); }
+  .temps td:first-child { font-family: 'Outfit'; font-weight: 700; font-size: 11pt; width: 34%; }
+  .temps td + td { border-left: 0.35mm solid var(--trait); height: 11mm; }
+  .champs { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 5mm; margin-bottom: 4.5mm; }
+  .champs .ligne { margin-top: 0; font-family: 'Outfit'; font-weight: 600; font-size: 10pt; }
+  .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .signatures div { border: 0.45mm dashed var(--gris-clair); border-radius: var(--rayon); height: 23mm; padding: 2.5mm 4mm; font-family: 'Outfit'; font-weight: 700; font-size: 9.5pt; color: var(--gris); }
+  .page1 .carte { padding: 3.6mm 4.6mm; }
+  .page1 h2 { font-size: 13pt; margin-bottom: 1.2mm; }
+  .page1 .cases li { padding: 0.75mm 0; }
+  .page1 .ligne { margin-top: 2mm; }
+  .conseil { display: flex; gap: 4mm; align-items: flex-start; }
+  .conseil h3 { margin-bottom: 0.8mm; }
+  .erreurs li { list-style: none; display: flex; gap: 3mm; align-items: flex-start; padding: 1.4mm 0; }
+  .erreurs li::before { content: '✕'; color: var(--orange); font-family: 'Outfit'; font-weight: 800; font-size: 12pt; line-height: 1.1; }
+</style>
+</head>
+<body>
+
+<section class="page page1">
+  <header class="tete">
+    <div class="marque"><img src="../../outils/assets/kizzo_icone.png" alt="">kizzo</div>
+    <div class="etiquette">À imprimer · À remplir ensemble</div>
+  </header>
+
+  <div class="cahier">
+    <h1>Notre contrat <em>d'écran</em></h1>
+    <p class="sous-titre">Écrit ensemble. Signé ensemble. Relu dans 2 semaines.</p>
+  </div>
+
+  <div class="champs">
+    <div class="ligne">La famille <span class="trou"></span></div>
+    <div class="ligne">Signé le <span class="trou"></span></div>
+    <div class="ligne">On le relit le <span class="trou"></span></div>
+  </div>
+
+  <div class="carte" style="margin-bottom:3.5mm">
+    <h2><span class="num">1</span>Nos temps d'écran</h2>
+    <table class="temps">
+      <tr><th></th><th>Combien de temps ?</th><th>À quel moment ?</th></tr>
+      <tr><td>Les jours d'école</td><td></td><td></td></tr>
+      <tr><td>Le mercredi</td><td></td><td></td></tr>
+      <tr><td>Le week-end et les vacances</td><td></td><td></td></tr>
+    </table>
+  </div>
+
+  <div class="grille2" style="margin-bottom:3.5mm">
+    <div class="carte">
+      <h2><span class="num">2</span>Nos zones sans écran</h2>
+      <ul class="cases">
+        <li>À table</li>
+        <li>Dans la chambre, la nuit</li>
+        <li>La dernière heure avant de dormir</li>
+        <li>Le matin, avant l'école</li>
+        <li><span class="trou"></span></li>
+      </ul>
+    </div>
+    <div class="carte">
+      <h2><span class="num">3</span>Comment on gagne du temps</h2>
+      <div class="ligne" style="margin-top:0.5mm">Je gagne <span class="court"></span> minutes quand :</div>
+      <ul class="cases">
+        <li>mes devoirs sont finis</li>
+        <li>je réponds à 3 questions sur ma leçon</li>
+        <li>j'aide à la maison : <span class="trou"></span></li>
+      </ul>
+      <div class="ligne">Maximum par jour : <span class="court"></span> minutes</div>
+    </div>
+  </div>
+
+  <div class="grille2" style="margin-bottom:3.5mm">
+    <div class="carte">
+      <h2><span class="num">4</span>Le signal de fin</h2>
+      <p>5 minutes avant, on me prévient comme ça :</p>
+      <div class="ligne"><span class="trou"></span></div>
+      <p style="margin-top:2mm">Quand c'est fini, je range l'écran ici :</p>
+      <div class="ligne"><span class="trou"></span></div>
+    </div>
+    <div class="carte">
+      <h2><span class="num">5</span>Si on ne respecte pas le contrat</h2>
+      <p><strong>On ne crie pas : on en parle.</strong></p>
+      <p>La conséquence, on la choisit maintenant, ensemble :</p>
+      <div class="ligne"><span class="trou"></span></div>
+      <div class="ligne"><span class="trou"></span></div>
+    </div>
+  </div>
+
+  <div class="grille2">
+    <div class="carte">
+      <h2><span class="num">6</span>Les parents s'engagent aussi</h2>
+      <ul class="cases">
+        <li>Pas de téléphone à table</li>
+        <li>Prévenir 5 minutes avant de couper</li>
+        <li>Respecter le temps gagné</li>
+        <li><span class="trou"></span></li>
+      </ul>
+    </div>
+    <div class="signatures" style="grid-template-columns:1fr; gap:3mm">
+      <div>Signature de l'enfant</div>
+      <div>Signature des parents</div>
+    </div>
+  </div>
+
+  <div class="pied"><span>Modèle offert par Kizzo · kizzo.fr</span><span>Le mode d'emploi est au verso</span></div>
+</section>
+
+<section class="page">
+  <header class="tete">
+    <div class="marque"><img src="../../outils/assets/kizzo_icone.png" alt="">kizzo</div>
+    <div class="etiquette">Le mode d'emploi</div>
+  </header>
+
+  <div class="cahier">
+    <h1>15 minutes pour qu'il<br><em>tienne vraiment</em></h1>
+    <p class="sous-titre">Un contrat d'écran marche quand l'enfant l'a écrit avec vous.</p>
+  </div>
+
+  <div class="pile">
+    <div class="carte conseil"><span class="num">1</span><div>
+      <h3>Remplissez-le ensemble, au calme.</h3>
+      <p>Pas juste après une crise : un dimanche, au goûter. Une règle qu'il a aidé à écrire, il la défend.</p>
+    </div></div>
+    <div class="carte conseil"><span class="num">2</span><div>
+      <h3>Commencez par sa proposition.</h3>
+      <p>Il propose, vous ajustez. Vous négociez une fois, au lieu de tous les soirs.</p>
+    </div></div>
+    <div class="carte conseil"><span class="num">3</span><div>
+      <h3>Des chiffres, pas des mots flous.</h3>
+      <p>« Un peu », ça ne veut plus rien dire à 21 h. « 30 minutes », si.</p>
+    </div></div>
+    <div class="carte conseil"><span class="num">4</span><div>
+      <h3>Affichez-le.</h3>
+      <p>Sur le frigo. Quand ça coince, ce n'est plus vous contre lui : c'est ce que vous avez signé ensemble.</p>
+    </div></div>
+    <div class="carte conseil"><span class="num">5</span><div>
+      <h3>Relisez-le dans 2 semaines.</h3>
+      <p>Ce qui ne marche pas, on le change ensemble. Un contrat qui ne bouge jamais finit à la poubelle.</p>
+    </div></div>
+  </div>
+
+  <div class="carte pale" style="margin-top:5mm">
+    <h2 style="margin-bottom:1mm">Les 3 erreurs qui font échouer un contrat</h2>
+    <ul class="erreurs">
+      <li><span><strong>L'écrire seul</strong> et le présenter comme un ultimatum.</span></li>
+      <li><span><strong>Le changer un soir de fatigue</strong> : « Bon, ce soir, ça va… »</span></li>
+      <li><span><strong>Oublier les engagements des parents.</strong> Lui, il ne les oubliera pas.</span></li>
+    </ul>
+  </div>
+
+  <div class="bandeau" style="margin-top:auto">
+    <img src="../../outils/assets/kizzo_logo.png" alt="Kizzo">
+    <div>
+      <h3>Et si l'écran se gagnait tout seul ?</h3>
+      <p>Avec Kizzo, tu prends sa leçon en photo, le quiz arrive sur son écran, et chaque bonne réponse lui débloque du temps d'écran.</p>
+      <p style="margin-top:1.5mm">Bêta ouverte : <span class="url">kizzo.fr</span></p>
+    </div>
+  </div>
+  <div class="pied"><span>Modèle offert par Kizzo · kizzo.fr</span><span>Imprime, remplis, signe, affiche.</span></div>
+</section>
+
+</body>
+</html>
