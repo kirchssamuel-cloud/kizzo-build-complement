@@ -98,6 +98,21 @@ ManyChat indique (septembre 2026) que ses automatisations TikTok ne sont pas enc
 6. **La première heure** : on répond à chaque commentaire avec le mot-clé, en variant la formulation (des réponses identiques en série passent pour du spam). Par exemple : « Envoie-nous CONTRAT en message, tu le reçois tout de suite 📩 »
 7. **La vidéo-réponse**, l'arme de TikTok : on répond en vidéo aux meilleurs commentaires. Ça fait un nouveau post, avec le commentaire affiché en accroche.
 
+### Les textes à coller dans TikTok
+Les mots-clés (40 caractères au maximum) et les réponses (500 au maximum) sont relus par TikTok en 1 à 5 jours ouvrés, et **toute modification repasse en relecture** : les adresses doivent donc être les bonnes dès le premier envoi. TikTok ne déclenche la réponse que sur un mot **exact** : on crée chaque mot avec et sans accent.
+
+| Mots-clés à créer | Réponse |
+|---|---|
+| `CONTRAT` | Voici le contrat d'écran de la famille, à imprimer et à signer avec ton enfant : kizzo.fr/contrat<br>Le conseil qui change tout : remplis-le avec lui, pas à sa place. Une règle qu'il a aidé à écrire, il la défend.<br>Kizzo ouvre sa bêta aux premières familles : envoie-nous BETA pour avoir une place. |
+| `CRISE` | Voici les 7 phrases pour arrêter l'écran sans crise, et les 3 à éviter : kizzo.fr/crise<br>Commence ce soir par la n°1 : « Dans 5 minutes, on arrête. Tu mets le minuteur ? »<br>Kizzo ouvre sa bêta aux premières familles : envoie-nous BETA pour avoir une place. |
+| `METHODE` et `MÉTHODE` | Voici la méthode des 10 minutes pour qu'il retienne sa leçon sans la relire, avec les 20 questions qui marchent sur toutes les leçons : kizzo.fr/methode<br>La règle d'or : il cherche dans sa tête avant de chercher dans le cahier.<br>Kizzo fait ça automatiquement. Envoie-nous BETA pour avoir une place. |
+| `BETA` et `BÊTA` | Kizzo, c'est simple : tu prends la leçon de ton enfant en photo, le quiz arrive sur son écran, et chaque bonne réponse lui débloque du temps d'écran.<br>On ouvre la bêta aux premières familles. Inscris-toi ici : kizzo.fr<br>Tu veux aussi notre méthode pour réviser en 10 minutes ? Envoie-nous METHODE. |
+
+**Message de bienvenue** (250 caractères au maximum), pour ceux qui écrivent autre chose qu'un mot-clé :
+> Bienvenue chez Kizzo ! Pour recevoir une ressource gratuite, envoie-nous un de ces mots : CONTRAT (contrat d'écran), CRISE (7 phrases anti-crise), METHODE (réviser en 10 min) ou BETA (accès à la bêta).
+
+**Avant le premier appel à l'action sur TikTok**, les trois PDF doivent être en ligne aux adresses `kizzo.fr/contrat`, `kizzo.fr/crise` et `kizzo.fr/methode` (section 5).
+
 **Le lien en bio sur TikTok** ne s'affiche qu'avec un **compte Entreprise vérifié** : TikTok vérifie l'entreprise avec ses documents officiels (le Kbis). La vérification débloque aussi un lien cliquable sous les vidéos. À lancer dès que possible ; en attendant, l'adresse courte fait le travail.
 
 ---
