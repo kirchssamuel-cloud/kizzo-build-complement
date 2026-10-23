@@ -35,6 +35,8 @@ Samuel est actif sur LinkedIn, où il documente son parcours. X sert de relais. 
 ## FC1 : « J'ai 23 ans, pas d'enfant… »
 À publier lundi 26 octobre, 8h30, avec la vidéo.
 
+La vidéo FC1 s'ouvre sur « Marre d'être le méchant ? » (le hook qui marche en pub). Sur LinkedIn, le public est fait de fondateurs, de gens de l'éducation et de journalistes : on garde ici le hook B, le parcours, qui parle mieux à ce réseau. Les deux se comparent.
+
 **LinkedIn**
 ```
 J'ai 23 ans. Pas d'enfant. Et je construis une appli pour les parents.

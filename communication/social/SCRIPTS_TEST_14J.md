@@ -25,31 +25,39 @@ Chaque script suit la méthode de `METHODE_SCRIPT.md` : hook, pic d'intrigue, va
 - **la première image, c'est déjà la première phrase** ;
 - les objets à prévoir : un cahier d'écolier à grands carreaux, un minuteur de cuisine.
 
+**Deux hooks par vidéo.** Pour chaque vidéo, Samuel enregistre **deux débuts** (A et B) puis le même corps. Le montage garde A ; B sert au test de hook du 6 novembre, sans retourner.
+- FC1 : A « Marre d'être le méchant ? » · B « J'ai 23 ans. Pas d'enfant. Et je construis une appli pour les parents. »
+- FC2 : A « Arrête de limiter le temps d'écran de ton enfant. » · B « Couper le Wi-Fi marche 30 secondes. »
+- FC3 : A « Si ton enfant relit sa leçon pour l'apprendre, il perd son temps. » · B « Le surligneur n'aide presque pas à retenir. »
+
 Samuel m'envoie les rushs ; je fais le montage (coupes, textes, stickers).
 
 **Les lignes marquées [à confirmer] ne sont dites que si elles sont vraies pour Samuel.** Sinon, on les coupe.
 
 **Plan B** si Samuel ne veut pas apparaître : FC2 et FC3 passent en narration sur images, ou sont tournées par Shmoulik, en vrai.
 
-### FC1. « J'ai 23 ans, pas d'enfant… » · dim. 25 oct., 20 h 45 · 40 s · BÊTA
-- **Question à faire naître** : pourquoi un garçon de 23 ans sans enfant fait ça, et qu'a-t-il trouvé ?
-- **Émotion** : curiosité.
+### FC1. « Marre d'être le méchant ? » · dim. 25 oct., 20 h 45 · 40 s · BÊTA
+- **Pourquoi ce hook.** Dans tes pubs, la vidéo « Marre d'être le méchant » fait 5,83 % de clics (contre 1,55 % pour la pub de marque) et garde 59 % des gens à 3 s (voir `PLANNING.md`, « Nos références »).
+- **Question à faire naître** : comment ne plus être celui qui dit non ?
+- **Émotion** : douleur, puis soulagement.
 
 | Temps | Bloc | Image | Texte dit |
 |---|---|---|---|
-| 0-3 s | Hook | Samuel, un cahier d'écolier à la main. À l'écran : « 23 ans. 0 enfant. 1 appli pour les parents. » | « J'ai 23 ans. Pas d'enfant. Et je construis une appli pour les parents. » |
+| 0-3 s | Hook | Samuel face caméra, une tablette éteinte dans une main, l'autre main levée comme un « stop ». À l'écran : « Marre d'être le méchant ? » | « Marre d'être le méchant ? Celui qui dit "éteins ça", tous les soirs ? » |
 | 2-5 s | CTA tôt | Sticker : « 🚀 La bêta : commente BÊTA » | — |
-| 3-9 s | Pic d'intrigue (lire dans les pensées, histoire perso) | Plan serré | « Je sais ce que tu te dis : "il n'y connaît rien". » · « Les enfants, non. Mais j'en étais un il n'y a pas si longtemps. » · [à confirmer] « J'avais une console dans ma chambre. Et des parents qui criaient "éteins ça". » |
+| 3-9 s | Pic d'intrigue (lire dans les pensées, histoire perso) | Plan serré | « Et non, ce n'est pas toi le problème. » · « J'ai 23 ans, pas d'enfant. Mais [à confirmer] j'avais une console dans ma chambre, et des parents qui criaient "éteins ça". » |
 | 9-24 s | Valeur | Alternance de plans serrés et larges | « Le problème, ce n'est pas l'écran. C'est la coupure. » · « L'écran s'arrête sans prévenir, et c'est la crise. » · « Ce qui marche : qu'il le gagne. Pas qu'on le lui arrache. » · « Ce soir, essaie : avant l'écran, trois questions sur sa leçon. » |
-| 24-34 s | Climax et contrepied | Samuel pose le cahier | « Alors j'ai construit une appli de contrôle parental… » · « où ce n'est plus toi qui dis non. C'est sa leçon qui dit oui. » · « Tu prends sa leçon en photo. Le quiz arrive sur son écran. Bonne réponse : du temps d'écran. » |
+| 24-34 s | Climax et contrepied | Samuel pose la tablette | « Alors on construit une appli où ce n'est plus toi qui dis non. » · « C'est sa leçon qui dit oui. » · « Tu prends sa leçon en photo. Le quiz arrive sur son écran. Bonne réponse : du temps d'écran. » |
 | 34-40 s | CTA | À l'écran : « Commente BÊTA » | « On ouvre la bêta aux premières familles. Commente BÊTA, je t'envoie l'accès. » |
+
+**Hook B** (à enregistrer aussi) : « J'ai 23 ans. Pas d'enfant. Et je construis une appli pour les parents. » Il enchaîne sur « Je sais ce que tu te dis : "il n'y connaît rien" », puis sur le même corps.
 
 **Variante de hook** (seulement si Samuel accepte de rendre public le montant de sa levée de fonds) : « J'ai levé [montant] pour régler un problème de parents. »
 
 **Légende** :
-> J'ai 23 ans, pas d'enfant… et je construis Kizzo. Le principe : ce n'est plus toi qui dis non, c'est sa leçon qui dit oui. Tu prends sa leçon en photo, le quiz arrive sur son écran, chaque bonne réponse lui débloque du temps d'écran.
+> Marre d'être le méchant ? 😮‍💨 Le problème, ce n'est pas l'écran, c'est la coupure. On construit Kizzo pour que ce soit sa leçon qui dise oui : tu la prends en photo, le quiz arrive sur son écran, chaque bonne réponse lui débloque du temps d'écran.
 > 🚀 Commente BÊTA pour faire partie des premières familles.
-> #entrepreneur #parents #tempsdecran #devoirs #kizzo
+> #parents #tempsdecran #devoirs #parentalite #kizzo
 
 ### FC2. « Arrête de limiter le temps d'écran de ton enfant. » · jeu. 29 oct., 20 h 45 · 40 s · CONTRAT
 - **Question à faire naître** : quoi ?! Pourquoi ? Et je fais quoi, alors ?
@@ -358,4 +366,4 @@ Deux modifications pour suivre la méthode :
 ---
 
 ## Le test de hook (vendredi 6 novembre, 12 h 30, TikTok seulement)
-On reprend la vidéo de la semaine 1 qui a le meilleur pourcentage moyen regardé. Le corps de la vidéo ne change pas ; seules les 3 premières secondes changent, avec un hook d'un autre levier (par exemple un chiffre à la place d'une question). La comparaison entre les deux versions dit ce qui compte le plus : le sujet, ou le hook.
+On reprend la vidéo de la semaine 1 qui a le meilleur pourcentage moyen regardé. Le corps de la vidéo ne change pas ; seules les 3 premières secondes changent, avec un hook d'un autre levier (par exemple un chiffre à la place d'une question). **Si c'est une vidéo face caméra, le hook B est déjà enregistré.** La comparaison entre les deux versions dit ce qui compte le plus : le sujet, ou le hook.

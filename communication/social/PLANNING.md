@@ -75,6 +75,11 @@ Documents liés :
    - Kling : 60 crédits ;
    - Seedance : 112,5 crédits ;
    - non : il est remplacé par le PV-bonus, à 0 crédit.
+8. **Faire remonter l'inscription à la bêta** : aujourd'hui, 360 clics de pubs et aucune inscription mesurée par Meta. Il faut :
+   - que le formulaire de kizzo.fr envoie l'événement « Lead » (pixel Meta) ;
+   - qu'il alimente Brevo (c'est en cours) ;
+   - que les liens des réseaux portent une balise de suivi (`?utm_source=instagram&utm_medium=bio`, `utm_source=tiktok`).
+9. **Décider du budget de promotion** (section « Un petit budget pour avoir des chiffres comparables ») : 10 € par vidéo, soit 140 €, ou rien.
 
 **Le nombre de places de la bêta.** Afficher « 100 premières familles » crée de l'urgence, mais seulement si c'est vrai. C'est à Samuel de décider.
 
@@ -106,7 +111,38 @@ On les note dans `../SUIVI_PUBLICATIONS.csv`. Si c'est plus simple, Samuel m'env
 | **Abonnés gagnés, pour 1 000 vues** | Statistiques | L'envie de revoir le compte | 5 ou plus | Moins de 1 |
 | **E-mails de la bêta** | ManyChat, étiquette « bêta » | La conversion | Suivi chaque semaine | — |
 
-**Ce sont des seuils de départ.** Au bilan du jour 7, on les recale sur nos propres médianes.
+**Ce sont des seuils de départ.** Ils sont cohérents avec tes pubs (voir plus bas : 59 % et 48 % encore là à 3 s). Au bilan du jour 7, on les recale sur nos propres médianes.
+
+### Nos références, tirées de tes pubs Facebook (lues le 23 octobre 2026)
+Sur les 90 derniers jours, deux vidéos ont assez d'affichages pour être lues. Le public est froid : des parents francophones de 30 à 50 ans. Les trois autres pubs ont reçu moins de 200 affichages chacune : aucune lecture possible.
+
+| | Pub « Temps d'écran = apprentissage » | Vidéo de Samuel « Marre d'être le méchant » |
+|---|---|---|
+| Affichages | 13 428 | 2 606 |
+| Dépensé | 76,86 € | 6,62 € |
+| Coût aux 1 000 affichages | 5,72 € | 2,54 € |
+| Clics sur le lien | 208 (1,55 %) | 152 (5,83 %) |
+| Coût par clic | 0,37 € | 0,04 € |
+| Encore là à 3 s | 48 % | 59 % |
+| Encore là à 6 s | 22 % | 36 % |
+| Encore là à 10 s | 14 % | 20 % |
+| Enregistrements + partages | 99 (7,4 pour 1 000 affichages) | 1 (0,4 pour 1 000) |
+
+Ce qu'on en retient (les échantillons sont petits, surtout la vidéo de Samuel) :
+- **La vidéo de Samuel retient mieux à chaque seconde et déclenche 3,8 fois plus de clics.** Un hook de douleur, dit en face caméra, marche : il passe en tête du test (FC1).
+- **La pub « Temps d'écran = apprentissage » déclenche des enregistrements et des partages**, le signal d'une valeur que le parent veut garder ou transmettre. Ce thème nourrit nos carrousels et nos narrations.
+- **Les pubs donnent le plancher à battre.** Une vidéo organique qui garde plus de 59 % des gens à 3 s fait mieux que ta meilleure pub.
+- **Aucune inscription (événement « Lead ») n'est remontée à Meta** pour ces 360 clics. Il faut régler la mesure avant de pousser plus de trafic (liste « avant le jour 1 », point 8).
+
+## Un petit budget pour avoir des chiffres comparables (à décider par Samuel)
+Avec des comptes à zéro abonné, les vues organiques seront rares, et une vidéo chanceuse suffit à fausser le classement. Sous 300 vues, on ne conclut rien.
+
+**La proposition :** promouvoir chaque vidéo avec le même petit budget, sur le même public que tes pubs (parents francophones de 30 à 50 ans), pour avoir au moins 2 000 affichages par vidéo.
+- **Le calcul, à ton coût actuel** (2,5 à 5,7 € les 1 000 affichages) : 10 € donnent entre 1 750 et 3 900 affichages. 14 vidéos font 140 €.
+- **Comment :** le bouton « Booster » du Reel sur Instagram, l'outil de promotion de TikTok.
+- **La règle :** on compare les vidéos boostées entre elles, jamais une vidéo boostée à une vidéo qui ne l'est pas.
+- **La limite :** un public payé et froid mesure la qualité du hook et de la rétention. Il ne mesure pas la viralité.
+- **Les carrousels** ne sont pas boostés : on y mesure les enregistrements et les envois, qui viennent de l'organique.
 
 **Une publication sous 300 vues ne compte pas** : trop peu de données pour conclure. On la note « insuffisant ».
 

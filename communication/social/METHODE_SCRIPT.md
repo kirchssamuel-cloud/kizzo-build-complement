@@ -243,6 +243,10 @@ La première ligne de la légende reprend le hook mot pour mot.
 ## 5. Banque d'accroches
 Chaque accroche est classée par levier, avec son mot-clé et le format conseillé. **Les accroches personnelles ne servent que si elles sont vraies pour Samuel.**
 
+**Prouvées par tes pubs Facebook (à utiliser en priorité, voir `PLANNING.md`)**
+- P1. « Marre d'être le méchant ? » · BÊTA, CRISE · face cam. 5,83 % de clics, 59 % des gens encore là à 3 s.
+- P2. « Temps d'écran = apprentissage » · reformulation, pour les carrousels et les narrations. 99 enregistrements et partages pour 13 428 affichages.
+
 **Contrepied, déclaration à contre-courant**
 1. « Si ton enfant relit sa leçon pour l'apprendre, il perd son temps. » · MÉTHODE · face cam
 2. « Arrête de limiter le temps d'écran de ton enfant. » · CONTRAT · face cam
