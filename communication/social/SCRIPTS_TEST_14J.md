@@ -30,6 +30,8 @@ Chaque script suit la méthode de `METHODE_SCRIPT.md` : hook, pic d'intrigue, va
 - FC2 : A « Arrête de limiter le temps d'écran de ton enfant. » · B « Couper le Wi-Fi marche 30 secondes. »
 - FC3 : A « Si ton enfant relit sa leçon pour l'apprendre, il perd son temps. » · B « Le surligneur n'aide presque pas à retenir. »
 
+**La fiche à lire sur téléphone** : `tournage/fiche-tournage-FC1-FC3.pdf` (une phrase par prise, les hooks A et B, les gestes).
+
 Samuel m'envoie les rushs ; je fais le montage (coupes, textes, stickers).
 
 **Les lignes marquées [à confirmer] ne sont dites que si elles sont vraies pour Samuel.** Sinon, on les coupe.

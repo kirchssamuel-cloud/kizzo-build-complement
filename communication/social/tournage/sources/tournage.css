@@ -1,0 +1,50 @@
+/* Fiche de tournage lisible sur téléphone : pages de 108 × 192 mm (9:16), gros texte, une idée par page */
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-SemiBold.ttf'); font-weight: 600; }
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Outfit'; src: url('../../outils/polices/statiques/Outfit-ExtraBold.ttf'); font-weight: 800 900; }
+@font-face { font-family: 'Inter'; src: url('../../outils/polices/statiques/Inter-Regular.ttf'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Inter'; src: url('../../outils/polices/statiques/Inter-Bold.ttf'); font-weight: 600 900; font-style: normal; }
+
+:root { --orange: #F97316; --nuit: #0F172A; --gris: #475569; --fond: #F1F5F9; --pale: #FFF7ED; --trait: #FDBA74; }
+@page { size: 108mm 192mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Inter', sans-serif; color: var(--nuit); background: #fff; }
+
+.page { width: 108mm; height: 192mm; padding: 9mm 8mm 8mm; display: flex; flex-direction: column; break-after: page; overflow: hidden; }
+.page:last-child { break-after: auto; }
+.haut { display: flex; justify-content: space-between; align-items: center; font-family: 'Outfit'; font-weight: 800; font-size: 9pt; letter-spacing: 1.2pt; text-transform: uppercase; color: var(--orange); margin-bottom: 5mm; }
+.haut span:last-child { color: var(--gris); }
+h1 { font-family: 'Outfit'; font-weight: 800; font-size: 25pt; line-height: 1.1; letter-spacing: -0.4pt; }
+h1 em { font-style: normal; color: var(--orange); }
+h2 { font-family: 'Outfit'; font-weight: 800; font-size: 13pt; letter-spacing: 1.2pt; text-transform: uppercase; color: var(--orange); margin: 0 0 4mm; }
+p { font-size: 11.5pt; line-height: 1.4; }
+p + p { margin-top: 2.5mm; }
+
+.regles { list-style: none; margin-top: 6mm; counter-reset: r; }
+.regles li { counter-increment: r; position: relative; padding-left: 10mm; font-size: 12pt; line-height: 1.35; margin-bottom: 4.5mm; }
+.regles li::before { content: counter(r); position: absolute; left: 0; top: 0; width: 7mm; height: 7mm; border-radius: 50%; background: var(--orange); color: #fff; font-family: 'Outfit'; font-weight: 800; font-size: 10pt; display: flex; align-items: center; justify-content: center; }
+
+.carte { background: var(--fond); border-radius: 20px; padding: 4mm 5mm; margin-top: 5mm; }
+.carte b { font-family: 'Outfit'; font-weight: 800; }
+.fiche { margin-top: 6mm; }
+.fiche div { display: flex; gap: 3mm; padding: 2.4mm 0; border-bottom: 0.3mm solid #E2E8F0; font-size: 11.5pt; }
+.fiche div b { flex: none; width: 27mm; font-family: 'Outfit'; font-weight: 700; color: var(--gris); }
+.ordre { list-style: none; margin-top: 6mm; }
+.ordre li { padding: 3mm 4mm; border-radius: 20px; background: var(--pale); border: 0.4mm solid var(--trait); margin-bottom: 3mm; font-size: 12pt; font-family: 'Outfit'; font-weight: 700; }
+.ordre li span { display: block; font-family: 'Inter'; font-weight: 400; font-size: 10pt; color: var(--gris); margin-top: 0.5mm; }
+
+.badge { display: inline-block; align-self: flex-start; font-family: 'Outfit'; font-weight: 800; font-size: 12pt; letter-spacing: 1pt; color: #fff; background: var(--orange); border-radius: 12mm; padding: 1.6mm 5mm; margin-bottom: 6mm; }
+.hook { font-family: 'Outfit'; font-weight: 800; font-size: 28pt; line-height: 1.12; letter-spacing: -0.3pt; }
+.scene { font-size: 11pt; line-height: 1.38; color: var(--gris); background: var(--fond); border-radius: 20px; padding: 3.2mm 4.5mm; margin-top: 7mm; }
+.scene b { color: var(--nuit); }
+
+.bloc { font-family: 'Outfit'; font-weight: 800; font-size: 10.5pt; letter-spacing: 1.3pt; text-transform: uppercase; color: var(--orange); margin: 1mm 0 4mm; }
+.ligne { position: relative; padding-left: 11mm; font-family: 'Outfit'; font-weight: 700; font-size: 19pt; line-height: 1.2; margin-bottom: 6mm; }
+.ligne .n { position: absolute; left: 0; top: 0.8mm; width: 7.5mm; height: 7.5mm; border-radius: 50%; background: var(--orange); color: #fff; font-weight: 800; font-size: 9.5pt; display: flex; align-items: center; justify-content: center; }
+.ligne .geste { display: block; font-family: 'Inter'; font-weight: 400; font-size: 10pt; color: var(--gris); margin-top: 1mm; line-height: 1.3; }
+.ligne.verifier { background: var(--pale); border: 0.4mm solid var(--trait); border-radius: 20px; padding: 3mm 4mm 3mm 14mm; }
+.ligne.verifier .n { left: 3mm; top: 3.4mm; }
+.ligne .alerte { display: block; font-family: 'Inter'; font-weight: 700; font-size: 9pt; color: #9A3412; margin-bottom: 1mm; }
+.bas { margin-top: auto; font-size: 8.5pt; color: var(--gris); display: flex; justify-content: space-between; }
