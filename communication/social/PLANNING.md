@@ -135,6 +135,27 @@ On les note dans `../SUIVI_PUBLICATIONS.csv`. Si c'est plus simple, Samuel m'env
 - **Le rythme** : tous les jours si la production suit, sinon 5 jours par semaine. Mieux vaut moins mais tenu.
 - **ManyChat** : on garde Essential si le test a fait plus de 50 contacts ; Pro seulement au-delà de 250 contacts par mois.
 
+## Automatiser plus tard : Grok Bot et outil de publication (décision au bilan du jour 7)
+Samuel a vu une vidéo où un agent « Grok Bot », branché sur un outil de publication, tient le calendrier, signale les retards et republie un Reel sur LinkedIn et X. Faits vérifiés le 23 octobre 2026 :
+- **Grok Bot** (xAI) : en bêta depuis le 11 août 2026. Ce sont des agents qui ont leur propre ordinateur dans le cloud, travaillent 24 h sur 24 dans les applications comme un humain, et reviennent pour une validation. Il est inclus dans l'abonnement « X Subscription » (Premium à 30 $ par mois, Super à 100 $ par mois ; le détail par plan est à confirmer sur x.ai/pricing). La disponibilité en France n'est pas confirmée.
+- **L'outil de publication** : le nom entendu (« Pleakit ») est introuvable. Le plus proche par les fonctions est **Blotato** :
+  - publication sur 9 plateformes, dont Instagram, TikTok, LinkedIn et X ;
+  - une API et un MCP compatibles avec Claude ;
+  - statistiques, réponses aux commentaires et messages ;
+  - reprise d'une vidéo ou d'un transcript en posts ;
+  - 29 $ par mois, avec 7 jours d'essai.
+- **Ce qui donne à l'agent l'accès aux réseaux, c'est l'outil de publication, pas l'agent.** Il n'est donc pas nécessaire de payer Grok Bot pour cette fonction.
+
+**Décision** : pas d'agent autonome pendant les 14 jours. Les comptes sont vides, la bêta est récente, et un agent qui publie seul sur la marque, avec des mots de passe, expose à une erreur publique. Le planning est déjà fixé.
+
+**Au bilan du jour 7** : on lance l'essai de 7 jours de l'outil de publication si le relevé des statistiques et la republication prennent plus de 20 minutes par jour (seuil à ajuster). Les textes LinkedIn et X sont prêts dans `LINKEDIN_X.md`.
+
+**Garde-fous si on automatise** :
+- toute publication d'un agent passe par une validation de Samuel ;
+- aucun mot de passe n'est donné dans un chat : on connecte les comptes par la connexion officielle de chaque réseau, avec la double authentification ;
+- les messages des parents contiennent des données personnelles (e-mails) : tout outil qui les lit est déclaré dans la politique de confidentialité de kizzo.fr ;
+- les réseaux interdisent en général l'accès automatisé hors de leurs API officielles : on préfère un outil qui publie par l'API officielle à un agent qui pilote l'application comme un humain.
+
 ## Le budget du test
 - **ManyChat** : 0 € pendant l'essai de 14 jours, puis environ 17 $ par mois (14 $ en annuel) si on garde l'outil.
 - **Crédits Higgsfield** : 0, sauf la fiction, toujours sur feu vert de Samuel :
