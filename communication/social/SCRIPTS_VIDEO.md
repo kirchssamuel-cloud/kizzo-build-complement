@@ -1,4 +1,4 @@
-# Journal de production des vidéos (mis à jour le 22 octobre 2026)
+# Journal de production des vidéos (mis à jour le 23 octobre 2026)
 
 **Les scripts du test de 14 jours, réécrits selon la méthode de script, sont dans `SCRIPTS_TEST_14J.md`.** Ce document garde l'historique : ce qui a été produit, avec quels réglages et pour quel coût, et les identifiants Higgsfield à réutiliser.
 
@@ -280,4 +280,4 @@ Le cadre ci-dessous est à remplir avec la vraie histoire de Samuel. **On n'inve
 4. **Ce qu'on cherche (5 s)** : « On ouvre la bêta aux premières familles. »
 5. **Appel (3 s)** : « Lien en bio. Et dis-moi en commentaire : c'est quoi, ta pire bataille d'écran ? »
 
-**Tournage.** Lumière de fenêtre de face, téléphone à hauteur des yeux, une seule prise par phrase. Le montage et les sous-titres sont faits ensuite.
+**Tournage.** Lumière de fenêtre de face, téléphone à hauteur des yeux, une seule prise par phrase. Le montage et les sous-titres sont faits ensuite. Les fiches de tournage (7 vidéos, 14 plans de coupe, 23 octobre) sont dans `tournage/`, et le montage phrase par phrase dans `PLANS_DE_COUPE.md`.

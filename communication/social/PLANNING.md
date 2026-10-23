@@ -6,6 +6,7 @@ Ce plan remplace le planning du 21 octobre, jamais publié.
 
 Documents liés :
 - **les scripts** : `SCRIPTS_TEST_14J.md` ;
+- **le tournage et le montage des vidéos face caméra** : `tournage/` et `PLANS_DE_COUPE.md` ;
 - **les mots-clés et messages automatiques** : `MANYCHAT.md` ;
 - **les PDF gratuits** : `lead_magnets/` ;
 - **le relevé des statistiques** : `../SUIVI_PUBLICATIONS.csv`.
@@ -45,16 +46,16 @@ Documents liés :
 | J8 | sam. 31 oct. (Halloween) | — | QZ3 « Le pluriel de hibou » | MÉTHODE | Moi | 0 |
 | J9 | dim. 1er nov. (veille de rentrée) | CA4 « Qu'est-ce qui marche le mieux pour retenir ? » | PV2 « J'ai pas de devoirs » | MÉTHODE | Moi | 0 |
 | J10 | lun. 2 nov. (rentrée) | — | FC3 « Si ton enfant relit sa leçon pour l'apprendre… » | MÉTHODE | Samuel tourne, je monte | 0 |
-| J11 | mar. 3 nov. | — | **Flexible** : format gagnant n°1 (par défaut NA2 « Cette tablette ne se débloque qu'avec une bonne réponse ») | BÊTA | Moi, voix off de Samuel | 0 |
+| J11 | mar. 3 nov. | — | **Flexible** : format gagnant n°1 (par défaut NA2 « Cette tablette ne se débloque qu'avec une bonne réponse » ; si la face caméra est en tête, FC4 « Ne dis plus jamais "plus que 5 minutes" », déjà tournée) | BÊTA, ou CRISE | Moi, voix off de Samuel | 0 |
 | J12 | mer. 4 nov. | CA5 « Quelle question l'aide vraiment à retenir ? » | FI2 si l'épisode 1 a passé les seuils, sinon format gagnant | MÉTHODE | Moi | environ 60, ou 0 |
-| J13 | jeu. 5 nov. | — | **Flexible** : format gagnant n°2 (par défaut PV3 « Ses devoirs faits en 4 minutes ») | MÉTHODE | Moi | 0 |
+| J13 | jeu. 5 nov. | — | **Flexible** : format gagnant n°2 (par défaut PV3 « Ses devoirs faits en 4 minutes » ; ou FC5, FC6 ou FC7, déjà tournées, selon le mot-clé qui marche) | MÉTHODE, ou CONTRAT | Moi | 0 |
 | J14 | ven. 6 nov. | Test de hook (TikTok seulement) | QZ4 « La capitale de l'Australie ? » | CONTRAT | Moi | 0 |
 | **Bilan final** | **sam. 7 nov.** | | | | **Choix des formats de novembre** | |
 
 **Les livraisons** : je livre chaque publication la veille à 18 h. Ça comprend la vidéo ou les visuels, la légende, le commentaire épinglé et la couverture.
 
 **Les échéances de Samuel** :
-- tournage des trois vidéos face caméra **samedi 24 octobre au matin**, rushs envoyés dans la foulée ;
+- tournage face caméra **le plus tôt possible, samedi 24 octobre au matin au plus tard** : c'est la seule fenêtre de Samuel avant deux semaines. Lot 1 (un test de 20 s, FC1 à FC3, les 14 plans de coupe : 1 h 15), puis lot 2 (FC4 à FC7, en réserve : 1 h). Les fichiers partent au fil du tournage, ceux de FC1 en premier (`tournage/`, `PLANS_DE_COUPE.md`) ;
 - voix off de NA1 **avant le lundi 26 octobre** ;
 - voix off de NA2 **avant le lundi 2 novembre**.
 
@@ -70,7 +71,7 @@ Documents liés :
 3. **ManyChat** : essai Essential, les 4 automatisations, un test de chaque mot-clé depuis un compte perso (`MANYCHAT.md`, sections 2 et 3).
 4. **Les 3 PDF en ligne**, sur kizzo.fr ou, à défaut, sur Google Drive (`MANYCHAT.md`, section 5).
 5. **Valider la phrase RGPD** du message BÊTA et la politique de confidentialité du site.
-6. **Bloquer 45 minutes samedi matin** pour le tournage.
+6. **Tourner le lot 1 (1 h 15), puis le lot 2 (1 h)** avec `tournage/fiche-tournage-1-essentiel.pdf` et `fiche-tournage-2-reserve.pdf`. Le contrat d'écran (`lead_magnets/kizzo-contrat-ecran.pdf`) est imprimé avant : il sert dans trois plans.
 7. **Donner (ou non) le feu vert pour l'épisode 1 des Clémentine** :
    - Kling : 60 crédits ;
    - Seedance : 112,5 crédits ;
@@ -157,7 +158,7 @@ Avec des comptes à zéro abonné, les vues organiques seront rares, et une vid�
 
 ### Bilan du jour 7 (samedi 31 octobre, 10 h)
 1. **Classer les formats** par pourcentage moyen regardé (la médiane de leurs publications), puis par commentaires avec mot-clé pour 1 000 vues.
-2. **Les deux formats en tête** du premier classement prennent les créneaux flexibles du mardi 3 et du jeudi 5 novembre.
+2. **Les deux formats en tête** du premier classement prennent les créneaux flexibles du mardi 3 et du jeudi 5 novembre. Si la face caméra en fait partie, FC4 à FC7 sont déjà tournées : on prend celles dont le mot-clé a le mieux marché, et les autres passent en novembre.
 3. **Un format en bas des deux classements sort de la semaine 2.** Exception : s'il n'a eu qu'une seule publication au-dessus de 300 vues, on lui laisse une deuxième chance.
 4. **Les Clémentine** : l'épisode 2 n'est produit que si l'épisode 1 atteint les seuils « Bon » de hook et de pourcentage regardé.
 5. **Le mot-clé le plus commenté** (pour 1 000 vues) devient le CTA par défaut de la semaine 2.

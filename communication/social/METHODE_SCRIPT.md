@@ -179,7 +179,8 @@ Chaque format applique les 5 blocs. Les temps sont indicatifs.
 - **la première image, c'est déjà la première phrase** : pas de silence, pas de respiration avant de parler ;
 - une prise par phrase. Au montage, on alterne plan serré et plan plus large pour relancer l'attention ;
 - l'objet du hook est dans le cadre dès la première image ;
-- l'énergie se voit : on dit des choses qu'on pense vraiment.
+- l'énergie se voit : on dit des choses qu'on pense vraiment ;
+- **les plans de coupe** : par-dessus la voix, une image toutes les 2 à 3 s qui montre le mot qu'on entend (le cahier qui se ferme, le minuteur, la tablette repoussée), filmée par Samuel lui-même ; son visage reste sur le hook et sur le CTA ; aucun plan IA dans une vidéo face caméra, pour ne pas lui coller l'étiquette IA (`PLANS_DE_COUPE.md`).
 
 ### B. Narration avec images (25 à 35 s), le format « Comment ça marche »
 | Temps | Bloc | Contenu |

@@ -19,20 +19,22 @@ Chaque script suit la méthode de `METHODE_SCRIPT.md` : hook, pic d'intrigue, va
 ---
 
 ## Les vidéos face caméra (Samuel, 0 crédit)
-**Une seule séance de tournage pour les trois**, samedi 24 octobre au matin (45 minutes) :
-- téléphone à hauteur des yeux, lumière de fenêtre de face ;
-- une prise par phrase ;
-- **la première image, c'est déjà la première phrase** ;
-- les objets à prévoir : un cahier d'écolier à grands carreaux, un minuteur de cuisine.
+**Une seule séance de tournage, maintenant.** Samuel n'a pas d'autre fenêtre avant deux semaines : on tourne en une fois les 3 vidéos du test (FC1 à FC3), 4 vidéos en réserve (FC4 à FC7, plus bas) et les 14 plans de coupe de `PLANS_DE_COUPE.md`. Deux fiches à lire sur un second écran pendant le tournage :
+- `tournage/fiche-tournage-1-essentiel.pdf` : un test de 20 s à m'envoyer d'abord, puis FC1 à FC3 et les plans de coupe (1 h 15) ;
+- `tournage/fiche-tournage-2-reserve.pdf` : FC4 à FC7 (1 h), si l'énergie reste.
+
+Les règles tiennent sur une page de la fiche : téléphone à hauteur des yeux, lumière de fenêtre de face, pièce calme, 1080p à 30 images par seconde, **une page de la fiche = un fichier**, une prise par phrase (« je reprends » en cas d'erreur, dans le même fichier). Les objets : un cahier à grands carreaux, un stylo et des post-it, un surligneur, un minuteur de cuisine, une tablette, le contrat d'écran imprimé, une horloge, une pile de cahiers, une lampe.
 
 **Deux hooks par vidéo.** Pour chaque vidéo, Samuel enregistre **deux débuts** (A et B) puis le même corps. Le montage garde A ; B sert au test de hook du 6 novembre, sans retourner.
 - FC1 : A « Marre d'être le méchant ? » · B « J'ai 23 ans. Pas d'enfant. Et je construis une appli pour les parents. »
 - FC2 : A « Arrête de limiter le temps d'écran de ton enfant. » · B « Couper le Wi-Fi marche 30 secondes. »
 - FC3 : A « Si ton enfant relit sa leçon pour l'apprendre, il perd son temps. » · B « Le surligneur n'aide presque pas à retenir. »
+- FC4 : A « Ne dis plus jamais "plus que 5 minutes". » · B « Tu as dit "plus que 5 minutes" quatre fois ce soir. »
+- FC5 : A « Ne demande plus jamais à ton enfant : "tu la sais, ta leçon ?" » · B « Ton enfant te dit "oui, je la sais". Il ne ment pas. Il se trompe. »
+- FC6 : A « Ton contrat d'écran va échouer. » · B « Tu as fait un contrat d'écran. Au bout d'une semaine, plus personne n'en parle ? »
+- FC7 : A « Tout réviser la veille, ça marche. Pour le contrôle. Pas pour après. » · B « Pourquoi ton enfant oublie sa leçon une semaine après le contrôle ? »
 
-**La fiche à lire sur téléphone** : `tournage/fiche-tournage-FC1-FC3.pdf` (une phrase par prise, les hooks A et B, les gestes).
-
-Samuel m'envoie les rushs ; je fais le montage (coupes, textes, stickers).
+**Le montage** : par-dessus la voix de Samuel, un plan de coupe ou un graphique toutes les 2 à 3 s, qui montre le mot qu'on entend ; son visage reste sur le hook et sur le CTA ; aucun plan IA dans ces vidéos. Le détail phrase par phrase est dans `PLANS_DE_COUPE.md`. Samuel m'envoie les fichiers tels quels, par paquets, ceux de FC1 en premier ; je fais le montage, les textes à l'écran, les sous-titres et la couverture.
 
 **Les lignes marquées [à confirmer] ne sont dites que si elles sont vraies pour Samuel.** Sinon, on les coupe.
 
@@ -98,6 +100,97 @@ Samuel m'envoie les rushs ; je fais le montage (coupes, textes, stickers).
 > #rentree #devoirs #reviser #memoire #kizzo
 
 **Commentaire épinglé** : « Source : Roediger et Karpicke, Psychological Science, 2006. L'étude porte sur des étudiants ; l'effet a été confirmé depuis par de nombreuses recherches. »
+
+---
+
+## Les vidéos face caméra en réserve (FC4 à FC7, 0 crédit)
+Tournées dans la même séance que FC1 à FC3, parce que Samuel ne pourra pas refilmer avant deux semaines. Elles ne sont pas au calendrier : au bilan du jour 7, si la face caméra est en tête, elles prennent les créneaux flexibles (mardi 3 et jeudi 5 novembre) ; sinon, elles alimentent novembre. On choisit d'abord celles dont le mot-clé a le mieux marché. Chacune reprend une ressource existante (CRISE, MÉTHODE, CONTRAT) : rien de nouveau à fabriquer. Le montage phrase par phrase est dans `PLANS_DE_COUPE.md`.
+
+### FC4. « Ne dis plus jamais "plus que 5 minutes". » · 45 s · CRISE
+- **Pourquoi ce hook.** Une interdiction à contrepied, sur la phrase que tous les parents disent. Même douleur du soir que « Marre d'être le méchant », le hook qui marche en pub.
+- **Question à faire naître** : pourquoi ? Et je dis quoi, alors ?
+- **Émotion** : identification, puis surprise.
+
+| Temps | Bloc | Texte dit |
+|---|---|---|
+| 0-3 s | Hook | « Ne dis plus jamais "plus que 5 minutes". » (le minuteur en main, l'index qui dit non) |
+| 2-5 s | CTA tôt | Sticker : « 📩 Les 7 phrases qui arrêtent l'écran sans crise : commente CRISE » |
+| 3-8 s | Pic d'intrigue (lire dans les pensées) | « Et non, ce n'est pas pour être sévère. » · « Ça prend dix secondes. Essaie ce soir. » |
+| 8-27 s | Valeur | « Un : "dans cinq minutes, on arrête. Tu mets le minuteur ?" » · « Il voit la fin arriver. Et c'est lui qui la déclenche. » · « Deux : "tu finis ta partie, et après on arrête." » · « Couper au milieu, c'est perdre. Finir, c'est gagner. » · « Trois : "après l'écran, on fait quoi : ceci ou cela ?" » · « Il garde la main. » |
+| 27-39 s | Climax et contrepied | « Le vrai problème, ce n'est pas "plus que 5 minutes". » · « C'est la quatrième fois que tu dis oui. » · « Chaque fois, il retient une chose : négocier, ça marche. » · « Une seule annonce. Et on s'y tient. » |
+| 39-45 s | CTA | « J'ai mis les sept phrases dans un PDF. Commente CRISE, je te l'envoie. » |
+
+**Hook B** (à enregistrer aussi) : « Tu as dit "plus que 5 minutes" quatre fois ce soir. Voilà ce que ton enfant en retient. »
+
+**Légende** :
+> « Plus que 5 minutes »… pour la 4e fois ? ⏱️ Le problème, ce n'est pas la phrase : c'est la 4e fois qu'on dit oui. Trois phrases qui préparent la fin de l'écran au lieu de la subir.
+> 📩 Commente CRISE : les 7 phrases qui arrêtent l'écran sans crise, et les 3 à éviter, en PDF.
+> #tempsdecran #parentalite #ecrans #enfants #kizzo
+
+### FC5. « Ne demande plus jamais à ton enfant : "tu la sais, ta leçon ?" » · 40 s · MÉTHODE
+- **Pourquoi ce hook.** Le contrepied d'une question que tous les parents posent chaque soir. C'est le carrousel CA5, dit en face caméra.
+- **Question à faire naître** : pourquoi pas ? Et je demande quoi, alors ?
+- **Émotion** : surprise, curiosité.
+
+| Temps | Bloc | Texte dit |
+|---|---|---|
+| 0-3 s | Hook | « Ne demande plus jamais à ton enfant : "tu la sais, ta leçon ?" » (le cahier ouvert, la tête du parent qui interroge) |
+| 2-5 s | CTA tôt | Sticker : « 📩 Les 20 questions qui marchent sur toutes les leçons : commente MÉTHODE » |
+| 3-8 s | Pic d'intrigue (lire dans les pensées) | « Il te répondra oui. Même quand il ne la sait pas. » · « Et ce n'est pas un mensonge. » |
+| 8-22 s | Valeur | « Demande plutôt : "explique-la-moi avec tes mots." » · « Ou : "donne-moi un exemple." » · « Ou : "si c'était toi le prof, tu mettrais quoi au contrôle ?" » |
+| 22-34 s | Climax et contrepied | « Pourquoi ça marche ? Reconnaître une leçon, ce n'est pas la savoir. » · « Relire donne l'impression de savoir. » · « Expliquer, c'est aller la chercher dans sa tête. » |
+| 34-40 s | CTA | « J'ai listé vingt questions qui marchent sur toutes les leçons. Commente MÉTHODE. » |
+
+**Hook B** (à enregistrer aussi) : « Ton enfant te dit "oui, je la sais". Il ne ment pas. Il se trompe. »
+
+**Légende** :
+> « Tu la sais, ta leçon ? » Il répond oui. Toujours. 📚 Reconnaître une leçon, ce n'est pas la savoir : demande-lui plutôt de te l'expliquer avec ses mots.
+> 👉 Commente MÉTHODE : les 20 questions qui marchent sur toutes les leçons, à imprimer.
+> #devoirs #reviser #memoire #parents #kizzo
+
+### FC6. « Ton contrat d'écran va échouer. » · 40 s · CONTRAT
+- **Pourquoi ce hook.** Une controverse et un chiffre (« trois erreurs »). Il s'adresse aux parents qui ont déjà essayé : ceux qui commentent CONTRAT après FC2.
+- **Question à faire naître** : lesquelles ? Est-ce que je les fais ?
+- **Émotion** : inquiétude, puis soulagement.
+
+| Temps | Bloc | Texte dit |
+|---|---|---|
+| 0-4 s | Hook | « Ton contrat d'écran va échouer. Si tu fais l'une de ces trois erreurs. » (le contrat imprimé en main) |
+| 2-5 s | CTA tôt | Sticker : « 📩 Le contrat à imprimer : commente CONTRAT » |
+| 4-9 s | Pic d'intrigue (lire dans les pensées, chiffre) | « Et non, ce n'est pas parce que ton enfant triche. » · « Trois erreurs. On en fait tous au moins une. » |
+| 9-24 s | Valeur | « Un : l'écrire seul, et le présenter comme un ultimatum. » · « Deux : le changer un soir de fatigue. "Bon, ce soir, ça va…" » · « Trois : oublier les engagements des parents. » · « Lui, il ne les oubliera pas. » |
+| 24-35 s | Climax et contrepied | « Un contrat ne tient que s'il est tenu des deux côtés. » · « Y compris par toi. » · « Pas de téléphone à table ? Ça vaut pour toi aussi. » |
+| 35-40 s | CTA | « Notre modèle prévoit même ce que les parents s'engagent à faire. Commente CONTRAT. » |
+
+**Hook B** (à enregistrer aussi) : « Tu as fait un contrat d'écran. Au bout d'une semaine, plus personne n'en parle ? »
+
+**Légende** :
+> Ton contrat d'écran va échouer si… ✍️ 1. tu l'écris seul · 2. tu le changes un soir de fatigue · 3. tu oublies les engagements des parents. Un contrat ne tient que s'il est tenu des deux côtés.
+> 📄 Commente CONTRAT : notre modèle à imprimer, avec la partie « les parents s'engagent aussi ».
+> #tempsdecran #parentalite #contrat #ecrans #kizzo
+
+### FC7. « Tout réviser la veille, ça marche. Pour le contrôle. Pas pour après. » · 45 s · MÉTHODE
+- **Pourquoi ce hook.** Un contrepied qui commence par donner raison au parent (« ça marche »), puis un chiffre (dix méthodes comparées). C'est la suite de FC3 pour ceux qui ont commenté MÉTHODE.
+- **Question à faire naître** : alors on fait comment ?
+- **Émotion** : curiosité.
+
+| Temps | Bloc | Texte dit |
+|---|---|---|
+| 0-4 s | Hook | « Tout réviser la veille, ça marche. Pour le contrôle. Pas pour après. » (le cahier refermé sur « Pas pour après ») |
+| 2-5 s | CTA tôt | Sticker : « 📩 Le calendrier de révision et les 20 questions : commente MÉTHODE » |
+| 4-8 s | Pic d'intrigue (lire dans les pensées) | « Et non, ce n'est pas sa mémoire. » · « C'est le calendrier. » |
+| 8-22 s | Valeur | « Aujourd'hui : cinq questions. » · « Demain : trois questions. » · « Dans trois jours : trois questions. » · « La veille du contrôle : seulement celles qu'il a ratées. » |
+| 22-38 s | Climax et contrepied (autorité) | « En 2013, des chercheurs ont comparé dix méthodes de révision. » · « Les deux plus utiles : se tester, et étaler ses révisions. » · « Relire ? Parmi les moins utiles. » |
+| 38-45 s | CTA | « Le calendrier et les vingt questions : commente MÉTHODE. » |
+
+**Hook B** (à enregistrer aussi) : « Pourquoi ton enfant oublie sa leçon une semaine après le contrôle ? »
+
+**Légende** :
+> Tout réviser la veille marche… pour le contrôle. Pas pour après. 📅 Aujourd'hui 5 questions, demain 3, dans 3 jours 3, la veille les ratées : c'est le calendrier qui fait retenir.
+> 👉 Commente MÉTHODE : le calendrier et les 20 questions, en PDF.
+> #rentree #devoirs #reviser #memoire #kizzo
+
+**Commentaire épinglé** : « Source : Dunlosky et al., Psychological Science in the Public Interest, 2013. Dix techniques de révision comparées : se tester et étaler ses révisions sont jugées les plus utiles ; relire et surligner, parmi les moins utiles. »
 
 ---
 

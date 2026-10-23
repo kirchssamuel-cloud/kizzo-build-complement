@@ -61,13 +61,18 @@ Toute la famille est en clémentines, au look hyperréaliste, avec les voix jou�
 **Les histoires personnelles ne sont racontées que si elles sont vraies.**
 1. « J'ai 23 ans, pas d'enfant, et je construis une appli pour les parents. » → FC1.
 2. « Arrête de limiter le temps d'écran de ton enfant. » → FC2.
-3. « Si ton enfant relit sa leçon pour l'apprendre, il perd son temps. » → FC3.
-4. « Le surligneur n'aide presque pas à retenir. »
-5. « Comment l'IA de Kizzo lit une leçon » : écran du moteur de quiz.
-6. « Une semaine à construire Kizzo » : réunion avec l'agence, tests du quiz, choix de design.
-7. Micro-trottoir de parents : « C'est quoi, votre pire bataille d'écran ? » Uniquement des adultes, avec leur accord écrit.
-8. « On a montré Kizzo à des parents. Leur première réaction. »
-9. Réponses en vidéo aux meilleurs commentaires (TikTok).
+3. « Si ton enfant relit sa leçon pour l'apprendre, il perd son temps. » → FC3. Son hook B : « Le surligneur n'aide presque pas à retenir. »
+4. « Ne dis plus jamais "plus que 5 minutes". » → FC4, tournée en réserve.
+5. « Ne demande plus jamais à ton enfant : "tu la sais, ta leçon ?" » → FC5, tournée en réserve.
+6. « Ton contrat d'écran va échouer. » → FC6, tournée en réserve.
+7. « Tout réviser la veille, ça marche. Pour le contrôle. Pas pour après. » → FC7, tournée en réserve.
+8. « Comment l'IA de Kizzo lit une leçon » : écran du moteur de quiz.
+9. « Une semaine à construire Kizzo » : réunion avec l'agence, tests du quiz, choix de design.
+10. Micro-trottoir de parents : « C'est quoi, votre pire bataille d'écran ? » Uniquement des adultes, avec leur accord écrit.
+11. « On a montré Kizzo à des parents. Leur première réaction. »
+12. Réponses en vidéo aux meilleurs commentaires (TikTok).
+
+**Le montage des vidéos face caméra** suit `PLANS_DE_COUPE.md` : une image toutes les 2 à 3 s, filmée par Samuel, qui montre le mot qu'on entend.
 
 ## Les prochaines ressources gratuites (mots-clés)
 Les trois premières existent : CONTRAT, CRISE, MÉTHODE (`lead_magnets/`). La méthode du pro conseille d'en avoir plusieurs, chacune pour une douleur précise. Pistes, par ordre de priorité :
