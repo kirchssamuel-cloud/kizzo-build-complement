@@ -29,10 +29,9 @@ shots = [
     ("p2", 0.4, 2.2),        # quelques semaines plus tard : le miroir
     ("p3-raw", 1.92, 3.4),   # elle découvre Dvora K sur Instagram
     ("p3-raw", 3.7, 5.1),    # premier sourire
-    ("p4b-raw", 0.0, 1.6),   # la vraie façade
-    ("p4c", 0.0, 1.6),       # le vrai salon, logo doré
-    ("p4d", 0.6, 2.2),       # le mur de perruques
-    ("p5-raw", 0.3, 2.0),    # Dvora pose la perruque
+    ("p4c", 0.0, 2.0),       # le vrai salon, logo doré
+    ("p4d", 0.6, 2.6),       # le mur de perruques
+    ("p5-raw", 0.2, 2.45),   # Dvora pose la perruque
     ("p5-raw", 3.0, 5.0),    # elle se découvre
     ("p5-raw", 5.3, None),   # de dos au miroir (complète jusqu'à 20 s)
 ]
@@ -54,7 +53,7 @@ for _, a, b in shots:
     starts.append(acc)
     acc += (b - a) if b is not None else last_len
 t_tears, t_flash, t_mirror, t_insta, t_smile = starts[1], starts[2], starts[3], starts[4], starts[5]
-t_facade, t_logo, t_wig, t_pose, t_alone, t_back = starts[6:12]
+t_logo, t_wig, t_pose, t_alone, t_back = starts[6:11]
 
 # ---------- bruitages ----------
 N = int(TOTAL * SR) + SR
@@ -114,7 +113,7 @@ place(whoosh(0.4), t_flash - 0.4, 0.3); place(hit(1.2), t_flash, 0.5)
 place(whoosh(0.35, rise=False), t_mirror - 0.2, 0.25)
 place(bandnoise(int(0.03 * SR), 1800, 9000) * np.exp(-np.arange(int(0.03 * SR)) / SR * 180), t_insta + 0.15, 0.18)
 place(shimmer(1.4, 1568), t_smile + 0.1, 0.10)
-place(whoosh(0.5, 300, 4000, rise=False), t_facade - 0.25, 0.12)
+place(whoosh(0.5, 300, 4000, rise=False), t_logo - 0.25, 0.12)
 place(bell(1318.5), t_logo, 0.15); place(bell(1046.5), t_logo + 0.2, 0.11)
 place(whoosh(1.0, 300, 8000, rise=True), t_alone - 0.9, 0.13)
 place(shimmer(2.2, 1760), t_alone + 0.05, 0.15)
@@ -137,10 +136,13 @@ fc = (f"[0:a]atrim=start=1.6:end={1.6 + x_start + 1.2:.3f},asetpts=PTS-STARTPTS,
       f"[2:a]aformat=channel_layouts=stereo[fx];"
       f"[mus][fx]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.9,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[a]")
 mix = f"{TMP}/mix.wav"
+if os.environ.get("SANS_MUSIQUE") == "1":   # bruitages seuls, sans musique
+    fc = (f"[2:a]aformat=channel_layouts=stereo,volume=4dB,afade=t=out:st={TOTAL - 1.0:.3f}:d=1.0,"
+          f"alimiter=limit=0.9,aresample=48000[a]")
 run(["-i", f"{ROOT}/musique/musique-triste.mp4", "-i", f"{ROOT}/musique/musique-entrainante.mp4", "-i", sfx_path,
      "-filter_complex", fc, "-map", "[a]", "-c:a", "pcm_s16le", mix])
-out = f"{M}/dvora-k-extrait-20s-sans-texte.mp4"
+out = f"{M}/dvora-k-extrait-20s-sans-texte{'-sans-musique' if os.environ.get('SANS_MUSIQUE') == '1' else ''}.mp4"
 run(["-i", video, "-i", mix, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
      "-shortest", "-movflags", "+faststart", out])
-print(out, {k: round(v, 2) for k, v in zip(["tears", "flash", "mirror", "insta", "smile", "facade", "logo", "wig", "pose", "alone", "back"],
-                                          [t_tears, t_flash, t_mirror, t_insta, t_smile, t_facade, t_logo, t_wig, t_pose, t_alone, t_back])})
+print(out, {k: round(v, 2) for k, v in zip(["tears", "flash", "mirror", "insta", "smile", "logo", "wig", "pose", "alone", "back"],
+                                          [t_tears, t_flash, t_mirror, t_insta, t_smile, t_logo, t_wig, t_pose, t_alone, t_back])})
