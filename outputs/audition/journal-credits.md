@@ -17,4 +17,5 @@
 | 02/11 | Plan 5 refait DE ZÉRO (sans partir d'images déjà générées ; refs : planches personnages + vraies photos de l'appareil), façade noire : avec références `d27a1454` (retenue, appareil ≈ 22 % de l'oreille, proche de la vraie photo ≈ 24 %) · sans références `fda82123` (erreur de saisie de ma part, autre visage, écartée) | Nano Banana 2.1, 4K 9:16 | 2 jobs | 6 |
 | 02/11 | Plan 5 de zéro, version BEIGE `439ea3e0` (continuité de couleur). Mesure : appareil ≈ 30 % de l'oreille + tube transparent épais visible. **Non retenue** | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
 | 02/11 | Plan 5 de zéro, version BEIGE avec 3 vraies photos de l'appareil en référence `1d58890b` : beige, sans tube, propre, mais appareil ≈ 28-30 % de l'oreille (discret en plan large). Proposée à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
+| 02/11 | Plan 5 v8 : image 7 (beige, de zéro) avec appareil réduit à 50 % par retouche locale (0 cr, script `montage/reduire_appareil_plan5.py`) → ≈ 15 % de l'oreille | retouche locale | | 0 |
 | | **Total** | | | **507 cr** |
