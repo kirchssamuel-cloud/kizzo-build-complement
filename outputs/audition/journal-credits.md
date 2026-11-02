@@ -13,4 +13,5 @@
 | 02/11 | Retour client (plans 5 et 6, appareil « pas assez chic, pas propre ») : plan 5 refait en macro net `07e63bfe-6df8-4fd2-8f76-15768bd6f072` · plan 6 refait, oreille couverte par les cheveux `dd1ddd55-8ffb-45e9-98de-a5462f1c896f` | Nano Banana 2.1, 4K 9:16 | 2 jobs | 6 |
 | 02/11 | Vidéo retouche plans 5+6 (macro agrandie + visage), 4 s 1080p. **ÉCARTÉE** : l'appareil est trop gros, il ressemble à un bouchon, contraire au « quasi invisible ». Coupe à 2,46 s | Seedance 2.5, omni_reference | `8ec60c8b-5e7c-408c-9865-d26832d4b1f1` | 64 |
 | 02/11 | Plans 5 et 6 refaits avec l'appareil à sa vraie taille (2 versions chacun) : 5A `6a818fb0` · 5B `1b978c1e` · 6A `3ad7f9ed` · 6B `61b56152`. Retenues : B, B | Nano Banana 2.1, 4K 9:16 | 4 jobs | 12 |
-| | **Total** | | | **489 cr** |
+| 02/11 | Plan 5 retouché (appareil réduit, version beige `3b6e571e` · version noire `90dccdce`) à partir de 5B. Mesure : ~27 % et ~26 % de la hauteur de l'oreille, cible ≤ 15 %. **Non retenues** | Nano Banana 2.1, 4K 9:16 | 2 jobs | 6 |
+| | **Total** | | | **495 cr** |
