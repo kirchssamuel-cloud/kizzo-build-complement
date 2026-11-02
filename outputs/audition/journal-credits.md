@@ -15,4 +15,5 @@
 | 02/11 | Plans 5 et 6 refaits avec l'appareil à sa vraie taille (2 versions chacun) : 5A `6a818fb0` · 5B `1b978c1e` · 6A `3ad7f9ed` · 6B `61b56152`. Retenues : B, B | Nano Banana 2.1, 4K 9:16 | 4 jobs | 12 |
 | 02/11 | Plan 5 retouché (appareil réduit, version beige `3b6e571e` · version noire `90dccdce`) à partir de 5B. Mesure : ~27 % et ~26 % de la hauteur de l'oreille, cible ≤ 15 %. **Non retenues** | Nano Banana 2.1, 4K 9:16 | 2 jobs | 6 |
 | 02/11 | Plan 5 refait DE ZÉRO (sans partir d'images déjà générées ; refs : planches personnages + vraies photos de l'appareil), façade noire : avec références `d27a1454` (retenue, appareil ≈ 22 % de l'oreille, proche de la vraie photo ≈ 24 %) · sans références `fda82123` (erreur de saisie de ma part, autre visage, écartée) | Nano Banana 2.1, 4K 9:16 | 2 jobs | 6 |
-| | **Total** | | | **501 cr** |
+| 02/11 | Plan 5 de zéro, version BEIGE `439ea3e0` (continuité de couleur). Mesure : appareil ≈ 30 % de l'oreille + tube transparent épais visible. **Non retenue** | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
+| | **Total** | | | **504 cr** |
