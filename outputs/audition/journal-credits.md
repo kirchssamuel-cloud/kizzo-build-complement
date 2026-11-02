@@ -28,5 +28,7 @@
 | 02/11 | Plan 5b v2 : gros plan oreille, appareil BRONZE, seule la façade + fil visibles, coque cachée dans le conduit `a3241509`. Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
 | 02/11 | Plan 5 (pose) v11, refait en bronze sans coque, mais coque encore visible (réf. de composition fautive) `dfc3da1f`. **Écartée** | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
 | 02/11 | Plan 5 (pose) v12, bronze, façade seule + fil tenu aux doigts, coque cachée, réf. appareil = gros plan validé `dad1663e`. Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
-| 02/11 | Plan 5b, VIDÉO du gros plan v2 (façade seule) avec mouvement de caméra en arc (`67683b53`) `018aaf62-63af-444e-a4d3-4f56230e10d0` (en cours) | Seedance 2.5, omni_reference | 1 job | 64 |
-| | **Total** | | | **784 cr** |
+| 02/11 | Plan 5b, VIDÉO du gros plan v2 (façade seule) avec mouvement de caméra en arc (`67683b53`) `018aaf62-63af-444e-a4d3-4f56230e10d0` (retenue) | Seedance 2.5, omni_reference | 1 job | 64 |
+| 02/11 | Plan 5 (pose), VIDÉO v12 avec travelling en arc, appareil bronze sans coque (`dad1663e`), 4 s 1080p, retenue | Seedance 2.5, omni_reference | `515a7c14-0ae7-498f-838e-c1b89e0f3b16` | 64 |
+| | **Total (dépenses faites par Claude)** | | | **848 cr** |
+| | *Dépenses faites directement par Samuel sur Higgsfield pendant la même période (relevé) : 2 × GPT Image 2.0 à 6,5 cr + 1 vidéo Seedance 64 cr = 77 cr. Solde Higgsfield constaté à 17:25 : 169,09 cr.* | | | |
