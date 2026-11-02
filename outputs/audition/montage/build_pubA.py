@@ -51,6 +51,9 @@ SRC = [
     ("bloc4-preuve", 0.20, B4_CUT - 0.04, False),
     ("bloc4-preuve", B4_CUT + 0.05, 4.00, True),
 ]
+# plans 5 et 6 : images fixes 4K + poussée lente (l'animation IA abîmait l'appareil)
+STILLS = {5: (f"{ROOT}/images-cles/pubA-plan-5-discret-B.jpg", 0.60, 0.40, 1.14),
+          6: (f"{ROOT}/images-cles/pubA-plan-6-discret-B.jpg", 0.52, 0.30, 1.08)}
 FILES = {"bloc1-produit": "pubA-bloc1-produit.mp4", "bloc2-rencontre": "pubA-bloc2-rencontre.mp4",
          "bloc3-consultation": "pubA-bloc3-consultation.mp4", "bloc4-preuve": "pubA-bloc4-preuve.mp4"}
 # plan 3 : l'écran mural (x 0-148) sort du champ grâce à un recadrage de 16 % ancré à droite
@@ -61,6 +64,14 @@ for i, ((blk, a, b, interp), d) in enumerate(zip(SRC, D), 1):
     out = f"{TMP}/plan{i:02d}.mp4"
     clips.append(out)
     if FAST and os.path.exists(out):
+        continue
+    if i in STILLS:
+        img, fx, fy, z1 = STILLS[i]
+        n = round(d * FPS)
+        zp = (f"scale=2160:-2:flags=lanczos,crop=2160:3840,setsar=1,zoompan=z='1+{z1 - 1:.3f}*on/{n}':"
+              f"x='min(max({fx}*iw-iw/zoom/2,0),iw-iw/zoom)':y='min(max({fy}*ih-ih/zoom/2,0),ih-ih/zoom)':"
+              f"d=1:s={W}x{H}:fps={FPS},format=yuv420p")
+        run(["-loop", "1", "-i", img, "-vf", zp, "-frames:v", str(n), "-an", *ENC, out])
         continue
     L = b - a
     vf = f"trim=start={a:.3f}:end={b:.3f},setpts=PTS-STARTPTS"
