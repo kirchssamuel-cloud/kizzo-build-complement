@@ -20,4 +20,5 @@
 | 02/11 | Plan 5 v8 : image 7 (beige, de zéro) avec appareil réduit à 50 % par retouche locale (0 cr, script `montage/reduire_appareil_plan5.py`) → ≈ 15 % de l'oreille | retouche locale | | 0 |
 | 02/11 | Plan 5 de zéro, beige, référence taille/couleur = plan 9 + planches personnages `83d68d28` : appareil ≈ 25 % de l'oreille (comme la vraie photo ≈ 24 %), plus fin, beige, sans tube. Proposée à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
 | 02/11 | Plan 5 régénéré avec l'image de référence de Samuel (n°1, uploadée `10db131e`) + planches personnages + photo appareil beige `220752cd` (retournée pour regarder à gauche). Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
-| | **Total** | | | **513 cr** |
+| 02/11 | Plan 5, VIDÉO à partir de l'image de référence fournie par Samuel (`03721c04`), 4 s 1080p, un seul plan : appareil constant, léger push-in, sourire | Seedance 2.5, omni_reference | `92fbbef4-6f93-4643-9af0-bc6d49585b63` | 64 |
+| | **Total** | | | **577 cr** |
