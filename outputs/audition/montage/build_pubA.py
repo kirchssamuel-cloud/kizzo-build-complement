@@ -105,7 +105,7 @@ def centered_text(text, font_path, size, y, fill=(255, 255, 255, 255)):
 
 title1 = centered_text("Répondez à", BOLD, 112, 760)
 title2 = centered_text("3 questions", BOLD, 132, 890, ACCENT)
-sub = centered_text("pour savoir si vous êtes éligible", MED, 50, 1085)
+sub = centered_text("pour savoir si vous êtes éligible", MED, 58, 1085)
 
 
 def arrow(offset):
@@ -147,25 +147,41 @@ run(["-i", base, "-i", f"{TMP}/card.mp4", "-filter_complex",
 T_TOT = dur(joined)
 
 # ---------------------------------------------------------------- 3. sous-titres mot à mot, calés sur les silences de la voix
-SEG = [  # (début, fin, [groupes de mots])
-    (0.00, 2.05, ["Nous recherchons", "des personnes", "de votre ville,"]),
-    (2.54, 4.19, ["âgées de 50 ans", "et plus,"]),
-    (4.73, 8.50, ["qui souhaiteraient", "essayer", "gratuitement", "une aide auditive", "quasi invisible."]),
-    (9.13, 10.02, ["Vous êtes", "intéressé ?"]),
-    (10.77, 13.75, ["Répondez à", "ces trois questions", "pour savoir si", "vous êtes éligible."]),
-    (14.46, 15.23, ["Si c'est le cas,"]),
-    (15.49, 17.56, ["nous vous proposerons", "rapidement", "un rendez-vous,"]),
-    (17.75, 21.28, ["afin de vous permettre", "d'essayer", "gratuitement", "le modèle", "qui vous convient."]),
+SEG = [  # (début, fin, [(groupe de mots, syllabes)])
+    (0.00, 2.05, [("Nous recherchons", 4), ("des personnes", 3), ("de votre ville,", 4)]),
+    (2.54, 4.19, [("âgées de 50 ans", 6), ("et plus,", 2)]),
+    (4.73, 8.50, [("qui souhaiteraient", 6), ("essayer", 3), ("gratuitement", 4), ("une aide auditive", 5), ("quasi invisible.", 6)]),
+    (9.13, 10.02, [("Vous êtes", 3), ("intéressé ?", 4)]),
+    (10.77, 13.75, [("Répondez à", 4), ("ces trois questions", 4), ("pour savoir si", 4), ("vous êtes éligible.", 6)]),
+    (14.46, 15.23, [("Si c'est le cas,", 5)]),
+    (15.49, 17.56, [("nous vous proposerons", 6), ("rapidement", 4), ("un rendez-vous,", 4)]),
+    (17.75, 21.28, [("afin de vous permettre", 6), ("d'essayer", 3), ("gratuitement", 4), ("le modèle", 3), ("qui vous convient.", 4)]),
 ]
 HILITE = {"gratuitement", "quasi", "invisible", "trois", "questions"}
+def voice_dips():
+    raw = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", VO, "-ac", "1", "-ar", "16000", "-f", "s16le", "-"])
+    x = np.frombuffer(raw, np.int16).astype(np.float32) / 32768
+    hop = 160
+    n = len(x) // hop
+    db = 20 * np.log10(np.array([np.sqrt(np.mean(x[k * hop:(k + 1) * hop] ** 2) + 1e-12) for k in range(n)]) + 1e-9)
+    db = np.convolve(db, np.ones(3) / 3, mode="same")
+    return [k * 0.01 for k in range(2, n - 2)
+            if db[k] < db[k - 1] and db[k] <= db[k + 1] and db[k] < -45]
+
+
+DIPS = voice_dips()
 caps = []   # (t_début, t_fin, texte)
-for s, e, groups in SEG:
-    wts = [len(g.replace(" ", "")) for g in groups]
-    tot, t = sum(wts), s
-    for g, wt in zip(groups, wts):
-        t1 = t + (e - s) * wt / tot
-        caps.append((t, t1, g))
-        t = t1
+for s_, e_, groups in SEG:
+    tot = sum(sy for _, sy in groups)
+    bounds, acc = [s_], 0
+    for _, sy in groups[:-1]:
+        acc += sy
+        b = s_ + (e_ - s_) * acc / tot
+        near = [d for d in DIPS if abs(d - b) <= 0.22 and s_ + 0.08 < d < e_ - 0.08]
+        bounds.append(min(near, key=lambda d: abs(d - b)) if near else b)
+    bounds.append(e_)
+    for (g, _), t0, t1 in zip(groups, bounds[:-1], bounds[1:]):
+        caps.append((t0, t1, g))
 # chaque sous-titre reste jusqu'au suivant du même segment, et 0,1 s après la fin du segment
 spans = []
 for idx, (t0, t1, g) in enumerate(caps):
@@ -253,6 +269,7 @@ else:
          "aformat=channel_layouts=stereo,afade=t=out:st=%.3f:d=0.4" % (T_TOT - 0.4), "-c:a", "pcm_s16le", f"{TMP}/mix.wav"])
     name = "pubA-voix-seule.mp4"
 out = f"{OUT}/{name}"
-run(["-i", video, "-i", f"{TMP}/mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+run(["-i", video, "-i", f"{TMP}/mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-crf", "19", "-preset", "slow",
+     "-maxrate", "9M", "-bufsize", "18M", "-profile:v", "high", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
      "-shortest", "-movflags", "+faststart", out])
 print(out, f"{T_TOT:.2f}s", "plans:", [round(x, 2) for x in D])
