@@ -8,4 +8,5 @@
 | 02/11 | Pub A, plan 5 refait (appareil beige, plus discret) `f5341fe7` · plans 6 `1a212912` · 7 `311961aa` · 8 `41bf374a` · 9 `207b8f67` · 10 `13bef523` | Nano Banana 2.1, 4K 9:16 | 6 jobs | 18 |
 | 02/11 | Pub A, bloc 1 vidéo (plans 4+5 : macro de l'appareil, puis pose dans l'oreille), 5 s 1080p. Coupe constatée à 3,5 s | Seedance 2.5, omni_reference | `f7c79ae3-ff3f-48e6-948c-ea73e8f3690c` | 80 |
 | 02/11 | Pub A, bloc 2 vidéo (plans 1+2+3 : rue, visage, accueil), 7 s 1080p. Coupes constatées à 2,4 s et 5,0 s | Seedance 2.5, omni_reference | `30dca289-b95a-41f4-89b6-794469385ba3` | 112 |
-| | **Total** | | | **231 cr** |
+| 02/11 | Pub A, bloc 3 vidéo (plans 6+7+8 : son visage, l'audioprothésiste, l'échange), 7 s 1080p. Coupes à 2,0 s et 4,0 s | Seedance 2.5, omni_reference | `fb4c6d9c-0fb2-49af-a02b-ad6060983b6b` | 112 |
+| | **Total** | | | **343 cr** |
