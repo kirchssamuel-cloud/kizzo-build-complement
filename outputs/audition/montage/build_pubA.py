@@ -55,11 +55,11 @@ SRC = [
     ("bloc4-preuve", B4_CUT + 0.05, 4.00, True),
 ]
 # plans 5 et 6 : images fixes 4K + poussée lente (l'animation IA abîmait l'appareil)
-STILLS = {}     # (les plans 5 et 6 ne sont plus des images fixes : vidéos à partir des images de Samuel, retournées pour regarder à gauche)
-FLIP = {"plan5", "plan5b"}
+STILLS = {}     # (plans 5 et 6 : vidéos à partir des images validées ; le plan 5 est retourné pour regarder à gauche)
+FLIP = {"plan5"}
 FILES = {"bloc1-produit": "pubA-bloc1-produit.mp4", "bloc2-rencontre": "pubA-bloc2-rencontre.mp4",
          "bloc3-consultation": "pubA-bloc3-consultation.mp4", "bloc4-preuve": "pubA-bloc4-preuve.mp4",
-         "plan5": "pubA-plan5-video-ref-samuel.mp4", "plan5b": "pubA-plan5b-closeup-video.mp4"}
+         "plan5": "pubA-plan5-video-ref-samuel.mp4", "plan5b": "pubA-plan5b-closeup-bronze-video.mp4"}
 # plan 3 : l'écran mural (x 0-148) sort du champ grâce à un recadrage de 16 % ancré à droite
 WALL_PATCH = "crop=930:1653:150:60,scale=1080:1920:flags=lanczos,setsar=1"
 

@@ -24,4 +24,6 @@
 | 02/11 | Plan 5b : gros plan sur l'oreille avec l'appareil, refs = image Samuel (`10db131e`) + plan 9 + planche patiente `79bf1501` (appareil ≈ 20 % de l'oreille, net, propre). Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
 | 02/11 | Plan 5b, VIDÉO du gros plan sur l'oreille (`2045de7c`), 4 s 1080p, appareil constant, push-in lent | Seedance 2.5, omni_reference | `ba7380e0-cd25-4baf-bd07-dd88ae62578c` | 64 |
 | 02/11 | Plan 5b gros plan oreille, appareil BRONZE conforme à la référence client (packshot noir/bronze `d10c0761`) : pilule, fente en haut, fil + bille transparente en bas `564dafc8`. **Erreur corrigée** : mes prompts disaient « beige » alors que la référence est noir/bronze. Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
-| | **Total** | | | **647 cr** |
+| 02/11 | Plan 5b, VIDÉO du gros plan oreille avec l'appareil BRONZE conforme à la référence (`462ad8ac`), 4 s 1080p, appareil stable, fil + bille qui bougent légèrement | Seedance 2.5, omni_reference | `7fe739cf-ff9a-40b4-97f0-562af94c0186` | 64 |  **ÉCARTÉE** : la coque en plastique, censée être dans le conduit, dépasse à droite de la façade
+| 02/11 | Plan 5b v2 : gros plan oreille, appareil BRONZE, seule la façade + fil visibles, coque cachée dans le conduit `a3241509`. Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
+| | **Total** | | | **714 cr** |
