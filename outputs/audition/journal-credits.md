@@ -11,4 +11,5 @@
 | 02/11 | Pub A, bloc 3 vidéo (plans 6+7+8 : son visage, l'audioprothésiste, l'échange), 7 s 1080p. Coupes à 2,0 s et 4,0 s | Seedance 2.5, omni_reference | `fb4c6d9c-0fb2-49af-a02b-ad6060983b6b` | 112 |
 | 02/11 | Pub A, bloc 4 vidéo (plans 9+10 : oreille, cheveux qui recouvrent l'appareil, plan final), 4 s 1080p. Coupe à 2,04 s | Seedance 2.5, omni_reference | `0d22a850-4b3c-4865-bff2-afa091e7c1c3` | 64 |
 | 02/11 | Retour client (plans 5 et 6, appareil « pas assez chic, pas propre ») : plan 5 refait en macro net `07e63bfe-6df8-4fd2-8f76-15768bd6f072` · plan 6 refait, oreille couverte par les cheveux `dd1ddd55-8ffb-45e9-98de-a5462f1c896f` | Nano Banana 2.1, 4K 9:16 | 2 jobs | 6 |
-| | **Total** | | | **413 cr** |
+| 02/11 | Vidéo retouche plans 5+6 (macro agrandie + visage), 4 s 1080p. **ÉCARTÉE** : l'appareil est trop gros, il ressemble à un bouchon, contraire au « quasi invisible ». Coupe à 2,46 s | Seedance 2.5, omni_reference | `8ec60c8b-5e7c-408c-9865-d26832d4b1f1` | 64 |
+| | **Total** | | | **477 cr** |
