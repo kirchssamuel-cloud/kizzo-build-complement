@@ -35,7 +35,10 @@ def dur(p):
 
 
 # ---------------------------------------------------------------- 1. les 10 plans, calés sur la voix
-B = [0, 2.3, 4.5, 6.3, 9.1, 10.8, 12.4, 14.3, 17.6, 19.4, 21.6]     # débuts de plan (temps voix)
+PAUSE_AT, PAUSE = 10.40, 0.70     # pause ajoutée dans la voix (entre « intéressé ? » et « Répondez ») pour 2 s + 2 s sur les plans 5 et 6
+def sh(t):                         # temps voix -> temps film (après la pause ajoutée)
+    return t + PAUSE if t >= PAUSE_AT else t
+B = [0, 2.3, 4.5, 6.3, 9.1, 11.1, 13.1, 15.0, 18.3, 20.1, 22.3]     # débuts de plan (temps film)
 D = [B[i + 1] - B[i] for i in range(10)]
 D[0] += LEAD
 # (bloc, début, fin, interpolation si ralenti notable)
@@ -44,18 +47,19 @@ SRC = [
     ("bloc2-rencontre", 2.58, 4.78, False),
     ("bloc2-rencontre", 5.08, 6.88, False),
     ("bloc1-produit", 0.20, 3.00, False),
-    ("bloc1-produit", 3.58, 5.04, True),
-    ("bloc3-consultation", 0.36, 1.96, False),
+    ("plan5", 0.30, 2.30, False),
+    ("plan5b", 0.20, 2.20, False),
     ("bloc3-consultation", 2.08, 3.98, False),
     ("bloc3-consultation", 4.08, 7.04, True),
     ("bloc4-preuve", 0.20, B4_CUT - 0.04, False),
     ("bloc4-preuve", B4_CUT + 0.05, 4.00, True),
 ]
 # plans 5 et 6 : images fixes 4K + poussée lente (l'animation IA abîmait l'appareil)
-STILLS = {5: (f"{ROOT}/images-cles/pubA-plan-5-discret-B.jpg", 0.60, 0.40, 1.14),
-          6: (f"{ROOT}/images-cles/pubA-plan-6-discret-B.jpg", 0.52, 0.30, 1.08)}
+STILLS = {}     # (les plans 5 et 6 ne sont plus des images fixes : vidéos à partir des images de Samuel, retournées pour regarder à gauche)
+FLIP = {"plan5", "plan5b"}
 FILES = {"bloc1-produit": "pubA-bloc1-produit.mp4", "bloc2-rencontre": "pubA-bloc2-rencontre.mp4",
-         "bloc3-consultation": "pubA-bloc3-consultation.mp4", "bloc4-preuve": "pubA-bloc4-preuve.mp4"}
+         "bloc3-consultation": "pubA-bloc3-consultation.mp4", "bloc4-preuve": "pubA-bloc4-preuve.mp4",
+         "plan5": "pubA-plan5-video-ref-samuel.mp4", "plan5b": "pubA-plan5b-closeup-video.mp4"}
 # plan 3 : l'écran mural (x 0-148) sort du champ grâce à un recadrage de 16 % ancré à droite
 WALL_PATCH = "crop=930:1653:150:60,scale=1080:1920:flags=lanczos,setsar=1"
 
@@ -75,6 +79,8 @@ for i, ((blk, a, b, interp), d) in enumerate(zip(SRC, D), 1):
         continue
     L = b - a
     vf = f"trim=start={a:.3f}:end={b:.3f},setpts=PTS-STARTPTS"
+    if blk in FLIP:
+        vf += ",hflip"
     if L < d - 0.02:
         vf += f",setpts={d / L:.5f}*PTS"
         if interp:
@@ -199,7 +205,7 @@ spans = []
 for idx, (t0, t1, g) in enumerate(caps):
     nxt = caps[idx + 1][0] if idx + 1 < len(caps) else None
     end = t1 if (nxt is None or nxt - t1 > 0.2) else nxt
-    spans.append((t0 + LEAD, min(end + 0.1, end + 0.1) + LEAD, g))
+    spans.append((sh(t0) + LEAD, sh(end + 0.1) + LEAD, g))
 
 
 def caption_img(text, alpha=1.0, y_center=1215, max_w=940):
@@ -268,6 +274,11 @@ if not (FAST and os.environ.get("REUSE_VIDEO") == "1" and os.path.exists(video))
 voice = f"{TMP}/voix.wav"
 run(["-i", VO, "-af", "highpass=f=75,acompressor=threshold=-21dB:ratio=3:attack=15:release=140:makeup=3,"
      "loudnorm=I=-16:TP=-1.5:LRA=7,aresample=48000", "-ac", "1", voice])
+voice2 = f"{TMP}/voix-pause.wav"
+run(["-i", voice, "-filter_complex",
+     f"[0:a]atrim=0:{PAUSE_AT},asetpts=PTS-STARTPTS[a];[0:a]atrim={PAUSE_AT},asetpts=PTS-STARTPTS[b];"
+     f"aevalsrc=0:d={PAUSE}:s=48000:c=mono[s];[a][s][b]concat=n=3:v=0:a=1[o]", "-map", "[o]", "-ac", "1", voice2])
+voice = voice2
 if MUSIC:
     fc = (f"[0:a]adelay={int(LEAD * 1000)}|{int(LEAD * 1000)},apad,atrim=0:{T_TOT:.3f},asplit=2[v1][v2];"
           f"[1:a]aresample=48000,aformat=channel_layouts=stereo,loudnorm=I=-16:TP=-2:LRA=11,volume=-9dB,"

@@ -22,4 +22,5 @@
 | 02/11 | Plan 5 régénéré avec l'image de référence de Samuel (n°1, uploadée `10db131e`) + planches personnages + photo appareil beige `220752cd` (retournée pour regarder à gauche). Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
 | 02/11 | Plan 5, VIDÉO à partir de l'image de référence fournie par Samuel (`03721c04`), 4 s 1080p, un seul plan : appareil constant, léger push-in, sourire | Seedance 2.5, omni_reference | `92fbbef4-6f93-4643-9af0-bc6d49585b63` | 64 |
 | 02/11 | Plan 5b : gros plan sur l'oreille avec l'appareil, refs = image Samuel (`10db131e`) + plan 9 + planche patiente `79bf1501` (appareil ≈ 20 % de l'oreille, net, propre). Proposé à Samuel | Nano Banana 2.1, 4K 9:16 | 1 job | 3 |
-| | **Total** | | | **580 cr** |
+| 02/11 | Plan 5b, VIDÉO du gros plan sur l'oreille (`2045de7c`), 4 s 1080p, appareil constant, push-in lent | Seedance 2.5, omni_reference | `ba7380e0-cd25-4baf-bd07-dd88ae62578c` | 64 |
+| | **Total** | | | **644 cr** |
