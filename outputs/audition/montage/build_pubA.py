@@ -53,8 +53,8 @@ SRC = [
 ]
 FILES = {"bloc1-produit": "pubA-bloc1-produit.mp4", "bloc2-rencontre": "pubA-bloc2-rencontre.mp4",
          "bloc3-consultation": "pubA-bloc3-consultation.mp4", "bloc4-preuve": "pubA-bloc4-preuve.mp4"}
-# plan 3 : l'écran mural (x 0-148, y 490-840) est remplacé par le bois situé juste au-dessus
-WALL_PATCH = "split[a][b];[b]crop=150:360:0:128[p];[a][p]overlay=0:488"
+# plan 3 : l'écran mural (x 0-148) sort du champ grâce à un recadrage de 16 % ancré à droite
+WALL_PATCH = "crop=930:1653:150:60,scale=1080:1920:flags=lanczos,setsar=1"
 
 clips = []
 for i, ((blk, a, b, interp), d) in enumerate(zip(SRC, D), 1):
