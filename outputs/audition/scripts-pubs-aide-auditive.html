@@ -1,0 +1,180 @@
+<title>Scripts pubs aide auditive</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : une colonne de lecture ; chaque pub = voix off en exergue, puis la suite des plans calée sur le minutage */
+:root {
+  --bg: #f5f8f7;
+  --paper: #ffffff;
+  --fg: #1a2422;
+  --muted: #5b6b67;
+  --line: #d9e2df;
+  --accent: #1d6a64;
+  --accent-soft: #e2efec;
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121918; --paper: #18211f; --fg: #e4ecea; --muted: #9db0ab; --line: #2b3835;
+    --accent: #6fc2b8; --accent-soft: #1f302d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121918; --paper: #18211f; --fg: #e4ecea; --muted: #9db0ab; --line: #2b3835;
+  --accent: #6fc2b8; --accent-soft: #1f302d; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+}
+.wrap { max-width: 860px; margin: 0 auto; display: grid; gap: 40px; }
+header { display: grid; gap: 14px; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.05; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); max-width: 62ch; margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.facts li { font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); }
+.ask { background: var(--accent-soft); border-radius: 10px; padding: 16px 18px; display: grid; gap: 6px; }
+.ask strong { font-weight: 600; }
+.ask ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+section.ad { display: grid; gap: 18px; }
+.ad-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: 2rem; margin: 0; line-height: 1.1; text-wrap: balance; }
+h2 em { color: var(--accent); }
+.meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.tag { font-size: 12px; font-weight: 600; color: var(--accent); }
+.angle { margin: 0; color: var(--muted); max-width: 64ch; }
+h3 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 6px 0 0; font-weight: 600; }
+blockquote.vo {
+  margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+  padding: 18px 20px; font-family: var(--font-display); font-size: 1.35rem; line-height: 1.45;
+}
+blockquote.vo p { margin: 0 0 .5em; }
+blockquote.vo p:last-child { margin: 0; }
+.vo-note { font-size: 13px; color: var(--muted); margin: 0; }
+.shots { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--paper); }
+.shot { display: grid; grid-template-columns: 92px minmax(0, 1fr) minmax(0, 1.4fr); gap: 14px; padding: 12px 16px; border-top: 1px solid var(--line); }
+.shot:first-child { border-top: 0; }
+.shot.head { background: var(--accent-soft); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.tc { font-family: var(--font-mono); font-size: 13px; color: var(--accent); font-variant-numeric: tabular-nums; }
+.tc b { display: block; color: var(--fg); font-weight: 500; }
+.said { font-style: italic; }
+.seen strong { font-weight: 600; }
+.shot.card .said { font-style: normal; color: var(--muted); }
+.rules { display: grid; gap: 10px; }
+.rules ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+@media (max-width: 640px) {
+  .shot { grid-template-columns: 1fr; gap: 4px; }
+  .shot.head { display: none; }
+  .tc b { display: inline; margin-right: 8px; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Publicité Facebook &amp; Instagram · Essai gratuit</div>
+    <h1>Deux scripts pour l'aide auditive quasi invisible</h1>
+    <p class="lede">Deux publicités qui portent la même offre, avec la même voix off masculine et les mêmes personnages, mais deux accroches différentes. Elles tournent en parallèle sur Meta pour garder celle qui génère le plus de demandes de rendez-vous.</p>
+    <ul class="facts">
+      <li>Vertical 9:16 · 1080 × 1920</li>
+      <li>Pub A ≈ 25 s · Pub B ≈ 21 s</li>
+      <li>Un changement de plan toutes les 2 à 3 s</li>
+      <li>Sous-titres mot par mot au montage</li>
+      <li>Aucun logo, aucune marque, aucun nom de ville</li>
+    </ul>
+    <div class="ask">
+      <strong>Ce que nous vous demandons de valider</strong>
+      <ol>
+        <li>Le découpage de la pub A, qui reprend votre texte de voix off mot pour mot.</li>
+        <li>Le texte de voix off de la pub B, qui est une proposition de notre part.</li>
+        <li>Les photos des appareils auditifs à montrer, sous plusieurs angles, pour qu'ils soient reproduits fidèlement.</li>
+      </ol>
+    </div>
+  </header>
+
+  <section class="ad" aria-labelledby="pub-a">
+    <div class="ad-head">
+      <h2 id="pub-a">Pub A · <em>Nous recherchons</em></h2>
+      <span class="meta">≈ 25 s · 10 plans + carton final</span>
+    </div>
+    <p class="angle">L'annonce de recrutement local. On suit une patiente de la rue jusqu'à la pose de l'appareil : le parcours rassure et montre que l'essai est simple.</p>
+
+    <h3>Voix off (texte fourni, inchangé)</h3>
+    <blockquote class="vo">
+      <p>Nous recherchons des personnes de votre ville, âgées de 50 ans et plus, qui souhaiteraient essayer gratuitement une aide auditive quasi invisible.</p>
+      <p>Vous êtes intéressé(e) ?</p>
+      <p>Répondez à ces trois questions pour savoir si vous êtes éligible. Si c'est le cas, nous vous proposerons rapidement un rendez-vous afin de vous permettre d'essayer gratuitement le modèle qui vous convient.</p>
+    </blockquote>
+    <p class="vo-note">Voix masculine française, 40 à 50 ans, grave, chaleureuse et posée, identique sur les deux publicités.</p>
+
+    <h3>Plan par plan</h3>
+    <div class="shots" role="table" aria-label="Découpage de la pub A">
+      <div class="shot head" role="row"><span role="columnheader">Temps</span><span role="columnheader">La voix dit</span><span role="columnheader">À l'image</span></div>
+      <div class="shot" role="row"><span class="tc"><b>1</b>0,0 – 2,3 s</span><span class="said">« Nous recherchons… »</span><span class="seen"><strong>Rue commerçante, plan large.</strong> Une femme d'une soixantaine d'années, élégante et souriante, marche vers la caméra. Travelling avant, lumière naturelle, passants en arrière-plan.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>2</b>2,3 – 4,6 s</span><span class="said">« …des personnes de votre ville, âgées de 50 ans et plus, »</span><span class="seen"><strong>Son visage, plan rapproché</strong>, dans la même rue. Elle sourit en marchant.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>3</b>4,6 – 6,8 s</span><span class="said">« qui souhaiteraient essayer gratuitement… »</span><span class="seen"><strong>Entrée dans le centre auditif</strong>, moderne et lumineux. L'audioprothésiste vient l'accueillir avec une poignée de main.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>4</b>6,8 – 9,6 s</span><span class="said">« …une aide auditive quasi invisible. »</span><span class="seen"><strong>Très gros plan sur l'appareil</strong>, tenu délicatement entre deux doigts. On mesure sa petite taille.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>5</b>9,6 – 12,0 s</span><span class="said">« Vous êtes intéressé(e) ? »</span><span class="seen"><strong>Cabine, gros plan sur les mains</strong> de l'audioprothésiste qui installent l'appareil derrière l'oreille de la patiente.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>6</b>12,0 – 13,8 s</span><span class="said">« Répondez à ces trois questions… »</span><span class="seen"><strong>Le visage de la patiente</strong>, intéressée et à l'aise. Elle sourit.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>7</b>13,8 – 15,6 s</span><span class="said">« …pour savoir si vous êtes éligible. »</span><span class="seen"><strong>L'audioprothésiste</strong> lui répond avec un sourire rassurant.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>8</b>15,6 – 17,4 s</span><span class="said">« Si c'est le cas, nous vous proposerons rapidement… »</span><span class="seen"><strong>Tous deux assis face à face</strong> dans un espace chaleureux. Elle rit naturellement.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>9</b>17,4 – 19,6 s</span><span class="said">« …un rendez-vous, afin de vous permettre… »</span><span class="seen"><strong>Gros plan sur son oreille</strong> : ses cheveux retombent sur l'appareil, qu'on ne voit presque plus.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>10</b>19,6 – 22,6 s</span><span class="said">« …d'essayer gratuitement le modèle qui vous convient. »</span><span class="seen"><strong>Plan final rapproché</strong> de la patiente et de l'audioprothésiste, regard complice et confiant.</span></div>
+      <div class="shot card" role="row"><span class="tc"><b>Fin</b>22,6 – 25,0 s</span><span class="said">Musique seule</span><span class="seen"><strong>Carton final</strong> ajouté au montage : « Répondez à 3 questions », avec une flèche vers le bouton.</span></div>
+    </div>
+  </section>
+
+  <section class="ad" aria-labelledby="pub-b">
+    <div class="ad-head">
+      <h2 id="pub-b">Pub B · <em>Vous le voyez ?</em></h2>
+      <span class="tag">Proposition à valider</span>
+    </div>
+    <p class="angle">L'accroche par la discrétion. Elle s'adresse aux personnes qui hésitent par peur que l'appareil se voie : la vidéo les invite à le chercher, puis le révèle.</p>
+
+    <h3>Voix off proposée</h3>
+    <blockquote class="vo">
+      <p>Vous le voyez ?</p>
+      <p>C'est une aide auditive quasi invisible.</p>
+      <p>Nous recherchons des personnes de votre ville, âgées de 50 ans et plus, pour l'essayer gratuitement.</p>
+      <p>Répondez à trois questions pour savoir si vous êtes éligible. Si c'est le cas, nous vous proposerons rapidement un rendez-vous.</p>
+    </blockquote>
+    <p class="vo-note">Elle reprend uniquement les éléments de votre offre : essai gratuit, 50 ans et plus, quasi invisible, trois questions, rendez-vous. Aucune promesse de résultat auditif.</p>
+
+    <h3>Plan par plan</h3>
+    <div class="shots" role="table" aria-label="Découpage de la pub B">
+      <div class="shot head" role="row"><span role="columnheader">Temps</span><span role="columnheader">La voix dit</span><span role="columnheader">À l'image</span></div>
+      <div class="shot" role="row"><span class="tc"><b>1</b>0,0 – 1,6 s</span><span class="said">« Vous le voyez ? »</span><span class="seen"><strong>Terrasse de café.</strong> La patiente rit avec une amie, filmée de profil. Son oreille est visible et on n'y voit rien.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>2</b>1,6 – 3,4 s</span><span class="said">(silence)</span><span class="seen"><strong>Rapprochement lent vers son oreille</strong> : le spectateur cherche l'appareil.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>3</b>3,4 – 5,6 s</span><span class="said">« C'est une aide auditive quasi invisible. »</span><span class="seen"><strong>Elle glisse une mèche derrière l'oreille</strong>, et un très gros plan révèle le minuscule appareil.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>4</b>5,6 – 7,4 s</span><span class="said">« Nous recherchons des personnes de votre ville, »</span><span class="seen"><strong>Plan large de la terrasse</strong> et de la rue : la vie du quartier.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>5</b>7,4 – 9,2 s</span><span class="said">« âgées de 50 ans et plus, »</span><span class="seen"><strong>Elle pousse la porte du centre auditif</strong>, détendue.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>6</b>9,2 – 11,4 s</span><span class="said">« pour l'essayer gratuitement. »</span><span class="seen"><strong>L'audioprothésiste lui présente un plateau</strong> avec plusieurs modèles d'appareils, sous différents angles.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>7</b>11,4 – 13,2 s</span><span class="said">« Répondez à trois questions… »</span><span class="seen"><strong>Très gros plan sur un appareil</strong> tenu entre deux doigts.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>8</b>13,2 – 15,2 s</span><span class="said">« …pour savoir si vous êtes éligible. »</span><span class="seen"><strong>La patiente sourit</strong> à l'audioprothésiste et hoche la tête.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>9</b>15,2 – 17,0 s</span><span class="said">« Si c'est le cas, nous vous proposerons… »</span><span class="seen"><strong>Ils se saluent chaleureusement</strong> à l'accueil.</span></div>
+      <div class="shot" role="row"><span class="tc"><b>10</b>17,0 – 18,8 s</span><span class="said">« …rapidement un rendez-vous. »</span><span class="seen"><strong>Elle ressort dans la rue commerçante</strong>, souriante et sereine.</span></div>
+      <div class="shot card" role="row"><span class="tc"><b>Fin</b>18,8 – 21,0 s</span><span class="said">Musique seule</span><span class="seen"><strong>Carton final</strong> ajouté au montage : « Répondez à 3 questions », avec une flèche vers le bouton.</span></div>
+    </div>
+  </section>
+
+  <section class="rules" aria-labelledby="regles">
+    <h2 id="regles">Commun aux deux publicités</h2>
+    <ul>
+      <li>Images photoréalistes, lumière naturelle et couleurs chaleureuses, rendu de publicité tournée par une équipe professionnelle.</li>
+      <li>Mêmes personnages : une patiente de 55 à 65 ans et un audioprothésiste de 35 à 45 ans, en tenue sans logo.</li>
+      <li>Aucun logo, nom d'entreprise, marque, enseigne lisible, numéro de téléphone ou nom de ville à l'image.</li>
+      <li>Aucun texte généré dans les scènes. Sous-titres et carton final sont ajoutés au montage.</li>
+      <li>Musique de fond douce, moderne et rassurante, libre de droits pour la publicité.</li>
+      <li>Textes conformes aux règles publicitaires de Meta : aucune question sur l'état de santé du spectateur, aucune promesse de résultat.</li>
+      <li>Les minutages sont indicatifs. Ils seront calés précisément sur l'enregistrement final de la voix off.</li>
+    </ul>
+  </section>
+
+  <footer>Document de travail. Les scènes seront présentées en images fixes pour validation avant la réalisation des vidéos.</footer>
+</div>
