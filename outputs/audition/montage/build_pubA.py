@@ -13,6 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 R, VO, OUT = f"{ROOT}/rushes", f"{ROOT}/voix/voix-off-pub-A.mp3", f"{ROOT}/montage"
 TMP = sys.argv[1]
 MUSIC = sys.argv[2] if len(sys.argv) > 2 else None
+SUFFIX = sys.argv[3] if len(sys.argv) > 3 else ""
 os.makedirs(TMP, exist_ok=True)
 FAST = os.environ.get("FAST") == "1"
 B4_CUT = float(os.environ.get("B4_CUT", "2.04"))
@@ -247,9 +248,10 @@ for fr, p in enumerate(timeline):
 
 # ---------------------------------------------------------------- 4. grain léger + sous-titres
 video = f"{TMP}/video.mp4"
-run(["-i", joined, "-framerate", str(FPS), "-i", f"{cap_dir}/f%04d.png", "-filter_complex",
-     "[0]noise=alls=4:allf=t,format=yuv420p[g];[g][1]overlay=0:0:format=auto,format=yuv420p[v]",
-     "-map", "[v]", "-frames:v", str(nF), *ENC, video])
+if not (FAST and os.environ.get("REUSE_VIDEO") == "1" and os.path.exists(video)):
+    run(["-i", joined, "-framerate", str(FPS), "-i", f"{cap_dir}/f%04d.png", "-filter_complex",
+         "[0]noise=alls=4:allf=t,format=yuv420p[g];[g][1]overlay=0:0:format=auto,format=yuv420p[v]",
+         "-map", "[v]", "-frames:v", str(nF), *ENC, video])
 
 # ---------------------------------------------------------------- 5. audio : voix traitée (+ musique)
 voice = f"{TMP}/voix.wav"
@@ -257,13 +259,13 @@ run(["-i", VO, "-af", "highpass=f=75,acompressor=threshold=-21dB:ratio=3:attack=
      "loudnorm=I=-16:TP=-1.5:LRA=7,aresample=48000", "-ac", "1", voice])
 if MUSIC:
     fc = (f"[0:a]adelay={int(LEAD * 1000)}|{int(LEAD * 1000)},apad,atrim=0:{T_TOT:.3f},asplit=2[v1][v2];"
-          f"[1:a]aresample=48000,aformat=channel_layouts=stereo,volume=-15dB,"
+          f"[1:a]aresample=48000,aformat=channel_layouts=stereo,loudnorm=I=-16:TP=-2:LRA=11,volume=-9dB,"
           f"afade=t=in:st=0:d=1.0,afade=t=out:st={T_TOT - 2.2:.3f}:d=2.2,atrim=0:{T_TOT:.3f}[m];"
-          f"[m][v2]sidechaincompress=threshold=0.03:ratio=9:attack=20:release=350[md];"
+          f"[m][v2]sidechaincompress=threshold=0.035:ratio=6:attack=15:release=400[md];"
           f"[v1]aformat=channel_layouts=stereo[vs];[vs][md]amix=inputs=2:duration=first:normalize=0,"
           f"alimiter=limit=0.92,loudnorm=I=-15:TP=-1.5:LRA=9,aresample=48000[a]")
     run(["-i", voice, "-i", MUSIC, "-filter_complex", fc, "-map", "[a]", "-c:a", "pcm_s16le", f"{TMP}/mix.wav"])
-    name = "pubA-final.mp4"
+    name = f"pubA-final{SUFFIX}.mp4"
 else:
     run(["-i", voice, "-af", f"adelay={int(LEAD * 1000)}|{int(LEAD * 1000)},apad,atrim=0:{T_TOT:.3f},"
          "aformat=channel_layouts=stereo,afade=t=out:st=%.3f:d=0.4" % (T_TOT - 0.4), "-c:a", "pcm_s16le", f"{TMP}/mix.wav"])
